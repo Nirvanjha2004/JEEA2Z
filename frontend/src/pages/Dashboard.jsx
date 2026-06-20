@@ -13,7 +13,12 @@ import DayDetailPanel from '../components/DayDetailPanel';
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
 import { SkeletonStats, SkeletonCard } from '../components/SkeletonRow';
-import { BookOpen, Trophy, Flame, Atom, FlaskConical, Binary, CheckCircle2, ChevronRight, Play, Sparkles } from 'lucide-react';
+import { BookOpen, Trophy, Flame, Atom, FlaskConical, Binary, CheckCircle2, ChevronRight, ChevronDown, Play, Sparkles } from 'lucide-react';
+
+// V3 Concept Imports
+import useConceptStore from '../store/conceptStore';
+import ConceptMasteryCard from '../components/concepts/ConceptMasteryCard';
+import ConceptPracticeModal from '../components/concepts/ConceptPracticeModal';
 
 export default function Dashboard() {
   const { user } = useAuthStore();
@@ -28,6 +33,12 @@ export default function Dashboard() {
   const [accuracy, setAccuracy] = useState(100);
   const [recentActivity, setRecentActivity] = useState([]);
   
+  // V3 Concept selectors and states
+  const fetchMastery = useConceptStore((state) => state.fetchMastery);
+  const mastery = useConceptStore((state) => state.mastery);
+  const [expandedSubjects, setExpandedSubjects] = useState({});
+  const [activePracticeConcept, setActivePracticeConcept] = useState(null);
+
   // Weekly trend compares (Mock stats)
   const [prevWeekSolved, setPrevWeekSolved] = useState(0);
   
@@ -47,7 +58,7 @@ export default function Dashboard() {
     const loadDashboardData = async () => {
       setLoading(true);
       try {
-        await Promise.all([fetchSummary(), fetchStreak()]);
+        await Promise.all([fetchSummary(), fetchStreak(), fetchMastery()]);
 
         // 1. Fetch revision count
         const spacedRes = await api.get('/api/spaced/queue');
@@ -346,37 +357,129 @@ export default function Dashboard() {
                 const SubjectIcon = iconsMap[sub.slug] || Atom;
 
                 return (
-                  <div
-                    key={sub.slug}
-                    onClick={() => navigate(`/sheet/${sub.slug}`)}
-                    className={`flex items-center gap-3.5 py-3 cursor-pointer group rounded-md hover:bg-bg-subtle hover:px-2 -mx-2 transition-all duration-150 ${
-                      idx !== subjectsWithProgress.length - 1 ? 'border-b border-border-default/40' : ''
-                    }`}
-                  >
-                    <div className="w-8 h-8 rounded-full bg-bg-elevated border border-border-default/60 flex items-center justify-center text-text-secondary group-hover:text-text-primary shrink-0">
-                      <SubjectIcon className="w-4.5 h-4.5" />
-                    </div>
-
-                    <div className="flex-grow min-w-0">
-                      <div className="flex items-center justify-between text-[13px] font-medium text-text-primary mb-1">
-                        <span className="group-hover:text-accent transition-colors">
-                          {sub.name}
-                        </span>
-                        <span className="text-[11.5px] font-mono text-text-secondary">
-                          {sub.done} / {sub.total} completed
-                        </span>
+                  <div key={sub.slug} className={`py-1 ${idx !== subjectsWithProgress.length - 1 ? 'border-b border-border-default/40' : ''}`}>
+                    <div
+                      onClick={() => {
+                        setExpandedSubjects((prev) => ({
+                          ...prev,
+                          [sub.slug]: !prev[sub.slug],
+                        }));
+                      }}
+                      className="flex items-center gap-3.5 py-3 cursor-pointer group rounded-md hover:bg-bg-subtle hover:px-2 -mx-2 transition-all duration-150"
+                    >
+                      <div className="w-8 h-8 rounded-full bg-bg-elevated border border-border-default/60 flex items-center justify-center text-text-secondary group-hover:text-text-primary shrink-0">
+                        <SubjectIcon className="w-4.5 h-4.5" />
                       </div>
-                      <ProgressBar current={sub.done} total={sub.total} color={sub.color} height="h-1" />
+
+                      <div className="flex-grow min-w-0">
+                        <div className="flex items-center justify-between text-[13px] font-medium text-text-primary mb-1">
+                          <span className="group-hover:text-accent transition-colors">
+                            {sub.name}
+                          </span>
+                          <span className="text-[11.5px] font-mono text-text-secondary">
+                            {sub.done} / {sub.total} completed
+                          </span>
+                        </div>
+                        <ProgressBar current={sub.done} total={sub.total} color={sub.color} height="h-1" />
+                      </div>
+
+                      <div className="flex items-center gap-2 text-[13.5px] font-semibold text-text-primary pl-2.5">
+                        <span>{sub.total > 0 ? Math.round((sub.done / sub.total) * 100) : 0}%</span>
+                        <ChevronDown className={`w-4 h-4 text-text-muted transition-transform duration-200 ${expandedSubjects[sub.slug] ? 'rotate-180' : ''}`} />
+                      </div>
                     </div>
 
-                    <div className="text-[13.5px] font-semibold text-text-primary pl-2.5">
-                      {sub.total > 0 ? Math.round((sub.done / sub.total) * 100) : 0}%
-                    </div>
+                    {/* Accordion concepts list */}
+                    {expandedSubjects[sub.slug] && (
+                      <div className="pl-9 pr-2 pb-3 flex flex-col gap-3 animate-fade-in" onClick={(e) => e.stopPropagation()}>
+                        <div className="text-[10px] font-bold text-text-muted uppercase tracking-wider mb-1">
+                          Concepts Mastery (Weakest First)
+                        </div>
+                        {mastery.filter(c => c.subject_name.toLowerCase() === sub.name.toLowerCase()).length === 0 ? (
+                          <div className="text-xs text-text-muted italic py-1 text-text-muted">
+                            No concepts configured for this subject yet.
+                          </div>
+                        ) : (
+                          <div className="flex flex-col gap-2.5">
+                            {mastery
+                              .filter(c => c.subject_name.toLowerCase() === sub.name.toLowerCase())
+                              .map((concept) => {
+                                const cAccuracy = Math.round(concept.accuracy_percent || 0);
+                                const cAttempted = concept.questions_attempted || 0;
+                                
+                                let textColor = 'text-danger';
+                                let barColor = 'bg-danger';
+                                if (cAttempted === 0) {
+                                  textColor = 'text-text-muted';
+                                  barColor = 'bg-text-disabled';
+                                } else if (cAccuracy >= 80) {
+                                  textColor = 'text-success';
+                                  barColor = 'bg-success';
+                                } else if (cAccuracy >= 50) {
+                                  textColor = 'text-warning';
+                                  barColor = 'bg-warning';
+                                }
+
+                                const cId = concept.concept_id || concept.id;
+
+                                return (
+                                  <div key={cId} className="flex flex-col gap-1 py-0.5">
+                                    <div className="flex items-center justify-between text-[12px]">
+                                      <Link 
+                                        to={`/concept/${cId}`}
+                                        className="text-text-secondary hover:text-accent font-medium hover:underline line-clamp-1"
+                                      >
+                                        {concept.name}
+                                      </Link>
+                                      <span className={`font-semibold shrink-0 text-[11px] ${textColor}`}>
+                                        {cAttempted > 0 ? `${cAccuracy}%` : 'Unattempted'}
+                                      </span>
+                                    </div>
+                                    <div className="w-full h-1 bg-bg-elevated rounded-full overflow-hidden">
+                                      <div 
+                                        className={`h-full rounded-full ${barColor}`}
+                                        style={{ width: cAttempted > 0 ? `${cAccuracy}%` : '0%' }}
+                                      />
+                                    </div>
+                                  </div>
+                                );
+                              })}
+                          </div>
+                        )}
+                        <div className="pt-2">
+                          <Link
+                            to={`/sheet/${sub.slug}`}
+                            className="text-[11px] text-accent font-semibold hover:underline inline-flex items-center gap-1"
+                          >
+                            Open {sub.name} Study Sheet &rarr;
+                          </Link>
+                        </div>
+                      </div>
+                    )}
                   </div>
                 );
               })}
             </div>
           </div>
+
+          {/* Weak Areas Panel */}
+          {mastery && mastery.length > 0 && (
+            <div className="bg-bg-surface border border-border-default rounded-lg p-5 flex flex-col gap-4">
+              <h3 className="text-[13px] font-semibold text-text-primary uppercase tracking-wider flex items-center gap-2">
+                <Sparkles className="w-4 h-4 text-warning" />
+                Weak Areas (Focus Concepts)
+              </h3>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                {mastery.slice(0, 3).map((concept) => (
+                  <ConceptMasteryCard
+                    key={concept.concept_id || concept.id}
+                    concept={concept}
+                    onPracticeClick={(c) => setActivePracticeConcept(c)}
+                  />
+                ))}
+              </div>
+            </div>
+          )}
         </div>
 
         {/* Right Column (40%): Recent solves feed */}
@@ -582,6 +685,14 @@ export default function Dashboard() {
         solvesCount={selectedDaySolves}
         questions={selectedDayQuestions}
       />
+
+      {/* Concept Practice Modal overlay */}
+      {activePracticeConcept && (
+        <ConceptPracticeModal
+          concept={activePracticeConcept}
+          onClose={() => setActivePracticeConcept(null)}
+        />
+      )}
     </div>
   );
 }

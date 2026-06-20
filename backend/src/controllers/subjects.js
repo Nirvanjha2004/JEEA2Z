@@ -73,7 +73,13 @@ export const getQuestions = async (req, res, next) => {
 
     if (req.user) {
       result = await query(
-        `SELECT q.*, COALESCE(up.status, 'todo') as status
+        `SELECT q.*, COALESCE(up.status, 'todo') as status,
+           (
+             SELECT COALESCE(json_agg(json_build_object('id', c.id, 'name', c.name, 'slug', c.slug)), '[]'::json)
+             FROM question_concepts qc
+             JOIN concepts c ON c.id = qc.concept_id
+             WHERE qc.question_id = q.id
+           ) as concepts
          FROM questions q
          LEFT JOIN user_progress up ON up.question_id = q.id AND up.user_id = $2
          WHERE q.chapter_id = $1
@@ -82,7 +88,13 @@ export const getQuestions = async (req, res, next) => {
       );
     } else {
       result = await query(
-        `SELECT q.*, 'todo' as status
+        `SELECT q.*, 'todo' as status,
+           (
+             SELECT COALESCE(json_agg(json_build_object('id', c.id, 'name', c.name, 'slug', c.slug)), '[]'::json)
+             FROM question_concepts qc
+             JOIN concepts c ON c.id = qc.concept_id
+             WHERE qc.question_id = q.id
+           ) as concepts
          FROM questions q
          WHERE q.chapter_id = $1
          ORDER BY q.order_index`,

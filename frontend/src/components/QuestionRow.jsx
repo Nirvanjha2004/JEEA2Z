@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import DifficultyBadge from './DifficultyBadge';
 import TypeBadge from './TypeBadge';
+import ConceptTagList from './concepts/ConceptTagList';
 import useBookmarkStore from '../store/bookmarkStore';
 import api from '../api';
 import { Bookmark, Sparkles, Link as LinkIcon, FileText } from 'lucide-react';
 
-export default function QuestionRow({ question, index, onStatusChange, onOpenNote, onOpenHint }) {
+export default function QuestionRow({ question, index, onStatusChange, onOpenNote, onOpenHint, onTagClick }) {
   const { id, title, difficulty, type, source, solution_url, status = 'todo' } = question;
   const { bookmarks, toggleBookmark } = useBookmarkStore();
   const [hasNote, setHasNote] = useState(false);
@@ -85,11 +86,16 @@ export default function QuestionRow({ question, index, onStatusChange, onOpenNot
             }`}>
               {title}
             </span>
-            {source && (
-              <span className="inline-block px-1.5 py-0.5 bg-bg-subtle border border-border-default text-[10px] text-text-muted rounded font-mono font-medium">
-                {source}
-              </span>
-            )}
+            <div className="flex flex-wrap items-center gap-2">
+              {source && (
+                <span className="inline-block px-1.5 py-0.5 bg-bg-subtle border border-border-default text-[10px] text-text-muted rounded font-mono font-medium">
+                  {source}
+                </span>
+              )}
+              {question.concepts && question.concepts.length > 0 && (
+                <ConceptTagList concepts={question.concepts} onTagClick={onTagClick} />
+              )}
+            </div>
           </div>
 
           {/* Action links showing on row hover only */}

@@ -9,6 +9,12 @@ import HintPanel from '../components/HintPanel';
 import { SkeletonRow } from '../components/SkeletonRow';
 import { BookOpen, Trophy, ArrowLeft, Layers } from 'lucide-react';
 
+// V3 Concept Imports
+import useConceptStore from '../store/conceptStore';
+import ConceptFilterBar from '../components/concepts/ConceptFilterBar';
+import ConceptCard from '../components/concepts/ConceptCard';
+import ConceptPracticeModal from '../components/concepts/ConceptPracticeModal';
+
 export default function ChapterPage() {
   const { subject: subjectSlug, chapterId } = useParams();
   const [searchParams, setSearchParams] = useSearchParams();
@@ -18,7 +24,8 @@ export default function ChapterPage() {
   const [error, setError] = useState('');
 
   // Tab State
-  const activeTab = searchParams.get('tab') === 'formulas' ? 'formulas' : 'questions';
+  const tabParam = searchParams.get('tab');
+  const activeTab = ['formulas', 'concepts'].includes(tabParam) ? tabParam : 'questions';
 
   // Filters State
   const [difficultyFilter, setDifficultyFilter] = useState('all');
@@ -26,6 +33,13 @@ export default function ChapterPage() {
   const [statusFilter, setStatusFilter] = useState('all');
 
   const currentSubject = SUBJECTS.find((sub) => sub.slug === subjectSlug);
+
+  // V3 Concept State & Store bindings
+  const fetchChapterConcepts = useConceptStore((state) => state.fetchChapterConcepts);
+  const chapterConcepts = useConceptStore((state) => state.chapterConcepts);
+  const concepts = chapterConcepts[chapterId] || [];
+  const [activePracticeConcept, setActivePracticeConcept] = useState(null);
+  const [hintQuestionConcepts, setHintQuestionConcepts] = useState([]);
 
   // Notes & Hints Panels State
   const [activeNoteId, setActiveNoteId] = useState(null);
@@ -57,6 +71,11 @@ export default function ChapterPage() {
     fetchData();
   }, [subjectSlug, chapterId, refreshKey]);
 
+  // Fetch concepts mapped to this chapter
+  useEffect(() => {
+    fetchChapterConcepts(chapterId);
+  }, [chapterId, fetchChapterConcepts, refreshKey]);
+
   // Find current chapter details
   const currentChapter = useMemo(() => {
     return chapters.find((ch) => ch.id === parseInt(chapterId, 10));
@@ -85,12 +104,17 @@ export default function ChapterPage() {
 
       if (!response.data.success) {
         setQuestions(previousQuestions);
+      } else {
+        // V3 Hook: trigger mastery refresh on progress update
+        setRefreshKey((prev) => prev + 1);
       }
     } catch (err) {
       console.error('Failed to update progress on backend, rolling back state:', err);
       setQuestions(previousQuestions);
     }
   };
+
+  const selectedConceptSlug = searchParams.get('concept');
 
   // Filter questions based on selected filters
   const filteredQuestions = useMemo(() => {
@@ -101,9 +125,12 @@ export default function ChapterPage() {
         typeFilter === 'all' || q.type.toLowerCase() === typeFilter;
       const matchStatus =
         statusFilter === 'all' || (q.status || 'todo') === statusFilter;
-      return matchDifficulty && matchType && matchStatus;
+      const matchConcept =
+        !selectedConceptSlug ||
+        (q.concepts && q.concepts.some((c) => c.slug === selectedConceptSlug));
+      return matchDifficulty && matchType && matchStatus && matchConcept;
     });
-  }, [questions, difficultyFilter, typeFilter, statusFilter]);
+  }, [questions, difficultyFilter, typeFilter, statusFilter, selectedConceptSlug]);
 
   const doneCount = useMemo(() => {
     return questions.filter((q) => q.status === 'done').length;
@@ -185,17 +212,64 @@ export default function ChapterPage() {
         >
           Formula Sheet
         </button>
+        <button
+          onClick={() => handleTabChange('concepts')}
+          className={`px-4 py-2 border-b-2 transition-all cursor-pointer ${
+            activeTab === 'concepts'
+              ? 'border-accent text-text-primary font-semibold'
+              : 'border-transparent text-text-muted hover:text-text-primary'
+          }`}
+        >
+          Concepts
+        </button>
       </div>
 
       {/* Render Active Tab Panel */}
       {activeTab === 'formulas' ? (
         <FormulaSheet chapterId={chapterId} chapterName={currentChapter?.name || ''} />
+      ) : activeTab === 'concepts' ? (
+        <div className="animate-slide-in">
+          {concepts.length === 0 ? (
+            <div className="flex flex-col items-center justify-center p-12 text-center border border-dashed border-border-default rounded-xl bg-bg-surface/30">
+              <Layers className="w-6 h-6 text-text-muted mb-3" />
+              <p className="text-[13.5px] font-medium text-text-primary">No concepts configured</p>
+              <p className="text-[11.5px] text-text-secondary mt-0.5">Concepts layer is currently active for Physics - Kinematics.</p>
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {concepts.map((concept) => (
+                <ConceptCard
+                  key={concept.id}
+                  concept={concept}
+                  onFilterClick={(slug) => {
+                    setSearchParams({ tab: 'questions', concept: slug });
+                  }}
+                  onPracticeClick={(c) => {
+                    setActivePracticeConcept(c);
+                  }}
+                />
+              ))}
+            </div>
+          )}
+        </div>
       ) : (
         <div className="animate-slide-in">
           {error && (
             <div className="p-3 border border-danger/25 bg-danger-bg text-danger text-[12.5px] rounded-lg mb-6">
               {error}
             </div>
+          )}
+
+          {concepts.length > 0 && (
+            <ConceptFilterBar
+              concepts={concepts}
+              selectedConceptSlug={selectedConceptSlug}
+              onSelectConcept={(slug) => {
+                const params = { tab: 'questions' };
+                if (slug) params.concept = slug;
+                setSearchParams(params);
+              }}
+            />
           )}
 
           {/* Filters Bar */}
@@ -319,9 +393,14 @@ export default function ChapterPage() {
                         setActiveNoteTitle(title);
                       }}
                       onOpenHint={(id, title) => {
+                        const targetQuestion = questions.find((qn) => qn.id === id);
+                        setHintQuestionConcepts(targetQuestion?.concepts || []);
                         setHintQuestionId(id);
                         setHintQuestionTitle(title);
                         setHintPanelOpen(true);
+                      }}
+                      onTagClick={(concept) => {
+                        setSearchParams({ tab: 'questions', concept: concept.slug });
                       }}
                     />
                   ))}
@@ -351,11 +430,21 @@ export default function ChapterPage() {
           questionId={hintQuestionId}
           questionTitle={hintQuestionTitle}
           isOpen={hintPanelOpen}
+          concepts={hintQuestionConcepts}
           onClose={() => {
             setHintPanelOpen(false);
             setHintQuestionId(null);
             setHintQuestionTitle('');
+            setHintQuestionConcepts([]);
           }}
+        />
+      )}
+
+      {/* Concept Practice Modal overlay */}
+      {activePracticeConcept && (
+        <ConceptPracticeModal
+          concept={activePracticeConcept}
+          onClose={() => setActivePracticeConcept(null)}
         />
       )}
     </div>

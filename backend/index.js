@@ -15,6 +15,7 @@ import leaderboardRoutes from './src/routes/leaderboard.js';
 import profileRoutes from './src/routes/profile.js';
 import hintRoutes from './src/routes/hints.js';
 import formulaRoutes from './src/routes/formulas.js';
+import conceptRoutes from './src/routes/concepts.js';
 import { errorHandler } from './src/middleware/errorHandler.js';
 
 const app = express();
@@ -38,6 +39,7 @@ app.use('/api/leaderboard', leaderboardRoutes);
 app.use('/api/profile', profileRoutes);
 app.use('/api/hints', hintRoutes);
 app.use('/api/formulas', formulaRoutes);
+app.use('/api/concepts', conceptRoutes);
 
 // Health check
 app.get('/api/health', (req, res) => {

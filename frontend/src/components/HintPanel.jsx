@@ -3,8 +3,9 @@ import { useToast } from './Toast';
 import useAuthStore from '../store/authStore';
 import api from '../api';
 import { X, RefreshCw, Sparkles, HelpCircle } from 'lucide-react';
+import RelatedConcepts from './concepts/RelatedConcepts';
 
-const HintPanel = ({ questionId, questionTitle, isOpen, onClose }) => {
+const HintPanel = ({ questionId, questionTitle, isOpen, onClose, concepts = [] }) => {
   const [hintText, setHintText] = useState('');
   const [isStreaming, setIsStreaming] = useState(false);
   const [upgradeRequired, setUpgradeRequired] = useState(false);
@@ -184,6 +185,10 @@ const HintPanel = ({ questionId, questionTitle, isOpen, onClose }) => {
 
         {/* Content Body */}
         <div className="flex-grow overflow-y-auto p-5">
+          {concepts && concepts.length > 0 && (
+            <RelatedConcepts concepts={concepts} className="mb-5" />
+          )}
+
           {upgradeRequired ? (
             <div className="flex flex-col items-center justify-center h-full text-center py-10 px-4">
               <div className="w-12 h-12 rounded-full bg-accent-subtle border border-accent/20 flex items-center justify-center text-accent text-xl mb-4">

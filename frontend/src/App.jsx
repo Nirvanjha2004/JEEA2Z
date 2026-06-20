@@ -12,6 +12,8 @@ import Register from './pages/Register';
 import Dashboard from './pages/Dashboard';
 import SubjectPage from './pages/SubjectPage';
 import ChapterPage from './pages/ChapterPage';
+import ConceptDetailPage from './pages/ConceptDetailPage';
+import PracticeModePage from './pages/PracticeModePage';
 
 // V2 Pages
 import BookmarksPage from './pages/BookmarksPage';
@@ -93,6 +95,22 @@ function AppContent() {
               element={
                 <ProtectedRoute>
                   <ChapterPage />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/concept/:conceptId"
+              element={
+                <ProtectedRoute>
+                  <ConceptDetailPage />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/practice/:conceptId"
+              element={
+                <ProtectedRoute>
+                  <PracticeModePage />
                 </ProtectedRoute>
               }
             />

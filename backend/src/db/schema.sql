@@ -185,3 +185,44 @@ CREATE TABLE IF NOT EXISTS formulas (
   order_index     INT NOT NULL DEFAULT 0
 );
 
+-- concepts: atomic ideas tested across questions
+CREATE TABLE IF NOT EXISTS concepts (
+  id          SERIAL PRIMARY KEY,
+  chapter_id  INT REFERENCES chapters(id) ON DELETE CASCADE,
+  name        TEXT NOT NULL,
+  slug        TEXT NOT NULL,
+  description TEXT,                    -- 1-2 sentence refresher
+  formula_ids INT[] DEFAULT '{}',      -- links to formula_sheets
+  question_count INT DEFAULT 0,
+  created_at  TIMESTAMP DEFAULT NOW(),
+  UNIQUE(chapter_id, slug)
+);
+
+-- junction: which concepts each question tests
+CREATE TABLE IF NOT EXISTS question_concepts (
+  question_id INT REFERENCES questions(id) ON DELETE CASCADE,
+  concept_id  INT REFERENCES concepts(id) ON DELETE CASCADE,
+  is_primary  BOOLEAN DEFAULT FALSE,   -- main concept being tested
+  PRIMARY KEY (question_id, concept_id)
+);
+
+-- concept mastery inferred from question performance
+CREATE TABLE IF NOT EXISTS concept_mastery (
+  id          SERIAL PRIMARY KEY,
+  user_id     UUID REFERENCES users(id) ON DELETE CASCADE,
+  concept_id  INT REFERENCES concepts(id) ON DELETE CASCADE,
+  questions_attempted INT DEFAULT 0,
+  questions_correct   INT DEFAULT 0,
+  accuracy_percent    FLOAT DEFAULT 0,
+  last_attempted      TIMESTAMP,
+  UNIQUE(user_id, concept_id)
+);
+
+-- Indexes for performance
+CREATE INDEX IF NOT EXISTS idx_concepts_chapter ON concepts(chapter_id);
+CREATE INDEX IF NOT EXISTS idx_question_concepts_question ON question_concepts(question_id);
+CREATE INDEX IF NOT EXISTS idx_question_concepts_concept ON question_concepts(concept_id);
+CREATE INDEX IF NOT EXISTS idx_concept_mastery_user ON concept_mastery(user_id);
+CREATE INDEX IF NOT EXISTS idx_concept_mastery_concept ON concept_mastery(concept_id);
+
+
