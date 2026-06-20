@@ -26,7 +26,7 @@ export default function ConceptMasteryCard({ concept, onPracticeClick }) {
     <div className="p-4 rounded-xl border border-border-default bg-bg-surface/85 hover:bg-bg-surface transition-all flex flex-col justify-between group shadow-xs">
       <div>
         <div className="flex items-start justify-between gap-2 mb-1">
-          <Link 
+          <Link
             to={`/concept/${conceptId}`}
             className="font-medium text-[13.5px] text-text-primary hover:text-accent transition-colors line-clamp-1"
           >
@@ -36,7 +36,7 @@ export default function ConceptMasteryCard({ concept, onPracticeClick }) {
             {attempted > 0 ? `${accuracy}%` : '—'}
           </span>
         </div>
-        
+
         <p className="text-[11px] text-text-muted mb-3 flex items-center gap-1">
           <span>{concept.subject_name || 'Physics'}</span>
           <span>•</span>
@@ -45,7 +45,7 @@ export default function ConceptMasteryCard({ concept, onPracticeClick }) {
 
         {/* Progress Bar */}
         <div className="w-full h-1.5 bg-bg-elevated rounded-full overflow-hidden mb-3">
-          <div 
+          <div
             className={`h-full rounded-full transition-all duration-500 ${barColor}`}
             style={{ width: attempted > 0 ? `${accuracy}%` : '0%' }}
           />
@@ -73,7 +73,7 @@ export default function ConceptMasteryCard({ concept, onPracticeClick }) {
             onClick={() => onPracticeClick(concept)}
             className="flex-1 h-[28px] text-[11px] rounded-md bg-text-primary text-bg-app hover:opacity-90 font-semibold transition-all cursor-pointer active:scale-95"
           >
-            Practice (5Q)
+            Practice
           </button>
         )}
       </div>

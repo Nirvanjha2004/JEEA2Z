@@ -73,7 +73,7 @@ export default function ConceptCard({ concept, onPracticeClick, onFilterClick })
             onClick={() => onPracticeClick(concept)}
             className="flex-1 h-[30px] text-[11.5px] rounded-lg bg-text-primary text-bg-app hover:opacity-90 font-semibold transition-all cursor-pointer active:scale-95"
           >
-            Practice (5Q)
+            Practice
           </button>
         )}
       </div>
