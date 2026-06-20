@@ -62,6 +62,13 @@ export default function ChapterPage() {
     return chapters.find((ch) => ch.id === parseInt(chapterId, 10));
   }, [chapters, chapterId]);
 
+  useEffect(() => {
+    if (currentChapter) {
+      localStorage.setItem('jee-sheet-last-chapter-id', currentChapter.id);
+      localStorage.setItem('jee-sheet-last-chapter-name', currentChapter.name);
+    }
+  }, [currentChapter]);
+
   // Optimistic status update handler
   const handleStatusChange = async (questionId, newStatus) => {
     const previousQuestions = [...questions];

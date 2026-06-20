@@ -108,19 +108,19 @@ export default function AdminQuestionFormPage() {
   if (fetching) {
     return (
       <div className="flex justify-center py-12">
-        <div className="w-8 h-8 border-2 border-brand-red border-t-transparent rounded-full animate-spin"></div>
+        <div className="w-8 h-8 border-2 border-accent border-t-transparent rounded-full animate-spin"></div>
       </div>
     );
   }
 
   return (
-    <div className="max-w-2xl mx-auto bg-navy-850 border border-navy-800 rounded-3xl p-6 md:p-8 shadow-xl text-white">
-      <h2 className="text-base font-bold text-white uppercase tracking-wider mb-6">
+    <div className="max-w-2xl mx-auto bg-bg-surface border border-border-default rounded-3xl p-6 md:p-8 shadow-sm text-text-primary">
+      <h2 className="text-base font-bold text-text-primary uppercase tracking-wider mb-6">
         {isEdit ? 'Edit Question' : 'Create New Question'}
       </h2>
 
       {error && (
-        <div className="p-4 bg-red-950/30 border border-red-500/50 text-red-400 text-sm rounded-xl mb-6">
+        <div className="p-4 bg-danger-bg border border-danger/55 text-danger text-sm rounded-xl mb-6">
           {error}
         </div>
       )}
@@ -129,14 +129,14 @@ export default function AdminQuestionFormPage() {
         {/* Subject & Chapter Dropdowns */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
-            <label className="block text-[10px] font-bold text-navy-400 uppercase tracking-wider mb-1.5">Subject</label>
+            <label className="block text-[10px] font-bold text-text-secondary uppercase tracking-wider mb-1.5">Subject</label>
             <select
               value={selectedSubjectId}
               onChange={(e) => {
                 setSelectedSubjectId(e.target.value);
                 setChapterId('');
               }}
-              className="w-full bg-navy-900 border border-navy-700 rounded-xl px-3 py-2 text-sm focus:outline-none focus:border-brand-red text-white"
+              className="w-full bg-bg-subtle border border-border-default rounded-xl px-3 py-2 text-sm focus:outline-none focus:border-accent text-text-primary"
               required
             >
               <option value="">-- Select Subject --</option>
@@ -149,11 +149,11 @@ export default function AdminQuestionFormPage() {
           </div>
 
           <div>
-            <label className="block text-[10px] font-bold text-navy-400 uppercase tracking-wider mb-1.5">Chapter</label>
+            <label className="block text-[10px] font-bold text-text-secondary uppercase tracking-wider mb-1.5">Chapter</label>
             <select
               value={chapterId}
               onChange={(e) => setChapterId(e.target.value)}
-              className="w-full bg-navy-900 border border-navy-700 rounded-xl px-3 py-2 text-sm focus:outline-none focus:border-brand-red text-white"
+              className="w-full bg-bg-subtle border border-border-default rounded-xl px-3 py-2 text-sm focus:outline-none focus:border-accent text-text-primary"
               disabled={!selectedSubjectId}
               required
             >
@@ -169,12 +169,12 @@ export default function AdminQuestionFormPage() {
 
         {/* Title Textarea */}
         <div>
-          <label className="block text-[10px] font-bold text-navy-400 uppercase tracking-wider mb-1.5">Question Title / Prompt</label>
+          <label className="block text-[10px] font-bold text-text-secondary uppercase tracking-wider mb-1.5">Question Title / Prompt</label>
           <textarea
             value={title}
             onChange={(e) => setTitle(e.target.value)}
             rows={4}
-            className="w-full bg-navy-900 border border-navy-700 rounded-xl px-3 py-2 text-sm focus:outline-none focus:border-brand-red text-white resize-none"
+            className="w-full bg-bg-subtle border border-border-default rounded-xl px-3 py-2 text-sm focus:outline-none focus:border-accent text-text-primary resize-none"
             placeholder="Type question markdown or description..."
             required
           />
@@ -183,11 +183,11 @@ export default function AdminQuestionFormPage() {
         {/* Difficulty & Type Dropdowns */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
-            <label className="block text-[10px] font-bold text-navy-400 uppercase tracking-wider mb-1.5">Difficulty</label>
+            <label className="block text-[10px] font-bold text-text-secondary uppercase tracking-wider mb-1.5">Difficulty</label>
             <select
               value={difficulty}
               onChange={(e) => setDifficulty(e.target.value)}
-              className="w-full bg-navy-900 border border-navy-700 rounded-xl px-3 py-2 text-sm focus:outline-none focus:border-brand-red text-white"
+              className="w-full bg-bg-subtle border border-border-default rounded-xl px-3 py-2 text-sm focus:outline-none focus:border-accent text-text-primary"
             >
               <option value="easy">Easy</option>
               <option value="medium">Medium</option>
@@ -196,11 +196,11 @@ export default function AdminQuestionFormPage() {
           </div>
 
           <div>
-            <label className="block text-[10px] font-bold text-navy-400 uppercase tracking-wider mb-1.5">Question Type</label>
+            <label className="block text-[10px] font-bold text-text-secondary uppercase tracking-wider mb-1.5">Question Type</label>
             <select
               value={type}
               onChange={(e) => setType(e.target.value)}
-              className="w-full bg-navy-900 border border-navy-700 rounded-xl px-3 py-2 text-sm focus:outline-none focus:border-brand-red text-white"
+              className="w-full bg-bg-subtle border border-border-default rounded-xl px-3 py-2 text-sm focus:outline-none focus:border-accent text-text-primary"
             >
               <option value="pyq">PYQ</option>
               <option value="concept">Concept</option>
@@ -212,60 +212,60 @@ export default function AdminQuestionFormPage() {
         {/* Source & Correct Answer Inputs */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
-            <label className="block text-[10px] font-bold text-navy-400 uppercase tracking-wider mb-1.5">Source / Exam</label>
+            <label className="block text-[10px] font-bold text-text-secondary uppercase tracking-wider mb-1.5">Source / Exam</label>
             <input
               type="text"
               value={source}
               onChange={(e) => setSource(e.target.value)}
               placeholder="e.g. JEE Main 2023 Jan S1"
-              className="w-full bg-navy-900 border border-navy-700 rounded-xl px-3 py-2 text-sm focus:outline-none focus:border-brand-red text-white"
+              className="w-full bg-bg-subtle border border-border-default rounded-xl px-3 py-2 text-sm focus:outline-none focus:border-accent text-text-primary"
             />
           </div>
 
           <div>
-            <label className="block text-[10px] font-bold text-navy-400 uppercase tracking-wider mb-1.5">Correct Answer</label>
+            <label className="block text-[10px] font-bold text-text-secondary uppercase tracking-wider mb-1.5">Correct Answer</label>
             <input
               type="text"
               value={correctAnswer}
               onChange={(e) => setCorrectAnswer(e.target.value)}
               placeholder="e.g. A, B, C, D or numerical string"
-              className="w-full bg-navy-900 border border-navy-700 rounded-xl px-3 py-2 text-sm focus:outline-none focus:border-brand-red text-white font-mono"
+              className="w-full bg-bg-subtle border border-border-default rounded-xl px-3 py-2 text-sm focus:outline-none focus:border-accent text-text-primary font-mono"
             />
           </div>
         </div>
 
         {/* Solution URL */}
         <div>
-          <label className="block text-[10px] font-bold text-navy-400 uppercase tracking-wider mb-1.5">Solution URL (Link / Video)</label>
+          <label className="block text-[10px] font-bold text-text-secondary uppercase tracking-wider mb-1.5">Solution URL (Link / Video)</label>
           <input
             type="url"
             value={solutionUrl}
             onChange={(e) => setSolutionUrl(e.target.value)}
             placeholder="https://youtube.com/watch?v=..."
-            className="w-full bg-navy-900 border border-navy-700 rounded-xl px-3 py-2 text-sm focus:outline-none focus:border-brand-red text-white"
+            className="w-full bg-bg-subtle border border-border-default rounded-xl px-3 py-2 text-sm focus:outline-none focus:border-accent text-text-primary"
           />
         </div>
 
         {/* Notes (Optional hint) */}
         <div>
-          <label className="block text-[10px] font-bold text-navy-400 uppercase tracking-wider mb-1.5">Notes / Hint (Optional)</label>
+          <label className="block text-[10px] font-bold text-text-secondary uppercase tracking-wider mb-1.5">Notes / Hint (Optional)</label>
           <textarea
             value={notes}
             onChange={(e) => setNotes(e.target.value)}
             rows={2}
-            className="w-full bg-navy-900 border border-navy-700 rounded-xl px-3 py-2 text-sm focus:outline-none focus:border-brand-red text-white resize-none"
+            className="w-full bg-bg-subtle border border-border-default rounded-xl px-3 py-2 text-sm focus:outline-none focus:border-accent text-text-primary resize-none"
             placeholder="Shortcut tips or hints..."
           />
         </div>
 
         {/* Order Index */}
         <div className="max-w-xs">
-          <label className="block text-[10px] font-bold text-navy-400 uppercase tracking-wider mb-1.5">Order Index</label>
+          <label className="block text-[10px] font-bold text-text-secondary uppercase tracking-wider mb-1.5">Order Index</label>
           <input
             type="number"
             value={orderIndex}
             onChange={(e) => setOrderIndex(e.target.value)}
-            className="w-full bg-navy-900 border border-navy-700 rounded-xl px-3 py-2 text-sm focus:outline-none focus:border-brand-red text-white"
+            className="w-full bg-bg-subtle border border-border-default rounded-xl px-3 py-2 text-sm focus:outline-none focus:border-accent text-text-primary"
             required
           />
         </div>
@@ -274,14 +274,14 @@ export default function AdminQuestionFormPage() {
         <div className="pt-4 flex items-center justify-end gap-3">
           <Link
             to="/admin/questions"
-            className="px-4 py-2 border border-navy-700 hover:border-white text-white text-xs font-bold rounded-lg transition"
+            className="px-4 py-2 border border-border-default hover:border-border-focus text-text-secondary text-xs font-bold rounded-lg transition"
           >
             Cancel
           </Link>
           <button
             type="submit"
             disabled={loading}
-            className="px-5 py-2 bg-brand-red hover:bg-brand-red-hover text-white text-xs font-bold rounded-lg transition disabled:opacity-40 cursor-pointer"
+            className="px-5 py-2 bg-accent hover:bg-accent-hover text-white text-xs font-bold rounded-lg transition disabled:opacity-40 cursor-pointer border border-border-default"
           >
             {loading ? 'Saving...' : 'Save Question'}
           </button>

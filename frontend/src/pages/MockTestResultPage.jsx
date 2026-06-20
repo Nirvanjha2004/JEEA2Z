@@ -89,7 +89,7 @@ export default function MockTestResultPage() {
       }
     } catch (err) {
       console.error(err);
-      alert('Failed to retake test.');
+      toast.error('Failed to retake test.');
     }
   };
 

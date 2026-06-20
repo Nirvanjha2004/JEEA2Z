@@ -1,10 +1,16 @@
 import React, { useEffect, useState, useMemo } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import api from '../api';
 import DifficultyBadge from '../components/DifficultyBadge';
 import TypeBadge from '../components/TypeBadge';
+import { useToast } from '../hooks/useToast';
+import { Input } from '../components/ui/Input';
+import { Button } from '../components/ui/Button';
+import { AlertCircle } from 'lucide-react';
 
 export default function AdminQuestionsPage() {
+  const navigate = useNavigate();
+  const toast = useToast();
   const [questions, setQuestions] = useState([]);
   const [loading, setLoading] = useState(true);
   const [total, setTotal] = useState(0);
@@ -76,10 +82,11 @@ export default function AdminQuestionsPage() {
     if (!window.confirm('Are you sure you want to delete this question?')) return;
     try {
       await api.delete(`/api/admin/questions/${id}`);
+      toast.success('Question deleted successfully.');
       fetchQuestions();
     } catch (err) {
       console.error(err);
-      alert('Failed to delete question.');
+      toast.error('Failed to delete question.');
     }
   };
 
@@ -92,51 +99,53 @@ export default function AdminQuestionsPage() {
   const totalPages = Math.ceil(total / 50) || 1;
 
   return (
-    <div className="space-y-6">
-      <div className="flex items-center justify-between">
+    <div className="space-y-6 text-text-primary select-none animate-slide-in">
+      <div className="flex items-center justify-between border-b border-border-default/60 pb-5">
         <div>
-          <h1 className="text-lg font-bold text-white uppercase tracking-wider">Manage Questions</h1>
-          <p className="text-xs text-navy-400 mt-0.5">Total Questions: {total}</p>
+          <h1 className="text-[17px] font-semibold text-text-primary uppercase tracking-wider">Manage Questions</h1>
+          <p className="text-[12px] text-text-secondary mt-1">Total Questions: {total}</p>
         </div>
-        <Link
-          to="/admin/questions/new"
-          className="px-4 py-2 bg-brand-red hover:bg-brand-red-hover text-white text-xs font-bold rounded-lg transition"
+        <Button
+          variant="primary"
+          size="standard"
+          onClick={() => navigate('/admin/questions/new')}
         >
           + Add Question
-        </Link>
+        </Button>
       </div>
 
       {error && (
-        <div className="p-4 bg-red-950/30 border border-red-500/50 text-red-400 text-sm rounded-xl">
-          {error}
+        <div className="p-3 bg-danger-bg border border-danger/25 text-danger text-[12.5px] rounded-md flex items-start gap-2 animate-slide-in">
+          <AlertCircle className="w-4 h-4 shrink-0 mt-0.5" />
+          <span>{error}</span>
         </div>
       )}
 
       {/* Filters Form */}
-      <form onSubmit={handleSearchSubmit} className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-6 gap-3 bg-navy-850 border border-navy-800 p-4 rounded-2xl">
+      <form onSubmit={handleSearchSubmit} className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-6 gap-4 bg-bg-surface border border-border-default p-5 rounded-lg">
         {/* Search */}
         <div className="lg:col-span-2">
-          <label className="block text-[9px] font-bold text-navy-500 uppercase tracking-wider mb-1">Search</label>
+          <label className="block text-[10px] font-semibold text-text-muted uppercase tracking-wider mb-1.5">Search</label>
           <div className="flex gap-2">
-            <input
+            <Input
               type="text"
               placeholder="Search title, source..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="flex-grow bg-navy-900 border border-navy-700 rounded-lg px-3 py-1.5 text-xs text-white placeholder-navy-500 focus:outline-none focus:border-brand-red"
+              className="flex-grow"
             />
-            <button
+            <Button
               type="submit"
-              className="px-3 bg-navy-800 hover:bg-navy-750 text-white text-xs font-bold rounded-lg transition cursor-pointer"
+              variant="secondary"
             >
               Go
-            </button>
+            </Button>
           </div>
         </div>
 
         {/* Subject */}
         <div>
-          <label className="block text-[9px] font-bold text-navy-500 uppercase tracking-wider mb-1">Subject</label>
+          <label className="block text-[10px] font-semibold text-text-muted uppercase tracking-wider mb-1.5">Subject</label>
           <select
             value={subjectId}
             onChange={(e) => {
@@ -144,7 +153,7 @@ export default function AdminQuestionsPage() {
               setChapterId('');
               setPage(1);
             }}
-            className="w-full bg-navy-900 border border-navy-700 rounded-lg px-2 py-1.5 text-xs focus:outline-none focus:border-brand-red text-white"
+            className="w-full bg-bg-app border border-border-default hover:border-border-focus focus:border-accent outline-none rounded-md px-2 py-1.5 text-xs text-text-primary h-[34px] transition"
           >
             <option value="">All Subjects</option>
             {subjects.map((sub) => (
@@ -157,14 +166,14 @@ export default function AdminQuestionsPage() {
 
         {/* Chapter */}
         <div>
-          <label className="block text-[9px] font-bold text-navy-500 uppercase tracking-wider mb-1">Chapter</label>
+          <label className="block text-[10px] font-semibold text-text-muted uppercase tracking-wider mb-1.5">Chapter</label>
           <select
             value={chapterId}
             onChange={(e) => {
               setChapterId(e.target.value);
               setPage(1);
             }}
-            className="w-full bg-navy-900 border border-navy-700 rounded-lg px-2 py-1.5 text-xs focus:outline-none focus:border-brand-red text-white"
+            className="w-full bg-bg-app border border-border-default hover:border-border-focus focus:border-accent outline-none rounded-md px-2 py-1.5 text-xs text-text-primary h-[34px] transition disabled:opacity-50"
             disabled={!subjectId}
           >
             <option value="">All Chapters</option>
@@ -178,14 +187,14 @@ export default function AdminQuestionsPage() {
 
         {/* Difficulty */}
         <div>
-          <label className="block text-[9px] font-bold text-navy-500 uppercase tracking-wider mb-1">Difficulty</label>
+          <label className="block text-[10px] font-semibold text-text-muted uppercase tracking-wider mb-1.5">Difficulty</label>
           <select
             value={difficulty}
             onChange={(e) => {
               setDifficulty(e.target.value);
               setPage(1);
             }}
-            className="w-full bg-navy-900 border border-navy-700 rounded-lg px-2 py-1.5 text-xs focus:outline-none focus:border-brand-red text-white"
+            className="w-full bg-bg-app border border-border-default hover:border-border-focus focus:border-accent outline-none rounded-md px-2 py-1.5 text-xs text-text-primary h-[34px] transition"
           >
             <option value="">All</option>
             <option value="easy">Easy</option>
@@ -196,14 +205,14 @@ export default function AdminQuestionsPage() {
 
         {/* Type */}
         <div>
-          <label className="block text-[9px] font-bold text-navy-500 uppercase tracking-wider mb-1">Type</label>
+          <label className="block text-[10px] font-semibold text-text-muted uppercase tracking-wider mb-1.5">Type</label>
           <select
             value={type}
             onChange={(e) => {
               setType(e.target.value);
               setPage(1);
             }}
-            className="w-full bg-navy-900 border border-navy-700 rounded-lg px-2 py-1.5 text-xs focus:outline-none focus:border-brand-red text-white"
+            className="w-full bg-bg-app border border-border-default hover:border-border-focus focus:border-accent outline-none rounded-md px-2 py-1.5 text-xs text-text-primary h-[34px] transition"
           >
             <option value="">All</option>
             <option value="pyq">PYQ</option>
@@ -215,19 +224,19 @@ export default function AdminQuestionsPage() {
 
       {/* Questions List */}
       {loading ? (
-        <div className="flex justify-center py-12 bg-navy-850 rounded-2xl border border-navy-800">
-          <div className="w-8 h-8 border-2 border-brand-red border-t-transparent rounded-full animate-spin"></div>
+        <div className="flex justify-center py-16 bg-bg-surface rounded-lg border border-border-default/60">
+          <div className="w-8 h-8 border-2 border-accent border-t-transparent rounded-full animate-spin"></div>
         </div>
       ) : questions.length === 0 ? (
-        <div className="bg-navy-850 border border-navy-800 p-12 text-center rounded-2xl text-navy-400 text-xs">
+        <div className="bg-bg-surface border border-border-default/60 p-12 text-center rounded-lg text-text-muted text-xs">
           No questions match search filters.
         </div>
       ) : (
-        <div className="bg-navy-850 border border-navy-800 rounded-2xl overflow-hidden shadow-lg">
+        <div className="bg-bg-surface border border-border-default rounded-lg overflow-hidden shadow-xs">
           <div className="overflow-x-auto">
             <table className="w-full text-left border-collapse table-auto text-xs">
               <thead>
-                <tr className="bg-navy-900 border-b border-navy-800 text-[10px] font-bold text-navy-400 uppercase tracking-wider">
+                <tr className="bg-bg-subtle/30 border-b border-border-default text-[10px] font-semibold text-text-muted uppercase tracking-wider">
                   <th className="px-4 py-3 w-16 text-center">ID</th>
                   <th className="px-4 py-3">Title</th>
                   <th className="px-4 py-3">Subject / Chapter</th>
@@ -237,14 +246,14 @@ export default function AdminQuestionsPage() {
                   <th className="px-4 py-3 text-right w-28">Actions</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-navy-800/40 text-navy-300">
+              <tbody className="divide-y divide-border-default/40 text-text-secondary">
                 {questions.map((q) => (
-                  <tr key={q.id} className="hover:bg-navy-800/20 transition-colors">
-                    <td className="px-4 py-3.5 text-center font-mono text-navy-500">{q.id}</td>
-                    <td className="px-4 py-3.5 font-medium text-white max-w-sm truncate">{q.title}</td>
+                  <tr key={q.id} className="hover:bg-bg-subtle/30 transition-colors">
+                    <td className="px-4 py-3.5 text-center font-mono text-text-muted">{q.id}</td>
+                    <td className="px-4 py-3.5 font-medium text-text-primary max-w-sm truncate">{q.title}</td>
                     <td className="px-4 py-3.5">
-                      <span className="block text-white font-bold">{q.subject_name}</span>
-                      <span className="text-[10px] text-navy-400">{q.chapter_name}</span>
+                      <span className="block text-text-primary font-semibold">{q.subject_name}</span>
+                      <span className="text-[10px] text-text-muted">{q.chapter_name}</span>
                     </td>
                     <td className="px-4 py-3.5 text-center">
                       <DifficultyBadge difficulty={q.difficulty} />
@@ -252,17 +261,17 @@ export default function AdminQuestionsPage() {
                     <td className="px-4 py-3.5 text-center">
                       <TypeBadge type={q.type} />
                     </td>
-                    <td className="px-4 py-3.5 font-mono text-navy-400">{q.source || '-'}</td>
-                    <td className="px-4 py-3.5 text-right space-x-2">
+                    <td className="px-4 py-3.5 font-mono text-text-muted">{q.source || '-'}</td>
+                    <td className="px-4 py-3.5 text-right space-x-3.5">
                       <Link
                         to={`/admin/questions/${q.id}`}
-                        className="text-blue-400 hover:text-blue-300 hover:underline transition font-bold"
+                        className="text-accent hover:text-accent-hover hover:underline transition font-semibold"
                       >
                         Edit
                       </Link>
                       <button
                         onClick={() => handleDelete(q.id)}
-                        className="text-brand-red hover:text-red-400 hover:underline transition font-bold cursor-pointer"
+                        className="text-text-muted hover:text-text-primary hover:underline transition font-semibold cursor-pointer"
                       >
                         Delete
                       </button>
@@ -274,25 +283,27 @@ export default function AdminQuestionsPage() {
           </div>
 
           {/* Pagination Footer */}
-          <div className="p-4 border-t border-navy-800 bg-navy-900/40 flex items-center justify-between text-xs text-navy-400">
+          <div className="p-4 border-t border-border-default/60 bg-bg-subtle/20 flex items-center justify-between text-xs text-text-muted">
             <span>
               Showing Page {page} of {totalPages}
             </span>
             <div className="flex gap-2">
-              <button
+              <Button
+                variant="secondary"
+                size="compact"
                 onClick={() => setPage((p) => Math.max(1, p - 1))}
                 disabled={page === 1}
-                className="px-3 py-1 bg-navy-800 hover:bg-navy-750 text-white rounded-lg disabled:opacity-40 disabled:pointer-events-none cursor-pointer"
               >
                 Prev
-              </button>
-              <button
+              </Button>
+              <Button
+                variant="secondary"
+                size="compact"
                 onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
                 disabled={page === totalPages}
-                className="px-3 py-1 bg-navy-800 hover:bg-navy-750 text-white rounded-lg disabled:opacity-40 disabled:pointer-events-none cursor-pointer"
               >
                 Next
-              </button>
+              </Button>
             </div>
           </div>
         </div>

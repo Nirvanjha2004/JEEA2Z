@@ -105,27 +105,27 @@ export default function AdminCSVImportPage() {
   return (
     <div className="space-y-6 max-w-4xl">
       <div>
-        <h1 className="text-lg font-bold text-white uppercase tracking-wider">Bulk CSV Import</h1>
-        <p className="text-xs text-navy-400 mt-0.5">Upload questions in bulk using a CSV spreadsheet.</p>
+        <h1 className="text-lg font-bold text-text-primary uppercase tracking-wider">Bulk CSV Import</h1>
+        <p className="text-xs text-text-secondary mt-0.5">Upload questions in bulk using a CSV spreadsheet.</p>
       </div>
 
       {error && (
-        <div className="p-4 bg-red-950/30 border border-red-500/50 text-red-400 text-sm rounded-xl">
+        <div className="p-4 bg-danger-bg border border-danger/55 text-danger text-sm rounded-xl">
           {error}
         </div>
       )}
 
       {result && (
-        <div className="p-5 bg-green-950/25 border border-green-500/35 rounded-2xl space-y-2">
-          <h3 className="text-sm font-bold text-green-400">✓ Bulk Import Complete</h3>
-          <p className="text-xs text-navy-200">
-            Successfully imported <strong className="text-white font-mono text-sm">{result.inserted}</strong> questions.
-            Skipped <strong className="text-white font-mono text-sm">{result.skipped}</strong> rows.
+        <div className="p-5 bg-success-bg border border-success/35 rounded-2xl space-y-2">
+          <h3 className="text-sm font-bold text-success">✓ Bulk Import Complete</h3>
+          <p className="text-xs text-text-secondary">
+            Successfully imported <strong className="text-text-primary font-mono text-sm">{result.inserted}</strong> questions.
+            Skipped <strong className="text-text-primary font-mono text-sm">{result.skipped}</strong> rows.
           </p>
           {result.errors?.length > 0 && (
-            <div className="pt-3 border-t border-green-500/10">
-              <h4 className="text-[10px] font-bold uppercase tracking-wider text-green-500 mb-2">Error Log</h4>
-              <div className="max-h-32 overflow-y-auto space-y-1.5 text-[10px] font-mono text-red-400 bg-navy-950 p-2.5 rounded-lg border border-navy-800">
+            <div className="pt-3 border-t border-success/10">
+              <h4 className="text-[10px] font-bold uppercase tracking-wider text-success mb-2">Error Log</h4>
+              <div className="max-h-32 overflow-y-auto space-y-1.5 text-[10px] font-mono text-danger bg-bg-app p-2.5 rounded-lg border border-border-default">
                 {result.errors.map((err, idx) => (
                   <div key={idx}>
                     Row {err.row}: {err.message}
@@ -138,35 +138,35 @@ export default function AdminCSVImportPage() {
       )}
 
       {/* CSV Spec Panel */}
-      <div className="bg-navy-850 border border-navy-800 p-5 rounded-2xl space-y-4">
+      <div className="bg-bg-surface border border-border-default p-5 rounded-2xl space-y-4">
         <div className="flex items-center justify-between">
-          <h3 className="text-xs font-bold text-white uppercase tracking-wider">CSV Structure Guide</h3>
+          <h3 className="text-xs font-bold text-text-primary uppercase tracking-wider">CSV Structure Guide</h3>
           <button
             onClick={downloadTemplate}
-            className="text-xs text-brand-red font-bold hover:underline transition cursor-pointer"
+            className="text-xs text-accent font-bold hover:underline transition cursor-pointer bg-transparent"
           >
             📥 Download Template CSV
           </button>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
-          <div className="space-y-1 text-navy-300">
-            <div>• <strong className="text-white font-mono">chapter_id</strong>: Positive integer. (Chapter identifier)</div>
-            <div>• <strong className="text-white font-mono">title</strong>: Text. Question description markdown.</div>
-            <div>• <strong className="text-white font-mono">difficulty</strong>: <code className="text-brand-red bg-navy-900 px-1 rounded">easy</code> | <code className="text-brand-red bg-navy-900 px-1 rounded">medium</code> | <code className="text-brand-red bg-navy-900 px-1 rounded">hard</code></div>
-            <div>• <strong className="text-white font-mono">type</strong>: <code className="text-brand-red bg-navy-900 px-1 rounded">pyq</code> | <code className="text-brand-red bg-navy-900 px-1 rounded">concept</code> | <code className="text-brand-red bg-navy-900 px-1 rounded">practice</code></div>
+          <div className="space-y-1 text-text-secondary">
+            <div>• <strong className="text-text-primary font-mono">chapter_id</strong>: Positive integer. (Chapter identifier)</div>
+            <div>• <strong className="text-text-primary font-mono">title</strong>: Text. Question description markdown.</div>
+            <div>• <strong className="text-text-primary font-mono">difficulty</strong>: <code className="text-accent bg-bg-app px-1 rounded">easy</code> | <code className="text-accent bg-bg-app px-1 rounded">medium</code> | <code className="text-accent bg-bg-app px-1 rounded">hard</code></div>
+            <div>• <strong className="text-text-primary font-mono">type</strong>: <code className="text-accent bg-bg-app px-1 rounded">pyq</code> | <code className="text-accent bg-bg-app px-1 rounded">concept</code> | <code className="text-accent bg-bg-app px-1 rounded">practice</code></div>
           </div>
-          <div className="space-y-1 text-navy-300">
-            <div>• <strong className="text-white font-mono">source</strong>: Exam label. (e.g. "JEE Main 2024")</div>
-            <div>• <strong className="text-white font-mono">solution_url</strong>: Watch explanation URL.</div>
-            <div>• <strong className="text-white font-mono">correct_answer</strong>: Single choice character key (e.g. A, B) or decimal numeric.</div>
-            <div>• <strong className="text-white font-mono">order_index</strong>: Integer to order chapter listings.</div>
+          <div className="space-y-1 text-text-secondary">
+            <div>• <strong className="text-text-primary font-mono">source</strong>: Exam label. (e.g. "JEE Main 2024")</div>
+            <div>• <strong className="text-text-primary font-mono">solution_url</strong>: Watch explanation URL.</div>
+            <div>• <strong className="text-text-primary font-mono">correct_answer</strong>: Single choice character key (e.g. A, B) or decimal numeric.</div>
+            <div>• <strong className="text-text-primary font-mono">order_index</strong>: Integer to order chapter listings.</div>
           </div>
         </div>
       </div>
 
       {/* Drop Zone */}
-      <div className="bg-navy-850 border-2 border-dashed border-navy-700 hover:border-brand-red transition rounded-3xl p-8 flex flex-col items-center justify-center text-center relative cursor-pointer">
+      <div className="bg-bg-surface border-2 border-dashed border-border-default hover:border-accent transition rounded-3xl p-8 flex flex-col items-center justify-center text-center relative cursor-pointer">
         <input
           type="file"
           accept=".csv"
@@ -174,10 +174,10 @@ export default function AdminCSVImportPage() {
           className="absolute inset-0 opacity-0 cursor-pointer"
         />
         <span className="text-3xl mb-2">📄</span>
-        <h4 className="text-sm font-bold text-white mb-1">
+        <h4 className="text-sm font-bold text-text-primary mb-1">
           {file ? file.name : 'Select CSV Question Sheet'}
         </h4>
-        <p className="text-xs text-navy-400 max-w-xs">
+        <p className="text-xs text-text-secondary max-w-xs">
           {file
             ? `File size: ${(file.size / 1024).toFixed(2)} KB. Press import to complete upload.`
             : 'Click to select spreadsheet or drop it here. Accepts .csv format.'}
@@ -187,12 +187,12 @@ export default function AdminCSVImportPage() {
       {/* Preview Table */}
       {preview.length > 0 && (
         <div className="space-y-3">
-          <h3 className="text-xs font-bold text-white uppercase tracking-wider">Preview (First 10 rows)</h3>
-          <div className="bg-navy-850 border border-navy-800 rounded-2xl overflow-hidden shadow-lg">
+          <h3 className="text-xs font-bold text-text-primary uppercase tracking-wider">Preview (First 10 rows)</h3>
+          <div className="bg-bg-surface border border-border-default rounded-2xl overflow-hidden shadow-sm">
             <div className="overflow-x-auto">
               <table className="w-full text-left border-collapse table-auto text-[10px]">
                 <thead>
-                  <tr className="bg-navy-900 border-b border-navy-800 font-bold text-navy-400 uppercase tracking-wider">
+                  <tr className="bg-bg-elevated border-b border-border-default font-bold text-text-muted uppercase tracking-wider">
                     <th className="px-4 py-2.5">chapter_id</th>
                     <th className="px-4 py-2.5">title</th>
                     <th className="px-4 py-2.5">difficulty</th>
@@ -202,7 +202,7 @@ export default function AdminCSVImportPage() {
                     <th className="px-4 py-2.5">order_index</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-navy-800/40 text-navy-300">
+                <tbody className="divide-y divide-border-default/40 text-text-secondary">
                   {preview.map((row, idx) => (
                     <tr key={idx}>
                       <td className="px-4 py-2 font-mono">{row.chapter_id}</td>
@@ -223,7 +223,7 @@ export default function AdminCSVImportPage() {
             <button
               onClick={handleImport}
               disabled={loading}
-              className="px-6 py-2.5 bg-brand-red hover:bg-brand-red-hover text-white text-xs font-bold rounded-xl transition disabled:opacity-40 flex items-center gap-1.5 cursor-pointer"
+              className="px-6 py-2.5 bg-accent hover:bg-accent-hover text-white text-xs font-bold rounded-xl transition disabled:opacity-40 flex items-center gap-1.5 cursor-pointer border border-border-default"
             >
               {loading && <div className="w-3.5 h-3.5 border border-white border-t-transparent rounded-full animate-spin"></div>}
               Import Valid CSV Rows

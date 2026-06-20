@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import useAuthStore from '../store/authStore';
 import useCommandStore from '../store/commandStore';
+import useTheme from '../hooks/useTheme';
 import api from '../api';
 import {
   Sparkles,
@@ -44,33 +45,7 @@ const Sidebar = () => {
   });
 
   // Dark/Light theme state
-  const [theme, setTheme] = useState('dark');
-
-  // Initialize theme from localStorage
-  useEffect(() => {
-    const savedTheme = localStorage.getItem('theme') || 'dark';
-    setTheme(savedTheme);
-    if (savedTheme === 'light') {
-      document.documentElement.classList.add('light');
-      document.documentElement.classList.remove('dark');
-    } else {
-      document.documentElement.classList.add('dark');
-      document.documentElement.classList.remove('light');
-    }
-  }, []);
-
-  const toggleTheme = () => {
-    const nextTheme = theme === 'dark' ? 'light' : 'dark';
-    setTheme(nextTheme);
-    localStorage.setItem('theme', nextTheme);
-    if (nextTheme === 'light') {
-      document.documentElement.classList.add('light');
-      document.documentElement.classList.remove('dark');
-    } else {
-      document.documentElement.classList.add('dark');
-      document.documentElement.classList.remove('light');
-    }
-  };
+  const { theme, toggleTheme } = useTheme();
 
   const toggleSubject = async (slug) => {
     setExpanded((prev) => ({ ...prev, [slug]: !prev[slug] }));

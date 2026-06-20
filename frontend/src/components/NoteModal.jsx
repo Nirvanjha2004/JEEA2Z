@@ -67,57 +67,63 @@ export default function NoteModal({ questionId, questionTitle, onClose }) {
   }, [content, questionId]);
 
   return (
-    <div className="fixed inset-y-0 right-0 w-80 md:w-96 bg-navy-950 border-l border-navy-800 shadow-2xl z-50 flex flex-col transition-transform duration-300">
-      {/* Header */}
-      <div className="p-4 border-b border-navy-800 flex items-center justify-between bg-navy-900">
-        <div>
-          <h3 className="text-sm font-bold text-white uppercase tracking-wider">Personal Notes</h3>
-          <p className="text-[10px] text-navy-400 truncate max-w-[200px] md:max-w-[250px]">{questionTitle}</p>
-        </div>
-        <button
-          onClick={onClose}
-          className="text-navy-400 hover:text-white transition p-1"
-          aria-label="Close notes"
-        >
-          <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
-      </div>
+    <div className="fixed inset-0 bg-black/45 backdrop-blur-md z-50 flex items-center justify-center p-4 animate-fade-in">
+      {/* Backdrop click close */}
+      <div className="absolute inset-0 cursor-default" onClick={onClose}></div>
 
-      {/* Text Area */}
-      <div className="flex-grow p-4 flex flex-col gap-2">
-        {loading ? (
-          <div className="flex-grow flex items-center justify-center">
-            <div className="w-6 h-6 border-2 border-brand-red border-t-transparent rounded-full animate-spin"></div>
+      {/* Modal Card */}
+      <div className="relative w-full max-w-lg bg-bg-surface border border-border-default rounded-2xl shadow-2xl flex flex-col overflow-hidden max-h-[85vh] animate-slide-in text-text-primary z-10">
+        {/* Header */}
+        <div className="p-4 border-b border-border-default flex items-center justify-between bg-bg-elevated select-none">
+          <div className="min-w-0 flex-1 pr-4">
+            <h3 className="text-sm font-bold text-text-primary uppercase tracking-wider">Personal Notes</h3>
+            <p className="text-[11px] text-text-muted truncate mt-0.5" title={questionTitle}>{questionTitle}</p>
           </div>
-        ) : (
-          <textarea
-            value={content}
-            onChange={(e) => setContent(e.target.value)}
-            placeholder="Type your notes or shortcuts here. Saves automatically..."
-            className="flex-grow w-full bg-navy-900 border border-navy-700 rounded-xl p-3 text-sm text-white placeholder-navy-500 focus:outline-none focus:border-brand-red resize-none font-sans"
-            maxLength={1000}
-          />
-        )}
-      </div>
+          <button
+            onClick={onClose}
+            className="text-text-muted hover:text-text-primary transition p-1.5 rounded-md hover:bg-bg-subtle cursor-pointer shrink-0"
+            aria-label="Close notes"
+          >
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
 
-      {/* Footer Info */}
-      <div className="p-4 border-t border-navy-800 bg-navy-900/50 flex items-center justify-between text-xs text-navy-400">
-        <div>
-          {saving ? (
-            <span className="flex items-center gap-1.5 text-brand-red">
-              <span className="w-1.5 h-1.5 bg-brand-red rounded-full animate-ping"></span>
-              Saving...
-            </span>
-          ) : lastSaved ? (
-            <span>Saved at {lastSaved}</span>
+        {/* Text Area */}
+        <div className="p-5 flex flex-col gap-2 min-h-[260px] max-h-[50vh]">
+          {loading ? (
+            <div className="flex-grow flex items-center justify-center py-12">
+              <div className="w-6 h-6 border-2 border-accent border-t-transparent rounded-full animate-spin"></div>
+            </div>
           ) : (
-            <span>Auto-saves drafts</span>
+            <textarea
+              value={content}
+              onChange={(e) => setContent(e.target.value)}
+              placeholder="Type your notes, shortcuts, or key equations here. Saves automatically..."
+              className="flex-grow w-full h-48 bg-bg-subtle border border-border-default rounded-xl p-3.5 text-sm text-text-primary placeholder-text-muted focus:outline-none focus:border-accent resize-none font-sans leading-relaxed"
+              maxLength={1000}
+            />
           )}
         </div>
-        <div className="font-mono text-[10px] text-navy-500">
-          {content.length}/1000 chars
+
+        {/* Footer Info */}
+        <div className="p-4 border-t border-border-default bg-bg-subtle/50 flex items-center justify-between text-xs text-text-secondary select-none">
+          <div>
+            {saving ? (
+              <span className="flex items-center gap-1.5 text-accent">
+                <span className="w-1.5 h-1.5 bg-accent rounded-full animate-ping"></span>
+                Saving...
+              </span>
+            ) : lastSaved ? (
+              <span>Saved at {lastSaved}</span>
+            ) : (
+              <span>Auto-saves drafts</span>
+            )}
+          </div>
+          <div className="font-mono text-[10px] text-text-muted">
+            {content.length}/1000 chars
+          </div>
         </div>
       </div>
     </div>
