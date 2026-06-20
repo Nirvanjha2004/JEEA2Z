@@ -67,7 +67,7 @@ export default function NoteModal({ questionId, questionTitle, onClose }) {
   }, [content, questionId]);
 
   return (
-    <div className="fixed inset-0 bg-black/45 backdrop-blur-md z-50 flex items-center justify-center p-4 animate-fade-in">
+    <div className="fixed inset-0 bg-black/15 backdrop-blur-xs z-50 flex items-center justify-center p-4 animate-fade-in">
       {/* Backdrop click close */}
       <div className="absolute inset-0 cursor-default" onClick={onClose}></div>
 

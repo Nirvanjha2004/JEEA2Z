@@ -9,90 +9,112 @@ const HintPanel = ({ questionId, questionTitle, isOpen, onClose }) => {
   const [isStreaming, setIsStreaming] = useState(false);
   const [upgradeRequired, setUpgradeRequired] = useState(false);
   const [error, setError] = useState(null);
+  const [reloadKey, setReloadKey] = useState(0);
   const { user } = useAuthStore();
   const toast = useToast();
 
-  const fetchHint = async () => {
-    setIsStreaming(true);
-    setHintText('');
-    setUpgradeRequired(false);
-    setError(null);
+  useEffect(() => {
+    const abortController = new AbortController();
+    let isCancelled = false;
 
-    const token = localStorage.getItem('jee-sheet-token');
-    const apiBase = import.meta.env.VITE_API_URL || '';
+    const fetchHintStream = async () => {
+      if (!isOpen || !questionId) return;
 
-    try {
-      const response = await fetch(`${apiBase}/api/hints/${questionId}`, {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      });
+      setIsStreaming(true);
+      setHintText('');
+      setUpgradeRequired(false);
+      setError(null);
 
-      if (response.status === 403) {
-        const errData = await response.json();
-        if (errData.upgradeRequired) {
-          setUpgradeRequired(true);
-          setIsStreaming(false);
-          return;
+      const token = localStorage.getItem('jee-sheet-token');
+      const apiBase = import.meta.env.VITE_API_URL || '';
+
+      try {
+        const response = await fetch(`${apiBase}/api/hints/${questionId}`, {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+          signal: abortController.signal,
+        });
+
+        if (isCancelled) return;
+
+        if (response.status === 403) {
+          const errData = await response.json();
+          if (isCancelled) return;
+          if (errData.upgradeRequired) {
+            setUpgradeRequired(true);
+            setIsStreaming(false);
+            return;
+          }
         }
-      }
 
-      if (!response.ok) {
-        throw new Error('Failed to retrieve hint.');
-      }
+        if (!response.ok) {
+          throw new Error('Failed to retrieve hint.');
+        }
 
-      const reader = response.body.getReader();
-      const decoder = new TextDecoder();
+        const reader = response.body.getReader();
+        const decoder = new TextDecoder();
 
-      while (true) {
-        const { done, value } = await reader.read();
-        if (done) break;
+        while (true) {
+          const { done, value } = await reader.read();
+          if (isCancelled) {
+            reader.cancel();
+            break;
+          }
+          if (done) break;
 
-        const chunk = decoder.decode(value);
-        const lines = chunk.split('\n');
+          const chunk = decoder.decode(value);
+          const lines = chunk.split('\n');
 
-        for (const line of lines) {
-          if (line.startsWith('data: ')) {
-            const dataStr = line.slice(6).trim();
-            if (dataStr === '[DONE]') {
-              setIsStreaming(false);
-              break;
-            }
-
-            try {
-              const { text, error: streamErr } = JSON.parse(dataStr);
-              if (streamErr) {
-                setError(streamErr);
+          for (const line of lines) {
+            if (isCancelled) break;
+            if (line.startsWith('data: ')) {
+              const dataStr = line.slice(6).trim();
+              if (dataStr === '[DONE]') {
                 setIsStreaming(false);
                 break;
               }
-              if (text) {
-                setHintText((prev) => prev + text);
+
+              try {
+                const { text, error: streamErr } = JSON.parse(dataStr);
+                if (isCancelled) break;
+                if (streamErr) {
+                  setError(streamErr);
+                  setIsStreaming(false);
+                  break;
+                }
+                if (text) {
+                  setHintText((prev) => prev + text);
+                }
+              } catch (err) {
+                // Ignore partial JSON parsing issues across chunks
               }
-            } catch (err) {
-              // Ignore partial JSON parsing issues across chunks
             }
           }
         }
+      } catch (err) {
+        if (err.name === 'AbortError' || isCancelled) {
+          return;
+        }
+        console.error('Hint streaming failed:', err);
+        setError(err.message || 'Something went wrong.');
+        setIsStreaming(false);
       }
-    } catch (err) {
-      console.error('Hint streaming failed:', err);
-      setError(err.message || 'Something went wrong.');
-      setIsStreaming(false);
-    }
-  };
+    };
 
-  useEffect(() => {
-    if (isOpen && questionId) {
-      fetchHint();
-    }
-  }, [isOpen, questionId]);
+    fetchHintStream();
+
+    return () => {
+      isCancelled = true;
+      abortController.abort();
+    };
+  }, [isOpen, questionId, reloadKey]);
 
   const handleFreshHint = async () => {
     try {
       await api.delete(`/api/hints/${questionId}/cache`);
       toast.success('Hint cache cleared! Fetching fresh hint...');
-      fetchHint();
+      setReloadKey((prev) => prev + 1);
     } catch (err) {
       console.error('Failed to clear hint cache:', err);
       toast.error('Failed to clear hint cache.');
@@ -183,7 +205,7 @@ const HintPanel = ({ questionId, questionTitle, isOpen, onClose }) => {
               <p className="text-[13px] font-medium mb-1">Failed to load hint</p>
               <p className="text-[11px] opacity-80">{error}</p>
               <button
-                onClick={fetchHint}
+                onClick={() => setReloadKey((prev) => prev + 1)}
                 className="mt-4 px-3 py-1.5 border border-border-default rounded-md text-[12px] hover:bg-bg-subtle cursor-pointer text-text-primary"
               >
                 Try Again
