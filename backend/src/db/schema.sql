@@ -266,5 +266,22 @@ CREATE INDEX IF NOT EXISTS idx_questions_chapter_pattern ON questions(chapter_id
 CREATE INDEX IF NOT EXISTS idx_pattern_mastery_user ON pattern_mastery(user_id, chapter_id);
 CREATE INDEX IF NOT EXISTS idx_question_options_q ON question_options(question_id);
 
+-- V3.8 Interactive formats updates
+ALTER TABLE questions 
+  DROP CONSTRAINT IF EXISTS questions_type_check,
+  ADD CONSTRAINT questions_type_check 
+  CHECK(type IN ('pyq', 'concept', 'practice', 'advanced'));
+
+ALTER TABLE questions
+  ADD COLUMN IF NOT EXISTS question_format TEXT DEFAULT 'mcq' 
+    CHECK(question_format IN ('mcq', 'fill_blank', 'numerical')),
+  ADD COLUMN IF NOT EXISTS blank_positions JSONB DEFAULT '[]',
+  ADD COLUMN IF NOT EXISTS explanation TEXT,
+  ADD COLUMN IF NOT EXISTS tolerance FLOAT DEFAULT 0.05,
+  ADD COLUMN IF NOT EXISTS unit TEXT;
+
+CREATE INDEX IF NOT EXISTS idx_questions_format ON questions(question_format);
+
+
 
 

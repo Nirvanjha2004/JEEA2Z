@@ -21,6 +21,9 @@ import ConceptMasteryCard from '../components/concepts/ConceptMasteryCard';
 import ConceptPracticeModal from '../components/concepts/ConceptPracticeModal';
 import PatternPracticeModal from '../components/PatternPracticeModal';
 import { KINEMATICS_PATTERNS, PATTERN_SHORT_NAMES, classifyQuestion } from '../utils/patterns';
+import QuestionSolveModal from '../components/questions/QuestionSolveModal';
+import FillBlankModal from '../components/questions/FillBlankModal';
+import NumericalSolveModal from '../components/questions/NumericalSolveModal';
 
 export default function Dashboard() {
   const { user } = useAuthStore();
@@ -42,6 +45,9 @@ export default function Dashboard() {
   const [activePracticeConcept, setActivePracticeConcept] = useState(null);
   const [activePracticePattern, setActivePracticePattern] = useState(null);
   const [kinematicsQuestions, setKinematicsQuestions] = useState([]);
+  const [practiceQuestions, setPracticeQuestions] = useState([]);
+  const [activeSolveQuestionId, setActiveSolveQuestionId] = useState(null);
+  const [activeSolveQuestionFormat, setActiveSolveQuestionFormat] = useState(null);
 
   // Weekly trend compares (Mock stats)
   const [prevWeekSolved, setPrevWeekSolved] = useState(0);
@@ -121,6 +127,14 @@ export default function Dashboard() {
           setKinematicsQuestions(qRes.data.data || []);
         } catch (e) {
           console.error('Failed to load Kinematics questions:', e);
+        }
+
+        // 6. Fetch Today's Practice questions (from weak patterns)
+        try {
+          const wpRes = await api.get('/api/progress/weak-patterns?limit=5');
+          setPracticeQuestions(wpRes.data.data || []);
+        } catch (e) {
+          console.error('Failed to load weak pattern practice questions:', e);
         }
       } catch (err) {
         console.error('Failed to load dashboard metrics:', err);
@@ -567,38 +581,96 @@ export default function Dashboard() {
           )}
         </div>
 
-        {/* Right Column (40%): Recent solves feed */}
-        <div className="lg:col-span-5 bg-bg-surface border border-border-default rounded-lg p-5 flex flex-col gap-4">
-          <h3 className="text-[13px] font-semibold text-text-primary uppercase tracking-wider">
-            Recent Activity
-          </h3>
+        {/* Right Column (40%): Today's Practice & Recent solves feed */}
+        <div className="lg:col-span-5 flex flex-col gap-4">
           
-          {recentActivity.length === 0 ? (
-            <div className="text-center py-10 text-xs text-text-muted italic border border-dashed border-border-default rounded-md bg-bg-subtle/20">
-              No recent solve records. Start study!
+          {/* Today's Practice Card */}
+          <div className="bg-bg-surface border border-border-default rounded-lg p-5 flex flex-col gap-4">
+            <div className="flex items-center justify-between">
+              <h3 className="text-[13px] font-semibold text-text-primary uppercase tracking-wider flex items-center gap-2">
+                <Sparkles className="w-4 h-4 text-accent" />
+                Today's Practice
+              </h3>
+              <span className="text-[10px] bg-accent/15 border border-accent/25 text-accent font-semibold px-2 py-0.5 rounded-full select-none">
+                Weak Areas
+              </span>
             </div>
-          ) : (
-            <div className="flex flex-col gap-2">
-              {recentActivity.slice(0, 5).map((act) => (
-                <div key={act.question_id} className="flex items-center gap-3 py-2 border-b border-border-default/40 last:border-0 last:pb-0">
-                  <span className="w-1.5 h-1.5 rounded-full bg-success shrink-0" />
-                  
-                  <div className="min-w-0 flex-grow">
-                    <span className="text-[12.5px] text-text-primary truncate block font-medium" title={act.title}>
-                      {act.title}
-                    </span>
-                    <span className="text-[10px] text-text-muted block mt-0.5">
-                      {act.chapter_name}
+            <p className="text-[11.5px] text-text-secondary -mt-2">
+              Practice 5 recommended questions from your weak pattern groups.
+            </p>
+            
+            {practiceQuestions.length === 0 ? (
+              <div className="text-center py-6 text-xs text-text-muted italic border border-dashed border-border-default rounded-md bg-bg-subtle/20">
+                You're doing great! No weak areas identified.
+              </div>
+            ) : (
+              <div className="flex flex-col gap-2.5">
+                {practiceQuestions.map((q) => {
+                  return (
+                    <div key={q.id} className="flex items-center justify-between p-2.5 rounded-lg border border-border-default bg-bg-app hover:border-border-focus transition duration-150 gap-3">
+                      <div className="min-w-0 flex-1">
+                        <span 
+                          className="text-[12.5px] text-text-primary font-medium line-clamp-1 block cursor-pointer hover:text-accent hover:underline"
+                          onClick={() => {
+                            setActiveSolveQuestionId(q.id);
+                            setActiveSolveQuestionFormat(q.question_format || 'mcq');
+                          }}
+                        >
+                          {q.title.replace(/\$/g, '')}
+                        </span>
+                        <span className="text-[10px] text-text-muted mt-0.5 block truncate">
+                          {q.chapter_name} • {q.pattern_group || 'General'}
+                        </span>
+                      </div>
+                      <button 
+                        onClick={() => {
+                          setActiveSolveQuestionId(q.id);
+                          setActiveSolveQuestionFormat(q.question_format || 'mcq');
+                        }}
+                        className="px-2.5 py-1 bg-accent hover:bg-accent-hover text-white text-[11px] font-semibold rounded transition shrink-0 cursor-pointer select-none active:scale-95"
+                      >
+                        Solve
+                      </button>
+                    </div>
+                  );
+                })}
+              </div>
+            )}
+          </div>
+
+          {/* Recent Activity Card */}
+          <div className="bg-bg-surface border border-border-default rounded-lg p-5 flex flex-col gap-4">
+            <h3 className="text-[13px] font-semibold text-text-primary uppercase tracking-wider">
+              Recent Activity
+            </h3>
+            
+            {recentActivity.length === 0 ? (
+              <div className="text-center py-10 text-xs text-text-muted italic border border-dashed border-border-default rounded-md bg-bg-subtle/20">
+                No recent solve records. Start study!
+              </div>
+            ) : (
+              <div className="flex flex-col gap-2">
+                {recentActivity.slice(0, 5).map((act) => (
+                  <div key={act.question_id} className="flex items-center gap-3 py-2 border-b border-border-default/40 last:border-0 last:pb-0">
+                    <span className="w-1.5 h-1.5 rounded-full bg-success shrink-0" />
+                    
+                    <div className="min-w-0 flex-grow">
+                      <span className="text-[12.5px] text-text-primary truncate block font-medium" title={act.title}>
+                        {act.title}
+                      </span>
+                      <span className="text-[10px] text-text-muted block mt-0.5">
+                        {act.chapter_name}
+                      </span>
+                    </div>
+                    
+                    <span className="text-[10px] text-text-muted shrink-0 font-mono">
+                      {formatTimeAgo(act.updated_at)}
                     </span>
                   </div>
-                  
-                  <span className="text-[10px] text-text-muted shrink-0 font-mono">
-                    {formatTimeAgo(act.updated_at)}
-                  </span>
-                </div>
-              ))}
-            </div>
-          )}
+                ))}
+              </div>
+            )}
+          </div>
         </div>
       </div>
 
@@ -784,6 +856,48 @@ export default function Dashboard() {
         <PatternPracticeModal
           pattern={activePracticePattern}
           onClose={() => setActivePracticePattern(null)}
+        />
+      )}
+
+      {activeSolveQuestionId && activeSolveQuestionFormat === 'mcq' && (
+        <QuestionSolveModal
+          questionId={activeSolveQuestionId}
+          isOpen={true}
+          onClose={() => {
+            setActiveSolveQuestionId(null);
+            setActiveSolveQuestionFormat(null);
+          }}
+          onStatusChange={() => {
+            window.location.reload();
+          }}
+        />
+      )}
+
+      {activeSolveQuestionId && activeSolveQuestionFormat === 'fill_blank' && (
+        <FillBlankModal
+          questionId={activeSolveQuestionId}
+          isOpen={true}
+          onClose={() => {
+            setActiveSolveQuestionId(null);
+            setActiveSolveQuestionFormat(null);
+          }}
+          onStatusChange={() => {
+            window.location.reload();
+          }}
+        />
+      )}
+
+      {activeSolveQuestionId && activeSolveQuestionFormat === 'numerical' && (
+        <NumericalSolveModal
+          questionId={activeSolveQuestionId}
+          isOpen={true}
+          onClose={() => {
+            setActiveSolveQuestionId(null);
+            setActiveSolveQuestionFormat(null);
+          }}
+          onStatusChange={() => {
+            window.location.reload();
+          }}
         />
       )}
     </div>

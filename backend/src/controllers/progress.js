@@ -210,3 +210,43 @@ export const getChapterProgress = async (req, res, next) => {
     next(error);
   }
 };
+
+export const getWeakPatterns = async (req, res, next) => {
+  try {
+    const userId = req.user.id;
+    const limit = parseInt(req.query.limit, 10) || 5;
+
+    const result = await query(
+      `WITH weak_patterns AS (
+        SELECT pattern_group, chapter_id, MIN(accuracy_percent) as accuracy_percent
+        FROM pattern_mastery
+        WHERE user_id = $1
+        GROUP BY pattern_group, chapter_id
+        UNION
+        SELECT DISTINCT pattern_group, chapter_id, 100.0 as accuracy_percent
+        FROM questions
+        WHERE pattern_group IS NOT NULL
+        AND NOT EXISTS (
+          SELECT 1 FROM pattern_mastery pm 
+          WHERE pm.user_id = $1 AND pm.pattern_group = questions.pattern_group AND pm.chapter_id = questions.chapter_id
+        )
+      )
+      SELECT q.id, q.title, q.question_format, q.pattern_group, c.name as chapter_name
+      FROM questions q
+      JOIN chapters c ON q.chapter_id = c.id
+      JOIN weak_patterns wp ON q.pattern_group = wp.pattern_group AND q.chapter_id = wp.chapter_id
+      LEFT JOIN user_progress up ON q.id = up.question_id AND up.user_id = $1
+      WHERE COALESCE(up.status, 'todo') != 'done'
+      ORDER BY wp.accuracy_percent ASC, RANDOM()
+      LIMIT $2`,
+      [userId, limit]
+    );
+
+    return res.json({
+      success: true,
+      data: result.rows,
+    });
+  } catch (error) {
+    next(error);
+  }
+};

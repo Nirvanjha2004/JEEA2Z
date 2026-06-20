@@ -34,6 +34,7 @@ export default function ChapterPage() {
   const [difficultyFilter, setDifficultyFilter] = useState('all');
   const [typeFilter, setTypeFilter] = useState('all');
   const [statusFilter, setStatusFilter] = useState('all');
+  const [formatFilter, setFormatFilter] = useState('all'); // 'all' | 'mcq' | 'fill_blank' | 'numerical'
 
   const currentSubject = SUBJECTS.find((sub) => sub.slug === subjectSlug);
 
@@ -169,9 +170,11 @@ export default function ChapterPage() {
         (q.concepts && q.concepts.some((c) => c.slug === selectedConceptSlug));
       const matchPattern =
         !selectedPatternKey || q.patternKey === selectedPatternKey;
-      return matchDifficulty && matchType && matchStatus && matchConcept && matchPattern;
+      const matchFormat =
+        formatFilter === 'all' || (q.question_format || 'mcq') === formatFilter;
+      return matchDifficulty && matchType && matchStatus && matchConcept && matchPattern && matchFormat;
     });
-  }, [questionsWithPatternLabels, difficultyFilter, typeFilter, statusFilter, selectedConceptSlug, selectedPatternKey]);
+  }, [questionsWithPatternLabels, difficultyFilter, typeFilter, statusFilter, selectedConceptSlug, selectedPatternKey, formatFilter]);
 
   const doneCount = useMemo(() => {
     return questions.filter((q) => q.status === 'done').length;
@@ -439,6 +442,28 @@ export default function ChapterPage() {
                       }`}
                     >
                       {status === 'todo' ? 'To Do' : status}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              {/* Format selector */}
+              <div>
+                <span className="block text-[9.5px] font-semibold text-text-muted uppercase tracking-wider mb-1.5">
+                  Format
+                </span>
+                <div className="flex items-center gap-1 border border-border-default rounded-[4px] p-0.5 bg-bg-subtle/50">
+                  {['all', 'mcq', 'fill_blank', 'numerical'].map((fmt) => (
+                    <button
+                      key={fmt}
+                      onClick={() => setFormatFilter(fmt)}
+                      className={`px-2 py-0.5 font-medium rounded-[3px] cursor-pointer transition ${
+                        formatFilter === fmt
+                          ? 'bg-bg-elevated text-text-primary shadow-xs'
+                          : 'text-text-secondary hover:text-text-primary'
+                      }`}
+                    >
+                      {fmt === 'all' ? 'All' : fmt === 'mcq' ? 'MCQ' : fmt === 'fill_blank' ? 'Fill' : 'Numerical'}
                     </button>
                   ))}
                 </div>
