@@ -7,7 +7,7 @@ import FormulaSheet from '../components/FormulaSheet';
 import NoteModal from '../components/NoteModal';
 import HintPanel from '../components/HintPanel';
 import { SkeletonRow } from '../components/SkeletonRow';
-import { BookOpen, Trophy, ArrowLeft, Layers } from 'lucide-react';
+import { BookOpen, Trophy, ArrowLeft, Layers, ChevronLeft, ChevronRight } from 'lucide-react';
 
 // V3 Concept Imports
 import useConceptStore from '../store/conceptStore';
@@ -35,6 +35,10 @@ export default function ChapterPage() {
   const [typeFilter, setTypeFilter] = useState('all');
   const [statusFilter, setStatusFilter] = useState('all');
   const [formatFilter, setFormatFilter] = useState('all'); // 'all' | 'mcq' | 'fill_blank' | 'numerical'
+
+  // Pagination
+  const ITEMS_PER_PAGE = 20;
+  const [currentPage, setCurrentPage] = useState(1);
 
   const currentSubject = SUBJECTS.find((sub) => sub.slug === subjectSlug);
 
@@ -175,6 +179,20 @@ export default function ChapterPage() {
       return matchDifficulty && matchType && matchStatus && matchConcept && matchPattern && matchFormat;
     });
   }, [questionsWithPatternLabels, difficultyFilter, typeFilter, statusFilter, selectedConceptSlug, selectedPatternKey, formatFilter]);
+
+  // Reset page to 1 when filters change
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [difficultyFilter, typeFilter, statusFilter, selectedConceptSlug, selectedPatternKey, formatFilter]);
+
+  // Pagination derived values
+  const totalPages = Math.max(1, Math.ceil(filteredQuestions.length / ITEMS_PER_PAGE));
+  const paginatedQuestions = filteredQuestions.slice(
+    (currentPage - 1) * ITEMS_PER_PAGE,
+    currentPage * ITEMS_PER_PAGE
+  );
+  const showingFrom = filteredQuestions.length === 0 ? 0 : (currentPage - 1) * ITEMS_PER_PAGE + 1;
+  const showingTo = Math.min(currentPage * ITEMS_PER_PAGE, filteredQuestions.length);
 
   const doneCount = useMemo(() => {
     return questions.filter((q) => q.status === 'done').length;
@@ -472,7 +490,7 @@ export default function ChapterPage() {
             </div>
 
             <div className="text-[12.5px] text-text-secondary font-medium self-end py-1">
-              Showing <span className="text-text-primary font-semibold">{filteredQuestions.length}</span> questions
+              Showing <span className="text-text-primary font-semibold">{showingFrom}–{showingTo}</span> of <span className="text-text-primary font-semibold">{filteredQuestions.length}</span> questions
             </div>
           </div>
 
@@ -509,11 +527,11 @@ export default function ChapterPage() {
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-border-default/50">
-                  {filteredQuestions.map((q, idx) => (
+                  {paginatedQuestions.map((q, idx) => (
                     <QuestionRow
                       key={q.id}
                       question={q}
-                      index={idx + 1}
+                      index={(currentPage - 1) * ITEMS_PER_PAGE + idx + 1}
                       onStatusChange={handleStatusChange}
                       onOpenNote={(id, title) => {
                         setActiveNoteId(id);
@@ -536,6 +554,80 @@ export default function ChapterPage() {
                   ))}
                 </tbody>
               </table>
+
+              {/* Pagination Controls */}
+              {totalPages > 1 && (
+                <div className="flex items-center justify-between px-4 py-3 border-t border-border-default/60 bg-bg-surface/50">
+                  <div className="text-[11.5px] text-text-muted font-medium">
+                    Page {currentPage} of {totalPages}
+                  </div>
+
+                  <div className="flex items-center gap-1">
+                    {/* Prev */}
+                    <button
+                      onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
+                      disabled={currentPage === 1}
+                      className="p-1.5 rounded-md border border-border-default bg-bg-surface hover:bg-bg-elevated disabled:opacity-30 disabled:cursor-not-allowed transition cursor-pointer"
+                      title="Previous page"
+                    >
+                      <ChevronLeft className="w-3.5 h-3.5 text-text-secondary" />
+                    </button>
+
+                    {/* Page number buttons */}
+                    {(() => {
+                      const pages = [];
+                      const maxVisible = 7;
+                      let start = Math.max(1, currentPage - Math.floor(maxVisible / 2));
+                      let end = Math.min(totalPages, start + maxVisible - 1);
+                      if (end - start + 1 < maxVisible) start = Math.max(1, end - maxVisible + 1);
+
+                      if (start > 1) {
+                        pages.push(
+                          <button key={1} onClick={() => setCurrentPage(1)}
+                            className="w-7 h-7 rounded-md text-[11px] font-medium border border-border-default bg-bg-surface hover:bg-bg-elevated text-text-secondary transition cursor-pointer">1</button>
+                        );
+                        if (start > 2) pages.push(<span key="dots-s" className="text-text-muted text-[11px] px-0.5">…</span>);
+                      }
+
+                      for (let i = start; i <= end; i++) {
+                        pages.push(
+                          <button
+                            key={i}
+                            onClick={() => setCurrentPage(i)}
+                            className={`w-7 h-7 rounded-md text-[11px] font-semibold transition cursor-pointer ${
+                              i === currentPage
+                                ? 'bg-accent text-white border border-accent'
+                                : 'border border-border-default bg-bg-surface hover:bg-bg-elevated text-text-secondary'
+                            }`}
+                          >
+                            {i}
+                          </button>
+                        );
+                      }
+
+                      if (end < totalPages) {
+                        if (end < totalPages - 1) pages.push(<span key="dots-e" className="text-text-muted text-[11px] px-0.5">…</span>);
+                        pages.push(
+                          <button key={totalPages} onClick={() => setCurrentPage(totalPages)}
+                            className="w-7 h-7 rounded-md text-[11px] font-medium border border-border-default bg-bg-surface hover:bg-bg-elevated text-text-secondary transition cursor-pointer">{totalPages}</button>
+                        );
+                      }
+
+                      return pages;
+                    })()}
+
+                    {/* Next */}
+                    <button
+                      onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
+                      disabled={currentPage === totalPages}
+                      className="p-1.5 rounded-md border border-border-default bg-bg-surface hover:bg-bg-elevated disabled:opacity-30 disabled:cursor-not-allowed transition cursor-pointer"
+                      title="Next page"
+                    >
+                      <ChevronRight className="w-3.5 h-3.5 text-text-secondary" />
+                    </button>
+                  </div>
+                </div>
+              )}
             </div>
           )}
         </div>
