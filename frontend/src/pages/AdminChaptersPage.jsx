@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import api from '../api';
 
 export default function AdminChaptersPage() {
@@ -259,7 +260,13 @@ export default function AdminChaptersPage() {
                       <td className="px-4 py-3.5 font-bold text-white">{ch.name}</td>
                       <td className="px-4 py-3.5 text-navy-400">{ch.subject_name}</td>
                       <td className="px-4 py-3.5 text-center font-mono">{ch.question_count}</td>
-                      <td className="px-4 py-3.5 text-right space-x-2">
+                      <td className="px-4 py-3.5 text-right space-x-3">
+                        <Link
+                          to={`/admin/formulas/${ch.id}`}
+                          className="text-amber-500 hover:text-amber-400 hover:underline transition font-bold cursor-pointer"
+                        >
+                          Formulas
+                        </Link>
                         <button
                           onClick={() => handleEditInit(ch)}
                           className="text-blue-400 hover:text-blue-300 hover:underline transition font-bold cursor-pointer"

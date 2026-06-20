@@ -1,305 +1,274 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip, Legend } from 'recharts';
+import React, { useEffect, useState, useMemo } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import useAuthStore from '../store/authStore';
 import useProgressStore from '../store/progressStore';
 import useStreakStore from '../store/streakStore';
 import api from '../api';
 import { SUBJECTS } from '../utils/constants';
 import ProgressBar from '../components/ProgressBar';
+import StreakCalendar from '../components/StreakCalendar';
+import { SkeletonStats, SkeletonCard } from '../components/SkeletonRow';
+import { BookOpen, Trophy, Sparkles, HelpCircle } from 'lucide-react';
 
 export default function Dashboard() {
   const { user } = useAuthStore();
   const { summary, fetchSummary } = useProgressStore();
   const { streak, fetchStreak } = useStreakStore();
+  
   const [loading, setLoading] = useState(true);
   const [revisionCount, setRevisionCount] = useState(0);
-  const [topUsers, setTopUsers] = useState([]);
+  const [accuracy, setAccuracy] = useState(100);
+  const [recentActivity, setRecentActivity] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
-    const loadData = async () => {
+    const loadDashboardData = async () => {
+      setLoading(true);
       try {
-        await fetchSummary();
-        await fetchStreak();
-        
-        // Fetch revision count
-        const spacedRes = await api.get('/api/spaced/queue');
-        setRevisionCount(spacedRes.data.data.length);
+        await Promise.all([fetchSummary(), fetchStreak()]);
 
-        // Fetch top 3 weekly solvers
-        const leadRes = await api.get('/api/leaderboard/weekly');
-        setTopUsers(leadRes.data.data.slice(0, 3));
+        // 1. Fetch revision count
+        const spacedRes = await api.get('/api/spaced/queue');
+        setRevisionCount(spacedRes.data.data?.length || 0);
+
+        // 2. Fetch mock test history to compute average accuracy
+        const testsRes = await api.get('/api/tests/history');
+        const history = testsRes.data.data || [];
+        const completedTests = history.filter(
+          (t) => t.status === 'completed' && t.max_score > 0 && t.score !== null
+        );
+        if (completedTests.length > 0) {
+          const totalAccuracy = completedTests.reduce((acc, curr) => {
+            const correctWeight = Math.max(0, curr.score);
+            return acc + (correctWeight / curr.max_score);
+          }, 0);
+          setAccuracy(Math.round((totalAccuracy / completedTests.length) * 100));
+        } else {
+          setAccuracy(100); // Default to 100 if no tests completed
+        }
+
+        // 3. Fetch recent activity from user profile
+        if (user?.id) {
+          const profileRes = await api.get(`/api/profile/${user.id}`);
+          setRecentActivity(profileRes.data.data?.recentActivity || []);
+        }
       } catch (err) {
-        console.error('Failed to load dashboard V2 metrics:', err);
+        console.error('Failed to load dashboard metrics:', err);
       } finally {
         setLoading(false);
       }
     };
-    loadData();
-  }, [fetchSummary, fetchStreak]);
+
+    loadDashboardData();
+  }, [user?.id, fetchSummary, fetchStreak]);
+
+  // Compute greeting message based on local time hour
+  const greeting = useMemo(() => {
+    const hour = new Date().getHours();
+    if (hour < 12) return 'Good morning';
+    if (hour < 17) return 'Good afternoon';
+    return 'Good evening';
+  }, []);
+
+  const formatTimeAgo = (dateStr) => {
+    if (!dateStr) return 'Just now';
+    const diff = Date.now() - new Date(dateStr).getTime();
+    const mins = Math.max(1, Math.round(diff / 60000));
+    if (mins < 60) return `${mins}m ago`;
+    const hours = Math.round(mins / 60);
+    if (hours < 24) return `${hours}h ago`;
+    const days = Math.round(hours / 24);
+    return `${days}d ago`;
+  };
 
   if (loading || !summary) {
     return (
-      <div className="min-h-screen pt-16 bg-navy-900 flex items-center justify-center">
-        <div className="flex flex-col items-center gap-3">
-          <div className="w-8 h-8 border-2 border-brand-red border-t-transparent rounded-full animate-spin"></div>
-          <p className="text-navy-400 text-sm">Loading dashboard stats...</p>
-        </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <SkeletonStats />
+        <SkeletonStats />
+        <SkeletonStats />
+        <SkeletonStats />
       </div>
     );
   }
 
-  const { total = 0, done = 0, revisit = 0 } = summary;
-  const todo = total - done - revisit;
-  const percentComplete = total > 0 ? Math.round((done / total) * 100) : 0;
+  const { total = 0, done = 0 } = summary;
 
-  // Recharts Pie Chart Data
-  const chartData = [
-    { name: 'Completed', value: done, color: '#22c55e' },
-    { name: 'Revisit', value: revisit, color: '#f59e0b' },
-    { name: 'To Do', value: todo > 0 ? todo : 0, color: '#475569' },
-  ].filter(item => item.value > 0); // Only show segments with > 0 values
-
-  // Map backend subject progress to the SUBJECTS constants for display
-  const subjectListWithProgress = SUBJECTS.map((sub) => {
+  // Map progress to SUBJECTS
+  const subjectsWithProgress = SUBJECTS.map((sub) => {
     const progress = summary.bySubject?.find((s) => s.slug === sub.slug) || {
       total: 0,
       done: 0,
-      revisit: 0,
     };
     return {
       ...sub,
       total: progress.total,
       done: progress.done,
-      revisit: progress.revisit,
     };
   });
 
   return (
-    <div className="min-h-[calc(100vh-4rem)] pt-20 pb-12 bg-navy-900 px-4 md:px-8 max-w-6xl mx-auto">
+    <div className="min-h-screen text-text-primary select-none animate-slide-in">
       {/* Header */}
-      <div className="mb-8">
-        <h1 className="text-2xl md:text-3xl font-extrabold text-white">
-          Welcome back, <span className="text-brand-red">{user?.name}</span>
+      <div className="mb-6 border-b border-border-default/60 pb-5">
+        <h1 className="text-[20px] md:text-[22px] font-semibold tracking-tight text-text-primary">
+          {greeting}, {user?.name} 👋
         </h1>
-        <p className="text-sm text-navy-400 mt-1">Here is your JEE preparation progress summary.</p>
+        <p className="text-[12px] text-text-secondary mt-1">
+          {revisionCount > 0 ? (
+            <span>You have <span className="text-accent font-semibold">{revisionCount} questions</span> due for revision today.</span>
+          ) : (
+            <span>You are all caught up! No spaced revision cards due.</span>
+          )}
+        </p>
       </div>
 
-      {/* Summary Cards Grid */}
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-8">
-        <div className="bg-navy-800 border border-navy-700 rounded-xl p-5">
-          <span className="text-xs font-bold text-navy-400 uppercase tracking-wider block mb-1">
-            Total Questions
+      {/* Top Stats Cards Grid */}
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+        {/* Card 1: Total Solved */}
+        <div className="bg-bg-surface border border-border-default rounded-lg p-5">
+          <span className="text-[10px] font-semibold text-text-muted uppercase tracking-wider block mb-1">
+            Total Solved
           </span>
-          <span className="text-2xl md:text-3xl font-extrabold text-white">{total}</span>
+          <span className="text-[26px] font-semibold text-text-primary block leading-none">
+            {done}
+          </span>
+          <span className="text-[10px] text-text-muted mt-1 block">
+            out of {total} questions
+          </span>
         </div>
-        <div className="bg-navy-800 border border-navy-700 rounded-xl p-5">
-          <span className="text-xs font-bold text-navy-400 uppercase tracking-wider block mb-1">
-            Completed
+
+        {/* Card 2: Done Today */}
+        <div className="bg-bg-surface border border-border-default rounded-lg p-5">
+          <span className="text-[10px] font-semibold text-text-muted uppercase tracking-wider block mb-1">
+            Done Today
           </span>
-          <span className="text-2xl md:text-3xl font-extrabold text-green-400">{done}</span>
+          <span className="text-[26px] font-semibold text-text-primary block leading-none">
+            {streak?.solvedToday || 0}
+          </span>
+          <span className="text-[10px] text-text-muted mt-1 block">
+            daily goal: {streak?.dailyGoal || 10}
+          </span>
         </div>
-        <div className="bg-navy-800 border border-navy-700 rounded-xl p-5">
-          <span className="text-xs font-bold text-navy-400 uppercase tracking-wider block mb-1">
-            Revisit
+
+        {/* Card 3: Current Streak */}
+        <div className="bg-bg-surface border border-border-default rounded-lg p-5">
+          <span className="text-[10px] font-semibold text-text-muted uppercase tracking-wider block mb-1">
+            Current Streak
           </span>
-          <span className="text-2xl md:text-3xl font-extrabold text-amber-400">{revisit}</span>
+          <span className="text-[26px] font-semibold text-accent block leading-none flex items-center gap-1">
+            🔥 {streak?.currentStreak || 0}
+          </span>
+          <span className="text-[10px] text-text-muted mt-1 block">
+            longest: {streak?.longestStreak || 0} days
+          </span>
         </div>
-        <div className="bg-navy-800 border border-navy-700 rounded-xl p-5">
-          <span className="text-xs font-bold text-navy-400 uppercase tracking-wider block mb-1">
-            % Complete
+
+        {/* Card 4: Accuracy */}
+        <div className="bg-bg-surface border border-border-default rounded-lg p-5">
+          <span className="text-[10px] font-semibold text-text-muted uppercase tracking-wider block mb-1">
+            Accuracy
           </span>
-          <span className="text-2xl md:text-3xl font-extrabold text-brand-red">{percentComplete}%</span>
+          <span className="text-[26px] font-semibold text-text-primary block leading-none">
+            {accuracy}%
+          </span>
+          <span className="text-[10px] text-text-muted mt-1 block">
+            based on mock tests
+          </span>
         </div>
       </div>
 
-      {/* V2 Dashboard Row */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-        {/* Streak card */}
-        <div className="bg-navy-800 border border-navy-700 rounded-2xl p-5 flex flex-col justify-between min-h-[140px]">
-          <div>
-            <span className="text-[10px] font-bold text-navy-400 uppercase tracking-wider block mb-1">
-              Daily Solve Streak
-            </span>
-            <span className="text-3xl font-black text-brand-red">
-              🔥 {streak?.currentStreak || 0} <span className="text-xs text-navy-400 font-semibold">days</span>
-            </span>
-          </div>
-          <div className="mt-2">
-            <div className="flex justify-between text-[10px] text-navy-400 font-bold mb-1">
-              <span>Today's Progress</span>
-              <span>{streak?.solvedToday || 0} / {streak?.dailyGoal || 10} Solved</span>
-            </div>
-            <div className="w-full h-1.5 bg-navy-900 rounded-full overflow-hidden">
-              <div
-                className="h-full bg-brand-red rounded-full transition-all"
-                style={{ width: `${Math.min(100, Math.round(((streak?.solvedToday || 0) / (streak?.dailyGoal || 10)) * 100))}%` }}
-              />
-            </div>
-          </div>
-        </div>
-
-        {/* Revision Due card */}
-        <div className="bg-navy-800 border border-navy-700 rounded-2xl p-5 flex flex-col justify-between min-h-[140px]">
-          <div>
-            <span className="text-[10px] font-bold text-navy-400 uppercase tracking-wider block mb-1">
-              Revision Due
-            </span>
-            <span className="text-3xl font-black text-white">
-              {revisionCount} <span className="text-xs text-navy-400 font-semibold">questions</span>
-            </span>
-          </div>
-          <div className="mt-2 flex items-center justify-between">
-            <span className="text-[10px] text-navy-400 font-medium">
-              {revisionCount > 0 ? 'Review due items now' : 'All caught up!'}
-            </span>
-            <Link
-              to="/revision"
-              className="px-3 py-1 bg-brand-red hover:bg-brand-red-hover text-[10px] font-bold text-white rounded-lg transition"
-            >
-              Start Revision &rarr;
-            </Link>
-          </div>
-        </div>
-
-        {/* Weekly Leaderboard Teaser */}
-        <div className="bg-navy-800 border border-navy-700 rounded-2xl p-5 flex flex-col justify-between min-h-[140px]">
-          <div>
-            <span className="text-[10px] font-bold text-navy-400 uppercase tracking-wider block mb-2">
-              Weekly Top Solvers
-            </span>
-            <div className="space-y-1.5">
-              {topUsers.length === 0 ? (
-                <div className="text-[10px] text-navy-500 italic">No solves recorded this week.</div>
-              ) : (
-                topUsers.map((u, idx) => (
-                  <div key={u.id} className="flex items-center justify-between text-[11px] font-medium text-navy-300">
-                    <span className="truncate max-w-[120px]">
-                      {idx === 0 ? '🥇' : idx === 1 ? '🥈' : '🥉'} {u.name}
+      {/* Two Column Layout: Subject sheets vs Recent activity */}
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-6">
+        
+        {/* Left Column (60%): Subject progress list */}
+        <div className="lg:col-span-7 flex flex-col gap-4">
+          <div className="bg-bg-surface border border-border-default rounded-lg p-5 flex flex-col gap-4">
+            <h3 className="text-[13px] font-semibold text-text-primary uppercase tracking-wider">
+              Subject Progress
+            </h3>
+            <div className="flex flex-col gap-4.5">
+              {subjectsWithProgress.map((sub) => (
+                <div
+                  key={sub.slug}
+                  onClick={() => navigate(`/sheet/${sub.slug}`)}
+                  className="cursor-pointer group select-none"
+                >
+                  <div className="flex items-center justify-between text-[12.5px] font-medium text-text-secondary mb-1.5">
+                    <span className="group-hover:text-accent transition-colors flex items-center gap-2">
+                      <span
+                        className="w-1.5 h-3.5 rounded-[2px] inline-block"
+                        style={{ backgroundColor: sub.color }}
+                      ></span>
+                      {sub.name}
                     </span>
-                    <span className="font-mono text-white font-bold">{u.solved} solved</span>
-                  </div>
-                ))
-              )}
-            </div>
-          </div>
-          <div className="mt-2 text-right">
-            <Link
-              to="/leaderboard"
-              className="text-[10px] font-bold text-brand-red hover:underline"
-            >
-              View Full Standings &rarr;
-            </Link>
-          </div>
-        </div>
-      </div>
-
-      {/* Main Grid: Donut + Subject Cards */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-        {/* Left: Recharts Donut */}
-        <div className="bg-navy-800 border border-navy-700 rounded-2xl p-6 lg:col-span-5 flex flex-col items-center">
-          <h2 className="text-base font-bold text-white mb-6 mr-auto">Progress Distribution</h2>
-          <div className="w-full h-64 relative flex items-center justify-center">
-            {chartData.length > 0 ? (
-              <ResponsiveContainer width="100%" height="100%">
-                <PieChart>
-                  <Pie
-                    data={chartData}
-                    cx="50%"
-                    cy="50%"
-                    innerRadius={65}
-                    outerRadius={90}
-                    paddingAngle={3}
-                    dataKey="value"
-                  >
-                    {chartData.map((entry, index) => (
-                      <Cell key={`cell-${index}`} fill={entry.color} />
-                    ))}
-                  </Pie>
-                  <Tooltip
-                    contentStyle={{
-                      backgroundColor: '#0f172a',
-                      borderColor: '#334155',
-                      borderRadius: '8px',
-                      color: '#fff',
-                    }}
-                  />
-                </PieChart>
-              </ResponsiveContainer>
-            ) : (
-              <p className="text-navy-500 text-sm text-center">No progress recorded yet.</p>
-            )}
-            <div className="absolute flex flex-col items-center justify-center">
-              <span className="text-3xl font-extrabold text-white">{percentComplete}%</span>
-              <span className="text-xs text-navy-400 uppercase font-bold tracking-wider">Done</span>
-            </div>
-          </div>
-          {/* Legend */}
-          <div className="flex gap-6 mt-4 text-xs font-semibold">
-            <div className="flex items-center gap-1.5 text-green-400">
-              <span className="w-2.5 h-2.5 rounded-full bg-green-500 block"></span>
-              Done ({done})
-            </div>
-            <div className="flex items-center gap-1.5 text-amber-400">
-              <span className="w-2.5 h-2.5 rounded-full bg-amber-500 block"></span>
-              Revisit ({revisit})
-            </div>
-            <div className="flex items-center gap-1.5 text-navy-400">
-              <span className="w-2.5 h-2.5 rounded-full bg-navy-600 block"></span>
-              To Do ({todo > 0 ? todo : 0})
-            </div>
-          </div>
-        </div>
-
-        {/* Right: Subject Progress Lists */}
-        <div className="lg:col-span-7 space-y-6">
-          <h2 className="text-lg font-bold text-white">Subject Sheets</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-            {subjectListWithProgress.map((sub) => (
-              <Link
-                key={sub.slug}
-                to={`/sheet/${sub.slug}`}
-                className="bg-navy-800 border border-navy-700 hover:border-navy-500 p-5 rounded-2xl flex flex-col transition-all duration-200 group"
-              >
-                <div className="flex items-center gap-2 mb-4">
-                  <span
-                    className="w-1.5 h-4.5 rounded-sm inline-block shrink-0"
-                    style={{ backgroundColor: sub.color }}
-                  ></span>
-                  <h3 className="font-bold text-white group-hover:text-brand-red transition-colors">
-                    {sub.name}
-                  </h3>
-                </div>
-
-                <div className="mt-auto">
-                  <div className="flex items-baseline justify-between text-xs text-navy-400 font-semibold mb-2">
-                    <span>
-                      {sub.done} / {sub.total} Done
-                    </span>
-                    <span className="text-white">
-                      {sub.total > 0 ? Math.round((sub.done / sub.total) * 100) : 0}%
+                    <span className="text-text-primary font-mono text-[11px]">
+                      {sub.done} / {sub.total}
                     </span>
                   </div>
-                  <ProgressBar current={sub.done} total={sub.total} color={sub.color} height="h-2" />
+                  <ProgressBar current={sub.done} total={sub.total} color={sub.color} height="h-1" />
                 </div>
-              </Link>
-            ))}
+              ))}
+            </div>
           </div>
 
-          {/* Quick Stats banner */}
-          <div className="bg-navy-800/40 border border-navy-850 p-5 rounded-xl flex items-center justify-between gap-4">
+          {/* Quick links to actions */}
+          <div className="bg-bg-surface border border-border-default rounded-lg p-4 flex items-center justify-between gap-4">
             <div>
-              <h4 className="text-sm font-bold text-white mb-0.5">Prepare strategically</h4>
-              <p className="text-xs text-navy-400">Filter chapter questions to practice specific formats like PYQs.</p>
+              <h4 className="text-[12.5px] font-semibold text-text-primary">Need a quick test?</h4>
+              <p className="text-[11px] text-text-secondary mt-0.5">Generate a timed JEE-pattern mock test.</p>
             </div>
             <Link
-              to="/sheet/physics"
-              className="px-4 py-2 bg-navy-800 hover:bg-navy-950 border border-navy-700 hover:border-brand-red text-xs font-semibold text-white rounded-lg transition"
+              to="/mock-test"
+              className="px-3.5 py-1.5 bg-white text-black font-semibold text-[11.5px] rounded-md hover:bg-neutral-200 transition cursor-pointer shrink-0"
             >
-              Start Practice
+              Start Mock Test
             </Link>
           </div>
         </div>
+
+        {/* Right Column (40%): Recent activity feed */}
+        <div className="lg:col-span-5 bg-bg-surface border border-border-default rounded-lg p-5 flex flex-col justify-between">
+          <div>
+            <h3 className="text-[13px] font-semibold text-text-primary uppercase tracking-wider mb-3">
+              Recent Activity
+            </h3>
+            {recentActivity.length === 0 ? (
+              <div className="text-[11.5px] text-text-muted italic py-6 text-center">
+                No recent activity records. Start solving!
+              </div>
+            ) : (
+              <div className="flex flex-col gap-3">
+                {recentActivity.slice(0, 8).map((act) => (
+                  <div key={act.question_id} className="flex items-start gap-2.5 text-[12px] leading-relaxed">
+                    <span className="w-1.5 h-1.5 rounded-full bg-success shrink-0 mt-1.5"></span>
+                    <div className="min-w-0 flex-1">
+                      <span className="text-text-primary truncate block font-medium" title={act.title}>
+                        {act.title}
+                      </span>
+                      <span className="text-text-muted text-[10.5px]">
+                        {act.chapter_name} · <span className="font-mono text-[9.5px]">{formatTimeAgo(act.updated_at)}</span>
+                      </span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+          {recentActivity.length > 0 && (
+            <div className="border-t border-border-default/50 pt-2.5 text-right mt-4">
+              <Link to={`/profile/${user.id}`} className="text-[11px] font-semibold text-accent hover:underline">
+                View My Profile →
+              </Link>
+            </div>
+          )}
+        </div>
+
+      </div>
+
+      {/* Full width Streak Heatmap */}
+      <div className="w-full">
+        <StreakCalendar calendar={streak?.calendar || []} />
       </div>
     </div>
   );

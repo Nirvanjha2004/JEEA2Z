@@ -23,7 +23,11 @@ export const getChapters = async (req, res, next) => {
       result = await query(
         `SELECT c.id, c.name, c.order_index, 
                 COUNT(q.id)::int as question_count,
-                COUNT(CASE WHEN up.status = 'done' THEN 1 END)::int as done_count
+                COUNT(CASE WHEN up.status = 'done' THEN 1 END)::int as done_count,
+                COUNT(CASE WHEN q.difficulty = 'easy' THEN 1 END)::int as easy_count,
+                COUNT(CASE WHEN q.difficulty = 'medium' THEN 1 END)::int as medium_count,
+                COUNT(CASE WHEN q.difficulty = 'hard' THEN 1 END)::int as hard_count,
+                EXISTS(SELECT 1 FROM formula_sheets fs JOIN formulas f ON f.sheet_id = fs.id WHERE fs.chapter_id = c.id) as has_formulas
          FROM chapters c
          JOIN subjects s ON c.subject_id = s.id
          LEFT JOIN questions q ON q.chapter_id = c.id
@@ -37,7 +41,11 @@ export const getChapters = async (req, res, next) => {
       result = await query(
         `SELECT c.id, c.name, c.order_index, 
                 COUNT(q.id)::int as question_count,
-                0::int as done_count
+                0::int as done_count,
+                COUNT(CASE WHEN q.difficulty = 'easy' THEN 1 END)::int as easy_count,
+                COUNT(CASE WHEN q.difficulty = 'medium' THEN 1 END)::int as medium_count,
+                COUNT(CASE WHEN q.difficulty = 'hard' THEN 1 END)::int as hard_count,
+                EXISTS(SELECT 1 FROM formula_sheets fs JOIN formulas f ON f.sheet_id = fs.id WHERE fs.chapter_id = c.id) as has_formulas
          FROM chapters c
          JOIN subjects s ON c.subject_id = s.id
          LEFT JOIN questions q ON q.chapter_id = c.id

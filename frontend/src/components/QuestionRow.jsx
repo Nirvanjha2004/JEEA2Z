@@ -3,13 +3,14 @@ import DifficultyBadge from './DifficultyBadge';
 import TypeBadge from './TypeBadge';
 import useBookmarkStore from '../store/bookmarkStore';
 import api from '../api';
+import { Bookmark, Sparkles, Link as LinkIcon, FileText } from 'lucide-react';
 
-export default function QuestionRow({ question, index, onStatusChange, onOpenNote }) {
+export default function QuestionRow({ question, index, onStatusChange, onOpenNote, onOpenHint }) {
   const { id, title, difficulty, type, source, solution_url, status = 'todo' } = question;
   const { bookmarks, toggleBookmark } = useBookmarkStore();
   const [hasNote, setHasNote] = useState(false);
 
-  // Synchronize note existence on mount/id change
+  // Synchronize note existence
   useEffect(() => {
     const checkNote = async () => {
       try {
@@ -29,17 +30,14 @@ export default function QuestionRow({ question, index, onStatusChange, onOpenNot
     toggleBookmark(id);
   };
 
-  // Toggle status cycle on checkbox click: todo -> done -> revisit -> todo
   const handleCheckboxClick = () => {
     let nextStatus = 'todo';
     if (status === 'todo') nextStatus = 'done';
     else if (status === 'done') nextStatus = 'revisit';
     
     if (nextStatus === 'revisit') {
-      // Silently POST to /api/spaced/review with quality=1
       api.post('/api/spaced/review', { questionId: id, quality: 1 }).catch(console.error);
     }
-    
     onStatusChange(id, nextStatus);
   };
 
@@ -51,156 +49,149 @@ export default function QuestionRow({ question, index, onStatusChange, onOpenNot
   };
 
   return (
-    <tr className="border-b border-navy-800 hover:bg-navy-850/30 transition-colors">
-      {/* Status Checkbox / Icon Column */}
-      <td className="px-4 py-4 text-center align-middle w-12">
+    <tr className="border-b border-border-default/60 hover:bg-bg-subtle transition-colors group select-none">
+      {/* Checkbox column */}
+      <td className="px-3 py-3 w-12 text-center align-middle">
         <button
           onClick={handleCheckboxClick}
-          className="focus:outline-none transition-transform active:scale-95"
+          className="focus:outline-none transition-transform active:scale-95 cursor-pointer"
           title="Toggle status"
         >
           {status === 'done' ? (
-            <div className="w-5 h-5 rounded border border-green-500 bg-green-500/20 text-green-400 flex items-center justify-center font-bold text-xs">
+            <div className="w-[15px] h-[15px] rounded-[3px] bg-accent border border-accent flex items-center justify-center text-white text-[10px] font-bold">
               ✓
             </div>
           ) : status === 'revisit' ? (
-            <div className="w-5 h-5 rounded border border-amber-500 bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold text-xs">
+            <div className="w-[15px] h-[15px] rounded-[3px] bg-warning/20 border border-warning flex items-center justify-center text-warning text-[10px] font-bold">
               ↻
             </div>
           ) : (
-            <div className="w-5 h-5 rounded border border-navy-600 hover:border-brand-red flex items-center justify-center font-bold text-xs" />
+            <div className="w-[15px] h-[15px] rounded-[3px] border border-border-muted hover:border-accent flex items-center justify-center text-[10px] font-bold" />
           )}
         </button>
       </td>
 
       {/* Index Number */}
-      <td className="px-4 py-4 font-mono text-sm text-navy-500 text-center w-12">
+      <td className="px-3 py-3 w-10 font-mono text-[12px] text-text-muted text-center">
         {index}
       </td>
 
-      {/* Question Title & Source */}
-      <td className="px-4 py-4 min-w-[200px] max-w-md">
+      {/* Question Details */}
+      <td className="px-3 py-3 min-w-[240px]">
         <div className="flex items-start justify-between gap-3">
-          <div className="flex-grow">
-            <div className="text-sm font-medium text-white break-words mb-1">
+          <div className="flex-1">
+            <span className={`text-[13px] font-medium leading-relaxed break-words block mb-1 ${
+              status === 'done' ? 'text-text-muted line-through decoration-text-disabled' : 'text-text-primary'
+            }`}>
               {title}
-            </div>
+            </span>
             {source && (
-              <span className="inline-block px-1.5 py-0.5 bg-navy-900 border border-navy-800 text-[10px] text-navy-400 rounded font-medium">
+              <span className="inline-block px-1.5 py-0.5 bg-bg-subtle border border-border-default text-[10px] text-text-muted rounded font-mono font-medium">
                 {source}
               </span>
             )}
           </div>
 
-          <div className="flex items-center gap-2 shrink-0 pt-0.5">
-            {/* Bookmark Toggle */}
+          {/* Action links showing on row hover only */}
+          <div className="flex items-center gap-1 shrink-0 opacity-0 group-hover:opacity-100 transition-opacity duration-150">
+            {/* Bookmark button */}
             <button
               onClick={handleBookmarkToggle}
-              className="text-navy-400 hover:text-amber-400 transition p-1"
-              title="Bookmark Question"
+              className={`p-1 cursor-pointer transition-colors ${
+                isBookmarked ? 'text-accent' : 'text-text-muted hover:text-accent'
+              }`}
+              title={isBookmarked ? 'Remove Bookmark' : 'Bookmark Question'}
             >
-              {isBookmarked ? (
-                <svg className="w-4 h-4 text-amber-500 fill-current" viewBox="0 0 20 20" fill="currentColor">
-                  <path d="M5 4a2 2 0 012-2h6a2 2 0 012 2v14l-5-2.5L5 18V4z" />
-                </svg>
-              ) : (
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
-                </svg>
-              )}
+              <Bookmark className="w-3.5 h-3.5 fill-current" />
             </button>
 
-            {/* Note Action */}
+            {/* Note button */}
             <button
               onClick={(e) => {
                 e.preventDefault();
                 onOpenNote(id, title);
               }}
-              className="text-navy-400 hover:text-brand-red transition p-1"
-              title="Question Notes"
+              className={`p-1 cursor-pointer transition-colors ${
+                hasNote ? 'text-accent' : 'text-text-muted hover:text-accent'
+              }`}
+              title="Personal notes"
             >
-              {hasNote ? (
-                <svg className="w-4 h-4 text-brand-red fill-current" viewBox="0 0 20 20" fill="currentColor">
-                  <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z" />
-                </svg>
-              ) : (
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
-                </svg>
-              )}
+              <FileText className="w-3.5 h-3.5" />
             </button>
           </div>
         </div>
       </td>
 
-      {/* Difficulty Badge */}
-      <td className="px-4 py-4 text-center whitespace-nowrap">
+      {/* Difficulty */}
+      <td className="px-3 py-3 w-24 text-center whitespace-nowrap align-middle">
         <DifficultyBadge difficulty={difficulty} />
       </td>
 
-      {/* Type Badge */}
-      <td className="px-4 py-4 text-center whitespace-nowrap">
+      {/* Type */}
+      <td className="px-3 py-3 w-24 text-center whitespace-nowrap align-middle">
         <TypeBadge type={type} />
       </td>
 
-      {/* Solution Link */}
-      <td className="px-4 py-4 text-center align-middle w-16">
-        {solution_url ? (
-          <a
-            href={solution_url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-navy-400 hover:text-brand-red transition inline-flex p-1"
-            title="Watch Solution"
-          >
-            <svg
-              className="w-5 h-5"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
+      {/* Solution & Hint */}
+      <td className="px-3 py-3 w-20 text-center align-middle">
+        <div className="flex items-center justify-center gap-2">
+          {solution_url ? (
+            <a
+              href={solution_url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-text-muted hover:text-accent transition-colors p-1"
+              title="Watch Video Solution"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-              />
-            </svg>
-          </a>
-        ) : (
-          <span className="text-navy-600 text-xs">-</span>
-        )}
+              <LinkIcon className="w-3.5 h-3.5" />
+            </a>
+          ) : (
+            <span className="text-text-disabled text-xs">-</span>
+          )}
+
+          {/* AI Hint Trigger */}
+          <button
+            onClick={(e) => {
+              e.preventDefault();
+              onOpenHint(id, title);
+            }}
+            className="text-text-muted hover:text-amber-500 transition-colors p-1 cursor-pointer"
+            title="Get AI Progressive Hints"
+          >
+            💡
+          </button>
+        </div>
       </td>
 
-      {/* Quick Mark Actions */}
-      <td className="px-4 py-4 text-right whitespace-nowrap">
-        <div className="inline-flex rounded-lg border border-navy-700 p-0.5 bg-navy-900">
+      {/* Status Picker */}
+      <td className="px-3 py-3 w-[260px] text-right whitespace-nowrap align-middle">
+        <div className="inline-flex rounded-md border border-border-default p-0.5 bg-bg-surface">
           <button
             onClick={() => handleStatusClick('todo')}
-            className={`px-3 py-1 text-xs font-semibold rounded-md transition ${
+            className={`px-2 py-0.5 text-[11px] font-medium rounded-[4px] cursor-pointer transition ${
               status === 'todo'
-                ? 'bg-navy-700 text-white shadow-sm'
-                : 'text-navy-400 hover:text-white'
+                ? 'bg-bg-elevated text-text-primary border border-border-default'
+                : 'text-text-secondary hover:text-text-primary'
             }`}
           >
             To Do
           </button>
           <button
             onClick={() => handleStatusClick('revisit')}
-            className={`px-3 py-1 text-xs font-semibold rounded-md transition ${
+            className={`px-2 py-0.5 text-[11px] font-medium rounded-[4px] cursor-pointer transition ${
               status === 'revisit'
-                ? 'bg-amber-600/20 text-amber-400 shadow-sm border border-amber-500/20'
-                : 'text-navy-400 hover:text-amber-400'
+                ? 'bg-warning-bg text-warning border border-warning/20'
+                : 'text-text-secondary hover:text-warning'
             }`}
           >
             Revisit
           </button>
           <button
             onClick={() => handleStatusClick('done')}
-            className={`px-3 py-1 text-xs font-semibold rounded-md transition ${
+            className={`px-2 py-0.5 text-[11px] font-medium rounded-[4px] cursor-pointer transition ${
               status === 'done'
-                ? 'bg-green-600/20 text-green-400 shadow-sm border border-green-500/20'
-                : 'text-navy-400 hover:text-green-400'
+                ? 'bg-success-bg text-success border border-success/20'
+                : 'text-text-secondary hover:text-success'
             }`}
           >
             Done

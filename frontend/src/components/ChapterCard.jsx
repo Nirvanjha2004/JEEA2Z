@@ -1,38 +1,84 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import ProgressBar from './ProgressBar';
+import { ChevronRight } from 'lucide-react';
 
 export default function ChapterCard({ chapter, subjectSlug, color }) {
-  const { id, name, order_index, question_count = 0, done_count = 0 } = chapter;
+  const {
+    id,
+    name,
+    order_index,
+    question_count = 0,
+    done_count = 0,
+    easy_count = 0,
+    medium_count = 0,
+    hard_count = 0,
+    has_formulas = false,
+  } = chapter;
+
+  const navigate = useNavigate();
+
+  const percentage = question_count > 0 ? Math.round((done_count / question_count) * 100) : 0;
+  const formattedOrder = String(order_index).padStart(2, '0');
+
+  const handleCardClick = () => {
+    navigate(`/sheet/${subjectSlug}/${id}`);
+  };
 
   return (
-    <div className="bg-navy-800 border border-navy-700 rounded-xl p-5 hover:border-navy-600 transition-all duration-200 flex flex-col md:flex-row md:items-center justify-between gap-5">
-      <div className="flex items-start gap-4 flex-1">
-        {/* Circle order badge */}
-        <div className="w-10 h-10 rounded-lg bg-navy-900 border border-navy-700 flex items-center justify-center font-bold text-navy-300 text-sm shrink-0">
-          {order_index}
-        </div>
-        <div className="flex-1 min-w-0">
-          <h4 className="text-base font-semibold text-white truncate mb-1">
+    <div
+      onClick={handleCardClick}
+      className="bg-bg-surface border border-border-default rounded-lg p-5 hover:border-border-focus transition-all duration-200 cursor-pointer select-none flex flex-col gap-4"
+    >
+      {/* Top row: Order, Name and Actions */}
+      <div className="flex items-center justify-between gap-4">
+        <div className="flex items-center gap-3">
+          <span className="font-mono text-[12px] text-text-muted">
+            #{formattedOrder}
+          </span>
+          <h4 className="text-[14.5px] font-semibold text-text-primary hover:text-accent transition-colors">
             {name}
           </h4>
-          <span className="text-xs text-navy-400">
-            {question_count} Questions
-          </span>
+        </div>
+        <div className="flex items-center gap-3 shrink-0" onClick={(e) => e.stopPropagation()}>
+          {has_formulas && (
+            <button
+              onClick={() => navigate(`/sheet/${subjectSlug}/${id}?tab=formulas`)}
+              className="text-[13px] hover:scale-105 transition-transform"
+              title="Formula Sheet Available"
+            >
+              📐
+            </button>
+          )}
+          <button
+            onClick={handleCardClick}
+            className="flex items-center gap-1.5 px-3 py-1 bg-bg-elevated border border-border-default hover:border-border-focus text-[11.5px] font-medium text-text-primary rounded-md transition cursor-pointer"
+          >
+            Open <ChevronRight className="w-3 h-3 text-text-muted" />
+          </button>
         </div>
       </div>
 
-      {/* Progress & Link */}
-      <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full md:w-auto md:min-w-[280px]">
-        <div className="flex-1 sm:max-w-[200px]">
-          <ProgressBar current={done_count} total={question_count} color={color} height="h-1.5" />
+      {/* Middle row: Progress bar & metadata */}
+      <div>
+        <div className="flex items-center justify-between text-[11px] text-text-secondary mb-1.5 font-medium">
+          <span>{done_count} / {question_count} done</span>
+          <span>{percentage}%</span>
         </div>
-        <Link
-          to={`/sheet/${subjectSlug}/${id}`}
-          className="px-4 py-2 bg-navy-900 hover:bg-navy-950 border border-navy-700 text-sm font-semibold text-white rounded-lg hover:border-brand-red transition text-center shrink-0"
-        >
-          Open Chapter &rarr;
-        </Link>
+        <ProgressBar current={done_count} total={question_count} color={color} height="h-1" />
+      </div>
+
+      {/* Bottom row: Difficulty count pills */}
+      <div className="flex flex-wrap gap-1.5">
+        <span className="text-[10px] px-2 py-0.5 rounded-full border border-success/15 bg-success-bg text-success font-medium">
+          Easy: {easy_count}
+        </span>
+        <span className="text-[10px] px-2 py-0.5 rounded-full border border-warning/15 bg-warning-bg text-warning font-medium">
+          Medium: {medium_count}
+        </span>
+        <span className="text-[10px] px-2 py-0.5 rounded-full border border-danger/15 bg-danger-bg text-danger font-medium">
+          Hard: {hard_count}
+        </span>
       </div>
     </div>
   );

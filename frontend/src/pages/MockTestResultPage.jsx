@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from 'recharts';
 import api from '../api';
+import { Trophy, ArrowLeft, RotateCcw, Award, CheckCircle2, XCircle, AlertCircle } from 'lucide-react';
 
 export default function MockTestResultPage() {
   const { testId } = useParams();
@@ -28,10 +29,10 @@ export default function MockTestResultPage() {
 
   if (loading) {
     return (
-      <div className="min-h-screen pt-24 bg-navy-900 flex items-center justify-center text-white">
+      <div className="min-h-[70vh] flex items-center justify-center text-text-primary">
         <div className="flex flex-col items-center gap-3">
-          <div className="w-8 h-8 border-2 border-brand-red border-t-transparent rounded-full animate-spin"></div>
-          <p className="text-navy-400 text-sm">Evaluating answers...</p>
+          <div className="w-8 h-8 border-2 border-accent border-t-transparent rounded-full animate-spin"></div>
+          <p className="text-text-secondary text-sm font-medium">Evaluating answers...</p>
         </div>
       </div>
     );
@@ -39,11 +40,15 @@ export default function MockTestResultPage() {
 
   if (error || !result) {
     return (
-      <div className="min-h-screen pt-24 bg-navy-900 text-white px-4 max-w-md mx-auto text-center">
-        <div className="p-4 bg-red-950/30 border border-red-500/50 text-red-400 text-sm rounded-xl mb-6">
-          {error || 'Test results not found.'}
+      <div className="max-w-md mx-auto text-center py-12 text-text-primary animate-slide-in">
+        <div className="p-4 bg-danger-bg border border-danger/20 text-danger text-xs rounded-md mb-6 flex items-start gap-2">
+          <AlertCircle className="w-4 h-4 shrink-0 mt-0.5" />
+          <span>{error || 'Test results not found.'}</span>
         </div>
-        <Link to="/dashboard" className="px-6 py-2 bg-brand-red text-xs font-bold rounded-lg text-white">
+        <Link
+          to="/dashboard"
+          className="px-4 py-2 bg-text-primary text-bg-app hover:opacity-90 text-xs font-semibold rounded-md transition"
+        >
           Back to Dashboard
         </Link>
       </div>
@@ -56,11 +61,18 @@ export default function MockTestResultPage() {
   const skipped = questions.filter((q) => q.user_answer === null || q.user_answer === undefined || q.user_answer === '').length;
   const accuracy = correct + wrong > 0 ? Math.round((correct / (correct + wrong)) * 100) : 0;
 
+  // Colors mapping from Tailwind design system
+  const colors = {
+    correct: '#22c55e', // success
+    wrong: '#ef4444', // danger
+    skipped: '#71717a' // secondary / muted
+  };
+
   // Recharts Chart Data
   const chartData = [
-    { name: 'Correct', value: correct, color: '#22c55e' },
-    { name: 'Wrong', value: wrong, color: '#ef4444' },
-    { name: 'Skipped', value: skipped, color: '#64748b' },
+    { name: 'Correct', value: correct, color: colors.correct },
+    { name: 'Wrong', value: wrong, color: colors.wrong },
+    { name: 'Skipped', value: skipped, color: colors.skipped },
   ].filter((item) => item.value > 0);
 
   const handleRetake = async () => {
@@ -82,159 +94,244 @@ export default function MockTestResultPage() {
   };
 
   return (
-    <div className="min-h-[calc(100vh-4rem)] pt-24 pb-12 bg-navy-900 text-white px-4 md:px-8 max-w-5xl mx-auto space-y-8">
+    <div className="max-w-4xl mx-auto space-y-6 text-text-primary select-none animate-slide-in">
+      {/* Breadcrumb Navigation */}
+      <div className="flex items-center gap-1.5 text-[11px] text-text-muted font-medium mb-3">
+        <Link to="/dashboard" className="hover:text-text-primary transition-colors">
+          JEE Sheet
+        </Link>
+        <span>›</span>
+        <span className="text-text-secondary">Mock Tests</span>
+        <span>›</span>
+        <span className="text-text-secondary">Results</span>
+      </div>
+
       {/* Header */}
-      <div>
-        <h1 className="text-xl md:text-2xl font-extrabold">{result.title} — Results</h1>
-        <p className="text-xs text-navy-400 mt-1">Submitted on {new Date(result.completed_at).toLocaleString()}</p>
+      <div className="border-b border-border-default/60 pb-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+        <div>
+          <h1 className="text-[20px] md:text-[22px] font-semibold tracking-tight text-text-primary">
+            {result.title} — Results
+          </h1>
+          <p className="text-[12px] text-text-muted mt-1">
+            Submitted on {new Date(result.completed_at).toLocaleString()}
+          </p>
+        </div>
+
+        <div className="flex gap-2">
+          <button
+            onClick={handleRetake}
+            className="px-3.5 py-1.5 bg-text-primary text-bg-app hover:opacity-90 text-xs font-semibold rounded-md transition shadow-xs flex items-center gap-1.5 cursor-pointer border border-border-default"
+          >
+            <RotateCcw className="w-3.5 h-3.5" />
+            Retake Test
+          </button>
+          <Link
+            to="/dashboard"
+            className="px-3.5 py-1.5 bg-bg-surface border border-border-default hover:bg-bg-subtle text-text-primary text-xs font-semibold rounded-md transition flex items-center gap-1.5"
+          >
+            <ArrowLeft className="w-3.5 h-3.5" />
+            Go to Sheet
+          </Link>
+        </div>
       </div>
 
       {/* Main Score Layout: Cards Grid + Donut */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-5">
         {/* Left Stats Grid */}
-        <div className="lg:col-span-7 grid grid-cols-2 gap-4">
-          <div className="bg-navy-850 border border-navy-800 p-5 rounded-2xl">
-            <span className="text-[10px] font-bold text-navy-400 uppercase tracking-wider block mb-1">Score Obtained</span>
-            <span className="text-3xl font-black text-brand-red">
-              {result.score} <span className="text-navy-500 text-sm font-semibold">/ {result.max_score}</span>
-            </span>
+        <div className="lg:col-span-7 flex flex-col gap-4">
+          <div className="grid grid-cols-2 gap-4">
+            {/* Card 1: Score */}
+            <div className="bg-bg-surface border border-border-default rounded-lg p-5">
+              <span className="text-[10px] font-semibold text-text-muted uppercase tracking-wider block mb-1">
+                Score Obtained
+              </span>
+              <span className="text-[28px] font-semibold text-accent block leading-none">
+                {result.score} <span className="text-text-muted text-xs font-normal">/ {result.max_score}</span>
+              </span>
+              <span className="text-[10px] text-text-muted mt-1 block font-mono">
+                +4 for correct, -1 for wrong
+              </span>
+            </div>
+
+            {/* Card 2: Accuracy */}
+            <div className="bg-bg-surface border border-border-default rounded-lg p-5">
+              <span className="text-[10px] font-semibold text-text-muted uppercase tracking-wider block mb-1">
+                Accuracy
+              </span>
+              <span className="text-[28px] font-semibold text-text-primary block leading-none">
+                {accuracy}%
+              </span>
+              <span className="text-[10px] text-text-muted mt-1 block">
+                across solved questions
+              </span>
+            </div>
           </div>
 
-          <div className="bg-navy-850 border border-navy-800 p-5 rounded-2xl">
-            <span className="text-[10px] font-bold text-navy-400 uppercase tracking-wider block mb-1">Accuracy</span>
-            <span className="text-3xl font-black text-white">{accuracy}%</span>
-          </div>
+          {/* Response summary breakdown card */}
+          <div className="bg-bg-surface border border-border-default rounded-lg p-5 flex flex-col gap-3">
+            <h4 className="text-[10px] font-semibold text-text-muted uppercase tracking-wider">
+              Response Summary
+            </h4>
+            <div className="grid grid-cols-3 gap-3 text-center">
+              <div className="bg-success/5 border border-success/15 py-3 rounded-md">
+                <span className="block text-lg font-semibold text-success font-mono leading-none mb-1">
+                  {correct}
+                </span>
+                <span className="text-[9px] font-semibold text-success uppercase tracking-wider">
+                  Correct
+                </span>
+              </div>
 
-          <div className="bg-navy-850 border border-navy-800 p-5 rounded-2xl col-span-2">
-            <h4 className="text-[10px] font-bold text-navy-500 uppercase tracking-wider mb-3">Response Summary</h4>
-            <div className="grid grid-cols-3 gap-2 text-center">
-              <div className="bg-green-500/10 border border-green-500/20 py-2.5 rounded-xl">
-                <span className="block text-xs font-mono font-bold text-green-400">{correct}</span>
-                <span className="text-[9px] font-bold text-green-500 uppercase">Correct</span>
+              <div className="bg-danger/5 border border-danger/15 py-3 rounded-md">
+                <span className="block text-lg font-semibold text-danger font-mono leading-none mb-1">
+                  {wrong}
+                </span>
+                <span className="text-[9px] font-semibold text-danger uppercase tracking-wider">
+                  Wrong
+                </span>
               </div>
-              <div className="bg-red-500/10 border border-red-500/20 py-2.5 rounded-xl">
-                <span className="block text-xs font-mono font-bold text-brand-red">{wrong}</span>
-                <span className="text-[9px] font-bold text-red-400 uppercase">Wrong</span>
-              </div>
-              <div className="bg-slate-700/10 border border-slate-700/20 py-2.5 rounded-xl">
-                <span className="block text-xs font-mono font-bold text-slate-400">{skipped}</span>
-                <span className="text-[9px] font-bold text-slate-500 uppercase">Skipped</span>
+
+              <div className="bg-bg-subtle border border-border-default py-3 rounded-md">
+                <span className="block text-lg font-semibold text-text-secondary font-mono leading-none mb-1">
+                  {skipped}
+                </span>
+                <span className="text-[9px] font-semibold text-text-muted uppercase tracking-wider">
+                  Skipped
+                </span>
               </div>
             </div>
           </div>
         </div>
 
         {/* Right Donut Chart */}
-        <div className="lg:col-span-5 bg-navy-850 border border-navy-800 p-5 rounded-2xl flex flex-col items-center justify-center">
-          <h4 className="text-[10px] font-bold text-navy-400 uppercase tracking-wider mb-2 mr-auto">Score Distribution</h4>
-          <div className="w-full h-44 relative flex items-center justify-center">
+        <div className="lg:col-span-5 bg-bg-surface border border-border-default rounded-lg p-5 flex flex-col items-center justify-center min-h-[220px]">
+          <h4 className="text-[10px] font-semibold text-text-muted uppercase tracking-wider mb-2 self-start">
+            Score Distribution
+          </h4>
+          
+          <div className="w-full h-36 relative flex items-center justify-center">
             {chartData.length > 0 ? (
-              <ResponsiveContainer width="100%" height="100%">
-                <PieChart>
-                  <Pie
-                    data={chartData}
-                    cx="50%"
-                    cy="50%"
-                    innerRadius={50}
-                    outerRadius={65}
-                    paddingAngle={3}
-                    dataKey="value"
-                  >
-                    {chartData.map((entry, index) => (
-                      <Cell key={`cell-${index}`} fill={entry.color} />
-                    ))}
-                  </Pie>
-                  <Tooltip
-                    contentStyle={{
-                      backgroundColor: '#0f172a',
-                      borderColor: '#334155',
-                      borderRadius: '8px',
-                      color: '#fff',
-                    }}
-                  />
-                </PieChart>
-              </ResponsiveContainer>
+              <>
+                <ResponsiveContainer width="100%" height="100%">
+                  <PieChart>
+                    <Pie
+                      data={chartData}
+                      cx="50%"
+                      cy="50%"
+                      innerRadius={42}
+                      outerRadius={54}
+                      paddingAngle={3}
+                      dataKey="value"
+                    >
+                      {chartData.map((entry, index) => (
+                        <Cell key={`cell-${index}`} fill={entry.color} />
+                      ))}
+                    </Pie>
+                    <Tooltip
+                      contentStyle={{
+                        backgroundColor: 'var(--bg-surface)',
+                        borderColor: 'var(--border)',
+                        borderRadius: '6px',
+                        color: 'var(--text-primary)',
+                        fontSize: '11px',
+                        fontWeight: '500',
+                      }}
+                    />
+                  </PieChart>
+                </ResponsiveContainer>
+                
+                <div className="absolute flex flex-col items-center select-none pointer-events-none">
+                  <span className="text-xl font-semibold text-text-primary leading-none">
+                    {accuracy}%
+                  </span>
+                  <span className="text-[8px] text-text-muted font-bold uppercase tracking-wider mt-0.5">
+                    Accuracy
+                  </span>
+                </div>
+              </>
             ) : (
-              <p className="text-navy-500 text-xs">No chart data available</p>
+              <p className="text-text-muted text-xs">No chart data available</p>
             )}
-            <div className="absolute flex flex-col items-center">
-              <span className="text-xl font-black text-white">{accuracy}%</span>
-              <span className="text-[9px] text-navy-400 font-bold uppercase tracking-widest">Accuracy</span>
-            </div>
           </div>
         </div>
       </div>
 
-      {/* Retake / Back to Sheet */}
-      <div className="flex gap-3">
-        <button
-          onClick={handleRetake}
-          className="px-6 py-3 bg-brand-red hover:bg-brand-red-hover text-white text-xs font-bold rounded-xl transition cursor-pointer"
-        >
-          Retake Test
-        </button>
-        <Link
-          to="/dashboard"
-          className="px-6 py-3 bg-navy-850 border border-navy-800 hover:border-navy-600 text-white text-xs font-bold rounded-xl transition"
-        >
-          Go to Sheet
-        </Link>
-      </div>
-
       {/* Question Table Review */}
-      <div className="bg-navy-850 border border-navy-800 rounded-3xl overflow-hidden shadow-lg">
-        <div className="p-5 border-b border-navy-800">
-          <h3 className="text-sm font-bold text-white uppercase tracking-wider">Question Review</h3>
+      <div className="bg-bg-surface border border-border-default rounded-lg overflow-hidden shadow-xs">
+        <div className="p-4 border-b border-border-default bg-bg-subtle/20">
+          <h3 className="text-[11.5px] font-semibold text-text-primary uppercase tracking-wider">
+            Detailed Question Review
+          </h3>
         </div>
+        
         <div className="overflow-x-auto">
           <table className="w-full text-left border-collapse table-auto">
             <thead>
-              <tr className="bg-navy-900 border-b border-navy-800 text-[10px] font-bold text-navy-400 uppercase tracking-wider">
-                <th className="px-5 py-3.5 w-12 text-center">#</th>
-                <th className="px-5 py-3.5">Question Title</th>
-                <th className="px-5 py-3.5 text-center w-28">Your Answer</th>
-                <th className="px-5 py-3.5 text-center w-28">Correct Answer</th>
-                <th className="px-5 py-3.5 text-center w-24">Verdict</th>
+              <tr className="bg-bg-subtle/30 border-b border-border-default text-[10px] font-semibold text-text-muted uppercase tracking-wider">
+                <th className="px-4 py-3 w-12 text-center">#</th>
+                <th className="px-4 py-3">Question Title</th>
+                <th className="px-4 py-3 text-center w-28">Your Answer</th>
+                <th className="px-4 py-3 text-center w-28">Correct Answer</th>
+                <th className="px-4 py-3 text-center w-24">Verdict</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-navy-800/40 text-sm">
+            
+            <tbody className="divide-y divide-border-default/40 text-xs">
               {questions.map((q, idx) => {
-                let rowBg = 'hover:bg-navy-800/40';
-                let verdictText = '—';
-                let verdictColor = 'text-slate-400';
+                let rowBg = 'hover:bg-bg-subtle/30';
+                let verdictText = 'Skipped';
+                let verdictColor = 'text-text-secondary';
+                let VerdictIcon = AlertCircle;
 
                 if (q.is_correct === true) {
-                  rowBg = 'bg-green-950/10 hover:bg-green-950/20';
-                  verdictText = '✓ Correct';
-                  verdictColor = 'text-green-400 font-bold';
+                  rowBg = 'bg-success/5 hover:bg-success/10';
+                  verdictText = 'Correct';
+                  verdictColor = 'text-success font-semibold';
+                  VerdictIcon = CheckCircle2;
                 } else if (q.is_correct === false) {
-                  rowBg = 'bg-red-950/10 hover:bg-red-950/20';
-                  verdictText = '✗ Wrong';
-                  verdictColor = 'text-brand-red font-bold';
-                } else {
-                  rowBg = 'bg-slate-700/5 hover:bg-slate-700/10';
-                  verdictText = 'Skipped';
-                  verdictColor = 'text-slate-400';
+                  rowBg = 'bg-danger/5 hover:bg-danger/10';
+                  verdictText = 'Incorrect';
+                  verdictColor = 'text-danger font-semibold';
+                  VerdictIcon = XCircle;
                 }
 
                 return (
                   <tr key={q.id} className={`${rowBg} transition-colors`}>
-                    <td className="px-5 py-4 text-center font-mono text-xs text-navy-500">{idx + 1}</td>
-                    <td className="px-5 py-4">
-                      <div className="text-xs font-semibold text-white break-words mb-1">{q.title}</div>
-                      <div className="flex gap-2">
-                        <span className="text-[9px] font-bold text-navy-400">{q.subject_name}</span>
-                        <span className="text-[9px] text-navy-500">•</span>
-                        <span className="text-[9px] font-bold text-navy-400">{q.chapter_name}</span>
+                    <td className="px-4 py-3.5 text-center font-mono text-[11px] text-text-muted">
+                      {idx + 1}
+                    </td>
+                    
+                    <td className="px-4 py-3.5 min-w-[200px]">
+                      <div className="text-[12.5px] font-medium text-text-primary break-words mb-1">
+                        {q.title}
+                      </div>
+                      <div className="flex items-center gap-1.5 text-[10px] text-text-muted font-medium">
+                        <span>{q.subject_name}</span>
+                        <span>·</span>
+                        <span>{q.chapter_name}</span>
+                        {q.source && (
+                          <>
+                            <span>·</span>
+                            <span className="font-mono text-[9px]">{q.source}</span>
+                          </>
+                        )}
                       </div>
                     </td>
-                    <td className="px-5 py-4 text-center font-mono text-xs font-extrabold">
-                      {q.user_answer !== null ? q.user_answer : '-'}
+                    
+                    <td className="px-4 py-3.5 text-center font-mono text-xs font-semibold text-text-primary">
+                      {q.user_answer !== null && q.user_answer !== undefined && q.user_answer !== '' ? q.user_answer : '-'}
                     </td>
-                    <td className="px-5 py-4 text-center font-mono text-xs font-extrabold text-green-400">
+                    
+                    <td className="px-4 py-3.5 text-center font-mono text-xs font-semibold text-success">
                       {q.correct_answer || '-'}
                     </td>
-                    <td className={`px-5 py-4 text-center text-xs ${verdictColor}`}>{verdictText}</td>
+                    
+                    <td className="px-4 py-3.5 text-center align-middle">
+                      <div className={`inline-flex items-center gap-1 text-[11px] ${verdictColor}`}>
+                        <VerdictIcon className="w-3.5 h-3.5 shrink-0" />
+                        <span>{verdictText}</span>
+                      </div>
+                    </td>
                   </tr>
                 );
               })}

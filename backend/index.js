@@ -13,6 +13,8 @@ import discussionRoutes from './src/routes/discussion.js';
 import adminRoutes from './src/routes/admin.js';
 import leaderboardRoutes from './src/routes/leaderboard.js';
 import profileRoutes from './src/routes/profile.js';
+import hintRoutes from './src/routes/hints.js';
+import formulaRoutes from './src/routes/formulas.js';
 import { errorHandler } from './src/middleware/errorHandler.js';
 
 const app = express();
@@ -34,6 +36,8 @@ app.use('/api/discussion', discussionRoutes);
 app.use('/api/admin', adminRoutes);
 app.use('/api/leaderboard', leaderboardRoutes);
 app.use('/api/profile', profileRoutes);
+app.use('/api/hints', hintRoutes);
+app.use('/api/formulas', formulaRoutes);
 
 // Health check
 app.get('/api/health', (req, res) => {
