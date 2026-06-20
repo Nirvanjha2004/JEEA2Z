@@ -226,20 +226,44 @@ CREATE INDEX IF NOT EXISTS idx_concept_mastery_user ON concept_mastery(user_id);
 CREATE INDEX IF NOT EXISTS idx_concept_mastery_concept ON concept_mastery(concept_id);
 
 -- V3.7 Patterns & Options Columns
-ALTER TABLE concepts ADD COLUMN IF NOT EXISTS pattern_group TEXT;
-ALTER TABLE questions ADD COLUMN IF NOT EXISTS pattern_group TEXT;
-ALTER TABLE questions ADD COLUMN IF NOT EXISTS is_numerical BOOLEAN DEFAULT FALSE;
-ALTER TABLE questions ADD COLUMN IF NOT EXISTS time_estimate_seconds INT DEFAULT 120;
+ALTER TABLE questions 
+  ADD COLUMN IF NOT EXISTS pattern_group TEXT,
+  ADD COLUMN IF NOT EXISTS is_numerical BOOLEAN DEFAULT FALSE,
+  ADD COLUMN IF NOT EXISTS marks INT DEFAULT 4,
+  ADD COLUMN IF NOT EXISTS time_estimate_seconds INT DEFAULT 120,
+  ADD COLUMN IF NOT EXISTS solution_text TEXT,
+  ADD COLUMN IF NOT EXISTS common_mistake TEXT;
+
+ALTER TABLE concepts 
+  ADD COLUMN IF NOT EXISTS pattern_group TEXT;
 
 -- question_options: stores LaTeX option content for multiple choice questions
 CREATE TABLE IF NOT EXISTS question_options (
   id          SERIAL PRIMARY KEY,
   question_id INT REFERENCES questions(id) ON DELETE CASCADE,
-  option_key  TEXT NOT NULL, -- 'A', 'B', 'C', 'D'
+  option_key  TEXT NOT NULL CHECK(option_key IN ('A','B','C','D')),
   option_text TEXT NOT NULL,
   UNIQUE(question_id, option_key)
 );
 
+-- Pattern group mastery (aggregated per user per pattern)
+CREATE TABLE IF NOT EXISTS pattern_mastery (
+  id              SERIAL PRIMARY KEY,
+  user_id         UUID REFERENCES users(id) ON DELETE CASCADE,
+  chapter_id      INT REFERENCES chapters(id) ON DELETE CASCADE,
+  pattern_group   TEXT NOT NULL,
+  questions_total INT DEFAULT 0,
+  questions_done  INT DEFAULT 0,
+  questions_revisit INT DEFAULT 0,
+  accuracy_percent FLOAT DEFAULT 0,
+  last_updated    TIMESTAMP DEFAULT NOW(),
+  UNIQUE(user_id, chapter_id, pattern_group)
+);
+
+-- Indexes
+CREATE INDEX IF NOT EXISTS idx_questions_pattern_group ON questions(pattern_group);
+CREATE INDEX IF NOT EXISTS idx_questions_chapter_pattern ON questions(chapter_id, pattern_group);
+CREATE INDEX IF NOT EXISTS idx_pattern_mastery_user ON pattern_mastery(user_id, chapter_id);
 CREATE INDEX IF NOT EXISTS idx_question_options_q ON question_options(question_id);
 
 

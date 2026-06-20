@@ -1,6 +1,7 @@
 import { query } from '../db/index.js';
 import { updateProgressSchema } from '../validators/progress.js';
 import { recalculateConceptMastery } from './concepts.js';
+import { updatePatternMastery } from './patterns.js';
 
 export const getSummary = async (req, res, next) => {
   try {
@@ -175,6 +176,9 @@ export const updateProgress = async (req, res, next) => {
 
     // V3 Hook: Recalculate concept mastery for this question
     await recalculateConceptMastery(userId, validated.questionId);
+
+    // V3.7 Hook: Recalculate pattern mastery for this question
+    await updatePatternMastery(userId, validated.questionId, validated.status);
 
     return res.json({
       success: true,

@@ -16,6 +16,7 @@ import profileRoutes from './src/routes/profile.js';
 import hintRoutes from './src/routes/hints.js';
 import formulaRoutes from './src/routes/formulas.js';
 import conceptRoutes from './src/routes/concepts.js';
+import patternRoutes from './src/routes/patterns.js';
 import { errorHandler } from './src/middleware/errorHandler.js';
 
 const app = express();
@@ -40,6 +41,7 @@ app.use('/api/profile', profileRoutes);
 app.use('/api/hints', hintRoutes);
 app.use('/api/formulas', formulaRoutes);
 app.use('/api/concepts', conceptRoutes);
+app.use('/api', patternRoutes);
 
 // Health check
 app.get('/api/health', (req, res) => {
