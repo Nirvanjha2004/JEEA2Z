@@ -103,25 +103,27 @@ export default function QuestionRow({ question, index, onStatusChange, onOpenNot
         </td>
 
         {/* Question Details */}
-        <td className="px-3 py-3 min-w-[240px]">
-          <div className="flex items-start justify-between gap-3">
-            <div className="flex-1">
-              <span className={`text-[13px] font-medium leading-relaxed break-words block mb-1 ${
-                status === 'done' ? 'text-text-muted line-through decoration-text-disabled' : 'text-text-primary'
-              }`}>
-                <MathText text={title} />
-              </span>
+        <td className="px-3 py-3 w-[45%] max-w-0">
+          <div className="flex items-start justify-between gap-3 overflow-hidden">
+            <div className="flex-1 min-w-0 overflow-hidden">
+              <button
+                onClick={openSolveModal}
+                className={`text-[13px] font-medium leading-snug text-left w-full block mb-1.5 
+                  cursor-pointer hover:text-accent transition-colors ${
+                  status === 'done' ? 'text-text-muted line-through decoration-text-disabled' : 'text-text-primary'
+                }`}
+                title={title.replace(/\$[^$]*\$/g, '').replace(/\\[a-zA-Z]+/g, '').trim()}
+              >
+                {/* Height-clip to 1 line, fade right edge */}
+                <div className="relative overflow-hidden" style={{ maxHeight: '1.4rem' }}>
+                  <MathText text={title} />
+                  <div className="absolute inset-y-0 right-0 w-12 pointer-events-none"
+                    style={{ background: 'linear-gradient(to right, transparent, var(--bg-app))' }}
+                  />
+                </div>
+              </button>
               <div className="flex flex-wrap items-center gap-2">
                 {getFormatBadge()}
-                <button
-                  onClick={(e) => {
-                    e.preventDefault();
-                    openSolveModal();
-                  }}
-                  className="inline-flex items-center gap-1 px-1.5 py-0.5 bg-accent/10 border border-accent/25 hover:bg-accent/20 text-[10px] text-accent font-semibold rounded transition cursor-pointer select-none active:scale-95 shrink-0"
-                >
-                  Solve
-                </button>
                 {source && (
                   <span className="inline-block px-1.5 py-0.5 bg-bg-subtle border border-border-default text-[10px] text-text-muted rounded font-mono font-medium">
                     {source}
