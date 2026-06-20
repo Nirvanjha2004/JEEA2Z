@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
 import api from '../api';
+import useAuthStore from '../store/authStore';
 import FormulaCard from './FormulaCard';
 import { SkeletonCard } from './SkeletonRow';
 import EmptyState from './EmptyState';
@@ -8,6 +9,7 @@ import { useToast } from './Toast';
 import { Search, Download, Calculator } from 'lucide-react';
 
 const FormulaSheet = ({ chapterId, chapterName }) => {
+  const { user } = useAuthStore();
   const [formulas, setFormulas] = useState([]);
   const [intro, setIntro] = useState(null);
   const [loading, setLoading] = useState(true);
