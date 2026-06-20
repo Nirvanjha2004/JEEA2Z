@@ -6,6 +6,7 @@ import { Button } from '../components/ui/Button';
 import DifficultyBadge from '../components/DifficultyBadge';
 import TypeBadge from '../components/TypeBadge';
 import { ArrowLeft, Sparkles, CheckCircle2, AlertCircle, Play } from 'lucide-react';
+import MathText from '../components/MathText';
 
 export default function PracticeModePage() {
   const { conceptId } = useParams();
@@ -112,8 +113,14 @@ export default function PracticeModePage() {
       setSelectedAnswer('');
       setSubmitted(false);
     } else {
-      // Practice session completed! Navigate back to concept detail page
-      navigate(`/concept/${conceptId}`);
+      // Practice session completed! Navigate back to concept detail or patterns tab
+      if (typeof conceptId === 'string' && conceptId.startsWith('pattern:')) {
+        const parts = conceptId.split(':');
+        const chapterId = parts[1];
+        navigate(`/sheet/physics/${chapterId}?tab=patterns`);
+      } else {
+        navigate(`/concept/${conceptId}`);
+      }
     }
   };
 
@@ -183,7 +190,7 @@ export default function PracticeModePage() {
           </div>
           
           <h3 className="text-[14.5px] font-semibold text-text-primary leading-relaxed break-words">
-            {currentQuestion.title}
+            <MathText text={currentQuestion.title} />
           </h3>
         </div>
 
@@ -217,7 +224,7 @@ export default function PracticeModePage() {
                 The correct answer is <strong className="text-text-primary font-bold">{(currentQuestion.correct_answer || '').toUpperCase()}</strong>.
                 {currentQuestion.notes && (
                   <span className="block mt-2 italic text-text-muted">
-                    Refresher note: {currentQuestion.notes}
+                    Refresher note: <MathText text={currentQuestion.notes} />
                   </span>
                 )}
               </p>
@@ -238,18 +245,26 @@ export default function PracticeModePage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
               {['A', 'B', 'C', 'D'].map((option) => {
                 const isSelected = selectedAnswer === option;
+                const optionVal = currentQuestion.options?.[option];
                 return (
                   <button
                     key={option}
                     onClick={() => setSelectedAnswer(option)}
-                    className={`h-[42px] px-4 rounded-xl border text-left font-medium text-[13px] transition-all flex items-center justify-between cursor-pointer active:scale-98 ${
+                    className={`min-h-[42px] py-2 px-4 rounded-xl border text-left font-medium text-[13px] transition-all flex items-center justify-between cursor-pointer active:scale-98 ${
                       isSelected
                         ? 'bg-accent/5 border-accent text-accent shadow-xs font-semibold'
                         : 'bg-bg-elevated/40 border-border-default text-text-secondary hover:text-text-primary hover:bg-bg-subtle'
                     }`}
                   >
-                    <span>Option {option}</span>
-                    {isSelected && <span className="w-1.5 h-1.5 rounded-full bg-accent" />}
+                    <span className="flex items-center gap-1.5 break-all max-w-[85%]">
+                      <span className="font-bold text-accent shrink-0">{option}.</span>
+                      {optionVal ? (
+                        <MathText text={optionVal} />
+                      ) : (
+                        <span>Option {option}</span>
+                      )}
+                    </span>
+                    {isSelected && <span className="w-1.5 h-1.5 rounded-full bg-accent shrink-0 ml-2" />}
                   </button>
                 );
               })}

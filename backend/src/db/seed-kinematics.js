@@ -1,0 +1,1477 @@
+import 'dotenv/config';
+import { query } from './index.js';
+
+const conceptsToSeed = [
+  {
+    name: 'Equations of Motion',
+    slug: 'equations-of-motion',
+    description: 'The three kinematic equations: v=u+at, s=ut+½at², v²=u²+2as. Use for constant acceleration only.',
+    formula_ids: [1, 2, 3],
+    pattern_group: 'basic-kinematics'
+  },
+  {
+    name: 'Motion Under Gravity',
+    slug: 'motion-under-gravity',
+    description: 'Free fall and vertical projection. Key: acceleration = g downward. Sign convention is critical.',
+    formula_ids: [5, 6, 7],
+    pattern_group: 'gravity'
+  },
+  {
+    name: 'Graphical Analysis',
+    slug: 'graphical-analysis',
+    description: 'Slope of x-t = v, slope of v-t = a, area under v-t = displacement. Essential for non-uniform cases.',
+    formula_ids: [],
+    pattern_group: 'graphs'
+  },
+  {
+    name: 'Relative Velocity',
+    slug: 'relative-velocity',
+    description: 'v_AB = v_A - v_B (vector). For 1D: simple subtraction with signs. For 2D: vector triangle.',
+    formula_ids: [],
+    pattern_group: 'relative'
+  },
+  {
+    name: 'Projectile Motion',
+    slug: 'projectile-motion',
+    description: 'Horizontal: uniform motion (a=0). Vertical: accelerated (a=g). Range, max height, time of flight formulas.',
+    formula_ids: [5, 6, 7],
+    pattern_group: 'projectile'
+  },
+  {
+    name: 'Projectile on Incline',
+    slug: 'projectile-on-incline',
+    description: 'Coordinate axes along and perpendicular to incline. g has components along both axes.',
+    formula_ids: [],
+    pattern_group: 'projectile-incline'
+  },
+  {
+    name: 'Uniform Circular Motion',
+    slug: 'uniform-circular-motion',
+    description: 'Centripetal acceleration a = v²/r = rω². Velocity always tangent. Period T = 2πr/v.',
+    formula_ids: [],
+    pattern_group: 'circular'
+  },
+  {
+    name: 'Variable Acceleration',
+    slug: 'variable-acceleration',
+    description: 'When a = f(t) or a = f(v), use integration: a = dv/dt = v dv/dx.',
+    formula_ids: [],
+    pattern_group: 'advanced'
+  }
+];
+
+const questionsData = [
+  // GROUP 1: Basic Kinematics — Direct Formula Application
+  {
+    pattern_group: 'basic-kinematics',
+    title: 'A scooter accelerates from rest for time $t_1$ at constant rate $a_1$ and then retards at constant rate $a_2$ for time $t_2$ and comes to rest. The correct value of $\\frac{t_1}{t_2}$ will be:',
+    difficulty: 'medium',
+    type: 'pyq',
+    source: 'JEE Main 2021, 26 Feb Shift 2',
+    correct_answer: 'B',
+    is_numerical: false,
+    options: { A: '$\\frac{a_1}{a_2}$', B: '$\\frac{a_2}{a_1}$', C: '$\\frac{a_1 + a_2}{a_2}$', D: '$\\frac{a_1 + a_2}{a_1}$' },
+    notes: 'Final velocity of first stage is the initial velocity of second stage.',
+    concept_slugs: ['equations-of-motion']
+  },
+  {
+    pattern_group: 'basic-kinematics',
+    title: 'A car starts from rest and accelerates uniformly at $2\\,\\text{m/s}^2$. The distance travelled by the car in the $5^{\\text{th}}$ second of its motion is:',
+    difficulty: 'easy',
+    type: 'pyq',
+    source: 'JEE Main 2020, 2 Sep Shift 1',
+    correct_answer: '9',
+    is_numerical: true,
+    notes: 'Use the formula for distance in the nth second: $S_n = u + \\frac{a}{2}(2n - 1)$.',
+    concept_slugs: ['equations-of-motion']
+  },
+  {
+    pattern_group: 'basic-kinematics',
+    title: 'A particle starts from rest and accelerates uniformly for $20\\,\\text{s}$. If it travels distance $S_1$ in the first $10\\,\\text{s}$ and $S_2$ in the next $10\\,\\text{s}$, then:',
+    difficulty: 'easy',
+    type: 'pyq',
+    source: 'JEE Main 2019, 10 Apr Shift 1',
+    correct_answer: 'C',
+    is_numerical: false,
+    options: { A: '$S_2 = S_1$', B: '$S_2 = 2S_1$', C: '$S_2 = 3S_1$', D: '$S_2 = 4S_1$' },
+    notes: 'Apply $s = ut + \\frac{1}{2}at^2$ for $t=10\\,\\text{s}$ and $t=20\\,\\text{s}$.',
+    concept_slugs: ['equations-of-motion']
+  },
+  {
+    pattern_group: 'basic-kinematics',
+    title: 'A vehicle moving at $36\\,\\text{km/h}$ is brought to rest in $5\\,\\text{s}$ by applying brakes. The average retardation of the vehicle is:',
+    difficulty: 'easy',
+    type: 'pyq',
+    source: 'JEE Main 2023, 12 Apr Shift 1',
+    correct_answer: '2',
+    is_numerical: true,
+    notes: 'Convert speed to m/s: $36\\,\\text{km/h} = 10\\,\\text{m/s}$. Use $v = u - at$.',
+    concept_slugs: ['equations-of-motion']
+  },
+  {
+    pattern_group: 'basic-kinematics',
+    title: 'A train accelerates from rest at $3\\,\\text{m/s}^2$ for time $t_1$, then moves uniformly for time $t_2$, and finally retards at $6\\,\\text{m/s}^2$ to come to rest. If total distance is $900\\,\\text{m}$ and total time is $30\\,\\text{s}$, the value of $t_2$ is:',
+    difficulty: 'medium',
+    type: 'concept',
+    correct_answer: '10',
+    is_numerical: true,
+    notes: 'Draw a v-t graph. Area under v-t graph represents the total displacement.',
+    concept_slugs: ['equations-of-motion']
+  },
+  {
+    pattern_group: 'basic-kinematics',
+    title: 'A bullet loses $\\frac{1}{20}$ of its velocity in passing through a plank. The minimum number of similar planks required to stop the bullet completely is:',
+    difficulty: 'medium',
+    type: 'concept',
+    correct_answer: 'B',
+    is_numerical: false,
+    options: { A: '10', B: '11', C: '12', D: '20' },
+    notes: 'Use $v^2 = u^2 - 2as$ for one plank to find retardation, then apply it to stop the bullet.',
+    concept_slugs: ['equations-of-motion']
+  },
+  {
+    pattern_group: 'basic-kinematics',
+    title: 'A bus starting from rest moves with a constant acceleration of $1\\,\\text{m/s}^2$. A man who is $48\\,\\text{m}$ behind the bus starts running at a constant speed of $10\\,\\text{m/s}$. The minimum time taken by the man to catch the bus is:',
+    difficulty: 'medium',
+    type: 'concept',
+    correct_answer: '8',
+    is_numerical: true,
+    notes: 'Equate the positions of the man and the bus at time $t$: $x_m = x_b$.',
+    concept_slugs: ['equations-of-motion']
+  },
+  {
+    pattern_group: 'basic-kinematics',
+    title: 'A particle moves with acceleration $a_1$ for time $t$, then with acceleration $a_2$ for time $t$, and finally with acceleration $a_3$ for time $t$. If the total displacement is zero, the correct relation is:',
+    difficulty: 'medium',
+    type: 'practice',
+    correct_answer: 'B',
+    is_numerical: false,
+    options: { A: '$a_1 + a_2 + a_3 = 0$', B: '$a_1 + 2a_2 + 3a_3 = 0$', C: '$a_1 + 3a_2 + 2a_3 = 0$', D: '$3a_1 + 2a_2 + a_3 = 0$' },
+    notes: 'Write expressions for velocity and displacement at the end of each interval.',
+    concept_slugs: ['equations-of-motion']
+  },
+  {
+    pattern_group: 'basic-kinematics',
+    title: 'A driver applies brakes to stop a car moving at speed $u$ within a stopping distance $d$. If the speed of the car becomes $3u$, the stopping distance under the same retardation will be:',
+    difficulty: 'easy',
+    type: 'practice',
+    correct_answer: 'C',
+    is_numerical: false,
+    options: { A: '$3d$', B: '$6d$', C: '$9d$', D: '$12d$' },
+    notes: 'Stopping distance is directly proportional to the square of initial velocity.',
+    concept_slugs: ['equations-of-motion']
+  },
+  {
+    pattern_group: 'basic-kinematics',
+    title: 'A body covers $12\\,\\text{m}$ in the $2^{\\text{nd}}$ second and $20\\,\\text{m}$ in the $4^{\\text{th}}$ second. The distance covered by the body in the $4\\,\\text{s}$ after the $5^{\\text{th}}$ second is:',
+    difficulty: 'medium',
+    type: 'practice',
+    correct_answer: '136',
+    is_numerical: true,
+    notes: 'Find $u$ and $a$ first using $S_n = u + \\frac{a}{2}(2n - 1)$. Then find $S_{9} - S_5$.',
+    concept_slugs: ['equations-of-motion']
+  },
+  {
+    pattern_group: 'basic-kinematics',
+    title: 'The acceleration of a particle is given by $a = 2t\\,\\text{m/s}^2$. If the particle starts from rest, its velocity at $t = 3\\,\\text{s}$ is:',
+    difficulty: 'hard',
+    type: 'advanced',
+    correct_answer: '9',
+    is_numerical: true,
+    notes: 'Integrate the acceleration: $v = \\int a\\,dt$. Since $u=0$, $v = t^2$.',
+    concept_slugs: ['equations-of-motion', 'variable-acceleration']
+  },
+  {
+    pattern_group: 'basic-kinematics',
+    title: 'A particle moves along a straight line such that its displacement $x$ at time $t$ satisfies $t = \\alpha x^2 + \\beta x$. The acceleration of the particle as a function of velocity $v$ is:',
+    difficulty: 'hard',
+    type: 'advanced',
+    correct_answer: 'D',
+    is_numerical: false,
+    options: { A: '$-2\\alpha v$', B: '$-2\\beta v^3$', C: '$-2\\alpha v^2$', D: '$-2\\alpha v^3$' },
+    notes: 'Differentiate with respect to $x$ to get $1/v$, then differentiate again to find acceleration.',
+    concept_slugs: ['equations-of-motion', 'variable-acceleration']
+  },
+
+  // GROUP 2: Motion Under Gravity — Free Fall
+  {
+    pattern_group: 'gravity',
+    title: 'Water drops fall from a tap at a height of $9.8\\,\\text{m}$ above the ground at regular intervals. The third drop leaves the tap at the instant the first drop hits the ground. The height of the second drop at this instant is:',
+    difficulty: 'medium',
+    type: 'pyq',
+    source: 'JEE Main 2021, 27 Aug Shift 2',
+    correct_answer: 'A',
+    is_numerical: false,
+    options: { A: '$7.35\\,\\text{m}$', B: '$2.45\\,\\text{m}$', C: '$4.90\\,\\text{m}$', D: '$6.20\\,\\text{m}$' },
+    notes: 'Determine the time interval between successive drops using free fall of the first drop.',
+    concept_slugs: ['motion-under-gravity']
+  },
+  {
+    pattern_group: 'gravity',
+    title: 'A ball is released from a height $h$. If it takes time $t_1$ to cover the first half of the distance and $t_2$ to cover the second half, the correct relation is:',
+    difficulty: 'medium',
+    type: 'pyq',
+    source: 'JEE Main 2022, 25 Jun Shift 1',
+    correct_answer: 'B',
+    is_numerical: false,
+    options: { A: '$t_1 = t_2$', B: '$t_1 = (\\sqrt{2} + 1)t_2$', C: '$t_1 = (\\sqrt{2} - 1)t_2$', D: '$t_2 = (\\sqrt{2} - 1)t_1$' },
+    notes: 'Apply $h = \\frac{1}{2}gt^2$. Total time $T = t_1 + t_2 = \\sqrt{2h/g}$.',
+    concept_slugs: ['motion-under-gravity']
+  },
+  {
+    pattern_group: 'gravity',
+    title: 'A stone is dropped from a balloon rising upwards with a velocity of $12\\,\\text{m/s}$. If the balloon is at a height of $65\\,\\text{m}$ when the stone is dropped, the time taken by the stone to reach the ground is ($g = 10\\,\\text{m/s}^2$):',
+    difficulty: 'medium',
+    type: 'pyq',
+    source: 'JEE Main 2020, 5 Sep Shift 2',
+    correct_answer: '5',
+    is_numerical: true,
+    notes: 'The stone inherits the upward velocity of the balloon. Initial velocity $u = +12\\,\\text{m/s}$, displacement $s = -65\\,\\text{m}$.',
+    concept_slugs: ['motion-under-gravity']
+  },
+  {
+    pattern_group: 'gravity',
+    title: 'A stone is dropped from the top of a tower of height $80\\,\\text{m}$. The distance covered by it in the last second of its motion is ($g = 10\\,\\text{m/s}^2$):',
+    difficulty: 'easy',
+    type: 'concept',
+    correct_answer: '35',
+    is_numerical: true,
+    notes: 'Find the total time of flight using $h = \\frac{1}{2}gt^2$, then compute the distance in that last second.',
+    concept_slugs: ['motion-under-gravity']
+  },
+  {
+    pattern_group: 'gravity',
+    title: 'A body is dropped from a height $H$. It covers a distance of $0.36H$ in its last second. The height $H$ is ($g = 10\\,\\text{m/s}^2$):',
+    difficulty: 'medium',
+    type: 'concept',
+    correct_answer: '125',
+    is_numerical: true,
+    notes: 'Set up equations for total time $t$ and time $(t-1)$. Distance in last second is $H - h(t-1) = 0.36H$.',
+    concept_slugs: ['motion-under-gravity']
+  },
+  {
+    pattern_group: 'gravity',
+    title: 'Two bodies are dropped from heights $h_1$ and $h_2$ respectively. The ratio of times taken by them to reach the ground is:',
+    difficulty: 'easy',
+    type: 'practice',
+    correct_answer: 'A',
+    is_numerical: false,
+    options: { A: '$\\sqrt{h_1} : \\sqrt{h_2}$', B: '$h_1 : h_2$', C: '$h_2 : h_1$', D: '$\\sqrt{h_2} : \\sqrt{h_1}$' },
+    notes: 'Since initial velocity $u=0$, time taken is $t = \\sqrt{2h/g}$.',
+    concept_slugs: ['motion-under-gravity']
+  },
+  {
+    pattern_group: 'gravity',
+    title: 'A ball is dropped from a tower of height $100\\,\\text{m}$. At the same instant, another ball is thrown vertically upwards from the ground with velocity $25\\,\\text{m/s}$. The time after which they will cross each other is ($g = 10\\,\\text{m/s}^2$):',
+    difficulty: 'medium',
+    type: 'practice',
+    correct_answer: '4',
+    is_numerical: true,
+    notes: 'The relative acceleration is zero. Time of collision is $t = \\text{Distance} / v_{\\text{rel}} = 100 / 25$.',
+    concept_slugs: ['motion-under-gravity', 'relative-velocity']
+  },
+  {
+    pattern_group: 'gravity',
+    title: 'An object is dropped from rest at height $H$. The average velocity of the object during its entire journey to the ground is:',
+    difficulty: 'easy',
+    type: 'practice',
+    correct_answer: 'B',
+    is_numerical: false,
+    options: { A: '$\\sqrt{gH}$', B: '$\\sqrt{\\frac{gH}{2}}$', C: '$\\frac{\\sqrt{2gH}}{3}$', D: '$\\frac{\\sqrt{gH}}{2}$' },
+    notes: 'Average velocity is total displacement divided by total time: $H / \\sqrt{2H/g} = \\sqrt{gH/2}$.',
+    concept_slugs: ['motion-under-gravity']
+  },
+  {
+    pattern_group: 'gravity',
+    title: 'A small sphere is dropped into a viscous fluid column. The velocity-time curve starts with free fall but curves to a constant velocity. This constant value is known as:',
+    difficulty: 'medium',
+    type: 'advanced',
+    correct_answer: 'C',
+    is_numerical: false,
+    options: { A: 'Critical velocity', B: 'Escape velocity', C: 'Terminal velocity', D: 'Drift velocity' },
+    notes: 'Viscous force increases with velocity until it balances gravity, leading to terminal velocity.',
+    concept_slugs: ['motion-under-gravity']
+  },
+  {
+    pattern_group: 'gravity',
+    title: 'A parachutist bails out from an aeroplane and falls $50\\,\\text{m}$ without friction. When parachute opens, it decelerates at $2\\,\\text{m/s}^2$. He reaches the ground with speed $3\\,\\text{m/s}$. At what height did he bail out? ($g = 10\\,\\text{m/s}^2$):',
+    difficulty: 'hard',
+    type: 'advanced',
+    correct_answer: '293',
+    is_numerical: true,
+    notes: 'Find velocity when parachute opens using $v^2 = 2g(50)$. Then find the deceleration distance.',
+    concept_slugs: ['motion-under-gravity', 'equations-of-motion']
+  },
+
+  // GROUP 3: Motion Under Gravity — Vertical Throw
+  {
+    pattern_group: 'gravity',
+    title: 'A ball thrown vertically upwards from the ground passes a height $h$ after time $t_1$ while going up and after time $t_2$ while coming down. The height $h$ in terms of $t_1$ and $t_2$ is:',
+    difficulty: 'medium',
+    type: 'pyq',
+    source: 'JEE Main 2022, 26 Jun Shift 2',
+    correct_answer: 'C',
+    is_numerical: false,
+    options: { A: '$gt_1 t_2$', B: '$2gt_1 t_2$', C: '$\\frac{1}{2}gt_1 t_2$', D: '$\\frac{1}{4}gt_1 t_2$' },
+    notes: 'The times $t_1$ and $t_2$ are the roots of the quadratic equation $h = ut - \\frac{1}{2}gt^2$.',
+    concept_slugs: ['motion-under-gravity']
+  },
+  {
+    pattern_group: 'gravity',
+    title: 'From the top of a tower, a ball is thrown vertically upwards with a speed $u$ and reaches the ground in time $t_1$. If it is thrown vertically downwards with speed $u$, it reaches the ground in time $t_2$. If dropped from rest, the time to reach the ground is:',
+    difficulty: 'hard',
+    type: 'pyq',
+    source: 'JEE Main 2020, 7 Jan Shift 1',
+    correct_answer: 'B',
+    is_numerical: false,
+    options: { A: '$\\frac{t_1 + t_2}{2}$', B: '$\\sqrt{t_1 t_2}$', C: '$\\frac{t_1 t_2}{t_1 + t_2}$', D: '$\\sqrt{t_1^2 + t_2^2}$' },
+    notes: 'Set up the equations of motion for all three cases and solve for the relation between $t_1$, $t_2$, and $t$.',
+    concept_slugs: ['motion-under-gravity']
+  },
+  {
+    pattern_group: 'gravity',
+    title: 'A body projected vertically upwards from the ground reaches a maximum height $h$. If the time of flight is $T$, the height of the body at time $t = T/4$ is:',
+    difficulty: 'easy',
+    type: 'pyq',
+    source: 'JEE Main 2023, 25 Jan Shift 2',
+    correct_answer: 'A',
+    is_numerical: false,
+    options: { A: '$\\frac{3}{4}h$', B: '$\\frac{1}{2}h$', C: '$\\frac{1}{4}h$', D: '$\\frac{7}{8}h$' },
+    notes: 'At $t=T/4$, it is half way to its maximum height in time, but not in displacement. Use equations of motion.',
+    concept_slugs: ['motion-under-gravity']
+  },
+  {
+    pattern_group: 'gravity',
+    title: 'A toy rocket is fired vertically upwards. Its engine provides a constant acceleration of $5\\,\\text{m/s}^2$ for $10\\,\\text{s}$ before running out of fuel. The maximum height reached by the rocket is ($g = 10\\,\\text{m/s}^2$):',
+    difficulty: 'medium',
+    type: 'concept',
+    correct_answer: '375',
+    is_numerical: true,
+    notes: 'Two stages: accelerated upward motion ($a=5$, $t=10$), followed by free fall under gravity with initial velocity from stage 1.',
+    concept_slugs: ['motion-under-gravity', 'equations-of-motion']
+  },
+  {
+    pattern_group: 'gravity',
+    title: 'A ball is thrown upward with velocity $u$ from the top of a tower of height $H$. It hits the ground in time $t$. If the time to reach the maximum height is $t_0$, then $t$ is:',
+    difficulty: 'medium',
+    type: 'concept',
+    correct_answer: 'B',
+    is_numerical: false,
+    options: { A: '$t_0 + \\sqrt{t_0^2 + 2H/g}$', B: '$t_0 + \\sqrt{t_0^2 + 2H/g}$', C: '$2t_0$', D: '$t_0 + \\sqrt{2H/g}$' },
+    notes: 'The time to reach maximum height is $t_0 = u/g$. From the maximum height, it falls distance $H + \\frac{u^2}{2g}$.',
+    concept_slugs: ['motion-under-gravity']
+  },
+  {
+    pattern_group: 'gravity',
+    title: 'A juggler throws balls vertically upwards at equal intervals of $1\\,\\text{s}$. If he wants to keep 4 balls in the air simultaneously, the minimum velocity with which he must throw each ball is ($g = 10\\,\\text{m/s}^2$):',
+    difficulty: 'medium',
+    type: 'practice',
+    correct_answer: '20',
+    is_numerical: true,
+    notes: 'For 4 balls to be in the air, the time of flight of each ball must be greater than $4\\,\\text{s}$. So $2u/g > 4$.',
+    concept_slugs: ['motion-under-gravity']
+  },
+  {
+    pattern_group: 'gravity',
+    title: 'A ball $A$ is thrown vertically upwards with speed $u$. Another ball $B$ is thrown vertically downwards from the same height with the same speed $u$. When they hit the ground:',
+    difficulty: 'easy',
+    type: 'practice',
+    correct_answer: 'A',
+    is_numerical: false,
+    options: { A: 'Both hit with same speed', B: '$A$ hits with greater speed', C: '$B$ hits with greater speed', D: 'Cannot be determined' },
+    notes: 'By conservation of energy, both balls will have the same speed when they return/reach the ground level.',
+    concept_slugs: ['motion-under-gravity']
+  },
+  {
+    pattern_group: 'gravity',
+    title: 'A ball is thrown upward with speed $50\\,\\text{m/s}$. The ratio of displacement in the first second to that in the fifth second is ($g = 10\\,\\text{m/s}^2$):',
+    difficulty: 'medium',
+    type: 'practice',
+    correct_answer: '9',
+    is_numerical: true,
+    notes: 'Find displacement from $t=0$ to $t=1$ and from $t=4$ to $t=5$ using $s = ut - \\frac{1}{2}gt^2$.',
+    concept_slugs: ['motion-under-gravity']
+  },
+  {
+    pattern_group: 'gravity',
+    title: 'A lift accelerates upwards at $2\\,\\text{m/s}^2$. A passenger drops a coin from a height of $2\\,\\text{m}$ inside the lift. The time taken by the coin to hit the floor of the lift is ($g = 10\\,\\text{m/s}^2$):',
+    difficulty: 'medium',
+    type: 'advanced',
+    correct_answer: 'B',
+    is_numerical: false,
+    options: { A: '$\\sqrt{1/3}\\,\\text{s}$', B: '$\\sqrt{1/3}\\,\\text{s}$', C: '$\\sqrt{2/3}\\,\\text{s}$', D: '$\\sqrt{2/5}\\,\\text{s}$' },
+    notes: 'Use relative motion or pseudo acceleration: $g_{\\text{eff}} = g + a = 12\\,\\text{m/s}^2$. $h = \\frac{1}{2}g_{\\text{eff}}t^2$.',
+    concept_slugs: ['motion-under-gravity', 'relative-velocity']
+  },
+  {
+    pattern_group: 'gravity',
+    title: 'A passenger in a helicopter rising vertically at speed $10\\,\\text{m/s}$ drops a stone. The acceleration of the stone $1\\,\\text{s}$ after dropping is:',
+    difficulty: 'easy',
+    type: 'advanced',
+    correct_answer: 'D',
+    is_numerical: false,
+    options: { A: '$0$', B: '$10\\,\\text{m/s}^2$ upwards', C: '$20\\,\\text{m/s}^2$ downwards', D: '$10\\,\\text{m/s}^2$ downwards' },
+    notes: 'Once dropped, the only force acting on the stone is gravity. Hence, its acceleration is always $g$ downwards.',
+    concept_slugs: ['motion-under-gravity']
+  },
+
+  // GROUP 4: Graphical Analysis — v-t, x-t, a-t
+  {
+    pattern_group: 'graphs',
+    title: 'The velocity-time graph of a particle is a straight line passing through the origin making an angle of $45^\\circ$ with the time axis. The acceleration of the particle is:',
+    difficulty: 'easy',
+    type: 'pyq',
+    source: 'JEE Main 2021, 18 Mar Shift 1',
+    correct_answer: '1',
+    is_numerical: true,
+    notes: 'Slope of v-t graph represents acceleration. $\\text{Slope} = \\tan 45^\\circ = 1$.',
+    concept_slugs: ['graphical-analysis']
+  },
+  {
+    pattern_group: 'graphs',
+    title: 'A velocity-time graph is a semi-circle of radius $v_0$ starting from $t=0$ to $t=T$. The total displacement in this time is:',
+    difficulty: 'medium',
+    type: 'pyq',
+    source: 'JEE Main 2023, 24 Jan Shift 1',
+    correct_answer: 'B',
+    is_numerical: false,
+    options: { A: '$\\pi v_0^2$', B: '$\\frac{\\pi v_0^2}{2}$', C: '$\\frac{\\pi v_0 T}{4}$', D: '$v_0 T$' },
+    notes: 'Area of semi-circle on v-t graph represents displacement. Area = $\\frac{1}{2}\\pi r^2$.',
+    concept_slugs: ['graphical-analysis']
+  },
+  {
+    pattern_group: 'graphs',
+    title: 'The displacement-time graph of two particles $A$ and $B$ are straight lines making angles of $30^\\circ$ and $60^\\circ$ with the time axis. The ratio of their velocities $v_A / v_B$ is:',
+    difficulty: 'easy',
+    type: 'pyq',
+    source: 'JEE Main 2022, 27 Jun Shift 2',
+    correct_answer: 'A',
+    is_numerical: false,
+    options: { A: '$1 : 3$', B: '$1 : \\sqrt{3}$', C: '$\\sqrt{3} : 1$', D: '$3 : 1$' },
+    notes: 'Slope of x-t graph is velocity. Ratio is $\\tan 30^\\circ / \\tan 60^\\circ = (1/\\sqrt{3}) / \\sqrt{3} = 1/3$.',
+    concept_slugs: ['graphical-analysis']
+  },
+  {
+    pattern_group: 'graphs',
+    title: 'An acceleration-time graph of a particle starting from rest is a triangle with base $T$ and height $a_0$. The maximum velocity attained by the particle is:',
+    difficulty: 'medium',
+    type: 'pyq',
+    source: 'JEE Main 2020, 8 Jan Shift 2',
+    correct_answer: 'A',
+    is_numerical: false,
+    options: { A: '$\\frac{a_0 T}{2}$', B: '$a_0 T$', C: '$\\frac{a_0 T^2}{2}$', D: '$\\frac{a_0^2 T}{2}$' },
+    notes: 'Area under the a-t graph gives the change in velocity. Since it starts from rest, $v_{\\text{max}} = \\text{Area} = \\frac{1}{2} a_0 T$.',
+    concept_slugs: ['graphical-analysis']
+  },
+  {
+    pattern_group: 'graphs',
+    title: 'For a particle executing constant negative acceleration, the position-time ($x-t$) graph is a:',
+    difficulty: 'easy',
+    type: 'concept',
+    correct_answer: 'C',
+    is_numerical: false,
+    options: { A: 'Straight line opening upwards', B: 'Parabola opening upwards', C: 'Parabola opening downwards', D: 'Hyperbola' },
+    notes: 'For constant acceleration, $x = ut + \\frac{1}{2}at^2$. Negative $a$ represents a downward-facing parabola.',
+    concept_slugs: ['graphical-analysis']
+  },
+  {
+    pattern_group: 'graphs',
+    title: 'A particle starts from rest and moves such that its velocity increases linearly with time for $5\\,\\text{s}$ to $10\\,\\text{m/s}$, and then remains constant for $5\\,\\text{s}$. The total distance travelled is:',
+    difficulty: 'easy',
+    type: 'concept',
+    correct_answer: '75',
+    is_numerical: true,
+    notes: 'Draw a v-t graph (trapezoid with base 10, top 5, height 10). Area = $\\frac{1}{2}(10 + 5) \\times 10 = 75\\,\\text{m}$.',
+    concept_slugs: ['graphical-analysis']
+  },
+  {
+    pattern_group: 'graphs',
+    title: 'If the position-time graph of a particle is a curve with decreasing positive slope, the particle is:',
+    difficulty: 'easy',
+    type: 'concept',
+    correct_answer: 'B',
+    is_numerical: false,
+    options: { A: 'Accelerating', B: 'Decelerating', C: 'Moving with constant speed', D: 'At rest' },
+    notes: 'Slope of x-t is velocity. Decreasing slope means decreasing velocity, which is deceleration.',
+    concept_slugs: ['graphical-analysis']
+  },
+  {
+    pattern_group: 'graphs',
+    title: 'An acceleration-time ($a-t$) graph is rectangular from $t=0$ to $t=4\\,\\text{s}$ with height $2\\,\\text{m/s}^2$, and then is negative rectangular with height $-2\\,\\text{m/s}^2$ from $t=4$ to $t=8\\,\\text{s}$. If the particle starts from rest, its velocity at $t=8\\,\\text{s}$ is:',
+    difficulty: 'medium',
+    type: 'practice',
+    correct_answer: '0',
+    is_numerical: true,
+    notes: 'Net area under a-t graph over 8 seconds is $4 \\times 2 + 4 \\times (-2) = 0$. Hence, final velocity is 0.',
+    concept_slugs: ['graphical-analysis']
+  },
+  {
+    pattern_group: 'graphs',
+    title: 'If the velocity-time graph of a particle is $v = t^2 - 4t + 3$. The time at which acceleration becomes zero is:',
+    difficulty: 'medium',
+    type: 'practice',
+    correct_answer: '2',
+    is_numerical: true,
+    notes: 'Acceleration is the derivative of velocity: $a = dv/dt = 2t - 4$. Setting $a=0$ gives $t=2\\,\\text{s}$.',
+    concept_slugs: ['graphical-analysis', 'variable-acceleration']
+  },
+  {
+    pattern_group: 'graphs',
+    title: 'A velocity-time graph is triangular with peak velocity $v_0$ at $T/2$ and base $T$. The average acceleration during the first half is:',
+    difficulty: 'easy',
+    type: 'practice',
+    correct_answer: 'C',
+    is_numerical: false,
+    options: { A: '$\\frac{v_0}{T}$', B: '$\\frac{2v_0}{T^2}$', C: '$\\frac{2v_0}{T}$', D: '$\\frac{v_0}{2T}$' },
+    notes: 'Average acceleration is change in velocity divided by time: $v_0 / (T/2) = 2v_0 / T$.',
+    concept_slugs: ['graphical-analysis']
+  },
+  {
+    pattern_group: 'graphs',
+    title: 'The velocity-time graph of a bouncing ball dropped from height $H$ is plotted. The graph consists of parallel straight lines with slope equal to:',
+    difficulty: 'medium',
+    type: 'advanced',
+    correct_answer: 'B',
+    is_numerical: false,
+    options: { A: '$0$', B: '$-g$', C: '$+g$', D: '$v_0$' },
+    notes: 'During flight, acceleration is always $-g$. The slope of the v-t graph is therefore always constant at $-g$.',
+    concept_slugs: ['graphical-analysis', 'motion-under-gravity']
+  },
+  {
+    pattern_group: 'graphs',
+    title: 'A graph of $v^2$ versus displacement $s$ is a straight line with slope $m$ and intercept $c$. The acceleration of the particle is:',
+    difficulty: 'hard',
+    type: 'advanced',
+    correct_answer: 'A',
+    is_numerical: false,
+    options: { A: '$m/2$', B: '$m$', C: '$2m$', D: '$c/2$' },
+    notes: 'Compare with $v^2 = u^2 + 2as$. The equation is $v^2 = 2as + u^2$, so the slope is $2a$, giving $a = m/2$.',
+    concept_slugs: ['graphical-analysis', 'equations-of-motion']
+  },
+
+  // GROUP 5: Relative Velocity — 1D
+  {
+    pattern_group: 'relative',
+    title: 'A person walks up a stationary escalator in $60\\,\\text{s}$. If he stands on the escalator when it is moving, it carries him up in $40\\,\\text{s}$. The time he would take to walk up the moving escalator is:',
+    difficulty: 'medium',
+    type: 'pyq',
+    source: 'JEE Main 2021, 20 Jul Shift 2',
+    correct_answer: '24',
+    is_numerical: true,
+    notes: 'Velocities add: $v_{\\text{net}} = v_m + v_e$. Since distance is $d$, $1/t_{\\text{net}} = 1/t_m + 1/t_e$.',
+    concept_slugs: ['relative-velocity']
+  },
+  {
+    pattern_group: 'relative',
+    title: 'Two trains $110\\,\\text{m}$ and $90\\,\\text{m}$ long, respectively, are running in opposite directions with velocities $36\\,\\text{km/h}$ and $54\\,\\text{km/h}$. The time taken by them to completely cross each other is:',
+    difficulty: 'easy',
+    type: 'pyq',
+    source: 'JEE Main 2022, 28 Jun Shift 1',
+    correct_answer: '8',
+    is_numerical: true,
+    notes: 'Relative distance to cover is $L_1 + L_2 = 200\\,\\text{m}$. Relative velocity is $10 + 15 = 25\\,\\text{m/s}$. Time = $200 / 25$.',
+    concept_slugs: ['relative-velocity']
+  },
+  {
+    pattern_group: 'relative',
+    title: 'A police jeep is chasing a thief running on a straight road. The jeep moves at a speed of $90\\,\\text{km/h}$ and the thief on a motorcycle is $100\\,\\text{m}$ ahead moving at $72\\,\\text{km/h}$. The time taken by the police to catch the thief is:',
+    difficulty: 'easy',
+    type: 'pyq',
+    source: 'JEE Main 2019, 12 Jan Shift 2',
+    correct_answer: '20',
+    is_numerical: true,
+    notes: 'Relative velocity is $25 - 20 = 5\\,\\text{m/s}$. Relative distance is $100\\,\\text{m}$. Time = $100 / 5$.',
+    concept_slugs: ['relative-velocity']
+  },
+  {
+    pattern_group: 'relative',
+    title: 'On a moving walkway of length $120\\,\\text{m}$ moving at $1.5\\,\\text{m/s}$, a passenger walks at $2\\,\\text{m/s}$ relative to the walkway in the direction of motion. The time taken to traverse the walkway is:',
+    difficulty: 'easy',
+    type: 'concept',
+    correct_answer: 'B',
+    is_numerical: false,
+    options: { A: '80 s', B: '34 s', C: '60 s', D: '40 s' },
+    notes: 'Net speed is $2 + 1.5 = 3.5\\,\\text{m/s}$. Time = $120 / 3.5 \\approx 34.3\\,\\text{s}$.',
+    concept_slugs: ['relative-velocity']
+  },
+  {
+    pattern_group: 'relative',
+    title: 'Two particles $A$ and $B$ are separated by a distance of $15\\,\\text{m}$ along a line. They start moving towards each other with velocities $2\\,\\text{m/s}$ and $3\\,\\text{m/s}$ and accelerations $1\\,\\text{m/s}^2$ and $2\\,\\text{m/s}^2$ respectively. The time of collision is:',
+    difficulty: 'medium',
+    type: 'concept',
+    correct_answer: '2',
+    is_numerical: true,
+    notes: 'Relative initial velocity $u_{\\text{rel}} = 5\\,\\text{m/s}$, relative acceleration $a_{\\text{rel}} = 3\\,\\text{m/s}^2$. Solve $15 = 5t + 1.5t^2$.',
+    concept_slugs: ['relative-velocity', 'equations-of-motion']
+  },
+  {
+    pattern_group: 'relative',
+    title: 'A bus moves at $10\\,\\text{m/s}$ on a straight road. A cyclist wishes to overtake the bus in $100\\,\\text{s}$. If the cyclist is at a distance of $1\\,\\text{km}$ from the bus, with what speed should he chase the bus?',
+    difficulty: 'medium',
+    type: 'practice',
+    correct_answer: '20',
+    is_numerical: true,
+    notes: 'Relative velocity must be $\\text{Distance}/\\text{Time} = 1000/100 = 10\\,\\text{m/s}$. Cyclist speed = $10 + 10 = 20\\,\\text{m/s}$.',
+    concept_slugs: ['relative-velocity']
+  },
+  {
+    pattern_group: 'relative',
+    title: 'Two cars $A$ and $B$ are moving in the same direction with speeds $30\\,\\text{m/s}$ and $20\\,\\text{m/s}$ respectively. The driver of car $A$ applies brakes to avoid collision when he is $100\\,\\text{m}$ behind $B$. The minimum retardation of car $A$ to avoid collision is:',
+    difficulty: 'hard',
+    type: 'practice',
+    correct_answer: 'A',
+    is_numerical: false,
+    options: { A: '$0.5\\,\\text{m/s}^2$', B: '$1.0\\,\\text{m/s}^2$', C: '$1.5\\,\\text{m/s}^2$', D: '$2.0\\,\\text{m/s}^2$' },
+    notes: 'Relative velocity is $10\\,\\text{m/s}$, relative distance is $100\\,\\text{m}$. Set relative final velocity to 0: $0 = 10^2 - 2a_{\\text{rel}}(100)$.',
+    concept_slugs: ['relative-velocity', 'equations-of-motion']
+  },
+  {
+    pattern_group: 'relative',
+    title: 'Three points $A$, $B$, and $C$ are at the vertices of an equilateral triangle of side $L$. They start moving with constant speed $v$ such that $A$ always heads towards $B$, $B$ towards $C$, and $C$ towards $A$. The time when they meet is:',
+    difficulty: 'hard',
+    type: 'advanced',
+    correct_answer: 'B',
+    is_numerical: false,
+    options: { A: '$\\frac{L}{v}$', B: '$\\frac{2L}{3v}$', C: '$\\frac{L}{2v}$', D: '$\\frac{3L}{2v}$' },
+    notes: 'The component of velocity of $A$ along $AB$ is $v - v\\cos 60^\\circ = 1.5v$. Time is $L / 1.5v = 2L / 3v$.',
+    concept_slugs: ['relative-velocity']
+  },
+  {
+    pattern_group: 'relative',
+    title: 'Two ships $A$ and $B$ are $10\\,\\text{km}$ apart on a line running south to north. Ship $A$ farther north is streaming west at $20\\,\\text{km/h}$ and ship $B$ is streaming north at $20\\,\\text{km/h}$. The shortest distance between them is:',
+    difficulty: 'hard',
+    type: 'advanced',
+    correct_answer: 'D',
+    is_numerical: false,
+    options: { A: '$5\\,\\text{km}$', B: '$10\\,\\sqrt{2}\\,\\text{km}$', C: '$10\\,\\text{km}$', D: '$5\\,\\sqrt{2}\\,\\text{km}$' },
+    notes: 'Write the position vectors as functions of time, find relative distance squared, and minimize it.',
+    concept_slugs: ['relative-velocity']
+  },
+
+  // GROUP 6: Relative Velocity — Rain-Man / River-Boat
+  {
+    pattern_group: 'relative',
+    title: 'A man standing on a road has to hold his umbrella at $30^\\circ$ with the vertical to keep the rain away. He throws the umbrella and starts running at $10\\,\\text{km/h}$. He finds that rain drops are hitting his head vertically. The actual speed of rain drops is:',
+    difficulty: 'medium',
+    type: 'pyq',
+    source: 'JEE Main 2021, 16 Mar Shift 1',
+    correct_answer: '20',
+    is_numerical: true,
+    notes: 'Set up velocity vector triangle: $\\sin 30^\\circ = v_m / v_r \\implies 0.5 = 10 / v_r$.',
+    concept_slugs: ['relative-velocity']
+  },
+  {
+    pattern_group: 'relative',
+    title: 'A boat moves with a speed of $5\\,\\text{km/h}$ relative to water in a river of width $1\\,\\text{km}$ flowing at $3\\,\\text{km/h}$. The minimum time taken by the boat to cross the river is:',
+    difficulty: 'easy',
+    type: 'pyq',
+    source: 'JEE Main 2022, 29 Jun Shift 2',
+    correct_answer: '12',
+    is_numerical: true,
+    notes: 'For minimum time, the boat must steer perpendicular to the bank. $t_{\\text{min}} = d / v_b = 1\\,\\text{km} / 5\\,\\text{km/h} = 0.2\\,\\text{h} = 12\\,\\text{min}$.',
+    concept_slugs: ['relative-velocity']
+  },
+  {
+    pattern_group: 'relative',
+    title: 'A boat crosses a river of width $400\\,\\text{m}$ flowing at $2\\,\\text{m/s}$ with speed $4\\,\\text{m/s}$ relative to water. If it wants to reach the point directly opposite to its starting point, the drift of the boat is:',
+    difficulty: 'medium',
+    type: 'pyq',
+    source: 'JEE Main 2023, 11 Apr Shift 2',
+    correct_answer: '0',
+    is_numerical: true,
+    notes: 'Since it reaches the point directly opposite, the drift is zero.',
+    concept_slugs: ['relative-velocity']
+  },
+  {
+    pattern_group: 'relative',
+    title: 'To cross a river of width $W$ flowing at velocity $v_r$ in the shortest path, a swimmer who can swim at speed $v_s$ ($v_s > v_r$) relative to water must steer at an angle $\\theta$ upstream. The value of $\\sin\\theta$ is:',
+    difficulty: 'easy',
+    type: 'concept',
+    correct_answer: 'B',
+    is_numerical: false,
+    options: { A: '$v_s / v_r$', B: '$v_r / v_s$', C: '$\\sqrt{v_s^2 - v_r^2}/v_s$', D: '$1$' },
+    notes: 'The component of velocity upstream must balance the river velocity: $v_s \\sin\\theta = v_r$.',
+    concept_slugs: ['relative-velocity']
+  },
+  {
+    pattern_group: 'relative',
+    title: 'Rain is falling vertically with velocity $30\\,\\text{m/s}$. A man starts riding a bicycle with speed $10\\,\\text{m/s}$ in the north to south direction. The angle at which he must hold his umbrella with the vertical is:',
+    difficulty: 'easy',
+    type: 'concept',
+    correct_answer: 'A',
+    is_numerical: false,
+    options: { A: '$\\tan^{-1}(1/3)$', B: '$\\tan^{-1}(3)$', C: '$\\sin^{-1}(1/3)$', D: '$\\cos^{-1}(1/3)$' },
+    notes: 'The relative velocity of rain with respect to the man is $v_{rm} = v_r - v_m$. $\\tan\\theta = v_m/v_r = 10/30$.',
+    concept_slugs: ['relative-velocity']
+  },
+  {
+    pattern_group: 'relative',
+    title: 'A swimmer crosses a $200\\,\\text{m}$ wide river flowing at $3\\,\\text{m/s}$. His swimming speed is $5\\,\\text{m/s}$ at an angle of $127^\\circ$ with the downstream direction. The drift of the swimmer is:',
+    difficulty: 'medium',
+    type: 'practice',
+    correct_answer: '0',
+    is_numerical: true,
+    notes: 'Angle with normal is $37^\\circ$. Component along flow is $3 - 5\\sin 37^\\circ = 3 - 3 = 0$. Hence drift is 0.',
+    concept_slugs: ['relative-velocity']
+  },
+  {
+    pattern_group: 'relative',
+    title: 'A man running on a horizontal road at $8\\,\\text{m/s}$ finds that rain hits him vertically. When he increases his speed to $12\\,\\text{m/s}$, the rain hits him at $30^\\circ$ with the vertical. The actual velocity of the rain is:',
+    difficulty: 'hard',
+    type: 'practice',
+    correct_answer: 'D',
+    is_numerical: false,
+    options: { A: '$8\\,\\text{m/s}$', B: '$12\\,\\text{m/s}$', C: '$8\\sqrt{3}\\,\\text{m/s}$', D: '$4\\sqrt{7}\\,\\text{m/s}$' },
+    notes: 'Solve for horizontal and vertical components of rain velocity from the vector diagrams.',
+    concept_slugs: ['relative-velocity']
+  },
+  {
+    pattern_group: 'relative',
+    title: 'A river of width $500\\,\\text{m}$ flows at speed $5\\,\\text{m/s}$. A swimmer who can swim at $3\\,\\text{m/s}$ in still water wants to cross the river. The minimum possible drift he can achieve is:',
+    difficulty: 'hard',
+    type: 'practice',
+    correct_answer: 'A',
+    is_numerical: false,
+    options: { A: '$\\frac{2000}{3}\\,\\text{m}$', B: '$400\\,\\text{m}$', C: '$\\frac{4000}{3}\\,\\text{m}$', D: '$500\\,\\text{m}$' },
+    notes: 'Since $v_s < v_r$, zero drift is impossible. To minimize drift, steer such that $\\cos\\theta = v_s/v_r = 3/5$.',
+    concept_slugs: ['relative-velocity']
+  },
+  {
+    pattern_group: 'relative',
+    title: 'A river flow velocity increases linearly from zero at the banks to $v_0$ at the center. A boat crosses the river by steering perpendicular to the banks with constant speed $u$. The total drift is:',
+    difficulty: 'hard',
+    type: 'advanced',
+    correct_answer: 'B',
+    is_numerical: false,
+    options: { A: '$\\frac{v_0 W}{u}$', B: '$\\frac{v_0 W}{2u}$', C: '$\\frac{2v_0 W}{3u}$', D: '$\\frac{v_0 W}{3u}$' },
+    notes: 'Integrate the horizontal drift velocity $v_x(y)$ across the width of the river.',
+    concept_slugs: ['relative-velocity', 'variable-acceleration']
+  },
+  {
+    pattern_group: 'relative',
+    title: 'A man holding a flag runs at velocity $v_m$. The wind blows at velocity $v_w$. The flag will flutter in the direction of:',
+    difficulty: 'easy',
+    type: 'advanced',
+    correct_answer: 'C',
+    is_numerical: false,
+    options: { A: '$v_w$', B: '$v_m - v_w$', C: '$v_w - v_m$', D: '$v_m + v_w$' },
+    notes: 'The flag flutters in the direction of the wind velocity relative to the man: $v_{\\text{flag}} = v_w - v_m$.',
+    concept_slugs: ['relative-velocity']
+  },
+
+  // GROUP 7: Projectile Motion — Basic Range/Height/Time
+  {
+    pattern_group: 'projectile',
+    title: 'Two projectiles $A$ and $B$ are projected with same speed at angles of $15^\\circ$ and $75^\\circ$ with the horizontal. The ratio of their horizontal ranges is:',
+    difficulty: 'easy',
+    type: 'pyq',
+    source: 'JEE Main 2021, 25 Jul Shift 1',
+    correct_answer: 'B',
+    is_numerical: false,
+    options: { A: '$1 : 3$', B: '$1 : 1$', C: '$\\sqrt{3} : 1$', D: '$1 : \\sqrt{3}$' },
+    notes: 'Complementary angles of projection ($15^\\circ$ and $75^\\circ$) yield the same horizontal range.',
+    concept_slugs: ['projectile-motion']
+  },
+  {
+    pattern_group: 'projectile',
+    title: 'The horizontal range of a projectile is $4\\sqrt{3}$ times its maximum height. The angle of projection is:',
+    difficulty: 'easy',
+    type: 'pyq',
+    source: 'JEE Main 2022, 26 Jul Shift 1',
+    correct_answer: '30',
+    is_numerical: true,
+    notes: 'Use relation $\\tan\\theta = 4H/R$. Since $R = 4\\sqrt{3}H$, $\\tan\\theta = 4H / (4\\sqrt{3}H) = 1/\\sqrt{3}$.',
+    concept_slugs: ['projectile-motion']
+  },
+  {
+    pattern_group: 'projectile',
+    title: 'A projectile is thrown with velocity $v = (3\\hat{i} + 4\\hat{j})\\,\\text{m/s}$. The horizontal range of the projectile is ($g = 10\\,\\text{m/s}^2$):',
+    difficulty: 'easy',
+    type: 'pyq',
+    source: 'JEE Main 2020, 3 Sep Shift 2',
+    correct_answer: 'B',
+    is_numerical: false,
+    options: { A: '$1.2\\,\\text{m}$', B: '$2.4\\,\\text{m}$', C: '$3.6\\,\\text{m}$', D: '$4.8\\,\\text{m}$' },
+    notes: 'Use $R = 2u_x u_y / g = 2(3)(4) / 10 = 2.4\\,\\text{m}$.',
+    concept_slugs: ['projectile-motion']
+  },
+  {
+    pattern_group: 'projectile',
+    title: 'The speed of a projectile at its maximum height is $\\frac{\\sqrt{3}}{2}$ of its initial speed $u$. The horizontal range of the projectile is:',
+    difficulty: 'medium',
+    type: 'pyq',
+    source: 'JEE Main 2023, 29 Jan Shift 1',
+    correct_answer: 'C',
+    is_numerical: false,
+    options: { A: '$\\frac{u^2}{2g}$', B: '$\\frac{u^2}{g}$', C: '$\\frac{\\sqrt{3}u^2}{2g}$', D: '$\\frac{2u^2}{g}$' },
+    notes: 'At maximum height, velocity is $u\\cos\\theta$. So $\\cos\\theta = \\sqrt{3}/2 \\implies \\theta = 30^\\circ$.',
+    concept_slugs: ['projectile-motion']
+  },
+  {
+    pattern_group: 'projectile',
+    title: 'A projectile has time of flight $T$ and horizontal range $R$. The angle of projection is:',
+    difficulty: 'easy',
+    type: 'concept',
+    correct_answer: 'A',
+    is_numerical: false,
+    options: { A: '$\\tan^{-1}(gT^2 / 2R)$', B: '$\\tan^{-1}(gT^2 / R)$', C: '$\\tan^{-1}(2R / gT^2)$', D: '$\\tan^{-1}(R / gT^2)$' },
+    notes: 'Express $T$ and $R$ in terms of $u$ and $\\theta$, then divide $gT^2$ by $2R$ to get $\\tan\\theta$.',
+    concept_slugs: ['projectile-motion']
+  },
+  {
+    pattern_group: 'projectile',
+    title: 'A particle is projected from the ground with speed $20\\,\\text{m/s}$ at an angle of $45^\\circ$ with the horizontal. The time at which its velocity becomes perpendicular to its initial velocity is:',
+    difficulty: 'hard',
+    type: 'concept',
+    correct_answer: 'B',
+    is_numerical: false,
+    options: { A: '$2\\,\\text{s}$', B: '$2\\sqrt{2}\\,\\text{s}$', C: '$\\sqrt{2}\\,\\text{s}$', D: 'Never' },
+    notes: 'Condition: $v \\cdot u = 0$. Solve using vector representations.',
+    concept_slugs: ['projectile-motion']
+  },
+  {
+    pattern_group: 'projectile',
+    title: 'A projectile is fired at speed $u$ at angle $\\theta$ with horizontal. The change in velocity vector between projection and landing is:',
+    difficulty: 'easy',
+    type: 'concept',
+    correct_answer: 'A',
+    is_numerical: false,
+    options: { A: '$-2u\\sin\\theta\\hat{j}$', B: '$2u\\cos\\theta\\hat{i}$', C: '$-2u\\cos\\theta\\hat{j}$', D: '$0$' },
+    notes: 'Horizontal velocity is constant. Vertical velocity changes from $+u\\sin\\theta\\hat{j}$ to $-u\\sin\\theta\\hat{j}$.',
+    concept_slugs: ['projectile-motion']
+  },
+  {
+    pattern_group: 'projectile',
+    title: 'A ball is thrown from a point at a height of $20\\,\\text{m}$ above the ground with speed $10\\,\\text{m/s}$ horizontally. The horizontal distance it travels before hitting the ground is ($g = 10\\,\\text{m/s}^2$):',
+    difficulty: 'easy',
+    type: 'practice',
+    correct_answer: '20',
+    is_numerical: true,
+    notes: 'Horizontal projectile: $t = \\sqrt{2H/g} = 2\\,\\text{s}$. Range = $u_x \\times t = 10 \\times 2 = 20\\,\\text{m}$.',
+    concept_slugs: ['projectile-motion']
+  },
+  {
+    pattern_group: 'projectile',
+    title: 'The range of a projectile when fired at an angle of $15^\\circ$ is $50\\,\\text{m}$. What will be its range when fired at $45^\\circ$ with the same speed?',
+    difficulty: 'easy',
+    type: 'practice',
+    correct_answer: '100',
+    is_numerical: true,
+    notes: 'Range is proportional to $\\sin 2\\theta$. Ratio is $\\sin 90^\\circ / \\sin 30^\\circ = 1 / 0.5 = 2$. New range = $100\\,\\text{m}$.',
+    concept_slugs: ['projectile-motion']
+  },
+  {
+    pattern_group: 'projectile',
+    title: 'For a projectile, the ratio of maximum height to square of time of flight $H/T^2$ is constant. The value of this constant is ($g = 10\\,\\text{m/s}^2$):',
+    difficulty: 'medium',
+    type: 'practice',
+    correct_answer: 'B',
+    is_numerical: false,
+    options: { A: '$5/4$', B: '$5/8$', C: '$5/2$', D: '$5/16$' },
+    notes: 'Substitute $H = u^2\\sin^2\\theta / 2g$ and $T = 2u\\sin\\theta / g$. $H/T^2 = g/8 = 10/8 = 5/8$.',
+    concept_slugs: ['projectile-motion']
+  },
+  {
+    pattern_group: 'projectile',
+    title: 'A projectile is fired up an inclined plane of slope $30^\\circ$ at angle $60^\\circ$ with the horizontal. g = 10. The time of flight of the projectile is:',
+    difficulty: 'hard',
+    type: 'advanced',
+    correct_answer: 'B',
+    is_numerical: false,
+    options: { A: '$1\\,\\text{s}$', B: '$2/\\sqrt{3}\\,\\text{s}$', C: '$\\sqrt{3}\\,\\text{s}$', D: '$2\\,\\text{s}$' },
+    notes: 'Set coordinate axes along and perpendicular to the incline. $T = 2u\\sin(\\theta - \\alpha) / g\\cos\\alpha$.',
+    concept_slugs: ['projectile-motion', 'projectile-on-incline']
+  },
+  {
+    pattern_group: 'projectile',
+    title: 'A ball is projected with speed $u$ at angle $\\theta$ from the edge of a cliff of height $H$. The angle at which it hits the ground is:',
+    difficulty: 'hard',
+    type: 'advanced',
+    correct_answer: 'D',
+    is_numerical: false,
+    options: { A: '$\\theta$', B: '$\\cos^{-1}(\\frac{u\\cos\\theta}{\\sqrt{u^2+2gH}})$', C: '$\\tan^{-1}(\\frac{u\\sin\\theta}{\\sqrt{u^2+2gH}})$', D: '$\\tan^{-1}(\\frac{\\sqrt{u^2\\sin^2\\theta+2gH}}{u\\cos\\theta})$' },
+    notes: 'Find the final vertical velocity component $v_y = \\sqrt{u^2\\sin^2\\theta + 2gH}$, horizontal is $u\\cos\\theta$. $\\tan\\phi = v_y/v_x$.',
+    concept_slugs: ['projectile-motion']
+  },
+
+  // GROUP 8: Two Projectiles / Collision
+  {
+    pattern_group: 'projectile',
+    title: 'Two projectiles are projected from the same point with velocities $u_1$ and $u_2$ at angles $\\theta_1$ and $\\theta_2$ respectively. The condition for them to collide in air is:',
+    difficulty: 'medium',
+    type: 'pyq',
+    source: 'JEE Main 2021, 31 Aug Shift 1',
+    correct_answer: 'A',
+    is_numerical: false,
+    options: { A: '$u_1 \\cos\\theta_1 = u_2 \\cos\\theta_2$', B: '$u_1 \\sin\\theta_1 = u_2 \\sin\\theta_2$', C: '$u_1 \\tan\\theta_1 = u_2 \\tan\\theta_2$', D: 'They can never collide' },
+    notes: 'If launched from the same horizontal point at different times or if they are to meet, their horizontal velocity component must match or relate relative positions.',
+    concept_slugs: ['projectile-motion', 'relative-velocity']
+  },
+  {
+    pattern_group: 'projectile',
+    title: 'Two particles $A$ and $B$ are projected simultaneously from two towers of heights $H_1$ and $H_2$ respectively, with horizontal velocities $u_1$ and $u_2$ towards each other. The condition for them to collide is:',
+    difficulty: 'hard',
+    type: 'pyq',
+    source: 'JEE Main 2023, 15 Apr Shift 1',
+    correct_answer: 'B',
+    is_numerical: false,
+    options: { A: '$H_1 + H_2 = \\text{constant}$', B: '$H_1 = H_2$', C: '$H_1 - H_2 = \\text{constant}$', D: 'They collide only if speeds are equal' },
+    notes: 'Relative acceleration along vertical is zero (both have acceleration $g$). Vertical collision requires $H_1 = H_2$ if horizontal projections.',
+    concept_slugs: ['projectile-motion', 'relative-velocity']
+  },
+  {
+    pattern_group: 'projectile',
+    title: 'Two projectiles are fired at the same instant from two points separated by a distance $D$ on the ground. They are projected towards each other at angles $45^\circ$ and $45^\circ$ with speeds $v$ and $v$. The time of collision is:',
+    difficulty: 'medium',
+    type: 'pyq',
+    source: 'JEE Main 2020, 6 Sep Shift 1',
+    correct_answer: 'C',
+    is_numerical: false,
+    options: { A: '$D/v$', B: '$D/\\sqrt{2}v$', C: '$D/\\sqrt{2}v$', D: '$\\sqrt{2}D/v$' },
+    notes: 'Horizontal relative velocity is $v\\cos 45^\circ + v\\cos 45^\circ = \\sqrt{2}v$. Time = $D / \\sqrt{2}v$.',
+    concept_slugs: ['projectile-motion', 'relative-velocity']
+  },
+  {
+    pattern_group: 'projectile',
+    title: 'Two particles are projected simultaneously from a point on the ground with velocities $10\\,\\text{m/s}$ and $20\\,\\text{m/s}$ at angles $30^\circ$ and $60^\circ$ respectively. The relative acceleration of the second particle with respect to the first particle is:',
+    difficulty: 'easy',
+    type: 'concept',
+    correct_answer: '0',
+    is_numerical: true,
+    notes: 'Both projectiles are in free fall, so their accelerations are both $g$ downwards. Relative acceleration is zero.',
+    concept_slugs: ['projectile-motion', 'relative-velocity']
+  },
+  {
+    pattern_group: 'projectile',
+    title: 'Two projectiles are launched from different points with relative initial velocity vector $v_{\\text{rel}}$ and relative position vector $r_{\\text{rel}}$. The condition for collision in terms of these vectors is that:',
+    difficulty: 'hard',
+    type: 'concept',
+    correct_answer: 'A',
+    is_numerical: false,
+    options: { A: '$v_{\\text{rel}} \\times r_{\\text{rel}} = 0$', B: '$v_{\\text{rel}} \\cdot r_{\\text{rel}} = 0$', C: '$v_{\\text{rel}} \\times r_{\\text{rel}} \\neq 0$', D: '$v_{\\text{rel}} \\cdot r_{\\text{rel}} > 0$' },
+    notes: 'For collision, the relative velocity vector must point directly along the relative position vector. Hence their cross product is 0.',
+    concept_slugs: ['projectile-motion', 'relative-velocity']
+  },
+  {
+    pattern_group: 'projectile',
+    title: 'Two balls are projected from the same point at angles $30^\circ$ and $60^\circ$ with the same initial speed $20\\,\\text{m/s}$. The separation between them after $1\\,\\text{s}$ is ($g=10\\,\\text{m/s}^2$):',
+    difficulty: 'medium',
+    type: 'practice',
+    correct_answer: 'A',
+    is_numerical: false,
+    options: { A: '$10(\\sqrt{3}-1)\\,\\text{m}$', B: '$10\\,\\text{m}$', C: '$5(\\sqrt{3}-1)\\,\\text{m}$', D: '$20\\,\\text{m}$' },
+    notes: 'Write the relative position vector at $t=1$. $\\vec{r}_{\\text{rel}} = \\vec{v}_{\\text{rel}} \\times 1$.',
+    concept_slugs: ['projectile-motion', 'relative-velocity']
+  },
+  {
+    pattern_group: 'projectile',
+    title: 'A target is held at a height of $20\\,\\text{m}$ and a horizontal distance of $40\\,\\text{m}$ from a launcher. A projectile is fired at speed $50\\,\\text{m/s}$ to hit it. The angle of projection must be:',
+    difficulty: 'medium',
+    type: 'practice',
+    correct_answer: 'B',
+    is_numerical: false,
+    options: { A: '$37^\circ$', B: '$45^\circ$', C: '$53^\circ$', D: '$60^\circ$' },
+    notes: 'Use equation of trajectory: $y = x\\tan\\theta - \\frac{gx^2}{2u^2\\cos^2\\theta}$. Solve for $\\theta$.',
+    concept_slugs: ['projectile-motion']
+  },
+  {
+    pattern_group: 'projectile',
+    title: 'A projectile is fired horizontally with speed $v_0$ from the top of an inclined plane of slope $\\beta$. The range of the projectile along the inclined plane is:',
+    difficulty: 'hard',
+    type: 'advanced',
+    correct_answer: 'C',
+    is_numerical: false,
+    options: { A: '$\\frac{2v_0^2\\tan\\beta}{g}$', B: '$\\frac{2v_0^2\\sec\\beta}{g}$', C: '$\\frac{2v_0^2\\tan\\beta\\sec\\beta}{g}$', D: '$\\frac{v_0^2\\sin 2\\beta}{g}$' },
+    notes: 'Find the intersection of the trajectory parabola $y = -gx^2 / 2v_0^2$ and the incline line $y = -x\\tan\\beta$.',
+    concept_slugs: ['projectile-motion', 'projectile-on-incline']
+  },
+  {
+    pattern_group: 'projectile',
+    title: 'Two particles are projected from the same point at the same time. One is projected horizontally with speed $10\\,\\text{m/s}$ and the other at $30^\circ$ above the horizontal with speed $20\\,\\text{m/s}$. The distance between them after $2\\,\\text{s}$ is:',
+    difficulty: 'hard',
+    type: 'advanced',
+    correct_answer: 'D',
+    is_numerical: false,
+    options: { A: '$20\\,\\text{m}$', B: '$30\\,\\text{m}$', C: '$40\\,\\text{m}$', D: '$20\\sqrt{5-2\\sqrt{3}}\\,\\text{m}$' },
+    notes: 'Use vector subtraction of position vectors. $\\vec{r}_{\\text{rel}} = \\vec{v}_{\\text{rel}} \\times 2$. Find its magnitude.',
+    concept_slugs: ['projectile-motion', 'relative-velocity']
+  },
+
+  // GROUP 9: Projectile on Inclined Plane
+  {
+    pattern_group: 'projectile-incline',
+    title: 'A projectile is thrown up an inclined plane of slope $30^\circ$ with an initial velocity of $20\\,\\text{m/s}$ at an angle of $30^\circ$ relative to the incline. The range of the projectile along the incline is ($g = 10\\,\\text{m/s}^2$):',
+    difficulty: 'hard',
+    type: 'pyq',
+    source: 'JEE Main 2022, 28 Jul Shift 2',
+    correct_answer: 'B',
+    is_numerical: false,
+    options: { A: '$20\\,\\text{m}$', B: '$\\frac{80}{3}\\,\\text{m}$', C: '$40\\,\\text{m}$', D: '$\\frac{40}{3}\\,\\text{m}$' },
+    notes: 'Use the formula $R = \\frac{2u^2\\sin\\theta\\cos(\\theta+\\alpha)}{g\\cos^2\\alpha}$ where $\\alpha=30^\circ$ and $\\theta=30^\circ$.',
+    concept_slugs: ['projectile-on-incline']
+  },
+  {
+    pattern_group: 'projectile-incline',
+    title: 'A particle is projected down an inclined plane of slope $30^\circ$ with speed $10\\,\\text{m/s}$ perpendicular to the incline. The time of flight of the particle is ($g = 10\\,\\text{m/s}^2$):',
+    difficulty: 'medium',
+    type: 'pyq',
+    source: 'JEE Main 2023, 12 Apr Shift 2',
+    correct_answer: 'B',
+    is_numerical: false,
+    options: { A: '$1\\,\\text{s}$', B: '$\\frac{4}{\\sqrt{3}}\\,\\text{s}$', C: '$2\\,\\text{s}$', D: '$\\frac{2}{\\sqrt{3}}\\,\\text{s}$' },
+    notes: 'Perpendicular component of acceleration is $g\\cos 30^\circ = 5\\sqrt{3}\\,\\text{m/s}^2$. $T = 2u_{\\perp} / a_{\\perp} = 2(10)/5\\sqrt{3}$.',
+    concept_slugs: ['projectile-on-incline']
+  },
+  {
+    pattern_group: 'projectile-incline',
+    title: 'For a projectile fired up an inclined plane of slope $\\alpha$, the angle of projection $\\theta$ (relative to horizontal) for maximum range along the incline is:',
+    difficulty: 'hard',
+    type: 'concept',
+    correct_answer: 'A',
+    is_numerical: false,
+    options: { A: '$\\frac{\\pi}{4} + \\frac{\\alpha}{2}$', B: '$\\frac{\\pi}{4} - \\frac{\\alpha}{2}$', C: '$\\frac{\\pi}{2} + \\alpha$', D: '$\\frac{\\pi}{4}$' },
+    notes: 'Differentiate the range expression with respect to projection angle to maximize.',
+    concept_slugs: ['projectile-on-incline']
+  },
+  {
+    pattern_group: 'projectile-incline',
+    title: 'A projectile is fired perpendicular to an inclined plane of slope $\\alpha$. The angle with the horizontal at which it was fired is:',
+    difficulty: 'medium',
+    type: 'concept',
+    correct_answer: 'B',
+    is_numerical: false,
+    options: { A: '$\\alpha$', B: '$90^\circ - \\alpha$', C: '$90^\circ + \\alpha$', D: '$2\\alpha$' },
+    notes: 'The angle of projection relative to horizontal is the angle of the incline plus $90^\circ$, or related vector directions.',
+    concept_slugs: ['projectile-on-incline']
+  },
+  {
+    pattern_group: 'projectile-incline',
+    title: 'A projectile is thrown up an incline of slope $30^\circ$ with speed $10\\,\\text{m/s}$ at an angle of $45^\circ$ with the horizontal. The range along the incline is ($g=10\\,\\text{m/s}^2$):',
+    difficulty: 'hard',
+    type: 'practice',
+    correct_answer: 'A',
+    is_numerical: false,
+    options: { A: '$\\frac{20(\\sqrt{6}-3)}{3}\\,\\text{m}$', B: '$5\\,\\text{m}$', C: '$10\\,\\text{m}$', D: '$15\\,\\text{m}$' },
+    notes: 'Apply $R = \\frac{2u^2\\sin(\\theta-\\alpha)\\cos\\theta}{g\\cos^2\\alpha}$ where $\\alpha=30^\circ$, $\\theta=45^\circ$.',
+    concept_slugs: ['projectile-on-incline']
+  },
+  {
+    pattern_group: 'projectile-incline',
+    title: 'A ball is projected horizontally from the top of an inclined plane of slope $45^\circ$. It strikes the incline. The ratio of final vertical velocity to initial horizontal velocity is:',
+    difficulty: 'medium',
+    type: 'practice',
+    correct_answer: '2',
+    is_numerical: true,
+    notes: 'Trapping condition: $x = -y \\implies v_0 t = \\frac{1}{2}gt^2 \\implies t = 2v_0/g$. $v_y = gt = 2v_0$. Ratio = 2.',
+    concept_slugs: ['projectile-on-incline']
+  },
+  {
+    pattern_group: 'projectile-incline',
+    title: 'A ball bouncing elastically down an inclined plane of slope $\\alpha$ is dropped from height $H$ above the top of the incline. The distance between the first two bounces is:',
+    difficulty: 'hard',
+    type: 'advanced',
+    correct_answer: 'B',
+    is_numerical: false,
+    options: { A: '$4H\\sin\\alpha$', B: '$8H\\sin\\alpha$', C: '$8H\\cos\\alpha$', D: '$2H\\sin\\alpha$' },
+    notes: 'Find the time of flight between bounces and integrate/apply coordinate kinematics along the incline.',
+    concept_slugs: ['projectile-on-incline']
+  },
+  {
+    pattern_group: 'projectile-incline',
+    title: 'The maximum range of a projectile along an inclined plane of slope $30^\circ$ is $R_{\\text{max}}$. If the same projectile is fired with same speed on a horizontal plane, the maximum range is:',
+    difficulty: 'hard',
+    type: 'advanced',
+    correct_answer: 'C',
+    is_numerical: false,
+    options: { A: '$R_{\\text{max}}$', B: '$2R_{\\text{max}}$', C: '$\\frac{3}{2}R_{\\text{max}}$', D: '$\\frac{2}{3}R_{\\text{max}}$' },
+    notes: 'Compare maximum range equations: $R_{\\text{max-incline}} = \\frac{u^2}{g(1+\\sin\\alpha)}$ and $R_{\\text{max-horizontal}} = \\frac{u^2}{g}$.',
+    concept_slugs: ['projectile-on-incline']
+  },
+
+  // GROUP 10: Uniform Circular Motion
+  {
+    pattern_group: 'circular',
+    title: 'A particle moves in a circle of radius $2\\,\\text{m}$ with a constant speed of $10\\,\\text{m/s}$. The centripetal acceleration of the particle is:',
+    difficulty: 'easy',
+    type: 'pyq',
+    source: 'JEE Main 2021, 27 Aug Shift 1',
+    correct_answer: '50',
+    is_numerical: true,
+    notes: 'Apply centripetal acceleration formula: $a_c = v^2/r = 10^2 / 2 = 50\\,\\text{m/s}^2$.',
+    concept_slugs: ['uniform-circular-motion']
+  },
+  {
+    pattern_group: 'circular',
+    title: 'A car on a circular track of radius $100\\,\\text{m}$ increases its speed at a constant rate of $2\\,\\text{m/s}^2$. If it starts from rest, the total acceleration of the car at $t = 10\\,\\text{s}$ is:',
+    difficulty: 'medium',
+    type: 'pyq',
+    source: 'JEE Main 2023, 25 Jan Shift 1',
+    correct_answer: 'A',
+    is_numerical: false,
+    options: { A: '$2\\sqrt{2}\\,\\text{m/s}^2$', B: '$2\\,\\text{m/s}^2$', C: '$4\\,\\text{m/s}^2$', D: '$0$' },
+    notes: 'Speed at $t=10$ is $v = at = 20\\,\\text{m/s}$. Centripetal $a_c = v^2/r = 400/100 = 4\\,\\text{m/s}^2$. Total $a = \\sqrt{a_t^2 + a_c^2}$.',
+    concept_slugs: ['uniform-circular-motion']
+  },
+  {
+    pattern_group: 'circular',
+    title: 'A particle is moving in a circular path of radius $R$ with constant angular speed $\\omega$. The magnitude of displacement of the particle in time $t$ is:',
+    difficulty: 'easy',
+    type: 'concept',
+    correct_answer: 'B',
+    is_numerical: false,
+    options: { A: '$2R\\sin\\omega t$', B: '$2R\\sin(\\frac{\\omega t}{2})$', C: '$2R\\cos(\\frac{\\omega t}{2})$', D: '$R\\omega t$' },
+    notes: 'Use vector subtraction for positions: $|\\vec{r}_2 - \\vec{r}_1| = 2R\\sin(\\theta/2)$ where $\\theta = \\omega t$.',
+    concept_slugs: ['uniform-circular-motion']
+  },
+  {
+    pattern_group: 'circular',
+    title: 'A simple pendulum of length $L$ is rotated in a horizontal circle with constant angular velocity $\\omega$. The tension in the string is:',
+    difficulty: 'medium',
+    type: 'concept',
+    correct_answer: 'C',
+    is_numerical: false,
+    options: { A: '$mg$', B: '$mL\\omega^2$', C: '$m\\sqrt{g^2+L^2\\omega^4}$', D: '$m\\sqrt{g^2+r^2\\omega^4}$' },
+    notes: 'This is a conical pendulum. Horizontal component of tension provides centripetal force: $T\\sin\\theta = m\\omega^2 r$.',
+    concept_slugs: ['uniform-circular-motion']
+  },
+  {
+    pattern_group: 'circular',
+    title: 'A particle moves in a circle of radius $5\\,\\text{m}$ with a speed of $v = 2t\\,\\text{m/s}$. The total acceleration of the particle at $t = 2\\,\\text{s}$ is:',
+    difficulty: 'medium',
+    type: 'practice',
+    correct_answer: 'A',
+    is_numerical: false,
+    options: { A: '$\\sqrt{4 + 2.56}\\,\\text{m/s}^2$', B: '$2\\,\\text{m/s}^2$', C: '$3.2\\,\\text{m/s}^2$', D: '$4\\,\\text{m/s}^2$' },
+    notes: 'Tangential acceleration $a_t = dv/dt = 2\\,\\text{m/s}^2$. Speed at $t=2$ is $4\\,\\text{m/s}$. $a_c = 16/5 = 3.2\\,\\text{m/s}^2$.',
+    concept_slugs: ['uniform-circular-motion']
+  },
+  {
+    pattern_group: 'circular',
+    title: 'A clock has a second hand of length $10\\,\\text{cm}$. The speed of the tip of the second hand is:',
+    difficulty: 'easy',
+    type: 'practice',
+    correct_answer: 'A',
+    is_numerical: false,
+    options: { A: '$\\frac{\\pi}{3}\\,\\text{mm/s}$', B: '$\\frac{\\pi}{30}\\,\\text{cm/s}$', C: '$\\frac{\\pi}{3}\\,\\text{cm/s}$', D: '$\\pi\\,\\text{mm/s}$' },
+    notes: 'Time period of second hand is $60\\,\\text{s}$. Speed $v = 2\\pi R/T = 20\\pi / 60 = \\pi/3\\,\\text{cm/s} \\approx 1.05\\,\\text{mm/s}$.',
+    concept_slugs: ['uniform-circular-motion']
+  },
+  {
+    pattern_group: 'circular',
+    title: 'A particle moves in a circle of radius $R$. Its speed varies with distance $s$ as $v = a\\sqrt{s}$. The centripetal acceleration of the particle is:',
+    difficulty: 'hard',
+    type: 'advanced',
+    correct_answer: 'B',
+    is_numerical: false,
+    options: { A: '$\\frac{a^2}{R}$', B: '$\\frac{a^2 s}{R}$', C: '$\\frac{a^2 s}{2R}$', D: '$a^2$' },
+    notes: 'Centripetal acceleration is $v^2/R$. Since $v = a\\sqrt{s}$, $a_c = a^2 s/R$.',
+    concept_slugs: ['uniform-circular-motion', 'variable-acceleration']
+  },
+  {
+    pattern_group: 'circular',
+    title: 'A particle is moving in a circular path such that its position vector is given by $\\vec{r} = R\\cos\\omega t\\hat{i} + R\\sin\\omega t\\hat{j}$. The velocity vector of the particle is always:',
+    difficulty: 'medium',
+    type: 'advanced',
+    correct_answer: 'B',
+    is_numerical: false,
+    options: { A: 'Parallel to position vector', B: 'Perpendicular to position vector', C: 'Along the time axis', D: 'Zero' },
+    notes: 'The dot product of position and velocity vector is zero: $\\vec{r} \\cdot \\vec{v} = 0$. Hence, they are perpendicular.',
+    concept_slugs: ['uniform-circular-motion']
+  },
+
+  // GROUP 11: Variable Acceleration / Non-Uniform Motion
+  {
+    pattern_group: 'advanced',
+    title: 'The velocity of a particle moving along a straight line is given by $v = k\\sqrt{x}$, where $k$ is a constant. The acceleration of the particle is:',
+    difficulty: 'medium',
+    type: 'pyq',
+    source: 'JEE Main 2024, 27 Jan Shift 1',
+    correct_answer: 'B',
+    is_numerical: false,
+    options: { A: '$k^2$', B: '$\\frac{k^2}{2}$', C: '$k^2/4$', D: '$k$' },
+    notes: 'Use $a = v \\frac{dv}{dx} = k\\sqrt{x} \\cdot \\frac{k}{2\\sqrt{x}} = k^2/2$.',
+    concept_slugs: ['variable-acceleration']
+  },
+  {
+    pattern_group: 'advanced',
+    title: 'The position of a particle varies with time as $x = at^3 - bt^2$. The time at which the acceleration of the particle becomes zero is:',
+    difficulty: 'easy',
+    type: 'pyq',
+    source: 'JEE Main 2024, 29 Jan Shift 2',
+    correct_answer: 'B',
+    is_numerical: false,
+    options: { A: '$\\frac{a}{3b}$', B: '$\\frac{b}{3a}$', C: '$\\frac{b}{a}$', D: '$\\frac{a}{b}$' },
+    notes: 'Differentiate position twice to find acceleration: $a(t) = 6at - 2b$. Setting $a(t)=0$ gives $t = b/3a$.',
+    concept_slugs: ['variable-acceleration']
+  },
+  {
+    pattern_group: 'advanced',
+    title: 'The acceleration of a particle moving in a straight line is $a = (4 - v)\\,\\text{m/s}^2$. If it starts from rest, its velocity at $t = 2\\,\\text{s}$ is:',
+    difficulty: 'hard',
+    type: 'concept',
+    correct_answer: 'C',
+    is_numerical: false,
+    options: { A: '$4\\,\\text{m/s}$', B: '$4(1 + e^2)\\,\\text{m/s}$', C: '$4(1 - e^{-2})\\,\\text{m/s}$', D: '$4e^{-2}\\,\\text{m/s}$' },
+    notes: 'Solve the differential equation: $dv/(4-v) = dt$. Integrate both sides and use initial conditions.',
+    concept_slugs: ['variable-acceleration']
+  },
+  {
+    pattern_group: 'advanced',
+    title: 'A particle starting from rest has acceleration $a = 6t + 4\\,\\text{m/s}^2$. The displacement of the particle at $t = 3\\,\\text{s}$ is:',
+    difficulty: 'medium',
+    type: 'concept',
+    correct_answer: '45',
+    is_numerical: true,
+    notes: 'Integrate twice: $v = 3t^2 + 4t$. $x = t^3 + 2t^2$. Substitute $t=3$.',
+    concept_slugs: ['variable-acceleration']
+  },
+  {
+    pattern_group: 'advanced',
+    title: 'The velocity of a particle is given by $v = 3t^2 - 6t$. The displacement between $t=0$ and $t=3\\,\\text{s}$ is:',
+    difficulty: 'easy',
+    type: 'practice',
+    correct_answer: '0',
+    is_numerical: true,
+    notes: 'Displacement is $\\int_0^3 v\\,dt = [t^3 - 3t^2]_0^3 = 27 - 27 = 0$.',
+    concept_slugs: ['variable-acceleration']
+  },
+  {
+    pattern_group: 'advanced',
+    title: 'The retardation of a particle is proportional to its displacement $x$, $a = -kx$. The speed of the particle as a function of $x$ (if starting at $x=0$ with velocity $v_0$) is:',
+    difficulty: 'medium',
+    type: 'practice',
+    correct_answer: 'A',
+    is_numerical: false,
+    options: { A: '$\\sqrt{v_0^2 - kx^2}$', B: '$\\sqrt{v_0^2 + kx^2}$', C: '$v_0 - \\sqrt{k}x$', D: '$v_0$' },
+    notes: 'Use $v\\frac{dv}{dx} = -kx$. Integrate from $v_0$ to $v$ and $0$ to $x$.',
+    concept_slugs: ['variable-acceleration']
+  },
+  {
+    pattern_group: 'advanced',
+    title: 'A particle moves along the x-axis such that its velocity is $v = x\\ln x$. The acceleration of the particle at $x=e$ is:',
+    difficulty: 'hard',
+    type: 'advanced',
+    correct_answer: 'B',
+    is_numerical: false,
+    options: { A: '$e$', B: '$2e$', C: '$e/2$', D: '$1$' },
+    notes: 'Use $a = v \\frac{dv}{dx} = (x\\ln x) \\cdot (\\ln x + 1)$. At $x=e$, $a = e(1) \\cdot (1+1) = 2e$.',
+    concept_slugs: ['variable-acceleration']
+  },
+  {
+    pattern_group: 'advanced',
+    title: 'The velocity of a particle is $v = v_0 e^{-kt}$. The total distance travelled by the particle in infinite time is:',
+    difficulty: 'medium',
+    type: 'advanced',
+    correct_answer: 'A',
+    is_numerical: false,
+    options: { A: '$v_0 / k$', B: '$v_0 k$', C: '$v_0 / 2k$', D: 'Infinite' },
+    notes: 'Integrate the velocity from $0$ to $\\infty$: $x = \\int_0^\\infty v_0 e^{-kt}\\,dt = v_0 / k$.',
+    concept_slugs: ['variable-acceleration']
+  },
+
+  // GROUP 12: Multi-Concept / Disguised Kinematics
+  {
+    pattern_group: 'advanced',
+    title: 'A stone is dropped from a height $h$. Simultaneously, another stone is thrown up with speed $u$. The time after which they meet is:',
+    difficulty: 'easy',
+    type: 'pyq',
+    source: 'JEE Main 2023, 24 Jan Shift 2',
+    correct_answer: 'A',
+    is_numerical: false,
+    options: { A: '$h/u$', B: '$\\sqrt{2h/g}$', C: '$h/2u$', D: '$2h/u$' },
+    notes: 'Relative acceleration is zero. Time of flight intersection is simply $h / u_{\\text{rel}} = h/u$.',
+    concept_slugs: ['motion-under-gravity', 'relative-velocity']
+  },
+  {
+    pattern_group: 'advanced',
+    title: 'The displacement of a particle is given by $x = a\\cos\\omega t$. The distance travelled by the particle in time $t = \\frac{2\\pi}{\\omega}$ is:',
+    difficulty: 'medium',
+    type: 'pyq',
+    source: 'JEE Main 2022, 29 Jun Shift 1',
+    correct_answer: 'D',
+    is_numerical: false,
+    options: { A: '$a$', B: '$2a$', C: '$0$', D: '$4a$' },
+    notes: 'The time represents one full period. The particle goes from $a$ to $-a$ and back, covering a total distance of $4a$.',
+    concept_slugs: ['graphical-analysis']
+  },
+  {
+    pattern_group: 'advanced',
+    title: 'The distance covered by a particle in the $n^{\\text{th}}$ second of a uniformly accelerated motion is $s_n$. The value of $s_n - s_{n-1}$ is:',
+    difficulty: 'easy',
+    type: 'concept',
+    correct_answer: 'A',
+    is_numerical: false,
+    options: { A: '$a$', B: '$2a$', C: '$a/2$', D: '$0$' },
+    notes: 'Use $s_n = u + a(n - 0.5)$ and $s_{n-1} = u + a(n - 1.5)$. The difference is $a$.',
+    concept_slugs: ['equations-of-motion']
+  },
+  {
+    pattern_group: 'advanced',
+    title: 'The position of a particle is $x = t^3 - 6t^2 + 9t$. The time interval during which the particle is moving backwards is:',
+    difficulty: 'medium',
+    type: 'concept',
+    correct_answer: 'B',
+    is_numerical: false,
+    options: { A: '$0 < t < 1$', B: '$1 < t < 3$', C: '$t > 3$', D: '$0 < t < 3$' },
+    notes: 'The particle moves backwards when velocity is negative. $v = 3t^2 - 12t + 9 = 3(t-1)(t-3) < 0$.',
+    concept_slugs: ['variable-acceleration']
+  },
+  {
+    pattern_group: 'advanced',
+    title: 'A particle is dropped from a high tower. The ratio of distances covered in the $1^{\\text{st}}$, $2^{\\text{nd}}$, and $3^{\\text{rd}}$ second of its motion is:',
+    difficulty: 'easy',
+    type: 'practice',
+    correct_answer: 'B',
+    is_numerical: false,
+    options: { A: '$1 : 2 : 3$', B: '$1 : 3 : 5$', C: '$1 : 4 : 9$', D: '$1 : 9 : 25$' },
+    notes: 'This follows Galileo\'s law of odd numbers: ratio is $1 : 3 : 5 : 7\\dots$',
+    concept_slugs: ['motion-under-gravity']
+  },
+  {
+    pattern_group: 'advanced',
+    title: 'A ball dropped from a height $h$ bounces off a horizontal surface with coefficient of restitution $e$. The total time before it stops bouncing is:',
+    difficulty: 'hard',
+    type: 'practice',
+    correct_answer: 'C',
+    is_numerical: false,
+    options: { A: '$\\sqrt{2h/g}$', B: '$\\sqrt{2h/g}\\frac{1+e}{1-e}$', C: '$\\sqrt{2h/g}\\frac{1+e}{1-e}$', D: 'Infinite' },
+    notes: 'This is an infinite geometric progression of times: $t_{\\text{total}} = t_0 + 2e t_0 + 2e^2 t_0 + \\dots$',
+    concept_slugs: ['motion-under-gravity']
+  },
+  {
+    pattern_group: 'advanced',
+    title: 'In a pulley system, block $A$ moves downwards with speed $v_A$. The relationship between the speed of block $B$ and $A$ in constraint kinematics is:',
+    difficulty: 'hard',
+    type: 'advanced',
+    correct_answer: 'B',
+    is_numerical: false,
+    options: { A: '$v_B = v_A$', B: '$v_B = 2v_A$', C: '$v_B = v_A/2$', D: 'Cannot be determined' },
+    notes: 'Constraint equation: length of string is constant. Differentiate with respect to time to get velocity relations.',
+    concept_slugs: ['relative-velocity']
+  },
+  {
+    pattern_group: 'advanced',
+    title: 'A stone thrown horizontally with speed $v_0$ from a high tower. The time at which its tangential and normal acceleration components are equal is:',
+    difficulty: 'hard',
+    type: 'advanced',
+    correct_answer: 'A',
+    is_numerical: false,
+    options: { A: '$v_0 / g$', B: '$2v_0 / g$', C: '$v_0 / 2g$', D: 'Never' },
+    notes: 'Tangential acceleration is $g\\sin\\theta$, normal acceleration is $g\\cos\\theta$. Equal when $\\theta = 45^\circ \\implies v_y = v_x = v_0$.',
+    concept_slugs: ['projectile-motion']
+  }
+];
+
+async function seed() {
+  try {
+    console.log('1. Fetching subject and chapter reference IDs...');
+    const subjRes = await query("SELECT id FROM subjects WHERE name = 'Physics' LIMIT 1");
+    if (subjRes.rows.length === 0) {
+      throw new Error('Physics subject not found. Please run main seed first.');
+    }
+    const physicsSubjectId = subjRes.rows[0].id;
+
+    const chapRes = await query("SELECT id FROM chapters WHERE name = 'Kinematics' AND subject_id = $1 LIMIT 1", [physicsSubjectId]);
+    if (chapRes.rows.length === 0) {
+      throw new Error('Kinematics chapter not found in Physics.');
+    }
+    const chapterId = chapRes.rows[0].id;
+    console.log(`Kinematics chapter ID: ${chapterId}`);
+
+    console.log('2. Upserting concepts and updating pattern groups...');
+    const conceptMap = {}; // slug -> id
+    for (const c of conceptsToSeed) {
+      const result = await query(
+        `INSERT INTO concepts (chapter_id, name, slug, description, formula_ids, pattern_group)
+         VALUES ($1, $2, $3, $4, $5, $6)
+         ON CONFLICT (chapter_id, slug)
+         DO UPDATE SET name = EXCLUDED.name, description = EXCLUDED.description, formula_ids = EXCLUDED.formula_ids, pattern_group = EXCLUDED.pattern_group
+         RETURNING id`,
+        [chapterId, c.name, c.slug, c.description, c.formula_ids, c.pattern_group]
+      );
+      conceptMap[c.slug] = result.rows[0].id;
+    }
+    console.log('Concepts successfully updated.');
+
+    console.log('3. Deleting existing questions for Kinematics to prevent duplicates (cascade deletes options)...');
+    await query('DELETE FROM questions WHERE chapter_id = $1', [chapterId]);
+
+    console.log('4. Seeding 112 questions...');
+    let questionCounter = 0;
+    const groupCounters = {}; // group -> count
+
+    for (const q of questionsData) {
+      const group = q.pattern_group;
+      if (!groupCounters[group]) groupCounters[group] = 0;
+      groupCounters[group]++;
+      questionCounter++;
+
+      // Insert question
+      const qRes = await query(
+        `INSERT INTO questions (chapter_id, title, difficulty, type, source, solution_url, notes, order_index, correct_answer, pattern_group, is_numerical)
+         VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11)
+         RETURNING id`,
+        [
+          chapterId,
+          q.title,
+          q.difficulty,
+          q.type,
+          q.source || null,
+          null, // solution_url
+          q.notes || null,
+          questionCounter,
+          q.correct_answer,
+          q.pattern_group,
+          q.is_numerical
+        ]
+      );
+      const questionId = qRes.rows[0].id;
+
+      // Seed options if multiple choice
+      if (!q.is_numerical && q.options) {
+        for (const [key, text] of Object.entries(q.options)) {
+          await query(
+            `INSERT INTO question_options (question_id, option_key, option_text)
+             VALUES ($1, $2, $3)
+             ON CONFLICT (question_id, option_key) DO NOTHING`,
+            [questionId, key, text]
+          );
+        }
+      }
+
+      // Link to concepts
+      if (q.concept_slugs && q.concept_slugs.length > 0) {
+        for (const slug of q.concept_slugs) {
+          const conceptId = conceptMap[slug];
+          if (conceptId) {
+            await query(
+              `INSERT INTO question_concepts (question_id, concept_id, is_primary)
+               VALUES ($1, $2, $3)
+               ON CONFLICT (question_id, concept_id) DO NOTHING`,
+              [questionId, conceptId, slug === q.concept_slugs[0]]
+            );
+          }
+        }
+      }
+    }
+
+    console.log('5. Re-calculating question_count on concepts...');
+    await query(`
+      UPDATE concepts c
+      SET question_count = (
+        SELECT COUNT(*)::int
+        FROM question_concepts qc
+        WHERE qc.concept_id = c.id
+      )
+    `);
+
+    console.log('\n--- Kinematics Seed Complete ---');
+    console.log(`Successfully seeded ${questionCounter} questions across 8 concepts.`);
+    process.exit(0);
+  } catch (err) {
+    console.error('Seeding failed:', err);
+    process.exit(1);
+  }
+}
+
+seed();

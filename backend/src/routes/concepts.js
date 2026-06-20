@@ -3,7 +3,8 @@ import {
   getChapterConcepts, 
   getConceptQuestions, 
   getConceptMastery, 
-  getConceptPracticeSet 
+  getConceptPracticeSet,
+  getPatternPracticeSet
 } from '../controllers/concepts.js';
 import { authMiddleware, optionalAuth } from '../middleware/auth.js';
 
@@ -20,5 +21,8 @@ router.get('/:conceptId/questions', optionalAuth, getConceptQuestions);
 
 // Generate 5-question practice set for a specific concept
 router.post('/:conceptId/practice', authMiddleware, getConceptPracticeSet);
+
+// Generate 5-question practice set for a specific pattern group
+router.post('/patterns/:chapterId/:patternKey/practice', authMiddleware, getPatternPracticeSet);
 
 export default router;

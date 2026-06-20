@@ -5,8 +5,9 @@ import ConceptTagList from './concepts/ConceptTagList';
 import useBookmarkStore from '../store/bookmarkStore';
 import api from '../api';
 import { Bookmark, Sparkles, Link as LinkIcon, FileText } from 'lucide-react';
+import MathText from './MathText';
 
-export default function QuestionRow({ question, index, onStatusChange, onOpenNote, onOpenHint, onTagClick }) {
+export default function QuestionRow({ question, index, onStatusChange, onOpenNote, onOpenHint, onTagClick, onPatternClick }) {
   const { id, title, difficulty, type, source, solution_url, status = 'todo' } = question;
   const { bookmarks, toggleBookmark } = useBookmarkStore();
   const [hasNote, setHasNote] = useState(false);
@@ -84,7 +85,7 @@ export default function QuestionRow({ question, index, onStatusChange, onOpenNot
             <span className={`text-[13px] font-medium leading-relaxed break-words block mb-1 ${
               status === 'done' ? 'text-text-muted line-through decoration-text-disabled' : 'text-text-primary'
             }`}>
-              {title}
+              <MathText text={title} />
             </span>
             <div className="flex flex-wrap items-center gap-2">
               {source && (
@@ -94,6 +95,19 @@ export default function QuestionRow({ question, index, onStatusChange, onOpenNot
               )}
               {question.concepts && question.concepts.length > 0 && (
                 <ConceptTagList concepts={question.concepts} onTagClick={onTagClick} />
+              )}
+              {question.patternLabel && (
+                <span
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    onPatternClick && onPatternClick(question.patternKey);
+                  }}
+                  className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10.5px] font-semibold border border-purple-500/20 bg-purple-500/10 text-purple-600 dark:text-purple-400 hover:bg-purple-500/25 transition-all cursor-pointer select-none active:scale-95 shrink-0"
+                  title="Filter questions by this pattern group"
+                >
+                  <span className="w-1.5 h-1.5 rounded-full bg-purple-500" />
+                  {question.patternLabel}
+                </span>
               )}
             </div>
           </div>

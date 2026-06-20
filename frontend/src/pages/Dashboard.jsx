@@ -19,6 +19,8 @@ import { BookOpen, Trophy, Flame, Atom, FlaskConical, Binary, CheckCircle2, Chev
 import useConceptStore from '../store/conceptStore';
 import ConceptMasteryCard from '../components/concepts/ConceptMasteryCard';
 import ConceptPracticeModal from '../components/concepts/ConceptPracticeModal';
+import PatternPracticeModal from '../components/PatternPracticeModal';
+import { KINEMATICS_PATTERNS, PATTERN_SHORT_NAMES, classifyQuestion } from '../utils/patterns';
 
 export default function Dashboard() {
   const { user } = useAuthStore();
@@ -38,6 +40,8 @@ export default function Dashboard() {
   const mastery = useConceptStore((state) => state.mastery);
   const [expandedSubjects, setExpandedSubjects] = useState({});
   const [activePracticeConcept, setActivePracticeConcept] = useState(null);
+  const [activePracticePattern, setActivePracticePattern] = useState(null);
+  const [kinematicsQuestions, setKinematicsQuestions] = useState([]);
 
   // Weekly trend compares (Mock stats)
   const [prevWeekSolved, setPrevWeekSolved] = useState(0);
@@ -98,6 +102,25 @@ export default function Dashboard() {
         const selfRow = leadList.find((r) => r.id === user?.id);
         if (selfRow) {
           setUserRank(selfRow.rank);
+        }
+
+        // 5. Fetch Kinematics questions to compute pattern group metrics
+        let kinChapterId = 2;
+        try {
+          const physChaptersRes = await api.get('/api/subjects/physics/chapters');
+          const kinChapter = physChaptersRes.data.data?.find(ch => ch.name.toLowerCase() === 'kinematics');
+          if (kinChapter) {
+            kinChapterId = kinChapter.id;
+          }
+        } catch (e) {
+          console.error('Failed to resolve Kinematics chapter ID, defaulting to 2:', e);
+        }
+        
+        try {
+          const qRes = await api.get(`/api/subjects/chapters/${kinChapterId}/questions`);
+          setKinematicsQuestions(qRes.data.data || []);
+        } catch (e) {
+          console.error('Failed to load Kinematics questions:', e);
         }
       } catch (err) {
         console.error('Failed to load dashboard metrics:', err);
@@ -480,6 +503,68 @@ export default function Dashboard() {
               </div>
             </div>
           )}
+
+          {/* Kinematics Pattern Mastery Card */}
+          {kinematicsQuestions.length > 0 && (
+            <div className="bg-bg-surface border border-border-default rounded-lg p-5 flex flex-col gap-4">
+              <div className="flex items-center justify-between">
+                <h3 className="text-[13px] font-semibold text-text-primary uppercase tracking-wider flex items-center gap-2">
+                  <Trophy className="w-4 h-4 text-purple-500" />
+                  Kinematics Pattern Mastery
+                </h3>
+                <span className="text-[11px] text-text-muted">12 Core Patterns</span>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3.5">
+                {KINEMATICS_PATTERNS.map((p) => {
+                  const patternQs = kinematicsQuestions.filter((q) => classifyQuestion(q) === p.key);
+                  const total = patternQs.length;
+                  const doneCount = patternQs.filter((q) => q.status === 'done').length;
+                  const revisitCount = patternQs.filter((q) => q.status === 'revisit').length;
+                  const attempts = doneCount + revisitCount;
+                  const accuracy = attempts > 0 ? (doneCount / attempts) * 100 : 0;
+
+                  let colorClass = 'text-text-disabled';
+                  let barClass = 'bg-text-disabled';
+
+                  if (attempts >= 3) {
+                    if (accuracy >= 80) {
+                      colorClass = 'text-success font-semibold';
+                      barClass = 'bg-success';
+                    } else if (accuracy >= 50) {
+                      colorClass = 'text-warning font-semibold';
+                      barClass = 'bg-warning';
+                    } else {
+                      colorClass = 'text-danger font-semibold';
+                      barClass = 'bg-danger';
+                    }
+                  }
+
+                  return (
+                    <div 
+                      key={p.key} 
+                      onClick={() => setActivePracticePattern({ key: p.key, name: p.name, chapterId: 2 })}
+                      className="flex flex-col gap-1 py-1 px-2 -mx-2 hover:bg-bg-subtle rounded-lg cursor-pointer transition-colors duration-150 group"
+                    >
+                      <div className="flex items-center justify-between text-[11.5px] font-medium text-text-secondary">
+                        <span className="truncate group-hover:text-accent font-medium transition-colors">
+                          {PATTERN_SHORT_NAMES[p.key] || p.key}
+                        </span>
+                        <span className={`text-[10px] uppercase font-mono ${colorClass}`}>
+                          {attempts < 3 ? 'No Data' : `${Math.round(accuracy)}%`}
+                        </span>
+                      </div>
+                      <div className="w-full h-1.5 bg-bg-elevated rounded-full overflow-hidden">
+                        <div 
+                          className={`h-full rounded-full transition-all duration-300 ${barClass}`}
+                          style={{ width: `${total > 0 ? Math.round((doneCount / total) * 100) : 0}%` }}
+                        />
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          )}
         </div>
 
         {/* Right Column (40%): Recent solves feed */}
@@ -691,6 +776,14 @@ export default function Dashboard() {
         <ConceptPracticeModal
           concept={activePracticeConcept}
           onClose={() => setActivePracticeConcept(null)}
+        />
+      )}
+
+      {/* Pattern Practice Modal overlay */}
+      {activePracticePattern && (
+        <PatternPracticeModal
+          pattern={activePracticePattern}
+          onClose={() => setActivePracticePattern(null)}
         />
       )}
     </div>

@@ -36,6 +36,13 @@ const useConceptStore = create((set, get) => ({
 
   fetchConceptPracticeSet: async (conceptId) => {
     try {
+      if (typeof conceptId === 'string' && conceptId.startsWith('pattern:')) {
+        const parts = conceptId.split(':');
+        const chapterId = parts[1];
+        const patternKey = parts[2];
+        const res = await api.post(`/api/concepts/patterns/${chapterId}/${patternKey}/practice`);
+        return res.data.data;
+      }
       const res = await api.post(`/api/concepts/${conceptId}/practice`);
       return res.data.data;
     } catch (err) {

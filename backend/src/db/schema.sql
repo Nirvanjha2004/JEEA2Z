@@ -26,7 +26,7 @@ CREATE TABLE questions (
   chapter_id INT REFERENCES chapters(id),
   title TEXT NOT NULL,
   difficulty TEXT CHECK(difficulty IN ('easy','medium','hard')) NOT NULL,
-  type TEXT CHECK(type IN ('pyq','concept','practice')) NOT NULL,
+  type TEXT CHECK(type IN ('pyq','concept','practice','advanced')) NOT NULL,
   source TEXT,
   solution_url TEXT,
   notes TEXT,
@@ -224,5 +224,23 @@ CREATE INDEX IF NOT EXISTS idx_question_concepts_question ON question_concepts(q
 CREATE INDEX IF NOT EXISTS idx_question_concepts_concept ON question_concepts(concept_id);
 CREATE INDEX IF NOT EXISTS idx_concept_mastery_user ON concept_mastery(user_id);
 CREATE INDEX IF NOT EXISTS idx_concept_mastery_concept ON concept_mastery(concept_id);
+
+-- V3.7 Patterns & Options Columns
+ALTER TABLE concepts ADD COLUMN IF NOT EXISTS pattern_group TEXT;
+ALTER TABLE questions ADD COLUMN IF NOT EXISTS pattern_group TEXT;
+ALTER TABLE questions ADD COLUMN IF NOT EXISTS is_numerical BOOLEAN DEFAULT FALSE;
+ALTER TABLE questions ADD COLUMN IF NOT EXISTS time_estimate_seconds INT DEFAULT 120;
+
+-- question_options: stores LaTeX option content for multiple choice questions
+CREATE TABLE IF NOT EXISTS question_options (
+  id          SERIAL PRIMARY KEY,
+  question_id INT REFERENCES questions(id) ON DELETE CASCADE,
+  option_key  TEXT NOT NULL, -- 'A', 'B', 'C', 'D'
+  option_text TEXT NOT NULL,
+  UNIQUE(question_id, option_key)
+);
+
+CREATE INDEX IF NOT EXISTS idx_question_options_q ON question_options(question_id);
+
 
 

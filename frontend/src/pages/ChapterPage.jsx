@@ -14,6 +14,9 @@ import useConceptStore from '../store/conceptStore';
 import ConceptFilterBar from '../components/concepts/ConceptFilterBar';
 import ConceptCard from '../components/concepts/ConceptCard';
 import ConceptPracticeModal from '../components/concepts/ConceptPracticeModal';
+import PatternGroupCard from '../components/PatternGroupCard';
+import PatternPracticeModal from '../components/PatternPracticeModal';
+import { KINEMATICS_PATTERNS, PATTERN_SHORT_NAMES, classifyQuestion } from '../utils/patterns';
 
 export default function ChapterPage() {
   const { subject: subjectSlug, chapterId } = useParams();
@@ -25,7 +28,7 @@ export default function ChapterPage() {
 
   // Tab State
   const tabParam = searchParams.get('tab');
-  const activeTab = ['formulas', 'concepts'].includes(tabParam) ? tabParam : 'questions';
+  const activeTab = ['formulas', 'concepts', 'patterns'].includes(tabParam) ? tabParam : 'questions';
 
   // Filters State
   const [difficultyFilter, setDifficultyFilter] = useState('all');
@@ -39,6 +42,7 @@ export default function ChapterPage() {
   const chapterConcepts = useConceptStore((state) => state.chapterConcepts);
   const concepts = chapterConcepts[chapterId] || [];
   const [activePracticeConcept, setActivePracticeConcept] = useState(null);
+  const [activePracticePattern, setActivePracticePattern] = useState(null);
   const [hintQuestionConcepts, setHintQuestionConcepts] = useState([]);
 
   // Notes & Hints Panels State
@@ -115,10 +119,45 @@ export default function ChapterPage() {
   };
 
   const selectedConceptSlug = searchParams.get('concept');
+  const selectedPatternKey = searchParams.get('pattern');
+
+  // Pre-calculate type-based pattern indices and labels for all questions in the chapter
+  const questionsWithPatternLabels = useMemo(() => {
+    const patternGroups = {};
+    questions.forEach((q) => {
+      const pKey = classifyQuestion(q);
+      if (pKey) {
+        if (!patternGroups[pKey]) patternGroups[pKey] = [];
+        patternGroups[pKey].push(q);
+      }
+    });
+
+    return questions.map((q) => {
+      const pKey = classifyQuestion(q);
+      if (!pKey) return { ...q, patternLabel: null, patternKey: null };
+
+      const groupQs = patternGroups[pKey] || [];
+      const typeQs = groupQs.filter((curr) => curr.type === q.type);
+      const typeIdx = typeQs.findIndex((curr) => curr.id === q.id) + 1;
+
+      const shortName = PATTERN_SHORT_NAMES[pKey] || pKey;
+      let typeStr = 'Q';
+      if (q.type === 'pyq') typeStr = 'PYQ';
+      else if (q.type === 'concept') typeStr = 'Concept';
+      else if (q.type === 'practice') typeStr = 'Practice';
+      else if (q.type === 'advanced') typeStr = 'Advanced';
+
+      return {
+        ...q,
+        patternKey: pKey,
+        patternLabel: `${shortName} · ${typeStr} #${typeIdx}`
+      };
+    });
+  }, [questions]);
 
   // Filter questions based on selected filters
   const filteredQuestions = useMemo(() => {
-    return questions.filter((q) => {
+    return questionsWithPatternLabels.filter((q) => {
       const matchDifficulty =
         difficultyFilter === 'all' || q.difficulty.toLowerCase() === difficultyFilter;
       const matchType =
@@ -128,9 +167,11 @@ export default function ChapterPage() {
       const matchConcept =
         !selectedConceptSlug ||
         (q.concepts && q.concepts.some((c) => c.slug === selectedConceptSlug));
-      return matchDifficulty && matchType && matchStatus && matchConcept;
+      const matchPattern =
+        !selectedPatternKey || q.patternKey === selectedPatternKey;
+      return matchDifficulty && matchType && matchStatus && matchConcept && matchPattern;
     });
-  }, [questions, difficultyFilter, typeFilter, statusFilter, selectedConceptSlug]);
+  }, [questionsWithPatternLabels, difficultyFilter, typeFilter, statusFilter, selectedConceptSlug, selectedPatternKey]);
 
   const doneCount = useMemo(() => {
     return questions.filter((q) => q.status === 'done').length;
@@ -222,11 +263,56 @@ export default function ChapterPage() {
         >
           Concepts
         </button>
+        {String(chapterId) === '2' && (
+          <button
+            onClick={() => handleTabChange('patterns')}
+            className={`px-4 py-2 border-b-2 transition-all cursor-pointer ${
+              activeTab === 'patterns'
+                ? 'border-accent text-text-primary font-semibold'
+                : 'border-transparent text-text-muted hover:text-text-primary'
+            }`}
+          >
+            Patterns
+          </button>
+        )}
       </div>
 
       {/* Render Active Tab Panel */}
       {activeTab === 'formulas' ? (
         <FormulaSheet chapterId={chapterId} chapterName={currentChapter?.name || ''} />
+      ) : activeTab === 'patterns' ? (
+        <div className="animate-slide-in">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {[...KINEMATICS_PATTERNS]
+              .map((p) => {
+                const patternQs = questionsWithPatternLabels.filter((q) => q.patternKey === p.key);
+                const doneCount = patternQs.filter((q) => q.status === 'done').length;
+                const revisitCount = patternQs.filter((q) => q.status === 'revisit').length;
+                const attempts = doneCount + revisitCount;
+                const accuracy = attempts > 0 ? (doneCount / attempts) * 100 : 0;
+                return {
+                  pattern: p,
+                  questions: patternQs,
+                  accuracy,
+                };
+              })
+              .sort((a, b) => a.accuracy - b.accuracy)
+              .map(({ pattern, questions: patternQs }) => (
+                <PatternGroupCard
+                  key={pattern.key}
+                  pattern={pattern}
+                  questions={patternQs}
+                  onPractice={(patternKey) => {
+                    setActivePracticePattern({
+                      key: patternKey,
+                      name: pattern.name,
+                      chapterId: chapterId,
+                    });
+                  }}
+                />
+              ))}
+          </div>
+        </div>
       ) : activeTab === 'concepts' ? (
         <div className="animate-slide-in">
           {concepts.length === 0 ? (
@@ -270,6 +356,22 @@ export default function ChapterPage() {
                 setSearchParams(params);
               }}
             />
+          )}
+
+          {selectedPatternKey && (
+            <div className="flex items-center gap-2 p-3 border border-purple-500/20 bg-purple-500/5 text-purple-600 dark:text-purple-400 text-[12.5px] rounded-lg mb-6 font-medium">
+              <span>Filtering by pattern: <strong>{PATTERN_SHORT_NAMES[selectedPatternKey] || selectedPatternKey}</strong></span>
+              <button
+                onClick={() => {
+                  const params = { tab: 'questions' };
+                  if (selectedConceptSlug) params.concept = selectedConceptSlug;
+                  setSearchParams(params);
+                }}
+                className="ml-auto font-bold hover:underline cursor-pointer"
+              >
+                Clear Filter
+              </button>
+            </div>
           )}
 
           {/* Filters Bar */}
@@ -402,6 +504,9 @@ export default function ChapterPage() {
                       onTagClick={(concept) => {
                         setSearchParams({ tab: 'questions', concept: concept.slug });
                       }}
+                      onPatternClick={(patternKey) => {
+                        setSearchParams({ tab: 'questions', pattern: patternKey });
+                      }}
                     />
                   ))}
                 </tbody>
@@ -445,6 +550,14 @@ export default function ChapterPage() {
         <ConceptPracticeModal
           concept={activePracticeConcept}
           onClose={() => setActivePracticeConcept(null)}
+        />
+      )}
+
+      {/* Pattern Practice Modal overlay */}
+      {activePracticePattern && (
+        <PatternPracticeModal
+          pattern={activePracticePattern}
+          onClose={() => setActivePracticePattern(null)}
         />
       )}
     </div>

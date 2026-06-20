@@ -97,7 +97,13 @@ export const getConceptQuestions = async (req, res, next) => {
            FROM question_concepts qc_inner
            JOIN concepts c ON c.id = qc_inner.concept_id
            WHERE qc_inner.question_id = q.id
-         ) as concepts
+         ) as concepts,
+         COALESCE(
+           (SELECT jsonb_object_agg(option_key, option_text) 
+            FROM question_options 
+            WHERE question_id = q.id), 
+           '{}'::jsonb
+         ) as options
        FROM questions q
        JOIN question_concepts qc ON qc.question_id = q.id
        LEFT JOIN user_progress up ON up.question_id = q.id AND up.user_id = $2
@@ -183,7 +189,13 @@ export const getConceptPracticeSet = async (req, res, next) => {
            FROM question_concepts qc_inner
            JOIN concepts c ON c.id = qc_inner.concept_id
            WHERE qc_inner.question_id = q.id
-         ) as concepts
+         ) as concepts,
+         COALESCE(
+           (SELECT jsonb_object_agg(option_key, option_text) 
+            FROM question_options 
+            WHERE question_id = q.id), 
+           '{}'::jsonb
+         ) as options
        FROM questions q
        JOIN question_concepts qc ON qc.question_id = q.id
        LEFT JOIN user_progress up ON up.question_id = q.id AND up.user_id = $2
@@ -204,3 +216,105 @@ export const getConceptPracticeSet = async (req, res, next) => {
     next(error);
   }
 };
+
+/**
+ * POST /api/concepts/patterns/:chapterId/:patternKey/practice
+ * Generates a 5-question focused practice set for a specific pattern group, prioritized: unsolved > revisit > done.
+ */
+export const getPatternPracticeSet = async (req, res, next) => {
+  try {
+    const { chapterId, patternKey } = req.params;
+    const userId = req.user.id;
+
+    // Define SQL filter condition based on order_index partitions for the 12 groups
+    let patternFilter = '';
+    const params = [parseInt(chapterId, 10), userId];
+
+    if (patternKey === 'basic-kinematics') {
+      patternFilter = "q.pattern_group = 'basic-kinematics'";
+    } else if (patternKey === 'gravity-free-fall') {
+      patternFilter = "q.pattern_group = 'gravity' AND q.order_index BETWEEN 13 AND 22";
+    } else if (patternKey === 'gravity-vertical-throw') {
+      patternFilter = "q.pattern_group = 'gravity' AND q.order_index BETWEEN 23 AND 32";
+    } else if (patternKey === 'graphs') {
+      patternFilter = "q.pattern_group = 'graphs'";
+    } else if (patternKey === 'relative-1d') {
+      patternFilter = "q.pattern_group = 'relative' AND q.order_index BETWEEN 45 AND 53";
+    } else if (patternKey === 'relative-2d') {
+      patternFilter = "q.pattern_group = 'relative' AND q.order_index BETWEEN 54 AND 63";
+    } else if (patternKey === 'projectile-basic') {
+      patternFilter = "q.pattern_group = 'projectile' AND q.order_index BETWEEN 64 AND 75";
+    } else if (patternKey === 'projectile-collision') {
+      patternFilter = "q.pattern_group = 'projectile' AND q.order_index BETWEEN 76 AND 84";
+    } else if (patternKey === 'projectile-incline') {
+      patternFilter = "q.pattern_group = 'projectile-incline'";
+    } else if (patternKey === 'circular') {
+      patternFilter = "q.pattern_group = 'circular'";
+    } else if (patternKey === 'variable-acceleration') {
+      patternFilter = "q.pattern_group = 'advanced' AND q.order_index BETWEEN 101 AND 108";
+    } else if (patternKey === 'multi-concept') {
+      patternFilter = "q.pattern_group = 'advanced' AND q.order_index BETWEEN 109 AND 116";
+    } else {
+      patternFilter = "q.pattern_group = $3";
+      params.push(patternKey);
+    }
+
+    const questionsRes = await query(
+      `SELECT q.*, COALESCE(up.status, 'todo') as status,
+         CASE 
+           WHEN up.status IS NULL OR up.status = 'todo' THEN 1
+           WHEN up.status = 'revisit' THEN 2
+           WHEN up.status = 'done' THEN 3
+           ELSE 4
+         END as priority,
+         (
+           SELECT COALESCE(json_agg(json_build_object('id', c.id, 'name', c.name, 'slug', c.slug)), '[]'::json)
+           FROM question_concepts qc_inner
+           JOIN concepts c ON c.id = qc_inner.concept_id
+           WHERE qc_inner.question_id = q.id
+         ) as concepts,
+         COALESCE(
+           (SELECT jsonb_object_agg(option_key, option_text) 
+            FROM question_options 
+            WHERE question_id = q.id), 
+           '{}'::jsonb
+         ) as options
+       FROM questions q
+       LEFT JOIN user_progress up ON up.question_id = q.id AND up.user_id = $2
+       WHERE q.chapter_id = $1 AND ${patternFilter}
+       ORDER BY priority ASC, q.order_index ASC
+       LIMIT 5`,
+      params
+    );
+
+    // Friendly display name for the pattern group
+    const patternNames = {
+      'basic-kinematics': 'Basic Kinematics — Direct Formula Application',
+      'gravity-free-fall': 'Motion Under Gravity — Free Fall',
+      'gravity-vertical-throw': 'Motion Under Gravity — Vertical Throw',
+      'graphs': 'Graphical Analysis — v-t, x-t, a-t',
+      'relative-1d': 'Relative Velocity — 1D',
+      'relative-2d': 'Relative Velocity — Rain-Man / River-Boat',
+      'projectile-basic': 'Projectile Motion — Basic Range/Height/Time',
+      'projectile-collision': 'Two Projectiles / Collision',
+      'projectile-incline': 'Projectile on Inclined Plane',
+      'circular': 'Uniform Circular Motion',
+      'variable-acceleration': 'Variable Acceleration / Non-Uniform Motion',
+      'multi-concept': 'Multi-Concept / Disguised Kinematics',
+    };
+
+    return res.json({
+      success: true,
+      data: {
+        concept: {
+          id: `pattern:${chapterId}:${patternKey}`,
+          name: patternNames[patternKey] || patternKey,
+        },
+        questions: questionsRes.rows,
+      },
+    });
+  } catch (error) {
+    next(error);
+  }
+};
+

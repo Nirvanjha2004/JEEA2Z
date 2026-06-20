@@ -79,7 +79,13 @@ export const getQuestions = async (req, res, next) => {
              FROM question_concepts qc
              JOIN concepts c ON c.id = qc.concept_id
              WHERE qc.question_id = q.id
-           ) as concepts
+           ) as concepts,
+           COALESCE(
+             (SELECT jsonb_object_agg(option_key, option_text) 
+              FROM question_options 
+              WHERE question_id = q.id), 
+             '{}'::jsonb
+           ) as options
          FROM questions q
          LEFT JOIN user_progress up ON up.question_id = q.id AND up.user_id = $2
          WHERE q.chapter_id = $1
@@ -94,7 +100,13 @@ export const getQuestions = async (req, res, next) => {
              FROM question_concepts qc
              JOIN concepts c ON c.id = qc.concept_id
              WHERE qc.question_id = q.id
-           ) as concepts
+           ) as concepts,
+           COALESCE(
+             (SELECT jsonb_object_agg(option_key, option_text) 
+              FROM question_options 
+              WHERE question_id = q.id), 
+             '{}'::jsonb
+           ) as options
          FROM questions q
          WHERE q.chapter_id = $1
          ORDER BY q.order_index`,
