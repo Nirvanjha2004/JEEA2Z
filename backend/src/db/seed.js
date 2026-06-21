@@ -622,7 +622,10 @@ async function seed() {
 
     // Create tables
     console.log('Creating tables...');
-    await client.query('CREATE EXTENSION IF NOT EXISTS "pgcrypto"');
+    const extCheck = await client.query("SELECT 1 FROM pg_extension WHERE extname = 'pgcrypto'");
+    if (extCheck.rows.length === 0) {
+      await client.query('CREATE EXTENSION IF NOT EXISTS "pgcrypto"');
+    }
 
     await client.query(`
       CREATE TABLE users (
