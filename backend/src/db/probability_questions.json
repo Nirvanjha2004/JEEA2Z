@@ -1,0 +1,920 @@
+[
+  {
+    "pattern_group": "probability-classical-algebraic",
+    "title": "For any two events $A$ and $B$ in a sample space, the addition theorem of probability states that:",
+    "difficulty": "easy",
+    "type": "concept",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$P(A \\\\cup B) = P(A) + P(B) - P(A \\\\cap B)$",
+      "B": "$P(A \\\\cup B) = P(A) + P(B) + P(A \\\\cap B)$",
+      "C": "$P(A \\\\cap B) = P(A) + P(B) - P(A \\\\cup B)$",
+      "D": "$P(A \\\\cup B) = P(A) - P(B) + P(A \\\\cap B)$"
+    },
+    "notes": "Recall the fundamental set theory formula for cardinality and divide by sample space size.",
+    "solution_text": "Let's derive this using set theory:\\n1) For any two sets $A$ and $B$, the cardinality of their union is $n(A \\\\cup B) = n(A) + n(B) - n(A \\\\cap B)$.\\n2) Divide both sides by the total number of elements in the sample space $n(S)$:\\n   $\\\\frac{n(A \\\\cup B)}{n(S)} = \\\\frac{n(A)}{n(S)} + \\\\frac{n(B)}{n(S)} - \\\\frac{n(A \\\\cap B)}{n(S)}$.\\n3) By definition of probability, this yields $P(A \\\\cup B) = P(A) + P(B) - P(A \\\\cap B)$.\\nOption A is correct.",
+    "common_mistake": "Adding the intersection (Option B) instead of subtracting it, which double counts shared outcomes.",
+    "concept_slugs": [
+      "probability-classical-algebraic"
+    ]
+  },
+  {
+    "pattern_group": "probability-classical-algebraic",
+    "title": "A leap year is selected at random. The probability that it will contain exactly 53 Sundays is:",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\\\frac{1}{7}$",
+      "B": "$\\\\frac{2}{7}$",
+      "C": "$\\\\frac{3}{7}$",
+      "D": "$\\\\frac{53}{366}$"
+    },
+    "notes": "Determine the number of days in a leap year, convert them to weeks, and analyze the remaining days.",
+    "solution_text": "Let's analyze the days in a leap year:\\n1) A leap year contains exactly $366$ days.\\n2) $366$ days $= 52 \\\\text{ weeks} + 2 \\\\text{ extra days}$.\\n3) The 52 complete weeks guarantee exactly 52 Sundays.\\n4) The remaining 2 consecutive extra days can form the following 7 pairs:\\n   - {Monday, Tuesday}\\n   - {Tuesday, Wednesday}\\n   - {Wednesday, Thursday}\\n   - {Thursday, Friday}\\n   - {Friday, Saturday}\\n   - {Saturday, Sunday}\\n   - {Sunday, Monday}\\n5) Out of these 7 equally likely outcomes, exactly 2 pairs contain a Sunday ({Saturday, Sunday} and {Sunday, Monday}).\\n6) Therefore, the probability of having 53 Sundays is $\\\\frac{2}{7}$.\\nOption B is correct.",
+    "common_mistake": "Using $1/7$ (Option A), which is the probability of a non-leap year (365 days) having 53 Sundays.",
+    "concept_slugs": [
+      "probability-classical-algebraic"
+    ]
+  },
+  {
+    "pattern_group": "probability-classical-algebraic",
+    "title": "If $A$ and $B$ are two events such that $P(A) = 0.6$, $P(B) = 0.4$, and $P(A \\\\cap B) = 0.2$, then the probability of the event $\\\\bar{A} \\\\cap \\\\bar{B}$ (neither A nor B occurs) is:",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2022",
+    "correct_answer": "D",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$0.8$",
+      "B": "$0.6$",
+      "C": "$0.4$",
+      "D": "$0.2$"
+    },
+    "notes": "Apply De Morgan's Law for probability: P(A_bar intersection B_bar) = 1 - P(A union B).",
+    "solution_text": "Let's apply probability algebra:\\n1) By De Morgan's Law: $\\\\bar{A} \\\\cap \\\\bar{B} = \\\\overline{A \\\\cup B}$.\\n2) Therefore, $P(\\\\bar{A} \\\\cap \\\\bar{B}) = 1 - P(A \\\\cup B)$.\\n3) Calculate $P(A \\\\cup B)$ using the addition theorem:\\n   $P(A \\\\cup B) = P(A) + P(B) - P(A \\\\cap B) = 0.6 + 0.4 - 0.2 = 0.8$.\\n4) Calculate the complement:\\n   $P(\\\\bar{A} \\\\cap \\\\bar{B}) = 1 - 0.8 = 0.2$.\\nOption D is correct.",
+    "common_mistake": "Incorrectly calculating $P(\\\\bar{A} \\\\cap \\\\bar{B}) = P(\\\\bar{A}) \\\\times P(\\\\bar{B}) = 0.4 \\\\times 0.6 = 0.24$ by assuming A and B are independent (not given).",
+    "concept_slugs": [
+      "probability-classical-algebraic"
+    ]
+  },
+  {
+    "pattern_group": "probability-classical-algebraic",
+    "title": "Three numbers are chosen at random from the first 20 natural numbers. The probability that the chosen numbers are in Arithmetic Progression (AP) is:",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\\\frac{3}{38}$",
+      "B": "$\\\\frac{1}{19}$",
+      "C": "$\\\\frac{5}{38}$",
+      "D": "$\\\\frac{7}{114}$"
+    },
+    "notes": "Find the total ways to select 3 numbers from 20, and count the number of APs with common difference d.",
+    "solution_text": "Let's calculate the total and favorable cases:\\n1) Total ways to choose 3 numbers from 20 is:\\n   $N = \\\\binom{20}{3} = \\\\frac{20 \\\\times 19 \\\\times 18}{6} = 1140$.\\n2) Let the three numbers in AP be $a, b, c$. Thus $a+c = 2b$. This implies $a$ and $c$ must have the same parity (both odd or both even) for $b$ to be an integer.\\n3) Among numbers 1 to 20, there are 10 odd numbers and 10 even numbers.\\n4) The number of ways to choose $a$ and $c$ such that they are both odd is $\\\\binom{10}{2} = 45$.\\n5) The number of ways to choose $a$ and $c$ such that they are both even is $\\\\binom{10}{2} = 45$.\\n6) For any choice of $a$ and $c$, the middle term $b = (a+c)/2$ is uniquely determined.\\n7) Therefore, the number of favorable APs is $45 + 45 = 90$.\\n8) Probability $= \\\\frac{90}{1140} = \\\\frac{9}{114} = \\\\frac{3}{38}$.\\nOption A is correct.",
+    "common_mistake": "Neglecting the parity condition and assuming any two numbers can form the extremes of an AP, or counting order arrangements (APs are subsets here).",
+    "concept_slugs": [
+      "probability-classical-algebraic"
+    ]
+  },
+  {
+    "pattern_group": "probability-classical-algebraic",
+    "title": "Two events $A$ and $B$ are such that $P(A) > 0$ and $P(B) \\\\neq 1$. The conditional probability $P(\\\\bar{A} | \\\\bar{B})$ is equal to:",
+    "difficulty": "hard",
+    "type": "pyq",
+    "source": "JEE Advanced 2021",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\\\frac{1 - P(A \\\\cup B)}{1 - P(B)}$",
+      "B": "$\\\\frac{1 - P(A \\\\cap B)}{1 - P(B)}$",
+      "C": "$\\\\frac{P(\\\\bar{A}) - P(\\\\bar{B})}{1 - P(B)}$",
+      "D": "None of these"
+    },
+    "notes": "Use the conditional probability definition: P(X|Y) = P(X intersection Y) / P(Y), then apply De Morgan's Law.",
+    "solution_text": "Let's express the conditional probability definition:\\n1) $P(\\\\bar{A} | \\\\bar{B}) = \\\\frac{P(\\\\bar{A} \\\\cap \\\\bar{B})}{P(\\\\bar{B})}$.\\n2) By De Morgan's Law: $P(\\\\bar{A} \\\\cap \\\\bar{B}) = P(\\\\overline{A \\\\cup B}) = 1 - P(A \\\\cup B)$.\\n3) By complement rule: $P(\\\\bar{B}) = 1 - P(B)$.\\n4) Substitute these back into the conditional probability formula:\\n   $P(\\\\bar{A} | \\\\bar{B}) = \\\\frac{1 - P(A \\\\cup B)}{1 - P(B)}$.\\nOption A is correct.",
+    "common_mistake": "Confusing $P(\\\\bar{A} \\\\cap \\\\bar{B})$ with $1 - P(A \\\\cap B)$ (Option B), which violates De Morgan's laws.",
+    "concept_slugs": [
+      "probability-classical-algebraic"
+    ]
+  },
+  {
+    "pattern_group": "probability-classical-algebraic",
+    "title": "Two unbiased dice are thrown. If the probability that the sum of the numbers on the two dice is equal to 8 is represented as $P$, then the value of $36 P$ is ________.",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "5",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "List all pairs (x, y) where x, y are from 1 to 6 and x + y = 8.",
+    "solution_text": "Let's count the outcomes of rolling two dice:\\n1) The total number of outcomes in the sample space is $6 \\\\times 6 = 36$.\\n2) The pairs $(x, y)$ that sum to 8 are:\\n   - $(2, 6)$\\n   - $(3, 5)$\\n   - $(4, 4)$\\n   - $(5, 3)$\\n   - $(6, 2)$\\n   There are exactly 5 favorable outcomes.\\n3) The probability is $P = \\\\frac{5}{36}$.\\n4) We need $36 P = 36 \\\\times \\\\frac{5}{36} = 5$.\\nThe answer is 5.",
+    "common_mistake": "Neglecting order (e.g. counting (2,6) and (6,2) as only one outcome), leading to a count of 3 instead of 5.",
+    "concept_slugs": [
+      "probability-classical-algebraic"
+    ]
+  },
+  {
+    "pattern_group": "probability-classical-algebraic",
+    "title": "For two events $A$ and $B$, let $P(A) = 0.5$, $P(B) = 0.3$, and $P(A \\\\cap B) = 0.1$. The value of $10 \\\\times P(A \\\\cup B)$ is ________.",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2022",
+    "correct_answer": "7",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Apply the addition theorem: P(A union B) = P(A) + P(B) - P(A intersection B).",
+    "solution_text": "Let's apply the addition theorem:\\n1) $P(A \\\\cup B) = P(A) + P(B) - P(A \\\\cap B) = 0.5 + 0.3 - 0.1 = 0.7$.\\n2) We need $10 \\\\times P(A \\\\cup B) = 10 \\\\times 0.7 = 7$.\\nThe answer is 7.",
+    "common_mistake": "Adding the intersection instead of subtracting it, leading to $0.5+0.3+0.1 = 0.9 \\\\implies 9$.",
+    "concept_slugs": [
+      "probability-classical-algebraic"
+    ]
+  },
+  {
+    "pattern_group": "probability-classical-algebraic",
+    "title": "An integer is chosen at random from the integers 1 to 100 inclusive. If the probability that the chosen integer is divisible by either 4 or 6 is represented as $P$, then the value of $100 P$ is ________.",
+    "difficulty": "hard",
+    "type": "practice",
+    "correct_answer": "33",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Apply inclusion-exclusion: count numbers divisible by 4, count divisible by 6, and subtract those divisible by both (divisible by 12).",
+    "solution_text": "Let's count divisible numbers in the range $[1, 100]$:\\n1) Divisible by 4: $\\\\lfloor 100/4 \\\\rfloor = 25$ numbers.\\n2) Divisible by 6: $\\\\lfloor 100/6 \\\\rfloor = 16$ numbers.\\n3) Divisible by both 4 and 6 (i.e., divisible by $\\\\text{LCM}(4, 6) = 12$):\\n   $\\\\lfloor 100/12 \\\\rfloor = 8$ numbers.\\n4) By inclusion-exclusion, the count of integers divisible by 4 or 6 is:\\n   $\\\\text{Count} = 25 + 16 - 8 = 33$.\\n5) The probability is $P = \\\\frac{33}{100}$.\\n6) We need $100 P = 100 \\\\times \\\\frac{33}{100} = 33$.\\nThe answer is 33.",
+    "common_mistake": "Adding $25 + 16 = 41$ directly without subtracting the common multiples of 12, double counting them.",
+    "concept_slugs": [
+      "probability-classical-algebraic"
+    ]
+  },
+  {
+    "pattern_group": "probability-conditional-multiplication",
+    "title": "If $A$ and $B$ are two independent events, then the probability of their intersection $P(A \\\\cap B)$ is equal to:",
+    "difficulty": "easy",
+    "type": "concept",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$P(A) + P(B)$",
+      "B": "$P(A) P(B)$",
+      "C": "$P(A|B)$",
+      "D": "$P(A) + P(B) - P(A)P(B)$"
+    },
+    "notes": "Recall the definition of independent events under conditional probability.",
+    "solution_text": "By definition of conditional probability, we have $P(A|B) = P(A \\\\cap B)/P(B)$.\\n1) If $A$ and $B$ are independent, the occurrence of $B$ does not affect the probability of $A$, meaning $P(A|B) = P(A)$.\\n2) Equating both expressions: $P(A) = \\\\frac{P(A \\\\cap B)}{P(B)} \\\\implies P(A \\\\cap B) = P(A) P(B)$.\\nOption B is correct.",
+    "common_mistake": "Confusing independent events with mutually exclusive events (where $P(A \\\\cap B) = 0$).",
+    "concept_slugs": [
+      "probability-conditional-multiplication"
+    ]
+  },
+  {
+    "pattern_group": "probability-conditional-multiplication",
+    "title": "If $P(A) = 0.8$ and $P(B|A) = 0.3$, then the probability of the intersection $P(A \\\\cap B)$ is:",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$0.5$",
+      "B": "$0.24$",
+      "C": "$0.375$",
+      "D": "$0.11$"
+    },
+    "notes": "Use the multiplication theorem: P(A intersection B) = P(A) * P(B|A).",
+    "solution_text": "Let's apply the multiplication theorem for dependent events:\\n1) $P(A \\\\cap B) = P(A) \\\\times P(B|A)$.\\n2) Substitute the given values:\\n   $P(A \\\\cap B) = 0.8 \\\\times 0.3 = 0.24$.\\nOption B is correct.",
+    "common_mistake": "Dividing $P(B|A)$ by $P(A)$, which calculates $P(B)$ only if they are independent, or other arithmetic errors.",
+    "concept_slugs": [
+      "probability-conditional-multiplication"
+    ]
+  },
+  {
+    "pattern_group": "probability-conditional-multiplication",
+    "title": "If $A$ and $B$ are two independent events such that $P(A) = \\\\frac{1}{3}$ and $P(B) = \\\\frac{1}{4}$, the probability that exactly one of them occurs is:",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2022",
+    "correct_answer": "C",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\\\frac{1}{12}$",
+      "B": "$\\\\frac{7}{12}$",
+      "C": "$\\\\frac{5}{12}$",
+      "D": "$\\\\frac{1}{2}$"
+    },
+    "notes": "The probability that exactly one occurs is P(A)*P(B_bar) + P(A_bar)*P(B).",
+    "solution_text": "Let's write the formula for exactly one event occurring:\\n1) $P(\\\\text{Exactly one}) = P(A \\\\cap \\\\bar{B}) + P(\\\\bar{A} \\\\cap B)$.\\n2) Since $A$ and $B$ are independent, their complements are also independent:\\n   $P(\\\\text{Exactly one}) = P(A)P(\\\\bar{B}) + P(\\\\bar{A})P(B)$.\\n3) Calculate complements:\\n   $P(\\\\bar{A}) = 1 - 1/3 = 2/3$ and $P(\\\\bar{B}) = 1 - 1/4 = 3/4$.\\n4) Substitute values:\\n   $P(\\\\text{Exactly one}) = \\\\left(\\\\frac{1}{3}\\\\right)\\\\left(\\\\frac{3}{4}\\\\right) + \\\\left(\\\\frac{2}{3}\\\\right)\\\\left(\\\\frac{1}{4}\\\\right) = \\\\frac{3}{12} + \\\\frac{2}{12} = \\\\frac{5}{12}$.\\nOption C is correct.",
+    "common_mistake": "Adding $P(A) + P(B)$ without accounting for complements, or incorrectly evaluating complements.",
+    "concept_slugs": [
+      "probability-conditional-multiplication"
+    ]
+  },
+  {
+    "pattern_group": "probability-conditional-multiplication",
+    "title": "A bag contains 5 red and 3 blue balls. Two balls are drawn one after another without replacement. The probability that the first ball is red and the second is blue is:",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\\\frac{15}{56}$",
+      "B": "$\\\\frac{15}{64}$",
+      "C": "$\\\\frac{5}{14}$",
+      "D": "$\\\\frac{15}{28}$"
+    },
+    "notes": "Apply conditional probability: P(Red first)*P(Blue second | Red first).",
+    "solution_text": "Let $R_1$ represent red ball on first draw, and $B_2$ represent blue ball on second draw:\\n1) Total balls initially $= 8$ (5 red, 3 blue).\\n   $P(R_1) = \\\\frac{5}{8}$.\\n2) Since drawing is without replacement, the remaining balls are 7 (4 red, 3 blue).\\n   $P(B_2 | R_1) = \\\\frac{3}{7}$.\\n3) The probability of both occurring is:\\n   $P(R_1 \\\\cap B_2) = P(R_1) \\\\times P(B_2 | R_1) = \\\\frac{5}{8} \\\\times \\\\frac{3}{7} = \\\\frac{15}{56}$.\\nOption A is correct.",
+    "common_mistake": "Assuming replacement (Option B), which yields $15/64$ instead of $15/56$.",
+    "concept_slugs": [
+      "probability-conditional-multiplication"
+    ]
+  },
+  {
+    "pattern_group": "probability-conditional-multiplication",
+    "title": "Let $A$ and $B$ be two independent events. The probability that both occur is $\\\\frac{1}{12}$ and the probability that neither occurs is $\\\\frac{1}{2}$. Under these conditions, the values of $P(A)$ and $P(B)$ are respectively:",
+    "difficulty": "hard",
+    "type": "pyq",
+    "source": "JEE Advanced 2020",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\\\frac{1}{3}$ and $\\\\frac{1}{4}$",
+      "B": "$\\\\frac{1}{2}$ and $\\\\frac{1}{6}$",
+      "C": "$\\\\frac{1}{5}$ and $\\\\frac{5}{12}$",
+      "D": "$\\\\frac{1}{4}$ and $\\\\frac{1}{5}$"
+    },
+    "notes": "Let P(A) = p and P(B) = q. Write two equations: pq = 1/12 and (1-p)(1-q) = 1/2.",
+    "solution_text": "Let's define $p = P(A)$ and $q = P(B)$:\\n1) Since $A$ and $B$ are independent, $P(A \\\\cap B) = pq = \\\\frac{1}{12}$.\\n2) The probability that neither occurs is $P(\\\\bar{A} \\\\cap \\\\bar{B}) = (1-p)(1-q) = \\\\frac{1}{2}$.\\n3) Expand the second equation:\\n   $1 - (p+q) + pq = \\\\frac{1}{2}$.\\n4) Substitute $pq = \\\\frac{1}{12}$ into this equation:\\n   $1 - (p+q) + \\\\frac{1}{12} = \\\\frac{1}{2} \\\\implies p+q = 1 + \\\\frac{1}{12} - \\\\frac{1}{2} = \\\\frac{7}{12}$.\\n5) We have $p+q = \\\\frac{7}{12}$ and $pq = \\\\frac{1}{12}$.\\n6) Solving this system using the quadratic formula yields roots $x = \\\\frac{1}{3}$ and $x = \\\\frac{1}{4}$.\\nTherefore, the probabilities are $\\\\frac{1}{3}$ and $\\\\frac{1}{4}$.\\nOption A is correct.",
+    "common_mistake": "Solving the equation with incorrect arithmetic resulting in non-real roots or Option B.",
+    "concept_slugs": [
+      "probability-conditional-multiplication"
+    ]
+  },
+  {
+    "pattern_group": "probability-conditional-multiplication",
+    "title": "If $P(A) = 0.6$, $P(B) = 0.5$, and $A$ and $B$ are independent events, then the value of $10 \\\\times P(A \\\\cap B)$ is ________.",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "3",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Since they are independent, multiply P(A) and P(B) directly.",
+    "solution_text": "Let's calculate the intersection probability:\\n1) Since $A$ and $B$ are independent:\\n   $P(A \\\\cap B) = P(A) \\\\times P(B) = 0.6 \\\\times 0.5 = 0.3$.\\n2) We need $10 \\\\times P(A \\\\cap B) = 10 \\\\times 0.3 = 3$.\\nThe answer is 3.",
+    "common_mistake": "Adding probabilities instead of multiplying, which calculates the union if they were mutually exclusive.",
+    "concept_slugs": [
+      "probability-conditional-multiplication"
+    ]
+  },
+  {
+    "pattern_group": "probability-conditional-multiplication",
+    "title": "If $A$ and $B$ are two independent events such that $P(A \\\\cup B) = 0.58$ and $P(A) = 0.4$, then the value of $100 \\\\times P(B)$ is ________.",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2023",
+    "correct_answer": "30",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Use the addition formula, substituting P(A intersection B) = P(A)*P(B).",
+    "solution_text": "Let's define $P(B) = p$:\\n1) Since $A$ and $B$ are independent, $P(A \\\\cap B) = P(A)P(B) = 0.4p$.\\n2) Use the addition theorem:\\n   $P(A \\\\cup B) = P(A) + P(B) - P(A \\\\cap B)$\\n   $0.58 = 0.4 + p - 0.4p$\\n   $0.58 - 0.4 = 0.6p \\\\implies 0.18 = 0.6p \\\\implies p = 0.3$.\\n3) We need $100 \\\\times P(B) = 100 \\\\times 0.3 = 30$.\\nThe answer is 30.",
+    "common_mistake": "Neglecting to substitute $P(A \\\\cap B) = 0.4p$, solving for $p$ with an incorrect equation.",
+    "concept_slugs": [
+      "probability-conditional-multiplication"
+    ]
+  },
+  {
+    "pattern_group": "probability-conditional-multiplication",
+    "title": "A bag contains 4 white and 6 black balls. Three balls are drawn one by one without replacement. If the probability that all three balls are black is $P$, then the value of $30 P$ is ________.",
+    "difficulty": "hard",
+    "type": "practice",
+    "correct_answer": "5",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Apply the multiplication theorem sequentially for three events: P(B1)*P(B2|B1)*P(B3|B1,B2).",
+    "solution_text": "Let's apply the multiplication theorem for the three successive draws:\\n1) Total balls $= 10$ (4 white, 6 black).\\n   - First draw: $P(B_1) = \\\\frac{6}{10}$.\\n2) Remaining balls $= 9$ (4 white, 5 black).\\n   - Second draw: $P(B_2 | B_1) = \\\\frac{5}{9}$.\\n3) Remaining balls $= 8$ (4 white, 4 black).\\n   - Third draw: $P(B_3 | B_1 \\\\cap B_2) = \\\\frac{4}{8} = \\\\frac{1}{2}$.\\n4) Probability that all three are black is:\\n   $P = \\\\frac{6}{10} \\\\times \\\\frac{5}{9} \\\\times \\\\frac{1}{2} = \\\\frac{3}{5} \\\\times \\\\frac{5}{9} \\\\times \\\\frac{1}{2} = \\\\frac{1}{6}$.\\n5) We need $30 P = 30 \\\\times \\\\frac{1}{6} = 5$.\\nThe answer is 5.",
+    "common_mistake": "Assuming replacement (independent trials), which yields a probability of $(3/5)^3 = 27/125$ instead of $1/6$.",
+    "concept_slugs": [
+      "probability-conditional-multiplication"
+    ]
+  },
+  {
+    "pattern_group": "probability-total-bayes",
+    "title": "Bayes' Theorem expresses the posterior probability $P(E_i | A)$ of an event $E_i$ given event $A$ in terms of prior probabilities $P(E_j)$ and likelihoods $P(A | E_j)$ as:",
+    "difficulty": "easy",
+    "type": "concept",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\\\frac{P(E_i)P(A|E_i)}{\\\\sum_{j} P(E_j)P(A|E_j)}$",
+      "B": "$\\\\frac{P(A|E_i)}{\\\\sum_{j} P(E_j)P(A|E_j)}$",
+      "C": "$\\\\frac{P(E_i)P(E_i|A)}{\\\\sum_{j} P(E_j)P(A|E_j)}$",
+      "D": "$P(E_i) P(A|E_i)$"
+    },
+    "notes": "Recall the definition of conditional probability and apply the law of total probability for the denominator.",
+    "solution_text": "By definition of conditional probability:\\n1) $P(E_i | A) = \\\\frac{P(E_i \\\\cap A)}{P(A)}$.\\n2) By multiplication theorem: $P(E_i \\\\cap A) = P(E_i) P(A | E_i)$.\\n3) By the Law of Total Probability: $P(A) = \\\\sum_{j} P(E_j) P(A | E_j)$ where $E_j$ form a partition of the sample space.\\n4) Substitute these back to yield Bayes' Theorem: $P(E_i | A) = \\\\frac{P(E_i)P(A|E_i)}{\\\\sum_{j} P(E_j)P(A|E_j)}$.\\nOption A is correct.",
+    "common_mistake": "Neglecting to include the prior probability $P(E_i)$ in the numerator (Option B).",
+    "concept_slugs": [
+      "probability-total-bayes"
+    ]
+  },
+  {
+    "pattern_group": "probability-total-bayes",
+    "title": "Bag A contains 3 red and 5 black balls, while Bag B contains 4 red and 4 black balls. One bag is chosen at random and a ball is drawn. The probability that the drawn ball is red is:",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\\\frac{7}{16}$",
+      "B": "$\\\\frac{1}{2}$",
+      "C": "$\\\\frac{3}{8}$",
+      "D": "$\\\\frac{5}{16}$"
+    },
+    "notes": "Apply the Law of Total Probability with two bags: P(Red) = P(Bag A)*P(Red | Bag A) + P(Bag B)*P(Red | Bag B).",
+    "solution_text": "Let's apply the Law of Total Probability:\\n1) Let $E_1$ represent choosing Bag A and $E_2$ represent choosing Bag B. Since chosen at random: $P(E_1) = P(E_2) = \\\\frac{1}{2}$.\\n2) Probability of drawing a red ball from Bag A: $P(R | E_1) = \\\\frac{3}{8}$.\\n3) Probability of drawing a red ball from Bag B: $P(R | E_2) = \\\\frac{4}{8} = \\\\frac{1}{2}$.\\n4) Total probability of drawing a red ball is:\\n   $P(R) = P(E_1)P(R|E_1) + P(E_2)P(R|E_2)$\\n   $P(R) = \\\\left(\\\\frac{1}{2}\\\\right)\\\\left(\\\\frac{3}{8}\\\\right) + \\\\left(\\\\frac{1}{2}\\\\right)\\\\left(\\\\frac{4}{8}\\\\right) = \\\\frac{3}{16} + \\\\frac{4}{16} = \\\\frac{7}{16}$.\\nOption A is correct.",
+    "common_mistake": "Averaging the red ball counts directly without weighting by bag selection probability (though they are equal here, it is bad practice).",
+    "concept_slugs": [
+      "probability-total-bayes"
+    ]
+  },
+  {
+    "pattern_group": "probability-total-bayes",
+    "title": "An insurance company insured 2000 scooter drivers, 4000 car drivers, and 6000 truck drivers. The probability of an accident for each type is 0.01, 0.03, and 0.15 respectively. One of the insured persons meets with an accident. The probability that he is a scooter driver is:",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2022",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\\\frac{1}{52}$",
+      "B": "$\\\\frac{3}{52}$",
+      "C": "$\\\\frac{15}{52}$",
+      "D": "$\\\\frac{19}{52}$"
+    },
+    "notes": "Define events for driver types and apply Bayes' Theorem.",
+    "solution_text": "Let $E_1, E_2, E_3$ be the events of selecting a scooter driver, car driver, and truck driver respectively:\\n1) Total drivers $= 2000 + 4000 + 6000 = 12000$.\\n   - $P(E_1) = 2000/12000 = 1/6$.\\n   - $P(E_2) = 4000/12000 = 1/3$.\\n   - $P(E_3) = 6000/12000 = 1/2$.\\n2) The likelihood of an accident $A$ is:\\n   $P(A|E_1) = 0.01$, $P(A|E_2) = 0.03$, $P(A|E_3) = 0.15$.\\n3) The total probability of an accident is:\\n   $P(A) = P(E_1)P(A|E_1) + P(E_2)P(A|E_2) + P(E_3)P(A|E_3)$\\n   $P(A) = \\\\frac{1}{6}(0.01) + \\\\frac{1}{3}(0.03) + \\\\frac{1}{2}(0.15) = \\\\frac{0.01 + 0.06 + 0.45}{6} = \\\\frac{0.52}{6}$.\\n4) By Bayes' Theorem, the probability that the driver is a scooter driver is:\\n   $P(E_1 | A) = \\\\frac{P(E_1)P(A|E_1)}{P(A)} = \\\\frac{\\\\frac{1}{6}(0.01)}{\\\\frac{0.52}{6}} = \\\\frac{0.01}{0.52} = \\\\frac{1}{52}$.\\nOption A is correct.",
+    "common_mistake": "Neglecting to divide by the total probability, or incorrect driver category weighting.",
+    "concept_slugs": [
+      "probability-total-bayes"
+    ]
+  },
+  {
+    "pattern_group": "probability-total-bayes",
+    "title": "In a bolt factory, machines A, B, and C manufacture 25%, 35%, and 40% of the total bolts respectively. Of their outputs, 5%, 4%, and 2% are defective. A bolt is drawn at random and is found to be defective. The probability that it was manufactured by machine B is:",
+    "difficulty": "hard",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\\\frac{28}{69}$",
+      "B": "$\\\\frac{25}{69}$",
+      "C": "$\\\\frac{16}{69}$",
+      "D": "$\\\\frac{4}{23}$"
+    },
+    "notes": "Define machine choices as events E1, E2, E3, and defective bolt as event D. Apply Bayes' Theorem.",
+    "solution_text": "Let's apply Bayes' Theorem:\\n1) Prior probabilities: $P(A) = 0.25$, $P(B) = 0.35$, $P(C) = 0.40$.\\n2) Defective probabilities: $P(D|A) = 0.05$, $P(D|B) = 0.04$, $P(D|C) = 0.02$.\\n3) Total probability of defective bolt $P(D)$:\\n   $P(D) = 0.25(0.05) + 0.35(0.04) + 0.40(0.02) = 0.0125 + 0.0140 + 0.0080 = 0.0345$.\\n4) Probability that it came from machine B:\\n   $P(B|D) = \\\\frac{P(B)P(D|B)}{P(D)} = \\\\frac{0.35 \\\\times 0.04}{0.0345} = \\\\frac{0.0140}{0.0345} = \\\\frac{140}{345} = \\\\frac{28}{69}$.\\nOption A is correct.",
+    "common_mistake": "Neglecting the prior machine proportions, calculating it as simple defective ratio $4 / (5+4+2) = 4/11$.",
+    "concept_slugs": [
+      "probability-total-bayes"
+    ]
+  },
+  {
+    "pattern_group": "probability-total-bayes",
+    "title": "A card from a pack of 52 cards is lost. From the remaining cards of the pack, two cards are drawn and are found to be spades. The probability of the lost card being a spade is:",
+    "difficulty": "hard",
+    "type": "pyq",
+    "source": "JEE Advanced 2021",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\\\frac{11}{50}$",
+      "B": "$\\\\frac{13}{50}$",
+      "C": "$\\\\frac{1}{4}$",
+      "D": "$\\\\frac{3}{4}$"
+    },
+    "notes": "Define E1: lost card is spade, E2: lost card is not spade. Find conditional probabilities of drawing two spades.",
+    "solution_text": "Let $E_1$ be the event that the lost card is a spade, and $E_2$ be the event that the lost card is not a spade:\\n1) $P(E_1) = 13/52 = 1/4$, and $P(E_2) = 39/52 = 3/4$.\\n2) Let $A$ be the event of drawing two spade cards from the remaining 51 cards:\\n   - If lost card is a spade ($E_1$), 12 spades remain: $P(A|E_1) = \\\\frac{\\\\binom{12}{2}}{\\\\binom{51}{2}} = \\\\frac{12 \\\\times 11}{51 \\\\times 50}$.\\n   - If lost card is not a spade ($E_2$), 13 spades remain: $P(A|E_2) = \\\\frac{\\\\binom{13}{2}}{\\\\binom{51}{2}} = \\\\frac{13 \\\\times 12}{51 \\\\times 50}$.\\n3) Apply Bayes' Theorem to find $P(E_1 | A)$:\\n   $P(E_1 | A) = \\\\frac{P(E_1)P(A|E_1)}{P(E_1)P(A|E_1) + P(E_2)P(A|E_2)} = \\\\frac{(1/4) \\\\times 12 \\\\times 11}{(1/4) \\\\times 12 \\\\times 11 + (3/4) \\\\times 13 \\\\times 12}$\\n   Cancel out shared terms $1/4$ and $12$ in numerator and denominator:\\n   $P(E_1 | A) = \\\\frac{11}{11 + 3 \\\\times 13} = \\\\frac{11}{11 + 39} = \\\\frac{11}{50}$.\\nOption A is correct.",
+    "common_mistake": "Assuming the probability remains $1/4$ (Option C) unchanged by the observation of drawing two spades.",
+    "concept_slugs": [
+      "probability-total-bayes"
+    ]
+  },
+  {
+    "pattern_group": "probability-total-bayes",
+    "title": "A box contains 2 gold coins, and another box contains 1 gold and 1 silver coin. A box is chosen at random and a coin is drawn. If the coin drawn is gold, then the probability that the other coin in the chosen box is also gold is $P$. The value of $30 P$ is ________.",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "20",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Define Box 1: (G, G), Box 2: (G, S). Find the probability of choosing Box 1 given that a gold coin is drawn.",
+    "solution_text": "Let's apply Bayes' Theorem:\\n1) Let $E_1$ be Box 1 (G, G) and $E_2$ be Box 2 (G, S). $P(E_1) = P(E_2) = \\\\frac{1}{2}$.\\n2) The likelihoods of drawing a gold coin $G$:\\n   $P(G | E_1) = 1$ (both are gold).\\n   $P(G | E_2) = \\\\frac{1}{2}$ (one gold, one silver).\\n3) The probability that the other coin is also gold is the probability that we selected Box 1 given $G$:\\n   $P(E_1 | G) = \\\\frac{P(E_1)P(G|E_1)}{P(E_1)P(G|E_1) + P(E_2)P(G|E_2)} = \\\\frac{(1/2)(1)}{(1/2)(1) + (1/2)(1/2)} = \\\\frac{1}{1 + 1/2} = \\\\frac{2}{3}$.\\n4) We need $30 P = 30 \\\\times \\\\frac{2}{3} = 20$.\\nThe answer is 20.",
+    "common_mistake": "Assuming the probability is $1/2$ by thinking only about the coins left, neglecting that Box 1 has a higher chance of producing a gold coin.",
+    "concept_slugs": [
+      "probability-total-bayes"
+    ]
+  },
+  {
+    "pattern_group": "probability-total-bayes",
+    "title": "A man is known to speak the truth 3 out of 4 times. He throws a die and reports that it is a 6. If the probability that it is actually a 6 is represented as $P$, then the value of $40 P$ is ________.",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2023",
+    "correct_answer": "15",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Define E1: die shows 6, E2: die does not show 6. Apply Bayes' Theorem with truth-telling.",
+    "solution_text": "Let's apply Bayes' Theorem:\\n1) Let $E_1$ be the event that 6 occurs, and $E_2$ be the event that 6 does not occur:\\n   $P(E_1) = \\\\frac{1}{6}$ and $P(E_2) = \\\\frac{5}{6}$.\\n2) Let $R_6$ be the event that he reports a 6:\\n   - $P(R_6 | E_1) = \\\\frac{3}{4}$ (he speaks the truth).\\n   - $P(R_6 | E_2) = \\\\frac{1}{4}$ (he lies, reporting a 6 when it is not a 6).\\n3) Find the posterior probability $P(E_1 | R_6)$:\\n   $P(E_1 | R_6) = \\\\frac{P(E_1)P(R_6|E_1)}{P(E_1)P(R_6|E_1) + P(E_2)P(R_6|E_2)} = \\\\frac{(1/6)(3/4)}{(1/6)(3/4) + (5/6)(1/4)} = \\\\frac{3}{3 + 5} = \\\\frac{3}{8}$.\\n4) We need $40 P = 40 \\\\times \\\\frac{3}{8} = 15$.\\nThe answer is 15.",
+    "common_mistake": "Neglecting the probability of rolling a non-6, leading to a simple ratio of $3/4$.",
+    "concept_slugs": [
+      "probability-total-bayes"
+    ]
+  },
+  {
+    "pattern_group": "probability-total-bayes",
+    "title": "Three boxes contain respectively: 1 white, 2 red, 3 black; 2 white, 3 red, 1 black; and 3 white, 1 red, 2 black balls. A box is chosen at random and 2 balls are drawn. They happen to be 1 white and 1 red. If the probability that they came from the second box is $P$, then the value of $110 P$ is ________.",
+    "difficulty": "hard",
+    "type": "practice",
+    "correct_answer": "60",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Evaluate the likelihood of drawing 1W and 1R for each box, then use Bayes' Theorem.",
+    "solution_text": "Let $B_1, B_2, B_3$ be the three box selections. $P(B_1) = P(B_2) = P(B_3) = \\\\frac{1}{3}$:\\n1) Each box has exactly 6 balls. The total ways to draw 2 balls from any box is $\\\\binom{6}{2} = 15$.\\n2) Let $A$ be the event of drawing 1 white and 1 red ball:\\n   - $P(A|B_1) = \\\\frac{1 \\\\times 2}{15} = \\\\frac{2}{15}$.\\n   - $P(A|B_2) = \\\\frac{2 \\\\times 3}{15} = \\\\frac{6}{15}$.\\n   - $P(A|B_3) = \\\\frac{3 \\\\times 1}{15} = \\\\frac{3}{15}$.\\n3) Apply Bayes' Theorem to find $P(B_2 | A)$:\\n   $P(B_2 | A) = \\\\frac{P(B_2)P(A|B_2)}{P(B_1)P(A|B_1) + P(B_2)P(A|B_2) + P(B_3)P(A|B_3)} = \\\\frac{\\\\frac{1}{3}\\\\left(\\\\frac{6}{15}\\\\right)}{\\\\frac{1}{3}\\\\left(\\\\frac{2}{15}\\\\right) + \\\\frac{1}{3}\\\\left(\\\\frac{6}{15}\\\\right) + \\\\frac{1}{3}\\\\left(\\\\frac{3}{15}\\\\right)}$\\n   $P(B_2 | A) = \\\\frac{6}{2 + 6 + 3} = \\\\frac{6}{11}$.\\n4) We need $110 P = 110 \\\\times \\\\frac{6}{11} = 60$.\\nThe answer is 60.",
+    "common_mistake": "Errors in cofactor multiplication or total sum calculations, yielding an incorrect fraction denominator.",
+    "concept_slugs": [
+      "probability-total-bayes"
+    ]
+  },
+  {
+    "pattern_group": "probability-binomial-distribution",
+    "title": "In a binomial distribution with parameters $n$ (number of trials) and $p$ (probability of success), the probability of getting exactly $r$ successes is given by:",
+    "difficulty": "easy",
+    "type": "concept",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\\\binom{n}{r} p^r (1-p)^{n-r}$",
+      "B": "$p^r (1-p)^{n-r}$",
+      "C": "$\\\\binom{n}{r} p^{n-r} (1-p)^r$",
+      "D": "$n p^r (1-p)^{n-r}$"
+    },
+    "notes": "This is the basic definition of binomial probability mass function.",
+    "solution_text": "The probability of getting exactly $r$ successes and $n-r$ failures in a specific order is $p^r (1-p)^{n-r}$.\\n1) Since there are $\\\\binom{n}{r}$ different ways to arrange these successes and failures among the $n$ trials:\\n   $P(X=r) = \\\\binom{n}{r} p^r (1-p)^{n-r}$.\\nOption A is correct.",
+    "common_mistake": "Neglecting the combination factor $\\\\binom{n}{r}$ (Option B) which accounts for different ordering of successes.",
+    "concept_slugs": [
+      "probability-binomial-distribution"
+    ]
+  },
+  {
+    "pattern_group": "probability-binomial-distribution",
+    "title": "A fair die is thrown 6 times. If getting an odd number is considered a success, the probability of obtaining exactly 5 successes is:",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\\\frac{3}{64}$",
+      "B": "$\\\\frac{3}{32}$",
+      "C": "$\\\\frac{5}{64}$",
+      "D": "$\\\\frac{5}{32}$"
+    },
+    "notes": "Define success probability p = 1/2 and apply the binomial formula with n=6, r=5.",
+    "solution_text": "Let's apply the binomial formula:\\n1) Odd numbers on a die: {1, 3, 5}, so $p = \\\\frac{3}{6} = \\\\frac{1}{2}$.\\n2) The probability of failure is $q = 1 - p = \\\\frac{1}{2}$.\\n3) Number of trials $n = 6$, and success count $r = 5$.\\n4) $P(X = 5) = \\\\binom{6}{5} \\\\left(\\\\frac{1}{2}\\\\right)^5 \\\\left(\\\\frac{1}{2}\\\\right)^1 = 6 \\\\times \\\\frac{1}{64} = \\\\frac{6}{64} = \\\\frac{3}{32}$.\\nOption B is correct.",
+    "common_mistake": "Using a wrong combination value for $\\\\binom{6}{5}$ or incorrect arithmetic in fractions.",
+    "concept_slugs": [
+      "probability-binomial-distribution"
+    ]
+  },
+  {
+    "pattern_group": "probability-binomial-distribution",
+    "title": "The mean of a binomial distribution is 4 and its variance is 2. The probability of obtaining exactly 2 successes is:",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2022",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\\\frac{7}{64}$",
+      "B": "$\\\\frac{21}{128}$",
+      "C": "$\\\\frac{7}{32}$",
+      "D": "$\\\\frac{9}{64}$"
+    },
+    "notes": "Set up equations np = 4 and npq = 2 to find n, p, q.",
+    "solution_text": "Let's find the parameters of the binomial distribution first:\\n1) Mean $= np = 4$.\\n2) Variance $= npq = 2$.\\n3) Divide variance by mean: $\\\\frac{npq}{np} = \\\\frac{2}{4} \\\\implies q = \\\\frac{1}{2}$.\\n4) Thus, $p = 1 - q = \\\\frac{1}{2}$.\\n5) Find $n$: $n \\\\left(\\\\frac{1}{2}\\\\right) = 4 \\\\implies n = 8$.\\n6) Calculate $P(X = 2)$:\\n   $P(X = 2) = \\\\binom{8}{2} p^2 q^6 = 28 \\\\left(\\\\frac{1}{2}\\\\right)^2 \\\\left(\\\\frac{1}{2}\\\\right)^6 = 28 \\\\times \\\\frac{1}{256} = \\\\frac{7}{64}$.\\nOption A is correct.",
+    "common_mistake": "Incorrectly assigning $p=2$, forgetting that probability must satisfy $0 \\\\le p \\\\le 1$.",
+    "concept_slugs": [
+      "probability-binomial-distribution"
+    ]
+  },
+  {
+    "pattern_group": "probability-binomial-distribution",
+    "title": "If a fair coin is tossed 10 times, the probability of getting at least 8 heads is:",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\\\frac{7}{128}$",
+      "B": "$\\\\frac{9}{128}$",
+      "C": "$\\\\frac{11}{256}$",
+      "D": "$\\\\frac{3}{64}$"
+    },
+    "notes": "Calculate P(X >= 8) = P(X=8) + P(X=9) + P(X=10).",
+    "solution_text": "Let $X$ represent the number of heads in 10 tosses. $n=10$, $p=1/2$, $q=1/2$:\\n1) We need $P(X \\\\ge 8) = P(X=8) + P(X=9) + P(X=10)$.\\n2) Apply binomial formula:\\n   - $P(X=8) = \\\\binom{10}{8} (1/2)^{10} = \\\\frac{45}{1024}$.\\n   - $P(X=9) = \\\\binom{10}{9} (1/2)^{10} = \\\\frac{10}{1024}$.\\n   - $P(X=10) = \\\\binom{10}{10} (1/2)^{10} = \\\\frac{1}{1024}$.\\n3) Sum the probabilities:\\n   $P(X \\\\ge 8) = \\\\frac{45 + 10 + 1}{1024} = \\\\frac{56}{1024} = \\\\frac{7}{128}$.\\nOption A is correct.",
+    "common_mistake": "Neglecting to include the case $P(X=10)$, or incorrect combination calculations.",
+    "concept_slugs": [
+      "probability-binomial-distribution"
+    ]
+  },
+  {
+    "pattern_group": "probability-binomial-distribution",
+    "title": "The probability of a shooter hitting a target is $\\\\frac{1}{3}$. The minimum number of times he must shoot so that the probability of hitting the target at least once is greater than 0.99 is:",
+    "difficulty": "hard",
+    "type": "pyq",
+    "source": "JEE Advanced 2020",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "12",
+      "B": "11",
+      "C": "10",
+      "D": "9"
+    },
+    "notes": "Use the complement rule: P(hitting at least once) = 1 - P(misses all).",
+    "solution_text": "Let $n$ be the number of shoots:\\n1) Success probability $p = 1/3 \\\\implies q = 2/3$.\\n2) The probability of hitting at least once is $P(X \\\\ge 1) = 1 - P(X = 0) = 1 - (2/3)^n$.\\n3) We need $1 - (2/3)^n > 0.99 \\\\implies (2/3)^n < 0.01$.\\n4) Taking logarithms or calculating powers sequentially:\\n   - $(2/3)^5 \\\\approx 0.131$\\n   - $(2/3)^{10} \\\\approx 0.017$\\n   - $(2/3)^{11} \\\\approx 0.011$\\n   - $(2/3)^{12} \\\\approx 0.0076 < 0.01$.\\n5) Therefore, the minimum integer $n$ is 12.\\nOption A is correct.",
+    "common_mistake": "Incorrectly solving the inequality or choosing $n=11$ by rounding down.",
+    "concept_slugs": [
+      "probability-binomial-distribution"
+    ]
+  },
+  {
+    "pattern_group": "probability-binomial-distribution",
+    "title": "For a binomial distribution, the mean is 6 and the variance is 2. The parameter $n$ (representing the total number of trials) is ________.",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "9",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Set up np = 6 and np(1-p) = 2, then solve for n.",
+    "solution_text": "Let's set up the system of equations:\\n1) Mean: $np = 6$.\\n2) Variance: $np(1-p) = 2$.\\n3) Substitute $np = 6$ into the variance equation:\\n   $6(1-p) = 2 \\\\implies 1-p = \\\\frac{1}{3} \\\\implies p = \\\\frac{2}{3}$.\\n4) Find $n$ using the mean equation:\\n   $n \\\\left(\\\\frac{2}{3}\\\\right) = 6 \\\\implies n = 9$.\\nTherefore, the parameter $n$ is 9.",
+    "common_mistake": "Solving for p incorrectly, leading to a fractional value for n.",
+    "concept_slugs": [
+      "probability-binomial-distribution"
+    ]
+  },
+  {
+    "pattern_group": "probability-binomial-distribution",
+    "title": "A pair of fair dice is thrown 10 times. If getting a doublet is considered a success, and the variance of the number of successes is represented as $V$, then the value of $18 V$ is ________.",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2021",
+    "correct_answer": "25",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Determine success probability p (doublets are (1,1) to (6,6)) and compute np(1-p).",
+    "solution_text": "Let's find the success probability $p$:\\n1) Doublets are: {(1,1), (2,2), (3,3), (4,4), (5,5), (6,6)}, so $p = \\\\frac{6}{36} = \\\\frac{1}{6}$.\\n2) The probability of failure is $q = 1 - p = \\\\frac{5}{6}$.\\n3) Number of trials $n = 10$.\\n4) The variance is $V = npq = 10 \\\\times \\\\frac{1}{6} \\\\times \\\\frac{5}{6} = \\\\frac{50}{36} = \\\\frac{25}{18}$.\\n5) We need $18 V = 18 \\\\times \\\\frac{25}{18} = 25$.\\nThe answer is 25.",
+    "common_mistake": "Calculating variance as $np = 10/6$, forgetting the failure probability factor $q$.",
+    "concept_slugs": [
+      "probability-binomial-distribution"
+    ]
+  },
+  {
+    "pattern_group": "probability-binomial-distribution",
+    "title": "If the sum of the mean and variance of a binomial distribution for 5 trials is equal to $1.8$, then the value of $10 \\\\times (\\\\text{mean})$ is ________.",
+    "difficulty": "hard",
+    "type": "practice",
+    "correct_answer": "10",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Set up the equation np + np(1-p) = 1.8 with n = 5 and solve the quadratic in p.",
+    "solution_text": "Let's solve the quadratic equation:\\n1) Given $n=5$, and $\\\\text{mean} + \\\\text{variance} = 1.8$:\\n   $np + np(1-p) = 1.8 \\\\implies 5p + 5p(1-p) = 1.8$.\\n2) Expand the equation:\\n   $5p + 5p - 5p^2 = 1.8 \\\\implies -5p^2 + 10p - 1.8 = 0$.\\n3) Multiply by 5 to make coefficients integers:\\n   $25p^2 - 50p + 9 = 0$.\\n4) Factoring the quadratic:\\n   $(5p - 1)(5p - 9) = 0 \\\\implies p = \\\\frac{1}{5}$ or $p = \\\\frac{9}{5}$.\\n5) Since probability must satisfy $p \\\\le 1$, we choose $p = \\\\frac{1}{5}$.\\n6) Mean $= np = 5 \\\\times \\\\frac{1}{5} = 1$.\\n7) We need $10 \\\\times \\\\text{mean} = 10 \\\\times 1 = 10$.\\nThe answer is 10.",
+    "common_mistake": "Choosing $p = 9/5$ which exceeds 1, resulting in an impossible mean.",
+    "concept_slugs": [
+      "probability-binomial-distribution"
+    ]
+  },
+  {
+    "pattern_group": "probability-geometric-distribution",
+    "title": "Two players A and B roll a die alternately until one of them rolls a 6. If A starts the game, the probability of A winning the game is:",
+    "difficulty": "easy",
+    "type": "concept",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\\\frac{6}{11}$",
+      "B": "$\\\\frac{5}{11}$",
+      "C": "$\\\\frac{1}{2}$",
+      "D": "$\\\\frac{7}{12}$"
+    },
+    "notes": "Express the winning probability as an infinite geometric series.",
+    "solution_text": "Let's define the success and failure probabilities:\\n1) Success (rolling a 6): $p = \\\\frac{1}{6}$ and Failure: $q = \\\\frac{5}{6}$.\\n2) A wins if A rolls a 6 on the 1st roll, or if A and B both fail and A rolls a 6 on the 3rd roll, etc.:\\n   $P(A \\\\text{ wins}) = p + q^2p + q^4p + \\\\ldots$\\n3) This is an infinite geometric series with first term $a = p = \\\\frac{1}{6}$ and common ratio $r = q^2 = \\\\frac{25}{36}$.\\n4) Sum formula:\\n   $P(A \\\\text{ wins}) = \\\\frac{p}{1 - q^2} = \\\\frac{1/6}{1 - 25/36} = \\\\frac{1/6}{11/36} = \\\\frac{6}{11}$.\\nOption A is correct.",
+    "common_mistake": "Assuming both players have an equal chance of $1/2$ (Option C) to win, ignoring A's first-move advantage.",
+    "concept_slugs": [
+      "probability-geometric-distribution"
+    ]
+  },
+  {
+    "pattern_group": "probability-geometric-distribution",
+    "title": "A point is selected at random inside a square of side length 2. The probability that the distance of this point from the center of the square is less than 1 is:",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\\\frac{\\\\pi}{4}$",
+      "B": "$\\\\frac{\\\\pi}{8}$",
+      "C": "$\\\\frac{1}{2}$",
+      "D": "$\\\\frac{\\\\pi}{2}$"
+    },
+    "notes": "Use geometric probability: Ratio of the area of the favorable circle to the area of the square.",
+    "solution_text": "Let's calculate the areas:\\n1) The total area of the square of side 2 is $A_{\\\\text{total}} = 2^2 = 4$.\\n2) The set of points at distance less than 1 from the center forms a circle of radius $R = 1$ centered inside the square.\\n3) The area of this circle is $A_{\\\\text{circle}} = \\\\pi R^2 = \\\\pi(1)^2 = \\\\pi$.\\n4) The geometric probability is:\\n   $P = \\\\frac{A_{\\\\text{circle}}}{A_{\\\\text{total}}} = \\\\frac{\\\\pi}{4}$.\\nOption A is correct.",
+    "common_mistake": "Using diameter 1 instead of radius 1, resulting in Option B.",
+    "concept_slugs": [
+      "probability-geometric-distribution"
+    ]
+  },
+  {
+    "pattern_group": "probability-geometric-distribution",
+    "title": "Two friends A and B toss a coin alternately until one gets a head. If A tosses first, the probability of B getting a head first (and winning the game) is:",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2022",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\\\frac{1}{3}$",
+      "B": "$\\\\frac{2}{3}$",
+      "C": "$\\\\frac{1}{2}$",
+      "D": "$\\\\frac{1}{4}$"
+    },
+    "notes": "B wins on the 2nd, 4th, 6th tosses. Sum this infinite geometric series.",
+    "solution_text": "Let's define the outcomes:\\n1) Success probability $p = 1/2$ and failure $q = 1/2$.\\n2) B wins if:\\n   - A fails (F) and B succeeds (H) on the 2nd toss: $qp$.\\n   - A, B, A fail and B succeeds on the 4th toss: $q^3p$.\\n3) The infinite series is:\\n   $P(B \\\\text{ wins}) = qp + q^3p + q^5p + \\\\ldots = qp(1 + q^2 + q^4 + \\\\ldots)$.\\n4) Summing the series with $r = q^2 = 1/4$:\\n   $P(B \\\\text{ wins}) = \\\\frac{qp}{1 - q^2} = \\\\frac{(1/2)(1/2)}{1 - 1/4} = \\\\frac{1/4}{3/4} = \\\\frac{1}{3}$.\\nOption A is correct.",
+    "common_mistake": "Calculating A's winning probability (which is $2/3$) instead of B's.",
+    "concept_slugs": [
+      "probability-geometric-distribution"
+    ]
+  },
+  {
+    "pattern_group": "probability-geometric-distribution",
+    "title": "A line segment of length 10 is broken into two parts at a random point. The probability that the length of the shorter segment is at least 3 is:",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\\\frac{2}{5}$",
+      "B": "$\\\\frac{3}{5}$",
+      "C": "$\\\\frac{1}{5}$",
+      "D": "$\\\\frac{1}{2}$"
+    },
+    "notes": "Let the break point be x from one end. Express the condition for the shorter part to be >= 3.",
+    "solution_text": "Let's define the position of the break point as $x \\\\in [0, 10]$:\\n1) The two segments have lengths $x$ and $10-x$.\\n2) The shorter segment length is $\\\\min(x, 10-x)$.\\n3) We require $\\\\min(x, 10-x) \\\\ge 3$.\\n4) This implies two simultaneous inequalities:\\n   $x \\\\ge 3$ and $10-x \\\\ge 3 \\\\implies x \\\\le 7$.\\n5) Thus, the break point must lie in the interval $x \\\\in [3, 7]$.\\n6) The length of this favorable interval is $7 - 3 = 4$.\\n7) The total possible length is 10.\\n8) Probability $= \\\\frac{4}{10} = \\\\frac{2}{5}$.\\nOption A is correct.",
+    "common_mistake": "Calculating the probability as $3/10$, thinking only of the boundary values.",
+    "concept_slugs": [
+      "probability-geometric-distribution"
+    ]
+  },
+  {
+    "pattern_group": "probability-geometric-distribution",
+    "title": "Three players A, B, and C alternately toss a coin in that order. The first player to get a head wins the game. The probability that B wins the game is:",
+    "difficulty": "hard",
+    "type": "pyq",
+    "source": "JEE Advanced 2022",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\\\frac{2}{7}$",
+      "B": "$\\\\frac{4}{7}$",
+      "C": "$\\\\frac{1}{7}$",
+      "D": "$\\\\frac{3}{7}$"
+    },
+    "notes": "Identify the tosses on which B wins (2nd, 5th, 8th, etc.) and write the infinite series.",
+    "solution_text": "Let's denote success (head) as $H$ (probability $1/2$) and failure as $F$ (probability $1/2$):\\n1) B wins on the 2nd, 5th, 8th, ... tosses:\\n   - 2nd toss: $FH \\\\implies (1/2)^2 = 1/4$.\\n   - 5th toss: $FFFFH \\\\implies (1/2)^5 = 1/32$.\\n2) This is an infinite geometric series with first term $a = 1/4$ and common ratio $r = (1/2)^3 = 1/8$.\\n3) The sum is:\\n   $P(B \\\\text{ wins}) = \\\\frac{a}{1-r} = \\\\frac{1/4}{1 - 1/8} = \\\\frac{1/4}{7/8} = \\\\frac{2}{7}$.\\nOption A is correct.",
+    "common_mistake": "Confusing the order of players and calculating A's winning probability ($4/7$) instead of B's.",
+    "concept_slugs": [
+      "probability-geometric-distribution"
+    ]
+  },
+  {
+    "pattern_group": "probability-geometric-distribution",
+    "title": "Two players A and B roll a die alternately. The first to roll a prime number wins. If A starts the game, and the probability of A winning is $P$, then the value of $15 P$ is ________.",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "10",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Primes on a die are 2, 3, 5. Calculate success probability and set up the infinite sum.",
+    "solution_text": "Let's find the success probability of rolling a prime number:\\n1) Prime numbers on a die are ${2, 3, 5}$ (3 numbers).\\n   $p = \\\\frac{3}{6} = \\\\frac{1}{2}$ and failure $q = \\\\frac{1}{2}$.\\n2) A wins if A rolls a prime on the 1st roll, 3rd roll, 5th roll, etc.:\\n   $P = p + q^2p + q^4p + \\\\ldots = \\\\frac{p}{1 - q^2}$.\\n3) Substitute $p = 1/2$ and $q = 1/2$:\\n   $P = \\\\frac{1/2}{1 - 1/4} = \\\\frac{1/2}{3/4} = \\\\frac{2}{3}$.\\n4) We need $15 P = 15 \\\\times \\\\frac{2}{3} = 10$.\\nThe answer is 10.",
+    "common_mistake": "Counting 1 as a prime number, which makes success probability $4/6 = 2/3$ and changes the result.",
+    "concept_slugs": [
+      "probability-geometric-distribution"
+    ]
+  },
+  {
+    "pattern_group": "probability-geometric-distribution",
+    "title": "Two players A and B toss a coin alternately until one gets a head. If A tosses first, the probability of A winning is $p$. The value of $30 p$ is ________.",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2021",
+    "correct_answer": "20",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "A wins on the 1st, 3rd, 5th tosses. Set up the infinite geometric series.",
+    "solution_text": "Let's set up the series for A winning:\\n1) Success probability $p_0 = 1/2$ and failure $q = 1/2$.\\n2) A wins on the 1st, 3rd, 5th ... tosses:\\n   $p = p_0 + q^2p_0 + q^4p_0 + \\\\ldots = \\\\frac{p_0}{1 - q^2}$.\\n3) Substitute the values:\\n   $p = \\\\frac{1/2}{1 - 1/4} = \\\\frac{1/2}{3/4} = \\\\frac{2}{3}$.\\n4) We need $30 p = 30 \\\\times \\\\frac{2}{3} = 20$.\\nThe answer is 20.",
+    "common_mistake": "Calculating B's winning probability ($1/3$), which would yield $10$ instead of $20$.",
+    "concept_slugs": [
+      "probability-geometric-distribution"
+    ]
+  },
+  {
+    "pattern_group": "probability-geometric-distribution",
+    "title": "A point $(x, y)$ is chosen at random inside the rectangle bounded by $x=0, x=4, y=0, y=3$. If the probability that the coordinates satisfy $y \\\\le x$ is represented as $P$, then the value of $24 P$ is ________.",
+    "difficulty": "hard",
+    "type": "practice",
+    "correct_answer": "15",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Draw the rectangle and line y = x. Find the area of the region where y <= x inside the rectangle.",
+    "solution_text": "Let's calculate the areas:\\n1) The total area of the rectangle of width 4 and height 3 is $A_{\\\\text{total}} = 4 \\\\times 3 = 12$.\\n2) The region of interest is $y \\\\le x$ inside the rectangle.\\n3) The line $y = x$ intersects $y = 3$ at $(3, 3)$.\\n4) The region inside the rectangle where $y > x$ is a right-angled triangle in the upper-left with vertices $(0,0)$, $(0,3)$, and $(3,3)$.\\n   - The base of this triangle is 3 (along $y=3$).\\n   - The height of this triangle is 3 (along $x=0$).\\n   - Area of this triangle is $A_{\\\\text{upper}} = \\\\frac{1}{2} \\\\times 3 \\\\times 3 = 4.5$.\\n5) The area where $y \\\\le x$ is the remaining area of the rectangle:\\n   $A_{\\\\text{favorable}} = 12 - 4.5 = 7.5$.\\n6) The probability is $P = \\\\frac{7.5}{12} = \\\\frac{5}{8}$.\\n7) We need $24 P = 24 \\\\times \\\\frac{5}{8} = 15$.\\nThe answer is 15.",
+    "common_mistake": "Assuming the line $y=x$ divides the rectangle into two equal areas of 6 (probability 1/2), which only holds for squares.",
+    "concept_slugs": [
+      "probability-geometric-distribution"
+    ]
+  },
+  {
+    "pattern_group": "probability-random-variable",
+    "title": "The variance of a discrete random variable $X$ is defined in terms of expectation $E[X]$ and $E[X^2]$ as:",
+    "difficulty": "easy",
+    "type": "concept",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$E[X^2] - E[X]$",
+      "B": "$E[X^2] - (E[X])^2$",
+      "C": "$(E[X])^2 - E[X^2]$",
+      "D": "$E[X^2] + (E[X])^2$"
+    },
+    "notes": "Recall the algebraic expansion of Var(X) = E[(X - E[X])^2].",
+    "solution_text": "Let's derive the variance formula:\\n1) $\\\\text{Var}(X) = E[(X - E[X])^2]$.\\n2) Expand the square inside the expectation:\\n   $\\\\text{Var}(X) = E[X^2 - 2X \\\\cdot E[X] + (E[X])^2]$.\\n3) Using the linearity of expectation:\\n   $\\\\text{Var}(X) = E[X^2] - 2E[X] \\\\cdot E[X] + (E[X])^2$\\n   $\\\\text{Var}(X) = E[X^2] - 2(E[X])^2 + (E[X])^2 = E[X^2] - (E[X])^2$.\\nOption B is correct.",
+    "common_mistake": "Confusing the square of expectation $(E[X])^2$ with $E[X^2]$ (Option C or A).",
+    "concept_slugs": [
+      "probability-random-variable"
+    ]
+  },
+  {
+    "pattern_group": "probability-random-variable",
+    "title": "A fair coin is tossed twice. Let $X$ represent the number of heads obtained. The expected value $E[X]$ of this random variable is:",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$0.5$",
+      "B": "$1$",
+      "C": "$1.5$",
+      "D": "$2$"
+    },
+    "notes": "Define the probability distribution of X (0, 1, or 2 heads) and calculate sum of x*P(x).",
+    "solution_text": "Let's write the probability distribution of $X$:\\n1) Sample space: {TT, HT, TH, HH}.\\n2) Values of $X$:\\n   - $P(X=0) = P(\\\\text{TT}) = 1/4$.\\n   - $P(X=1) = P(\\\\text{HT}) + P(\\\\text{TH}) = 2/4 = 1/2$.\\n   - $P(X=2) = P(\\\\text{HH}) = 1/4$.\\n3) The expected value is:\\n   $E[X] = \\\\sum x \\\\cdot P(X=x) = 0 \\\\cdot \\\\left(\\\\frac{1}{4}\\\\right) + 1 \\\\cdot \\\\left(\\\\frac{1}{2}\\\\right) + 2 \\\\cdot \\\\left(\\\\frac{1}{4}\\\\right) = 0.5 + 0.5 = 1$.\\nOption B is correct.",
+    "common_mistake": "Claiming expectation is 1.5 or 2 by neglecting the probability weights of each outcome.",
+    "concept_slugs": [
+      "probability-random-variable"
+    ]
+  },
+  {
+    "pattern_group": "probability-random-variable",
+    "title": "Two fair dice are thrown. Let $X$ be the random variable representing the sum of the numbers obtained. The expected value $E[X]$ is:",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2022",
+    "correct_answer": "C",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "6",
+      "B": "8",
+      "C": "7",
+      "D": "7.5"
+    },
+    "notes": "Apply the property that expectation of sum of two variables is the sum of their individual expectations.",
+    "solution_text": "Let's use the linearity of expectation:\\n1) Let $X_1$ and $X_2$ be the numbers rolled on the first and second die respectively.\\n2) The expected value of a single die roll is:\\n   $E[X_1] = \\\\frac{1+2+3+4+5+6}{6} = \\\\frac{21}{6} = 3.5$.\\n   Similarly, $E[X_2] = 3.5$.\\n3) The sum is $X = X_1 + X_2$.\\n4) By linearity of expectation:\\n   $E[X] = E[X_1] + E[X_2] = 3.5 + 3.5 = 7$.\\nOption C is correct.",
+    "common_mistake": "Writing the entire distribution table for sums 2 to 12 (though it works, it is slow and prone to errors).",
+    "concept_slugs": [
+      "probability-random-variable"
+    ]
+  },
+  {
+    "pattern_group": "probability-random-variable",
+    "title": "Two cards are drawn simultaneously from a well-shuffled pack of 52 cards. Let $X$ be the random variable representing the number of aces drawn. The expected value $E[X]$ is:",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\\\frac{2}{13}$",
+      "B": "$\\\\frac{1}{13}$",
+      "C": "$\\\\frac{4}{13}$",
+      "D": "$\\\\frac{3}{26}$"
+    },
+    "notes": "Define the probability distribution of X (0, 1, or 2 aces) and calculate sum of x*P(x).",
+    "solution_text": "Let's find the probability distribution of $X$:\\n1) The total ways to draw 2 cards from 52 is $\\\\binom{52}{2} = 1326$.\\n2) The number of aces is 4, and non-aces is 48:\\n   - $P(X=0) = \\\\frac{\\\\binom{48}{2}}{\\\\binom{52}{2}} = \\\\frac{48 \\\\times 47}{52 \\\\times 51} = \\\\frac{188}{221}$.\\n   - $P(X=1) = \\\\frac{\\\\binom{4}{1}\\\\binom{48}{1}}{\\\\binom{52}{2}} = \\\\frac{4 \\\\times 48}{1326} = \\\\frac{32}{221}$.\\n   - $P(X=2) = \\\\frac{\\\\binom{4}{2}}{\\\\binom{52}{2}} = \\\\frac{6}{1326} = \\\\frac{1}{221}$.\\n3) The expected value is:\\n   $E[X] = 0 \\\\cdot P(X=0) + 1 \\\\cdot P(X=1) + 2 \\\\cdot P(X=2)$\\n   $E[X] = 1 \\\\cdot \\\\left(\\\\frac{32}{221}\\\\right) + 2 \\\\cdot \\\\left(\\\\frac{1}{221}\\\\right) = \\\\frac{34}{221} = \\\\frac{2}{13}$.\\nOption A is correct.",
+    "common_mistake": "Neglecting to divide by combination options, or incorrect fraction simplification.",
+    "concept_slugs": [
+      "probability-random-variable"
+    ]
+  },
+  {
+    "pattern_group": "probability-random-variable",
+    "title": "A box contains 3 black and 2 red balls. Two balls are drawn one by one without replacement. If $X$ is the random variable representing the number of red balls drawn, then the variance $\\\\text{Var}(X)$ is:",
+    "difficulty": "hard",
+    "type": "pyq",
+    "source": "JEE Advanced 2021",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$0.36$",
+      "B": "$0.64$",
+      "C": "$0.48$",
+      "D": "$0.24$"
+    },
+    "notes": "Find the probability distribution of X (0, 1, or 2 red balls). Compute E[X] and E[X^2].",
+    "solution_text": "Let's find the probability distribution of $X$ (number of red balls drawn without replacement):\\n1) $X$ can take values 0, 1, 2:\\n   - $P(X=0) = P(\\\\text{B, B}) = \\\\frac{3}{5} \\\\times \\\\frac{2}{4} = 0.3$.\\n   - $P(X=1) = P(\\\\text{B, R}) + P(\\\\text{R, B}) = \\\\frac{3}{5} \\\\times \\\\frac{2}{4} + \\\\frac{2}{5} \\\\times \\\\frac{3}{4} = 0.6$.\\n   - $P(X=2) = P(\\\\text{R, R}) = \\\\frac{2}{5} \\\\times \\\\frac{1}{4} = 0.1$.\\n2) Expectation $E[X]$:\\n   $E[X] = 0(0.3) + 1(0.6) + 2(0.1) = 0.8$.\\n3) Expectation $E[X^2]$:\\n   $E[X^2] = 0^2(0.3) + 1^2(0.6) + 2^2(0.1) = 0.6 + 0.4 = 1.0$.\\n4) Variance $\\\\text{Var}(X)$:\\n   $\\\\text{Var}(X) = E[X^2] - (E[X])^2 = 1.0 - (0.8)^2 = 1.0 - 0.64 = 0.36$.\\nOption A is correct.",
+    "common_mistake": "Stated as $0.64$ (Option B), which is the square of expectation $(E[X])^2$, or making mistakes in the without-replacement probabilities.",
+    "concept_slugs": [
+      "probability-random-variable"
+    ]
+  },
+  {
+    "pattern_group": "probability-random-variable",
+    "title": "A random variable $X$ has the probability distribution $P(X=1) = k$, $P(X=2) = 2k$, and $P(X=3) = 3k$. The value of $12k$ is ________.",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "2",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Use the property that the sum of all probabilities in a distribution must equal 1.",
+    "solution_text": "Let's sum the probabilities:\\n1) $\\\\sum P(X=x) = 1 \\\\implies k + 2k + 3k = 1$.\\n2) $6k = 1 \\\\implies k = \\\\frac{1}{6}$.\\n3) We need $12k = 12 \\\\times \\\\frac{1}{6} = 2$.\\nTherefore, the answer is 2.",
+    "common_mistake": "Solving $6k=1 \\\\implies k=6$ by mistake, or setting the sum of probabilities to 0.",
+    "concept_slugs": [
+      "probability-random-variable"
+    ]
+  },
+  {
+    "pattern_group": "probability-random-variable",
+    "title": "A random variable $X$ has the following probability distribution:\\n$X$: 0, 1, 2, 3\\n$P(X)$: $0.1$, $k$, $2k$, $0.3$.\\nThe value of $10 \\\\times E[X]$ is ________.",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2021",
+    "correct_answer": "19",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Find k first by summing probabilities to 1, then compute E[X] = sum of x*P(x).",
+    "solution_text": "Let's find $k$ first:\\n1) Sum of probabilities $= 1 \\\\implies 0.1 + k + 2k + 0.3 = 1$.\\n2) $3k + 0.4 = 1 \\\\implies 3k = 0.6 \\\\implies k = 0.2$.\\n3) The probability distribution is:\\n   - $P(X=0) = 0.1$\\n   - $P(X=1) = 0.2$\\n   - $P(X=2) = 0.4$\\n   - $P(X=3) = 0.3$.\\n4) Compute expected value $E[X]$:\\n   $E[X] = 0(0.1) + 1(0.2) + 2(0.4) + 3(0.3) = 0.2 + 0.8 + 0.9 = 1.9$.\\n5) We need $10 \\\\times E[X] = 10 \\\\times 1.9 = 19$.\\nTherefore, the answer is 19.",
+    "common_mistake": "Losing track of the zero term or calculation error in sum.",
+    "concept_slugs": [
+      "probability-random-variable"
+    ]
+  },
+  {
+    "pattern_group": "probability-random-variable",
+    "title": "A box contains 3 red and 7 black balls. Three balls are drawn one by one with replacement. If the random variable $X$ represents the number of red balls drawn, then the value of $100 \\\\times \\\\text{Var}(X)$ is ________.",
+    "difficulty": "hard",
+    "type": "practice",
+    "correct_answer": "63",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Since balls are replaced, this represents a binomial distribution with n=3 and p=3/10. Apply Var(X) = npq.",
+    "solution_text": "Let's model this as a binomial distribution since draws are with replacement:\\n1) Number of trials $n = 3$.\\n2) Success probability (drawing a red ball) $p = \\\\frac{3}{10} = 0.3$.\\n3) Failure probability $q = 1 - p = 0.7$.\\n4) The variance of a binomial distribution is given by:\\n   $\\\\text{Var}(X) = npq = 3 \\\\times 0.3 \\\\times 0.7 = 0.63$.\\n5) We need $100 \\\\times \\\\text{Var}(X) = 100 \\\\times 0.63 = 63$.\\nThe answer is 63.",
+    "common_mistake": "Treating this as a drawing without replacement, which would use hypergeometric distribution formula and yield a different variance.",
+    "concept_slugs": [
+      "probability-random-variable"
+    ]
+  }
+]
