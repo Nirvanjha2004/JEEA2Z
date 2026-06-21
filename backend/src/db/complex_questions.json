@@ -1,0 +1,920 @@
+[
+  {
+    "pattern_group": "complex-modulus-argument-polar",
+    "title": "The modulus of the complex number $z = \\\\frac{1+i}{1-i}$ is equal to:",
+    "difficulty": "easy",
+    "type": "concept",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$0$",
+      "B": "$1$",
+      "C": "\\\\sqrt{2}$",
+      "D": "$2$"
+    },
+    "notes": "Use the property $|z_1/z_2| = |z_1|/|z_2|$ to compute the modulus quickly.",
+    "solution_text": "Let's apply the modulus property:\\n1) For any two complex numbers $z_1, z_2$, we have $\\\\left|\\\\frac{z_1}{z_2}\\\\right| = \\\\frac{|z_1|}{|z_2|}$.\\n2) Here, $z_1 = 1+i$ and $z_2 = 1-i$.\\n3) $|1+i| = \\\\sqrt{1^2 + 1^2} = \\\\sqrt{2}$.\\n4) $|1-i| = \\\\sqrt{1^2 + (-1)^2} = \\\\sqrt{2}$.\\n5) Therefore, $|z| = \\\\frac{|1+i|}{|1-i|} = \\\\frac{\\\\sqrt{2}}{\\\\sqrt{2}} = 1$.\\nOption B is correct.",
+    "common_mistake": "Failing to rationalize the denominator or mistakenly computing the modulus as $\\\\sqrt{2}$ instead of 1.",
+    "concept_slugs": [
+      "complex-modulus-argument-polar"
+    ]
+  },
+  {
+    "pattern_group": "complex-modulus-argument-polar",
+    "title": "The principal argument of the complex number $z = -1 - i\\\\sqrt{3}$ is:",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\\\frac{2\\\\pi}{3}$",
+      "B": "$-\\\\frac{2\\\\pi}{3}$",
+      "C": "$-\\\\frac{\\\\pi}{3}$",
+      "D": "$\\\\frac{4\\\\pi}{3}$"
+    },
+    "notes": "Determine the quadrant in which the complex number lies and then find its principal argument.",
+    "solution_text": "Let's find the principal argument step-by-step:\\n1) The given complex number is $z = x + iy = -1 - i\\\\sqrt{3}$, so $x = -1$ and $y = -\\\\sqrt{3}$.\\n2) Since both $x < 0$ and $y < 0$, $z$ lies in the third quadrant.\\n3) Let $\\\\theta$ be the acute angle in the first quadrant: $\\\\tan \\\\theta = \\\\left|\\\\frac{y}{x}\\\\right| = \\\\frac{\\\\sqrt{3}}{1} = \\\\sqrt{3} \\\\implies \\\\theta = \\\\frac{\\\\pi}{3}$.\\n4) For the third quadrant, the principal argument $\\\\text{arg}(z)$ is given by $-(\\\\pi - \\\\theta) = -\\\\left(\\\\pi - \\\\frac{\\\\pi}{3}\\\\right) = -\\\\frac{2\\\\pi}{3}$.\\nOption B is correct.",
+    "common_mistake": "Choosing $\\\\frac{4\\\\pi}{3}$ (Option D), which is a valid argument but outside the principal argument range of $(-\\\\pi, \\\\pi]$, or incorrect quadrant assignment leading to Option A.",
+    "concept_slugs": [
+      "complex-modulus-argument-polar"
+    ]
+  },
+  {
+    "pattern_group": "complex-modulus-argument-polar",
+    "title": "The number of solutions of the equation $z^2 + |z|^2 = 0$ for a complex number $z$ is:",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2020",
+    "correct_answer": "D",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "1",
+      "B": "2",
+      "C": "4",
+      "D": "Infinitely many"
+    },
+    "notes": "Express z in Cartesian form z = x + iy and equate real and imaginary parts to zero.",
+    "solution_text": "Let's substitute $z = x + iy$ (where $x, y \\\\in \\\\mathbb{R}$):\\n1) The equation is $z^2 + |z|^2 = 0$.\\n2) $(x + iy)^2 + (x^2 + y^2) = 0 \\\\implies x^2 - y^2 + 2ixy + x^2 + y^2 = 0$.\\n3) Simplifying terms: $2x^2 + 2ixy = 0 \\\\implies x^2 + ixy = 0$.\\n4) For this to hold, both real and imaginary parts must be zero:\\n   - Real part: $x^2 = 0 \\\\implies x = 0$.\\n   - Imaginary part: $xy = 0$, which is automatically satisfied since $x = 0$ for any value of $y \\\\in \\\\mathbb{R}$.\\n5) Therefore, any complex number of the form $z = iy$ (purely imaginary number) is a solution. Since $y$ can be any real number, there are infinitely many solutions. Option D is correct.",
+    "common_mistake": "Claiming only $z=0$ is a solution (Option A) by failing to analyze the imaginary part correctly.",
+    "concept_slugs": [
+      "complex-modulus-argument-polar"
+    ]
+  },
+  {
+    "pattern_group": "complex-modulus-argument-polar",
+    "title": "If $z_1$ and $z_2$ are two non-zero complex numbers satisfying $|z_1 + z_2| = |z_1| + |z_2|$, then the value of $\\\\arg(z_1) - \\\\arg(z_2)$ is:",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$0$",
+      "B": "$\\\\frac{\\\\pi}{2}$",
+      "C": "$\\\\pi$",
+      "D": "$-\\\\frac{\\\\pi}{2}$"
+    },
+    "notes": "Use the algebraic expansion of $|z_1 + z_2|^2$ or analyze the vector representation of complex numbers.",
+    "solution_text": "Let's analyze geometrically and algebraically:\\n1) We are given $|z_1 + z_2| = |z_1| + |z_2|$.\\n2) Geometrically, this means that the sum of the lengths of two vectors equals the length of their sum vector, which is only possible if $z_1$ and $z_2$ are collinear and point in the same direction from the origin.\\n3) Therefore, they must have the same argument, i.e., $\\\\arg(z_1) = \\\\arg(z_2)$.\\n4) Thus, $\\\\arg(z_1) - \\\\arg(z_2) = 0$.\\nOption A is correct.",
+    "common_mistake": "Selecting $\\\\pi$ (Option C), which represents opposite directions, where $|z_1 - z_2| = |z_1| + |z_2|$ would hold instead.",
+    "concept_slugs": [
+      "complex-modulus-argument-polar"
+    ]
+  },
+  {
+    "pattern_group": "complex-modulus-argument-polar",
+    "title": "Let $z$ be a complex number such that $|z| = 1$ and $z \\\\neq \\\\pm 1$. The real part of the complex number $w = \\\\frac{z-1}{z+1}$ is:",
+    "difficulty": "hard",
+    "type": "pyq",
+    "source": "JEE Main 2022",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$0$",
+      "B": "$1$",
+      "C": "$\\\\frac{1}{|z+1|^2}$",
+      "D": "$-1$"
+    },
+    "notes": "Use the property that if |z| = 1, then z*z_bar = 1, and conjugate the expression for w.",
+    "solution_text": "Let's check the conjugate of $w$ to determine its nature:\\n1) We have $w = \\\\frac{z-1}{z+1}$.\\n2) The conjugate $\\\\bar{w} = \\\\frac{\\\\bar{z}-1}{\\\\bar{z}+1}$.\\n3) Since $|z|=1$, we have $\\\\bar{z} = \\\\frac{1}{z}$.\\n4) Substitute this in: $\\\\bar{w} = \\\\frac{\\\\frac{1}{z}-1}{\\\\frac{1}{z}+1} = \\\\frac{1-z}{1+z} = -\\\\frac{z-1}{z+1} = -w$.\\n5) Since $\\\\bar{w} = -w$, the complex number $w$ is purely imaginary.\\n6) Hence, its real part is exactly 0.\\nOption A is correct.",
+    "common_mistake": "Evaluating using a specific example and making sign errors, or failing to recognize that $\\\\bar{w} = -w$ implies purely imaginary.",
+    "concept_slugs": [
+      "complex-modulus-argument-polar"
+    ]
+  },
+  {
+    "pattern_group": "complex-modulus-argument-polar",
+    "title": "If $z = \\\\frac{\\\\sqrt{3} + i}{2}$, the value of $|z^{100}|$ is equal to ________.",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "1",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Compute the modulus of z first, and then apply the property |z^n| = |z|^n.",
+    "solution_text": "Let's solve step-by-step:\\n1) Calculate the modulus of $z = \\\\frac{\\\\sqrt{3} + i}{2}$:\\n   $|z| = \\\\sqrt{\\\\left(\\\\frac{\\\\sqrt{3}}{2}\\\\right)^2 + \\\\left(\\\\frac{1}{2}\\\\right)^2} = \\\\sqrt{\\\\frac{3}{4} + \\\\frac{1}{4}} = \\\\sqrt{1} = 1$.\\n2) Using the property $|z^n| = |z|^n$, we get:\\n   $|z^{100}| = |z|^{100} = 1^{100} = 1$.\\nTherefore, the answer is 1.",
+    "common_mistake": "Attempting to expand $z^{100}$ using binomial theorem or De Moivre's theorem before taking the modulus, which is extremely tedious and prone to calculation error.",
+    "concept_slugs": [
+      "complex-modulus-argument-polar"
+    ]
+  },
+  {
+    "pattern_group": "complex-modulus-argument-polar",
+    "title": "If $z = \\\\frac{3+4i}{5}$, then the value of $|z|^4$ is ________.",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2021",
+    "correct_answer": "1",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Calculate the modulus of the given complex fraction and raise it to the fourth power.",
+    "solution_text": "Let's compute the modulus of $z = \\\\frac{3+4i}{5}$:\\n1) $|z| = \\\\frac{|3+4i|}{|5|} = \\\\frac{\\\\sqrt{3^2 + 4^2}}{5} = \\\\frac{\\\\sqrt{25}}{5} = \\\\frac{5}{5} = 1$.\\n2) Therefore, $|z|^4 = 1^4 = 1$.\\nThe required value is 1.",
+    "common_mistake": "Neglecting to divide the numerator's modulus by the denominator, or performing incorrect arithmetic in exponentiation.",
+    "concept_slugs": [
+      "complex-modulus-argument-polar"
+    ]
+  },
+  {
+    "pattern_group": "complex-modulus-argument-polar",
+    "title": "Let $z$ be a complex number such that $|z| = 2$. If the maximum possible value of the real part of $w = z + \\\\frac{1}{z}$ is $M$, then the value of $2M$ is ________.",
+    "difficulty": "hard",
+    "type": "practice",
+    "correct_answer": "5",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Write z in polar form z = 2(cos theta + i sin theta), find Re(w) in terms of theta, and maximize it.",
+    "solution_text": "Let's express $z$ in polar form:\\n1) Since $|z|=2$, we can write $z = 2(\\\\cos\\\\theta + i\\\\sin\\\\theta)$.\\n2) Then, $\\\\frac{1}{z} = \\\\frac{1}{2}(\\\\cos\\\\theta - i\\\\sin\\\\theta)$.\\n3) Now, express $w$ as:\\n   $w = z + \\\\frac{1}{z} = 2(\\\\cos\\\\theta + i\\\\sin\\\\theta) + \\\\frac{1}{2}(\\\\cos\\\\theta - i\\\\sin\\\\theta)$\\n   $w = \\\\left(2 + \\\\frac{1}{2}\\\\right)\\\\cos\\\\theta + i\\\\left(2 - \\\\frac{1}{2}\\\\right)\\\\sin\\\\theta = 2.5\\\\cos\\\\theta + 1.5i\\\\sin\\\\theta$.\\n4) The real part of $w$ is $\\\\text{Re}(w) = 2.5\\\\cos\\\\theta$.\\n5) Since the maximum value of $\\\\cos\\\\theta$ is $1$ (when $\\\\theta = 0$), the maximum value of the real part of $w$ is $M = 2.5$.\\n6) We need $2M = 2 \\\\times 2.5 = 5$.\\nTherefore, the answer is 5.",
+    "common_mistake": "Assuming that the maximum occurs when $z$ is purely imaginary, or incorrect division of $1/z$ leading to a wrong coefficient.",
+    "concept_slugs": [
+      "complex-modulus-argument-polar"
+    ]
+  },
+  {
+    "pattern_group": "complex-cube-roots-unity",
+    "title": "If $\\\\omega$ is a non-real complex cube root of unity, then the value of $1 + \\\\omega^n + \\\\omega^{2n}$, where $n$ is a positive integer which is not a multiple of 3, is:",
+    "difficulty": "easy",
+    "type": "concept",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$0$",
+      "B": "$1$",
+      "C": "$3$",
+      "D": "$-1$"
+    },
+    "notes": "Analyze two cases: when n is of the form 3k+1 and 3k+2.",
+    "solution_text": "Let's evaluate based on the properties of $\\\\omega$:\\n1) Since $\\\\omega^3 = 1$ and $1 + \\\\omega + \\\\omega^2 = 0$:\\n2) Case 1: If $n = 3k + 1$:\\n   $\\\\omega^n = \\\\omega^{3k+1} = \\\\omega$ and $\\\\omega^{2n} = \\\\omega^{6k+2} = \\\\omega^2$.\\n   Therefore, $1 + \\\\omega^n + \\\\omega^{2n} = 1 + \\\\omega + \\\\omega^2 = 0$.\\n3) Case 2: If $n = 3k + 2$:\\n   $\\\\omega^n = \\\\omega^{3k+2} = \\\\omega^2$ and $\\\\omega^{2n} = \\\\omega^{6k+4} = \\\\omega^4 = \\\\omega$.\\n   Therefore, $1 + \\\\omega^n + \\\\omega^{2n} = 1 + \\\\omega^2 + \\\\omega = 0$.\\nIn both cases, the value is 0. Option A is correct.",
+    "common_mistake": "Assuming the sum is 3 (Option C) by confusing it with the case when $n$ is a multiple of 3.",
+    "concept_slugs": [
+      "complex-cube-roots-unity"
+    ]
+  },
+  {
+    "pattern_group": "complex-cube-roots-unity",
+    "title": "If $\\\\omega$ is a non-real complex cube root of unity satisfying $\\\\omega^2 + \\\\omega + 1 = 0$, then the roots of the quadratic equation $x^2 - x + 1 = 0$ are given by:",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\\\omega, \\\\omega^2$",
+      "B": "$-\\\\omega, -\\\\omega^2$",
+      "C": "$\\\\omega, -\\\\omega^2$",
+      "D": "$-\\\\omega, \\\\omega^2$"
+    },
+    "notes": "Find roots using the quadratic formula and compare them with the definitions of omega and omega^2.",
+    "solution_text": "Let's solve the quadratic equation $x^2 - x + 1 = 0$:\\n1) Using quadratic formula: $x = \\\\frac{-(-1) \\\\pm \\\\sqrt{(-1)^2 - 4(1)(1)}}{2(1)} = \\\\frac{1 \\\\pm i\\\\sqrt{3}}{2}$.\\n2) Recall that the non-real cube roots of unity are:\\n   $\\\\omega = \\\\frac{-1 + i\\\\sqrt{3}}{2}$ and $\\\\omega^2 = \\\\frac{-1 - i\\\\sqrt{3}}{2}$.\\n3) Calculating $-\\\\omega$ and $-\\\\omega^2$:\\n   $-\\\\omega = \\\\frac{1 - i\\\\sqrt{3}}{2}$ and $-\\\\omega^2 = \\\\frac{1 + i\\\\sqrt{3}}{2}$.\\n4) These match the roots of our equation. Therefore, the roots are $-\\\\omega$ and $-\\\\omega^2$.\\nOption B is correct.",
+    "common_mistake": "Identifying the roots as $\\\\omega, \\\\omega^2$ (Option A), which are the roots of $x^2 + x + 1 = 0$.",
+    "concept_slugs": [
+      "complex-cube-roots-unity"
+    ]
+  },
+  {
+    "pattern_group": "complex-cube-roots-unity",
+    "title": "If $\\\\alpha$ and $\\\\beta$ are the roots of the quadratic equation $x^2 + x + 1 = 0$, then the value of $\\\\alpha^{2024} + \\\\beta^{2024}$ is:",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2021",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$1$",
+      "B": "$-1$",
+      "C": "$0$",
+      "D": "$2$"
+    },
+    "notes": "Notice that the roots of the equation x^2 + x + 1 = 0 are omega and omega^2.",
+    "solution_text": "Let's solve step-by-step:\\n1) The roots of $x^2 + x + 1 = 0$ are $\\\\alpha = \\\\omega$ and $\\\\beta = \\\\omega^2$.\\n2) We need to evaluate $\\\\omega^{2024} + (\\\\omega^2)^{2024} = \\\\omega^{2024} + \\\\omega^{4048}$.\\n3) Simplify powers of $\\\\omega$ using $\\\\omega^3 = 1$:\\n   - $2024 = 3 \\\\times 674 + 2 \\\\implies \\\\omega^{2024} = \\\\omega^2$.\\n   - $4048 = 3 \\\\times 1349 + 1 \\\\implies \\\\omega^{4048} = \\\\omega^1$.\\n4) Therefore, the sum is $\\\\omega^2 + \\\\omega$.\\n5) Since $1 + \\\\omega + \\\\omega^2 = 0$, we have $\\\\omega^2 + \\\\omega = -1$.\\nOption B is correct.",
+    "common_mistake": "Assuming $\\\\omega^{2024} = 1$, which only holds for multiples of 3, leading to Option D.",
+    "concept_slugs": [
+      "complex-cube-roots-unity"
+    ]
+  },
+  {
+    "pattern_group": "complex-cube-roots-unity",
+    "title": "If $\\\\omega$ is a complex cube root of unity, the value of the product $(1 - \\\\omega + \\\\omega^2)(1 - \\\\omega^2 + \\\\omega^4)(1 - \\\\omega^4 + \\\\omega^8)(1 - \\\\omega^8 + \\\\omega^{16})$ is:",
+    "difficulty": "hard",
+    "type": "practice",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$8$",
+      "B": "$16$",
+      "C": "$32$",
+      "D": "$64$"
+    },
+    "notes": "Simplify each factor using omega^3 = 1 and 1 + omega^2 = -omega.",
+    "solution_text": "Let's simplify each factor individually:\\n1) Factor 1: $1 - \\\\omega + \\\\omega^2 = (1 + \\\\omega^2) - \\\\omega = -\\\\omega - \\\\omega = -2\\\\omega$.\\n2) Factor 2: $1 - \\\\omega^2 + \\\\omega^4 = 1 - \\\\omega^2 + \\\\omega = (1 + \\\\omega) - \\\\omega^2 = -\\\\omega^2 - \\\\omega^2 = -2\\\\omega^2$.\\n3) Factor 3: $1 - \\\\omega^4 + \\\\omega^8 = 1 - \\\\omega + \\\\omega^2 = -2\\\\omega$.\\n4) Factor 4: $1 - \\\\omega^8 + \\\\omega^{16} = 1 - \\\\omega^2 + \\\\omega = -2\\\\omega^2$.\\n5) Multiply the simplified factors:\\n   Product $= (-2\\\\omega)(-2\\\\omega^2)(-2\\\\omega)(-2\\\\omega^2) = 16\\\\omega^6$.\\n6) Since $\\\\omega^6 = (\\\\omega^3)^2 = 1^2 = 1$, the product is $16 \\\\times 1 = 16$.\\nOption B is correct.",
+    "common_mistake": "Neglecting the signs of the individual factors, or incorrectly simplifying higher powers of $\\\\omega$.",
+    "concept_slugs": [
+      "complex-cube-roots-unity"
+    ]
+  },
+  {
+    "pattern_group": "complex-cube-roots-unity",
+    "title": "If $\\\\omega$ is a non-real complex cube root of unity, then the value of $(3 + 5\\\\omega + 3\\\\omega^2)^6$ is:",
+    "difficulty": "hard",
+    "type": "pyq",
+    "source": "JEE Main 2021",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "64",
+      "B": "729",
+      "C": "0",
+      "D": "512"
+    },
+    "notes": "Rewrite the expression by grouping terms with coefficient 3 to make use of 1 + omega^2 = -omega.",
+    "solution_text": "Let's simplify the base of the expression:\\n1) Base $= 3 + 5\\\\omega + 3\\\\omega^2 = (3 + 3\\\\omega^2) + 5\\\\omega$.\\n2) Since $1 + \\\\omega^2 = -\\\\omega$, we have $3 + 3\\\\omega^2 = -3\\\\omega$.\\n3) Substitute this back: Base $= -3\\\\omega + 5\\\\omega = 2\\\\omega$.\\n4) Now, raise the base to the power of 6:\\n   $(2\\\\omega)^6 = 2^6 \\\\times \\\\omega^6 = 64 \\\\times (\\\\omega^3)^2 = 64 \\\\times 1 = 64$.\\nOption A is correct.",
+    "common_mistake": "Expanding the trinomial directly, or mistakenly evaluating $(2\\\\omega)^6 = 64\\\\omega$, forgetting that $\\\\omega^6 = 1$.",
+    "concept_slugs": [
+      "complex-cube-roots-unity"
+    ]
+  },
+  {
+    "pattern_group": "complex-cube-roots-unity",
+    "title": "If $\\\\omega$ is a non-real complex cube root of unity, the value of $(1 - \\\\omega + \\\\omega^2)^5 + (1 + \\\\omega - \\\\omega^2)^5$ is ________.",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "32",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Use the relation 1 + omega + omega^2 = 0 to simplify each base first.",
+    "solution_text": "Let's simplify each bracket:\\n1) First term base: $1 - \\\\omega + \\\\omega^2 = (1 + \\\\omega^2) - \\\\omega = -\\\\omega - \\\\omega = -2\\\\omega$.\\n2) Second term base: $1 + \\\\omega - \\\\omega^2 = (1 + \\\\omega) - \\\\omega^2 = -\\\\omega^2 - \\\\omega^2 = -2\\\\omega^2$.\\n3) Raise both to the 5th power:\\n   $(-2\\\\omega)^5 = -32\\\\omega^5 = -32\\\\omega^2$ (since $\\\\omega^3=1$).\\n   $(-2\\\\omega^2)^5 = -32\\\\omega^{10} = -32\\\\omega$ (since $\\\\omega^9=1$).\\n4) Sum of terms: $-32\\\\omega^2 - 32\\\\omega = -32(\\\\omega^2 + \\\\omega)$.\\n5) Since $\\\\omega^2 + \\\\omega = -1$, the sum becomes $-32(-1) = 32$.\\nThe answer is 32.",
+    "common_mistake": "Losing track of negative signs inside exponentiation, resulting in an answer of $-32$ or $0$.",
+    "concept_slugs": [
+      "complex-cube-roots-unity"
+    ]
+  },
+  {
+    "pattern_group": "complex-cube-roots-unity",
+    "title": "Let $\\\\omega$ be a complex cube root of unity. The minimum positive integer $n$ for which $(1 + \\\\omega^2)^n = (1 + \\\\omega)^n$ is ________.",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2022",
+    "correct_answer": "3",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Simplify both sides using 1 + omega^2 = -omega and 1 + omega = -omega^2.",
+    "solution_text": "Let's simplify both sides of the equation:\\n1) Left-hand side (LHS): $(1 + \\\\omega^2)^n = (-\\\\omega)^n$.\\n2) Right-hand side (RHS): $(1 + \\\\omega)^n = (-\\\\omega^2)^n$.\\n3) Set them equal: $(-\\\\omega)^n = (-\\\\omega^2)^n$.\\n4) Divide both sides by $(-\\\\omega)^n$ (since $\\\\omega \\\\neq 0$):\\n   $1 = \\\\frac{(-\\\\omega^2)^n}{(-\\\\omega)^n} = \\\\left(\\\\frac{-\\\\omega^2}{-\\\\omega}\\\\right)^n = \\\\omega^n$.\\n5) The equation is $\\\\omega^n = 1$. The smallest positive integer $n$ for which this holds is $3$.\\nTherefore, the answer is 3.",
+    "common_mistake": "Incorrectly simplifying $1+\\\\omega^2$ to $\\\\omega$ instead of $-\\\\omega$, or obtaining $n=6$ by over-complicating signs.",
+    "concept_slugs": [
+      "complex-cube-roots-unity"
+    ]
+  },
+  {
+    "pattern_group": "complex-cube-roots-unity",
+    "title": "If $\\\\omega$ is a non-real complex cube root of unity, then the value of the sum $\\\\sum_{r=1}^{6} (1 - \\\\omega^r + \\\\omega^{2r})$ is ________.",
+    "difficulty": "hard",
+    "type": "practice",
+    "correct_answer": "6",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Evaluate the term (1 - omega^r + omega^{2r}) for r = 1, 2, 3 and notice the periodic pattern.",
+    "solution_text": "Let's check the values of $T_r = 1 - \\\\omega^r + \\\\omega^{2r}$ for different values of $r$:\\n1) For $r=1$: $T_1 = 1 - \\\\omega + \\\\omega^2 = -2\\\\omega$.\\n2) For $r=2$: $T_2 = 1 - \\\\omega^2 + \\\\omega^4 = 1 - \\\\omega^2 + \\\\omega = -2\\\\omega^2$.\\n3) For $r=3$: $T_3 = 1 - \\\\omega^3 + \\\\omega^6 = 1 - 1 + 1 = 1$.\\n4) Since $\\\\omega^r$ is periodic with period 3:\\n   - $T_4 = T_1 = -2\\\\omega$\\n   - $T_5 = T_2 = -2\\\\omega^2$\\n   - $T_6 = T_3 = 1$\\n5) Sum the terms from $r=1$ to $6$:\\n   Sum $= (T_1 + T_2 + T_3) + (T_4 + T_5 + T_6)$\\n   Sum $= (-2\\\\omega - 2\\\\omega^2 + 1) + (-2\\\\omega - 2\\\\omega^2 + 1)$\\n   Sum $= 2[-2(\\\\omega + \\\\omega^2) + 1]$.\\n6) Since $\\\\omega + \\\\omega^2 = -1$, the sum is:\\n   Sum $= 2[-2(-1) + 1] = 2[2 + 1] = 6$.\\nTherefore, the answer is 6.",
+    "common_mistake": "Assuming the sum is 0 due to cancellation of terms, or incorrectly evaluating the term for $r=3$ as $3$.",
+    "concept_slugs": [
+      "complex-cube-roots-unity"
+    ]
+  },
+  {
+    "pattern_group": "complex-demoivre-roots",
+    "title": "By using De Moivre's Theorem, the expression $(\\\\cos \\\\theta - i \\\\sin \\\\theta)^5$ is simplified to:",
+    "difficulty": "easy",
+    "type": "concept",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\\\cos(5\\\\theta) + i \\\\sin(5\\\\theta)$",
+      "B": "$\\\\cos(5\\\\theta) - i \\\\sin(5\\\\theta)$",
+      "C": "$\\\\cos^5\\\\theta - i \\\\sin^5\\\\theta$",
+      "D": "$-\\\\cos(5\\\\theta) - i \\\\sin(5\\\\theta)$"
+    },
+    "notes": "Recall that cos(-theta) = cos(theta) and sin(-theta) = -sin(theta), then apply De Moivre's Theorem.",
+    "solution_text": "Let's rewrite the complex number in the standard form $e^{i\\\\phi}$:\\n1) $\\\\cos\\\\theta - i\\\\sin\\\\theta = \\\\cos(-\\\\theta) + i\\\\sin(-\\\\theta)$.\\n2) Applying De Moivre's Theorem:\\n   $(\\\\cos\\\\theta - i\\\\sin\\\\theta)^5 = [\\\\cos(-\\\\theta) + i\\\\sin(-\\\\theta)]^5 = \\\\cos(-5\\\\theta) + i\\\\sin(-5\\\\theta)$.\\n3) Since $\\\\cos(-5\\\\theta) = \\\\cos(5\\\\theta)$ and $\\\\sin(-5\\\\theta) = -\\\\sin(5\\\\theta)$:\\n   $(\\\\cos\\\\theta - i\\\\sin\\\\theta)^5 = \\\\cos(5\\\\theta) - i\\\\sin(5\\\\theta)$.\\nOption B is correct.",
+    "common_mistake": "Incorrectly distributing the exponent to the terms individually to get Option C.",
+    "concept_slugs": [
+      "complex-demoivre-roots"
+    ]
+  },
+  {
+    "pattern_group": "complex-demoivre-roots",
+    "title": "For any positive integer $n$ and angle $\\\\theta$, the expression $\\\\left(\\\\frac{1+\\\\cos\\\\theta + i\\\\sin\\\\theta}{1+\\\\cos\\\\theta - i\\\\sin\\\\theta}\\\\right)^n$ simplifies to:",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\\\cos(n\\\\theta) - i\\\\sin(n\\\\theta)$",
+      "B": "$\\\\cos(n\\\\theta) + i\\\\sin(n\\\\theta)$",
+      "C": "$\\\\sin(n\\\\theta) + i\\\\cos(n\\\\theta)$",
+      "D": "$\\\\sin(n\\\\theta) - i\\\\cos(n\\\\theta)$"
+    },
+    "notes": "Use half-angle formulas to simplify the numerator and denominator before applying De Moivre's Theorem.",
+    "solution_text": "Let's simplify the base fraction first:\\n1) Numerator: $1+\\\\cos\\\\theta + i\\\\sin\\\\theta = 2\\\\cos^2(\\\\theta/2) + 2i\\\\sin(\\\\theta/2)\\\\cos(\\\\theta/2) = 2\\\\cos(\\\\theta/2)[\\\\cos(\\\\theta/2) + i\\\\sin(\\\\theta/2)]$.\\n2) Denominator: $1+\\\\cos\\\\theta - i\\\\sin\\\\theta = 2\\\\cos^2(\\\\theta/2) - 2i\\\\sin(\\\\theta/2)\\\\cos(\\\\theta/2) = 2\\\\cos(\\\\theta/2)[\\\\cos(\\\\theta/2) - i\\\\sin(\\\\theta/2)]$.\\n3) The fraction is:\\n   $\\\\frac{2\\\\cos(\\\\theta/2)[\\\\cos(\\\\theta/2) + i\\\\sin(\\\\theta/2)]}{2\\\\cos(\\\\theta/2)[\\\\cos(\\\\theta/2) - i\\\\sin(\\\\theta/2)]} = \\\\frac{\\\\cos(\\\\theta/2) + i\\\\sin(\\\\theta/2)}{\\\\cos(\\\\theta/2) - i\\\\sin(\\\\theta/2)}$.\\n4) Multiply numerator and denominator by $\\\\cos(\\\\theta/2) + i\\\\sin(\\\\theta/2)$:\\n   Ratio $= \\\\frac{(\\\\cos(\\\\theta/2) + i\\\\sin(\\\\theta/2))^2}{\\\\cos^2(\\\\theta/2) + \\\\sin^2(\\\\theta/2)} = \\\\cos\\\\theta + i\\\\sin\\\\theta$.\\n5) Raising this to the power $n$ yields $\\\\cos(n\\\\theta) + i\\\\sin(n\\\\theta)$ by De Moivre's Theorem.\\nOption B is correct.",
+    "common_mistake": "Confusing the sign in the final exponentiation, leading to Option A.",
+    "concept_slugs": [
+      "complex-demoivre-roots"
+    ]
+  },
+  {
+    "pattern_group": "complex-demoivre-roots",
+    "title": "If $z = \\\\cos\\\\theta + i\\\\sin\\\\theta$, then the value of \\\\sum_{k=1}^{15} \\\\text{Im}(z^{2k-1}) at \\\\theta = 2^\\\\circ$ is:",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2020",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\\\frac{1}{4\\\\sin 2^\\\\circ}$",
+      "B": "$\\\\frac{1}{2\\\\sin 2^\\\\circ}$",
+      "C": "$\\\\frac{1}{4\\\\cos 2^\\\\circ}$",
+      "D": "$\\\\frac{1}{2\\\\cos 2^\\\\circ}$"
+    },
+    "notes": "Note that Im(z^{2k-1}) = sin((2k-1)theta). Use the formula for sum of sines of angles in arithmetic progression.",
+    "solution_text": "Let's find the sum:\\n1) Since $z = \\\\cos\\\\theta + i\\\\sin\\\\theta$, we have $z^{2k-1} = \\\\cos((2k-1)\\\\theta) + i\\\\sin((2k-1)\\\\theta)$.\\n2) The imaginary part is $T_k = \\\\text{Im}(z^{2k-1}) = \\\\sin((2k-1)\\\\theta)$.\\n3) The sum is $S = \\\\sum_{k=1}^{15} \\\\sin((2k-1)\\\\theta) = \\\\sin\\\\theta + \\\\sin 3\\\\theta + \\\\ldots + \\\\sin 29\\\\theta$.\\n4) This is a sine series with first term $a = \\\\theta$, common difference $d = 2\\\\theta$, and number of terms $n = 15$.\\n5) Sum formula: $S = \\\\frac{\\\\sin\\\\left(\\\\frac{nd}{2}\\\\right)}{\\\\sin\\\\left(\\\\frac{d}{2}\\\\right)} \\\\sin\\\\left(a + \\\\frac{(n-1)d}{2}\\\\right) = \\\\frac{\\\\sin(15\\\\theta)}{\\\\sin\\\\theta} \\\\sin(\\\\theta + 14\\\\theta) = \\\\frac{\\\\sin^2(15\\\\theta)}{\\\\sin\\\\theta}$.\\n6) At $\\\\theta = 2^\\\\circ$, we have $15\\\\theta = 30^\\\\circ$, so:\\n   $S = \\\\frac{\\\\sin^2(30^\\\\circ)}{\\\\sin 2^\\\\circ} = \\\\frac{(1/2)^2}{\\\\sin 2^\\\\circ} = \\\\frac{1}{4\\\\sin 2^\\\\circ}$.\\nOption A is correct.",
+    "common_mistake": "Using the cosine sum formula instead of sine, or making arithmetic errors while calculating $15 \\\\times 2^\\\\circ$.",
+    "concept_slugs": [
+      "complex-demoivre-roots"
+    ]
+  },
+  {
+    "pattern_group": "complex-demoivre-roots",
+    "title": "Let $1, \\\\alpha_1, \\\\alpha_2, \\\\dots, \\\\alpha_{n-1}$ be the $n$-th roots of unity. The value of the product $(1-\\\\alpha_1)(1-\\\\alpha_2)\\\\cdots(1-\\\\alpha_{n-1})$ is:",
+    "difficulty": "hard",
+    "type": "practice",
+    "correct_answer": "C",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$0$",
+      "B": "$1$",
+      "C": "$n$",
+      "D": "$n^2$"
+    },
+    "notes": "Express the polynomial equation x^n - 1 = 0 in factored form and divide both sides by x-1.",
+    "solution_text": "Let's factor the polynomial equation for $n$-th roots of unity:\\n1) $x^n - 1 = (x-1)(x-\\alpha_1)(x-\\alpha_2)\\\\cdots(x-\\alpha_{n-1})$.\\n2) Divide both sides by $(x-1)$ for $x \\\\neq 1$:\\n   $\\\\frac{x^n - 1}{x-1} = x^{n-1} + x^{n-2} + \\\\ldots + x + 1 = (x-\\alpha_1)(x-\\alpha_2)\\\\cdots(x-\\alpha_{n-1})$.\\n3) Take the limit as $x \\\\to 1$ on both sides:\\n   $1^{n-1} + 1^{n-2} + \\\\ldots + 1 + 1 = (1-\\alpha_1)(1-\\alpha_2)\\\\cdots(1-\\alpha_{n-1})$.\\n4) The left-hand side contains exactly $n$ terms, each equal to $1$, so its sum is $n$.\\n5) Thus, $(1-\\alpha_1)(1-\\alpha_2)\\\\cdots(1-\\alpha_{n-1}) = n$.\\nOption C is correct.",
+    "common_mistake": "Assuming the product is 0 (Option A) by mistakenly including the root 1 in the product.",
+    "concept_slugs": [
+      "complex-demoivre-roots"
+    ]
+  },
+  {
+    "pattern_group": "complex-demoivre-roots",
+    "title": "The total number of complex numbers $z$ satisfying the equation $z^5 = \\\\bar{z}$ is:",
+    "difficulty": "hard",
+    "type": "pyq",
+    "source": "JEE Advanced 2018",
+    "correct_answer": "C",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "5",
+      "B": "6",
+      "C": "7",
+      "D": "8"
+    },
+    "notes": "Take the modulus of both sides first to find the possible values of |z|.",
+    "solution_text": "Let's solve $z^5 = \\\\bar{z}$:\\n1) Take the modulus of both sides: $|z^5| = |\\\\bar{z}| \\\\implies |z|^5 = |z|$.\\n2) This gives $|z|(|z|^4 - 1) = 0$, so either $|z| = 0$ or $|z| = 1$.\\n3) Case 1: $|z| = 0 \\\\implies z = 0$ is a solution.\\n4) Case 2: $|z| = 1$. Multiply both sides of $z^5 = \\\\bar{z}$ by $z$:\\n   $z^6 = z\\\\bar{z} = |z|^2 = 1$.\\n5) The equation $z^6 = 1$ has exactly 6 distinct roots (the 6th roots of unity).\\n6) Combining both cases: $1$ solution from Case 1 and $6$ solutions from Case 2 gives a total of $7$ distinct solutions.\\nOption C is correct.",
+    "common_mistake": "Neglecting the trivial solution $z=0$ (Option B), or incorrectly assuming there are only 5 solutions (Option A).",
+    "concept_slugs": [
+      "complex-demoivre-roots"
+    ]
+  },
+  {
+    "pattern_group": "complex-demoivre-roots",
+    "title": "The value of $(1+i)^8 + (1-i)^8$ is equal to ________.",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "32",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Convert 1+i and 1-i to polar/Euler form first, then raise them to the power of 8.",
+    "solution_text": "Let's convert both to polar form:\\n1) $1+i = \\\\sqrt{2}e^{i\\\\pi/4}$ and $1-i = \\\\sqrt{2}e^{-i\\\\pi/4}$.\\n2) Raise to power 8:\\n   $(1+i)^8 = (\\\\sqrt{2})^8 e^{i8\\\\pi/4} = 16 e^{i2\\\\pi} = 16(1) = 16$.\\n   $(1-i)^8 = (\\\\sqrt{2})^8 e^{-i8\\\\pi/4} = 16 e^{-i2\\\\pi} = 16(1) = 16$.\\n3) Add the values: $16 + 16 = 32$.\\nThe answer is 32.",
+    "common_mistake": "Incorrectly calculating $(\\\\sqrt{2})^8$ as 8 or 64, or writing the sum as 0 due to sign confusion.",
+    "concept_slugs": [
+      "complex-demoivre-roots"
+    ]
+  },
+  {
+    "pattern_group": "complex-demoivre-roots",
+    "title": "The value of the expression $\\\\left(\\\\frac{1+i\\\\sqrt{3}}{1-i\\\\sqrt{3}}\\\\right)^{12}$ is equal to ________.",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2021",
+    "correct_answer": "1",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Express the numerator and denominator in polar form and find their ratio before raising to the 12th power.",
+    "solution_text": "Let's convert to polar form:\\n1) Numerator: $1+i\\\\sqrt{3} = 2 e^{i\\\\pi/3}$.\\n2) Denominator: $1-i\\\\sqrt{3} = 2 e^{-i\\\\pi/3}$.\\n3) The ratio is: $\\\\frac{2e^{i\\\\pi/3}}{2e^{-i\\\\pi/3}} = e^{i2\\\\pi/3}$.\\n4) Raise to the 12th power:\\n   $\\\\left(e^{i2\\\\pi/3}\\\\right)^{12} = e^{i8\\\\pi} = \\\\cos(8\\\\pi) + i\\\\sin(8\\\\pi) = 1 + 0 = 1$.\\nThe value is 1.",
+    "common_mistake": "Incorrect polar form angle definition (using $\\\\pi/6$ instead of $\\\\pi/3$), leading to a non-integer result.",
+    "concept_slugs": [
+      "complex-demoivre-roots"
+    ]
+  },
+  {
+    "pattern_group": "complex-demoivre-roots",
+    "title": "Let $z_k = \\\\cos\\\\frac{2k\\\\pi}{11} + i\\\\sin\\\\frac{2k\\\\pi}{11}$ for $k=1, 2, \\\\ldots, 10$. The value of $\\\\left| \\\\sum_{k=1}^{10} z_k \\\\right|$ is ________.",
+    "difficulty": "hard",
+    "type": "practice",
+    "correct_answer": "1",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Notice that z_k represent the non-trivial 11th roots of unity, and sum of all roots is 0.",
+    "solution_text": "Let's analyze the sum of the roots of unity:\\n1) The 11th roots of unity are solutions to $z^{11} - 1 = 0$, which are $1, z_1, z_2, \\\\dots, z_{10}$.\\n2) The sum of all roots of a polynomial $z^{11} - 1 = 0$ is zero (since the coefficient of $z^{10}$ is 0):\\n   $1 + z_1 + z_2 + \\\\dots + z_{10} = 0$.\\n3) Therefore, the sum of the non-trivial roots is:\\n   $\\\\sum_{k=1}^{10} z_k = -1$.\\n4) The modulus is: $\\\\left| \\\\sum_{k=1}^{10} z_k \\\\right| = |-1| = 1$.\\nThe answer is 1.",
+    "common_mistake": "Stating the sum itself as the answer (which is $-1$) instead of its modulus, or assuming the sum is 0.",
+    "concept_slugs": [
+      "complex-demoivre-roots"
+    ]
+  },
+  {
+    "pattern_group": "complex-rotation-argand",
+    "title": "If a complex number $z$ is rotated counter-clockwise by $\\\\frac{\\\\pi}{2}$ radians about the origin in the Argand plane, the resulting complex number is:",
+    "difficulty": "easy",
+    "type": "concept",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$-z$",
+      "B": "$iz$",
+      "C": "$-iz$",
+      "D": "\\\\bar{z}$"
+    },
+    "notes": "Multiply z by e^{i theta} where theta = pi/2.",
+    "solution_text": "Let's apply the rotation formula:\\n1) Rotation of $z$ by angle $\\\\theta$ counter-clockwise about the origin is given by $z' = z e^{i\\\\theta}$.\\n2) Here, $\\\\theta = \\\\frac{\\\\pi}{2}$.\\n3) $e^{i\\\\pi/2} = \\\\cos(\\\\pi/2) + i\\\\sin(\\\\pi/2) = 0 + i(1) = i$.\\n4) Therefore, $z' = z \\\\times i = iz$.\\nOption B is correct.",
+    "common_mistake": "Confusing counter-clockwise with clockwise rotation, leading to $-iz$ (Option C).",
+    "concept_slugs": [
+      "complex-rotation-argand"
+    ]
+  },
+  {
+    "pattern_group": "complex-rotation-argand",
+    "title": "If $z_1, z_2, z_3$ represent the vertices of an equilateral triangle in the Argand plane, then they satisfy the algebraic relation:",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$z_1^2 + z_2^2 + z_3^2 = z_1z_2 + z_2z_3 + z_3z_1$",
+      "B": "$z_1^2 + z_2^2 + z_3^2 + z_1z_2 + z_2z_3 + z_3z_1 = 0$",
+      "C": "$z_1 + z_2 + z_3 = 0$",
+      "D": "$z_1^2 + z_2^2 + z_3^2 = 3(z_1z_2 + z_2z_3 + z_3z_1)$"
+    },
+    "notes": "Use rotation theorem at vertex z_3 with angle pi/3, or use properties of complex cube roots.",
+    "solution_text": "Let's derive the equilateral triangle condition:\\n1) Let the vertices be $z_1, z_2, z_3$ in counter-clockwise order.\\n2) The side $z_1 - z_3$ is rotated by $60^\\\\circ$ ($\\\\pi/3$) to get $z_2 - z_3$:\\n   $z_2 - z_3 = (z_1 - z_3)e^{i\\\\pi/3}$.\\n   Similarly, $z_3 - z_1 = (z_2 - z_1)e^{i\\\\pi/3}$.\\n3) Eliminating $e^{i\\\\pi/3}$ yields the classic symmetric relation:\\n   $z_1^2 + z_2^2 + z_3^2 = z_1z_2 + z_2z_3 + z_3z_1$.\\nOption A is correct.",
+    "common_mistake": "Choosing Option B due to sign errors, or Option C (which only holds if the circumcenter is at the origin).",
+    "concept_slugs": [
+      "complex-rotation-argand"
+    ]
+  },
+  {
+    "pattern_group": "complex-rotation-argand",
+    "title": "If $z_1, z_2, z_3, z_4$ are the vertices of a square in the Argand plane taken in counter-clockwise order, then which of the following relations is correct?",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2021",
+    "correct_answer": "C",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$z_1 - z_3 = i(z_2 - z_4)$",
+      "B": "$z_1 - z_3 = -i(z_2 - z_4)$",
+      "C": "$z_1 - z_3 = i(z_4 - z_2)$",
+      "D": "$z_1 - z_2 = z_3 - z_4$"
+    },
+    "notes": "Recall that diagonals of a square are perpendicular and bisect each other, representing a rotation of 90 degrees.",
+    "solution_text": "Let's analyze the diagonals of the square:\\n1) The diagonals are $z_3 - z_1$ and $z_4 - z_2$.\\n2) They are equal in length and perpendicular to each other.\\n3) Since the order is counter-clockwise, rotating the diagonal vector $z_3 - z_1$ by $90^\\\\circ$ ($i$) gives $z_4 - z_2$ (or vice versa depending on orientation):\\n   $z_4 - z_2 = i(z_3 - z_1)$.\\n4) Rewrite this equation to find the matching option:\\n   $z_3 - z_1 = \\\\frac{1}{i}(z_4 - z_2) = -i(z_4 - z_2) = i(z_2 - z_4)$.\\n5) Multiplying by $-1$:\\n   $z_1 - z_3 = i(z_4 - z_2)$.\\nOption C is correct.",
+    "common_mistake": "Neglecting the direction of rotation, leading to Option A or B.",
+    "concept_slugs": [
+      "complex-rotation-argand"
+    ]
+  },
+  {
+    "pattern_group": "complex-rotation-argand",
+    "title": "If $z_1, z_2, z_3$ represent the vertices of a triangle $ABC$ which is right-angled and isosceles at the vertex $C$, then:",
+    "difficulty": "hard",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$(z_1-z_3)^2 + (z_2-z_3)^2 = 0$",
+      "B": "$(z_1-z_2)^2 + (z_2-z_3)^2 = 0$",
+      "C": "$(z_1-z_3)^2 = (z_2-z_3)^2$",
+      "D": "$(z_1-z_2)^2 = (z_2-z_3)^2$"
+    },
+    "notes": "Use the rotation theorem at vertex C. The angle between CB and CA is 90 degrees and their lengths are equal.",
+    "solution_text": "Let's apply the rotation theorem at vertex $C$:\\n1) Since $CA = CB$ and the angle at $C$ is $90^\\\\circ$:\\n   $(z_1 - z_3) = \\\\pm i (z_2 - z_3)$.\\n2) Square both sides of the equation:\\n   $(z_1 - z_3)^2 = [\\\\pm i (z_2 - z_3)]^2$\\n   $(z_1 - z_3)^2 = -1 \\\\times (z_2 - z_3)^2$.\\n3) Bring all terms to one side:\\n   $(z_1 - z_3)^2 + (z_2 - z_3)^2 = 0$.\\nOption A is correct.",
+    "common_mistake": "Choosing Option C, forgetting that $i^2 = -1$ when squaring both sides.",
+    "concept_slugs": [
+      "complex-rotation-argand"
+    ]
+  },
+  {
+    "pattern_group": "complex-rotation-argand",
+    "title": "If $z_1$ and $z_2$ are two vertices of an equilateral triangle whose circumcenter is at the origin, then:",
+    "difficulty": "hard",
+    "type": "pyq",
+    "source": "JEE Advanced 2020",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$z_1^2 + z_2^2 + z_1z_2 = 0$",
+      "B": "$z_1^2 + z_2^2 - z_1z_2 = 0$",
+      "C": "$z_1^2 + z_2^2 + 2z_1z_2 = 0$",
+      "D": "$z_1 + z_2 = 0$"
+    },
+    "notes": "Recall that circumcenter = centroid for an equilateral triangle, so z_1 + z_2 + z_3 = 0.",
+    "solution_text": "Let's derive the relationship:\\n1) In an equilateral triangle, the circumcenter coincides with the centroid. Since circumcenter is at the origin:\\n   $\\\\frac{z_1 + z_2 + z_3}{3} = 0 \\\\implies z_3 = -(z_1 + z_2)$.\\n2) We also know that for any equilateral triangle:\\n   $z_1^2 + z_2^2 + z_3^2 = z_1z_2 + z_2z_3 + z_3z_1$.\\n3) Substitute $z_3 = -(z_1 + z_2)$ into this relation:\\n   $z_1^2 + z_2^2 + [-(z_1 + z_2)]^2 = z_1z_2 + z_2[-(z_1+z_2)] + [-(z_1+z_2)]z_1$\\n   $z_1^2 + z_2^2 + (z_1^2 + 2z_1z_2 + z_2^2) = z_1z_2 - z_1z_2 - z_2^2 - z_1^2 - z_1z_2$\\n   $2z_1^2 + 2z_2^2 + 2z_1z_2 = -z_1^2 - z_2^2 - z_1z_2$\\n   $3(z_1^2 + z_2^2 + z_1z_2) = 0 \\\\implies z_1^2 + z_2^2 + z_1z_2 = 0$.\\nOption A is correct.",
+    "common_mistake": "Incorrect substitution or choosing Option B due to algebraic sign slip.",
+    "concept_slugs": [
+      "complex-rotation-argand"
+    ]
+  },
+  {
+    "pattern_group": "complex-rotation-argand",
+    "title": "Let $z_1 = 1+i$ be a complex number. If it is rotated counter-clockwise by $90^\\\\circ$ about the origin, and then shifted by 2 units along the positive real axis, the real part of the new complex number is ________.",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "1",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Perform rotation by multiplying by i, then add 2 to represent horizontal translation.",
+    "solution_text": "Let's perform the transformations step-by-step:\\n1) Initial point: $z_1 = 1+i$.\\n2) Rotation by $90^\\\\circ$ counter-clockwise about origin:\\n   $z' = z_1 \\\\times i = (1+i)i = i + i^2 = -1 + i$.\\n3) Translation by 2 units along the positive real axis:\\n   $z'' = z' + 2 = -1 + i + 2 = 1 + i$.\\n4) The real part of the new complex number is $\\\\text{Re}(z'') = 1$.\\nTherefore, the answer is 1.",
+    "common_mistake": "Applying clockwise rotation (multiplying by -i) instead, or translating before rotating.",
+    "concept_slugs": [
+      "complex-rotation-argand"
+    ]
+  },
+  {
+    "pattern_group": "complex-rotation-argand",
+    "title": "Let $z_1$ and $z_2$ be two complex numbers on the unit circle $|z|=1$. If $z_1$ is rotated counter-clockwise by $60^\\\\circ$ about the origin to obtain $z_2$, then the value of $|z_1 - z_2|^2$ is ________.",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2022",
+    "correct_answer": "1",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Analyze geometrically using the origin O and points A(z_1) and B(z_2) forming triangle OAB.",
+    "solution_text": "Let's analyze geometrically:\\n1) The origin $O$ is at $(0,0)$.\\n2) The points $A$ and $B$ represent $z_1$ and $z_2$ respectively.\\n3) Since $|z_1| = |z_2| = 1$, we have $OA = OB = 1$.\\n4) The angle between $OA$ and $OB$ is $60^\\\\circ$.\\n5) Thus, triangle $OAB$ is an equilateral triangle with side length $1$.\\n6) The distance between $A(z_1)$ and $B(z_2)$ is $AB = |z_1 - z_2| = 1$.\\n7) Thus, $|z_1 - z_2|^2 = 1^2 = 1$.\\nThe value is 1.",
+    "common_mistake": "Using a complicated trigonometric expansion instead of geometric observation, leading to algebra errors.",
+    "concept_slugs": [
+      "complex-rotation-argand"
+    ]
+  },
+  {
+    "pattern_group": "complex-rotation-argand",
+    "title": "In a triangle $ABC$ with vertices $z_1, z_2, z_3$, the angle at vertex $A$ is $60^\\\\circ$ and the side lengths satisfy $AB = AC$. The value of $\\\\left|\\\\frac{z_2 - z_1}{z_3 - z_1}\\\\right|^2$ is ________.",
+    "difficulty": "hard",
+    "type": "practice",
+    "correct_answer": "1",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Apply the rotation theorem at vertex A.",
+    "solution_text": "Let's apply the rotation theorem at vertex $A(z_1)$:\\n1) The vector $AC$ is represented by $z_3 - z_1$ and $AB$ by $z_2 - z_1$.\\n2) Since the angle at $A$ is $60^\\\\circ$ and $AB = AC$:\\n   $z_2 - z_1 = (z_3 - z_1) e^{\\\\pm i\\\\pi/3}$.\\n3) Take the modulus on both sides:\\n   $|z_2 - z_1| = |z_3 - z_1| \\\\times |e^{\\\\pm i\\\\pi/3}|$.\\n4) Since $|e^{\\\\pm i\\\\pi/3}| = 1$:\\n   $|z_2 - z_1| = |z_3 - z_1| \\\\implies \\\\left|\\\\frac{z_2 - z_1}{z_3 - z_1}\\\\right| = 1$.\\n5) Squaring it gives $1^2 = 1$.\\nThe answer is 1.",
+    "common_mistake": "Incorrectly identifying side lengths or getting confused by the complex exponent magnitude.",
+    "concept_slugs": [
+      "complex-rotation-argand"
+    ]
+  },
+  {
+    "pattern_group": "complex-geometry-locus",
+    "title": "The locus of the complex number $z$ satisfying the equation $|z - 3i| = |z + 3i|$ in the complex plane represents the:",
+    "difficulty": "easy",
+    "type": "concept",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Real axis",
+      "B": "Imaginary axis",
+      "C": "Circle of radius 3",
+      "D": "Parabola"
+    },
+    "notes": "Analyze $|z-z_1| = |z-z_2|$ as the perpendicular bisector of the line segment joining z_1 and z_2.",
+    "solution_text": "Let's analyze geometrically:\\n1) The equation $|z - 3i| = |z + 3i|$ represents the set of all points $z$ which are equidistant from the points $3i$ (which is $(0,3)$) and $-3i$ (which is $(0,-3)$).\\n2) This set is the perpendicular bisector of the segment joining $(0,3)$ and $(0,-3)$.\\n3) The midpoint of this segment is the origin $(0,0)$, and the segment lies along the imaginary axis.\\n4) Therefore, the perpendicular bisector is the horizontal line $y = 0$, which is the real axis.\\nOption A is correct.",
+    "common_mistake": "Mistakenly choosing the imaginary axis (Option B) or a circle (Option C).",
+    "concept_slugs": [
+      "complex-geometry-locus"
+    ]
+  },
+  {
+    "pattern_group": "complex-geometry-locus",
+    "title": "The equation $|z - z_1|^2 + |z - z_2|^2 = k$ (where $z_1, z_2$ are fixed complex numbers and $k$ is a real constant) represents a circle in the complex plane if and only if:",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$k \\\\ge |z_1 - z_2|^2$",
+      "B": "$k \\\\ge \\\\frac{1}{2}|z_1 - z_2|^2$",
+      "C": "$k \\\\ge 2|z_1 - z_2|^2$",
+      "D": "$k \\\\ge \\\\frac{1}{4}|z_1 - z_2|^2$"
+    },
+    "notes": "Use Apollonius' theorem or coordinate translation by setting the midpoint of z_1 and z_2 to the origin.",
+    "solution_text": "Let's translate the origin to the midpoint of $z_1$ and $z_2$:\\n1) Let $z_1 = -a$ and $z_2 = a$ where $2|a| = |z_1 - z_2|$.\\n2) The equation becomes: $|z + a|^2 + |z - a|^2 = k$.\\n3) Expand this using $|w|^2 = w\\\\bar{w}$:\\n   $(z+a)(\\\\bar{z}+\\\\bar{a}) + (z-a)(\\\\bar{z}-\\\\bar{a}) = k$\\n   $2|z|^2 + 2|a|^2 = k \\\\implies |z|^2 = \\\\frac{k}{2} - |a|^2$.\\n4) For this to represent a real circle, the radius squared must be non-negative:\\n   \\\\frac{k}{2} - |a|^2 \\\\ge 0 \\\\implies k \\\\ge 2|a|^2$.\\n5) Since $2|a| = |z_1 - z_2| \\\\implies |a|^2 = \\\\frac{1}{4}|z_1 - z_2|^2$, we have:\\n   $k \\\\ge 2 \\\\left(\\\\frac{1}{4}|z_1 - z_2|^2\\\\right) = \\\\frac{1}{2}|z_1 - z_2|^2$.\\nOption B is correct.",
+    "common_mistake": "Choosing Option A by ignoring the factor of 2 in expansion.",
+    "concept_slugs": [
+      "complex-geometry-locus"
+    ]
+  },
+  {
+    "pattern_group": "complex-geometry-locus",
+    "title": "The locus of the complex number $z$ satisfying the equation $|z - 1| = 2|z - i|$ is:",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2022",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "A straight line",
+      "B": "A circle",
+      "C": "An ellipse",
+      "D": "A hyperbola"
+    },
+    "notes": "Square both sides, substitute z = x + iy, and simplify to find the Cartesian equation.",
+    "solution_text": "Let's find the Cartesian locus:\\n1) Given: $|z - 1| = 2|z - i|$.\\n2) Square both sides: $|z - 1|^2 = 4|z - i|^2$.\\n3) Substitute $z = x + iy$:\\n   $(x - 1)^2 + y^2 = 4[x^2 + (y - 1)^2]$\\n   $x^2 - 2x + 1 + y^2 = 4[x^2 + y^2 - 2y + 1]$\\n   $x^2 + y^2 - 2x + 1 = 4x^2 + 4y^2 - 8y + 4$\\n   $3x^2 + 3y^2 + 2x - 8y + 3 = 0$.\\n4) This is of the form $x^2 + y^2 + 2gx + 2fy + c = 0$, which represents a circle.\\nOption B is correct.",
+    "common_mistake": "Assuming it is a ellipse because of the coefficient 2, or a straight line by not squaring the coefficient.",
+    "concept_slugs": [
+      "complex-geometry-locus"
+    ]
+  },
+  {
+    "pattern_group": "complex-geometry-locus",
+    "title": "The locus of a complex number $z$ satisfying the equation $\\\\arg\\\\left(\\\\frac{z-1}{z+1}\\\\right) = \\\\frac{\\\\pi}{4}$ represents:",
+    "difficulty": "hard",
+    "type": "practice",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "A straight line passing through origin",
+      "B": "An arc of a circle",
+      "C": "A parabola",
+      "D": "A pair of straight lines"
+    },
+    "notes": "Recall the geometric interpretation of the angle subtended by a segment joining -1 and 1 at z.",
+    "solution_text": "Let's analyze geometrically:\\n1) The equation $\\\\arg\\\\left(\\\\frac{z-1}{z+1}\\\\right) = \\\\frac{\\\\pi}{4}$ can be interpreted as: the angle between the vectors from $-1$ to $z$ and $1$ to $z$ is constant and equal to $45^\\\\circ$.\\n2) Geometrically, the locus of a point $P(z)$ that subtends a constant angle at two fixed points $A(-1)$ and $B(1)$ is an arc of a circle.\\n3) Since the angle is positive and acute, it represents a major arc of a circle.\\nOption B is correct.",
+    "common_mistake": "Claiming it represents a full circle or a straight line, forgetting that the argument restricts it to a single arc.",
+    "concept_slugs": [
+      "complex-geometry-locus"
+    ]
+  },
+  {
+    "pattern_group": "complex-geometry-locus",
+    "title": "Let $z$ be a complex number satisfying $\\\\text{Re}(z) > 1$ and $|z - 2i| = |z + 2i|$. The locus of $z$ is:",
+    "difficulty": "hard",
+    "type": "pyq",
+    "source": "JEE Advanced 2019",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "A ray starting from 1 (excluding 1) along the positive real axis",
+      "B": "The entire real axis",
+      "C": "The imaginary axis",
+      "D": "A circle of radius 2"
+    },
+    "notes": "Find the line equation from the modulus equality first, and then apply the inequality constraint.",
+    "solution_text": "Let's solve step-by-step:\\n1) The equality is $|z - 2i| = |z + 2i|$.\\n2) This represents the perpendicular bisector of the segment joining $2i$ and $-2i$, which is the real axis ($\\\\text{Im}(z) = 0$).\\n3) Thus, $z$ must be a real number, i.e., $z = x + 0i$.\\n4) The given constraint is $\\\\text{Re}(z) > 1 \\\\implies x > 1$.\\n5) Therefore, the locus is the set of real numbers $x > 1$, which is a ray starting from 1 (excluding 1) along the positive real axis.\\nOption A is correct.",
+    "common_mistake": "Selecting the entire real axis (Option B), neglecting the condition $\\\\text{Re}(z) > 1$.",
+    "concept_slugs": [
+      "complex-geometry-locus"
+    ]
+  },
+  {
+    "pattern_group": "complex-geometry-locus",
+    "title": "The radius of the circle in the complex plane represented by the equation $|z - 3 - 4i| = 5$ is ________.",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "5",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Recall the standard complex equation of a circle: |z - z0| = R.",
+    "solution_text": "Let's compare the equation with the standard circle equation:\\n1) The standard equation of a circle in the complex plane is $|z - z_0| = R$, where $z_0$ is the center and $R$ is the radius.\\n2) Comparing $|z - (3 + 4i)| = 5$, we find:\\n   Center $z_0 = 3 + 4i$, and Radius $R = 5$.\\nTherefore, the radius of the circle is 5.",
+    "common_mistake": "Calculating $\\\\sqrt{3^2 + 4^2}$ to find the radius instead of directly identifying 5 from the right side of the equation.",
+    "concept_slugs": [
+      "complex-geometry-locus"
+    ]
+  },
+  {
+    "pattern_group": "complex-geometry-locus",
+    "title": "If a complex number $z$ satisfies the inequality $|z - 3 - 4i| \\\\le 2$, then the maximum possible value of $|z|$ is ________.",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2020",
+    "correct_answer": "7",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Use triangle inequality: |z| = |(z - z0) + z0| <= |z - z0| + |z0|.",
+    "solution_text": "Let's apply the triangle inequality:\\n1) $|z| = |z - (3 + 4i) + (3 + 4i)| \\\\le |z - (3 + 4i)| + |3 + 4i|$.\\n2) We are given $|z - (3 + 4i)| \\\\le 2$.\\n3) Calculate the modulus of $3 + 4i$: $|3 + 4i| = \\\\sqrt{3^2 + 4^2} = 5$.\\n4) Therefore, $|z| \\\\le 2 + 5 = 7$.\\n5) The maximum possible value is 7.\\nThe answer is 7.",
+    "common_mistake": "Choosing 3 (which is the minimum possible value $|z| \\\\ge 5 - 2 = 3$).",
+    "concept_slugs": [
+      "complex-geometry-locus"
+    ]
+  },
+  {
+    "pattern_group": "complex-geometry-locus",
+    "title": "If the locus of the complex number $z$ satisfying the equation $|z - 1| + |z + 1| = 4$ is represented in the Cartesian form as $\\\\frac{x^2}{a^2} + \\\\frac{y^2}{b^2} = 1$, then the value of $a^2 + b^2$ is ________.",
+    "difficulty": "hard",
+    "type": "practice",
+    "correct_answer": "7",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Identify the ellipse parameters from the definition |z - f1| + |z - f2| = 2a.",
+    "solution_text": "Let's analyze the locus equation:\\n1) The equation $|z - z_1| + |z - z_2| = 2a$ represents an ellipse with foci at $z_1, z_2$ and major axis $2a$ (if $2a > |z_1 - z_2|$).\\n2) Foci: $z_1 = 1$, $z_2 = -1$. The distance between foci is $2ae = |1 - (-1)| = 2 \\\\implies ae = 1$.\\n3) Major axis: $2a = 4 \\\\implies a = 2 \\\\implies a^2 = 4$.\\n4) We know that $ae = 1 \\\\implies e = 1/a = 1/2$.\\n5) Calculate the minor axis squared: $b^2 = a^2(1 - e^2) = a^2 - a^2e^2 = 4 - 1^2 = 3$.\\n6) Thus, $a^2 + b^2 = 4 + 3 = 7$.\\nThe value is 7.",
+    "common_mistake": "Assigning $a = 4$ instead of $a=2$, or getting confused by the relation between $a$, $b$, and $e$.",
+    "concept_slugs": [
+      "complex-geometry-locus"
+    ]
+  },
+  {
+    "pattern_group": "complex-triangle-inequality-bounds",
+    "title": "For any two complex numbers $z_1$ and $z_2$, which of the following inequalities is always true?",
+    "difficulty": "easy",
+    "type": "concept",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$|z_1 + z_2| \\\\le |z_1| + |z_2|$",
+      "B": "$|z_1 + z_2| \\\\ge |z_1| + |z_2|$",
+      "C": "$|z_1 - z_2| \\\\ge |z_1| + |z_2|$",
+      "D": "$|z_1 + z_2| = |z_1| + |z_2|$"
+    },
+    "notes": "Recall the fundamental triangle inequality in complex analysis.",
+    "solution_text": "The triangle inequality states that for any two complex numbers $z_1$ and $z_2$:\\n1) Geometrically, in a triangle formed by the origin and vectors $z_1$ and $z_2$, the length of any side is less than or equal to the sum of the lengths of the other two sides.\\n2) Mathematically: $|z_1 + z_2| \\\\le |z_1| + |z_2|$.\\nOption A is correct.",
+    "common_mistake": "Choosing Option B or D, which only holds under special collinearity conditions.",
+    "concept_slugs": [
+      "complex-triangle-inequality-bounds"
+    ]
+  },
+  {
+    "pattern_group": "complex-triangle-inequality-bounds",
+    "title": "If a complex number $z$ satisfies the equation $\\\\left|z - \\\\frac{4}{z}\\\\right| = 2$, then the maximum possible value of $|z|$ is:",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\\\sqrt{5} - 1$",
+      "B": "$\\\\sqrt{5} + 1$",
+      "C": "$\\\\sqrt{3} + 1$",
+      "D": "$3$"
+    },
+    "notes": "Use the triangle inequality property |z| <= |z - 4/z| + |4/z| to set up a quadratic inequality for |z|.",
+    "solution_text": "Let's apply the triangle inequality:\\n1) $|z| = \\\\left|\\\\left(z - \\\\frac{4}{z}\\\\right) + \\\\frac{4}{z}\\\\right| \\\\le \\\\left|z - \\\\frac{4}{z}\\\\right| + \\\\frac{4}{|z|}$.\\n2) Given $\\\\left|z - \\\\frac{4}{z}\\\\right| = 2$:\\n   $|z| \\\\le 2 + \\\\frac{4}{|z|}$.\\n3) Multiply by $|z|$ (since $|z| > 0$):\\n   $|z|^2 \\\\le 2|z| + 4 \\\\implies |z|^2 - 2|z| - 4 \\\\le 0$.\\n4) Solve the quadratic inequality:\\n   The roots of $|z|^2 - 2|z| - 4 = 0$ are $\\\\frac{2 \\\\pm \\\\sqrt{4 + 16}}{2} = 1 \\\\pm \\\\sqrt{5}$.\\n5) Since $|z| \\\\ge 0$, we have $0 < |z| \\\\le \\\\sqrt{5} + 1$.\\n6) Thus, the maximum possible value of $|z|$ is $\\\\sqrt{5} + 1$.\\nOption B is correct.",
+    "common_mistake": "Choosing $\\\\sqrt{5} - 1$ (Option A), which is the minimum boundary value, or incorrectly solving the quadratic equation.",
+    "concept_slugs": [
+      "complex-triangle-inequality-bounds"
+    ]
+  },
+  {
+    "pattern_group": "complex-triangle-inequality-bounds",
+    "title": "If the complex number $z$ lies on the circle $|z| = 3$, then the minimum value of $|z - 1 - i|$ is:",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2021",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$3 - \\\\sqrt{2}$",
+      "B": "$3 + \\\\sqrt{2}$",
+      "C": "$\\\\sqrt{2}$",
+      "D": "$1$"
+    },
+    "notes": "Use the triangle inequality |z1 - z2| >= ||z1| - |z2|| or analyze geometrically.",
+    "solution_text": "Let's analyze geometrically and algebraically:\\n1) Geometric approach:\\n   - The locus of $z$ is a circle centered at the origin $(0,0)$ with radius $R = 3$.\\n   - The point $z_0 = 1 + i$ lies at distance $d = \\\\sqrt{1^2 + 1^2} = \\\\sqrt{2}$ from the origin.\\n   - The minimum distance from $z_0$ to any point on the circle is $R - d = 3 - \\\\sqrt{2}$.\\n2) Algebraic approach using triangle inequality:\\n   $|z - (1+i)| \\\\ge | |z| - |1+i| | = | 3 - \\\\sqrt{2} | = 3 - \\\\sqrt{2}$.\\nOption A is correct.",
+    "common_mistake": "Choosing $3 + \\\\sqrt{2}$ (Option B), which is the maximum possible value.",
+    "concept_slugs": [
+      "complex-triangle-inequality-bounds"
+    ]
+  },
+  {
+    "pattern_group": "complex-triangle-inequality-bounds",
+    "title": "If $z_1$ lies on the circle $|z| = 12$ and $z_2$ lies on the circle $|z - 3 - 4i| = 5$, then the minimum possible value of $|z_1 - z_2|$ is:",
+    "difficulty": "hard",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "2",
+      "B": "7",
+      "C": "12",
+      "D": "0"
+    },
+    "notes": "Find the distance between the centers of the two circles and check their radii.",
+    "solution_text": "Let's analyze the geometry of the two circles:\\n1) Circle 1: Center $C_1 = 0$, Radius $R_1 = 12$.\\n2) Circle 2: Center $C_2 = 3 + 4i$, Radius $R_2 = 5$.\\n3) The distance between the centers is $d = |C_1 - C_2| = |3 + 4i| = \\\\sqrt{3^2 + 4^2} = 5$.\\n4) Since $R_1 = 12$ and $d + R_2 = 5 + 5 = 10 < 12$, Circle 2 lies entirely inside Circle 1.\\n5) The minimum distance between the boundaries is $R_1 - (d + R_2) = 12 - (5 + 5) = 2$.\\nOption A is correct.",
+    "common_mistake": "Assuming they intersect (Option D) without verifying center distance, or incorrectly calculating $12 - 5 = 7$ (Option B).",
+    "concept_slugs": [
+      "complex-triangle-inequality-bounds"
+    ]
+  },
+  {
+    "pattern_group": "complex-triangle-inequality-bounds",
+    "title": "For a complex number $z$ satisfying $|z| \\\\ge 2$, the minimum value of $\\\\left|z + \\\\frac{1}{2}\\\\right|$ is:",
+    "difficulty": "hard",
+    "type": "pyq",
+    "source": "JEE Advanced 2021",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\\\frac{3}{2}$",
+      "B": "$\\\\frac{1}{2}$",
+      "C": "$\\\\frac{5}{2}$",
+      "D": "$2$"
+    },
+    "notes": "Apply the reverse triangle inequality |z1 + z2| >= ||z1| - |z2||.",
+    "solution_text": "Let's apply the reverse triangle inequality:\\n1) We need to minimize $\\\\left|z + \\\\frac{1}{2}\\\\right|$.\\n2) $\\\\left|z + \\\\frac{1}{2}\\\\right| \\\\ge \\\\left| |z| - \\\\left|\\\\frac{1}{2}\\\\right| \\\\right| = \\\\left| |z| - \\\\frac{1}{2} \\\\right|$.\\n3) Since $|z| \\\\ge 2$:\\n   $|z| - \\\\frac{1}{2} \\\\ge 2 - \\\\frac{1}{2} = \\\\frac{3}{2}$.\\n4) Thus, the minimum value is $\\\\frac{3}{2}$ (attained when $z = -2$).\\nOption A is correct.",
+    "common_mistake": "Incorrectly applying the regular triangle inequality or getting confused by the fractional value, leading to Option B.",
+    "concept_slugs": [
+      "complex-triangle-inequality-bounds"
+    ]
+  },
+  {
+    "pattern_group": "complex-triangle-inequality-bounds",
+    "title": "If a complex number $z$ satisfies $|z - 2| = 1$, then the maximum value of $|z|$ is ________.",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "3",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Use the standard inequality |z| <= |z - z0| + |z0|.",
+    "solution_text": "Let's apply the triangle inequality:\\n1) $|z| = |(z - 2) + 2| \\\\le |z - 2| + |2|$.\\n2) We are given $|z - 2| = 1$.\\n3) Thus, $|z| \\\\le 1 + 2 = 3$.\\nThe maximum value of $|z|$ is 3.",
+    "common_mistake": "Subtracting instead of adding, which yields the minimum value $1$.",
+    "concept_slugs": [
+      "complex-triangle-inequality-bounds"
+    ]
+  },
+  {
+    "pattern_group": "complex-triangle-inequality-bounds",
+    "title": "If $|z + 4| \\\\le 3$ for a complex number $z$, then the maximum possible value of $|z - 1|$ is ________.",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2022",
+    "correct_answer": "8",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Express z - 1 in terms of z + 4, then apply the triangle inequality.",
+    "solution_text": "Let's rewrite the target expression $z - 1$:\\n1) $z - 1 = (z + 4) - 5$.\\n2) Apply the triangle inequality:\\n   $|z - 1| = |(z + 4) - 5| \\\\le |z + 4| + |-5|$.\\n3) We are given $|z + 4| \\\\le 3$, so:\\n   $|z - 1| \\\\le 3 + 5 = 8$.\\n4) Therefore, the maximum possible value is 8.\\nThe answer is 8.",
+    "common_mistake": "Subtracting 3 from 5 to get 2, or incorrectly rewriting the expression as $(z+4) - 3$.",
+    "concept_slugs": [
+      "complex-triangle-inequality-bounds"
+    ]
+  },
+  {
+    "pattern_group": "complex-triangle-inequality-bounds",
+    "title": "If the complex number $z_1$ satisfies $|z_1| = 3$ and $z_2$ satisfies $|z_2 - 6 - 8i| = 1$, then the maximum possible distance between $z_1$ and $z_2$, i.e., the maximum value of $|z_1 - z_2|$, is ________.",
+    "difficulty": "hard",
+    "type": "practice",
+    "correct_answer": "14",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Find the distance between the centers of the two circles and add both of their radii.",
+    "solution_text": "Let's solve geometrically:\\n1) The locus of $z_1$ is a circle centered at $C_1 = 0$ with radius $R_1 = 3$.\\n2) The locus of $z_2$ is a circle centered at $C_2 = 6 + 8i$ with radius $R_2 = 1$.\\n3) The distance between the centers $C_1$ and $C_2$ is:\\n   $d = |C_1 - C_2| = |6 + 8i| = \\\\sqrt{6^2 + 8^2} = 10$.\\n4) The maximum possible distance between a point on the first circle and a point on the second circle is:\\n   $D_{\\\\max} = d + R_1 + R_2 = 10 + 3 + 1 = 14$.\\nTherefore, the maximum possible distance is 14.",
+    "common_mistake": "Subtracting radii instead of adding them, leading to 6, or neglecting the radius of the second circle.",
+    "concept_slugs": [
+      "complex-triangle-inequality-bounds"
+    ]
+  }
+]
