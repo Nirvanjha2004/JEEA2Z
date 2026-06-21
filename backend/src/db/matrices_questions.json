@@ -1,0 +1,920 @@
+[
+  {
+    "pattern_group": "matrices-determinants-properties",
+    "title": "If $A$ is a skew-symmetric matrix of odd order $n$ (where $n \\\\in \\\\{3, 5, 7, \\\\ldots\\\\}$), then the value of its determinant $\\\\det(A)$ is:",
+    "difficulty": "easy",
+    "type": "concept",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$0$",
+      "B": "$1$",
+      "C": "$(-1)^n$",
+      "D": "None of these"
+    },
+    "notes": "Use the property that A^T = -A for skew-symmetric matrices and take determinant of both sides.",
+    "solution_text": "Let's prove this property:\\n1) Since $A$ is skew-symmetric, we have $A^T = -A$.\\n2) Taking the determinant on both sides: $\\\\det(A^T) = \\\\det(-A)$.\\n3) Since the determinant of the transpose of a matrix is equal to its determinant, $\\\\det(A^T) = \\\\det(A)$.\\n4) For any $n \\\\times n$ matrix, $\\\\det(-A) = (-1)^n \\\\det(A)$.\\n5) Therefore: $\\\\det(A) = (-1)^n \\\\det(A)$.\\n6) Since the order $n$ is odd, $(-1)^n = -1$, which gives:\\n   $\\\\det(A) = -\\\\det(A) \\\\implies 2\\\\det(A) = 0 \\\\implies \\\\det(A) = 0$.\\nOption A is correct.",
+    "common_mistake": "Mistaking odd order skew-symmetric matrices for even order ones (where the determinant is a perfect square but not necessarily zero).",
+    "concept_slugs": [
+      "matrices-determinants-properties"
+    ]
+  },
+  {
+    "pattern_group": "matrices-determinants-properties",
+    "title": "If $a, b, c$ are in Arithmetic Progression (AP), then the value of the determinant $D = \\\\det \\\\begin{pmatrix} x+1 & x+2 & x+a \\\\ x+2 & x+3 & x+b \\\\ x+3 & x+4 & x+c \\\\end{pmatrix}$ is:",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$0$",
+      "B": "$1$",
+      "C": "$x$",
+      "D": "$a+b+c$"
+    },
+    "notes": "Apply row operations R1 -> R1 + R3 - 2R2 to exploit the AP property a + c = 2b.",
+    "solution_text": "Let's apply row operations to simplify the determinant:\\n1) Perform the operation $R_1 \\\\to R_1 + R_3 - 2R_2$ on the determinant:\\n   - First column element: $(x+1) + (x+3) - 2(x+2) = 2x + 4 - 2x - 4 = 0$.\\n   - Second column element: $(x+2) + (x+4) - 2(x+3) = 2x + 6 - 2x - 6 = 0$.\\n   - Third column element: $(x+a) + (x+c) - 2(x+b) = 2x + a + c - 2x - 2b = a + c - 2b$.\\n2) Since $a, b, c$ are in AP, we have $a + c = 2b \\\\implies a + c - 2b = 0$.\\n3) The first row of the determinant becomes entirely zero: $\\\\begin{pmatrix} 0 & 0 & 0 \\\\end{pmatrix}$.\\n4) Since a row consists of all zeros, the determinant is $0$.\\nOption A is correct.",
+    "common_mistake": "Attempting to expand the determinant directly without row operations, which is highly complex and error-prone.",
+    "concept_slugs": [
+      "matrices-determinants-properties"
+    ]
+  },
+  {
+    "pattern_group": "matrices-determinants-properties",
+    "title": "Let $a, b, c$ be distinct real numbers. If the value of the determinant $\\\\det \\\\begin{pmatrix} 1 & a & a^2 \\\\ 1 & b & b^2 \\\\ 1 & c & c^2 \\\\end{pmatrix}$ is factored completely, it is equal to:",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2022",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$(a+b)(b+c)(c+a)$",
+      "B": "$(a-b)(b-c)(c-a)$",
+      "C": "$(a-b)(c-b)(c-a)$",
+      "D": "$(a^2-b^2)(b^2-c^2)(c^2-a^2)$"
+    },
+    "notes": "Apply row operations R2 -> R2 - R1 and R3 -> R3 - R1 to factor out common terms.",
+    "solution_text": "This is the classic Vandermonde determinant. Let's solve it:\\n1) Apply $R_2 \\\\to R_2 - R_1$ and $R_3 \\\\to R_3 - R_1$:\\n   $D = \\\\det \\\\begin{pmatrix} 1 & a & a^2 \\\\ 0 & b-a & b^2-a^2 \\\\ 0 & c-a & c^2-a^2 \\\\end{pmatrix}$.\\n2) Factor out $(b-a)$ from the second row and $(c-a)$ from the third row:\\n   $D = (b-a)(c-a) \\\\det \\\\begin{pmatrix} 1 & a & a^2 \\\\ 0 & 1 & b+a \\\\ 0 & 1 & c+a \\\\end{pmatrix}$.\\n3) Expand along the first column:\\n   $D = (b-a)(c-a) [1 \\\\cdot (c+a - (b+a))] = (b-a)(c-a)(c-b)$.\\n4) Rearrange signs to match standard cyclic form:\\n   $D = [-(a-b)][c-a][-(b-c)] = (a-b)(b-c)(c-a)$.\\nOption B is correct.",
+    "common_mistake": "Neglecting cyclic ordering signs, which leads to Option C.",
+    "concept_slugs": [
+      "matrices-determinants-properties"
+    ]
+  },
+  {
+    "pattern_group": "matrices-determinants-properties",
+    "title": "If $x$ and $y$ are non-zero real numbers, then the determinant $D = \\\\det \\\\begin{pmatrix} 1 & 1 & 1 \\\\ 1 & 1+x & 1 \\\\ 1 & 1 & 1+y \\\\end{pmatrix}$ evaluates to:",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$x+y$",
+      "B": "$xy$",
+      "C": "$x^2y^2$",
+      "D": "$1+x+y$"
+    },
+    "notes": "Use column operations C2 -> C2 - C1 and C3 -> C3 - C1 to simplify the matrix.",
+    "solution_text": "Let's perform column operations to introduce zeros:\\n1) Apply $C_2 \\\\to C_2 - C_1$ and $C_3 \\\\to C_3 - C_1$:\\n   $D = \\\\det \\\\begin{pmatrix} 1 & 0 & 0 \\\\ 1 & x & 0 \\\\ 1 & 0 & y \\\\end{pmatrix}$.\\n2) Now, expand the determinant along the first row:\\n   $D = 1 \\\\cdot (x \\\\cdot y - 0 \\\\cdot 0) = xy$.\\nOption B is correct.",
+    "common_mistake": "Performing incorrect row operations or incorrect sign multiplication in cofactor expansion.",
+    "concept_slugs": [
+      "matrices-determinants-properties"
+    ]
+  },
+  {
+    "pattern_group": "matrices-determinants-properties",
+    "title": "If $a, b, c$ are real numbers such that $a+b+c = 0$, then the determinant $D = \\\\det \\\\begin{pmatrix} a-x & c & b \\\\ c & b-x & a \\\\ b & a & c-x \\\\end{pmatrix}$ is equal to zero at $x = 0$. Which of the following is correct?",
+    "difficulty": "hard",
+    "type": "pyq",
+    "source": "JEE Advanced 2021",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$x=0$ is a root of the equation $D=0$",
+      "B": "The determinant has no real roots",
+      "C": "$x=a+b+c$ is the only root",
+      "D": "None of these"
+    },
+    "notes": "Add all rows C1 -> C1 + C2 + C3 to find a common factor (a+b+c-x).",
+    "solution_text": "Let's simplify by adding all columns to the first column ($C_1 \\\\to C_1 + C_2 + C_3$):\\n1) The first column becomes:\\n   $\\\\begin{pmatrix} a+b+c-x \\\\ a+b+c-x \\\\ a+b+c-x \\\\end{pmatrix}$.\\n2) Factor out $(a+b+c-x)$:\\n   $D = (a+b+c-x) \\\\det \\\\begin{pmatrix} 1 & c & b \\\\ 1 & b-x & a \\\\ 1 & a & c-x \\\\end{pmatrix}$.\\n3) Since $a+b+c = 0$, the factored term simplifies to $(-x)$:\\n   $D = -x \\\\det \\\\begin{pmatrix} 1 & c & b \\\\ 1 & b-x & a \\\\ 1 & a & c-x \\\\end{pmatrix}$.\\n4) Clearly, at $x=0$, the determinant $D$ is $0$. Therefore, $x=0$ is indeed a root of the equation $D = 0$.\\nOption A is correct.",
+    "common_mistake": "Failing to see the factorization $(a+b+c-x)$ by neglecting basic row/column sum properties.",
+    "concept_slugs": [
+      "matrices-determinants-properties"
+    ]
+  },
+  {
+    "pattern_group": "matrices-determinants-properties",
+    "title": "The value of the determinant $D = \\\\det \\\\begin{pmatrix} 2024 & 2025 & 2026 \\\\ 2025 & 2026 & 2027 \\\\ 2026 & 2027 & 2028 \\\\end{pmatrix}$ is equal to ________.",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "0",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Use column operations C2 -> C2 - C1 and C3 -> C3 - C2.",
+    "solution_text": "Let's use column operations to simplify the numbers:\\n1) Apply $C_2 \\\\to C_2 - C_1$ and $C_3 \\\\to C_3 - C_2$:\\n   - Column 2 becomes: $\\\\begin{pmatrix} 2025-2024 \\\\ 2026-2025 \\\\ 2027-2026 \\\\end{pmatrix} = \\\\begin{pmatrix} 1 \\\\ 1 \\\\ 1 \\\\end{pmatrix}$.\\n   - Column 3 becomes: $\\\\begin{pmatrix} 2026-2025 \\\\ 2027-2026 \\\\ 2028-2027 \\\\end{pmatrix} = \\\\begin{pmatrix} 1 \\\\ 1 \\\\ 1 \\\\end{pmatrix}$.\\n2) Now the determinant is:\\n   $D = \\\\det \\\\begin{pmatrix} 2024 & 1 & 1 \\\\ 2025 & 1 & 1 \\\\ 2026 & 1 & 1 \\\\end{pmatrix}$.\\n3) Since the second and third columns are identical, the determinant is $0$.\\nTherefore, the answer is 0.",
+    "common_mistake": "Performing huge arithmetic expansions instead of column operations.",
+    "concept_slugs": [
+      "matrices-determinants-properties"
+    ]
+  },
+  {
+    "pattern_group": "matrices-determinants-properties",
+    "title": "Let the determinant function be $D(x) = \\\\det \\\\begin{pmatrix} x & x^2 & x^3 \\\\ 1 & 2x & 3x^2 \\\\ 0 & 2 & 6x \\\\end{pmatrix}$. The value of the derivative $D'(1)$ is equal to ________.",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2021",
+    "correct_answer": "6",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Expand the determinant to a polynomial first, then differentiate it with respect to x.",
+    "solution_text": "Let's expand the determinant $D(x)$:\\n1) Expand along the first column:\\n   $D(x) = x \\\\det \\\\begin{pmatrix} 2x & 3x^2 \\\\ 2 & 6x \\\\end{pmatrix} - 1 \\\\cdot \\\\det \\\\begin{pmatrix} x^2 & x^3 \\\\ 2 & 6x \\\\end{pmatrix} + 0$\\n2) Calculate cofactors:\\n   - $\\\\det \\\\begin{pmatrix} 2x & 3x^2 \\\\ 2 & 6x \\\\end{pmatrix} = 12x^2 - 6x^2 = 6x^2$.\\n   - $\\\\det \\\\begin{pmatrix} x^2 & x^3 \\\\ 2 & 6x \\\\end{pmatrix} = 6x^3 - 2x^3 = 4x^3$.\\n3) Substitute back:\\n   $D(x) = x(6x^2) - 4x^3 = 6x^3 - 4x^3 = 2x^3$.\\n4) Differentiate with respect to $x$:\\n   $D'(x) = 6x^2$.\\n5) At $x = 1$:\\n   $D'(1) = 6(1)^2 = 6$.\\nTherefore, the answer is 6.",
+    "common_mistake": "Differentiating each element inside the determinant directly without using the determinant differentiation rule or expanding first.",
+    "concept_slugs": [
+      "matrices-determinants-properties"
+    ]
+  },
+  {
+    "pattern_group": "matrices-determinants-properties",
+    "title": "Let $a, b, c$ be distinct real numbers. If the determinant $\\\\det \\\\begin{pmatrix} a & a^2 & a^3 - 1 \\\\ b & b^2 & b^3 - 1 \\\\ c & c^2 & c^3 - 1 \\\\end{pmatrix} = 0$, then the value of $abc$ is ________.",
+    "difficulty": "hard",
+    "type": "practice",
+    "correct_answer": "1",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Split the determinant into two separate determinants along the third column.",
+    "solution_text": "Let's split the determinant along the third column:\\n1) $D = \\\\det \\\\begin{pmatrix} a & a^2 & a^3 \\\\ b & b^2 & b^3 \\\\ c & c^2 & c^3 \\\\end{pmatrix} - \\\\det \\\\begin{pmatrix} a & a^2 & 1 \\\\ b & b^2 & 1 \\\\ c & c^2 & 1 \\\\end{pmatrix} = 0$.\\n2) In the first determinant, factor out $a$ from row 1, $b$ from row 2, and $c$ from row 3:\\n   $D_1 = abc \\\\det \\\\begin{pmatrix} 1 & a & a^2 \\\\ 1 & b & b^2 \\\\ 1 & c & c^2 \\\\end{pmatrix}$.\\n3) In the second determinant, swap columns to align with $D_1$:\\n   $\\\\det \\\\begin{pmatrix} a & a^2 & 1 \\\\ b & b^2 & 1 \\\\ c & c^2 & 1 \\\\end{pmatrix} = -\\\\det \\\\begin{pmatrix} a & 1 & a^2 \\\\ b & 1 & b^2 \\\\ c & 1 & c^2 \\\\end{pmatrix} = \\\\det \\\\begin{pmatrix} 1 & a & a^2 \\\\ 1 & b & b^2 \\\\ 1 & c & c^2 \\\\end{pmatrix} = D_2$.\\n4) Therefore, $abc \\\\cdot D_2 - D_2 = 0 \\\\implies (abc - 1) D_2 = 0$.\\n5) Since $a, b, c$ are distinct, the Vandermonde determinant $D_2 = (a-b)(b-c)(c-a) \\\\neq 0$.\\n6) Thus, $abc - 1 = 0 \\\\implies abc = 1$.\\nThe answer is 1.",
+    "common_mistake": "Assuming $abc = -1$ due to incorrect column swap sign tracking.",
+    "concept_slugs": [
+      "matrices-determinants-properties"
+    ]
+  },
+  {
+    "pattern_group": "matrices-types-operations",
+    "title": "If $A$ is a symmetric matrix and $B$ is a skew-symmetric matrix of the same order, then the matrix $AB + BA$ is always:",
+    "difficulty": "easy",
+    "type": "concept",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Symmetric",
+      "B": "Skew-symmetric",
+      "C": "Diagonal",
+      "D": "Identity matrix"
+    },
+    "notes": "Apply the transpose operation to (AB + BA) using the properties of transpose.",
+    "solution_text": "Let's check the transpose of $C = AB + BA$:\\n1) Since $A$ is symmetric, $A^T = A$.\\n2) Since $B$ is skew-symmetric, $B^T = -B$.\\n3) Take the transpose of $C$:\\n   $C^T = (AB + BA)^T = (AB)^T + (BA)^T = B^T A^T + A^T B^T$.\\n4) Substitute the symmetric/skew-symmetric conditions:\\n   $C^T = (-B)(A) + (A)(-B) = -BA - AB = -(AB + BA) = -C$.\\n5) Since $C^T = -C$, the matrix $AB + BA$ is skew-symmetric.\\nOption B is correct.",
+    "common_mistake": "Assuming $(AB)^T = A^T B^T$, forgetting that transposing reverses the order of multiplication.",
+    "concept_slugs": [
+      "matrices-types-operations"
+    ]
+  },
+  {
+    "pattern_group": "matrices-types-operations",
+    "title": "If $A = \\\\begin{pmatrix} \\\\cos\\\\theta & -\\\\sin\\\\theta \\\\ \\\\sin\\\\theta & \\\\cos\\\\theta \\\\end{pmatrix}$, then the matrix $A^n$ for any positive integer $n$ is equal to:",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\\\begin{pmatrix} \\\\cos n\\\\theta & -\\\\sin n\\\\theta \\\\ \\\\sin n\\\\theta & \\\\cos n\\\\theta \\\\end{pmatrix}$",
+      "B": "$\\\\begin{pmatrix} \\\\cos^n\\\\theta & -\\\\sin^n\\\\theta \\\\ \\\\sin^n\\\\theta & \\\\cos^n\\\\theta \\\\end{pmatrix}$",
+      "C": "$\\\\begin{pmatrix} n\\\\cos\\\\theta & -n\\\\sin\\\\theta \\\\ n\\\\sin\\\\theta & n\\\\cos\\\\theta \\\\end{pmatrix}$",
+      "D": "None of these"
+    },
+    "notes": "Verify by induction or by using Euler's formula representation of rotation matrices.",
+    "solution_text": "This is the standard 2D rotation matrix:\\n1) For $n=1$, it holds true.\\n2) For $n=2$, multiply $A$ by itself:\\n   $A^2 = \\\\begin{pmatrix} \\\\cos\\\\theta & -\\\\sin\\\\theta \\\\ \\\\sin\\\\theta & \\\\cos\\\\theta \\\\end{pmatrix} \\\\begin{pmatrix} \\\\cos\\\\theta & -\\\\sin\\\\theta \\\\ \\\\sin\\\\theta & \\\\cos\\\\theta \\\\end{pmatrix}$\\n   $A^2 = \\\\begin{pmatrix} \\\\cos^2\\\\theta - \\\\sin^2\\\\theta & -2\\\\sin\\\\theta\\\\cos\\\\theta \\\\ 2\\\\sin\\\\theta\\\\cos\\\\theta & \\\\cos^2\\\\theta - \\\\sin^2\\\\theta \\\\end{pmatrix} = \\\\begin{pmatrix} \\\\cos 2\\\\theta & -\\\\sin 2\\\\theta \\\\ \\\\sin 2\\\\theta & \\\\cos 2\\\\theta \\\\end{pmatrix}$.\\n3) By induction, this holds for any positive integer $n$:\\n   $A^n = \\\\begin{pmatrix} \\\\cos n\\\\theta & -\\\\sin n\\\\theta \\\\ \\\\sin n\\\\theta & \\\\cos n\\\\theta \\\\end{pmatrix}$.\\nOption A is correct.",
+    "common_mistake": "Exponentiating individual elements directly (Option B), which is mathematically incorrect for matrix multiplication.",
+    "concept_slugs": [
+      "matrices-types-operations"
+    ]
+  },
+  {
+    "pattern_group": "matrices-types-operations",
+    "title": "If $A$ and $B$ are symmetric matrices of the same order, then the matrix $AB - BA$ is always:",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2023",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Symmetric",
+      "B": "Skew-symmetric",
+      "C": "Zero matrix",
+      "D": "Identity matrix"
+    },
+    "notes": "Apply the transpose operation to (AB - BA) to verify its properties.",
+    "solution_text": "Let $C = AB - BA$:\\n1) Since $A$ and $B$ are symmetric, we have $A^T = A$ and $B^T = B$.\\n2) Take the transpose of $C$:\\n   $C^T = (AB - BA)^T = (AB)^T - (BA)^T = B^T A^T - A^T B^T$.\\n3) Substitute the symmetric conditions:\\n   $C^T = BA - AB = -(AB - BA) = -C$.\\n4) Since $C^T = -C$, the matrix $AB - BA$ is skew-symmetric.\\nOption B is correct.",
+    "common_mistake": "Assuming symmetric matrices commute ($AB = BA$), which is not true in general, leading to Option C.",
+    "concept_slugs": [
+      "matrices-types-operations"
+    ]
+  },
+  {
+    "pattern_group": "matrices-types-operations",
+    "title": "If $A = \\\\begin{pmatrix} 1 & 1 \\\\ 0 & 1 \\\\end{pmatrix}$, then the matrix expression $A^n - nA + (n-1)I$ simplifies to:",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$I$",
+      "B": "$O$ (null matrix)",
+      "C": "$A$",
+      "D": "$nA$"
+    },
+    "notes": "Find the general form of A^n by calculating A^2, A^3 first, then substitute into the expression.",
+    "solution_text": "Let's find $A^n$:\\n1) $A = \\\\begin{pmatrix} 1 & 1 \\\\ 0 & 1 \\\\end{pmatrix}$.\\n2) $A^2 = \\\\begin{pmatrix} 1 & 1 \\\\ 0 & 1 \\\\end{pmatrix} \\\\begin{pmatrix} 1 & 1 \\\\ 0 & 1 \\\\end{pmatrix} = \\\\begin{pmatrix} 1 & 2 \\\\ 0 & 1 \\\\end{pmatrix}$.\\n3) By induction, $A^n = \\\\begin{pmatrix} 1 & n \\\\ 0 & 1 \\\\end{pmatrix}$.\\n4) Now compute the expression:\\n   $A^n - nA + (n-1)I = \\\\begin{pmatrix} 1 & n \\\\ 0 & 1 \\\\end{pmatrix} - n\\\\begin{pmatrix} 1 & 1 \\\\ 0 & 1 \\\\end{pmatrix} + (n-1)\\\\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\\\end{pmatrix}$\\n   $= \\\\begin{pmatrix} 1 & n \\\\ 0 & 1 \\\\end{pmatrix} - \\\\begin{pmatrix} n & n \\\\ 0 & n \\\\end{pmatrix} + \\\\begin{pmatrix} n-1 & 0 \\\\ 0 & n-1 \\\\end{pmatrix} = \\\\begin{pmatrix} 1 - n + n - 1 & n - n + 0 \\\\ 0 & 1 - n + n - 1 \\\\end{pmatrix} = \\\\begin{pmatrix} 0 & 0 \\\\ 0 & 0 \\\\end{pmatrix} = O$.\\nOption B is correct.",
+    "common_mistake": "Making errors in the matrix subtraction steps, or using an incorrect formula for $A^n$.",
+    "concept_slugs": [
+      "matrices-types-operations"
+    ]
+  },
+  {
+    "pattern_group": "matrices-types-operations",
+    "title": "If the matrix $A = \\\\begin{pmatrix} 0 & 2y & z \\\\ x & y & -z \\\\ x & -y & z \\\\end{pmatrix}$ is an orthogonal matrix (satisfying $A^T A = I$), then a possible value set for $x, y, z$ is:",
+    "difficulty": "hard",
+    "type": "pyq",
+    "source": "JEE Advanced 2020",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$x = \\\\pm \\\\frac{1}{\\\\sqrt{2}}, y = \\\\pm \\\\frac{1}{\\\\sqrt{6}}, z = \\\\pm \\\\frac{1}{\\\\sqrt{3}}$",
+      "B": "$x = \\\\pm \\\\frac{1}{2}, y = \\\\pm \\\\frac{1}{2}, z = \\\\pm \\\\frac{1}{2}$",
+      "C": "$x = \\\\pm 1, y = \\\\pm 1, z = \\\\pm 1$",
+      "D": "$x = \\\\pm \\\\frac{1}{\\\\sqrt{3}}, y = \\\\pm \\\\frac{1}{\\\\sqrt{3}}, z = \\\\pm \\\\frac{1}{\\\\sqrt{3}}$"
+    },
+    "notes": "Apply the orthogonality definition A^T A = I, which implies that row vectors are orthonormal.",
+    "solution_text": "Let's use the property of orthogonal matrices (orthonormal rows):\\n1) The length of each row must be 1:\\n   - Row 1: $0^2 + (2y)^2 + z^2 = 1 \\\\implies 4y^2 + z^2 = 1$.\\n   - Row 2: $x^2 + y^2 + (-z)^2 = 1 \\\\implies x^2 + y^2 + z^2 = 1$.\\n   - Row 3: $x^2 + (-y)^2 + z^2 = 1 \\\\implies x^2 + y^2 + z^2 = 1$.\\n2) The dot product of different rows must be 0:\\n   - Row 1 $\\\\cdot$ Row 2: $0(x) + 2y(y) + z(-z) = 0 \\\\implies 2y^2 - z^2 = 0 \\\\implies z^2 = 2y^2$.\\n3) Substitute $z^2 = 2y^2$ into Row 1's equation:\\n   $4y^2 + 2y^2 = 1 \\\\implies 6y^2 = 1 \\\\implies y = \\\\pm \\\\frac{1}{\\\\sqrt{6}}$.\\n   Thus, $z^2 = 2 \\\\left(\\\\frac{1}{6}\\\\right) = \\\\frac{1}{3} \\\\implies z = \\\\pm \\\\frac{1}{\\\\sqrt{3}}$.\\n4) Substitute $y^2$ and $z^2$ into Row 2's equation:\\n   $x^2 + \\\\frac{1}{6} + \\\\frac{1}{3} = 1 \\\\implies x^2 + \\\\frac{3}{6} = 1 \\\\implies x^2 = \\\\frac{1}{2} \\\\implies x = \\\\pm \\\\frac{1}{\\\\sqrt{2}}$.\\nOption A is correct.",
+    "common_mistake": "Neglecting to enforce that rows are perpendicular (orthogonal), yielding incorrect coefficients.",
+    "concept_slugs": [
+      "matrices-types-operations"
+    ]
+  },
+  {
+    "pattern_group": "matrices-types-operations",
+    "title": "If $A = \\\\begin{pmatrix} 1 & 2 \\\\ 3 & 4 \\\\end{pmatrix}$, the trace of the matrix $A + A^T$ is equal to ________.",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "10",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Trace is the sum of the diagonal elements. Use the property Tr(A + B) = Tr(A) + Tr(B).",
+    "solution_text": "Let's calculate step-by-step:\\n1) The trace of a matrix is the sum of its diagonal elements: $\\\\text{Tr}(A) = 1 + 4 = 5$.\\n2) The trace of $A^T$ is equal to the trace of $A$:\\n   $\\\\text{Tr}(A^T) = \\\\text{Tr}(A) = 5$.\\n3) Since the trace function is linear:\\n   $\\\\text{Tr}(A + A^T) = \\\\text{Tr}(A) + \\\\text{Tr}(A^T) = 5 + 5 = 10$.\\nTherefore, the answer is 10.",
+    "common_mistake": "Explicitly computing $A + A^T$ first and introducing addition errors, instead of using trace properties directly.",
+    "concept_slugs": [
+      "matrices-types-operations"
+    ]
+  },
+  {
+    "pattern_group": "matrices-types-operations",
+    "title": "If $A = \\\\begin{pmatrix} 1 & 0 \\\\ 1 & 1 \\\\end{pmatrix}$, then the sum of all four elements of the matrix $A^{10}$ is ________.",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2021",
+    "correct_answer": "12",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Find the general formula for A^n by squaring/cubing, and sum the elements of A^10.",
+    "solution_text": "Let's find the expression for $A^n$:\\n1) $A^2 = \\\\begin{pmatrix} 1 & 0 \\\\ 1 & 1 \\\\end{pmatrix} \\\\begin{pmatrix} 1 & 0 \\\\ 1 & 1 \\\\end{pmatrix} = \\\\begin{pmatrix} 1 & 0 \\\\ 2 & 1 \\\\end{pmatrix}$.\\n2) By induction, $A^n = \\\\begin{pmatrix} 1 & 0 \\\\ n & 1 \\\\end{pmatrix}$.\\n3) For $n=10$, we have $A^{10} = \\\\begin{pmatrix} 1 & 0 \\\\ 10 & 1 \\\\end{pmatrix}$.\\n4) Sum of all elements $= 1 + 0 + 10 + 1 = 12$.\\nTherefore, the answer is 12.",
+    "common_mistake": "Incorrectly identifying the progression of the lower-left element as exponential ($2^{n-1}$) instead of arithmetic ($n$).",
+    "concept_slugs": [
+      "matrices-types-operations"
+    ]
+  },
+  {
+    "pattern_group": "matrices-types-operations",
+    "title": "Let $A$ be a $3 \\\\times 3$ matrix satisfying the relation $A^2 = A$. If the matrix $B$ is defined as $B = (I + A)^3 - 7A$ (where $I$ is the identity matrix), then the value of $\\\\det(B)$ is ________.",
+    "difficulty": "hard",
+    "type": "practice",
+    "correct_answer": "1",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Expand the binomial expression (I + A)^3 and substitute A^2 = A to simplify the entire equation.",
+    "solution_text": "Let's expand the expression for $B$:\\n1) $B = (I + A)^3 - 7A = I^3 + 3I^2A + 3IA^2 + A^3 - 7A$.\\n2) Since $I$ commutes with any matrix: $B = I + 3A + 3A^2 + A^3 - 7A$.\\n3) Since $A^2 = A$:\\n   - $A^3 = A^2 \\\\cdot A = A \\\\cdot A = A^2 = A$.\\n4) Substitute this back into the expansion:\\n   $B = I + 3A + 3A + A - 7A = I + 7A - 7A = I$.\\n5) Since $B = I$, we have $\\\\det(B) = \\\\det(I) = 1$.\\nTherefore, the answer is 1.",
+    "common_mistake": "Assuming $A = I$ is the only matrix satisfying $A^2 = A$, or making mistakes in the binomial expansion coefficients.",
+    "concept_slugs": [
+      "matrices-types-operations"
+    ]
+  },
+  {
+    "pattern_group": "matrices-adjoint-inverse",
+    "title": "If $A$ is a non-singular square matrix of order $n$, then the determinant of its adjoint matrix, $\\\\det(\\\\text{adj}(A))$, is equal to:",
+    "difficulty": "easy",
+    "type": "concept",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$|A|^n$",
+      "B": "$|A|^{n-1}$",
+      "C": "$|A|^{n-2}$",
+      "D": "$|A|$"
+    },
+    "notes": "Use the basic relation A * adj(A) = |A| * I and take the determinant of both sides.",
+    "solution_text": "Let's prove the relation:\\n1) We know that $A \\\\cdot \\\\text{adj}(A) = |A| \\\\cdot I_n$.\\n2) Take the determinant on both sides:\\n   $\\\\det(A \\\\cdot \\\\text{adj}(A)) = \\\\det(|A| \\\\cdot I_n)$.\\n3) Using product properties of determinants:\\n   $\\\\det(A) \\\\cdot \\\\det(\\\\text{adj}(A)) = |A|^n \\\\det(I_n)$.\\n4) Since $\\\\det(I_n) = 1$:\\n   $|A| \\\\cdot \\\\det(\\\\text{adj}(A)) = |A|^n$.\\n5) Divide by $|A|$ (since $A$ is non-singular, $|A| \\\\neq 0$):\\n   $\\\\det(\\\\text{adj}(A)) = |A|^{n-1}$.\\nOption B is correct.",
+    "common_mistake": "Forgetting that factoring a constant scalar from a determinant of size n requires raising it to the power of n.",
+    "concept_slugs": [
+      "matrices-adjoint-inverse"
+    ]
+  },
+  {
+    "pattern_group": "matrices-adjoint-inverse",
+    "title": "If $A = \\\\begin{pmatrix} 2 & 3 \\\\ 1 & 4 \\\\end{pmatrix}$, then the adjoint matrix $\\\\text{adj}(A)$ is equal to:",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "C",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\\\begin{pmatrix} 4 & 1 \\\\ 3 & 2 \\\\end{pmatrix}$",
+      "B": "$\\\\begin{pmatrix} 4 & -1 \\\\ -3 & 2 \\\\end{pmatrix}$",
+      "C": "$\\\\begin{pmatrix} 4 & -3 \\\\ -1 & 2 \\\\end{pmatrix}$",
+      "D": "$\\\\begin{pmatrix} -4 & 3 \\\\ 1 & -2 \\\\end{pmatrix}$"
+    },
+    "notes": "For a 2x2 matrix, swap diagonal elements and change the signs of non-diagonal elements.",
+    "solution_text": "Let's find the cofactor matrix and transpose it:\\n1) Let $A = \\\\begin{pmatrix} a & b \\\\ c & d \\\\end{pmatrix} = \\\\begin{pmatrix} 2 & 3 \\\\ 1 & 4 \\\\end{pmatrix}$.\\n2) Cofactors:\\n   - $C_{11} = 4$, $C_{12} = -1$\\n   - $C_{21} = -3$, $C_{22} = 2$.\\n3) Cofactor matrix: $C = \\\\begin{pmatrix} 4 & -1 \\\\ -3 & 2 \\\\end{pmatrix}$.\\n4) Adjoint is transpose of cofactor matrix:\\n   $\\\\text{adj}(A) = C^T = \\\\begin{pmatrix} 4 & -3 \\\\ -1 & 2 \\\\end{pmatrix}$.\\nOption C is correct.",
+    "common_mistake": "Changing signs but failing to transpose (Option B), or swapping rows without correct sign changes.",
+    "concept_slugs": [
+      "matrices-adjoint-inverse"
+    ]
+  },
+  {
+    "pattern_group": "matrices-adjoint-inverse",
+    "title": "If $A$ is a $3 \\\\times 3$ matrix such that its determinant is $|A| = 4$, then the determinant value of $|\\\\text{adj}(\\\\text{adj}(A))|$ is:",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2022",
+    "correct_answer": "C",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "16",
+      "B": "64",
+      "C": "256",
+      "D": "1024"
+    },
+    "notes": "Apply the double adjoint determinant formula: |adj(adj(A))| = |A|^{(n-1)^2}.",
+    "solution_text": "Let's apply the standard adjoint properties:\\n1) We know that $\\\\det(\\\\text{adj}(B)) = |B|^{n-1}$. Let $B = \\\\text{adj}(A)$:\\n   $\\\\det(\\\\text{adj}(\\\\text{adj}(A))) = |\\\\text{adj}(A)|^{n-1}$.\\n2) Substitute $|\\\\text{adj}(A)| = |A|^{n-1}$:\\n   $\\\\det(\\\\text{adj}(\\\\text{adj}(A))) = (|A|^{n-1})^{n-1} = |A|^{(n-1)^2}$.\\n3) For $n = 3$ and $|A| = 4$:\\n   $\\\\det(\\\\text{adj}(\\\\text{adj}(A))) = 4^{(3-1)^2} = 4^{2^2} = 4^4 = 256$.\\nOption C is correct.",
+    "common_mistake": "Using $|A|^{n-1}$ instead of $|A|^{(n-1)^2}$, leading to $4^2 = 16$ (Option A).",
+    "concept_slugs": [
+      "matrices-adjoint-inverse"
+    ]
+  },
+  {
+    "pattern_group": "matrices-adjoint-inverse",
+    "title": "If $A$ and $B$ are two invertible square matrices of order 3, which of the following relations is NOT correct?",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "D",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$(AB)^{-1} = B^{-1}A^{-1}$",
+      "B": "$\\\\text{adj}(AB) = \\\\text{adj}(B)\\\\text{adj}(A)$",
+      "C": "$\\\\det(A^{-1}) = \\\\frac{1}{\\\\det(A)}$",
+      "D": "$\\\\text{adj}(AB) = \\\\text{adj}(A)\\\\text{adj}(B)$"
+    },
+    "notes": "Verify each property. The product of adjoints reverses order, similar to inverse.",
+    "solution_text": "Let's analyze the options:\\n- Option A: $(AB)^{-1} = B^{-1}A^{-1}$ (Reversal law for inverse, correct property).\\n- Option B: $\\\\text{adj}(AB) = \\\\text{adj}(B)\\\\text{adj}(A)$ (Reversal law for adjoint, correct property).\\n- Option C: $\\\\det(A^{-1}) = \\\\frac{1}{\\\\det(A)}$ (Determinant property, correct).\\n- Option D: $\\\\text{adj}(AB) = \\\\text{adj}(A)\\\\text{adj}(B)$ is incorrect because the order of multiplication must be reversed. Therefore, this is the incorrect relation we are looking for.\\nOption D is correct.",
+    "common_mistake": "Assuming adjoint distribution behaves like standard matrix addition, neglecting the reversal order of matrix multiplication.",
+    "concept_slugs": [
+      "matrices-adjoint-inverse"
+    ]
+  },
+  {
+    "pattern_group": "matrices-adjoint-inverse",
+    "title": "Let $A$ be a $3 \\\\times 3$ matrix such that $\\\\det(A) = 2$. If the matrix $B$ is defined as $B = \\\\text{adj}(2A)$, then the value of the determinant $\\\\det(B)$ is:",
+    "difficulty": "hard",
+    "type": "pyq",
+    "source": "JEE Advanced 2022",
+    "correct_answer": "C",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "64",
+      "B": "128",
+      "C": "256",
+      "D": "512"
+    },
+    "notes": "First evaluate det(2A) for a 3x3 matrix, and then apply the adjoint determinant formula.",
+    "solution_text": "Let's solve step-by-step:\\n1) The matrix $A$ has order $3 \\\\times 3$, so $\\\\det(2A) = 2^3 \\\\det(A) = 8 \\\\det(A)$.\\n2) Given $\\\\det(A) = 2 \\\\implies \\\\det(2A) = 8 \\\\times 2 = 16$.\\n3) The matrix $B = \\\\text{adj}(2A)$, so:\\n   $\\\\det(B) = \\\\det(\\\\text{adj}(2A)) = (\\\\det(2A))^{3-1} = (\\\\det(2A))^2$.\\n4) Substitute $\\\\det(2A) = 16$:\\n   $\\\\det(B) = (16)^2 = 256$.\\nOption C is correct.",
+    "common_mistake": "Neglecting the order of the matrix when factoring out 2, calculating $\\\\det(2A) = 2 \\\\times 2 = 4$ instead of 16.",
+    "concept_slugs": [
+      "matrices-adjoint-inverse"
+    ]
+  },
+  {
+    "pattern_group": "matrices-adjoint-inverse",
+    "title": "If $A = \\\\begin{pmatrix} 2 & 0 \\\\ 0 & 3 \\\\end{pmatrix}$, and the trace of its inverse matrix is $\\\\text{Tr}(A^{-1})$, then the value of $6 \\\\text{Tr}(A^{-1})$ is ________.",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "5",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Find the inverse of the diagonal matrix by taking the reciprocal of its diagonal elements.",
+    "solution_text": "Let's find the inverse of the diagonal matrix $A$:\\n1) For a diagonal matrix $A = \\\\begin{pmatrix} a & 0 \\\\ 0 & b \\\\end{pmatrix}$, its inverse is $A^{-1} = \\\\begin{pmatrix} 1/a & 0 \\\\ 0 & 1/b \\\\end{pmatrix}$.\\n2) Here, $A^{-1} = \\\\begin{pmatrix} 1/2 & 0 \\\\ 0 & 1/3 \\\\end{pmatrix}$.\\n3) The trace is the sum of diagonal elements:\\n   $\\\\text{Tr}(A^{-1}) = \\\\frac{1}{2} + \\\\frac{1}{3} = \\\\frac{5}{6}$.\\n4) We need $6 \\\\text{Tr}(A^{-1}) = 6 \\\\times \\\\frac{5}{6} = 5$.\\nTherefore, the answer is 5.",
+    "common_mistake": "Calculating trace of A (which is 5) and then taking the reciprocal to get 1/5, which violates trace-inverse rules.",
+    "concept_slugs": [
+      "matrices-adjoint-inverse"
+    ]
+  },
+  {
+    "pattern_group": "matrices-adjoint-inverse",
+    "title": "If $A$ is a $3 \\\\times 3$ matrix such that $|A| = 3$, then the value of $|\\\\text{adj}(2A)| / 12$ is ________.",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2021",
+    "correct_answer": "48",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Factor out the scalar from the matrix first, then compute the adjoint determinant.",
+    "solution_text": "Let's calculate the value:\\n1) For order $n=3$, the determinant of $2A$ is:\\n   $|2A| = 2^3 |A| = 8 \\\\times 3 = 24$.\\n2) Now, calculate the determinant of the adjoint of $2A$:\\n   $|\\\\text{adj}(2A)| = |2A|^{n-1} = 24^{3-1} = 24^2 = 576$.\\n3) The value of $|\\\\text{adj}(2A)| / 12$ is:\\n   $576 / 12 = 48$.\\nTherefore, the answer is 48.",
+    "common_mistake": "Calculating $|2A| = 2 |A| = 6$, leading to a wrong result.",
+    "concept_slugs": [
+      "matrices-adjoint-inverse"
+    ]
+  },
+  {
+    "pattern_group": "matrices-adjoint-inverse",
+    "title": "Let $A = \\\\begin{pmatrix} 1 & -1 & 1 \\\\ 2 & 1 & -3 \\\\ 1 & 1 & 1 \\\\end{pmatrix}$. If the inverse satisfies the relation $10 A^{-1} = A^2 + cA + dI$, then the value of $d - c$ is ________.",
+    "difficulty": "hard",
+    "type": "practice",
+    "correct_answer": "10",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Apply the Cayley-Hamilton theorem to find the characteristic polynomial of A.",
+    "solution_text": "Let's find the characteristic polynomial of $A$:\\n1) Trace of $A$: $\\\\text{Tr}(A) = 1 + 1 + 1 = 3$.\\n2) Sum of principal minors:\\n   - $M_{11} = 1 - (-3) = 4$.\\n   - $M_{22} = 1 - 1 = 0$.\\n   - $M_{33} = 1 - (-2) = 3$.\\n   Sum $= 4 + 0 + 3 = 7$.\\n3) Determinant of $A$:\\n   $|A| = 1(1 - (-3)) - (-1)(2 - (-3)) + 1(2 - 1) = 4 + 5 + 1 = 10$.\\n4) The characteristic equation is $\\\\lambda^3 - 3\\\\lambda^2 + 7\\\\lambda - 10 = 0$.\\n5) By Cayley-Hamilton theorem: $A^3 - 3A^2 + 7A - 10I = O$.\\n6) Multiply by $A^{-1}$:\\n   $A^2 - 3A + 7I - 10A^{-1} = O \\\\implies 10A^{-1} = A^2 - 3A + 7I$.\\n7) Comparing with the given relation: $c = -3$ and $d = 7$.\\n8) We need $d - c = 7 - (-3) = 10$.\\nThe answer is 10.",
+    "common_mistake": "Incorrectly calculating the determinant or cofactors of A, leading to wrong coefficient values.",
+    "concept_slugs": [
+      "matrices-adjoint-inverse"
+    ]
+  },
+  {
+    "pattern_group": "matrices-cayley-hamilton-eigenvalues",
+    "title": "According to the Cayley-Hamilton theorem, every square matrix $A$ satisfies its own characteristic equation. For a $2 \\\\times 2$ matrix $A$, this is expressed as:",
+    "difficulty": "easy",
+    "type": "concept",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$A^2 - \\\\text{Tr}(A)A + \\\\det(A)I = O$",
+      "B": "$A^2 + \\\\text{Tr}(A)A - \\\\det(A)I = O$",
+      "C": "$A^2 - \\\\text{Tr}(A)A - \\\\det(A)I = O$",
+      "D": "$A^2 + \\\\text{Tr}(A)A + \\\\det(A)I = O$"
+    },
+    "notes": "The characteristic polynomial of a 2x2 matrix is lambda^2 - Tr(A)lambda + det(A) = 0.",
+    "solution_text": "Let's derive the characteristic equation of a $2 \\\\times 2$ matrix $A$:\\n1) $\\\\det(A - \\\\lambda I) = 0 \\\\implies \\\\det \\\\begin{pmatrix} a-\\\\lambda & b \\\\ c & d-\\\\lambda \\\\end{pmatrix} = 0$.\\n2) $(a-\\\\lambda)(d-\\\\lambda) - bc = 0 \\\\implies \\\\lambda^2 - (a+d)\\\\lambda + (ad-bc) = 0$.\\n3) Since $\\\\text{Tr}(A) = a+d$ and $\\\\det(A) = ad-bc$:\\n   \\\\lambda^2 - \\\\text{Tr}(A)\\\\lambda + \\\\det(A) = 0$.\\n4) By Cayley-Hamilton, replacing $\\\\lambda$ with $A$ and constant with constant $\\\\cdot I$:\\n   $A^2 - \\\\text{Tr}(A)A + \\\\det(A)I = O$.\\nOption A is correct.",
+    "common_mistake": "Incorrectly choosing Option B or C due to wrong signs in trace or determinant terms.",
+    "concept_slugs": [
+      "matrices-cayley-hamilton-eigenvalues"
+    ]
+  },
+  {
+    "pattern_group": "matrices-cayley-hamilton-eigenvalues",
+    "title": "If $A = \\\\begin{pmatrix} 1 & 2 \\\\ 3 & 4 \\\\end{pmatrix}$, then the matrix expression $A^2 - 5A - 2I$ evaluates to:",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$I$",
+      "B": "$O$ (null matrix)",
+      "C": "$A$",
+      "D": "$5A$"
+    },
+    "notes": "Verify by applying the Cayley-Hamilton theorem to the 2x2 matrix A.",
+    "solution_text": "Let's find the trace and determinant of $A$:\\n1) $\\\\text{Tr}(A) = 1 + 4 = 5$.\\n2) $\\\\det(A) = 1(4) - 2(3) = 4 - 6 = -2$.\\n3) By Cayley-Hamilton theorem:\\n   $A^2 - \\\\text{Tr}(A)A + \\\\det(A)I = O$\\n   $A^2 - 5A - 2I = O$.\\nOption B is correct.",
+    "common_mistake": "Explicitly squaring $A$ and executing long calculations, which increases the likelihood of arithmetic errors.",
+    "concept_slugs": [
+      "matrices-cayley-hamilton-eigenvalues"
+    ]
+  },
+  {
+    "pattern_group": "matrices-cayley-hamilton-eigenvalues",
+    "title": "If $A = \\\\begin{pmatrix} 2 & -1 \\\\ 1 & 3 \\\\end{pmatrix}$, then the matrix $A^3$ can be expressed as a linear combination of $A$ and $I$ as:",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2021",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$18A - 35I$",
+      "B": "$19A - 35I$",
+      "C": "$18A + 35I$",
+      "D": "$19A + 35I$"
+    },
+    "notes": "Write the characteristic equation of A first, express A^2 in terms of A and I, and multiply by A.",
+    "solution_text": "Let's write the characteristic equation for $A = \\\\begin{pmatrix} 2 & -1 \\\\ 1 & 3 \\\\end{pmatrix}$:\\n1) $\\\\text{Tr}(A) = 2 + 3 = 5$.\\n2) $\\\\det(A) = 2(3) - (-1)(1) = 6 + 1 = 7$.\\n3) Cayley-Hamilton equation: $A^2 - 5A + 7I = O \\\\implies A^2 = 5A - 7I$.\\n4) Multiply both sides by $A$:\\n   $A^3 = A \\\\cdot A^2 = A(5A - 7I) = 5A^2 - 7A$.\\n5) Substitute $A^2 = 5A - 7I$ again:\\n   $A^3 = 5(5A - 7I) - 7A = 25A - 35I - 7A = 18A - 35I$.\\nOption A is correct.",
+    "common_mistake": "Neglecting to substitute $A^2$ back a second time, or mistakes in multiplication.",
+    "concept_slugs": [
+      "matrices-cayley-hamilton-eigenvalues"
+    ]
+  },
+  {
+    "pattern_group": "matrices-cayley-hamilton-eigenvalues",
+    "title": "If the eigenvalues of a $2 \\\\times 2$ matrix $A$ are $2$ and $3$, then the eigenvalues of the matrix $B = A^2 + 5I$ are:",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$4$ and $9$",
+      "B": "$9$ and $14$",
+      "C": "$7$ and $8$",
+      "D": "$2$ and $3$"
+    },
+    "notes": "Apply the eigenvalue theorem: if lambda is eigenvalue of A, then f(lambda) is eigenvalue of f(A).",
+    "solution_text": "Let's apply the eigenvalue transformation theorem:\\n1) If $\\\\lambda$ is an eigenvalue of $A$, then $\\\\lambda^2 + 5$ is the corresponding eigenvalue of $A^2 + 5I$.\\n2) Given eigenvalues of $A$ are $\\\\lambda_1 = 2$ and $\\\\lambda_2 = 3$.\\n3) The eigenvalues of $B = A^2 + 5I$ are:\\n   - $\\\\mu_1 = 2^2 + 5 = 4 + 5 = 9$.\\n   - $\\\\mu_2 = 3^2 + 5 = 9 + 5 = 14$.\\nOption B is correct.",
+    "common_mistake": "Squaring the eigenvalues without adding 5, leading to Option A.",
+    "concept_slugs": [
+      "matrices-cayley-hamilton-eigenvalues"
+    ]
+  },
+  {
+    "pattern_group": "matrices-cayley-hamilton-eigenvalues",
+    "title": "If a $3 \\\\times 3$ matrix $A$ satisfies the equation $A^3 - 5A^2 + 6A - I = O$, then the inverse matrix $A^{-1}$ is equal to:",
+    "difficulty": "hard",
+    "type": "pyq",
+    "source": "JEE Advanced 2020",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$A^2 - 5A + 6I$",
+      "B": "$A^2 - 5A - 6I$",
+      "C": "$-A^2 + 5A - 6I$",
+      "D": "$A^2 + 5A + 6I$"
+    },
+    "notes": "Multiply the entire equation by A^-1 to isolate the identity matrix term.",
+    "solution_text": "Let's solve step-by-step:\\n1) Given: $A^3 - 5A^2 + 6A - I = O$.\\n2) Isolate the identity matrix $I$:\\n   $I = A^3 - 5A^2 + 6A$.\\n3) Multiply both sides by $A^{-1}$:\\n   $I \\\\cdot A^{-1} = (A^3 - 5A^2 + 6A) A^{-1}$\\n   $A^{-1} = A^2 - 5A + 6I$.\\nOption A is correct.",
+    "common_mistake": "Losing track of signs or adding/subtracting coefficients incorrectly when shifting the identity matrix.",
+    "concept_slugs": [
+      "matrices-cayley-hamilton-eigenvalues"
+    ]
+  },
+  {
+    "pattern_group": "matrices-cayley-hamilton-eigenvalues",
+    "title": "If the eigenvalues of a $3 \\\\times 3$ matrix $A$ are $1, 2, 3$, then the trace of $A^2$ is equal to ________.",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "14",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Recall that the trace of a matrix is equal to the sum of its eigenvalues, and eigenvalues of A^2 are squares of eigenvalues of A.",
+    "solution_text": "Let's solve step-by-step:\\n1) If eigenvalues of $A$ are $\\\\lambda_1, \\\\lambda_2, \\\\lambda_3$, the eigenvalues of $A^2$ are $\\\\lambda_1^2, \\\\lambda_2^2, \\\\lambda_3^2$.\\n2) Here, the eigenvalues of $A^2$ are $1^2 = 1$, $2^2 = 4$, and $3^2 = 9$.\\n3) Since the trace is the sum of eigenvalues:\\n   $\\\\text{Tr}(A^2) = 1 + 4 + 9 = 14$.\\nTherefore, the answer is 14.",
+    "common_mistake": "Squaring the sum of eigenvalues (which would yield $6^2 = 36$) instead of summing the squares.",
+    "concept_slugs": [
+      "matrices-cayley-hamilton-eigenvalues"
+    ]
+  },
+  {
+    "pattern_group": "matrices-cayley-hamilton-eigenvalues",
+    "title": "Let $A = \\\\begin{pmatrix} 1 & 2 \\\\ 0 & 1 \\\\end{pmatrix}$. If the matrix $B$ is defined as $B = A + A^2 + A^3 + \\\\dots + A^{10}$, then the sum of all four elements of $B$ is ________.",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2022",
+    "correct_answer": "130",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Express A^k general form first, then use the sum of natural numbers formula.",
+    "solution_text": "Let's find the formula for $A^k$:\\n1) $A^k = \\\\begin{pmatrix} 1 & 2k \\\\ 0 & 1 \\\\end{pmatrix}$ by induction.\\n2) Summing from $k=1$ to $10$:\\n   $B = \\\\sum_{k=1}^{10} A^k = \\\\begin{pmatrix} 10 & 2\\\\sum_{k=1}^{10} k \\\\ 0 & 10 \\\\end{pmatrix}$.\\n3) Calculate the sum of natural numbers: $\\\\sum_{k=1}^{10} k = \\\\frac{10 \\\\times 11}{2} = 55$.\\n4) Therefore, $B = \\\\begin{pmatrix} 10 & 110 \\\\ 0 & 10 \\\\end{pmatrix}$.\\n5) Sum of all elements of $B = 10 + 110 + 0 + 10 = 130$.\\nThe answer is 130.",
+    "common_mistake": "Using a wrong sum formula for the upper-right element, or forgetting that the diagonal elements sum to 10.",
+    "concept_slugs": [
+      "matrices-cayley-hamilton-eigenvalues"
+    ]
+  },
+  {
+    "pattern_group": "matrices-cayley-hamilton-eigenvalues",
+    "title": "Let $A$ be a $3 \\\\times 3$ matrix with trace 6 and determinant 8. If one of the eigenvalues of $A$ is 1, then the sum of the squares of all three eigenvalues of $A$ is ________.",
+    "difficulty": "hard",
+    "type": "practice",
+    "correct_answer": "10",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Let the eigenvalues be 1, x, y. Set up equations using trace (sum) and determinant (product).",
+    "solution_text": "Let the eigenvalues of $A$ be $\\\\lambda_1 = 1$, $\\\\lambda_2$, and $\\\\lambda_3$:\\n1) Sum of eigenvalues $=$ trace: $1 + \\\\lambda_2 + \\\\lambda_3 = 6 \\\\implies \\\\lambda_2 + \\\\lambda_3 = 5$.\\n2) Product of eigenvalues $=$ determinant: $1 \\\\cdot \\\\lambda_2 \\\\cdot \\\\lambda_3 = 8 \\\\implies \\\\lambda_2 \\\\lambda_3 = 8$.\\n3) We need the sum of the squares: $S = 1^2 + \\\\lambda_2^2 + \\\\lambda_3^2$.\\n4) Since $\\\\lambda_2^2 + \\\\lambda_3^2 = (\\\\lambda_2 + \\\\lambda_3)^2 - 2\\\\lambda_2\\\\lambda_3$:\\n   $\\\\lambda_2^2 + \\\\lambda_3^2 = 5^2 - 2(8) = 25 - 16 = 9$.\\n5) Therefore, $S = 1 + 9 = 10$.\\nThe answer is 10.",
+    "common_mistake": "Solving for individual eigenvalues (which are complex) and making calculation errors, instead of using algebraic identities.",
+    "concept_slugs": [
+      "matrices-cayley-hamilton-eigenvalues"
+    ]
+  },
+  {
+    "pattern_group": "matrices-linear-systems-cramer",
+    "title": "A system of linear equations $AX = B$ represented by Cramer's Rule has a unique solution if and only if the determinant of the coefficient matrix $D$ satisfies:",
+    "difficulty": "easy",
+    "type": "concept",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$D \\\\neq 0$",
+      "B": "$D = 0$",
+      "C": "$D = 0$ and at least one $D_i \\\\neq 0$",
+      "D": "$D_x = D_y = D_z = 0$"
+    },
+    "notes": "A non-zero determinant implies the matrix is invertible, ensuring a unique solution.",
+    "solution_text": "Under Cramer's Rule, the solution variables are given by $x = D_x/D$, $y = D_y/D$, and $z = D_z/D$.\\n1) For unique solutions, the division must be well-defined, requiring the denominator $D \\\\neq 0$.\\n2) If $D = 0$, the system is either inconsistent (no solution) or dependent (infinitely many solutions).\\nOption A is correct.",
+    "common_mistake": "Confusing unique solution conditions with infinite solutions (which requires $D=0$).",
+    "concept_slugs": [
+      "matrices-linear-systems-cramer"
+    ]
+  },
+  {
+    "pattern_group": "matrices-linear-systems-cramer",
+    "title": "The value of the constant $k$ for which the system of equations $x + y = 2$ and $2x + 2y = k$ is consistent is:",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "C",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Any real number except 4",
+      "B": "Only $k=2$",
+      "C": "Only $k=4$",
+      "D": "$k = 0$"
+    },
+    "notes": "Compare the ratio of coefficients to determine consistency.",
+    "solution_text": "Let's compare the equations:\\n1) Equation 1: $x + y = 2$.\\n2) Equation 2: $2(x + y) = k$.\\n3) For consistency, the equations must not contradict each other.\\n4) Substituting Equation 1 into Equation 2: $2(2) = k \\\\implies k = 4$.\\n5) If $k \\\\neq 4$, the lines are parallel and distinct (no solution). For $k=4$, the lines coincide (infinitely many solutions).\\nOption C is correct.",
+    "common_mistake": "Stating k can be any value except 4, confusing consistency (which requires a solution to exist) with inconsistency.",
+    "concept_slugs": [
+      "matrices-linear-systems-cramer"
+    ]
+  },
+  {
+    "pattern_group": "matrices-linear-systems-cramer",
+    "title": "The system of equations $x + y + z = 1$, $2x + 3y + 2z = 2$, and $x + y + kz = 4$ has no solution if $k$ is equal to:",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2023",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "1",
+      "B": "2",
+      "C": "3",
+      "D": "0"
+    },
+    "notes": "Find the determinant D of the coefficients and set D = 0.",
+    "solution_text": "Let's find the determinant of the coefficients $D$:\\n1) $D = \\\\det \\\\begin{pmatrix} 1 & 1 & 1 \\\\ 2 & 3 & 2 \\\\ 1 & 1 & k \\\\end{pmatrix}$.\\n2) Expand along the first row:\\n   $D = 1(3k - 2) - 1(2k - 2) + 1(2 - 3)$\\n   $D = 3k - 2 - 2k + 2 - 1 = k - 1$.\\n3) For no solution, we need $D = 0 \\\\implies k = 1$.\\n4) If $k=1$, the first and third equations are $x+y+z=1$ and $x+y+z=4$, which is contradictory. Thus, no solution exists.\\nOption A is correct.",
+    "common_mistake": "Setting D equal to 1, or failing to verify if the equations are contradictory when D = 0.",
+    "concept_slugs": [
+      "matrices-linear-systems-cramer"
+    ]
+  },
+  {
+    "pattern_group": "matrices-linear-systems-cramer",
+    "title": "The system of linear equations $x + y + z = 6$, $x + 2y + 3z = 10$, and $x + 2y + \\\\lambda z = \\\\mu$ has infinitely many solutions if:",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\\\lambda = 3, \\\\mu = 10$",
+      "B": "$\\\\lambda \\\\neq 3, \\\\mu = 10$",
+      "C": "$\\\\lambda = 3, \\\\mu \\\\neq 10$",
+      "D": "$\\\\lambda \\\\neq 3, \\\\mu \\\\neq 10$"
+    },
+    "notes": "Evaluate the determinant D and auxiliary determinants to find the conditions.",
+    "solution_text": "Let's find the conditions for infinitely many solutions:\\n1) Coefficient determinant $D = \\\\det \\\\begin{pmatrix} 1 & 1 & 1 \\\\ 1 & 2 & 3 \\\\ 1 & 2 & \\\\lambda \\\\end{pmatrix} = 1(2\\\\lambda - 6) - 1(\\\\lambda - 3) + 1(2 - 2) = \\\\lambda - 3$.\\n   For infinite solutions, we need $D = 0 \\\\implies \\\\lambda = 3$.\\n2) If $\\\\lambda = 3$, the equations are:\\n   - (2) $x + 2y + 3z = 10$\\n   - (3) $x + 2y + 3z = \\\\mu$.\\n3) For these equations to not contradict each other, we must have $\\\\mu = 10$.\\nOption A is correct.",
+    "common_mistake": "Incorrectly assigning $\\\\lambda = 3, \\\\mu \\\\neq 10$ (Option C), which represents the inconsistent 'no solution' case.",
+    "concept_slugs": [
+      "matrices-linear-systems-cramer"
+    ]
+  },
+  {
+    "pattern_group": "matrices-linear-systems-cramer",
+    "title": "The system of equations $x - 2y + 3z = -1$, $-x + y - 2z = k$, and $x - 3y + 4z = 1$ is consistent. The value of $k$ must be:",
+    "difficulty": "hard",
+    "type": "pyq",
+    "source": "JEE Advanced 2022",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$3$",
+      "B": "$-3$",
+      "C": "$1$",
+      "D": "$0$"
+    },
+    "notes": "Calculate the determinant of the coefficients first, and set Dx = 0 for consistency.",
+    "solution_text": "Let's evaluate the determinants:\\n1) Coefficient determinant:\\n   $D = \\\\det \\\\begin{pmatrix} 1 & -2 & 3 \\\\ -1 & 1 & -2 \\\\ 1 & -3 & 4 \\\\end{pmatrix} = 1(4-6) - (-2)(-4 - (-2)) + 3(3-1) = -2 - 4 + 6 = 0$.\\n2) Since $D = 0$, for the system to be consistent, we must have $D_x = D_y = D_z = 0$.\\n3) Calculate $D_x$:\\n   $D_x = \\\\det \\\\begin{pmatrix} -1 & -2 & 3 \\\\ k & 1 & -2 \\\\ 1 & -3 & 4 \\\\end{pmatrix} = -1(4-6) - (-2)(4k - (-2)) + 3(-3k - 1) = 2 + 8k + 4 - 9k - 3 = 3 - k$.\\n4) Set $D_x = 0 \\\\implies 3 - k = 0 \\\\implies k = 3$.\\nOption A is correct.",
+    "common_mistake": "Mistakenly choosing $k=-3$ due to signs in evaluating determinant components.",
+    "concept_slugs": [
+      "matrices-linear-systems-cramer"
+    ]
+  },
+  {
+    "pattern_group": "matrices-linear-systems-cramer",
+    "title": "The value of $a$ for which the system of equations $2x + 3y = 5$ and $4x + ay = 10$ has infinitely many solutions is ________.",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "6",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Set up ratios of coefficients: a1/a2 = b1/b2 = c1/c2.",
+    "solution_text": "For two linear equations to have infinitely many solutions, their lines must coincide:\\n1) The condition is: $\\\\frac{a_1}{a_2} = \\\\frac{b_1}{b_2} = \\\\frac{c_1}{c_2}$.\\n2) Substituting the values: $\\\\frac{2}{4} = \\\\frac{3}{a} = \\\\frac{5}{10}$.\\n3) $\\\\frac{1}{2} = \\\\frac{3}{a} \\\\implies a = 6$.\\nThe answer is 6.",
+    "common_mistake": "Using cross multiplication on only one pair of variables, neglecting the constant term check.",
+    "concept_slugs": [
+      "matrices-linear-systems-cramer"
+    ]
+  },
+  {
+    "pattern_group": "matrices-linear-systems-cramer",
+    "title": "If the system of equations $x + 2y + 3z = 4$, $2x + y + 3z = 5$, and $x + y + az = b$ has infinitely many solutions, then the value of $a + b$ is ________.",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2021",
+    "correct_answer": "5",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "First find 'a' by setting D = 0, then find 'b' by setting Dx = 0.",
+    "solution_text": "Let's find the values of $a$ and $b$:\\n1) Set $D = 0$ for infinite solutions:\\n   $D = \\\\det \\\\begin{pmatrix} 1 & 2 & 3 \\\\ 2 & 1 & 3 \\\\ 1 & 1 & a \\\\end{pmatrix} = 1(a-3) - 2(2a-3) + 3(2-1) = a - 3 - 4a + 6 + 3 = 6 - 3a$.\\n   $6 - 3a = 0 \\\\implies a = 2$.\\n2) Set $D_x = 0$ using $a=2$:\\n   $D_x = \\\\det \\\\begin{pmatrix} 4 & 2 & 3 \\\\ 5 & 1 & 3 \\\\ b & 1 & 2 \\\\end{pmatrix} = 4(2-3) - 2(10-3b) + 3(5-b) = -4 - 20 + 6b + 15 - 3b = 3b - 9$.\\n   $3b - 9 = 0 \\\\implies b = 3$.\\n3) The value of $a+b$ is $2 + 3 = 5$.\\nTherefore, the answer is 5.",
+    "common_mistake": "Incorrectly expanding $D$ or $D_x$ leading to wrong values for $a$ or $b$.",
+    "concept_slugs": [
+      "matrices-linear-systems-cramer"
+    ]
+  },
+  {
+    "pattern_group": "matrices-linear-systems-cramer",
+    "title": "If the homogeneous system of equations $x + ay + z = 0$, $ax + y + z = 0$, and $x + y + az = 0$ has a non-trivial solution, then the sum of the absolute values of all possible real values of $a$ is ________.",
+    "difficulty": "hard",
+    "type": "practice",
+    "correct_answer": "3",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Set the determinant of the coefficients equal to zero and solve for a.",
+    "solution_text": "Let's set the determinant of the coefficient matrix $D = 0$:\\n1) $D = \\\\det \\\\begin{pmatrix} 1 & a & 1 \\\\ a & 1 & 1 \\\\ 1 & 1 & a \\\\end{pmatrix} = 1(a-1) - a(a^2-1) + 1(a-1) = 2(a-1) - a(a-1)(a+1)$.\\n2) Factor out $(a-1)$:\\n   $D = (a-1)[2 - a(a+1)] = (a-1)[2 - a^2 - a] = -(a-1)(a^2 + a - 2) = -(a-1)^2(a+2)$.\\n3) Setting $D = 0$ gives the roots $a = 1$ and $a = -2$.\\n4) We need the sum of the absolute values of these numbers:\\n   Sum $= |1| + |-2| = 1 + 2 = 3$.\\nTherefore, the answer is 3.",
+    "common_mistake": "Stating the sum as $-1$ (Option without absolute values), or missing the root $a = -2$.",
+    "concept_slugs": [
+      "matrices-linear-systems-cramer"
+    ]
+  },
+  {
+    "pattern_group": "matrices-linear-systems-matrix",
+    "title": "If the rank of a $3 \\\\times 3$ square matrix $A$ is 2, then which of the following statements is always true?",
+    "difficulty": "easy",
+    "type": "concept",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\\\det(A) = 0$",
+      "B": "$\\\\det(A) \\\\neq 0$",
+      "C": "Rank of $\\\\text{adj}(A)$ is 3",
+      "D": "$A$ is invertible"
+    },
+    "notes": "Recall that a square matrix is invertible if and only if its rank equals its size.",
+    "solution_text": "Let's analyze rank properties:\\n1) A $3 \\\\times 3$ matrix $A$ has full rank if and only if $\\\\text{rank}(A) = 3$.\\n2) If $\\\\text{rank}(A) < 3$, then the matrix is singular, meaning its rows are linearly dependent.\\n3) Therefore, the determinant of the matrix must be 0, i.e., $\\\\det(A) = 0$.\\nOption A is correct.",
+    "common_mistake": "Claiming the matrix is invertible (Option D), which requires a rank of 3.",
+    "concept_slugs": [
+      "matrices-linear-systems-matrix"
+    ]
+  },
+  {
+    "pattern_group": "matrices-linear-systems-matrix",
+    "title": "The rank of the matrix $A = \\\\begin{pmatrix} 1 & 2 & 3 \\\\ 2 & 4 & 6 \\\\ 3 & 6 & 9 \\\\end{pmatrix}$ is:",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "1",
+      "B": "2",
+      "C": "3",
+      "D": "0"
+    },
+    "notes": "Identify if rows are multiples of each other, then reduce the matrix to row-echelon form.",
+    "solution_text": "Let's perform row operations to find the rank:\\n1) Compare row 2 and row 3 with row 1:\\n   - Row 2 is $2 \\\\times$ Row 1.\\n   - Row 3 is $3 \\\\times$ Row 1.\\n2) Apply row operations $R_2 \\\\to R_2 - 2R_1$ and $R_3 \\\\to R_3 - 3R_1$:\\n   $A \\\\to \\\\begin{pmatrix} 1 & 2 & 3 \\\\ 0 & 0 & 0 \\\\ 0 & 0 & 0 \\\\end{pmatrix}$.\\n3) The number of non-zero rows in the row-echelon form is 1.\\n4) Therefore, the rank of the matrix is 1.\\nOption A is correct.",
+    "common_mistake": "Stated as 3 (Option C) by just looking at the dimensions of the matrix without checking row dependencies.",
+    "concept_slugs": [
+      "matrices-linear-systems-matrix"
+    ]
+  },
+  {
+    "pattern_group": "matrices-linear-systems-matrix",
+    "title": "If the rank of the matrix $A = \\\\begin{pmatrix} 1 & 1 & 1 \\\\ 1 & a & 1 \\\\ 1 & 1 & b \\\\end{pmatrix}$ is 2, then which of the following conditions must hold?",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2022",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Either $a = 1$ or $b = 1$ (but not both)",
+      "B": "$a = 1$ and $b = 1$",
+      "C": "$a \\\\neq 1$ and $b \\\\neq 1$",
+      "D": "$a = b = 0$"
+    },
+    "notes": "Compute the determinant first (must be zero for rank < 3) and check row independence.",
+    "solution_text": "Let's perform row operations $R_2 \\\\to R_2 - R_1$ and $R_3 \\\\to R_3 - R_1$:\\n1) $A \\\\to \\\\begin{pmatrix} 1 & 1 & 1 \\\\ 0 & a-1 & 0 \\\\ 0 & 0 & b-1 \\\\end{pmatrix}$.\\n2) The determinant is $\\\\det(A) = (a-1)(b-1)$.\\n3) For the rank to be 2, we need the determinant to be 0 (so rank < 3), meaning $a=1$ or $b=1$.\\n4) However, if both $a=1$ and $b=1$:\\n   $A \\\\to \\\\begin{pmatrix} 1 & 1 & 1 \\\\ 0 & 0 & 0 \\\\ 0 & 0 & 0 \\\\end{pmatrix}$, which has rank 1.\\n5) Therefore, for the rank to be exactly 2, we must have either $a=1$ or $b=1$, but not both.\\nOption A is correct.",
+    "common_mistake": "Choosing Option B, failing to see that both variables equal to 1 drops the rank down to 1.",
+    "concept_slugs": [
+      "matrices-linear-systems-matrix"
+    ]
+  },
+  {
+    "pattern_group": "matrices-linear-systems-matrix",
+    "title": "Let the system of linear equations $AX = B$ have a unique solution. The matrix $A$ is of order $3 \\\\times 3$ and rank 3. If $B$ is the zero vector, then the solution is:",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Trivial solution ($x=y=z=0$)",
+      "B": "Infinitely many solutions",
+      "C": "No solution",
+      "D": "None of these"
+    },
+    "notes": "A homogeneous system of equations with an invertible coefficient matrix has only the trivial solution.",
+    "solution_text": "Let's analyze the system:\\n1) The system is homogeneous ($AX = O$).\\n2) Since $\\\\text{rank}(A) = 3$ for a $3 \\\\times 3$ matrix, $A$ is invertible ($A^{-1}$ exists).\\n3) Multiply both sides by $A^{-1}$:\\n   $A^{-1}AX = A^{-1}O \\\\implies IX = O \\\\implies X = O$.\\n4) Therefore, the only solution is $x=y=z=0$, which is the trivial solution.\\nOption A is correct.",
+    "common_mistake": "Claiming infinite solutions (Option B) by confusing a zero vector with dependency.",
+    "concept_slugs": [
+      "matrices-linear-systems-matrix"
+    ]
+  },
+  {
+    "pattern_group": "matrices-linear-systems-matrix",
+    "title": "For a system of linear equations $AX = B$, if the augmented matrix $[A|B]$ has rank equal to the rank of the coefficient matrix $A$, then the system is always:",
+    "difficulty": "hard",
+    "type": "pyq",
+    "source": "JEE Advanced 2021",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Consistent",
+      "B": "Inconsistent",
+      "C": "Dependent with infinite solutions",
+      "D": "Homogeneous"
+    },
+    "notes": "Apply Rouche-Capelli theorem for consistency of linear equations.",
+    "solution_text": "By the Rouche-Capelli theorem:\\n1) A system of linear equations $AX = B$ is consistent (i.e., has at least one solution) if and only if the rank of the coefficient matrix $A$ is equal to the rank of the augmented matrix $[A|B]$.\\n2) If $\\\\text{rank}(A) = \\\\text{rank}([A|B]) = n$ (number of variables), it has a unique solution.\\n3) If $\\\\text{rank}(A) = \\\\text{rank}([A|B]) < n$, it has infinitely many solutions.\\nIn either case, it is consistent.\\nOption A is correct.",
+    "common_mistake": "Asserting it must have infinite solutions (Option C), forgetting that it could also have a unique solution if the rank equals the number of variables.",
+    "concept_slugs": [
+      "matrices-linear-systems-matrix"
+    ]
+  },
+  {
+    "pattern_group": "matrices-linear-systems-matrix",
+    "title": "The rank of the identity matrix $I_3$ of order 3 is equal to ________.",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "3",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "An identity matrix is already in reduced row-echelon form with all non-zero diagonal entries.",
+    "solution_text": "Let's check the identity matrix $I_3$:\\n1) $I_3 = \\\\begin{pmatrix} 1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1 \\\\end{pmatrix}$.\\n2) The matrix has 3 non-zero rows, which are completely linearly independent.\\n3) Therefore, the rank of the identity matrix of order $n$ is always $n$.\\nFor $n=3$, the rank is 3.",
+    "common_mistake": "Stating the rank is 1, confusing the rank of identity matrix with the rank of a matrix containing all 1s.",
+    "concept_slugs": [
+      "matrices-linear-systems-matrix"
+    ]
+  },
+  {
+    "pattern_group": "matrices-linear-systems-matrix",
+    "title": "If $A = \\\\begin{pmatrix} 1 & 1 & 2 \\\\ 2 & 2 & 4 \\\\ 3 & 3 & 6 \\\\end{pmatrix}$, then the rank of the matrix $A + I_3$ is equal to ________.",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2021",
+    "correct_answer": "3",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Compute A + I first, and find its determinant to verify if it has full rank.",
+    "solution_text": "Let's calculate $B = A + I_3$:\\n1) $B = \\\\begin{pmatrix} 1 & 1 & 2 \\\\ 2 & 2 & 4 \\\\ 3 & 3 & 6 \\\\end{pmatrix} + \\\\begin{pmatrix} 1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1 \\\\end{pmatrix} = \\\\begin{pmatrix} 2 & 1 & 2 \\\\ 2 & 3 & 4 \\\\ 3 & 3 & 7 \\\\end{pmatrix}$.\\n2) Compute the determinant of $B$:\\n   $\\\\det(B) = 2(21-12) - 1(14-12) + 2(6-9)$\\n   $\\\\det(B) = 2(9) - 1(2) + 2(-3) = 18 - 2 - 6 = 10$.\\n3) Since $\\\\det(B) = 10 \\\\neq 0$, the $3 \\\\times 3$ matrix $B$ is non-singular and has full rank.\\nTherefore, the rank is 3.",
+    "common_mistake": "Assuming $\\\\text{rank}(A+I) = \\\\text{rank}(A) + \\\\text{rank}(I) = 1 + 3 = 4$, which is impossible for a 3x3 matrix, or calculating $\\\\det(B) = 0$.",
+    "concept_slugs": [
+      "matrices-linear-systems-matrix"
+    ]
+  },
+  {
+    "pattern_group": "matrices-linear-systems-matrix",
+    "title": "If the rank of the matrix $A = \\\\begin{pmatrix} 1 & 2 & 3 \\\\ 2 & 4 & 6 \\\\ 3 & 6 & k \\\\end{pmatrix}$ is exactly 1, then the value of $k$ is ________.",
+    "difficulty": "hard",
+    "type": "practice",
+    "correct_answer": "9",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "For the rank to be 1, all rows must be multiples of the first row.",
+    "solution_text": "Let's perform row operations to find the condition for rank 1:\\n1) Perform $R_2 \\\\to R_2 - 2R_1$:\\n   Row 2 becomes: $\\\\begin{pmatrix} 0 & 0 & 0 \\\\end{pmatrix}$.\\n2) Perform $R_3 \\\\to R_3 - 3R_1$:\\n   Row 3 becomes: $\\\\begin{pmatrix} 0 & 0 & k-9 \\\\end{pmatrix}$.\\n3) The reduced matrix is: $\\\\begin{pmatrix} 1 & 2 & 3 \\\\ 0 & 0 & 0 \\\\ 0 & 0 & k-9 \\\\end{pmatrix}$.\\n4) For the rank to be exactly 1, the number of non-zero rows must be 1.\\n5) This requires the third row to be entirely zero: $k-9 = 0 \\\\implies k = 9$.\\nThe answer is 9.",
+    "common_mistake": "Setting k = 0, or making calculation errors in row reduction.",
+    "concept_slugs": [
+      "matrices-linear-systems-matrix"
+    ]
+  }
+]
