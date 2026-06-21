@@ -523,7 +523,7 @@ export default function ChapterPage() {
                     <th className="px-3 py-2.5 text-center w-24">Difficulty</th>
                     <th className="px-3 py-2.5 text-center w-24">Type</th>
                     <th className="px-3 py-2.5 text-center w-20">Solution</th>
-                    <th className="px-3 py-2.5 text-right w-[260px]">Actions</th>
+                    <th className="px-3 py-2.5 text-right">Actions</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-border-default/50">

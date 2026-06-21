@@ -103,7 +103,7 @@ export default function QuestionRow({ question, index, onStatusChange, onOpenNot
         </td>
 
         {/* Question Details */}
-        <td className="px-3 py-3 w-[45%] max-w-0">
+        <td className="px-3 py-3">
           <div className="flex items-start justify-between gap-3 overflow-hidden">
             <div className="flex-1 min-w-0 overflow-hidden">
               <button
@@ -114,7 +114,7 @@ export default function QuestionRow({ question, index, onStatusChange, onOpenNot
                 }`}
                 title={title.replace(/\$[^$]*\$/g, '').replace(/\\[a-zA-Z]+/g, '').trim()}
               >
-                <div className="truncate w-full">
+                <div className="w-full line-clamp-2">
                   <MathText text={title} />
                 </div>
               </button>
@@ -216,7 +216,7 @@ export default function QuestionRow({ question, index, onStatusChange, onOpenNot
         </td>
 
         {/* Status Picker */}
-        <td className="px-3 py-3 w-[260px] text-right whitespace-nowrap align-middle">
+        <td className="px-3 py-3 text-right whitespace-nowrap align-middle">
           <div className="inline-flex rounded-md border border-border-default p-0.5 bg-bg-surface">
             <button
               onClick={() => handleStatusClick('todo')}
