@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import { GoogleOAuthProvider } from '@react-oauth/google';
+import { Analytics } from '@vercel/analytics/react';
 import useAuthStore from './store/authStore';
 import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
@@ -216,6 +217,7 @@ function App() {
         <AppContent />
         <CommandPalette />
         <ToastContainer />
+        <Analytics />
       </BrowserRouter>
     </GoogleOAuthProvider>
   );
