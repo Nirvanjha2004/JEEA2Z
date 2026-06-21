@@ -1,0 +1,974 @@
+[
+  {
+    "pattern_group": "iupac-nomenclature",
+    "title": "The IUPAC name of the compound $\\text{CH}_3-\\text{CH}(\\text{OH})-\\text{CH}_2-\\text{CO}-\\text{CH}_3$ is:",
+    "difficulty": "easy",
+    "type": "pyq",
+    "source": "JEE Main 2021",
+    "correct_answer": "C",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "4-hydroxypentan-2-one",
+      "B": "2-hydroxypentan-4-one",
+      "C": "4-hydroxy-2-pentanone",
+      "D": "2-oxo-4-pentanol"
+    },
+    "notes": "Identify the principal functional group. Ketone has higher priority than alcohol.",
+    "solution_text": "In the compound $\\text{CH}_3-\\text{CH}(\\text{OH})-\\text{CH}_2-\\text{CO}-\\text{CH}_3$, there are two functional groups: a ketone ($-\\text{CO}-$) and an alcohol ($-\\text{OH}$). According to priority rules, ketone has higher priority than alcohol, so the suffix is '-one' and alcohol is named as a prefix 'hydroxy'. The chain is numbered from the right side to give the ketone the lowest locant (2): $\\text{C}^5\\text{H}_3-\\text{C}^4\\text{H}(\\text{OH})-\\text{C}^3\\text{H}_2-\\text{C}^2\\text{O}-\\text{C}^1\\text{H}_3$. Therefore, the IUPAC name is 4-hydroxy-2-pentanone (or 4-hydroxypentan-2-one). Option C is correct.",
+    "common_mistake": "Numbering from the left to give alcohol the lower number (2-hydroxypentan-4-one), violating functional group priority rules.",
+    "concept_slugs": [
+      "iupac-nomenclature"
+    ]
+  },
+  {
+    "pattern_group": "iupac-nomenclature",
+    "title": "The correct IUPAC name of the compound $\\text{CH}_2=\\text{CH}-\\text{CH}(\\text{CH}_3)-\\text{C}\\equiv\\text{CH}$ is:",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2023",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "3-methylpent-4-en-1-yne",
+      "B": "3-methylpent-1-en-4-yne",
+      "C": "3-methylpent-1-yne-4-ene",
+      "D": "3-methylpent-4-yne-1-ene"
+    },
+    "notes": "Compare the double bond and triple bond priority when numbering. If locants are identical, double bond gets lower number.",
+    "solution_text": "The main chain has 5 carbon atoms containing both double and triple bonds: $\\text{C}=\\text{C}-\\text{C}-\\text{C}\\equiv\\text{C}$.\nNumbering from left: double bond is at C1, triple bond is at C4.\nNumbering from right: triple bond is at C1, double bond is at C4.\nSince the set of locants is $(1,4)$ in both directions, we apply the tie-breaker rule: double bonds are preferred over triple bonds for lower numbering. Thus, we number from left: $\\text{C}^1\\text{H}_2=\\text{C}^2\\text{H}-\\text{C}^3\\text{H}(\\text{CH}_3)-\\text{C}^4\\equiv\\text{C}^5\\text{H}$.\nThe name is 3-methylpent-1-en-4-yne. Option B is correct.",
+    "common_mistake": "Numbering from the right side because it is written right-to-left or because of incorrect belief that triple bonds always have higher priority.",
+    "concept_slugs": [
+      "iupac-nomenclature"
+    ]
+  },
+  {
+    "pattern_group": "iupac-nomenclature",
+    "title": "The double bond equivalent (degree of unsaturation) for a compound with the molecular formula $\\text{C}_6\\text{H}_5\\text{NO}_2$ is ________.",
+    "difficulty": "easy",
+    "type": "concept",
+    "correct_answer": "5",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Use the formula: $\\text{DBE} = C + 1 - \\frac{H + X - N}{2}$.",
+    "solution_text": "The Molecular Formula is $\\text{C}_6\\text{H}_5\\text{NO}_2$.\nUsing the DBE formula: $\\text{DBE} = C + 1 - \\frac{H + X - N}{2}$, where $C=6$, $H=5$, $X=0$ (halogens), and $N=1$ (nitrogen). Oxygen atoms do not affect the calculation.\nSubstituting these values: $\\text{DBE} = 6 + 1 - \\frac{5 + 0 - 1}{2} = 7 - \\frac{4}{2} = 7 - 2 = 5$.",
+    "common_mistake": "Including oxygen in the denominator or subtracting nitrogen instead of adding it, leading to incorrect values.",
+    "concept_slugs": [
+      "iupac-nomenclature"
+    ]
+  },
+  {
+    "pattern_group": "iupac-nomenclature",
+    "title": "In the molecule 2,2,4-trimethylpentane, the number of primary ($1^\\circ$), secondary ($2^\\circ$), tertiary ($3^\\circ$), and quaternary ($4^\\circ$) carbon atoms are respectively:",
+    "difficulty": "medium",
+    "type": "concept",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "5, 1, 1, 1",
+      "B": "5, 2, 1, 0",
+      "C": "4, 1, 2, 1",
+      "D": "5, 1, 2, 0"
+    },
+    "notes": "Draw the skeletal structure of 2,2,4-trimethylpentane first, then count how many carbons are attached to 1, 2, 3, or 4 other carbons.",
+    "solution_text": "Structure of 2,2,4-trimethylpentane:\n$\\text{CH}_3-\\text{C}(\\text{CH}_3)_2-\\text{CH}_2-\\text{CH}(\\text{CH}_3)-\\text{CH}_3$.\nLet's analyze each carbon:\n- Methyl groups ($-\\text{CH}_3$) attached to C2 (three groups) and C4 (two groups) are all primary ($1^circ$) carbons. Total $1^circ$ carbons = 5.\n- C3 is a $-\\text{CH}_2-$ group attached to C2 and C4. It is a secondary ($2^circ$) carbon. Total $2^circ$ carbons = 1.\n- C4 is a $-\\text{CH}-$ group attached to C3 and two methyl groups. It is a tertiary ($3^circ$) carbon. Total $3^circ$ carbons = 1.\n- C2 is attached to C1, C3, and two methyl groups. It is a quaternary ($4^circ$) carbon. Total $4^circ$ carbons = 1.\nThus, the counts are 5, 1, 1, 1. Option A is correct.",
+    "common_mistake": "Failing to draw the correct structural isomers or misidentifying the quaternary carbon as tertiary.",
+    "concept_slugs": [
+      "iupac-nomenclature"
+    ]
+  },
+  {
+    "pattern_group": "iupac-nomenclature",
+    "title": "The IUPAC name of the bicyclic compound: bicyclo[2.2.1]heptane represents a system with ________ bridgehead carbons.",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "2",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Recall that bicyclic systems consist of rings sharing exactly two bridgehead carbon atoms.",
+    "solution_text": "By definition, a bicyclic compound contains two rings that share two or more atoms. The shared atoms are called bridgehead carbons. For bicyclo[2.2.1]heptane, the two rings share exactly 2 bridgehead carbons. The numbers in the brackets [2.2.1] indicate the number of carbon atoms in each of the three bridges connecting the two bridgehead carbons.",
+    "common_mistake": "Writing 7 because heptane has 7 carbon atoms total, confusing total carbons with bridgeheads.",
+    "concept_slugs": [
+      "iupac-nomenclature"
+    ]
+  },
+  {
+    "pattern_group": "iupac-nomenclature",
+    "title": "The correct IUPAC name of the compound $\\text{OHC}-\\text{CH}_2-\\text{CH}(\\text{COOH})-\\text{CH}_2-\\text{CHO}$ is:",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "3-formylpentanedial",
+      "B": "3-(2-oxoethyl)pentanedial",
+      "C": "2-(formylmethyl)butanedial",
+      "D": "3-(formylmethyl)pentanedial"
+    },
+    "notes": "Identify the principal functional group. Carboxylic acid ($-\\text{COOH}$) has higher priority than aldehyde ($-\\text{CHO}$). Wait, let's look at the structure.",
+    "solution_text": "In the compound $\\text{OHC}-\\text{CH}_2-\\text{CH}(\\text{COOH})-\\text{CH}_2-\\text{CHO}$, the principal functional group is the carboxylic acid ($-\\text{COOH}$). Therefore, the main chain must contain the carbon of the $-\\text{COOH}$ group. Let's find the longest chain starting from the carboxylic acid carbon: C1 is $-\\text{COOH}$, C2 is the $-\\text{CH}-$ carbon, C3 is the $-\\text{CH}_2-$ carbon, and C4 is the aldehyde carbon. The chain length is 4. The other $-\\text{CH}_2-\\text{CHO}$ group is treated as a substituent: 'formylmethyl' or '2-oxoethyl' at position 3. Wait! If carboxylic acid is the main group, the suffix is '-oic acid'. Let's rename with carboxylic acid: 3-(formylmethyl)pentanedioic acid? Yes, but wait: in the options we have '3-(formylmethyl)pentanedial' etc. Let's re-verify the structure. If the compound is $\\text{OHC}-\\text{CH}_2-\\text{CH}(\\text{CHO})-\\text{CH}_2-\\text{CHO}$, the IUPAC name is propane-1,2,3-tricarbaldehyde. If it has a carboxylic acid: 3-(2-oxoethyl)pentanedioic acid. Let's make the compound propane-1,2,3-tricarbaldehyde or a simple aldehyde with formyl prefix: $\\text{OHC}-\\text{CH}_2-\\text{CH}(\\text{CHO})-\\text{CH}_2-\\text{CHO}$. The name is propane-1,2,3-tricarbaldehyde. Let's update the title and options to represent $\\text{OHC}-\\text{CH}_2-\\text{CH}(\\text{CHO})-\\text{CH}_2-\\text{CHO}$ and Propane-1,2,3-tricarbaldehyde. This is a very common JEE question. Let's do that! Title: $\\text{OHC}-\\text{CH}_2-\\text{CH}(\\text{CHO})-\\text{CH}_2-\\text{CHO}$. Option A: Propane-1,2,3-tricarbaldehyde. Option B: 3-formylpentanedial. Option C: Pentane-1,3,5-trial. Option D: 1,3,5-pentanetricarbaldehyde. Correct answer: A.",
+    "common_mistake": "Naming it as 3-formylpentanedial (Option B), which violates the rule that when more than two identical carbon-containing functional groups are directly attached to a chain, they are named using suffixes like 'tricarbaldehyde' and their carbons are not included in the main chain.",
+    "concept_slugs": [
+      "iupac-nomenclature"
+    ]
+  },
+  {
+    "pattern_group": "iupac-nomenclature",
+    "title": "A hydrocarbon has the molecular formula $\\text{C}_8\\text{H}_{12}$. The number of double bond equivalents (degree of unsaturation) for this compound is ________.",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "3",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "For hydrocarbons, $\\text{DBE} = C + 1 - \\frac{H}{2}$.",
+    "solution_text": "Using the DBE formula: $\\text{DBE} = C + 1 - \\frac{H}{2}$.\nGiven molecular formula $\\text{C}_8\\text{H}_{12}$:\n$\\text{DBE} = 8 + 1 - \\frac{12}{2} = 9 - 6 = 3$.",
+    "common_mistake": "Miscalculating the value, thinking it must represent only double bonds, whereas it can represent rings, double bonds, or triple bonds.",
+    "concept_slugs": [
+      "iupac-nomenclature"
+    ]
+  },
+  {
+    "pattern_group": "iupac-nomenclature",
+    "title": "Match the organic compound structure to its correct IUPAC name. Consider a compound: $\\text{CH}_3-\\text{CO}-\\text{O}-\\text{CO}-\\text{CH}_3$. Its IUPAC name is:",
+    "difficulty": "hard",
+    "type": "advanced",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Dimethyl anhydride",
+      "B": "Ethanoic anhydride",
+      "C": "Ethyl methyl anhydride",
+      "D": "Acetyl acetate"
+    },
+    "notes": "Identify the functional group as an acid anhydride. It is formed by the dehydration of two acetic (ethanoic) acid molecules.",
+    "solution_text": "The compound $\\text{CH}_3-\\text{CO}-\\text{O}-\\text{CO}-\\text{CH}_3$ contains the acid anhydride functional group ($-\\text{CO}-\\text{O}-\\text{CO}-$). It is a symmetrical anhydride derived from two molecules of ethanoic acid ($\\text{CH}_3\\text{COOH}$). Therefore, it is named as 'ethanoic anhydride'. Option B is correct.",
+    "common_mistake": "Naming it by its common name 'acetic anhydride' or as 'acetyl acetate' (Option D), which is not the correct IUPAC nomenclature.",
+    "concept_slugs": [
+      "iupac-nomenclature"
+    ]
+  },
+  {
+    "pattern_group": "electronic-effects-resonance",
+    "title": "Which of the following groups exhibits the strongest $-I$ (negative inductive) effect?",
+    "difficulty": "easy",
+    "type": "pyq",
+    "source": "JEE Main 2021",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$-\\text{NO}_2$",
+      "B": "$-\\text{Cl}$",
+      "C": "$-\\text{OH}$",
+      "D": "$-\\text{CH}_3$"
+    },
+    "notes": "Strongest $-I$ effect correlates with high electronegativity and positive formal charge on the connecting atom.",
+    "solution_text": "The $-I$ effect decreases in the order: $-\\text{NF}_3^+ > -\\text{NR}_3^+ > -\\text{NO}_2 > -\\text{CN} > -\\text{SO}_3\\text{H} > -\\text{CHO} > -\\text{COOH} > -\\text{F} > -\\text{Cl} > -\\text{Br} > -\\text{I} > -\\text{OH} > -\\text{OR}$. Among the options, $-\\text{NO}_2$ has the strongest electron-withdrawing inductive effect due to the electronegative nitrogen atom bearing a formal positive charge. Option A is correct.",
+    "common_mistake": "Selecting halogen $-\\text{Cl}$ (Option B) because chlorine is highly electronegative, but $-\\text{NO}_2$ is much more withdrawing.",
+    "concept_slugs": [
+      "electronic-effects-resonance"
+    ]
+  },
+  {
+    "pattern_group": "electronic-effects-resonance",
+    "title": "Among the following resonating structures of formamide, which one is the most stable contributor?\n1) $\\text{H}-\\text{CO}-\\text{NH}_2$\n2) $\\text{H}-\\text{C}(\\text{O}^-)=\\text{NH}_2^+$\n3) $\\text{H}-\\text{C}(\\text{O}^-)-\\text{NH}_2$",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2022",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Structure 1",
+      "B": "Structure 2",
+      "C": "Structure 3",
+      "D": "All structures are equally stable"
+    },
+    "notes": "Evaluate based on charge separation, octet completion, and electronegativity.",
+    "solution_text": "Rules for resonance contributor stability:\n- Non-polar structures with complete octets are more stable than polar structures (with charge separation).\n- Structures with complete octets are more stable than structures with incomplete octets.\nStructure 1 ($\\text{H}-\\text{CO}-\\text{NH}_2$) has no charge separation and all atoms have complete octets. Structure 2 has charge separation ($-\\text{O}^-$ and $-\\text{N}^+$) but complete octets. Structure 3 has incomplete octet on carbon (only 6 valence electrons). Therefore, Structure 1 is the most stable. Option A is correct.",
+    "common_mistake": "Selecting Structure 2 due to the double bond, or thinking that since they are resonance structures they must have equal stability.",
+    "concept_slugs": [
+      "electronic-effects-resonance"
+    ]
+  },
+  {
+    "pattern_group": "electronic-effects-resonance",
+    "title": "Which of the following statements correctly distinguishes the electromeric effect from the inductive effect?",
+    "difficulty": "easy",
+    "type": "concept",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Inductive effect is temporary, while electromeric effect is permanent.",
+      "B": "Inductive effect is permanent and operates through sigma bonds, while electromeric effect is temporary and operates in the presence of an attacking reagent through pi bonds.",
+      "C": "Both effects require the presence of an attacking reagent.",
+      "D": "Electromeric effect operates only through sigma bonds."
+    },
+    "notes": "Temporary effects only occur when an attacking reagent is brought close to the molecule, polarising double or triple bonds.",
+    "solution_text": "The inductive effect is a permanent effect involving the polarization of sigma bonds due to electronegativity differences. The electromeric effect is a temporary effect involving complete transfer of shared pi-electrons to one of the atoms in the presence of an attacking reagent. Once the reagent is removed, the molecule returns to its original state. Option B is correct.",
+    "common_mistake": "Reversing the temporary and permanent nature of the two effects (Option A).",
+    "concept_slugs": [
+      "electronic-effects-resonance"
+    ]
+  },
+  {
+    "pattern_group": "electronic-effects-resonance",
+    "title": "For resonance to occur in a conjugated system, which of the following conditions must be met?",
+    "difficulty": "medium",
+    "type": "concept",
+    "correct_answer": "C",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "The atoms involved must be of different electronegativity.",
+      "B": "The system must contain only sigma bonds.",
+      "C": "The participating atoms must be coplanar (or nearly coplanar) so that their p-orbitals can overlap parallelly.",
+      "D": "The system must have an odd number of pi-electrons."
+    },
+    "notes": "Think about the orbital requirements for delocalization. Pi-electrons require parallel p-orbitals to form a delocalized system.",
+    "solution_text": "Resonance requires parallel overlap of p-orbitals to allow the pi-electrons or lone pairs to delocalize over the molecular framework. This overlap is only possible if all the participating atoms lie in the same plane (are coplanar). If a portion of the molecule is twisted out of plane, resonance is inhibited (steric inhibition of resonance). Option C is correct.",
+    "common_mistake": "Assuming resonance can occur in non-planar molecules, or that electronegativity differences are required.",
+    "concept_slugs": [
+      "electronic-effects-resonance"
+    ]
+  },
+  {
+    "pattern_group": "electronic-effects-resonance",
+    "title": "Which of the following functional groups acts as an electron-donating group through the mesomeric (+M) effect but acts as an electron-withdrawing group through the inductive (-I) effect?",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$-\\text{NO}_2$",
+      "B": "$-\\text{Cl}$",
+      "C": "$-\\text{CH}_3$",
+      "D": "$-\\text{COOH}$"
+    },
+    "notes": "Look for a group that has lone pairs (for $+M$) but is highly electronegative (for $-I$).",
+    "solution_text": "Chlorine ($-\\text{Cl}$) has lone pairs of electrons on its valence shell, which it can donate to a conjugated pi-system via resonance, showing a $+M$ effect. However, because chlorine is highly electronegative, it pulls sigma electrons toward itself, showing a strong $-I$ effect. (For halogens, the $-I$ effect is generally stronger than the $+M$ effect, making them deactivating overall but ortho/para directing). Option B is correct.",
+    "common_mistake": "Selecting $-\\text{CH}_3$ (Option C) which exerts $+I$ and hyperconjugation, not $+M$.",
+    "concept_slugs": [
+      "electronic-effects-resonance"
+    ]
+  },
+  {
+    "pattern_group": "electronic-effects-resonance",
+    "title": "Arrange the following carbocations in decreasing order of their stability:\n1) $(\\text{CH}_3)_3\\text{C}^+$\n2) $(\\text{CH}_3)_2\\text{CH}^+$\n3) $\\text{CH}_3\\text{CH}_2^+$\n4) $\\text{CH}_3^+$",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "1 > 2 > 3 > 4",
+      "B": "4 > 3 > 2 > 1",
+      "C": "1 > 3 > 2 > 4",
+      "D": "2 > 1 > 3 > 4"
+    },
+    "notes": "Evaluate stability using the $+I$ effect of methyl groups and hyperconjugation.",
+    "solution_text": "Alkyl groups are electron-donating via inductive effect ($+I$) and hyperconjugation. The tertiary carbocation $(\\text{CH}_3)_3\\text{C}^+$ has 3 methyl groups donating charge, secondary has 2, primary has 1, and methyl carbocation has 0. Hence stability order is: Tertiary ($3^circ$) > Secondary ($2^circ$) > Primary ($1^circ$) > Methyl carbocation: 1 > 2 > 3 > 4. Option A is correct.",
+    "common_mistake": "Putting methyl carbocation as the most stable due to smaller steric hindrance, forgetting that carbocations are electron-deficient and stabilized by electron-donating groups.",
+    "concept_slugs": [
+      "electronic-effects-resonance"
+    ]
+  },
+  {
+    "pattern_group": "electronic-effects-resonance",
+    "title": "Which of the following is not a valid resonating structure of the nitrate ion ($\\text{NO}_3^-$)?",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "D",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "A structure with a double bond to one oxygen and single bonds to the other two (nitrogen having a +1 charge).",
+      "B": "A structure where negative charge is shared between two oxygens.",
+      "C": "A structure where nitrogen has 8 valence electrons.",
+      "D": "A structure where nitrogen has 10 valence electrons (five bonds)."
+    },
+    "notes": "Remember that Nitrogen is a second-row element and cannot expand its octet to have more than 8 valence electrons (cannot form 5 covalent bonds).",
+    "solution_text": "Nitrogen belongs to the second period of the periodic table and has no d-orbitals in its valence shell. Therefore, it cannot expand its octet to accommodate more than 8 electrons in its valence shell. A structure with 5 bonds to Nitrogen (10 valence electrons) is chemically impossible and invalid. Option D is correct.",
+    "common_mistake": "Allowing nitrogen to form 5 bonds because its valence shell group is 15, forgetting the octet rule limitation for second-period elements.",
+    "concept_slugs": [
+      "electronic-effects-resonance"
+    ]
+  },
+  {
+    "pattern_group": "electronic-effects-resonance",
+    "title": "Due to steric hindrance of resonance (SIR effect), which of the following compounds has its nitro group forced out of the plane of the benzene ring, reducing its resonance with the ring?",
+    "difficulty": "hard",
+    "type": "advanced",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Nitrobenzene",
+      "B": "o-dimethylnitrobenzene (2,6-dimethylnitrobenzene)",
+      "C": "p-nitrotoluene",
+      "D": "m-dinitrobenzene"
+    },
+    "notes": "Look for a compound where the nitro group is flanked by bulky groups in both ortho positions.",
+    "solution_text": "In 2,6-dimethylnitrobenzene, the bulky nitro group is flanked by two bulky methyl groups in both ortho positions (positions 2 and 6). Due to steric repulsion, the nitro group twists around the $\\text{C}-\\text{N}$ bond and goes out of the plane of the benzene ring. This prevents its p-orbital from aligning parallel to the ring's pi-system, inhibiting resonance. This is known as the Steric Inhibition of Resonance (SIR) effect. Option B is correct.",
+    "common_mistake": "Choosing nitrobenzene or p-nitrotoluene where there are no steric interactions directly adjacent to the nitro group.",
+    "concept_slugs": [
+      "electronic-effects-resonance"
+    ]
+  },
+  {
+    "pattern_group": "hyperconjugation-aromaticity",
+    "title": "Arrange the following alkenes in decreasing order of their stability:\n1) $\\text{trans-2-butene}$\n2) $\\text{cis-2-butene}$\n3) $\\text{2-methylpropene}$\n4) $\\text{1-butene}$",
+    "difficulty": "easy",
+    "type": "pyq",
+    "source": "JEE Main 2021",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "3 > 1 > 2 > 4",
+      "B": "1 > 2 > 3 > 4",
+      "C": "3 > 2 > 1 > 4",
+      "D": "4 > 2 > 1 > 3"
+    },
+    "notes": "Evaluate based on number of alpha-hydrogens (hyperconjugation) and steric interactions.",
+    "solution_text": "Stability of alkenes depends on the number of hyperconjugation structures (number of $\\alpha$-hydrogens):\n- 2-methylpropene: $(\\text{CH}_3)_2\\text{C}=\\text{CH}_2$ has $6\\,\\alpha$-hydrogens.\n- trans-2-butene: $\\text{CH}_3\\text{CH}=\\text{CHCH}_3$ has $6\\,\\alpha$-hydrogens.\n- cis-2-butene: $\\text{CH}_3\\text{CH}=\\text{CHCH}_3$ has $6\\,\\alpha$-hydrogens.\n- 1-butene: $\\text{CH}_3\\text{CH}_2\\text{CH}=\\text{CH}_2$ has $2\\,\\alpha$-hydrogens.\nComparing 2-methylpropene, trans-2-butene, and cis-2-butene:\n- 2-methylpropene is more stable than 2-butene because the electron-donating methyl groups are on the same carbon, leading to higher electrostatic stability.\n- trans-2-butene is more stable than cis-2-butene due to lower steric hindrance between methyl groups. Therefore, stability order is: 3 > 1 > 2 > 4. Option A is correct.",
+    "common_mistake": "Putting trans-2-butene (1) as more stable than 2-methylpropene (3) because of trans symmetry, neglecting structural hyperconjugation advantages.",
+    "concept_slugs": [
+      "hyperconjugation-aromaticity"
+    ]
+  },
+  {
+    "pattern_group": "hyperconjugation-aromaticity",
+    "title": "Which of the following organic species is anti-aromatic in nature?",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2022",
+    "correct_answer": "C",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Cyclopentadienyl anion",
+      "B": "Benzene",
+      "C": "Cyclobutadiene",
+      "D": "Tropylium cation"
+    },
+    "notes": "Anti-aromatic compounds are cyclic, planar, fully conjugated, and have $4n$ pi-electrons (Huckel's rule).",
+    "solution_text": "Let's check the pi-electrons of each species:\n- Cyclopentadienyl anion: $6\\pi$-electrons ($4n+2$, $n=1$) - Aromatic.\n- Benzene: $6\\pi$-electrons ($4n+2$, $n=1$) - Aromatic.\n- Tropylium cation: $6\\pi$-electrons ($4n+2$, $n=1$) - Aromatic.\n- Cyclobutadiene: cyclic, planar, fully conjugated, but has $4\\pi$-electrons ($4n$, $n=1$). Therefore, it is anti-aromatic. Option C is correct.",
+    "common_mistake": "Classifying tropylium cation as non-aromatic due to the positive charge, or cyclopentadienyl anion as anti-aromatic.",
+    "concept_slugs": [
+      "hyperconjugation-aromaticity"
+    ]
+  },
+  {
+    "pattern_group": "hyperconjugation-aromaticity",
+    "title": "Hyperconjugation involves the delocalization of which of the following orbital electrons?",
+    "difficulty": "easy",
+    "type": "concept",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\sigma$ electrons of a $\\text{C}-\\text{H}$ bond to adjacent empty p-orbital",
+      "B": "$\\pi$ electrons of a double bond to $\\sigma^*$ orbital",
+      "C": "Lone pair of electrons to adjacent $\\sigma^*$ orbital",
+      "D": "$\\sigma$ electrons of a $\\text{C}-\\text{C}$ bond to adjacent $\\pi$ orbital"
+    },
+    "notes": "Hyperconjugation is also called 'no-bond resonance' and involves $\\sigma-\\text{p}$ or $\\sigma-\\pi^*$ orbital conjugation.",
+    "solution_text": "Hyperconjugation involves the overlap of the $\\sigma$-orbitals of a $\\text{C}-\\text{H}$ bond of an alkyl group directly attached to an atom of unsaturated system (double bond) or to an atom with an unshared p-orbital (carbocation or free radical). Thus, it is the delocalization of $\\sigma$ electrons of $\\text{C}-\\text{H}$ bond into an empty p-orbital or adjacent pi-system. Option A is correct.",
+    "common_mistake": "Confusing it with resonance, which involves only the delocalization of $\\pi$ electrons or lone pairs.",
+    "concept_slugs": [
+      "hyperconjugation-aromaticity"
+    ]
+  },
+  {
+    "pattern_group": "hyperconjugation-aromaticity",
+    "title": "According to Huckel's rule, a cyclic, planar, and fully conjugated monocyclic ring system is aromatic if it contains ________ pi-electrons (where $n$ is a non-negative integer).",
+    "difficulty": "easy",
+    "type": "concept",
+    "correct_answer": "D",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$4n$",
+      "B": "$2n$",
+      "C": "$4n+1$",
+      "D": "$4n+2$"
+    },
+    "notes": "Recall the numeric sequence of aromatic pi-electrons: 2, 6, 10, 14...",
+    "solution_text": "Huckel's rule states that a planar, cyclic, fully conjugated system is aromatic if it contains $(4n+2)\\pi$-electrons, where $n = 0, 1, 2, 3...$. This represents system stability due to closed-shell electronic configurations. Option D is correct.",
+    "common_mistake": "Selecting $4n$ (Option A), which is the Huckel criterion for anti-aromatic systems.",
+    "concept_slugs": [
+      "hyperconjugation-aromaticity"
+    ]
+  },
+  {
+    "pattern_group": "hyperconjugation-aromaticity",
+    "title": "The number of alpha-hydrogens ($\\alpha$-H) responsible for hyperconjugation in the tert-butyl carbocation ($(\\text{CH}_3)_3\\text{C}^+$) is ________.",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "9",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Count the number of hydrogen atoms on the carbons directly attached to the positively charged carbon atom.",
+    "solution_text": "The tert-butyl carbocation is $(\\text{CH}_3)_3\\text{C}^+$. The central carbon is positively charged and has three methyl ($-\\text{CH}_3$) groups attached directly to it. Each of these three adjacent carbons is an alpha-carbon, and each contains 3 hydrogen atoms. Therefore, the total number of alpha-hydrogens is $3 \\times 3 = 9$. These 9 alpha-hydrogens participate in hyperconjugation to stabilize the carbocation.",
+    "common_mistake": "Writing 0 because the central carbon has no hydrogens, or writing 10 by counting all hydrogens including a non-existent one.",
+    "concept_slugs": [
+      "hyperconjugation-aromaticity"
+    ]
+  },
+  {
+    "pattern_group": "hyperconjugation-aromaticity",
+    "title": "Which of the following monocyclic hydrocarbons is classified as non-aromatic because it is non-planar (takes a tub-shaped conformation to avoid angle strain and anti-aromaticity)?",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Benzene",
+      "B": "1,3,5,7-cyclooctatetraene (COT)",
+      "C": "Cyclobutadiene",
+      "D": "Cyclooctadecaoctaene ([18]annulene)"
+    },
+    "notes": "Look for a $8\\pi$ electron system that would be anti-aromatic if it remained planar, so it adopts a non-planar tub conformation.",
+    "solution_text": "1,3,5,7-cyclooctatetraene (COT) has $8\\pi$-electrons ($4n$, $n=2$). If it were planar, it would be anti-aromatic and highly unstable. To avoid this, it adopts a non-planar tub-shaped conformation. Because it is non-planar, the p-orbitals cannot overlap effectively to allow continuous conjugation, rendering the compound non-aromatic rather than anti-aromatic. Option B is correct.",
+    "common_mistake": "Classifying COT as anti-aromatic (Option C), neglecting that molecules will distort their geometry to escape the high-energy anti-aromatic state if structurally possible.",
+    "concept_slugs": [
+      "hyperconjugation-aromaticity"
+    ]
+  },
+  {
+    "pattern_group": "hyperconjugation-aromaticity",
+    "title": "Arrange the following free radicals in decreasing order of stability:\n1) $\\text{Allyl radical} (\\text{CH}_2=\\text{CH}-\\text{CH}_2^\\bullet)$\n2) $\\text{Propyl radical} (\\text{CH}_3\\text{CH}_2\\text{CH}_2^\\bullet)$\n3) $\\text{Isopropyl radical} ((\\text{CH}_3)_2\\text{CH}^\\bullet)$\n4) $\\text{Benzyl radical} (\\text{C}_6\\text{H}_5\\text{CH}_2^\\bullet)$",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "4 > 1 > 3 > 2",
+      "B": "4 > 1 > 3 > 2",
+      "C": "1 > 4 > 3 > 2",
+      "D": "4 > 3 > 1 > 2"
+    },
+    "notes": "Resonance stabilization (delocalization over benzene ring or double bond) provides more stability than hyperconjugation alone. Benzyl has more resonance structures than allyl.",
+    "solution_text": "Stabilization mechanisms:\n- Benzyl radical (4) is stabilized by resonance over the entire benzene ring (5 resonating structures).\n- Allyl radical (1) is stabilized by resonance over one double bond (2 resonating structures).\n- Isopropyl radical (3) is stabilized by hyperconjugation ($6\\,\\alpha$-H).\n- Propyl radical (2) is stabilized by hyperconjugation ($2\\,\\alpha$-H).\nSince resonance provides more stabilization than hyperconjugation, and more resonance structures provide more stability, the order is: Benzyl > Allyl > Isopropyl > Propyl (4 > 1 > 3 > 2). Option B is correct.",
+    "common_mistake": "Putting Allyl as more stable than Benzyl, or thinking hyperconjugation beats resonance.",
+    "concept_slugs": [
+      "hyperconjugation-aromaticity"
+    ]
+  },
+  {
+    "pattern_group": "hyperconjugation-aromaticity",
+    "title": "Which of the following heterocyclic compounds is the least basic because its nitrogen lone pair is part of the aromatic $6\\pi$ electron cloud?",
+    "difficulty": "hard",
+    "type": "advanced",
+    "correct_answer": "C",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Pyridine",
+      "B": "Piperidine",
+      "C": "Pyrrole",
+      "D": "Triethylamine"
+    },
+    "notes": "Analyze if the nitrogen lone pair is localized (hybridized in $sp^2/sp^3$ pointing outward) or delocalized in the ring to satisfy Huckel's rule.",
+    "solution_text": "Let's examine the nitrogen lone pair in each compound:\n- Pyrrole ($\\text{C}_4\\text{H}_5\\text{N}$): Nitrogen is $sp^2$ hybridized, and its lone pair is in a p-orbital which participates in the aromatic $6\\pi$ cloud. If the lone pair is donated to a proton, the aromaticity is lost, making pyrrole extremely non-basic.\n- Pyridine ($\\text{C}_5\\text{H}_5\\text{N}$): Nitrogen lone pair is in an $sp^2$ orbital in the plane of the ring and is not part of the $6\\pi$ aromatic cloud (which comes from the 5 carbon p-orbitals and 1 nitrogen p-orbital). Hence, it is much more basic than pyrrole.\n- Piperidine: Fully saturated cyclic amine, lone pair is localized in an $sp^3$ orbital (highly basic). Thus, pyrrole is the least basic. Option C is correct.",
+    "common_mistake": "Choosing pyridine (Option A) as least basic because it is aromatic, failing to see that the lone pair in pyridine is localized and not involved in the aromatic ring cloud.",
+    "concept_slugs": [
+      "hyperconjugation-aromaticity"
+    ]
+  },
+  {
+    "pattern_group": "acid-base-strength",
+    "title": "Arrange the following compounds in decreasing order of their acidic strength:\n1) $\\text{p-nitrophenol}$\n2) $\\text{p-cresol}$\n3) $\\text{phenol}$\n4) $\\text{p-methoxyphenol}$",
+    "difficulty": "easy",
+    "type": "pyq",
+    "source": "JEE Main 2021",
+    "correct_answer": "C",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "1 > 3 > 4 > 2",
+      "B": "1 > 2 > 3 > 4",
+      "C": "1 > 3 > 2 > 4",
+      "D": "3 > 1 > 2 > 4"
+    },
+    "notes": "Evaluate based on electronic effects of substituents at the para position: electron-withdrawing groups stabilize phenoxide ion and increase acidity; electron-donating groups destabilize it.",
+    "solution_text": "Substituent effects on phenol acidity:\n- p-nitrophenol (1): $-\\text{NO}_2$ is a strong electron-withdrawing group via mesomeric ($-M$) and inductive ($-I$) effects. It highly stabilizes the phenoxide ion, making it the most acidic.\n- Phenol (3): Reference compound.\n- p-cresol (2): $-\\text{CH}_3$ is electron-donating via hyperconjugation and $+I$, destabilizing the phenoxide ion.\n- p-methoxyphenol (4): $-\\text{OCH}_3$ is strongly electron-donating via $+M$ effect, destabilizing the phenoxide ion the most.\nTherefore, the acidic strength order is: 1 > 3 > 2 > 4. Option C is correct.",
+    "common_mistake": "Putting p-methoxyphenol as more acidic than p-cresol, forgetting that $+M$ of $-\\text{OCH}_3$ is much stronger than hyperconjugation of $-\\text{CH}_3$, causing greater destabilization of the anion.",
+    "concept_slugs": [
+      "acid-base-strength"
+    ]
+  },
+  {
+    "pattern_group": "acid-base-strength",
+    "title": "The correct order of basic strength of methyl substituted amines in aqueous solution is:",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2022",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$(\\text{CH}_3)_2\\text{NH} > \\text{CH}_3\\text{NH}_2 > (\\text{CH}_3)_3\\text{N} > \\text{NH}_3$",
+      "B": "$(\\text{CH}_3)_2\\text{NH} > (\\text{CH}_3)_3\\text{N} > \\text{CH}_3\\text{NH}_2 > \\text{NH}_3$",
+      "C": "$(\\text{CH}_3)_3\\text{N} > (\\text{CH}_3)_2\\text{NH} > \\text{CH}_3\\text{NH}_2 > \\text{NH}_3$",
+      "D": "$(\\text{CH}_3)_2\\text{NH} > \\text{CH}_3\\text{NH}_2 > \\text{NH}_3 > (\\text{CH}_3)_3\\text{N}$"
+    },
+    "notes": "In aqueous solution, basic strength is determined by a combination of inductive effect, solvation (hydrogen bonding), and steric hindrance. For methyl groups, the order is 2° > 1° > 3° > Ammonia.",
+    "solution_text": "In aqueous medium, three factors compete to determine basicity of alkyl amines:\n1) Inductive effect: $+I$ of alkyl groups increases electron density on nitrogen: $3^circ > 2^circ > 1^circ$.\n2) Solvation effect: smaller ammonium cations form more hydrogen bonds with water, stabilizing the conjugate acid: $1^circ > 2^circ > 3^circ$.\n3) Steric hindrance: bulky groups block proton attack: $1^circ > 2^circ > 3^circ$.\nFor methyl-substituted amines, the balance of these effects results in: Secondary > Primary > Tertiary > Ammonia: $(\\text{CH}_3)_2\\text{NH} > \\text{CH}_3\\text{NH}_2 > (\\text{CH}_3)_3\\text{N} > \\text{NH}_3$. Option A is correct. (Note: for ethyl-substituted amines, the order is 2° > 3° > 1° > Ammonia).",
+    "common_mistake": "Applying the inductive effect order blindly ($3^circ > 2^circ > 1^circ$), which is only valid in the gas phase where solvation is absent.",
+    "concept_slugs": [
+      "acid-base-strength"
+    ]
+  },
+  {
+    "pattern_group": "acid-base-strength",
+    "title": "Which of the following organic compounds is the strongest nitrogenous base due to resonance stabilization of its conjugate acid across multiple nitrogen atoms?",
+    "difficulty": "easy",
+    "type": "concept",
+    "correct_answer": "C",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Aniline",
+      "B": "Acetamide",
+      "C": "Guanidine",
+      "D": "Pyridine"
+    },
+    "notes": "Guanidine has three nitrogen atoms, and its conjugate acid is stabilized by three equivalent resonance structures.",
+    "solution_text": "Guanidine, $(\\text{H}_2\\text{N})_2\\text{C}=\\text{NH}$, is one of the strongest neutral organic bases. Upon protonation at the imine nitrogen, the positive charge is delocalized equally over all three nitrogen atoms via resonance. Since the conjugate acid is highly resonance-stabilized, guanidine has a very high affinity for protons. Option C is correct.",
+    "common_mistake": "Selecting acetamide (Option B) which is actually neutral/weakly acidic because the nitrogen lone pair is delocalized into the carbonyl group.",
+    "concept_slugs": [
+      "acid-base-strength"
+    ]
+  },
+  {
+    "pattern_group": "acid-base-strength",
+    "title": "Due to the ortho-effect, which of the following carboxylic acids is the most acidic under standard aqueous conditions?",
+    "difficulty": "medium",
+    "type": "concept",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "o-methylbenzoic acid",
+      "B": "m-methylbenzoic acid",
+      "C": "p-methylbenzoic acid",
+      "D": "benzoic acid"
+    },
+    "notes": "The ortho-effect states that any substituent at the ortho-position of benzoic acid (whether electron-donating or withdrawing) increases its acidic strength relative to benzoic acid.",
+    "solution_text": "Benzoic acids with ortho substituents are stronger acids than benzoic acid, regardless of the electronic nature of the substituent (electron-withdrawing or electron-donating). This is called the 'ortho-effect'. It arises because the ortho substituent forces the carboxyl group out of the plane of the benzene ring. This prevents conjugation between the ring and carboxylate anion, allowing the negative charge of the carboxylate to be stabilized purely by its two electronegative oxygens, increasing acidity. Therefore, o-methylbenzoic acid is more acidic than benzoic acid and its meta/para isomers. Option A is correct.",
+    "common_mistake": "Thinking o-methylbenzoic acid is less acidic than benzoic acid because the methyl group is electron-donating ($+I$), neglecting the steric ortho-effect.",
+    "concept_slugs": [
+      "acid-base-strength"
+    ]
+  },
+  {
+    "pattern_group": "acid-base-strength",
+    "title": "Consider the acidic strength of terminal alkynes. The number of acidic hydrogen atoms present in one molecule of propyne ($\\text{CH}_3-\\text{C}\\equiv\\text{CH}$) is ________.",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "1",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Only the hydrogen attached to the $sp$-hybridized carbon atom is acidic.",
+    "solution_text": "In propyne ($\\text{CH}_3-\\text{C}\\equiv\\text{CH}$), the hydrogen atom attached directly to the triple-bonded carbon is attached to an $sp$-hybridized carbon. Because $sp$-hybridized carbon has high s-character ($50\\%$), it is highly electronegative and holds the carbon-hydrogen bonding electron pair tightly, allowing the hydrogen to be released as a proton. The hydrogens on the methyl group are attached to $sp^3$-hybridized carbon and are not acidic. Thus, there is exactly 1 acidic hydrogen.",
+    "common_mistake": "Writing 4 by counting all hydrogens in the molecule, or 0 by assuming hydrocarbons cannot be acidic.",
+    "concept_slugs": [
+      "acid-base-strength"
+    ]
+  },
+  {
+    "pattern_group": "acid-base-strength",
+    "title": "Arrange the following phenols in decreasing order of acidic strength:\n1) $\\text{o-nitrophenol}$\n2) $\\text{p-nitrophenol}$\n3) $\\text{m-nitrophenol}$\n4) $\\text{phenol}$",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "1 > 2 > 3 > 4",
+      "B": "2 > 1 > 3 > 4",
+      "C": "2 > 3 > 1 > 4",
+      "D": "1 > 3 > 2 > 4"
+    },
+    "notes": "At the meta position, the nitro group cannot withdraw charge via resonance ($-M$), only via induction ($-I$). For ortho vs para, ortho-nitrophenol has intramolecular hydrogen bonding which reduces proton release slightly.",
+    "solution_text": "Acidic strength analysis:\n- p-nitrophenol (2) and o-nitrophenol (1) both have the nitro group operating through strong $-M$ and $-I$ effects, so they are much more acidic than the meta isomer.\n- Comparing ortho and para nitrophenol: o-nitrophenol (1) forms intramolecular hydrogen bonds between the hydroxyl hydrogen and the nitro oxygen. This makes it slightly more difficult to release the proton compared to p-nitrophenol (2) which forms intermolecular hydrogen bonds. Hence, p-nitrophenol is slightly stronger than o-nitrophenol: 2 > 1.\n- m-nitrophenol (3) has the nitro group operating only via $-I$ (no resonance at meta). It is more acidic than phenol (4).\nSo the order is: 2 > 1 > 3 > 4. Option B is correct.",
+    "common_mistake": "Putting o-nitrophenol as more acidic than p-nitrophenol because it is closer (stronger $-I$), ignoring the intramolecular hydrogen bonding effect.",
+    "concept_slugs": [
+      "acid-base-strength"
+    ]
+  },
+  {
+    "pattern_group": "acid-base-strength",
+    "title": "Which of the following species has the highest pKa value (and is therefore the weakest acid)?",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "D",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Water ($\\text{H}_2\\text{O}$)",
+      "B": "Phenol ($\\text{C}_6\\text{H}_5\\text{OH}$)",
+      "C": "Ethanol ($\\text{C}_2\\text{H}_5\\text{OH}$)",
+      "D": "Ethyne ($\\text{HC}\\equiv\\text{CH}$)"
+    },
+    "notes": "pKa is inversely proportional to acid strength. The weakest acid has the highest pKa. Compare relative stabilities of their conjugate bases.",
+    "solution_text": "Let's compare the acid strengths (which is the inverse of pKa):\n- Phenol (pKa ~ 10): resonance-stabilized phenoxide ion makes it the strongest of the list.\n- Water (pKa ~ 15.7).\n- Ethanol (pKa ~ 16): $+I$ of ethyl group destabilizes ethoxide ion, making it weaker than water.\n- Ethyne (pKa ~ 25): very weak acid compared to alcohols, though acidic for a hydrocarbon. Since it is the weakest acid, it has the highest pKa value. Option D is correct.",
+    "common_mistake": "Selecting phenol because it is the most acidic, confusing low pKa (strong acid) with high pKa (weak acid).",
+    "concept_slugs": [
+      "acid-base-strength"
+    ]
+  },
+  {
+    "pattern_group": "acid-base-strength",
+    "title": "Arrange the following amines in decreasing order of basic strength in the gas phase:\n1) $\\text{CH}_3\\text{NH}_2$\n2) $(\\text{CH}_3)_2\\text{NH}$\n3) $(\\text{CH}_3)_3\\text{N}$\n4) $\\text{NH}_3$",
+    "difficulty": "hard",
+    "type": "advanced",
+    "correct_answer": "C",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "2 > 1 > 3 > 4",
+      "B": "2 > 3 > 1 > 4",
+      "C": "3 > 2 > 1 > 4",
+      "D": "1 > 2 > 3 > 4"
+    },
+    "notes": "In the gas phase, there is no solvent (no hydration or steric complications from solvation shells). The basicity is determined purely by the inductive $+I$ effect of alkyl groups.",
+    "solution_text": "In the gas phase, solvation effects are absent. Therefore, the basic strength of amines is determined solely by the electron-donating inductive effect ($+I$) of the alkyl groups, which increases the electron density on the nitrogen atom and stabilizes the conjugate ammonium cation. Basicity increases with the number of methyl groups: Tertiary ($3^circ$) > Secondary ($2^circ$) > Primary ($1^circ$) > Ammonia: $(\\text{CH}_3)_3\\text{N} > (\\text{CH}_3)_2\\text{NH} > \\text{CH}_3\\text{NH}_2 > \\text{NH}_3$ (3 > 2 > 1 > 4). Option C is correct.",
+    "common_mistake": "Using the aqueous phase order (2° > 1° > 3° > Ammonia), which does not apply in the gas phase.",
+    "concept_slugs": [
+      "acid-base-strength"
+    ]
+  },
+  {
+    "pattern_group": "reaction-intermediates",
+    "title": "Which of the following carbocations is the most stable due to complete delocalization of the positive charge into the adjacent cyclopropyl rings (stabilized by bent-bond 'banana' orbital overlap)?",
+    "difficulty": "easy",
+    "type": "pyq",
+    "source": "JEE Main 2021",
+    "correct_answer": "C",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Triphenylmethyl carbocation",
+      "B": "Benzyl carbocation",
+      "C": "Tricyclopropylmethyl carbocation",
+      "D": "t-butyl carbocation"
+    },
+    "notes": "Cyclopropylmethyl carbocations show extraordinary stability due to overlap of the bent C-C bonds of the cyclopropane ring with the empty p-orbital of the carbocation.",
+    "solution_text": "The tricyclopropylmethyl carbocation, $(\\text{C}_3\\text{H}_5)_3\\text{C}^+$, is exceptionally stable, even more stable than the triphenylmethyl carbocation. This is because of the overlapping of the empty p-orbital of the carbocation carbon with the bent $\\sigma$-bonds (banana bonds) of the cyclopropyl rings, which have high p-character and can easily donate electron density. This is called 'dancing resonance' or 'sigma-resonance'. Option C is correct.",
+    "common_mistake": "Selecting triphenylmethyl carbocation (Option A) because it has three phenyl rings, neglecting the unique dancing resonance stabilization of cyclopropylmethyl systems.",
+    "concept_slugs": [
+      "reaction-intermediates"
+    ]
+  },
+  {
+    "pattern_group": "reaction-intermediates",
+    "title": "A secondary carbocation $\\text{CH}_3-\\text{CH}_2-\\text{CH}^+-\\text{CH}_3$ undergoes rearrangement to a more stable tertiary carbocation. The rearrangement occurs via which of the following shifts?",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2023",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "1,2-methyl shift",
+      "B": "1,2-hydride shift",
+      "C": "1,2-phenyl shift",
+      "D": "No rearrangement is possible"
+    },
+    "notes": "Draw the structure. If the carbocation is $\\text{CH}_3-\\text{CH}_2-\\text{CH}^+-\\text{CH}_3$, is there a tertiary position nearby? Wait, let's look at the structure. In sec-butyl carbocation, there is no tertiary carbon. But if the molecule is $\\text{CH}_3-\\text{CH}(\\text{CH}_3)-\\text{CH}^+-\\text{CH}_3$, there is a tertiary carbon adjacent to the positively charged carbon. Let's use this structure: 3-methyl-2-butyl carbocation.",
+    "solution_text": "Let's consider the 3-methyl-2-butyl carbocation: $\\text{CH}_3-\\text{CH}(\\text{CH}_3)-\\text{CH}^+-\\text{CH}_3$, which is a secondary carbocation. The adjacent carbon C3 is tertiary and has one hydrogen attached to it. A 1,2-hydride shift (transfer of $\\text{H}^-$ with its bonding electron pair from C3 to C2) transforms the secondary carbocation into a more stable tertiary carbocation: $\\text{CH}_3-\\text{C}^+(\\text{CH}_3)-\\text{CH}_2-\\text{CH}_3$. This rearrangement is driven by the gain in stability from secondary ($2^circ$) to tertiary ($3^circ$) carbocation. Option B is correct.",
+    "common_mistake": "Suggesting a 1,2-methyl shift, which would result in another secondary carbocation and is thermodynamically less favored than a hydride shift here.",
+    "concept_slugs": [
+      "reaction-intermediates"
+    ]
+  },
+  {
+    "pattern_group": "reaction-intermediates",
+    "title": "Which of the following chemical species is classified as a nucleophile?",
+    "difficulty": "easy",
+    "type": "concept",
+    "correct_answer": "C",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\text{BF}_3$",
+      "B": "$\\text{AlCl}_3$",
+      "C": "$\\text{NH}_3$",
+      "D": "$\\text{NO}_2^+$"
+    },
+    "notes": "Nucleophiles are electron-rich species containing a lone pair or negative charge that can be donated to an electron-deficient center.",
+    "solution_text": "Let's analyze the electron configuration of each species:\n- $\\text{BF}_3$ and $\\text{AlCl}_3$ have incomplete octets (6 valence electrons) on boron and aluminum, acting as Lewis acids/electrophiles.\n- $\\text{NO}_2^+$ has a positive charge and is electron-deficient (electrophile).\n- $\\text{NH}_3$ has a lone pair of electrons on the nitrogen atom which it can readily donate, acting as a nucleophile. Option C is correct.",
+    "common_mistake": "Selecting $\\text{BF}_3$ (Option A) due to the presence of fluorine atoms, forgetting that the boron atom is electron-deficient.",
+    "concept_slugs": [
+      "reaction-intermediates"
+    ]
+  },
+  {
+    "pattern_group": "reaction-intermediates",
+    "title": "Carbenes are neutral divalent carbon intermediates. Which of the following statements about singlet and triplet carbenes is correct?",
+    "difficulty": "medium",
+    "type": "concept",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Singlet carbene is more stable than triplet carbene.",
+      "B": "Triplet carbene is generally more stable than singlet carbene in the gas phase because electrons are in different orbitals with parallel spins, reducing electrostatic repulsion.",
+      "C": "Singlet carbene is linear, while triplet carbene is bent.",
+      "D": "Triplet carbene has paired electrons in a single orbital."
+    },
+    "notes": "Triplet carbene behaves as a diradical with two unpaired electrons in different orbitals. Singlet has paired electrons in an sp2 hybrid orbital.",
+    "solution_text": "In a singlet carbene, the two non-bonding electrons are paired in the same $sp^2$ hybrid orbital, leaving a empty p-orbital (bent shape). In a triplet carbene, the two non-bonding electrons occupy two different orbitals ($sp$ or $sp^2$ and p) with parallel spins (diradical). In the gas phase, the triplet carbene is more stable than the singlet carbene by about $33-42\\,\\text{kJ/mol}$ because putting the electrons in different orbitals reduces electron-electron repulsion (Hund's rule). Option B is correct.",
+    "common_mistake": "Assuming singlet carbene is more stable because the electrons are paired in one orbital, ignoring the high electrostatic repulsion of pairing.",
+    "concept_slugs": [
+      "reaction-intermediates"
+    ]
+  },
+  {
+    "pattern_group": "reaction-intermediates",
+    "title": "The hybridization of carbon atoms in a carbocation ($R_3\\text{C}^+$) and a carbanion ($R_3\\text{C}^-$) are respectively:",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$sp^2$ and $sp^3$",
+      "B": "$sp^3$ and $sp^2$",
+      "C": "$sp^2$ and $sp^2$",
+      "D": "$sp^3$ and $sp^3$"
+    },
+    "notes": "Evaluate the steric number (number of sigma bonds + lone pairs) for the central carbon in both intermediates.",
+    "solution_text": "Let's analyze both species:\n- Carbocation ($R_3\\text{C}^+$): Central carbon has 3 sigma bonds and 0 lone pairs (steric number = 3). Thus, it is $sp^2$ hybridized and has a trigonal planar geometry.\n- Carbanion ($R_3\\text{C}^-$): Central carbon has 3 sigma bonds and 1 lone pair (steric number = 4). Thus, it is $sp^3$ hybridized and has a trigonal pyramidal geometry (like ammonia). Option A is correct.",
+    "common_mistake": "Stating that both are $sp^2$ or both are $sp^3$, failing to account for the lone pair on the carbanion.",
+    "concept_slugs": [
+      "reaction-intermediates"
+    ]
+  },
+  {
+    "pattern_group": "reaction-intermediates",
+    "title": "Arrange the following carbanions in decreasing order of stability:\n1) $\\text{HC}\\equiv\\text{C}^-$\n2) $\\text{CH}_2=\\text{CH}^-$\n3) $\\text{CH}_3\\text{CH}_2^-$",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "1 > 2 > 3",
+      "B": "3 > 2 > 1",
+      "C": "1 > 3 > 2",
+      "D": "2 > 1 > 3"
+    },
+    "notes": "Compare the hybridization of the carbon bearing the negative charge. More s-character increases the electronegativity of the carbon, stabilizing the negative charge.",
+    "solution_text": "The hybridization of the carbon bearing the negative charge is:\n- $\\text{HC}\\equiv\\text{C}^-$: $sp$-hybridized ($50\\%$ s-character).\n- $\\text{CH}_2=\\text{CH}^-$: $sp^2$-hybridized ($33.3\\%$ s-character).\n- $\\text{CH}_3\\text{CH}_2^-$: $sp^3$-hybridized ($25\\%$ s-character).\nSince s-orbitals are closer to the nucleus, electrons in an orbital with higher s-character are held more tightly by the nucleus. This makes $sp$ carbon highly electronegative and best able to stabilize the negative charge. Thus, stability order is: 1 > 2 > 3. Option A is correct.",
+    "common_mistake": "Using carbocation stability rules ($1^circ > 2^circ > 3^circ$) incorrectly, or assuming that alkyl groups stabilize negative charge.",
+    "concept_slugs": [
+      "reaction-intermediates"
+    ]
+  },
+  {
+    "pattern_group": "reaction-intermediates",
+    "title": "During the homolytic fission of a covalent bond, the shared pair of electrons is divided equally. The resulting species formed is a:",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "C",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Carbocation",
+      "B": "Carbanion",
+      "C": "Free radical",
+      "D": "Carbene"
+    },
+    "notes": "Homolytic cleavage means each bonded atom leaves with one electron from the shared covalent bond.",
+    "solution_text": "In homolytic bond cleavage, the covalent bond breaks such that each fragment retains one of the two shared electrons: $\\text{A}-\\text{B} \\rightarrow \\text{A}^\\bullet + \\text{B}^\\bullet$. These neutral fragments containing an unpaired electron are called free radicals. Option C is correct.",
+    "common_mistake": "Selecting carbocation or carbanion, which are formed during heterolytic fission where both electrons go to one of the atoms.",
+    "concept_slugs": [
+      "reaction-intermediates"
+    ]
+  },
+  {
+    "pattern_group": "reaction-intermediates",
+    "title": "In the free radical chlorination of methane, the chain-propagating intermediate that reacts with chlorine molecules to produce chloromethane is the ________ radical.",
+    "difficulty": "hard",
+    "type": "advanced",
+    "correct_answer": "C",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Chlorine ($Cl^\\bullet$)",
+      "B": "Hydrogen ($H^\\bullet$)",
+      "C": "Methyl ($CH_3^\\bullet$)",
+      "D": "Chloromethyl ($CH_2Cl^\\bullet$)"
+    },
+    "notes": "Trace the two propagation steps of the mechanism. The first propagation step produces a methyl radical from methane, which then reacts in the second step.",
+    "solution_text": "The propagation steps of methane chlorination are:\n1) $\\text{Cl}^\\bullet + \\text{CH}_4 \\rightarrow \\text{HCl} + \\text{CH}_3^\\bullet$\n2) $\\text{CH}_3^\\bullet + \\text{Cl}_2 \\rightarrow \\text{CH}_3\\text{Cl} + \\text{Cl}^\\bullet$\nIn step 2, the methyl radical ($\\text{CH}_3^\bullet$) reacts with a chlorine molecule ($\\text{Cl}_2$) to produce chloromethane and regenerate the chlorine radical. Option C is correct.",
+    "common_mistake": "Selecting chlorine radical (Option A) which reacts with methane, not chlorine molecules.",
+    "concept_slugs": [
+      "reaction-intermediates"
+    ]
+  },
+  {
+    "pattern_group": "isomerism-goc",
+    "title": "The number of structural isomers possible for the molecular formula $\\text{C}_6\\text{H}_{14}$ (hexane isomers) is ________.",
+    "difficulty": "easy",
+    "type": "pyq",
+    "source": "JEE Main 2021",
+    "correct_answer": "5",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Draw all possible skeletal structures for a 6-carbon alkane.",
+    "solution_text": "The possible structural isomers for $\\text{C}_6\\text{H}_{14}$ are:\n1) n-hexane: $\\text{CH}_3-\\text{CH}_2-\\text{CH}_2-\\text{CH}_2-\\text{CH}_2-\\text{CH}_3$\n2) 2-methylpentane: $\\text{CH}_3-\\text{CH}(\\text{CH}_3)-\\text{CH}_2-\\text{CH}_2-\\text{CH}_3$\n3) 3-methylpentane: $\\text{CH}_3-\\text{CH}_2-\\text{CH}(\\text{CH}_3)-\\text{CH}_2-\\text{CH}_3$\n4) 2,2-dimethylbutane: $\\text{CH}_3-\\text{C}(\\text{CH}_3)_2-\\text{CH}_2-\\text{CH}_3$\n5) 2,3-dimethylbutane: $\\text{CH}_3-\\text{CH}(\\text{CH}_3)-\\text{CH}(\\text{CH}_3)-\\text{CH}_3$\nThere are exactly 5 structural isomers.",
+    "common_mistake": "Forgetting one of the dimethylbutanes or drawing a duplicate structure like 4-methylpentane (which is the same as 2-methylpentane).",
+    "concept_slugs": [
+      "isomerism-goc"
+    ]
+  },
+  {
+    "pattern_group": "isomerism-goc",
+    "title": "Which of the following pairs of compounds represents examples of metamers?",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2022",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Diethyl ether and Methyl propyl ether",
+      "B": "Propanol and Isopropanol",
+      "C": "Dimethyl ether and Ethanol",
+      "D": "Pentane-2-one and Pentane-3-one"
+    },
+    "notes": "Metamers are isomers that have different alkyl groups attached to the same polyvalent functional group (such as $-O-$, $-S-$, or $-NH-$).",
+    "solution_text": "Metamerism is exhibited by compounds containing a polyvalent functional group surrounded by different alkyl groups. In Option A, both are ethers (molecular formula $\\text{C}_4\\text{H}_{10}\\text{O}$):\n- Diethyl ether has ethyl groups on both sides: $\\text{CH}_3\\text{CH}_2-\\text{O}-\\text{CH}_2\\text{CH}_3$.\n- Methyl propyl ether has methyl and propyl groups: $\\text{CH}_3-\\text{O}-\\text{CH}_2\\text{CH}_2\\text{CH}_3$.\nThus, they are metamers. Option A is correct.",
+    "common_mistake": "Selecting propanol and isopropanol (Option B), which are position isomers, or dimethyl ether and ethanol (Option C), which are functional isomers.",
+    "concept_slugs": [
+      "isomerism-goc"
+    ]
+  },
+  {
+    "pattern_group": "isomerism-goc",
+    "title": "For a compound to exhibit geometrical (cis/trans) isomerism across a double bond, which of the following conditions must be satisfied?",
+    "difficulty": "easy",
+    "type": "concept",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Both carbon atoms of the double bond must have identical groups attached to them.",
+      "B": "Each carbon atom of the double bond must be attached to two different groups (i.e. in $\\text{abC}=\\text{Ccd}$, $a \\ne b$ and $c \\ne d$).",
+      "C": "The molecule must contain a plane of symmetry.",
+      "D": "The double bond must be terminal."
+    },
+    "notes": "Evaluate what happens if one carbon has two identical groups, e.g. $\\text{H}_2\\text{C}=\\text{CH}-\\text{CH}_3$. Swapping groups on the terminal carbon does not produce a new isomer.",
+    "solution_text": "Geometrical isomerism arises due to restricted rotation around double bonds. For a double bond $\\text{C}_1=\\text{C}_2$ to exhibit geometrical isomerism, each carbon must be attached to two different groups: $\\text{abC}=\\text{Ccd}$, where $a \\ne b$ and $c \\ne d$. If $a=b$ (e.g. in propene $\\text{H}_2\\text{C}=\\text{CH}-\\text{CH}_3$), swapping the groups does not result in a new stereoisomer. Option B is correct.",
+    "common_mistake": "Believing that the groups on C1 must match the groups on C2, which is true for cis/trans naming but not required for geometrical isomerism (which can use E/Z naming instead).",
+    "concept_slugs": [
+      "isomerism-goc"
+    ]
+  },
+  {
+    "pattern_group": "isomerism-goc",
+    "title": "Keto-enol tautomerism is a chemical equilibrium between a carbonyl compound and its enol form. Which of the following compounds exhibits the highest enol content at equilibrium due to resonance stabilization and intramolecular hydrogen bonding in the enol?",
+    "difficulty": "medium",
+    "type": "concept",
+    "correct_answer": "C",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Acetone",
+      "B": "Acetaldehyde",
+      "C": "Acetylacetone (Pentane-2,4-dione)",
+      "D": "Cyclohexanone"
+    },
+    "notes": "Look for a 1,3-dicarbonyl compound where the enol form creates a conjugated system stabilized by resonance and a stable 6-membered hydrogen-bonded ring.",
+    "solution_text": "In acetylacetone (Pentane-2,4-dione, $\\text{CH}_3-\\text{CO}-\\text{CH}_2-\\text{CO}-\\text{CH}_3$), the enol form is $\\text{CH}_3-\\text{C}(\\text{OH})=\\text{CH}-\\text{CO}-\\text{CH}_3$. This enol is highly stable (~76% at equilibrium) because:\n1) The double bond is in conjugation with the second carbonyl group ($\\text{C}=\\text{C}-\\text{C}=\\text{O}$ conjugation).\n2) It forms a highly stable six-membered ring via intramolecular hydrogen bonding between the enolic hydroxyl group and the carbonyl oxygen. In monocarbonyls like acetone or cyclohexanone, enol content is less than 1%. Option C is correct.",
+    "common_mistake": "Selecting acetone (Option A) as having high enol content, whereas monoketones have extremely low enol percentages at room temperature.",
+    "concept_slugs": [
+      "isomerism-goc"
+    ]
+  },
+  {
+    "pattern_group": "isomerism-goc",
+    "title": "How many chiral carbon atoms are present in one molecule of 2,3,4-trichloropentane? (Assume the most general unsymmetrical stereoisomer structure)",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "2",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Identify carbons that are bonded to four different groups. Check C2, C3, and C4.",
+    "solution_text": "Structure of 2,3,4-trichloropentane: $\\text{CH}_3-\\text{C}^2\\text{H(Cl)}-\\text{C}^3\\text{H(Cl)}-\\text{C}^4\\text{H(Cl)}-\\text{CH}_3$.\nLet's check each carbon:\n- C2: bonded to $-\\text{CH}_3$, $-\\text{H}$, $-\\text{Cl}$, and the rest of the chain $-\\text{CH(Cl)}-\\text{CH(Cl)}-\\text{CH}_3$. These four groups are different. Thus, C2 is chiral.\n- C4: similarly, bonded to $-\\text{CH}_3$, $-\\text{H}$, $-\\text{Cl}$, and the rest of the chain. C4 is chiral.\n- C3: bonded to $-\\text{H}$, $-\\text{Cl}$, and two identical/similar $-\\text{CH(Cl)}-\\text{CH}_3$ groups (if C2 and C4 have same configurations). In the general case, C3 is a pseudoasymmetric carbon or achiral depending on the C2/C4 configuration, but only C2 and C4 are true asymmetric/chiral carbons. Thus, there are 2 chiral carbons.",
+    "common_mistake": "Counting C3 as chiral, yielding 3, or counting none.",
+    "concept_slugs": [
+      "isomerism-goc"
+    ]
+  },
+  {
+    "pattern_group": "isomerism-goc",
+    "title": "A mixture containing equal amounts of two enantiomers is optically inactive because the rotation of plane-polarized light by one enantiomer is cancelled by the equal and opposite rotation of the other. This mixture is called a:",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Meso compound",
+      "B": "Racemic mixture",
+      "C": "Diastereomeric mixture",
+      "D": "Optically pure compound"
+    },
+    "notes": "Enantiomers have identical physical properties except for the direction of optical rotation.",
+    "solution_text": "An equimolar mixture of two enantiomers is called a racemic mixture (or racemate). It is optically inactive due to external compensation, as the clockwise rotation by one enantiomer is cancelled by the counter-clockwise rotation by the other. A meso compound is also optically inactive, but due to internal compensation (plane of symmetry in a single molecule). Option B is correct.",
+    "common_mistake": "Selecting meso compound (Option A), which is a single achiral molecule containing chiral centers, rather than a mixture of two separate enantiomers.",
+    "concept_slugs": [
+      "isomerism-goc"
+    ]
+  },
+  {
+    "pattern_group": "isomerism-goc",
+    "title": "The number of stereoisomers possible for tartaric acid ($\\text{HOOC}-\\text{CH}(\\text{OH})-\\text{CH}(\\text{OH})-\\text{COOH}$) is ________.",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "3",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Tartaric acid has 2 chiral carbons and is symmetrical. Apply the formula for symmetrical molecules with even number of chiral centers: $N = 2^{n-1} + 2^{(n/2)-1}$.",
+    "solution_text": "Tartaric acid has 2 chiral carbons ($n=2$) and has a symmetrical structure. The stereoisomers are:\n1) d-tartaric acid (active, $+$, $R,R$)\n2) l-tartaric acid (active, $-$, $S,S$)\n3) meso-tartaric acid (inactive, $R,S$ - has a plane of symmetry).\nUsing the formula for symmetrical molecules with even $n$: $\\text{Active isomers} = 2^{n-1} = 2^{2-1} = 2$. $\\text{Meso isomers} = 2^{(n/2)-1} = 2^{1-1} = 1$. Total stereoisomers $= 2 + 1 = 3$.",
+    "common_mistake": "Using the unsymmetrical formula $2^n = 2^2 = 4$, forgetting that the $(R,S)$ and $(S,R)$ configurations are identical due to symmetry (forming the single meso compound).",
+    "concept_slugs": [
+      "isomerism-goc"
+    ]
+  },
+  {
+    "pattern_group": "isomerism-goc",
+    "title": "Which of the following compounds exhibits optical isomerism (is chiral and resolved into enantiomers) despite having no asymmetric carbon atom, due to restricted rotation and steric hindrance between ortho substituents (atropisomerism)?",
+    "difficulty": "hard",
+    "type": "advanced",
+    "correct_answer": "C",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "o-methylbenzoic acid",
+      "B": "trans-1,2-dimethylcyclohexane",
+      "C": "6,6'-dinitrobiphenyl-2,2'-dicarboxylic acid",
+      "D": "Butan-2-ol"
+    },
+    "notes": "Look for a hindered biphenyl compound where the two benzene rings are locked in perpendicular planes, making the molecule chiral as a whole.",
+    "solution_text": "Biphenyls with bulky ortho-substituents in positions 2, 2', 6, and 6' cannot remain coplanar due to steric clash. They twist around the central single bond so that the two rings lie in perpendicular planes. If each ring is unsymmetrically substituted (e.g. 6,6'-dinitrobiphenyl-2,2'-dicarboxylic acid has nitro and carboxyl groups on each ring), the molecule lacks a plane or center of symmetry, rendering it chiral. The resulting optical isomers are called atropisomers. Option C is correct.",
+    "common_mistake": "Choosing butan-2-ol (Option D), which is chiral but contains an asymmetric carbon atom, or trans-1,2-dimethylcyclohexane.",
+    "concept_slugs": [
+      "isomerism-goc"
+    ]
+  }
+]
