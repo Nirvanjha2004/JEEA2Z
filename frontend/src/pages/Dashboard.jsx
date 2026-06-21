@@ -24,6 +24,7 @@ import { KINEMATICS_PATTERNS, PATTERN_SHORT_NAMES, classifyQuestion } from '../u
 import QuestionSolveModal from '../components/questions/QuestionSolveModal';
 import FillBlankModal from '../components/questions/FillBlankModal';
 import NumericalSolveModal from '../components/questions/NumericalSolveModal';
+import MathText from '../components/MathText';
 
 export default function Dashboard() {
   const { user } = useAuthStore();
@@ -610,13 +611,15 @@ export default function Dashboard() {
                     <div key={q.id} className="flex items-center justify-between p-2.5 rounded-lg border border-border-default bg-bg-app hover:border-border-focus transition duration-150 gap-3">
                       <div className="min-w-0 flex-1">
                         <span 
-                          className="text-[12.5px] text-text-primary font-medium line-clamp-1 block cursor-pointer hover:text-accent hover:underline"
                           onClick={() => {
                             setActiveSolveQuestionId(q.id);
                             setActiveSolveQuestionFormat(q.question_format || 'mcq');
                           }}
                         >
-                          {q.title.replace(/\$/g, '')}
+                          <MathText 
+                            className="text-[12.5px] text-text-primary font-medium line-clamp-1 block cursor-pointer hover:text-accent hover:underline" 
+                            text={q.title} 
+                          />
                         </span>
                         <span className="text-[10px] text-text-muted mt-0.5 block truncate">
                           {q.chapter_name} • {q.pattern_group || 'General'}
@@ -655,9 +658,10 @@ export default function Dashboard() {
                     <span className="w-1.5 h-1.5 rounded-full bg-success shrink-0" />
                     
                     <div className="min-w-0 flex-grow">
-                      <span className="text-[12.5px] text-text-primary truncate block font-medium" title={act.title}>
-                        {act.title}
-                      </span>
+                      <MathText 
+                        className="text-[12.5px] text-text-primary truncate block font-medium" 
+                        text={act.title} 
+                      />
                       <span className="text-[10px] text-text-muted block mt-0.5">
                         {act.chapter_name}
                       </span>

@@ -2,6 +2,7 @@ import React from 'react';
 import { X, Calendar, BookOpen, ExternalLink, AlertCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Button from './ui/Button';
+import MathText from './MathText';
 
 export default function DayDetailPanel({
   isOpen,
@@ -95,9 +96,10 @@ export default function DayDetailPanel({
                       className="p-3 bg-bg-app border border-border-default/80 hover:border-border-focus rounded-md transition-colors flex items-center justify-between gap-3 text-left"
                     >
                       <div className="min-w-0 flex-1">
-                        <span className="text-[12.5px] font-medium text-text-primary block truncate max-w-[200px]" title={q.title}>
-                          {q.title}
-                        </span>
+                        <MathText
+                          className="text-[12.5px] font-medium text-text-primary block truncate max-w-[200px]"
+                          text={q.title}
+                        />
                         <span className="text-[10px] text-text-muted mt-0.5 block truncate">
                           {q.subject_name} · {q.chapter_name}
                         </span>
