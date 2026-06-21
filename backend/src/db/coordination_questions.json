@@ -1,0 +1,945 @@
+[
+  {
+    "pattern_group": "coordination-nomenclature-werner",
+    "title": "According to Werner's coordination theory, which of the following is true for the primary and secondary valencies of a transition metal in a complex?",
+    "difficulty": "easy",
+    "type": "pyq",
+    "source": "JEE Main 2021",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Primary valency is ionizable and non-directional; secondary valency is non-ionizable and directional",
+      "B": "Primary valency is directional and ionizable; secondary valency is non-directional and non-ionizable",
+      "C": "Both primary and secondary valencies are ionizable and non-directional",
+      "D": "Primary valency is non-ionizable; secondary valency is ionizable and directional"
+    },
+    "notes": "Werner's theory postulates two types of valencies: primary (oxidation state) and secondary (coordination number).",
+    "solution_text": "Werner's coordination theory postulates:\n1) Primary valency: Corresponds to the oxidation state of the metal. It is ionizable, satisfied only by negative ions, and is non-directional.\n2) Secondary valency: Corresponds to the coordination number of the metal. It is non-ionizable, satisfied by neutral molecules or negative ions, and is directional in space, determining the geometry of the complex. Option A is correct.",
+    "common_mistake": "Reversing the properties of primary and secondary valencies, or assuming that both are directional.",
+    "concept_slugs": [
+      "coordination-nomenclature-werner"
+    ]
+  },
+  {
+    "pattern_group": "coordination-nomenclature-werner",
+    "title": "A coordination compound of cobalt has the molecular formula $\\text{CoCl}_3 \\cdot 5\\text{NH}_3$. When treated with excess silver nitrate solution, exactly 2 moles of $\\text{AgCl}$ are precipitated per mole of the compound. The correct formulation representing the complex is:",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2022",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$[\\text{Co}(\\text{NH}_3)_5\\text{Cl}]\\text{Cl}_2$",
+      "B": "$[\\text{Co}(\\text{NH}_3)_5]\\text{Cl}_3$",
+      "C": "$[\\text{Co}(\\text{NH}_3)_4\\text{Cl}_2]\\text{Cl} \\cdot \\text{NH}_3$",
+      "D": "$[\\text{Co}(\\text{NH}_3)_3\\text{Cl}_3] \\cdot 2\\text{NH}_3$"
+    },
+    "notes": "The precipitated chloride represents the primary (ionizable) valency outside the coordination sphere.",
+    "solution_text": "When the complex is dissolved in water, only the chloride ions outside the coordination sphere dissociate and react with $\\text{Ag}^+$ to form a white precipitate of $\\text{AgCl}$. Since 2 moles of $\\text{AgCl}$ are precipitated per mole of compound, there must be exactly 2 chloride ions outside the coordination sphere: $[\\text{Co}(\\text{NH}_3)_5\\text{Cl}]\\text{Cl}_2 \\rightarrow [\\text{Co}(\\text{NH}_3)_5\\text{Cl}]^{2+} + 2\\text{Cl}^-$. The remaining chloride ion and the 5 ammonia molecules are inside the coordination sphere. Option A is correct.",
+    "common_mistake": "Selecting Option B, which would precipitate 3 moles of $\\text{AgCl}$ since all three chlorides are outside the coordination sphere.",
+    "concept_slugs": [
+      "coordination-nomenclature-werner"
+    ]
+  },
+  {
+    "pattern_group": "coordination-nomenclature-werner",
+    "title": "The correct IUPAC name of the complex $\\text{K}_3[\\text{Fe}(\\text{CN})_6]$ is:",
+    "difficulty": "easy",
+    "type": "concept",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Potassium hexacyanoferrate(III)",
+      "B": "Potassium hexacyanoferrate(II)",
+      "C": "Tripotassium hexacyanoiron(III)",
+      "D": "Potassium hexacyanidoiron(II)"
+    },
+    "notes": "Name the cation first, then the anion. For anionic complexes, the metal name ends with '-ate'. Calculate the oxidation state of Fe.",
+    "solution_text": "Let's apply IUPAC naming rules to $\\text{K}_3[\\text{Fe}(\\text{CN})_6]$:\n1) Cation is potassium. Its stoichiometry (3) is not indicated in the name.\n2) Anionic complex: $[\\text{Fe}(\\text{CN})_6]^{3-}$. The ligand is cyano (or cyanido), and there are six, so 'hexacyano'.\n3) Since the complex is anionic, the metal name ends in '-ate': 'ferrate' (not iron).\n4) Oxidation state of Fe: $x + 6(-1) = -3 \\implies x = +3$. So it is ferrate(III).\nThus, the name is Potassium hexacyanoferrate(III). Option A is correct.",
+    "common_mistake": "Naming the potassium as 'tripotassium' (Option C) or calculating the oxidation state of Fe incorrectly as +2 (Option B).",
+    "concept_slugs": [
+      "coordination-nomenclature-werner"
+    ]
+  },
+  {
+    "pattern_group": "coordination-nomenclature-werner",
+    "title": "The ligand ethylenediaminetetraacetate ($\\text{EDTA}^{4-}$) is a chelating agent. Its denticity (number of donor atoms coordinating to the metal) is ________.",
+    "difficulty": "easy",
+    "type": "concept",
+    "correct_answer": "6",
+    "is_numerical": true,
+    "notes": "EDTA has nitrogen and oxygen donor atoms. Identify how many of each coordinate to the metal.",
+    "solution_text": "EDTA$^{4-}$ is ethylenediaminetetraacetate. Its structure has two amine nitrogen atoms with lone pairs, and four carboxylate groups ($-\\text{COO}^-$) each carrying a negative charge on oxygen. All six of these atoms (2 nitrogens and 4 oxygens) can coordinate to a single metal ion simultaneously, forming a highly stable octahedral chelate complex. Therefore, its denticity is 6 (hexadentate ligand).",
+    "common_mistake": "Writing 4 by counting only the carboxylate groups and neglecting the nitrogen lone pairs, or writing 8 by counting all oxygens.",
+    "concept_slugs": [
+      "coordination-nomenclature-werner"
+    ]
+  },
+  {
+    "pattern_group": "coordination-nomenclature-werner",
+    "title": "Which of the following acts as an ambidentate ligand (can coordinate through more than one donor atom, though only one at a time)?",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\text{NO}_2^-$",
+      "B": "$\\text{C}_2\\text{O}_4^{2-}$",
+      "C": "$\\text{H}_2\\text{O}$",
+      "D": "$\\text{NH}_3$"
+    },
+    "notes": "Look for a ligand that has two different potential donor atoms in its structure.",
+    "solution_text": "An ambidentate ligand is a monodentate ligand that has more than one donor atom through which it can coordinate to a metal center. The nitrite ion ($\\text{NO}_2^-$) can coordinate either through the nitrogen atom ($-\\text{NO}_2$, nitro) or through one of the oxygen atoms ($-\\text{ONO}$, nitrito). Thus, it is an ambidentate ligand. Option A is correct. (Oxalate, $\\text{C}_2\\text{O}_4^{2-}$, is a bidentate ligand, not ambidentate).",
+    "common_mistake": "Selecting oxalate (Option B), confusing a bidentate ligand (which coordinates through two atoms *simultaneously*) with an ambidentate ligand (which coordinates through only one atom *at a time*).",
+    "concept_slugs": [
+      "coordination-nomenclature-werner"
+    ]
+  },
+  {
+    "pattern_group": "coordination-nomenclature-werner",
+    "title": "The coordination number of iron in the complex ion $[\\text{Fe}(\\text{C}_2\\text{O}_4)_3]^{3-}$ is ________.",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "6",
+    "is_numerical": true,
+    "notes": "The coordination number is the total number of coordinate bonds formed between the ligands and the central metal atom. Check ligand denticity.",
+    "solution_text": "The oxalate ion ($\\text{C}_2\\text{O}_4^{2-}$) is a bidentate ligand, meaning each oxalate ligand forms exactly 2 coordinate bonds with the central metal ion. In the complex $[\\text{Fe}(\\text{C}_2\\text{O}_4)_3]^{3-}$, there are 3 oxalate ligands. Therefore, the total number of coordinate bonds is $3 \\times 2 = 6$. The coordination number of iron is 6.",
+    "common_mistake": "Writing 3, confusing the number of ligands with the coordination number, neglecting the bidentate nature of oxalate.",
+    "concept_slugs": [
+      "coordination-nomenclature-werner"
+    ]
+  },
+  {
+    "pattern_group": "coordination-nomenclature-werner",
+    "title": "The correct IUPAC name of the complex $[\\text{Co}(\\text{NH}_3)_5(\\text{CO}_3)]\\text{Cl}$ is:",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Pentaamminecarbonatocobalt(III) chloride",
+      "B": "Pentaamminecarbonatocobalt(II) chloride",
+      "C": "Carbonatopentaamminecobalt(III) chloride",
+      "D": "Pentaamminecobalt(III) carbonate chloride"
+    },
+    "notes": "Alphabetical order of ligands: 'ammine' (a) before 'carbonato' (c). Determine cobalt's oxidation state.",
+    "solution_text": "Let's apply IUPAC naming rules to $[\\text{Co}(\\text{NH}_3)_5(\\text{CO}_3)]\\text{Cl}$:\n1) Ligands inside coordination sphere: five ammine ($-\\text{NH}_3$) and one carbonato ($-\\text{CO}_3^{2-}$). Alphabetical order: ammine before carbonato $\\rightarrow$ 'pentaamminecarbonato'.\n2) Central metal: cobalt (since the coordination sphere is cationic). \n3) Oxidation state of Co: $x + 5(0) + 1(-2) - 1 = 0 \\implies x = +3$. So it is cobalt(III).\n4) Counter-ion is chloride.\nThus, the name is Pentaamminecarbonatocobalt(III) chloride. Option A is correct.",
+    "common_mistake": "Writing carbonato before ammine (Option C), violating alphabetical sorting rules, or getting the oxidation state as +2 (Option B).",
+    "concept_slugs": [
+      "coordination-nomenclature-werner"
+    ]
+  },
+  {
+    "pattern_group": "coordination-nomenclature-werner",
+    "title": "Calculate the Effective Atomic Number (EAN) of the central metal atom in the complex $\\text{K}_4[\\text{Fe}(\\text{CN})_6]$. (Atomic number of $\\text{Fe} = 26$).",
+    "difficulty": "medium",
+    "type": "advanced",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "36",
+      "B": "35",
+      "C": "34",
+      "D": "38"
+    },
+    "notes": "EAN = Z - (Oxidation State) + 2 * (Coordination Number). Check the values for Fe in ferrocyanide.",
+    "solution_text": "Effective Atomic Number (EAN) calculation:\n- Atomic number of Fe ($Z$) = 26.\n- Oxidation state of Fe in $\\text{K}_4[\\text{Fe}(\\text{CN})_6]$: $4(+1) + x + 6(-1) = 0 \\implies x = +2$.\n- Coordination number (number of CN ligands) = 6. Each ligand contributes 2 electrons (total 12).\n- $\\text{EAN} = Z - \\text{oxidation state} + 2 \\times (\\text{coordination number}) = 26 - 2 + 2(6) = 24 + 12 = 36$.\nThis EAN of 36 corresponds to the noble gas Krypton, making the complex exceptionally stable. Option A is correct.",
+    "common_mistake": "Calculating oxidation state as +3 (which would yield EAN = 35, corresponding to ferricyanide), or adding instead of subtracting the oxidation state.",
+    "concept_slugs": [
+      "coordination-nomenclature-werner"
+    ]
+  },
+  {
+    "pattern_group": "coordination-isomerism",
+    "title": "Linkage isomerism is exhibited by coordination compounds containing ambidentate ligands. Which of the following pairs of complexes represents linkage isomers?",
+    "difficulty": "easy",
+    "type": "pyq",
+    "source": "JEE Main 2021",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$[\\text{Co}(\\text{NH}_3)_5(\\text{NO}_2)]\\text{Cl}_2$ and $[\\text{Co}(\\text{NH}_3)_5(\\text{ONO})]\\text{Cl}_2$",
+      "B": "$[\\text{Co}(\\text{NH}_3)_5\\text{SO}_4]\\text{Br}$ and $[\\text{Co}(\\text{NH}_3)_5\\text{Br}]\\text{SO}_4$",
+      "C": "$[\\text{Co}(\\text{NH}_3)_6][\\text{Cr}(\\text{CN})_6]$ and $[\\text{Cr}(\\text{NH}_3)_6][\\text{Co}(\\text{CN})_6]$",
+      "D": "$[\\text{Co}(\\text{NH}_3)_5\\text{Cl}]\\text{Cl}_2 \\cdot \\text{H}_2\\text{O}$ and $[\\text{Co}(\\text{NH}_3)_5(\\text{H}_2\\text{O})]\\text{Cl}_3$"
+    },
+    "notes": "Linkage isomers arise when a ligand coordinates through different donor atoms.",
+    "solution_text": "Linkage isomerism occurs only with ambidentate ligands like $\\text{NO}_2^-$, $\\text{SCN}^-$, and $\\text{CN}^-$. In $[\\text{Co}(\\text{NH}_3)_5(\\text{NO}_2)]\\text{Cl}_2$, the nitrite ligand coordinates through the nitrogen atom (nitro group). In $[\\text{Co}(\\text{NH}_3)_5(\\text{ONO})]\\text{Cl}_2$, it coordinates through the oxygen atom (nitrito group). Thus, this pair represents linkage isomers. Option A is correct. (Option B represents ionization isomers, Option C coordination isomers, and Option D solvate isomers).",
+    "common_mistake": "Selecting Option B, which represents ionization isomers due to exchange of ions inside and outside the coordination sphere.",
+    "concept_slugs": [
+      "coordination-isomerism"
+    ]
+  },
+  {
+    "pattern_group": "coordination-isomerism",
+    "title": "Octahedral complexes of type $[\\text{Ma}_3\\text{b}_3]$ (where $a$ and $b$ are monodentate ligands) exhibit which class of geometrical isomers?",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2022",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Facial ($fac$) and Meridional ($mer$)",
+      "B": "cis and trans",
+      "C": "Linkage",
+      "D": "Dextro and Laevo"
+    },
+    "notes": "Visualize the spatial arrangement of the three 'a' ligands: do they occupy a face of the octahedron or a meridian?",
+    "solution_text": "Octahedral complexes of type $[\\text{Ma}_3\\text{b}_3]$ exhibit two geometrical isomers:\n1) Facial ($fac$): The three identical ligands (e.g. $a$) occupy three adjacent positions at the corners of one triangular face of the octahedron.\n2) Meridional ($mer$): The three identical ligands occupy positions around a meridian of the octahedron (forming a T-shape configuration).\nOption A is correct.",
+    "common_mistake": "Calling them cis/trans isomers (Option B), which is used for $[\\text{Ma}_4\\text{b}_2]$ type complexes.",
+    "concept_slugs": [
+      "coordination-isomerism"
+    ]
+  },
+  {
+    "pattern_group": "coordination-isomerism",
+    "title": "The ionization isomers $[\\text{Co}(\\text{NH}_3)_5\\text{SO}_4]\\text{Br}$ and $[\\text{Co}(\\text{NH}_3)_5\\text{Br}]\\text{SO}_4$ can be distinguished in the laboratory by reacting them respectively with which set of reagents?",
+    "difficulty": "easy",
+    "type": "concept",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\text{AgNO}_3$ and $\\text{BaCl}_2$ solutions",
+      "B": "$\\text{HCl}$ and $\\text{NaOH}$ solutions",
+      "C": "$\\text{KMnO}_4$ solution",
+      "D": "Ammoniacal silver nitrate (Tollens')"
+    },
+    "notes": "Identify the free anions released by the two isomers in water: bromide ($\\text{Br}^-$) vs sulfate ($\\text{SO}_4^{2-}$).",
+    "solution_text": "The two complexes yield different ions in solution:\n- $[\\text{Co}(\\text{NH}_3)_5\\text{SO}_4]\\text{Br}$ yields free $\\text{Br}^-$ ions. Reacting with $\\text{AgNO}_3$ yields a pale yellow precipitate of silver bromide ($\\text{AgBr}$). It does not react with $\\text{BaCl}_2$.\n- $[\\text{Co}(\\text{NH}_3)_5\\text{Br}]\\text{SO}_4$ yields free $\\text{SO}_4^{2-}$ ions. Reacting with $\\text{BaCl}_2$ yields a white precipitate of barium sulfate ($\\text{BaSO}_4$). It does not react with $\\text{AgNO}_3$.\nThus, they are distinguished using $\\text{AgNO}_3$ and $\\text{BaCl}_2$. Option A is correct.",
+    "common_mistake": "Assuming both react with silver nitrate, neglecting that sulfate does not form an insoluble precipitate with silver ions under these conditions.",
+    "concept_slugs": [
+      "coordination-isomerism"
+    ]
+  },
+  {
+    "pattern_group": "coordination-isomerism",
+    "title": "A square planar complex of type $[\\text{Mabcd}]$ (where $a, b, c, d$ are distinct monodentate ligands) exhibits geometrical isomerism. The number of geometrical isomers possible for this complex is ________.",
+    "difficulty": "medium",
+    "type": "concept",
+    "correct_answer": "3",
+    "is_numerical": true,
+    "notes": "To find the number of isomers, fix one ligand (e.g. 'a') and place the other three trans to it in turn.",
+    "solution_text": "For a square planar complex $[\\text{Mabcd}]$, we can find the geometrical isomers by keeping one ligand (say, $a$) fixed at position 1 and arranging the remaining three ligands ($b, c, d$) in the position trans to it (position 3):\n1) Isomer 1: $b$ is trans to $a$.\n2) Isomer 2: $c$ is trans to $a$.\n3) Isomer 3: $d$ is trans to $a$.\nSince square planar geometry restricts the positions, this yields exactly 3 distinct geometrical isomers.",
+    "common_mistake": "Writing 2, assuming that only cis and trans isomers can exist for any square planar complex.",
+    "concept_slugs": [
+      "coordination-isomerism"
+    ]
+  },
+  {
+    "pattern_group": "coordination-isomerism",
+    "title": "The complex $[\\text{Co(en)}_3]^{3+}$ (where $en$ is ethylenediamine) has no plane or center of symmetry. The number of geometrical isomers possible for this complex is ________.",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "0",
+    "is_numerical": true,
+    "notes": "Ethylenediamine is a symmetrical bidentate ligand. Consider if any non-equivalent ligand distributions are possible.",
+    "solution_text": "The complex $[\\text{Co(en)}_3]^{3+}$ contains three identical symmetrical bidentate ligands ($en$). Since all coordinating positions are occupied by identical bidentate bridges, there is only one way to connect them geometrically. No geometrical isomers (cis/trans or fac/mer) are possible. (However, the complex is chiral and exists as a pair of optically active d- and l-enantiomers). Thus, the number of geometrical isomers is 0.",
+    "common_mistake": "Writing 2, confusing optical active enantiomers (stereoisomers) with geometrical isomers.",
+    "concept_slugs": [
+      "coordination-isomerism"
+    ]
+  },
+  {
+    "pattern_group": "coordination-isomerism",
+    "title": "For the octahedral complex ion $[\\text{Co(en)}_2\\text{Cl}_2]^+$, which isomer is optically active?",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "cis-isomer",
+      "B": "trans-isomer",
+      "C": "Both cis- and trans-isomers",
+      "D": "Neither cis- nor trans-isomer"
+    },
+    "notes": "Draw the cis and trans structures. Check for the presence of a plane of symmetry (which renders a molecule optically inactive).",
+    "solution_text": "$[\\text{Co(en)}_2\\text{Cl}_2]^+$ has two geometrical isomers:\n- trans-isomer: The two chloride ligands are located at $180^circ$ relative to each other (axial positions). This structure has a plane of symmetry (containing the equatorial $en$ ligands) and is achiral (optically inactive).\n- cis-isomer: The two chlorides are at $90^circ$ relative to each other. This structure has no plane or center of symmetry, rendering it chiral. It exists as a pair of non-superimposable mirror images (enantiomers) and is optically active. Option A is correct.",
+    "common_mistake": "Selecting trans-isomer (Option B) or both (Option C) because they both contain chelate rings, neglecting the high symmetry of the trans form.",
+    "concept_slugs": [
+      "coordination-isomerism"
+    ]
+  },
+  {
+    "pattern_group": "coordination-isomerism",
+    "title": "The isomerism that arises from the exchange of ligands between cationic and anionic entities of different metal ions present in a complex is called:",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Coordination isomerism",
+      "B": "Ionization isomerism",
+      "C": "Linkage isomerism",
+      "D": "Coordination position isomerism"
+    },
+    "notes": "An example is the pair $[\\text{Co}(\\text{NH}_3)_6][\\text{Cr}(\\text{CN})_6]$ and $[\\text{Cr}(\\text{NH}_3)_6][\\text{Co}(\\text{CN})_6]$.",
+    "solution_text": "Coordination isomerism occurs in compounds containing both cationic and anionic complex entities. It arises from the interchange of ligands between the cationic and anionic coordination spheres containing different metal ions (e.g. $[\\text{Co}(\\text{NH}_3)_6][\\text{Cr}(\\text{CN})_6]$ and $[\\text{Cr}(\\text{NH}_3)_6][\\text{Co}(\\text{CN})_6]$). Option A is correct.",
+    "common_mistake": "Selecting ionization isomerism (Option B), which involves exchange of ligands with counter-ions, not between two complex metal entities.",
+    "concept_slugs": [
+      "coordination-isomerism"
+    ]
+  },
+  {
+    "pattern_group": "coordination-isomerism",
+    "title": "The total number of stereoisomers (including both geometrical isomers and their optical enantiomers) possible for the complex ion $[\\text{Co(en)}_2\\text{Cl}_2]^+$ is ________.",
+    "difficulty": "hard",
+    "type": "advanced",
+    "correct_answer": "3",
+    "is_numerical": true,
+    "notes": "Find the geometrical isomers first, then count how many of them are chiral and exist as enantiomer pairs.",
+    "solution_text": "Let's count the stereoisomers of $[\\text{Co(en)}_2\\text{Cl}_2]^+$\n1) Geometrical isomers are cis and trans.\n2) trans-isomer: symmetrical, achiral. This gives 1 stereoisomer.\n3) cis-isomer: unsymmetrical, chiral. It exists as a pair of enantiomers (dextro and laevo forms). This gives 2 stereoisomers.\n4) Total stereoisomers $= 1 \\text{ (trans)} + 2 \\text{ (cis-enantiomers)} = 3$.",
+    "common_mistake": "Writing 4, by assuming that both cis and trans isomers are chiral and each exists as a pair of enantiomers.",
+    "concept_slugs": [
+      "coordination-isomerism"
+    ]
+  },
+  {
+    "pattern_group": "coordination-vbt",
+    "title": "The spin-only magnetic moments of the square planar complex $[\\text{Ni(CN)}_4]^{2-}$ and the tetrahedral complex $[\\text{NiCl}_4]^{2-}$ are respectively:",
+    "difficulty": "easy",
+    "type": "pyq",
+    "source": "JEE Main 2021",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$0\\,\\text{BM}$ and $2.83\\,\\text{BM}$",
+      "B": "$2.83\\,\\text{BM}$ and $0\\,\\text{BM}$",
+      "C": "$1.73\\,\\text{BM}$ and $2.83\\,\\text{BM}$",
+      "D": "$0\\,\\text{BM}$ and $1.73\\,\\text{BM}$"
+    },
+    "notes": "Evaluate the nickel oxidation state (+2, $d^8$) and whether the ligand is strong-field (pairing) or weak-field (no pairing).",
+    "solution_text": "Ni$^{2+}$ has a $3d^8$ electronic configuration:\n- $[\\text{Ni(CN)}_4]^{2-}$: $\\text{CN}^-$ is a strong-field ligand. It causes pairing of the 8 d-electrons, leaving 0 unpaired electrons. The hybridization is $dsp^2$ (square planar) and the magnetic moment is $0\\,\\text{BM}$.\n- $[\\text{NiCl}_4]^{2-}$: $\\text{Cl}^-$ is a weak-field ligand. No pairing occurs, leaving 2 unpaired electrons. The hybridization is $sp^3$ (tetrahedral) and the magnetic moment $\\mu = \\sqrt{2(2+2)} = \\sqrt{8} \\approx 2.83\\,\\text{BM}$.\nOption A is correct.",
+    "common_mistake": "Selecting Option B, reversing the magnetic properties of the two complexes.",
+    "concept_slugs": [
+      "coordination-vbt"
+    ]
+  },
+  {
+    "pattern_group": "coordination-vbt",
+    "title": "The hybridization and shape of the complex ion $[\\text{Cr(NH}_3)_6]^{3+}$ are respectively:",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2023",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$d^2sp^3$ and Octahedral",
+      "B": "$sp^3d^2$ and Octahedral",
+      "C": "$dsp^2$ and Square planar",
+      "D": "$sp^3$ and Tetrahedral"
+    },
+    "notes": "Determine the oxidation state of Cr and its d-electron configuration. Check if two $3d$ orbitals are available for inner orbital hybridization.",
+    "solution_text": "In $[\\text{Cr(NH}_3)_6]^{3+}$, the central metal is chromium in a $+3$ oxidation state:\n1) Cr$^{3+}$ has a $3d^3$ electronic configuration.\n2) The 3 electrons occupy the first three $3d$ orbitals ($d_{xy}, d_{yz}, d_{xz}$), leaving the two higher $3d$ orbitals ($d_{x^2-y^2}, d_{z^2}$) completely empty.\n3) These two empty $3d$ orbitals, along with one $4s$ and three $4p$ orbitals, hybridize to form six empty $d^2sp^3$ hybrid orbitals, accepting six electron pairs from the $\\text{NH}_3$ ligands to form an octahedral complex. Option A is correct.",
+    "common_mistake": "Selecting $sp^3d^2$ (Option B) by assuming ammonia is a weak-field ligand or that outer-shell orbitals must be used, whereas $d^3$ transition ions always form inner orbital $d^2sp^3$ complexes.",
+    "concept_slugs": [
+      "coordination-vbt"
+    ]
+  },
+  {
+    "pattern_group": "coordination-vbt",
+    "title": "In octahedral complexes, if the inner $3d$ orbitals of the metal are used for hybridization, the complex is called an 'inner orbital complex'. Which of the following represents an inner orbital complex?",
+    "difficulty": "easy",
+    "type": "concept",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$[\\text{Co}(\\text{NH}_3)_6]^{3+}$",
+      "B": "$[\\text{CoF}_6]^{3-}$",
+      "C": "$[\\text{FeF}_6]^{3-}$",
+      "D": "$[\\text{Ni}(\\text{NH}_3)_6]^{2+}$"
+    },
+    "notes": "Evaluate the d-configuration and whether pairing of electrons is forced by a strong-field ligand to free up two $3d$ orbitals.",
+    "solution_text": "Let's analyze the complexes:\n- $[\\text{Co}(\\text{NH}_3)_6]^{3+}$: Co$^{3+}$ is $3d^6$. Ammonia acts as a strong-field ligand on Co(III) and forces pairing of the 6 electrons into the lower $t_{2g}$ orbitals: $(t_{2g})^6(e_g)^0$. This leaves two $3d$ orbitals empty. The hybridization is $d^2sp^3$ (inner orbital complex). Option A is correct.\n- $[\\text{CoF}_6]^{3-}$ and $[\\text{FeF}_6]^{3-}$: $\\text{F}^-$ is a weak-field ligand. No pairing occurs, resulting in $sp^3d^2$ (outer orbital complex).\n- $[\\text{Ni}(\\text{NH}_3)_6]^{2+}$: Ni$^{2+}$ is $3d^8$. Even with pairing, it cannot free up two $3d$ orbitals, so it must form an outer orbital $sp^3d^2$ complex.",
+    "common_mistake": "Selecting $[\\text{Ni}(\\text{NH}_3)_6]^{2+}$ (Option D) because ammonia is a strong ligand, forgetting that a $d^8$ configuration cannot clear two $3d$ orbitals for inner-orbital hybridization.",
+    "concept_slugs": [
+      "coordination-vbt"
+    ]
+  },
+  {
+    "pattern_group": "coordination-vbt",
+    "title": "The spin-only magnetic moment of a divalent transition metal ion (atomic number $= 25$) in its high-spin octahedral aqueous complex is:",
+    "difficulty": "medium",
+    "type": "concept",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "5.92 BM",
+      "B": "4.90 BM",
+      "C": "3.87 BM",
+      "D": "1.73 BM"
+    },
+    "notes": "Identify the metal ion and count its unpaired electrons in a weak-field (aqueous) environment.",
+    "solution_text": "The metal with atomic number $Z=25$ is Manganese ($\\text{Mn}$):\n1) Divalent ion is $\\text{Mn}^{2+}$. Its electronic configuration is $3d^5$.\n2) Since water is a weak-field ligand, it forms a high-spin complex. The 5 electrons remain unpaired, occupying the five $3d$ orbitals individually ($n=5$).\n3) Using the spin-only magnetic moment formula: $\\mu = \\sqrt{n(n+2)} = \\sqrt{5(5+2)} = \\sqrt{35} \\approx 5.92\\,\\text{BM}$.\nOption A is correct.",
+    "common_mistake": "Calculating for low-spin (pairing) which would yield 1 unpaired electron ($1.73\\,\\text{BM}$), forgetting that water is a weak-field ligand.",
+    "concept_slugs": [
+      "coordination-vbt"
+    ]
+  },
+  {
+    "pattern_group": "coordination-vbt",
+    "title": "The hybridization of the iron atom in the low-spin complex ion $[\\text{Fe(CN)}_6]^{3-}$ (ferricyanide) is:",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$d^2sp^3$",
+      "B": "$sp^3d^2$",
+      "C": "$sp^3$",
+      "D": "$dsp^2$"
+    },
+    "notes": "Fe(III) is $d^5$. CN is a strong-field ligand that forces pairing of the d-electrons.",
+    "solution_text": "In $[\\text{Fe(CN)}_6]^{3-}$, the iron is in a $+3$ oxidation state ($3d^5$ configuration):\n- $\\text{CN}^-$ is a strong-field ligand and forces pairing of the 5 d-electrons: two pairs and one unpaired electron, occupying three $3d$ orbitals.\n- This leaves two inner $3d$ orbitals empty, which are used for $d^2sp^3$ hybridization, forming an inner-orbital octahedral complex. Option A is correct.",
+    "common_mistake": "Selecting $sp^3d^2$ (Option B), assuming that since there is an unpaired electron it must be an outer orbital complex.",
+    "concept_slugs": [
+      "coordination-vbt"
+    ]
+  },
+  {
+    "pattern_group": "coordination-vbt",
+    "title": "Which of the following statements is true regarding the geometry and magnetic properties of 4-coordinate nickel complexes?",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$[\\text{Ni(CO)}_4]$ is tetrahedral and diamagnetic; $[\\text{Ni(CN)}_4]^{2-}$ is square planar and diamagnetic",
+      "B": "$[\\text{Ni(CO)}_4]$ is square planar and diamagnetic; $[\\text{Ni(CN)}_4]^{2-}$ is tetrahedral and paramagnetic",
+      "C": "$[\\text{NiCl}_4]^{2-}$ is square planar and paramagnetic; $[\\text{Ni(CO)}_4]$ is tetrahedral and diamagnetic",
+      "D": "$[\\text{Ni(CN)}_4]^{2-}$ is square planar and paramagnetic; $[\\text{NiCl}_4]^{2-}$ is tetrahedral and diamagnetic"
+    },
+    "notes": "For Ni(0) in $[\\text{Ni(CO)}_4]$, $3d$ and $4s$ electrons rearrange. For Ni(II) in $[\\text{Ni(CN)}_4]^{2-}$ and $[\\text{NiCl}_4]^{2-}$, compare ligand field strength.",
+    "solution_text": "Let's analyze both complexes:\n- $[\\text{Ni(CO)}_4]$: Nickel is in a $0$ oxidation state ($3d^8 4s^2$). Carbon monoxide (CO) is a very strong ligand and forces the $4s$ electrons into the $3d$ shell, resulting in a fully filled $3d^{10}$ configuration. Hybridization is $sp^3$ (tetrahedral) and it is diamagnetic (0 unpaired electrons).\n- $[\\text{Ni(CN)}_4]^{2-}$: Nickel is in a $+2$ oxidation state ($3d^8$). The strong ligand $\\text{CN}^-$ forces pairing of the 8 d-electrons, freeing up one $3d$ orbital. Hybridization is $dsp^2$ (square planar) and it is diamagnetic (0 unpaired electrons). Option A is correct.",
+    "common_mistake": "Classifying $[\\text{Ni(CO)}_4]$ as square planar or paramagnetic, or assuming $\\text{Cl}^-$ causes pairing.",
+    "concept_slugs": [
+      "coordination-vbt"
+    ]
+  },
+  {
+    "pattern_group": "coordination-vbt",
+    "title": "The number of unpaired electrons present in the high-spin octahedral complex ion $[\\text{Fe(H}_2\\text{O})_6]^{2+}$ is ________.",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "4",
+    "is_numerical": true,
+    "notes": "Determine the oxidation state of Fe and count its valence d-electrons. Water is a weak-field ligand.",
+    "solution_text": "In $[\\text{Fe(H}_2\\text{O})_6]^{2+}$:\n1) Iron is in a $+2$ oxidation state. Its configuration is $3d^6$.\n2) Water is a weak-field ligand and does not force pairing of electrons. \n3) The 6 d-electrons occupy the five orbitals following Hund's rule: one orbital has a pair, and the other four orbitals have single electrons. \n4) Therefore, there are exactly 4 unpaired electrons.",
+    "common_mistake": "Writing 0, assuming that because it is an octahedral complex of iron(II) it must pair up (which only occurs with strong-field ligands like $\\text{CN}^-$).",
+    "concept_slugs": [
+      "coordination-vbt"
+    ]
+  },
+  {
+    "pattern_group": "coordination-vbt",
+    "title": "The complex ion $[\\text{CoF}_6]^{3-}$ is paramagnetic with 4 unpaired electrons. The hybridization of cobalt in this outer-orbital complex is:",
+    "difficulty": "hard",
+    "type": "advanced",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$sp^3d^2$",
+      "B": "$d^2sp^3$",
+      "C": "$sp^3d$",
+      "D": "$sp^3$"
+    },
+    "notes": "Evaluate how a $d^6$ configuration with 4 unpaired electrons leaves the inner $3d$ orbitals unavailable, forcing the use of outer $4d$ orbitals.",
+    "solution_text": "Co$^{3+}$ has a $3d^6$ electronic configuration. The complex $[\\text{CoF}_6]^{3-}$ has 4 unpaired electrons, meaning the d-electrons occupy the orbitals as: one pair and four single electrons. Since the inner $3d$ orbitals are partially occupied, they cannot be used for hybridization. To form an octahedral coordination geometry, cobalt must utilize its outer-shell $4s$, $4p$, and two $4d$ orbitals. This results in $sp^3d^2$ hybridization, characterizing an outer-orbital complex. Option A is correct.",
+    "common_mistake": "Selecting $d^2sp^3$ (Option B), which requires pairing all 6 electrons to free up two inner $3d$ orbitals, which contradicts the observed paramagnetism.",
+    "concept_slugs": [
+      "coordination-vbt"
+    ]
+  },
+  {
+    "pattern_group": "coordination-cft-cfse",
+    "title": "According to Crystal Field Theory, when d-orbitals split in an octahedral crystal field, which of the following orbital sets increases in energy relative to the barycenter?",
+    "difficulty": "easy",
+    "type": "pyq",
+    "source": "JEE Main 2021",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$d_{x^2-y^2}$ and $d_{z^2}$ ($e_g$ orbitals)",
+      "B": "$d_{xy}, d_{yz},$ and $d_{xz}$ ($t_{2g}$ orbitals)",
+      "C": "All five d-orbitals increase equally in energy",
+      "D": "Only the $d_{z^2}$ orbital increases in energy"
+    },
+    "notes": "In an octahedral field, the ligands approach along the x, y, and z axes. Orbitals pointing directly along the axes experience greater electrostatic repulsion.",
+    "solution_text": "In an octahedral complex, the six ligands approach the central metal ion along the Cartesian axes ($x, y, z$). The d-orbitals that have lobes pointing directly along these axes ($d_{x^2-y^2}$ and $d_{z^2}$, called the $e_g$ set) experience greater electrostatic repulsion and thus rise in energy by $+0.6\\,Delta_o$ relative to the barycenter. The other three orbitals ($d_{xy}, d_{yz}, d_{xz}$, called the $t_{2g}$ set) point between the axes, experience less repulsion, and drop in energy by $-0.4\\,Delta_o$. Option A is correct.",
+    "common_mistake": "Selecting $t_{2g}$ (Option B) as the set that increases in energy, which is the splitting pattern for tetrahedral fields, not octahedral.",
+    "concept_slugs": [
+      "coordination-cft-cfse"
+    ]
+  },
+  {
+    "pattern_group": "coordination-cft-cfse",
+    "title": "The crystal field stabilization energy (CFSE) for a high-spin $d^6$ octahedral complex is:",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2022",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$-0.4\\,\\Delta_o$",
+      "B": "$-2.4\\,\\Delta_o + 2P$",
+      "C": "$-0.6\\,\\Delta_o$",
+      "D": "$-1.2\\,\\Delta_o + P$"
+    },
+    "notes": "Write the d-electron distribution in the $t_{2g}$ and $e_g$ levels for high-spin $d^6$, and apply the CFSE formula.",
+    "solution_text": "For a high-spin $d^6$ octahedral complex, the crystal field splitting energy is small, so electrons do not pair up preferentially. The configuration is $(t_{2g})^4(e_g)^2$:\n- The four electrons in the $t_{2g}$ level contribute $4 \\times (-0.4\\,Delta_o) = -1.6\\,Delta_o$.\n- The two electrons in the $e_g$ level contribute $2 \\times (+0.6\\,Delta_o) = +1.2\\,Delta_o$.\n- $\\text{CFSE} = -1.6\\,Delta_o + 1.2\\,Delta_o = -0.4\\,Delta_o$.\nSince no forced pairing occurs (the one pair is present in the free ion as well), no pairing energy terms ($P$) are added to the CFSE. Option A is correct.",
+    "common_mistake": "Selecting Option B, which is the CFSE for a *low-spin* $d^6$ complex ($t_{2g}^6 e_g^0$, where two additional pairs are forced, requiring $+2P$).",
+    "concept_slugs": [
+      "coordination-cft-cfse"
+    ]
+  },
+  {
+    "pattern_group": "coordination-cft-cfse",
+    "title": "The crystal field splitting energy for a tetrahedral field ($\\Delta_t$) is related to that of an octahedral field ($\\Delta_o$) for the same metal and ligands by the equation:",
+    "difficulty": "easy",
+    "type": "concept",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\Delta_t = \\frac{4}{9}\\,\\Delta_o$",
+      "B": "$\\Delta_t = \\frac{9}{4}\\,\\Delta_o$",
+      "C": "$\\Delta_t = \\frac{1}{2}\\,\\Delta_o$",
+      "D": "$\\Delta_t = \\frac{2}{3}\\,\\Delta_o$"
+    },
+    "notes": "Tetrahedral splitting is smaller because there are fewer ligands (4 vs 6) and none of the metal orbitals point directly at the ligands.",
+    "solution_text": "Tetrahedral splitting ($\\Delta_t$) is significantly smaller than octahedral splitting (\\Delta_o) because:\n1) There are only 4 ligands instead of 6, which reduces the field strength by a factor of $4/6 = 2/3$.\n2) The ligands do not approach directly along any of the orbitals, reducing the splitting efficiency by another factor of $2/3$.\nCombining these, we get: $\\Delta_t = \\frac{2}{3} \\times \\frac{2}{3}\\,\\Delta_o = \\frac{4}{9}\\,\\Delta_o$. Option A is correct.",
+    "common_mistake": "Selecting $\\Delta_t = \\frac{9}{4}\\,\\Delta_o$ (Option B), which incorrectly suggests tetrahedral splitting is larger than octahedral.",
+    "concept_slugs": [
+      "coordination-cft-cfse"
+    ]
+  },
+  {
+    "pattern_group": "coordination-cft-cfse",
+    "title": "For an octahedral complex of a $d^4$ transition metal ion, a low-spin configuration is favored when the crystal field splitting energy ($\\Delta_o$) and the pairing energy ($P$) satisfy which condition?",
+    "difficulty": "medium",
+    "type": "concept",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\Delta_o > P$",
+      "B": "$\\Delta_o < P$",
+      "C": "$\\Delta_o = P$",
+      "D": "Independent of the value of $P$"
+    },
+    "notes": "Evaluate the energy cost for the 4th electron: entering the higher $e_g$ orbital vs pairing up in a $t_{2g}$ orbital.",
+    "solution_text": "For a $d^4$ ion in an octahedral field, the first three electrons occupy the three $t_{2g}$ orbitals: $(t_{2g})^3$. The fourth electron has two choices:\n1) Enter the higher-energy $e_g$ orbital to form a high-spin complex: $(t_{2g})^3(e_g)^1$. The energy cost is $\\Delta_o$.\n2) Pair up in one of the occupied $t_{2g}$ orbitals to form a low-spin complex: $(t_{2g})^4$. The energy cost is the pairing energy ($P$).\nLow-spin is favored when the energy cost of pairing ($P$) is smaller than the crystal field splitting ($\\Delta_o$), which means $\\Delta_o > P$. Option A is correct.",
+    "common_mistake": "Selecting $\\Delta_o < P$ (Option B), which is the condition that favors a high-spin state because pairing is too energetically expensive.",
+    "concept_slugs": [
+      "coordination-cft-cfse"
+    ]
+  },
+  {
+    "pattern_group": "coordination-cft-cfse",
+    "title": "The crystal field stabilization energy (CFSE) of a $d^3$ octahedral complex is:",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$-1.2\\,\\Delta_o$",
+      "B": "$-0.6\\,\\Delta_o$",
+      "C": "$-1.8\\,\\Delta_o$",
+      "D": "$0\\,\\Delta_o$"
+    },
+    "notes": "A $d^3$ ion has 3 electrons. They occupy the lower $t_{2g}$ level individually. Each electron contributes -0.4 to CFSE.",
+    "solution_text": "In a $d^3$ octahedral complex, the 3 d-electrons occupy the lower-energy $t_{2g}$ orbitals following Hund's rule: $(t_{2g})^3(e_g)^0$. Each electron in the $t_{2g}$ level stabilizes the complex by $-0.4\\,Delta_o$ relative to the barycenter. Thus, $\\text{CFSE} = 3 \\times (-0.4\\,Delta_o) = -1.2\\,Delta_o$. Option A is correct.",
+    "common_mistake": "Selecting $-0.6\\,Delta_o$ (Option B) by using the wrong stabilization factor ($0.2$ instead of $0.4$).",
+    "concept_slugs": [
+      "coordination-cft-cfse"
+    ]
+  },
+  {
+    "pattern_group": "coordination-cft-cfse",
+    "title": "In a tetrahedral crystal field, the d-orbitals split such that:",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "The $d_{xy}, d_{yz}, d_{xz}$ orbitals ($t_2$) are higher in energy than the $d_{x^2-y^2}, d_{z^2}$ orbitals ($e$)",
+      "B": "The $d_{x^2-y^2}, d_{z^2}$ orbitals ($e$) are higher in energy than the $d_{xy}, d_{yz}, d_{xz}$ orbitals ($t_2$)",
+      "C": "The splitting is identical to that of an octahedral field",
+      "D": "All five d-orbitals remain degenerate in the presence of ligands"
+    },
+    "notes": "Tetrahedral splitting is the reverse of octahedral splitting because of different ligand approach angles.",
+    "solution_text": "In a tetrahedral complex, the 4 ligands approach the corners of a tetrahedron (between the Cartesian axes). Therefore, the $d_{xy}, d_{yz}, d_{xz}$ orbitals (called the $t_2$ set) point closer to the directions of ligand approach and experience greater electrostatic repulsion, rising in energy. The $d_{x^2-y^2}$ and $d_{z^2}$ orbitals (called the $e$ set) point along the axes, experience less repulsion, and drop in energy. Thus, the $t_2$ set is higher in energy than the $e$ set. Option A is correct.",
+    "common_mistake": "Selecting Option B, which describes the splitting pattern of an octahedral field.",
+    "concept_slugs": [
+      "coordination-cft-cfse"
+    ]
+  },
+  {
+    "pattern_group": "coordination-cft-cfse",
+    "title": "A low-spin $d^5$ octahedral complex has the electron configuration $t_{2g}^5 e_g^0$. The CFSE for this complex (excluding pairing energy terms) is $-\\text{X}\\Delta_o$. The value of the integer $\\text{X}$ is ________.",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "2",
+    "is_numerical": true,
+    "notes": "Calculate the stabilization contributed by the 5 electrons in the $t_{2g}$ level.",
+    "solution_text": "For a low-spin $d^5$ octahedral complex, the 5 electrons reside in the lower-energy $t_{2g}$ orbitals: $(t_{2g})^5(e_g)^0$.\nUsing the CFSE formula:\n$\\text{CFSE} = 5 \\times (-0.4\\,\\Delta_o) + 0 \\times (+0.6\\,\\Delta_o) = -2.0\\,\\Delta_o$.\nTherefore, the value of the coefficient $\\text{X}$ is 2.",
+    "common_mistake": "Writing 1, by applying a high-spin configuration $(t_{2g})^3(e_g)^2$ which has a CFSE of $0\\,Delta_o$.",
+    "concept_slugs": [
+      "coordination-cft-cfse"
+    ]
+  },
+  {
+    "pattern_group": "coordination-cft-cfse",
+    "title": "The number of $t_{2g}$ electrons in the low-spin cobalt(III) complex $[\\text{Co(NH}_3)_6]^{3+}$ is ________.",
+    "difficulty": "hard",
+    "type": "advanced",
+    "correct_answer": "6",
+    "is_numerical": true,
+    "notes": "Determine the oxidation state of Co, write its d-configuration, and apply pairing rules under the strong-field ligand ammonia.",
+    "solution_text": "In $[\\text{Co(NH}_3)_6]^{3+}$:\n1) Cobalt is in a $+3$ oxidation state. Its configuration is $3d^6$.\n2) Ammonia ($\\text{NH}_3$) acts as a strong-field ligand on Co(III) and causes large crystal field splitting ($\\Delta_o > P$).\n3) All 6 d-electrons pair up and completely fill the lower $t_{2g}$ orbitals: $(t_{2g})^6(e_g)^0$.\n4) Thus, the number of electrons in the $t_{2g}$ orbitals is exactly 6.",
+    "common_mistake": "Writing 4, by applying the high-spin $d^6$ configuration $(t_{2g})^4(e_g)^2$, neglecting the strong-field character of ammonia on trivalent cobalt.",
+    "concept_slugs": [
+      "coordination-cft-cfse"
+    ]
+  },
+  {
+    "pattern_group": "coordination-magnetic-color",
+    "title": "According to the spectrochemical series, which of the following is the correct order of ligand field strength?",
+    "difficulty": "easy",
+    "type": "pyq",
+    "source": "JEE Main 2021",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\text{Cl}^- < \\text{F}^- < \\text{H}_2\\text{O} < \\text{NH}_3 < \\text{CN}^-$",
+      "B": "$\\text{CN}^- < \\text{NH}_3 < \\text{H}_2\\text{O} < \\text{F}^- < \\text{Cl}^-$",
+      "C": "$\\text{F}^- < \\text{Cl}^- < \\text{H}_2\\text{O} < \\text{NH}_3 < \\text{CN}^-$",
+      "D": "$\\text{H}_2\\text{O} < \\text{F}^- < \\text{Cl}^- < \\text{NH}_3 < \\text{CN}^-$"
+    },
+    "notes": "Spectrochemical series orders ligands by the magnitude of splitting they produce.",
+    "solution_text": "The spectrochemical series is an empirically determined order of ligand field strengths. Weak-field ligands (halides) produce small splitting, while strong-field ligands (carbon/nitrogen donors) produce large splitting. The correct order is: $\\text{I}^- < \\text{Br}^- < \\text{SCN}^- < \\text{Cl}^- < \\text{S}^{2-} < \\text{F}^- < \\text{OH}^- < \\text{C}_2\\text{O}_4^{2-} < \\text{H}_2\\text{O} < \\text{NCS}^- < \\text{EDTA}^{4-} < \\text{NH}_3 < \\text{en} < \\text{NO}_2^- < \\text{CN}^- < \\text{CO}$. Among the options, Option A represents this order correctly. Option A is correct.",
+    "common_mistake": "Putting Fluoride as a weaker field ligand than Chloride (Option C), or thinking water is stronger than ammonia.",
+    "concept_slugs": [
+      "coordination-magnetic-color"
+    ]
+  },
+  {
+    "pattern_group": "coordination-magnetic-color",
+    "title": "A transition metal complex absorbs light in the blue-green region ($\\approx 490-500\\,\\text{nm}$). The color of the complex observed by the human eye is:",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2023",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Red",
+      "B": "Yellow",
+      "C": "Blue",
+      "D": "Violet"
+    },
+    "notes": "The observed color of a complex is the complementary color of the wavelength of light absorbed.",
+    "solution_text": "When white light passes through a transition metal complex solution, the complex absorbs a specific wavelength of light to excite an electron between split d-orbitals (d-d transition). The light that is transmitted through the solution is missing this absorbed wavelength, and the human eye perceives the remaining light as the complementary color of the absorbed light. According to the color wheel, the complementary color of blue-green (absorbed) is red. Option A is correct.",
+    "common_mistake": "Selecting blue-green or blue (Option C) as the observed color, confusing the absorbed wavelength with the transmitted/perceived wavelength.",
+    "concept_slugs": [
+      "coordination-magnetic-color"
+    ]
+  },
+  {
+    "pattern_group": "coordination-magnetic-color",
+    "title": "Anhydrous copper sulfate ($\\text{CuSO}_4$) is colorless, whereas hydrated copper sulfate ($\\text{CuSO}_4 \\cdot 5\\text{H}_2\\text{O}$) is blue. This difference is because:",
+    "difficulty": "easy",
+    "type": "concept",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "In anhydrous $\\text{CuSO}_4$, no d-d transition is possible because ligands ($\\text{H}_2\\text{O}$) are absent to cause d-orbital splitting",
+      "B": "Anhydrous $\\text{CuSO}_4$ contains $\\text{Cu}^+$ ions instead of $\\text{Cu}^{2+}$",
+      "C": "Water molecules oxidize the copper to a $+3$ state",
+      "D": "Hydration stabilizes the s-orbitals, preventing charge transfer transitions"
+    },
+    "notes": "Color in transition metal complexes arises from d-d transitions, which require split d-orbitals.",
+    "solution_text": "In anhydrous $\\text{CuSO}_4$, the $\\text{Cu}^{2+}$ ion is not surrounded by ligands, so its five $3d$ orbitals remain degenerate (equal in energy). No d-d transition can occur, rendering it colorless. In hydrated copper sulfate ($[\\text{Cu(H}_2\\text{O})_4]\\text{SO}_4 \\cdot \\text{H}_2\\text{O}$), the water molecules act as ligands and create an octahedral/tetragonal ligand field that splits the d-orbitals. Electrons can absorb red light to undergo d-d transitions, transmitting the complementary blue color. Option A is correct.",
+    "common_mistake": "Assuming water reacts chemically to change the oxidation state of copper from $+1$ to $+2$ (Option B).",
+    "concept_slugs": [
+      "coordination-magnetic-color"
+    ]
+  },
+  {
+    "pattern_group": "coordination-magnetic-color",
+    "title": "Octahedral complexes of $4d$ and $5d$ transition series metals (like $\\text{Rh}^{3+}$ or $\\text{Pt}^{4+}$) are almost always low-spin, regardless of whether the ligand is a weak-field ligand like chloride. This is because:",
+    "difficulty": "medium",
+    "type": "concept",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "The crystal field splitting energy ($\\Delta_o$) increases by $30-50\\%$ from $3d$ to $4d$ and $5d$ due to larger radial extension of the $4d/5d$ orbitals",
+      "B": "$4d/5d$ metals have smaller atomic radii, which brings the ligands closer",
+      "C": "Pairing energy is exceptionally high in $4d$ and $5d$ orbitals",
+      "D": "They only form covalent complexes with zero pairing energy"
+    },
+    "notes": "Evaluate how orbital size affects overlap with ligand orbitals and splitting magnitude.",
+    "solution_text": "As we move from $3d$ to $4d$ and $5d$ transition series, the d-orbitals become larger and extend further from the nucleus. This results in much stronger electrostatic interactions and overlap with the ligand orbitals, which increases the crystal field splitting energy ($\\Delta_o$) by $30-50\\%$. Because $\\Delta_o$ is very large for $4d$ and $5d$ metals, it always exceeds the pairing energy ($\\Delta_o > P$), forcing all complexes of these metals to be low-spin. Option A is correct.",
+    "common_mistake": "Thinking pairing energy is higher in $4d/5d$ (Option C), whereas larger orbitals actually reduce electron-electron repulsion and lower the pairing energy.",
+    "concept_slugs": [
+      "coordination-magnetic-color"
+    ]
+  },
+  {
+    "pattern_group": "coordination-magnetic-color",
+    "title": "The complex ion $[\\text{Mn(CN)}_6]^{3-}$ has 2 unpaired electrons, whereas $[\\text{MnBr}_4]^{2-}$ has 5. This difference is due to:",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\text{CN}^-$ is a strong-field ligand causing electron pairing; $\\text{Br}^-$ is a weak-field ligand",
+      "B": "Manganese has different oxidation states in the two complexes",
+      "C": "One complex is square planar and the other is tetrahedral",
+      "D": "Bromine is a stronger field ligand than cyanide"
+    },
+    "notes": "Compare ligand field strength of cyanide and bromide. Both complexes have manganese in the +3 or +2 oxidation state.",
+    "solution_text": "Let's check the oxidation states:\n- $[\\text{Mn(CN)}_6]^{3-}$: Mn is in a $+3$ state ($3d^4$). $\\text{CN}^-$ is a strong-field ligand, causing pairing in the $t_{2g}$ level: $(t_{2g})^4(e_g)^0$. This leaves exactly 2 unpaired electrons.\n- $[\\text{MnBr}_4]^{2-}$: Mn is in a $+2$ state ($3d^5$). $\\text{Br}^-$ is a weak-field ligand. No pairing occurs, resulting in 5 unpaired electrons.\nThus, the difference is due to ligand field strength. Option A is correct.",
+    "common_mistake": "Assuming the geometry alone (Option C) determines the number of unpaired electrons without considering ligand strength.",
+    "concept_slugs": [
+      "coordination-magnetic-color"
+    ]
+  },
+  {
+    "pattern_group": "coordination-magnetic-color",
+    "title": "The spin-only magnetic moment of $[\\text{Co(H}_2\\text{O})_6]^{2+}$ is $3.87\\,\\text{BM}$. The number of unpaired electrons present in the cobalt ion in this complex is ________.",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "3",
+    "is_numerical": true,
+    "notes": "Apply the spin-only formula $\\mu = \\sqrt{n(n+2)}$ BM and solve for the integer $n$.",
+    "solution_text": "The spin-only magnetic moment is given by $\\mu = \\sqrt{n(n+2)}\\text{ BM}$, where $n$ is the number of unpaired electrons.\nGiven $\\mu = 3.87\\text{ BM}$:\n$3.87 = \\sqrt{n(n+2)} \\implies 15.0 = n^2 + 2n \\implies n^2 + 2n - 15 = 0 \\implies (n+5)(n-3) = 0$.\nSince $n$ must be positive, $n = 3$. There are exactly 3 unpaired electrons.",
+    "common_mistake": "Writing 4, by miscalculating the square root or confusing the oxidation state with the number of unpaired electrons.",
+    "concept_slugs": [
+      "coordination-magnetic-color"
+    ]
+  },
+  {
+    "pattern_group": "coordination-magnetic-color",
+    "title": "Which of the following coordination complexes is expected to be colorless in aqueous solution?",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$[\\text{Sc}(\\text{H}_2\\text{O})_6]^{3+}$",
+      "B": "$[\\text{Ti}(\\text{H}_2\\text{O})_6]^{3+}$",
+      "C": "$[\\text{Cr}(\\text{H}_2\\text{O})_6]^{3+}$",
+      "D": "$[\\text{Fe}(\\text{H}_2\\text{O})_6]^{2+}$"
+    },
+    "notes": "Color in transition metal complexes requires a partially filled d-orbital shell ($d^1$ to $d^9$) to undergo d-d transitions.",
+    "solution_text": "Color in transition complexes arises from d-d electronic transitions. This requires a partially filled d-shell:\n- $[\\text{Sc}(\\text{H}_2\\text{O})_6]^{3+}$: Sc$^{3+}$ has a $3d^0$ configuration. Since there are no electrons in the d-orbitals, no d-d transitions can occur, making the complex colorless. Option A is correct.\n- $[\\text{Ti}(\\text{H}_2\\text{O})_6]^{3+}$ ($3d^1$), $[\\text{Cr}(\\text{H}_2\\text{O})_6]^{3+}$ ($3d^3$), and $[\\text{Fe}(\\text{H}_2\\text{O})_6]^{2+}$ ($3d^6$) all have partially filled d-shells and are colored.",
+    "common_mistake": "Selecting $[\\text{Ti}(\\text{H}_2\\text{O})_6]^{3+}$ (Option B), which is purple/colored due to its single d-electron undergoing transition.",
+    "concept_slugs": [
+      "coordination-magnetic-color"
+    ]
+  },
+  {
+    "pattern_group": "coordination-magnetic-color",
+    "title": "The complex $[\\text{Cu(H}_2\\text{O})_6]^{2+}$ exhibits significant elongation along the z-axis, leading to a tetragonal distortion. This unsymmetrical distribution of d-electrons is known as the:",
+    "difficulty": "hard",
+    "type": "advanced",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Jahn-Teller effect",
+      "B": "Nephelauxetic effect",
+      "C": "Trans effect",
+      "D": "Zeeman effect"
+    },
+    "notes": "Recall the theorem stating that any non-linear degenerate system will undergo distortion to remove degeneracy.",
+    "solution_text": "The Jahn-Teller theorem states that any non-linear molecular system in a degenerate electronic state will undergo geometrical distortion to remove the degeneracy and lower its overall energy. For $\\text{Cu}^{2+}$ ($d^9$ configuration in an octahedral field, $t_{2g}^6 e_g^3$), the $e_g$ set is unsymmetrically filled. The molecule undergoes tetragonal distortion (elongation along the z-axis) to remove this degeneracy. This is the Jahn-Teller effect. Option A is correct.",
+    "common_mistake": "Calling it the Trans effect (Option C), which is a kinetic effect in square planar substitution reactions.",
+    "concept_slugs": [
+      "coordination-magnetic-color"
+    ]
+  },
+  {
+    "pattern_group": "coordination-stability-carbonyls",
+    "title": "The stability of a coordination complex increases significantly when a chelating ligand is present instead of monodentate ligands. This 'chelate effect' is thermodynamically driven by a large increase in:",
+    "difficulty": "easy",
+    "type": "pyq",
+    "source": "JEE Main 2021",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Entropy ($\\Delta S$)",
+      "B": "Enthalpy ($\\Delta H$)",
+      "C": "Activation energy",
+      "D": "Pressure"
+    },
+    "notes": "Evaluate the number of molecules/ions in the reactant vs product states of a chelation reaction.",
+    "solution_text": "The chelate effect is primarily an entropy-driven process. Consider the displacement of monodentate ligands by a chelating ligand:\n$[\\text{Ni}(\\text{H}_2\\text{O})_6]^{2+} + 3\\text{en} \\leftrightarrow [\\text{Ni(en)}_3]^{2+} + 6\\text{H}_2\\text{O}$\nThe reactants have 4 independent particles in solution, while the products have 7 particles. This increase in the number of free particles in solution increases the disorder of the system, resulting in a large positive entropy change ($\\Delta S > 0$), making the Gibbs free energy change highly negative ($\\Delta G = \\Delta H - T\\Delta S$) and stabilizing the complex. Option A is correct.",
+    "common_mistake": "Attributing the stabilization solely to enthalpy (Option B), whereas the net number of coordinate bonds remains identical, meaning enthalpy changes are relatively small compared to the large entropic gain.",
+    "concept_slugs": [
+      "coordination-stability-carbonyls"
+    ]
+  },
+  {
+    "pattern_group": "coordination-stability-carbonyls",
+    "title": "In transition metal carbonyls, the synergic bonding mechanism involves:",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2022",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\sigma$-donation from the carbonyl carbon lone pair to empty metal d-orbital, and $\\pi$-backdonation from filled metal d-orbital to empty $\\pi^*$ antibonding orbital of $\\text{CO}$",
+      "B": "$\\pi$-donation from the carbonyl oxygen to the metal, and $\\sigma$-backdonation from metal to carbon",
+      "C": "Ionic bond formation between metal and carbon",
+      "D": "Pure covalent sharing of electrons between metal s-orbitals and carbon lone pairs"
+    },
+    "notes": "Synergic bonding features two mutually reinforcing components: ligand-to-metal and metal-to-ligand.",
+    "solution_text": "Synergic bonding in metal carbonyls involves:\n1) $\\sigma$-donation: The carbon atom of the carbonyl ligand (CO) donates its lone pair of electrons into an empty d-orbital of the metal.\n2) $\\pi$-backdonation: A filled d-orbital of the transition metal donates electron density back into the empty $\\pi^*$ antibonding molecular orbital of the $\\text{CO}$ ligand.\nThese two components reinforce each other (synergic effect), strengthening the metal-carbon bond and weakening the carbon-oxygen bond. Option A is correct.",
+    "common_mistake": "Selecting Option B, which suggests donation from oxygen and backdonation through sigma bonds.",
+    "concept_slugs": [
+      "coordination-stability-carbonyls"
+    ]
+  },
+  {
+    "pattern_group": "coordination-stability-carbonyls",
+    "title": "According to Sidgwick's EAN rule, many metal carbonyls are stable because they achieve the electronic configuration of the nearest noble gas. The EAN of iron in $[\\text{Fe(CO)}_5]$ is ________.",
+    "difficulty": "easy",
+    "type": "concept",
+    "correct_answer": "36",
+    "is_numerical": true,
+    "notes": "Calculate EAN = Z + 2 * (number of CO ligands) for Fe(0) in iron pentacarbonyl.",
+    "solution_text": "In $[\\text{Fe(CO)}_5]$:\n1) Iron is in a $0$ oxidation state. Its atomic number ($Z$) = 26.\n2) Carbon monoxide (CO) is a neutral ligand and contributes 2 electrons. There are 5 CO ligands, contributing $5 \\times 2 = 10$ electrons.\n3) $\\text{EAN} = Z + 2 \\times (\\text{number of ligands}) = 26 + 10 = 36$.\nThis matches the atomic number of the noble gas Krypton (36).",
+    "common_mistake": "Writing 34 or 35, by assuming iron is in a +2 or +3 state in the neutral carbonyl complex.",
+    "concept_slugs": [
+      "coordination-stability-carbonyls"
+    ]
+  },
+  {
+    "pattern_group": "coordination-stability-carbonyls",
+    "title": "As the negative charge on a metal carbonyl complex increases (e.g. from $[\\text{Mn(CO)}_6]^+$ to $[\\text{Cr(CO)}_6]$ to $[\\text{V(CO)}_6]^-$), the $\\text{C-O}$ bond length of the carbonyl ligand:",
+    "difficulty": "medium",
+    "type": "concept",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Increases, because greater electron density on the metal leads to stronger $\\pi$-backbonding into the $\\text{CO}$ antibonding orbital",
+      "B": "Decreases, because the metal attracts carbon more strongly",
+      "C": "Remains unchanged",
+      "D": "Becomes highly unstable and breaks spontaneously"
+    },
+    "notes": "Backdonation puts electron density into the antibonding pi* orbital of CO. More backdonation lowers the CO bond order.",
+    "solution_text": "As the central metal becomes more negatively charged (from $\\text{Mn}^+$ to $\\text{Cr}^0$ to $\\text{V}^-$), it has greater electron density to donate. This increases the extent of $\\pi$-backdonation from the metal d-orbitals to the empty $\\pi^*$ antibonding orbital of the $\\text{CO}$ ligand. Putting electron density in an antibonding orbital decreases the $\\text{C-O}$ bond order (making it weaker) and consequently increases the $\\text{C-O}$ bond length. Option A is correct.",
+    "common_mistake": "Selecting decreases (Option B), failing to recognize that backdonation occupies *antibonding* orbitals of the ligand, which weakens the C-O bond.",
+    "concept_slugs": [
+      "coordination-stability-carbonyls"
+    ]
+  },
+  {
+    "pattern_group": "coordination-stability-carbonyls",
+    "title": "Which of the following complex ions is expected to have the highest thermodynamic stability constant ($\\log \\beta$)?",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$[\\text{Fe}(\\text{ox})_3]^{3-}$",
+      "B": "$[\\text{Fe}(\\text{H}_2\\text{O})_6]^{3+}$",
+      "C": "$[\\text{Fe}(\\text{NH}_3)_6]^{3+}$",
+      "D": "$[\\text{FeCl}_6]^{3-}$"
+    },
+    "notes": "Chelating ligands form highly stable ring complexes compared to monodentate ligands.",
+    "solution_text": "The complex $[\\text{Fe}(\\text{ox})_3]^{3-}$ contains three bidentate oxalate ligands ($\\text{ox} = \\text{C}_2\\text{O}_4^{2-}$). These bidentate ligands bind to the iron center to form three stable 5-membered chelate rings. Due to the chelate effect (which is highly entropy-favored), this complex is orders of magnitude more thermodynamically stable than the complexes containing monodentate ligands like water, ammonia, or chloride. Option A is correct.",
+    "common_mistake": "Choosing ammonia (Option C) because it is a stronger ligand than oxalate, forgetting that chelation stability dominates over simple ligand field strength.",
+    "concept_slugs": [
+      "coordination-stability-carbonyls"
+    ]
+  },
+  {
+    "pattern_group": "coordination-stability-carbonyls",
+    "title": "Due to synergic backbonding in transition metal carbonyls, as the $\\text{C-O}$ bond strength decreases, the metal-carbon ($\\text{M-C}$) bond strength:",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Increases, because backdonation increases the double-bond character of the $\\text{M-C}$ bond",
+      "B": "Decreases, because both bonds weaken together",
+      "C": "Remains unchanged",
+      "D": "Becomes ionic"
+    },
+    "notes": "Backdonation transfers electron density from metal to carbon, strengthening the M-C bond while weakening the C-O bond.",
+    "solution_text": "Synergic bonding involves transfer of electron density from the metal d-orbitals to the carbon-oxygen antibonding ($\\text{CO} \\, \\pi^*$) orbital. This backdonation increases the bond order of the metal-carbon ($\\text{M-C}$) bond by introducing partial double-bond character (strengthening it). Simultaneously, since the electrons enter antibonding orbitals of the carbon-oxygen bond, the $\\text{C-O}$ bond order decreases (weakening it). Thus, as the $\\text{C-O}$ bond weakens, the $\\text{M-C}$ bond increases in strength. Option A is correct.",
+    "common_mistake": "Assuming both bonds weaken together (Option B), neglecting the opposite effects of backdonation on metal-ligand vs intra-ligand bonds.",
+    "concept_slugs": [
+      "coordination-stability-carbonyls"
+    ]
+  },
+  {
+    "pattern_group": "coordination-stability-carbonyls",
+    "title": "Which of the following transition metal carbonyls does not obey Sidgwick's Effective Atomic Number (EAN) rule of achieving a stable noble gas shell?",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$[\\text{V}(\\text{CO})_6]$",
+      "B": "$[\\text{Cr}(\\text{CO})_6]$",
+      "C": "$[\\text{Fe}(\\text{CO})_5]$",
+      "D": "$[\\text{Ni}(\\text{CO})_4]$"
+    },
+    "notes": "Calculate the EAN for each neutral metal carbonyl. Vanadium has Z = 23.",
+    "solution_text": "Let's calculate the EAN for each carbonyl complex:\n- $[\\text{V}(\\text{CO})_6]$: Vanadium ($Z=23$) + 6 CO ligands (12 electrons) = 35 electrons (Does not obey EAN rule; it readily accepts 1 electron to form stable $[\\text{V}(\\text{CO})_6]^-$ with 36 electrons). Option A is correct.\n- $[\\text{Cr}(\\text{CO})_6]$: Chromium ($Z=24$) + 12 electrons = 36 electrons (Obeys EAN).\n- $[\\text{Fe}(\\text{CO})_5]$: Iron ($Z=26$) + 10 electrons = 36 electrons (Obeys EAN).\n- $[\\text{Ni}(\\text{CO})_4]$: Nickel ($Z=28$) + 8 electrons = 36 electrons (Obeys EAN).",
+    "common_mistake": "Selecting chromium or nickel carbonyls, which are highly stable and strictly obey the EAN rule.",
+    "concept_slugs": [
+      "coordination-stability-carbonyls"
+    ]
+  },
+  {
+    "pattern_group": "coordination-stability-carbonyls",
+    "title": "A stable neutral mononuclear metal carbonyl of chromium (atomic number $= 24$) obeys the EAN rule (achieving $36$ electrons). The number of carbonyl ligands present in one molecule of this compound is ________.",
+    "difficulty": "hard",
+    "type": "advanced",
+    "correct_answer": "6",
+    "is_numerical": true,
+    "notes": "Apply the EAN formula: EAN = Z + 2 * x = 36, and solve for the integer x.",
+    "solution_text": "The Effective Atomic Number (EAN) for a stable metal carbonyl obeys the EAN rule by reaching Krypton's configuration of 36 electrons:\n$\\text{EAN} = Z + 2x = 36$\nWhere $Z = 24$ (atomic number of Chromium) and $x$ is the number of neutral carbonyl ligands (each donating 2 electrons):\n$24 + 2x = 36 \\implies 2x = 12 \\implies x = 6$.\nTherefore, the number of carbonyl ligands in chromium carbonyl ($[\\text{Cr(CO)}_6]$) is exactly 6.",
+    "common_mistake": "Writing 5, by confusing chromium carbonyl with iron carbonyl ($[\\text{Fe(CO)}_5]$) which has 5 ligands.",
+    "concept_slugs": [
+      "coordination-stability-carbonyls"
+    ]
+  }
+]
