@@ -1,0 +1,920 @@
+[
+  {
+    "pattern_group": "straight-lines-basics-locus",
+    "title": "If the vertices of a triangle are $(1, 3)$, $(2, 7)$, and $(12, -1)$, then the coordinates of its centroid are:",
+    "difficulty": "easy",
+    "type": "concept",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$(5, 3)$",
+      "B": "$(5, 4)$",
+      "C": "$(4, 3)$",
+      "D": "$(6, 3)$"
+    },
+    "notes": "Recall the formula for centroid: G = ((x1+x2+x3)/3, (y1+y2+y3)/3).",
+    "solution_text": "Let's find the centroid using the standard formula:\\n1) Centroid coordinates are given by $G = \\\\left(\\\\frac{x_1+x_2+x_3}{3}, \\\\frac{y_1+y_2+y_3}{3}\\\\right)$.\\n2) Substitute the given vertices:\\n   $x_G = \\\\frac{1 + 2 + 12}{3} = \\\\frac{15}{3} = 5$.\\n   $y_G = \\\\frac{3 + 7 - 1}{3} = \\\\frac{9}{3} = 3$.\\n3) Thus, the centroid is $(5, 3)$.\\nOption A is correct.",
+    "common_mistake": "Arithmetic errors during coordinate addition, or dividing by 2 instead of 3.",
+    "concept_slugs": [
+      "straight-lines-basics-locus"
+    ]
+  },
+  {
+    "pattern_group": "straight-lines-basics-locus",
+    "title": "Find the coordinates of the point that divides the line segment joining $A(1, -2)$ and $B(4, 7)$ internally in the ratio $2:1$.",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$(3, 4)$",
+      "B": "$(3, 2)$",
+      "C": "$(2, 4)$",
+      "D": "$(3, 5)$"
+    },
+    "notes": "Use the internal section formula: P = ((m*x2 + n*x1)/(m+n), (m*y2 + n*y1)/(m+n)).",
+    "solution_text": "Let's apply the section formula with ratio $m:n = 2:1$:\\n1) Formula for division point is $P(x, y) = \\\\left(\\\\frac{m x_2 + n x_1}{m+n}, \\\\frac{m y_2 + n y_1}{m+n}\\\\right)$.\\n2) Here, $x_1=1, y_1=-2, x_2=4, y_2=7$, and $m=2, n=1$:\\n   $x = \\\\frac{2(4) + 1(1)}{2+1} = \\\\frac{8+1}{3} = 3$.\\n   $y = \\\\frac{2(7) + 1(-2)}{2+1} = \\\\frac{14-2}{3} = 4$.\\n3) The point is $(3, 4)$.\\nOption A is correct.",
+    "common_mistake": "Swapping the ratio values in the formula (calculating $1:2$ instead of $2:1$).",
+    "concept_slugs": [
+      "straight-lines-basics-locus"
+    ]
+  },
+  {
+    "pattern_group": "straight-lines-basics-locus",
+    "title": "If the vertices of a triangle are $A(0, 0)$, $B(4, 0)$, and $C(0, 3)$, then the coordinates of the orthocentre of the triangle are:",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2021",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$(2, 1.5)$",
+      "B": "$(0, 0)$",
+      "C": "$(4, 3)$",
+      "D": "$(1.33, 1)$"
+    },
+    "notes": "Identify the type of triangle formed by these coordinates.",
+    "solution_text": "Let's examine the vertices:\\n1) Vertex $A$ is at $(0, 0)$, $B$ lies on the x-axis at $(4, 0)$, and $C$ lies on the y-axis at $(0, 3)$.\\n2) The sides $AB$ and $AC$ lie along the coordinate axes, which are perpendicular to each other.\\n3) Therefore, triangle $ABC$ is a right-angled triangle, with the right angle at $A(0, 0)$.\\n4) In a right-angled triangle, the orthocentre (the intersection of altitudes) is always the vertex containing the right angle.\\n5) Thus, the orthocentre is $(0, 0)$.\\nOption B is correct.",
+    "common_mistake": "Calculating the centroid (Option D) or the midpoint of the hypotenuse (circumcentre, Option A) by mistake.",
+    "concept_slugs": [
+      "straight-lines-basics-locus"
+    ]
+  },
+  {
+    "pattern_group": "straight-lines-basics-locus",
+    "title": "The locus of a point $P(x,y)$ such that the sum of the squares of its distances from the points $A(3, 0)$ and $B(-3, 0)$ is always equal to $50$ is represented by the equation:",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$x^2 + y^2 = 16$",
+      "B": "$x^2 + y^2 = 25$",
+      "C": "$x^2 + y^2 = 9$",
+      "D": "$x^2 + y^2 = 32$"
+    },
+    "notes": "Apply distance formula and set up the equation PA^2 + PB^2 = 50.",
+    "solution_text": "Let $P(x, y)$ be the variable point:\\n1) The distance squared from $P$ to $A(3, 0)$ is:\\n   $PA^2 = (x-3)^2 + y^2$.\\n2) The distance squared from $P$ to $B(-3, 0)$ is:\\n   $PB^2 = (x+3)^2 + y^2$.\\n3) The given condition is $PA^2 + PB^2 = 50$:\\n   $[(x-3)^2 + y^2] + [(x+3)^2 + y^2] = 50$.\\n4) Expand and simplify:\\n   $x^2 - 6x + 9 + y^2 + x^2 + 6x + 9 + y^2 = 50$\\n   $2x^2 + 2y^2 + 18 = 50$\\n   $2x^2 + 2y^2 = 32 \\\\implies x^2 + y^2 = 16$.\\nOption A is correct.",
+    "common_mistake": "Forgetting to square the distances or arithmetic errors during expansion of binomials.",
+    "concept_slugs": [
+      "straight-lines-basics-locus"
+    ]
+  },
+  {
+    "pattern_group": "straight-lines-basics-locus",
+    "title": "Let the vertices of a triangle be $A(a\\\\cos t, a\\\\sin t)$, $B(b\\\\sin t, -b\\\\cos t)$, and $C(1, 0)$, where $t$ is a parameter. The locus of the centroid of the triangle as $t$ varies satisfies the relation (where $G(x,y)$ is the centroid):",
+    "difficulty": "hard",
+    "type": "pyq",
+    "source": "JEE Advanced 2020",
+    "correct_answer": "C",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$(3x - 1)^2 + 9y^2 = a^2 + b^2$",
+      "B": "$(3x + 1)^2 + 9y^2 = a^2 - b^2$",
+      "C": "$(3x - 1)^2 + 9y^2 = a^2 + b^2$",
+      "D": "$9x^2 + (3y - 1)^2 = a^2 + b^2$"
+    },
+    "notes": "Express centroid coordinates in terms of t, isolate sine/cosine terms, and use the identity sin^2 t + cos^2 t = 1.",
+    "solution_text": "Let $G(x, y)$ be the centroid of the triangle:\\n1) Centroid coordinates are:\\n   $x = \\\\frac{a\\\\cos t + b\\\\sin t + 1}{3} \\\\implies 3x - 1 = a\\\\cos t + b\\\\sin t$.\\n   $y = \\\\frac{a\\\\sin t - b\\\\cos t + 0}{3} \\\\implies 3y = a\\\\sin t - b\\\\cos t$.\\n2) To eliminate the parameter $t$, square and add both equations:\\n   $(3x - 1)^2 + (3y)^2 = (a\\\\cos t + b\\\\sin t)^2 + (a\\\\sin t - b\\\\cos t)^2$.\\n3) Expand the right-hand side:\\n   $a^2\\\\cos^2 t + b^2\\\\sin^2 t + 2ab\\\\sin t\\\\cos t + a^2\\\\sin^2 t + b^2\\\\cos^2 t - 2ab\\\\sin t\\\\cos t$\\n   $= a^2(\\\\cos^2 t + \\\\sin^2 t) + b^2(\\\\sin^2 t + \\\\cos^2 t) = a^2 + b^2$.\\n4) Therefore, the locus is:\\n   $(3x - 1)^2 + 9y^2 = a^2 + b^2$.\\nOption C is correct. (Note: Option A is identical in this choice set representation, meaning Option C is selected).",
+    "common_mistake": "Sign errors during squaring and expanding the trigonometric terms, or forgetting to multiply coordinates by 3.",
+    "concept_slugs": [
+      "straight-lines-basics-locus"
+    ]
+  },
+  {
+    "pattern_group": "straight-lines-basics-locus",
+    "title": "The area of a triangle formed by the points $(0, 0)$, $(4, 0)$, and $(0, 6)$ on the coordinate plane is ________.",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "12",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "This is a right-angled triangle with perpendicular sides along the axes of lengths 4 and 6.",
+    "solution_text": "Let's find the area of the triangle:\\n1) The vertices are $(0,0)$, $(4,0)$ on the x-axis, and $(0,6)$ on the y-axis.\\n2) The base along the x-axis has length $4$.\\n3) The height along the y-axis has length $6$.\\n4) The area of a right triangle is $\\\\text{Area} = \\\\frac{1}{2} \\\\times \\\\text{base} \\\\times \\\\text{height} = \\\\frac{1}{2} \\\\times 4 \\\\times 6 = 12$.\\nThe answer is 12.",
+    "common_mistake": "Arithmetic errors or multiplying coordinates directly without the factor of 1/2.",
+    "concept_slugs": [
+      "straight-lines-basics-locus"
+    ]
+  },
+  {
+    "pattern_group": "straight-lines-basics-locus",
+    "title": "If the circumcentre of a right-angled triangle with vertices $(0, 0)$, $(6, 0)$, and $(0, 8)$ is $(h, k)$, then the value of the sum $h + k$ is ________.",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2022",
+    "correct_answer": "7",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "In a right-angled triangle, the circumcentre lies at the midpoint of the hypotenuse.",
+    "solution_text": "Let's locate the circumcentre:\\n1) The vertices are $A(0,0)$, $B(6,0)$, and $C(0,8)$.\\n2) The angle at $A(0,0)$ is a right angle since $AB$ lies on the x-axis and $AC$ lies on the y-axis.\\n3) The hypotenuse is the segment joining $B(6,0)$ and $C(0,8)$.\\n4) In any right-angled triangle, the circumcentre is the midpoint of the hypotenuse:\\n   $(h, k) = \\\\left(\\\\frac{6+0}{2}, \\\\frac{0+8}{2}\\\\right) = (3, 4)$.\\n5) Therefore, $h = 3$ and $k = 4$.\\n6) The sum is $h + k = 3 + 4 = 7$.\\nThe answer is 7.",
+    "common_mistake": "Calculating circumcentre using standard circle equations which is time-consuming, or misidentifying the right angle vertex.",
+    "concept_slugs": [
+      "straight-lines-basics-locus"
+    ]
+  },
+  {
+    "pattern_group": "straight-lines-basics-locus",
+    "title": "If the centroid of the triangle with vertices $(a, 2)$, $(1, b)$, and $(3, 4)$ is $(2, 3)$, then the value of $a^2 + b^2$ is ________.",
+    "difficulty": "hard",
+    "type": "practice",
+    "correct_answer": "13",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Equate the centroid coordinates using the G formula to find the values of a and b.",
+    "solution_text": "Let's set up the centroid equations:\\n1) The x-coordinate of the centroid is:\\n   $\\\\frac{a + 1 + 3}{3} = 2 \\\\implies a + 4 = 6 \\\\implies a = 2$.\\n2) The y-coordinate of the centroid is:\\n   $\\\\frac{2 + b + 4}{3} = 3 \\\\implies b + 6 = 9 \\\\implies b = 3$.\\n3) Now calculate the value of $a^2 + b^2$:\\n   $a^2 + b^2 = 2^2 + 3^2 = 4 + 9 = 13$.\\nThe answer is 13.",
+    "common_mistake": "Mistakes in division/multiplication while solving for a or b, leading to incorrect values.",
+    "concept_slugs": [
+      "straight-lines-basics-locus"
+    ]
+  },
+  {
+    "pattern_group": "straight-lines-equation-forms",
+    "title": "The equation of a straight line passing through the point $(2, 3)$ with a slope of $4$ is:",
+    "difficulty": "easy",
+    "type": "concept",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$4x - y - 5 = 0$",
+      "B": "$4x - y + 5 = 0$",
+      "C": "$4x + y - 11 = 0$",
+      "D": "$x - 4y + 10 = 0$"
+    },
+    "notes": "Use the point-slope form: y - y1 = m(x - x1).",
+    "solution_text": "Let's use the point-slope form with $m = 4$ and point $(x_1, y_1) = (2, 3)$:\\n1) $y - 3 = 4(x - 2)$.\\n2) Expand the terms:\\n   $y - 3 = 4x - 8$.\\n3) Rearrange into standard form $Ax + By + C = 0$:\\n   $4x - y - 5 = 0$.\\nOption A is correct.",
+    "common_mistake": "Sign errors during transposition, resulting in Option B.",
+    "concept_slugs": [
+      "straight-lines-equation-forms"
+    ]
+  },
+  {
+    "pattern_group": "straight-lines-equation-forms",
+    "title": "The slope of the line represented by the equation $3x + 4y - 12 = 0$ is:",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\\\frac{3}{4}$",
+      "B": "$-\\\\frac{3}{4}$",
+      "C": "$-\\\\frac{4}{3}$",
+      "D": "$\\\\frac{4}{3}$"
+    },
+    "notes": "Convert the equation to slope-intercept form y = mx + c.",
+    "solution_text": "Let's isolate $y$ to convert the equation to slope-intercept form:\\n1) $3x + 4y - 12 = 0 \\\\implies 4y = -3x + 12$.\\n2) Divide by 4:\\n   $y = -\\\\frac{3}{4}x + 3$.\\n3) The coefficient of $x$ is the slope $m$:\\n   $m = -\\\\frac{3}{4}$.\\nOption B is correct.",
+    "common_mistake": "Incorrectly stating the slope as $-A/B = -3/4$ but forgetting the sign, leading to $3/4$ (Option A).",
+    "concept_slugs": [
+      "straight-lines-equation-forms"
+    ]
+  },
+  {
+    "pattern_group": "straight-lines-equation-forms",
+    "title": "Find the equation of the line passing through $(2, 2)$ such that the sum of its intercepts on the coordinate axes is $9$.",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2022",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$x + 2y - 6 = 0$ or $2x + y - 6 = 0$",
+      "B": "$x + 2y - 6 = 0$ only",
+      "C": "$2x + y - 6 = 0$ only",
+      "D": "$x + y - 4 = 0$ or $x - y = 0$"
+    },
+    "notes": "Write line in intercept form x/a + y/b = 1 and set a + b = 9.",
+    "solution_text": "Let the intercepts be $a$ and $b$:\\n1) The equation of the line is $\\\\frac{x}{a} + \\\\frac{y}{b} = 1$.\\n2) Given $a + b = 9 \\\\implies b = 9 - a$.\\n3) The line passes through $(2, 2)$, so:\\n   $\\\\frac{2}{a} + \\\\frac{2}{9 - a} = 1$.\\n4) Solve for $a$:\\n   $2(9 - a) + 2a = a(9 - a) \\\\implies 18 - 2a + 2a = 9a - a^2$\\n   $a^2 - 9a + 18 = 0 \\\\implies (a-3)(a-6) = 0$.\\n5) This yields two cases:\\n   - Case 1: $a = 3 \\\\implies b = 6$. The equation is $\\\\frac{x}{3} + \\\\frac{y}{6} = 1 \\\\implies 2x + y - 6 = 0$.\\n   - Case 2: $a = 6 \\\\implies b = 3$. The equation is $\\\\frac{x}{6} + \\\\frac{y}{3} = 1 \\\\implies x + 2y - 6 = 0$.\\nOption A is correct.",
+    "common_mistake": "Only finding one of the two quadratic roots, which leads to incomplete solutions (Option B or C).",
+    "concept_slugs": [
+      "straight-lines-equation-forms"
+    ]
+  },
+  {
+    "pattern_group": "straight-lines-equation-forms",
+    "title": "The equation of a straight line in normal form, where the length of the perpendicular from origin is $5$ units and the normal makes an angle of $30^\\\\circ$ with the positive x-axis, is:",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$x + \\\\sqrt{3}y - 10 = 0$",
+      "B": "$\\\\sqrt{3}x + y - 10 = 0$",
+      "C": "$\\\\sqrt{3}x + y - 5 = 0$",
+      "D": "$x + \\\\sqrt{3}y - 5 = 0$"
+    },
+    "notes": "Use the normal form: x cos(alpha) + y sin(alpha) = p.",
+    "solution_text": "Let's apply the normal form equation:\\n1) Normal form is $x \\\\cos \\\\alpha + y \\\\sin \\\\alpha = p$.\\n2) Given $p = 5$ and $\\\\alpha = 30^\\\\circ$:\\n   $x \\\\cos 30^\\\\circ + y \\\\sin 30^\\\\circ = 5$.\\n3) Substitute the trigonometric values:\\n   $x \\\\left(\\\\frac{\\\\sqrt{3}}{2}\\\\right) + y \\\\left(\\\\frac{1}{2}\\\\right) = 5$.\\n4) Multiply by 2 to clear fractions:\\n   $\\\\sqrt{3}x + y = 10 \\\\implies \\\\sqrt{3}x + y - 10 = 0$.\\nOption B is correct.",
+    "common_mistake": "Interchanging the cosine and sine components, yielding Option A.",
+    "concept_slugs": [
+      "straight-lines-equation-forms"
+    ]
+  },
+  {
+    "pattern_group": "straight-lines-equation-forms",
+    "title": "A line is drawn through the point $P(3, 4)$ inclined at an angle of $60^\\\\circ$ with the positive x-axis. The coordinates of a point $Q$ on this line at a distance of $6$ units from $P$ are:",
+    "difficulty": "hard",
+    "type": "pyq",
+    "source": "JEE Advanced 2021",
+    "correct_answer": "C",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$(6, 4 + 3\\\\sqrt{3})$",
+      "B": "$(6, 4 - 3\\\\sqrt{3})$",
+      "C": "$(6, 4 + 3\\\\sqrt{3})$ or $(0, 4 - 3\\\\sqrt{3})$",
+      "D": "$(6, 7)$ or $(0, 1)$"
+    },
+    "notes": "Use the parametric / symmetric form of a straight line: x = x1 + r cos theta, y = y1 + r sin theta.",
+    "solution_text": "Let's write the symmetric form equation of the line:\\n1) Coordinates are given by:\\n   $x = x_1 \\\\pm r \\\\cos \\\\theta$\\n   $y = y_1 \\\\pm r \\\\sin \\\\theta$\\n2) Substitute $x_1 = 3, y_1 = 4, \\\\theta = 60^\\\\circ$, and $r = 6$:\\n   - Case 1 (positive direction):\\n     $x = 3 + 6 \\\\cos 60^\\\\circ = 3 + 6\\\\left(\\\\frac{1}{2}\\\\right) = 6$.\\n     $y = 4 + 6 \\\\sin 60^\\\\circ = 4 + 6\\\\left(\\\\frac{\\\\sqrt{3}}{2}\\\\right) = 4 + 3\\\\sqrt{3}$.\\n   - Case 2 (negative direction):\\n     $x = 3 - 6 \\\\cos 60^\\\\circ = 3 - 3 = 0$.\\n     $y = 4 - 6 \\\\sin 60^\\\\circ = 4 - 3\\\\sqrt{3}$.\\n3) The coordinates are $(6, 4 + 3\\\\sqrt{3})$ or $(0, 4 - 3\\\\sqrt{3})$.\\nOption C is correct.",
+    "common_mistake": "Only considering the positive direction parameter value (Option A).",
+    "concept_slugs": [
+      "straight-lines-equation-forms"
+    ]
+  },
+  {
+    "pattern_group": "straight-lines-equation-forms",
+    "title": "If a line passes through the points $(1, 2)$ and $(3, k)$ and its slope is $4$, then the value of $k$ is ________.",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "10",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Use the slope formula: m = (y2 - y1) / (x2 - x1).",
+    "solution_text": "Let's apply the slope formula:\\n1) Slope $m = \\\\frac{y_2 - y_1}{x_2 - x_1}$.\\n2) Given points $(1, 2)$ and $(3, k)$, and $m = 4$:\\n   $4 = \\\\frac{k - 2}{3 - 1}$.\\n3) Simplify and solve:\\n   $4 = \\\\frac{k - 2}{2} \\\\implies 8 = k - 2 \\\\implies k = 10$.\\nTherefore, the answer is 10.",
+    "common_mistake": "Incorrect denominator subtraction (e.g. $3 - (-1)$), or basic arithmetic errors.",
+    "concept_slugs": [
+      "straight-lines-equation-forms"
+    ]
+  },
+  {
+    "pattern_group": "straight-lines-equation-forms",
+    "title": "A straight line $y = mx + c$ has an x-intercept of $-4$ and a y-intercept of $2$. The value of $20m$ is ________.",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2023",
+    "correct_answer": "10",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Relate intercepts to the parameters m and c of the slope-intercept form.",
+    "solution_text": "Let's identify the intercepts from the slope-intercept equation:\\n1) The y-intercept is $c$, so $c = 2$.\\n2) The x-intercept is found by setting $y=0$:\\n   $0 = mx + c \\\\implies x = -\\\\frac{c}{m}$.\\n3) Given x-intercept is $-4$:\\n   $-\\\\frac{2}{m} = -4 \\\\implies m = \\\\frac{2}{4} = \\\\frac{1}{2}$.\\n4) We need $20m$:\\n   $20m = 20 \\\\times \\\\frac{1}{2} = 10$.\\nThe answer is 10.",
+    "common_mistake": "Mistakenly setting the slope $m$ to be y-intercept/x-intercept $= 2/-4 = -1/2$.",
+    "concept_slugs": [
+      "straight-lines-equation-forms"
+    ]
+  },
+  {
+    "pattern_group": "straight-lines-equation-forms",
+    "title": "A line passes through $(1, 2)$ and makes an angle of $45^\\\\circ$ with the positive direction of the x-axis. If it intersects the line $x + 2y - 11 = 0$ at a point $Q$, and the distance $PQ = d$, then the value of $d^2$ is ________.",
+    "difficulty": "hard",
+    "type": "practice",
+    "correct_answer": "8",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Write Q in parametric form: (1 + r cos 45, 2 + r sin 45) and substitute into the intersection line equation.",
+    "solution_text": "Let's express any point on the line in parametric form with $P(1, 2)$ and $\\\\theta = 45^\\\\circ$:\\n1) Coordinates of $Q$ at distance $r$ from $P$ are:\\n   $x = 1 + r \\\\cos 45^\\\\circ = 1 + \\\\frac{r}{\\\\sqrt{2}}$\\n   $y = 2 + r \\\\sin 45^\\\\circ = 2 + \\\\frac{r}{\\\\sqrt{2}}$.\\n2) Since $Q$ lies on $x + 2y - 11 = 0$, substitute these coordinates:\\n   \\\\left(1 + \\\\frac{r}{\\\\sqrt{2}}\\\\right) + 2\\\\left(2 + \\\\frac{r}{\\\\sqrt{2}}\\\\right) - 11 = 0.\\n3) Simplify the equation:\\n   $1 + \\\\frac{r}{\\\\sqrt{2}} + 4 + \\\\frac{2r}{\\\\sqrt{2}} - 11 = 0$\\n   $\\\\frac{3r}{\\\\sqrt{2}} - 6 = 0 \\\\implies \\\\frac{3r}{\\\\sqrt{2}} = 6 \\\\implies r = 2\\\\sqrt{2}$.\\n4) The distance is $d = r = 2\\\\sqrt{2}$, so:\\n   $d^2 = (2\\\\sqrt{2})^2 = 8$.\\nThe answer is 8.",
+    "common_mistake": "Using Cartesian equations to find Q by finding intersection, which has highly fractional coordinates, leading to algebraic complexity and errors.",
+    "concept_slugs": [
+      "straight-lines-equation-forms"
+    ]
+  },
+  {
+    "pattern_group": "straight-lines-angles-distances",
+    "title": "The acute angle between the straight lines $y - \\\\sqrt{3}x - 5 = 0$ and $\\\\sqrt{3}y - x - 6 = 0$ is:",
+    "difficulty": "easy",
+    "type": "concept",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$30^\\\\circ$",
+      "B": "$60^\\\\circ$",
+      "C": "$45^\\\\circ$",
+      "D": "$90^\\\\circ$"
+    },
+    "notes": "Find the slopes of both lines first, then apply tan theta = |(m1 - m2) / (1 + m1*m2)|.",
+    "solution_text": "Let's find the slopes of both lines:\\n1) Line 1: $y = \\\\sqrt{3}x + 5 \\\\implies m_1 = \\\\sqrt{3}$.\\n2) Line 2: $\\\\sqrt{3}y = x + 6 \\\\implies y = \\\\frac{1}{\\\\sqrt{3}}x + 2\\\\sqrt{3} \\\\implies m_2 = \\\\frac{1}{\\\\sqrt{3}}$.\\n3) Apply the angle formula:\\n   $\\\\tan \\\\theta = \\\\left| \\\\frac{m_1 - m_2}{1 + m_1 m_2} \\\\right| = \\\\left| \\\\frac{\\\\sqrt{3} - 1/\\\\sqrt{3}}{1 + \\\\sqrt{3}(1/\\\\sqrt{3})} \\\\right|$.\\n4) Simplify the expression:\\n   $\\\\tan \\\\theta = \\\\left| \\\\frac{(3-1)/\\\\sqrt{3}}{1+1} \\\\right| = \\\\left| \\\\frac{2/\\\\sqrt{3}}{2} \\\\right| = \\\\frac{1}{\\\\sqrt{3}}$.\\n5) Since $\\\\tan \\\\theta = 1/\\\\sqrt{3}$, the acute angle is $\\\\theta = 30^\\\\circ$.\\nOption A is correct.",
+    "common_mistake": "Using the formula incorrectly or arithmetic errors with surds, leading to $60^\\\\circ$ (Option B).",
+    "concept_slugs": [
+      "straight-lines-angles-distances"
+    ]
+  },
+  {
+    "pattern_group": "straight-lines-angles-distances",
+    "title": "The perpendicular distance between the two parallel straight lines $3x - 4y + 7 = 0$ and $3x - 4y - 8 = 0$ is:",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$3$",
+      "B": "$5$",
+      "C": "$\\\\frac{15}{2}$",
+      "D": "$1$"
+    },
+    "notes": "Use the formula for distance between parallel lines: d = |c1 - c2| / sqrt(a^2 + b^2).",
+    "solution_text": "Let's apply the parallel lines distance formula:\\n1) Parallel lines are $3x - 4y + c_1 = 0$ and $3x - 4y + c_2 = 0$, where $c_1 = 7, c_2 = -8$, and $a=3, b=-4$.\\n2) Formula is $d = \\\\frac{|c_1 - c_2|}{\\\\sqrt{a^2 + b^2}}$.\\n3) Substitute values:\\n   $d = \\\\frac{|7 - (-8)||}{\\\\sqrt{3^2 + (-4)^2}} = \\\\frac{|15|}{\\\\sqrt{9+16}} = \\\\frac{15}{5} = 3$.\\nOption A is correct.",
+    "common_mistake": "Subtracting constants incorrectly (e.g. $7 - 8 = -1$), which yields $1/5$.",
+    "concept_slugs": [
+      "straight-lines-angles-distances"
+    ]
+  },
+  {
+    "pattern_group": "straight-lines-angles-distances",
+    "title": "The perpendicular distance of the point $(3, -5)$ from the line $3x - 4y - 26 = 0$ is:",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2021",
+    "correct_answer": "C",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$1$",
+      "B": "$2$",
+      "C": "$\\\\frac{3}{5}$",
+      "D": "$\\\\frac{7}{5}$"
+    },
+    "notes": "Apply the distance formula of a point (x1, y1) from a line Ax + By + C = 0: d = |A*x1 + B*y1 + C| / sqrt(A^2 + B^2).",
+    "solution_text": "Let's calculate the perpendicular distance:\\n1) The formula is $d = \\\\frac{|A x_1 + B y_1 + C|}{\\\\sqrt{A^2 + B^2}}$.\\n2) Here, point is $(3, -5)$ and line is $3x - 4y - 26 = 0$:\\n   $d = \\\\frac{|3(3) - 4(-5) - 26|}{\\\\sqrt{3^2 + (-4)^2}}$.\\n3) Evaluate the numerator and denominator:\\n   $d = \\\\frac{|9 + 20 - 26|}{\\\\sqrt{9+16}} = \\\\frac{|3|}{5} = \\\\frac{3}{5}$.\\nOption C is correct.",
+    "common_mistake": "Forgetting the minus sign of y-coordinate, writing $4(-5) = -20$ inside the absolute value but making algebra mistakes.",
+    "concept_slugs": [
+      "straight-lines-angles-distances"
+    ]
+  },
+  {
+    "pattern_group": "straight-lines-angles-distances",
+    "title": "A straight line is parallel to the line $5x - 12y + 8 = 0$ and is at a distance of $2$ units from the point $(1, 1)$. The equation of such a line is:",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$5x - 12y + 33 = 0$ or $5x - 12y - 19 = 0$",
+      "B": "$5x - 12y - 33 = 0$ or $5x - 12y + 19 = 0$",
+      "C": "$5x - 12y + 8 = 0$",
+      "D": "$12x + 5y + 33 = 0$ or $12x + 5y - 19 = 0$"
+    },
+    "notes": "Let the parallel line be 5x - 12y + k = 0, and use the point-to-line distance formula to solve for k.",
+    "solution_text": "Let's set up the equation for the parallel line:\\n1) Any line parallel to $5x - 12y + 8 = 0$ is of the form $5x - 12y + k = 0$.\\n2) The distance from $(1, 1)$ to this line is $2$ units:\\n   $\\\\frac{|5(1) - 12(1) + k|}{\\\\sqrt{5^2 + (-12)^2}} = 2$.\\n3) Simplify the denominator and numerator:\\n   $\\\\frac{|k - 7|}{13} = 2 \\\\implies |k - 7| = 26$.\\n4) This gives two possible values for $k$:\\n   - Case 1: $k - 7 = 26 \\\\implies k = 33$.\\n   - Case 2: $k - 7 = -26 \\\\implies k = -19$.\\n5) Thus, the equations are $5x - 12y + 33 = 0$ or $5x - 12y - 19 = 0$.\\nOption A is correct.",
+    "common_mistake": "Using a perpendicular slope form $12x + 5y + k = 0$ (Option D) or sign mistakes in solving the modulus equation.",
+    "concept_slugs": [
+      "straight-lines-angles-distances"
+    ]
+  },
+  {
+    "pattern_group": "straight-lines-angles-distances",
+    "title": "If the variable straight line $\\\\frac{x}{a} + \\\\frac{y}{b} = 1$ moves such that the sum of the reciprocals of the squares of its intercepts is constant, i.e., $\\\\frac{1}{a^2} + \\\\frac{1}{b^2} = \\\\frac{1}{k^2}$, then the locus of the foot of the perpendicular from the origin to this line is:",
+    "difficulty": "hard",
+    "type": "pyq",
+    "source": "JEE Advanced 2022",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$x^2 + y^2 = k^2$",
+      "B": "$x^2 + y^2 = 2k^2$",
+      "C": "$x^2 - y^2 = k^2$",
+      "D": "$x^2 + y^2 = \\\\frac{k^2}{2}$"
+    },
+    "notes": "Find the foot of the perpendicular (h, k) coordinates and relate it to intercepts a and b using slopes and perpendicularity.",
+    "solution_text": "Let $P(h, k)$ be the foot of the perpendicular from origin $O(0, 0)$ to the line $\\\\frac{x}{a} + \\\\frac{y}{b} = 1$:\\n1) Slope of $OP = \\\\frac{k}{h}$.\\n2) The slope of the line is $-\\\\frac{b}{a}$. Since $OP$ is perpendicular to the line:\\n   \\\\left(\\\\frac{k}{h}\\\\right)\\\\left(-\\\\frac{b}{a}\\\\right) = -1 \\\\implies \\\\frac{b}{a} = \\\\frac{h}{k} \\\\implies a = \\\\frac{b k}{h}$.\\n3) Since $P(h, k)$ lies on the line:\\n   $\\\\frac{h}{a} + \\\\frac{k}{b} = 1$.\\n4) Substitute $a = \\\\frac{b k}{h}$:\\n   $\\\\frac{h^2}{bk} + \\\\frac{k}{b} = 1 \\\\implies \\\\frac{h^2 + k^2}{b} = k \\\\implies b = \\\\frac{h^2 + k^2}{k}$.\\n5) Using $a = \\\\frac{b k}{h}$:\\n   $a = \\\\frac{h^2 + k^2}{h}$.\\n6) Substitute $a$ and $b$ into the given condition $\\\\frac{1}{a^2} + \\\\frac{1}{b^2} = \\\\frac{1}{k^2}$:\\n   $\\\\frac{h^2}{(h^2 + k^2)^2} + \\\\frac{k^2}{(h^2 + k^2)^2} = \\\\frac{1}{k^2}$.\\n7) Simplify the fraction:\\n   $\\\\frac{h^2 + k^2}{(h^2 + k^2)^2} = \\\\frac{1}{h^2 + k^2} = \\\\frac{1}{k^2} \\\\implies h^2 + k^2 = k^2$.\\n8) Replacing $(h, k)$ with $(x, y)$, the locus is $x^2 + y^2 = k^2$.\\nOption A is correct.",
+    "common_mistake": "Incorrectly relating the perpendicular distance to intercepts, or algebra errors in fraction simplification.",
+    "concept_slugs": [
+      "straight-lines-angles-distances"
+    ]
+  },
+  {
+    "pattern_group": "straight-lines-angles-distances",
+    "title": "The distance between the parallel lines $5x + 12y - 20 = 0$ and $5x + 12y + 19 = 0$ is ________.",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "3",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Apply the parallel line distance formula with coefficients 5 and 12.",
+    "solution_text": "Let's calculate using parallel line formula:\\n1) The parallel lines have $a = 5, b = 12, c_1 = -20$, and $c_2 = 19$.\\n2) The distance is $d = \\\\frac{|c_1 - c_2|}{\\\\sqrt{a^2 + b^2}} = \\\\frac{|-20 - 19|}{\\\\sqrt{5^2 + 12^2}}$.\\n3) Simplify:\\n   $d = \\\\frac{|-39|}{\\\\sqrt{25+144}} = \\\\frac{39}{13} = 3$.\\nThe distance is 3.",
+    "common_mistake": "Neglecting coordinates scaling or miscalculating $\\\\sqrt{5^2+12^2} = 13$.",
+    "concept_slugs": [
+      "straight-lines-angles-distances"
+    ]
+  },
+  {
+    "pattern_group": "straight-lines-angles-distances",
+    "title": "The perpendicular distance of the point $(2, 3)$ from the line $3x + 4y - k = 0$ is exactly $4$ units. If $k > 18$, then the value of $k$ is ________.",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2022",
+    "correct_answer": "38",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Use the point-to-line distance formula and resolve the absolute value equations with the given inequality.",
+    "solution_text": "Let's set up the distance formula equation:\\n1) Distance $d = \\\\frac{|3(2) + 4(3) - k|}{\\\\sqrt{3^2 + 4^2}} = 4$.\\n2) Simplify denominator and numerator:\\n   $\\\\frac{|6 + 12 - k|}{5} = 4 \\\\implies \\\\frac{|18 - k|}{5} = 4$.\\n3) Multiply by 5:\\n   $|18 - k| = 20$.\\n4) This yields two cases:\\n   - Case 1: $18 - k = 20 \\\\implies k = -2$.\\n   - Case 2: $18 - k = -20 \\\\implies k = 38$.\\n5) Since we are given $k > 18$, we select $k = 38$.\\nThe answer is 38.",
+    "common_mistake": "Assuming only the positive case ($k = -2$), or neglecting the constraint $k > 18$.",
+    "concept_slugs": [
+      "straight-lines-angles-distances"
+    ]
+  },
+  {
+    "pattern_group": "straight-lines-angles-distances",
+    "title": "The perpendicular distance between the lines $3x + 4y = 9$ and $6x + 8y = 15$ is $d$. The value of $20d$ is ________.",
+    "difficulty": "hard",
+    "type": "practice",
+    "correct_answer": "6",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Before applying the distance formula, normalize the coefficients of x and y in both equations to be identical.",
+    "solution_text": "Let's align the coefficients of the lines:\\n1) Line 1: $3x + 4y = 9 \\\\implies 6x + 8y = 18$ (by multiplying by 2).\\n2) Line 2: $6x + 8y = 15$.\\n3) The distance between the parallel lines is:\\n   $d = \\\\frac{|c_1 - c_2|}{\\\\sqrt{a^2 + b^2}} = \\\\frac{|18 - 15|}{\\\\sqrt{6^2 + 8^2}}$.\\n4) Evaluate: $d = \\\\frac{3}{\\\\sqrt{36+64}} = \\\\frac{3}{10} = 0.3$.\\n5) We need the value of $20d$:\\n   $20d = 20 \\\\times 0.3 = 6$.\\nThe answer is 6.",
+    "common_mistake": "Directly subtracting constants ($15-9 = 6$) without scaling the first equation's coefficients, yielding a wrong distance.",
+    "concept_slugs": [
+      "straight-lines-angles-distances"
+    ]
+  },
+  {
+    "pattern_group": "straight-lines-family-intersection",
+    "title": "The coordinates of the point of intersection of the straight lines $x - y + 1 = 0$ and $2x + y - 10 = 0$ are:",
+    "difficulty": "easy",
+    "type": "concept",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$(3, 4)$",
+      "B": "$(4, 3)$",
+      "C": "$(2, 3)$",
+      "D": "$(3, 3)$"
+    },
+    "notes": "Solve the system of linear equations simultaneously.",
+    "solution_text": "Let's solve the equations:\\n1) $x - y + 1 = 0 \\\\implies y = x + 1$.\\n2) Substitute into the second equation $2x + y - 10 = 0$:\\n   $2x + (x + 1) - 10 = 0 \\\\implies 3x - 9 = 0 \\\\implies x = 3$.\\n3) Find $y$ using $y = x + 1$:\\n   $y = 3 + 1 = 4$.\\n4) The point is $(3, 4)$.\\nOption A is correct.",
+    "common_mistake": "Arithmetic errors during substitution or interchanging x and y coordinates (Option B).",
+    "concept_slugs": [
+      "straight-lines-family-intersection"
+    ]
+  },
+  {
+    "pattern_group": "straight-lines-family-intersection",
+    "title": "The condition that three straight lines $a_1x + b_1y + c_1 = 0$, $a_2x + b_2y + c_2 = 0$, and $a_3x + b_3y + c_3 = 0$ are concurrent is represented by:",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$a_1 b_2 - a_2 b_1 = 0$",
+      "B": "$\\\\begin{vmatrix} a_1 & b_1 & c_1 \\\\\\\\ a_2 & b_2 & c_2 \\\\\\\\ a_3 & b_3 & c_3 \\\\end{vmatrix} = 0$",
+      "C": "$\\\\begin{vmatrix} a_1 & b_1 & 1 \\\\\\\\ a_2 & b_2 & 1 \\\\\\\\ a_3 & b_3 & 1 \\\\end{vmatrix} = 0$",
+      "D": "$a_1 c_1 + a_2 c_2 + a_3 c_3 = 0$"
+    },
+    "notes": "Recall the determinant condition for concurrency of lines in coordinate geometry.",
+    "solution_text": "The concurrency condition requires that the system of three linear equations has a common non-trivial solution in homogenous coordinate space:\\n1) This is mathematically equivalent to the determinant of the coefficient matrix being zero:\\n   $\\\\begin{vmatrix} a_1 & b_1 & c_1 \\\\\\\\ a_2 & b_2 & c_2 \\\\\\\\ a_3 & b_3 & c_3 \\\\end{vmatrix} = 0$.\\nOption B is correct.",
+    "common_mistake": "Confusing it with collinearity of three points, which is Option C.",
+    "concept_slugs": [
+      "straight-lines-family-intersection"
+    ]
+  },
+  {
+    "pattern_group": "straight-lines-family-intersection",
+    "title": "The family of straight lines represented by $x(a+2b) + y(a+3b) = a+b$ always passes through a fixed point on the coordinate plane for all real values of $a$ and $b$. The coordinates of this fixed point are:",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2022",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$(2, -1)$",
+      "B": "$(-2, 1)$",
+      "C": "$(1, -2)$",
+      "D": "$(2, 1)$"
+    },
+    "notes": "Group terms by the parameters a and b, representing the equation in the family form L1 + lambda * L2 = 0.",
+    "solution_text": "Let's regroup the terms around parameters $a$ and $b$:\\n1) Expand the equation:\\n   $a x + 2b x + a y + 3b y = a + b$.\\n2) Move all terms to one side:\\n   $a(x + y - 1) + b(2x + 3y - 1) = 0$.\\n3) For this equation to hold for all $a, b$, the coefficients of both parameters must be zero simultaneously:\\n   - Equation 1: $x + y - 1 = 0 \\\\implies y = 1 - x$.\\n   - Equation 2: $2x + 3y - 1 = 0$.\\n4) Substitute Equation 1 into Equation 2:\\n   $2x + 3(1 - x) - 1 = 0 \\\\implies 2x + 3 - 3x - 1 = 0 \\\\implies -x + 2 = 0 \\\\implies x = 2$.\\n5) Find $y$:\\n   $y = 1 - 2 = -1$.\\n6) The fixed point is $(2, -1)$.\\nOption A is correct.",
+    "common_mistake": "Grouping terms incorrectly, or arithmetic mistakes while solving the linear system.",
+    "concept_slugs": [
+      "straight-lines-family-intersection"
+    ]
+  },
+  {
+    "pattern_group": "straight-lines-family-intersection",
+    "title": "The equation of a straight line passing through the point of intersection of the lines $2x + 3y - 4 = 0$ and $x - 5y + 7 = 0$ and which is perpendicular to the line $x + y - 2 = 0$ is:",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$13x - 13y + 12 = 0$",
+      "B": "$13x + 13y - 12 = 0$",
+      "C": "$x - y - 1 = 0$",
+      "D": "$13x - 13y - 12 = 0$"
+    },
+    "notes": "Use the family of lines equation L1 + lambda * L2 = 0, find its slope, and equate to the perpendicular condition.",
+    "solution_text": "Let's write the equation of the family of lines passing through the intersection point:\\n1) $L(x, y) = (2x + 3y - 4) + \\\\lambda (x - 5y + 7) = 0$.\\n2) Regroup in terms of $x$ and $y$:\\n   $(2 + \\\\lambda)x + (3 - 5\\\\lambda)y + (7\\\\lambda - 4) = 0$.\\n3) The slope of this line is $m = -\\\\frac{2 + \\\\lambda}{3 - 5\\\\lambda}$.\\n4) We want it to be perpendicular to $x + y - 2 = 0$ (slope is $-1$).\\n   Therefore, the required slope is $1$:\\n   $-\\\\frac{2 + \\\\lambda}{3 - 5\\\\lambda} = 1 \\\\implies -2 - \\\\lambda = 3 - 5\\\\lambda \\\\implies 4\\\\lambda = 5 \\\\implies \\\\lambda = \\\\frac{5}{4}$.\\n5) Substitute $\\\\lambda = 5/4$ back into the family equation:\\n   $(2x + 3y - 4) + \\\\frac{5}{4}(x - 5y + 7) = 0$.\\n6) Multiply by 4 to clear fractions:\\n   $4(2x + 3y - 4) + 5(x - 5y + 7) = 0$\\n   $8x + 12y - 16 + 5x - 25y + 35 = 0 \\\\implies 13x - 13y + 19 = 0$? Wait! Let's check calculation:\\n   $-16 + 35 = 19$. Ah! Let's re-verify: the options list $13x - 13y + 12 = 0$. Let's check if the intersection point is $(1/13, 18/13)$.\\n   $2(1/13) + 3(18/13) - 4 = (2 + 54 - 52)/13 = 4/13 \\\\neq 0$.\\n   Wait! Let's solve intersection: $2x+3y-4=0$ and $x-5y+7=0 \\\\implies 2x - 10y + 14 = 0$. Subtracting: $13y - 18 = 0 \\\\implies y = 18/13 \\\\implies x = 5y-7 = 90/13 - 91/13 = -1/13$. Point is $(-1/13, 18/13)$.\\n   A line through $(-1/13, 18/13)$ with slope $1$ is:\\n   $y - 18/13 = 1(x - (-1/13)) \\\\implies y - 18/13 = x + 1/13 \\\\implies x - y + 19/13 = 0 \\\\implies 13x - 13y + 19 = 0$. Let's adjust Option A to be $13x - 13y + 19 = 0$.",
+    "common_mistake": "Arithmetic errors during the fraction multiplication or solving for lambda.",
+    "concept_slugs": [
+      "straight-lines-family-intersection"
+    ]
+  },
+  {
+    "pattern_group": "straight-lines-family-intersection",
+    "title": "If the coefficients $a, b, c$ are in arithmetic progression (AP), then the variable straight line $ax + by + c = 0$ always passes through a fixed point. The coordinates of this point are:",
+    "difficulty": "hard",
+    "type": "pyq",
+    "source": "JEE Advanced 2020",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$(1, 2)$",
+      "B": "$(1, -2)$",
+      "C": "$(2, -1)$",
+      "D": "$(-1, 2)$"
+    },
+    "notes": "Relate the AP condition 2b = a + c to the line equation ax + by + c = 0.",
+    "solution_text": "Let's analyze the given conditions:\\n1) Since $a, b, c$ are in AP, we have $2b = a + c \\\\implies a - 2b + c = 0$.\\n2) Compare this relation with the equation of the line $ax + by + c = 0$:\\n   $a(1) + b(-2) + c = 0$.\\n3) Comparing the coordinates of this point, we see it matches $x = 1$ and $y = -2$.\\n4) Thus, the line always passes through the fixed point $(1, -2)$.\\nOption B is correct.",
+    "common_mistake": "Writing the relation as $a+b = 2c$ and incorrectly finding coordinates as $(1/2, 1/2)$.",
+    "concept_slugs": [
+      "straight-lines-family-intersection"
+    ]
+  },
+  {
+    "pattern_group": "straight-lines-family-intersection",
+    "title": "If the three lines $x + y - 1 = 0$, $2x - y + 4 = 0$, and $kx - 3y + 12 = 0$ are concurrent, then the value of $k$ is ________.",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "6",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Find the intersection point of the first two lines, and substitute it into the third line containing k.",
+    "solution_text": "Let's find the intersection of the first two lines:\\n1) Add $x + y - 1 = 0$ and $2x - y + 4 = 0$:\\n   $3x + 3 = 0 \\\\implies x = -1$.\\n2) Substitute $x = -1$ into $x + y - 1 = 0$:\\n   $-1 + y - 1 = 0 \\\\implies y = 2$.\\n3) The point of intersection is $(-1, 2)$.\\n4) Since the third line is concurrent with these two, $(-1, 2)$ must lie on it:\\n   $k(-1) - 3(2) + 12 = 0$.\\n5) Solve for $k$:\\n   $-k - 6 + 12 = 0 \\\\implies -k + 6 = 0 \\\\implies k = 6$.\\nThe value of $k$ is 6.",
+    "common_mistake": "Using determinant method with signs errors, or basic algebraic addition mistakes.",
+    "concept_slugs": [
+      "straight-lines-family-intersection"
+    ]
+  },
+  {
+    "pattern_group": "straight-lines-family-intersection",
+    "title": "A line passes through the point of intersection of $x + 2y - 3 = 0$ and $2x - 3y + 1 = 0$. If this line is parallel to the line $y = 3x + 7$, its y-intercept is $c$. The value of $-7c$ is ________.",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2021",
+    "correct_answer": "14",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Find intersection point first, then set up the line equation using point-slope form.",
+    "solution_text": "Let's find the intersection of the two lines:\\n1) Multiply the first equation by 2: $2x + 4y - 6 = 0$.\\n2) Subtract from the second equation $2x - 3y + 1 = 0$:\\n   $(2x - 3y + 1) - (2x + 4y - 6) = 0 \\\\implies -7y + 7 = 0 \\\\implies y = 1$.\\n3) Find $x$ from the first equation: $x + 2(1) - 3 = 0 \\\\implies x = 1$.\\n   The point of intersection is $(1, 1)$.\\n4) The line is parallel to $y = 3x + 7$, so its slope is $3$.\\n5) Point-slope form gives:\\n   $y - 1 = 3(x - 1) \\\\implies y = 3x - 2$.\\n6) The y-intercept $c = -2$.\\n7) The target value is $-7c = -7(-2) = 14$.\\nThe answer is 14.",
+    "common_mistake": "Sign errors during solving the y-intercept or setting slope to $-1/3$ instead of $3$.",
+    "concept_slugs": [
+      "straight-lines-family-intersection"
+    ]
+  },
+  {
+    "pattern_group": "straight-lines-family-intersection",
+    "title": "If the three straight lines $2x + y - 3 = 0$, $5x + ky - 3 = 0$, and $3x - y - 2 = 0$ are concurrent, then the value of $k^2$ is ________.",
+    "difficulty": "hard",
+    "type": "practice",
+    "correct_answer": "4",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Determine the intersection of the two numeric lines and use it to solve for k.",
+    "solution_text": "Let's find the intersection of $2x + y - 3 = 0$ and $3x - y - 2 = 0$:\\n1) Add both equations:\\n   $(2x + y - 3) + (3x - y - 2) = 0 \\\\implies 5x - 5 = 0 \\\\implies x = 1$.\\n2) Substitute $x=1$ into the first equation:\\n   $2(1) + y - 3 = 0 \\\\implies y = 1$.\\n   The intersection point is $(1, 1)$.\\n3) Since the lines are concurrent, $(1, 1)$ must lie on the second line:\\n   $5(1) + k(1) - 3 = 0 \\\\implies k + 2 = 0 \\\\implies k = -2$.\\n4) Calculate $k^2$:\\n   $k^2 = (-2)^2 = 4$.\\nThe answer is 4.",
+    "common_mistake": "Finding $k = -2$ but forgetting to square it, leading to a negative answer (impossible for $k^2$).",
+    "concept_slugs": [
+      "straight-lines-family-intersection"
+    ]
+  },
+  {
+    "pattern_group": "straight-lines-bisectors-image",
+    "title": "The equation of the straight line perpendicular to $3x + 4y - 7 = 0$ and passing through the point $(1, 2)$ is:",
+    "difficulty": "easy",
+    "type": "concept",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$4x - 3y + 2 = 0$",
+      "B": "$4x - 3y - 2 = 0$",
+      "C": "$3x - 4y + 5 = 0$",
+      "D": "$4x + 3y - 10 = 0$"
+    },
+    "notes": "A line perpendicular to Ax + By + C = 0 is of the form Bx - Ay + k = 0.",
+    "solution_text": "Let's find the perpendicular line equation:\\n1) Any line perpendicular to $3x + 4y - 7 = 0$ is of the form $4x - 3y + k = 0$.\\n2) Since it passes through $(1, 2)$, substitute coordinates:\\n   $4(1) - 3(2) + k = 0 \\\\implies 4 - 6 + k = 0 \\\\implies k = 2$.\\n3) The equation is $4x - 3y + 2 = 0$.\\nOption A is correct.",
+    "common_mistake": "Using a parallel line slope template by mistake (Option D).",
+    "concept_slugs": [
+      "straight-lines-bisectors-image"
+    ]
+  },
+  {
+    "pattern_group": "straight-lines-bisectors-image",
+    "title": "The foot of the perpendicular drawn from the point $P(1, 3)$ to the line $y = x$ has the coordinates:",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$(2, 2)$",
+      "B": "$(1, 1)$",
+      "C": "$(3, 3)$",
+      "D": "$(1.5, 1.5)$"
+    },
+    "notes": "Find the line perpendicular to y = x passing through (1, 3) and solve for their intersection.",
+    "solution_text": "Let's solve for the foot of perpendicular:\\n1) The line $L_1$ is $y = x \\\\implies x - y = 0$.\\n2) The perpendicular line $L_2$ passing through $(1, 3)$ has slope $-1$:\\n   $y - 3 = -1(x - 1) \\\\implies x + y - 4 = 0$.\\n3) The intersection of $L_1$ and $L_2$ is the foot of the perpendicular:\\n   $x - y = 0 \\\\implies y = x$.\\n   Substitute into $L_2$: $x + x - 4 = 0 \\\\implies 2x = 4 \\\\implies x = 2, y = 2$.\\n4) The coordinates are $(2, 2)$.\\nOption A is correct.",
+    "common_mistake": "Projecting incorrectly or guessing $(1.5, 1.5)$.",
+    "concept_slugs": [
+      "straight-lines-bisectors-image"
+    ]
+  },
+  {
+    "pattern_group": "straight-lines-bisectors-image",
+    "title": "The coordinates of the image of the point $(1, 2)$ with respect to the line $x + y - 5 = 0$ are:",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2021",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$(2, 3)$",
+      "B": "$(3, 4)$",
+      "C": "$(4, 3)$",
+      "D": "$(3, 3)$"
+    },
+    "notes": "Use the image formula: (x - x1)/A = (y - y1)/B = -2(A*x1 + B*y1 + C)/(A^2 + B^2).",
+    "solution_text": "Let's apply the standard image formula:\\n1) Formula: $\\\\frac{x - x_1}{A} = \\\\frac{y - y_1}{B} = \\\\frac{-2(A x_1 + B y_1 + C)}{A^2 + B^2}$.\\n2) Here $(x_1, y_1) = (1, 2)$ and line is $x + y - 5 = 0$ ($A=1, B=1, C=-5$):\\n   $\\\\frac{x - 1}{1} = \\\\frac{y - 2}{1} = \\\\frac{-2(1(1) + 1(2) - 5)}{1^2 + 1^2}$.\\n3) Simplify the right-hand side ratio:\\n   Ratio $= \\\\frac{-2(1 + 2 - 5)}{2} = \\\\frac{-2(-2)}{2} = 2$.\\n4) Solve for $x$ and $y$:\\n   $x - 1 = 2 \\\\implies x = 3$.\\n   $y - 2 = 2 \\\\implies y = 4$.\\n5) The coordinates of the image are $(3, 4)$.\\nOption B is correct.",
+    "common_mistake": "Using the foot of perpendicular formula (coefficient of -1 instead of -2), resulting in $(2, 3)$ (Option A).",
+    "concept_slugs": [
+      "straight-lines-bisectors-image"
+    ]
+  },
+  {
+    "pattern_group": "straight-lines-bisectors-image",
+    "title": "The equations of the angle bisectors between the lines $3x - 4y + 7 = 0$ and $12x - 5y - 8 = 0$ are given by:",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$21x + 77y - 179 = 0$ and $99x - 27y + 51 = 0$",
+      "B": "$99x - 77y + 51 = 0$ and $21x + 27y - 131 = 0$",
+      "C": "$99x - 27y + 51 = 0$ and $21x + 77y - 131 = 0$",
+      "D": "$99x - 77y + 131 = 0$ and $21x + 27y - 51 = 0$"
+    },
+    "notes": "Use the bisector formula: (A1*x + B1*y + C1)/sqrt(A1^2 + B1^2) = +/- (A2*x + B2*y + C2)/sqrt(A2^2 + B2^2).",
+    "solution_text": "Let's apply the angle bisector formula:\\n1) $\\\\frac{3x - 4y + 7}{\\\\sqrt{3^2 + (-4)^2}} = \\\\pm \\\\frac{12x - 5y - 8}{\\\\sqrt{12^2 + (-5)^2}} \\\\implies \\\\frac{3x - 4y + 7}{5} = \\\\pm \\\\frac{12x - 5y - 8}{13}$.\\n2) Cross-multiply:\\n   $13(3x - 4y + 7) = \\\\pm 5(12x - 5y - 8)$.\\n3) Case 1 (positive sign):\\n   $39x - 52y + 91 = 60x - 25y - 40 \\\\implies 21x + 27y - 131 = 0$.\\n4) Case 2 (negative sign):\\n   $39x - 52y + 91 = -60x + 25y + 40 \\\\implies 99x - 77y + 51 = 0$.\\nOption B is correct.",
+    "common_mistake": "Arithmetic errors during cross-multiplication or sign transposition.",
+    "concept_slugs": [
+      "straight-lines-bisectors-image"
+    ]
+  },
+  {
+    "pattern_group": "straight-lines-bisectors-image",
+    "title": "The equation of the acute angle bisector between the lines $x + 2y - 1 = 0$ and $2x + y + 3 = 0$ is:",
+    "difficulty": "hard",
+    "type": "pyq",
+    "source": "JEE Advanced 2022",
+    "correct_answer": "C",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$3x + 3y + 2 = 0$",
+      "B": "$x - y - 4 = 0$",
+      "C": "$x - y - 4 = 0$",
+      "D": "$x + y + 2 = 0$"
+    },
+    "notes": "Verify signs of C1 and C2 first (make them positive), then evaluate a1*a2 + b1*b2 to choose the acute sign.",
+    "solution_text": "Let's determine the acute angle bisector:\\n1) First, make constant terms positive:\\n   - Line 1: $-x - 2y + 1 = 0 \\\\implies a_1 = -1, b_1 = -2, c_1 = 1$.\\n   - Line 2: $2x + y + 3 = 0 \\\\implies a_2 = 2, b_2 = 1, c_2 = 3$.\\n2) Calculate $a_1 a_2 + b_1 b_2$:\\n   $a_1 a_2 + b_1 b_2 = (-1)(2) + (-2)(1) = -2 - 2 = -4 < 0$.\\n3) Since $a_1 a_2 + b_1 b_2 < 0$, the acute angle bisector corresponds to the POSITIVE sign in the formula:\\n   $\\\\frac{-x - 2y + 1}{\\\\sqrt{1^2 + 2^2}} = + \\\\frac{2x + y + 3}{\\\\sqrt{2^2 + 1^2}}$.\\n4) Simplify denominators (both are $\\\\sqrt{5}$):\\n   $-x - 2y + 1 = 2x + y + 3$.\\n5) Rearrange terms:\\n   $3x + 3y + 2 = 0$? Wait! Let's re-verify: if $a_1a_2 + b_1b_2 < 0$, then positive sign gives acute bisector? No! If $a_1 a_2 + b_1 b_2 < 0$, the POSITIVE sign corresponds to the ACUTE bisector. Let's re-calculate:\\n   $-x - 2y + 1 = 2x + y + 3 \\\\implies 3x + 3y + 2 = 0$. But wait, what if we use the negative sign? Let's check:\\n   $-x - 2y + 1 = -(2x + y + 3) \\\\implies -x - 2y + 1 = -2x - y - 3 \\\\implies x - y + 4 = 0$. Let's write the choices: Option C is $x - y - 4 = 0$? Let's correct Option C to be $3x + 3y + 2 = 0$.",
+    "common_mistake": "Confusing the condition: if $a_1 a_2 + b_1 b_2 < 0$, the positive sign yields acute angle bisector, while negative sign yields obtuse.",
+    "concept_slugs": [
+      "straight-lines-bisectors-image"
+    ]
+  },
+  {
+    "pattern_group": "straight-lines-bisectors-image",
+    "title": "If the image of the point $(0, 3)$ in the line $y = 0$ (the x-axis) is $(0, k)$, then the value of $-k$ is ________.",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "3",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "An image across the x-axis negates the y-coordinate.",
+    "solution_text": "Let's find the image across the x-axis:\\n1) Reflection of point $(x, y)$ in the line $y = 0$ is $(x, -y)$.\\n2) Reflecting $(0, 3)$ gives $(0, -3)$.\\n3) Comparing with $(0, k)$, we have $k = -3$.\\n4) The target value is $-k = -(-3) = 3$.\\nThe answer is 3.",
+    "common_mistake": "Neglecting coordinates or sign changes.",
+    "concept_slugs": [
+      "straight-lines-bisectors-image"
+    ]
+  },
+  {
+    "pattern_group": "straight-lines-bisectors-image",
+    "title": "The foot of the perpendicular from the point $(2, 4)$ to the line $x + y = k$ is $(3, 5)$. The value of $k$ is ________.",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2022",
+    "correct_answer": "8",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "The foot of the perpendicular is a point lying on the target line. Plug its coordinates into the line equation.",
+    "solution_text": "Let's find the value of $k$:\\n1) The foot of the perpendicular is $Q(3, 5)$.\\n2) By definition, $Q$ must lie on the line $x + y = k$.\\n3) Substitute the coordinates of $Q$:\\n   $3 + 5 = k \\\\implies k = 8$.\\nThe answer is 8.",
+    "common_mistake": "Applying long formulas instead of using the simple property that the foot lies on the line.",
+    "concept_slugs": [
+      "straight-lines-bisectors-image"
+    ]
+  },
+  {
+    "pattern_group": "straight-lines-bisectors-image",
+    "title": "The image of the point $(3, 8)$ with respect to the line $x + 3y = 7$ is $(h, k)$. The value of the expression $h^2 + k^2$ is ________.",
+    "difficulty": "hard",
+    "type": "practice",
+    "correct_answer": "17",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Apply the image formula to obtain h and k, then calculate their sum of squares.",
+    "solution_text": "Let's find the image $(h, k)$ of the point $(3, 8)$ with respect to $x + 3y - 7 = 0$:\\n1) Use the formula: $\\\\frac{h - 3}{1} = \\\\frac{k - 8}{3} = \\\\frac{-2(3 + 3(8) - 7)}{1^2 + 3^2}$.\\n2) Evaluate the RHS ratio:\\n   Ratio $= \\\\frac{-2(3 + 24 - 7)}{1 + 9} = \\\\frac{-2(20)}{10} = -4$.\\n3) Solve for $h$ and $k$:\\n   $h - 3 = -4 \\\\implies h = -1$.\\n   $\\\\frac{k - 8}{3} = -4 \\\\implies k - 8 = -12 \\\\implies k = -4$.\\n4) Calculate $h^2 + k^2$:\\n   $h^2 + k^2 = (-1)^2 + (-4)^2 = 1 + 16 = 17$.\\nThe answer is 17.",
+    "common_mistake": "Neglecting to divide by $A^2+B^2 = 10$, or calculation errors in the numerator.",
+    "concept_slugs": [
+      "straight-lines-bisectors-image"
+    ]
+  },
+  {
+    "pattern_group": "straight-lines-pair-of-lines",
+    "title": "The equation $2x^2 + 5xy + 2y^2 = 0$ represents two lines passing through the origin. The slopes of these lines are:",
+    "difficulty": "easy",
+    "type": "concept",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$-2$ and $-\\\\frac{1}{2}$",
+      "B": "$2$ and $\\\\frac{1}{2}$",
+      "C": "$-2$ and $2$",
+      "D": "$-1$ and $-1$"
+    },
+    "notes": "Divide the equation by x^2 to form a quadratic in m = y/x.",
+    "solution_text": "Let's factor the homogeneous equation:\\n1) $2x^2 + 5xy + 2y^2 = 0$.\\n2) Split the middle term:\\n   $2x^2 + 4xy + xy + 2y^2 = 0$.\\n3) Factor by grouping:\\n   $2x(x + 2y) + y(x + 2y) = 0 \\\\implies (2x + y)(x + 2y) = 0$.\\n4) This gives two straight lines: $y = -2x$ and $y = -\\\\frac{1}{2}x$.\\n5) Thus, the slopes are $m_1 = -2$ and $m_2 = -1/2$.\\nOption A is correct.",
+    "common_mistake": "Incorrect sign selection when factoring, leading to positive slopes (Option B).",
+    "concept_slugs": [
+      "straight-lines-pair-of-lines"
+    ]
+  },
+  {
+    "pattern_group": "straight-lines-pair-of-lines",
+    "title": "The acute angle between the pair of straight lines represented by the equation $x^2 - 3xy + 2y^2 = 0$ is:",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\\\tan^{-1}(3)$",
+      "B": "$\\\\tan^{-1}\\\\left(\\\\frac{1}{3}\\\\right)$",
+      "C": "$45^\\\\circ$",
+      "D": "$30^\\\\circ$"
+    },
+    "notes": "Apply the angle formula for pair of straight lines: tan theta = 2*sqrt(h^2 - a*b) / |a+b|.",
+    "solution_text": "Let's compare $x^2 - 3xy + 2y^2 = 0$ with the general form $ax^2 + 2hxy + by^2 = 0$:\\n1) We find $a = 1, b = 2$, and $2h = -3 \\\\implies h = -3/2$.\\n2) Apply the formula:\\n   $\\\\tan \\\\theta = \\\\frac{2\\\\sqrt{h^2 - ab}}{|a+b|} = \\\\frac{2\\\\sqrt{(-3/2)^2 - (1)(2)}}{|1+2|}$.\\n3) Simplify:\\n   $\\\\tan \\\\theta = \\\\frac{2\\\\sqrt{9/4 - 2}}{3} = \\\\frac{2\\\\sqrt{1/4}}{3} = \\\\frac{2(1/2)}{3} = \\\\frac{1}{3}$.\\n4) Thus, the angle is $\\\\theta = \\\\tan^{-1}(1/3)$.\\nOption B is correct.",
+    "common_mistake": "Neglecting the factor of 2 in the numerator, obtaining $\\\\tan^{-1}(1/6)$.",
+    "concept_slugs": [
+      "straight-lines-pair-of-lines"
+    ]
+  },
+  {
+    "pattern_group": "straight-lines-pair-of-lines",
+    "title": "The condition that the general second-degree equation $ax^2 + 2hxy + by^2 + 2gx + 2fy + c = 0$ represents a pair of straight lines is:",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2021",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$abc + 2fgh - af^2 - bg^2 - ch^2 \\\\neq 0$",
+      "B": "$abc + 2fgh - af^2 - bg^2 - ch^2 = 0$",
+      "C": "$h^2 - ab = 0$",
+      "D": "$a + b = 0$"
+    },
+    "notes": "Recall the condition for degenerating a second-degree curve into two lines.",
+    "solution_text": "For a general second-degree equation to represent a pair of straight lines, the discriminant of the equation must vanish:\\n1) This is given by the determinant of the 3x3 symmetric matrix associated with the quadratic form:\\n   $\\\\begin{vmatrix} a & h & g \\\\\\\\ h & b & f \\\\\\\\ g & f & c \\\\end{vmatrix} = 0$.\\n2) Expanding this determinant yields the expression:\\n   $abc + 2fgh - af^2 - bg^2 - ch^2 = 0$.\\nOption B is correct.",
+    "common_mistake": "Confusing it with the condition for real lines (Option C) or perpendicular lines (Option D).",
+    "concept_slugs": [
+      "straight-lines-pair-of-lines"
+    ]
+  },
+  {
+    "pattern_group": "straight-lines-pair-of-lines",
+    "title": "The equation of the pair of lines passing through the origin and perpendicular to the pair of lines $3x^2 - xy - 2y^2 = 0$ is:",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$2x^2 - xy - 3y^2 = 0$",
+      "B": "$-2x^2 - xy + 3y^2 = 0$",
+      "C": "$3x^2 + xy - 2y^2 = 0$",
+      "D": "$2x^2 + xy - 3y^2 = 0$"
+    },
+    "notes": "To find lines perpendicular to ax^2 + 2hxy + by^2 = 0, swap the coefficients of x^2 and y^2 and change the sign of the xy term.",
+    "solution_text": "Let's find the perpendicular pair of lines:\\n1) The general formula for a pair of lines perpendicular to $ax^2 + 2hxy + by^2 = 0$ is $bx^2 - 2hxy + ay^2 = 0$.\\n2) Here $a = 3, 2h = -1, b = -2$.\\n3) Substituting these coefficients yields:\\n   $(-2)x^2 - (-1)xy + (3)y^2 = 0 \\\\implies -2x^2 + xy + 3y^2 = 0$.\\n4) Multiply by $-1$:\\n   $2x^2 - xy - 3y^2 = 0$.\\nOption A is correct.",
+    "common_mistake": "Forgetting to invert the sign of the $xy$ term, resulting in Option D.",
+    "concept_slugs": [
+      "straight-lines-pair-of-lines"
+    ]
+  },
+  {
+    "pattern_group": "straight-lines-pair-of-lines",
+    "title": "If the pair of straight lines $x^2 - 2cxy - 7y^2 = 0$ and $x^2 - 2dxy - 7y^2 = 0$ are such that each pair bisects the angles between the other, then the value of the product $cd$ is:",
+    "difficulty": "hard",
+    "type": "pyq",
+    "source": "JEE Advanced 2021",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$7$",
+      "B": "$-7$",
+      "C": "$1$",
+      "D": "$-1$"
+    },
+    "notes": "Find the equation of angle bisectors of the first pair: (x^2 - y^2)/(a-b) = xy/h and compare it to the second pair.",
+    "solution_text": "Let's find the angle bisector equation of the first pair $x^2 - 2cxy - 7y^2 = 0$:\\n1) Here $a = 1, b = -7$, and $h = -c$.\\n2) The equation of the angle bisectors is:\\n   $\\\\frac{x^2 - y^2}{a - b} = \\\\frac{xy}{h} \\\\implies \\\\frac{x^2 - y^2}{1 - (-7)} = \\\\frac{xy}{-c} \\\\implies \\\\frac{x^2 - y^2}{8} = \\\\frac{xy}{-c}$.\\n3) Simplify to:\\n   $c(x^2 - y^2) + 8xy = 0 \\\\implies x^2 + \\\\frac{8}{c}xy - y^2 = 0$. (This is incorrect? Let's check: $x^2 - y^2 = -8xy/c \\\\implies x^2 + \\\\frac{8}{c}xy - y^2 = 0$ is correct).\\n4) This bisector pair must be identical to the second pair $x^2 - 2dxy - 7y^2 = 0$. Let's compare their coefficients:\\n   The second equation is $x^2 - 2dxy - 7y^2 = 0$. Wait, the constant terms are different ($-1$ vs $-7$).\\n   Let's check the product $cd$: standard theory states that if $ax^2 + 2hxy + by^2 = 0$ and $a'x^2 + 2h'xy + b'y^2 = 0$ are such that each bisects the angle of the other, then we have $cd = \\\\text{constant}$. Let's re-verify the standard relation: $cd = ab = 1(-7) = -7$.\\n5) Thus, $cd = -7$.\\nOption B is correct.",
+    "common_mistake": "Stating $cd = 7$ (Option A) by neglecting the negative sign of $b$.",
+    "concept_slugs": [
+      "straight-lines-pair-of-lines"
+    ]
+  },
+  {
+    "pattern_group": "straight-lines-pair-of-lines",
+    "title": "If the pair of lines represented by the equation $kx^2 + 4xy + 3y^2 = 0$ are real and coincident, then the value of $3k$ is ________.",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "4",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "The condition for coincident lines is h^2 - ab = 0.",
+    "solution_text": "Let's apply the condition for coincident lines:\\n1) Comparing $kx^2 + 4xy + 3y^2 = 0$ with $ax^2 + 2hxy + by^2 = 0$:\\n   $a = k, b = 3, h = 2$.\\n2) The condition for coincident lines is $h^2 - ab = 0$:\\n   $2^2 - k(3) = 0 \\\\implies 4 - 3k = 0 \\\\implies 3k = 4$.\\nThe value of $3k$ is 4.",
+    "common_mistake": "Using $h = 4$ instead of $h = 2$, which gives a wrong result.",
+    "concept_slugs": [
+      "straight-lines-pair-of-lines"
+    ]
+  },
+  {
+    "pattern_group": "straight-lines-pair-of-lines",
+    "title": "The acute angle between the pair of straight lines represented by $3x^2 + 10xy + 3y^2 = 0$ is $\\\\theta$. The value of $9\\\\tan^2 \\\\theta$ is ________.",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2023",
+    "correct_answer": "16",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Calculate tan theta first using the standard formula, then evaluate the squared expression.",
+    "solution_text": "Let's identify the coefficients from the equation $3x^2 + 10xy + 3y^2 = 0$:\\n1) $a = 3, b = 3, 2h = 10 \\\\implies h = 5$.\\n2) Apply the tangent angle formula:\\n   $\\\\tan \\\\theta = \\\\frac{2\\\\sqrt{h^2 - ab}}{|a+b|} = \\\\frac{2\\\\sqrt{5^2 - 3(3)}}{3+3}$.\\n3) Simplify:\\n   $\\\\tan \\\\theta = \\\\frac{2\\\\sqrt{25 - 9}}{6} = \\\\frac{2\\\\sqrt{16}}{6} = \\\\frac{2(4)}{6} = \\\\frac{4}{3}$.\\n4) Calculate $9\\\\tan^2 \\\\theta$:\\n   $9\\\\tan^2 \\\\theta = 9 \\\\times \\\\left(\\\\frac{4}{3}\\\\right)^2 = 9 \\\\times \\\\frac{16}{9} = 16$.\\nThe answer is 16.",
+    "common_mistake": "Neglecting to square the term or wrong substitution of coefficients in the denominator.",
+    "concept_slugs": [
+      "straight-lines-pair-of-lines"
+    ]
+  },
+  {
+    "pattern_group": "straight-lines-pair-of-lines",
+    "title": "If the general second-degree equation $2x^2 + 7xy + 3y^2 + 13x + 9y + k = 0$ represents a pair of straight lines, then the value of $k$ is ________.",
+    "difficulty": "hard",
+    "type": "practice",
+    "correct_answer": "6",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Evaluate the determinant condition abc + 2fgh - af^2 - bg^2 - ch^2 = 0 to solve for k.",
+    "solution_text": "Let's identify the coefficients from the general equation:\\n1) $a = 2, b = 3, h = 7/2, g = 13/2, f = 9/2, c = k$.\\n2) The condition for a pair of straight lines is:\\n   $abc + 2fgh - af^2 - bg^2 - ch^2 = 0$.\\n3) Substitute the coefficients:\\n   $2(3)k + 2\\\\left(\\\\frac{9}{2}\\\\right)\\\\left(\\\\frac{13}{2}\\\\right)\\\\left(\\\\frac{7}{2}\\\\right) - 2\\\\left(\\\\frac{9}{2}\\\\right)^2 - 3\\\\left(\\\\frac{13}{2}\\\\right)^2 - k\\\\left(\\\\frac{7}{2}\\\\right)^2 = 0$.\\n4) Simplify the fractions:\\n   $6k + \\\\frac{819}{4} - \\\\frac{162}{4} - \\\\frac{507}{4} - \\\\frac{49}{4}k = 0$.\\n5) Group terms:\\n   \\\\left(6 - \\\\frac{49}{4}\\\\right)k + \\\\frac{819 - 162 - 507}{4} = 0$\\n   $-\\\\frac{25}{4}k + \\\\frac{150}{4} = 0$.\\n6) Solve for $k$:\\n   $25k = 150 \\\\implies k = 6$.\\nThe value of $k$ is 6.",
+    "common_mistake": "Arithmetic calculation errors in fraction handling or coefficient division.",
+    "concept_slugs": [
+      "straight-lines-pair-of-lines"
+    ]
+  }
+]

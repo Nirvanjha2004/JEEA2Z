@@ -1,0 +1,920 @@
+[
+  {
+    "pattern_group": "trigonometry-ratios-identities",
+    "title": "The value of the product $\\\\cos 1^\\\\circ \\\\cos 2^\\\\circ \\\\cos 3^\\\\circ \\\\cdots \\\\cos 179^\\\\circ$ is:",
+    "difficulty": "easy",
+    "type": "concept",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$0$",
+      "B": "$1$",
+      "C": "$-1$",
+      "D": "\\\\frac{1}{2^{179}}$"
+    },
+    "notes": "Identify if any specific value in the product resolves to zero.",
+    "solution_text": "Let's analyze the terms in the product:\\n1) The product is $P = \\\\cos 1^\\\\circ \\\\cos 2^\\\\circ \\\\cdots \\\\cos 90^\\\\circ \\\\cdots \\\\cos 179^\\\\circ$.\\n2) Recall that $\\\\cos 90^\\\\circ = 0$.\\n3) Since one of the factors in the product is $0$, the entire product is $0$.\\nOption A is correct.",
+    "common_mistake": "Over-complicating by trying to group terms into compound angles or neglecting the presence of 90 degrees.",
+    "concept_slugs": [
+      "trigonometry-ratios-identities"
+    ]
+  },
+  {
+    "pattern_group": "trigonometry-ratios-identities",
+    "title": "The value of $\\\\sin 15^\\\\circ$ is equal to:",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\\\frac{\\\\sqrt{3}+1}{2\\\\sqrt{2}}$",
+      "B": "$\\\\frac{\\\\sqrt{3}-1}{2\\\\sqrt{2}}$",
+      "C": "$\\\\frac{\\\\sqrt{3}-1}{2}$",
+      "D": "$\\\\frac{\\\\sqrt{5}-1}{4}$"
+    },
+    "notes": "Use the compound angle formula sin(A - B) = sin A cos B - cos A sin B with A = 45 and B = 30.",
+    "solution_text": "Let's evaluate using compound angle formulas:\\n1) We can write $15^\\\\circ = 45^\\\\circ - 30^\\\\circ$.\\n2) Use the formula $\\\\sin(A - B) = \\\\sin A \\\\cos B - \\\\cos A \\\\sin B$:\\n   $\\\\sin 15^\\\\circ = \\\\sin(45^\\\\circ - 30^\\\\circ) = \\\\sin 45^\\\\circ \\\\cos 30^\\\\circ - \\\\cos 45^\\\\circ \\\\sin 30^\\\\circ$.\\n3) Substitute the standard values:\\n   $\\\\sin 15^\\\\circ = \\\\left(\\\\frac{1}{\\\\sqrt{2}}\\\\right)\\\\left(\\\\frac{\\\\sqrt{3}}{2}\\\\right) - \\\\left(\\\\frac{1}{\\\\sqrt{2}}\\\\right)\\\\left(\\\\frac{1}{2}\\\\right) = \\\\frac{\\\\sqrt{3}-1}{2\\\\sqrt{2}}$.\\nOption B is correct.",
+    "common_mistake": "Confusing signs and getting $\\\\frac{\\\\sqrt{3}+1}{2\\\\sqrt{2}}$ (Option A), which is $\\\\sin 75^\\\\circ$ or $\\\\cos 15^\\\\circ$.",
+    "concept_slugs": [
+      "trigonometry-ratios-identities"
+    ]
+  },
+  {
+    "pattern_group": "trigonometry-ratios-identities",
+    "title": "The value of the expression $\\\\tan 75^\\\\circ - \\\\cot 75^\\\\circ$ is:",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2022",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$2\\\\sqrt{3}$",
+      "B": "$4$",
+      "C": "$2 - \\\\sqrt{3}$",
+      "D": "$2\\\\sqrt{2}$"
+    },
+    "notes": "Express tan 75 and cot 75 in terms of rationalized surds first.",
+    "solution_text": "Let's simplify both terms:\\n1) $\\\\tan 75^\\\\circ = \\\\tan(45^\\\\circ + 30^\\\\circ) = \\\\frac{\\\\tan 45^\\\\circ + \\\\tan 30^\\\\circ}{1 - \\\\tan 45^\\\\circ \\\\tan 30^\\\\circ} = \\\\frac{1 + 1/\\\\sqrt{3}}{1 - 1/\\\\sqrt{3}} = \\\\frac{\\\\sqrt{3}+1}{\\\\sqrt{3}-1} = 2 + \\\\sqrt{3}$.\\n2) $\\\\cot 75^\\\\circ = \\\\frac{1}{\\\\tan 75^\\\\circ} = \\\\frac{1}{2+\\\\sqrt{3}} = 2 - \\\\sqrt{3}$.\\n3) The difference is:\\n   $\\\\tan 75^\\\\circ - \\\\cot 75^\\\\circ = (2 + \\\\sqrt{3}) - (2 - \\\\sqrt{3}) = 2\\\\sqrt{3}$.\\nOption A is correct.",
+    "common_mistake": "Incorrectly subtracting terms, resulting in 4 (Option B) or $2-\\\\sqrt{3}$ (Option C).",
+    "concept_slugs": [
+      "trigonometry-ratios-identities"
+    ]
+  },
+  {
+    "pattern_group": "trigonometry-ratios-identities",
+    "title": "The expression $\\\\cos^2 10^\\\\circ - \\\\cos 10^\\\\circ \\\\cos 50^\\\\circ + \\\\cos^2 50^\\\\circ$ evaluates to:",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\\\frac{3}{4}$",
+      "B": "$\\\\frac{1}{2}$",
+      "C": "$\\\\frac{1}{4}$",
+      "D": "$\\\\frac{3}{2}$"
+    },
+    "notes": "Convert squares to double angles: cos^2 theta = (1 + cos 2theta)/2 and products to sums.",
+    "solution_text": "Let's expand the terms using double-angle and product-to-sum identities:\\n1) Multiply the entire expression by 2: $2D = 2\\\\cos^2 10^\\\\circ + 2\\\\cos^2 50^\\\\circ - 2\\\\cos 10^\\\\circ \\\\cos 50^\\\\circ$.\\n2) Apply identities $2\\\\cos^2 A = 1 + \\\\cos 2A$ and $2\\\\cos A \\\\cos B = \\\\cos(A+B) + \\\\cos(A-B)$:\\n   $2D = (1 + \\\\cos 20^\\\\circ) + (1 + \\\\cos 100^\\\\circ) - (\\\\cos 60^\\\\circ + \\\\cos 40^\\\\circ)$\\n   $2D = 2 + \\\\cos 20^\\\\circ + \\\\cos 100^\\\\circ - \\\\frac{1}{2} - \\\\cos 40^\\\\circ$.\\n3) Group terms:\\n   $2D = \\\\frac{3}{2} + [\\\\cos 100^\\\\circ + \\\\cos 20^\\\\circ] - \\\\cos 40^\\\\circ$.\\n4) Apply sum-to-product identity $\\\\cos X + \\\\cos Y = 2\\\\cos\\\\frac{X+Y}{2}\\\\cos\\\\frac{X-Y}{2}$:\\n   $\\\\cos 100^\\\\circ + \\\\cos 20^\\\\circ = 2\\\\cos 60^\\\\circ \\\\cos 40^\\\\circ = 2\\\\left(\\\\frac{1}{2}\\\\right)\\\\cos 40^\\\\circ = \\\\cos 40^\\\\circ$.\\n5) Substitute back:\\n   $2D = \\\\frac{3}{2} + \\\\cos 40^\\\\circ - \\\\cos 40^\\\\circ = \\\\frac{3}{2} \\\\implies D = \\\\frac{3}{4}$.\\nOption A is correct.",
+    "common_mistake": "Sign errors in the product-to-sum step, leading to $\\\\frac{3}{2}$ or $\\\\frac{1}{2}$.",
+    "concept_slugs": [
+      "trigonometry-ratios-identities"
+    ]
+  },
+  {
+    "pattern_group": "trigonometry-ratios-identities",
+    "title": "The value of the product $\\\\sin 10^\\\\circ \\\\sin 30^\\\\circ \\\\sin 50^\\\\circ \\\\sin 70^\\\\circ$ is:",
+    "difficulty": "hard",
+    "type": "pyq",
+    "source": "JEE Advanced 2020",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\\\frac{1}{16}$",
+      "B": "$\\\\frac{1}{8}$",
+      "C": "$\\\\frac{1}{32}$",
+      "D": "$\\\\frac{3}{16}$"
+    },
+    "notes": "Use the identity sin(theta) sin(60 - theta) sin(60 + theta) = 1/4 sin(3theta).",
+    "solution_text": "Let's group the terms:\\n1) We know $\\\\sin 30^\\\\circ = \\\\frac{1}{2}$.\\n2) The product becomes $P = \\\\frac{1}{2} [\\\\sin 10^\\\\circ \\\\sin 50^\\\\circ \\\\sin 70^\\\\circ]$.\\n3) Rewrite the factors: $\\\\sin 50^\\\\circ = \\\\sin(60^\\\\circ - 10^\\\\circ)$ and $\\\\sin 70^\\\\circ = \\\\sin(60^\\\\circ + 10^\\\\circ)$.\\n4) Apply the identity $\\\\sin\\\\theta \\\\sin(60^\\\\circ - \\\\theta) \\\\sin(60^\\\\circ + \\\\theta) = \\\\frac{1}{4} \\\\sin 3\\\\theta$ with $\\\\theta = 10^\\\\circ$:\\n   $\\\\sin 10^\\\\circ \\\\sin 50^\\\\circ \\\\sin 70^\\\\circ = \\\\frac{1}{4} \\\\sin(30^\\\\circ) = \\\\frac{1}{4} \\\\left(\\\\frac{1}{2}\\\\right) = \\\\frac{1}{8}$.\\n5) Substituting back:\\n   $P = \\\\frac{1}{2} \\\\times \\\\frac{1}{8} = \\\\frac{1}{16}$.\\nOption A is correct.",
+    "common_mistake": "Neglecting the $\\\\sin 30^\\\\circ$ term coefficient, resulting in $1/8$ (Option B).",
+    "concept_slugs": [
+      "trigonometry-ratios-identities"
+    ]
+  },
+  {
+    "pattern_group": "trigonometry-ratios-identities",
+    "title": "The value of the expression $8(\\\\sqrt{5} + 1)(\\\\sin^2 24^\\\\circ - \\\\sin^2 6^\\\\circ)$ is ________.",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "4",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Apply the identity sin^2 A - sin^2 B = sin(A+B) sin(A-B) and substitute the value of sin 18 degrees.",
+    "solution_text": "Let's evaluate the trigonometric term first:\\n1) Use the identity $\\\\sin^2 A - \\\\sin^2 B = \\\\sin(A+B)\\\\sin(A-B)$:\\n   $\\\\sin^2 24^\\\\circ - \\\\sin^2 6^\\\\circ = \\\\sin(24^\\\\circ + 6^\\\\circ)\\\\sin(24^\\\\circ - 6^\\\\circ) = \\\\sin 30^\\\\circ \\\\sin 18^\\\\circ$.\\n2) We know $\\\\sin 30^\\\\circ = \\\\frac{1}{2}$ and $\\\\sin 18^\\\\circ = \\\\frac{\\\\sqrt{5}-1}{4}$:\\n   $\\\\sin^2 24^\\\\circ - \\\\sin^2 6^\\\\circ = \\\\frac{1}{2} \\\\times \\\\frac{\\\\sqrt{5}-1}{4} = \\\\frac{\\\\sqrt{5}-1}{8}$.\\n3) Now multiply by the given factor:\\n   $8(\\\\sqrt{5} + 1) \\\\times \\\\left(\\\\frac{\\\\sqrt{5}-1}{8}\\\\right) = (\\\\sqrt{5} + 1)(\\\\sqrt{5} - 1) = 5 - 1 = 4$.\\nTherefore, the answer is 4.",
+    "common_mistake": "Incorrectly evaluating $\\\\sin 18^\\\\circ$ or mistakes in expanding the difference of squares.",
+    "concept_slugs": [
+      "trigonometry-ratios-identities"
+    ]
+  },
+  {
+    "pattern_group": "trigonometry-ratios-identities",
+    "title": "If $\\\\cos \\\\theta = \\\\frac{1}{3}$, then the value of the absolute expression $|27 \\\\cos 3\\\\theta|$ is ________.",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2021",
+    "correct_answer": "23",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Apply the triple-angle formula cos 3theta = 4 cos^3 theta - 3 cos theta.",
+    "solution_text": "Let's apply the triple-angle formula for cosine:\\n1) $\\\\cos 3\\\\theta = 4\\\\cos^3 \\\\theta - 3\\\\cos \\\\theta$.\\n2) Substitute $\\\\cos \\\\theta = 1/3$:\\n   $\\\\cos 3\\\\theta = 4\\\\left(\\\\frac{1}{3}\\\\right)^3 - 3\\\\left(\\\\frac{1}{3}\\\\right) = \\\\frac{4}{27} - 1 = -\\\\frac{23}{27}$.\\n3) Now find the absolute value multiplied by 27:\\n   $|27 \\\\cos 3\\\\theta| = \\\\left| 27 \\\\times \\\\left(-\\\\frac{23}{27}\\\\right) \\\\right| = 23$.\\nThe answer is 23.",
+    "common_mistake": "Forgetting the minus sign when calculating the value before taking the modulus, or using a wrong coefficient in the triple-angle formula.",
+    "concept_slugs": [
+      "trigonometry-ratios-identities"
+    ]
+  },
+  {
+    "pattern_group": "trigonometry-ratios-identities",
+    "title": "The maximum possible value of the trigonometric expression $5 \\\\cos \\\\theta + 12 \\\\sin \\\\theta + 7$ is ________.",
+    "difficulty": "hard",
+    "type": "practice",
+    "correct_answer": "20",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Recall the bounds of a cos theta + b sin theta which are within [-sqrt(a^2+b^2), sqrt(a^2+b^2)].",
+    "solution_text": "Let's find the bounds of the linear combination of sine and cosine:\\n1) The range of $a \\\\cos \\\\theta + b \\\\sin \\\\theta$ is $[-\\\\sqrt{a^2+b^2}, \\\\sqrt{a^2+b^2}]$.\\n2) Here, $a = 5$ and $b = 12$:\\n   $\\\\text{Max}(5 \\\\cos \\\\theta + 12 \\\\sin \\\\theta) = \\\\sqrt{5^2 + 12^2} = \\\\sqrt{25 + 144} = \\\\sqrt{169} = 13$.\\n3) Therefore, the maximum value of the expression is:\\n   $\\\\text{Max} = 13 + 7 = 20$.\\nThe answer is 20.",
+    "common_mistake": "Adding $5 + 12 + 7 = 24$, which assumes both sine and cosine can reach 1 at the same angle (impossible since they are out of phase by 90 degrees).",
+    "concept_slugs": [
+      "trigonometry-ratios-identities"
+    ]
+  },
+  {
+    "pattern_group": "trigonometry-equations-solutions",
+    "title": "The general solution of the trigonometric equation $\\\\sin \\\\theta = 0$ is given by (where $n \\\\in \\\\mathbb{Z}$):",
+    "difficulty": "easy",
+    "type": "concept",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\\\theta = n\\\\pi$",
+      "B": "$\\\\theta = (2n+1)\\\\frac{\\\\pi}{2}$",
+      "C": "$\\\\theta = 2n\\\\pi$",
+      "D": "$\\\\theta = n\\\\pi + (-1)^n \\\\frac{\\\\pi}{2}$"
+    },
+    "notes": "Identify the values on the unit circle where the y-coordinate is zero.",
+    "solution_text": "The sine function represents the y-coordinate on the unit circle:\\n1) $\\\\sin\\\\theta = 0$ occurs at the intersections with the x-axis, which are at $0, \\\\pi, 2\\\\pi, -\\\\pi, \\\\dots$\\n2) All these angles are integer multiples of $\\\\pi$.\\n3) Thus, the general solution is $\\\\theta = n\\\\pi$, where $n$ is any integer.\\nOption A is correct.",
+    "common_mistake": "Confusing it with the general solution of $\\\\cos \\\\theta = 0$ (Option B).",
+    "concept_slugs": [
+      "trigonometry-equations-solutions"
+    ]
+  },
+  {
+    "pattern_group": "trigonometry-equations-solutions",
+    "title": "The general solution of the trigonometric equation $\\\\cos \\\\theta = \\\\frac{1}{2}$ is given by (where $n \\\\in \\\\mathbb{Z}$):",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\\\theta = n\\\\pi \\\\pm \\\\frac{\\\\pi}{3}$",
+      "B": "$\\\\theta = 2n\\\\pi \\\\pm \\\\frac{\\\\pi}{3}$",
+      "C": "$\\\\theta = 2n\\\\pi \\\\pm \\\\frac{\\\\pi}{6}$",
+      "D": "$\\\\theta = n\\\\pi + (-1)^n \\\\frac{\\\\pi}{3}$"
+    },
+    "notes": "First identify the principal angle for cos theta = 1/2.",
+    "solution_text": "Let's find the solution:\\n1) The principal value for $\\\\cos \\\\theta = 1/2$ is $\\\\alpha = \\\\frac{\\\\pi}{3}$ (since $\\\\cos(\\\\pi/3) = 1/2$).\\n2) The general solution for $\\\\cos \\\\theta = \\\\cos \\\\alpha$ is $\\\\theta = 2n\\\\pi \\\\pm \\\\alpha$.\\n3) Substituting $\\\\alpha = \\\\frac{\\\\pi}{3}$:\\n   $\\\\theta = 2n\\\\pi \\\\pm \\\\frac{\\\\pi}{3}$.\\nOption B is correct.",
+    "common_mistake": "Using $n\\\\pi \\\\pm \\\\pi/3$ (Option A) which is the general solution for $\\\\cos^2 \\\\theta = \\\\cos^2 \\\\alpha$.",
+    "concept_slugs": [
+      "trigonometry-equations-solutions"
+    ]
+  },
+  {
+    "pattern_group": "trigonometry-equations-solutions",
+    "title": "The number of solutions of the equation $\\\\sin 2\\\\theta + \\\\cos 2\\\\theta = 0$ in the closed interval $[0, \\\\pi]$ is:",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2022",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "2",
+      "B": "4",
+      "C": "1",
+      "D": "3"
+    },
+    "notes": "Rearrange the equation to tan 2theta = -1 and solve for 2theta in [0, 2pi].",
+    "solution_text": "Let's solve the equation:\\n1) $\\\\sin 2\\\\theta + \\\\cos 2\\\\theta = 0 \\\\implies \\\\sin 2\\\\theta = -\\\\cos 2\\\\theta$.\\n2) Divide by $\\\\cos 2\\\\theta$ (since if $\\\\cos 2\\\\theta = 0$, $\\\\sin 2\\\\theta \\\\neq 0$):\\n   $\\\\tan 2\\\\theta = -1$.\\n3) Given $\\\\theta \\\\in [0, \\\\pi]$, the range for the argument is $2\\\\theta \\\\in [0, 2\\\\pi]$.\\n4) In the interval $[0, 2\\\\pi]$, the equation $\\\\tan x = -1$ has exactly 2 solutions:\\n   $x = \\\\frac{3\\\\pi}{4}$ and $x = \\\\frac{7\\\\pi}{4}$.\\n5) Substituting back $x = 2\\\\theta$:\\n   $\\\\theta = \\\\frac{3\\\\pi}{8}$ and $\\\\theta = \\\\frac{7\\\\pi}{8}$.\\nBoth solutions lie within $[0, \\\\pi]$. Thus, there are 2 solutions.\\nOption A is correct.",
+    "common_mistake": "Stating there are 4 solutions by incorrectly matching the domain of $2\\\\theta$ to the number of solutions in $\\\\theta$.",
+    "concept_slugs": [
+      "trigonometry-equations-solutions"
+    ]
+  },
+  {
+    "pattern_group": "trigonometry-equations-solutions",
+    "title": "The number of solutions of the equation $2\\\\cos^2 x + 3\\\\sin x = 0$ in the interval $[0, 2\\\\pi]$ is:",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "2",
+      "B": "4",
+      "C": "1",
+      "D": "0"
+    },
+    "notes": "Convert the cosine term to sine using the identity cos^2 x = 1 - sin^2 x to form a quadratic in sin x.",
+    "solution_text": "Let's rewrite the equation in terms of $\\\\sin x$:\\n1) $2(1 - \\\\sin^2 x) + 3\\\\sin x = 0 \\\\implies 2 - 2\\\\sin^2 x + 3\\\\sin x = 0$.\\n2) Rearranging into a standard quadratic form:\\n   $2\\\\sin^2 x - 3\\\\sin x - 2 = 0$.\\n3) Factoring the quadratic:\\n   $(2\\\\sin x + 1)(\\\\sin x - 2) = 0$.\\n4) This gives two possible equations:\\n   - $\\\\sin x = 2$ (which has no real solutions since $-1 \\\\le \\\\sin x \\\\le 1$).\\n   - $\\\\sin x = -\\\\frac{1}{2}$.\\n5) In the interval $[0, 2\\\\pi]$, the equation $\\\\sin x = -1/2$ has exactly 2 solutions (in the 3rd and 4th quadrants):\\n   $x = \\\\frac{7\\\\pi}{6}$ and $x = \\\\frac{11\\\\pi}{6}$.\\nOption A is correct.",
+    "common_mistake": "Accepting $\\\\sin x = 2$ and trying to solve it, or forgetting the solutions in the fourth quadrant.",
+    "concept_slugs": [
+      "trigonometry-equations-solutions"
+    ]
+  },
+  {
+    "pattern_group": "trigonometry-equations-solutions",
+    "title": "The sum of all values of $\\\\theta \\\\in [0, \\\\pi]$ satisfying the equation $\\\\sin \\\\theta \\\\sin 3\\\\theta = \\\\frac{1}{2}$ is:",
+    "difficulty": "hard",
+    "type": "pyq",
+    "source": "JEE Advanced 2021",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$2\\\\pi$",
+      "B": "$\\\\pi$",
+      "C": "$\\\\frac{3\\\\pi}{2}$",
+      "D": "$3\\\\pi$"
+    },
+    "notes": "Convert the product of sines into a difference of cosines: 2 sin A sin B = cos(A-B) - cos(A+B).",
+    "solution_text": "Let's apply product-to-sum formula:\\n1) Multiply by 2: $2\\\\sin \\\\theta \\\\sin 3\\\\theta = 1$.\\n2) Use the identity $2\\\\sin A \\\\sin B = \\\\cos(A-B) - \\\\cos(A+B)$:\\n   $\\\\cos 2\\\\theta - \\\\cos 4\\\\theta = 1$.\\n3) Use the double-angle identity $\\\\cos 4\\\\theta = 2\\\\cos^2 2\\\\theta - 1$:\\n   $\\\\cos 2\\\\theta - (2\\\\cos^2 2\\\\theta - 1) = 1 \\\\implies \\\\cos 2\\\\theta - 2\\\\cos^2 2\\\\theta + 1 = 1 \\\\implies \\\\cos 2\\\\theta(1 - 2\\\\cos 2\\\\theta) = 0$.\\n4) This gives two cases:\\n   - Case 1: $\\\\cos 2\\\\theta = 0 \\\\implies 2\\\\theta = \\\\frac{\\\\pi}{2}, \\\\frac{3\\\\pi}{2} \\\\implies \\\\theta = \\\\frac{\\\\pi}{4}, \\\\frac{3\\\\pi}{4}$.\\n   - Case 2: $\\\\cos 2\\\\theta = \\\\frac{1}{2} \\\\implies 2\\\\theta = \\\\frac{\\\\pi}{3}, \\\\frac{5\\\\pi}{3} \\\\implies \\\\theta = \\\\frac{\\\\pi}{6}, \\\\frac{5\\\\pi}{6}$.\\n5) Sum the solutions: $\\\\frac{\\\\pi}{4} + \\\\frac{3\\\\pi}{4} + \\\\frac{\\\\pi}{6} + \\\\frac{5\\\\pi}{6} = \\\\pi + \\\\pi = 2\\\\pi$.\\nOption A is correct.",
+    "common_mistake": "Neglecting Case 2 or using wrong values for the double angle, resulting in a sum of $\\\\pi$ (Option B).",
+    "concept_slugs": [
+      "trigonometry-equations-solutions"
+    ]
+  },
+  {
+    "pattern_group": "trigonometry-equations-solutions",
+    "title": "The number of solutions of the trigonometric equation $\\\\sin x = 1$ in the closed interval $[0, 4\\\\pi]$ is ________.",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "2",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Find the values of x in [0, 2pi] where sin x = 1 and extend it periodically up to 4pi.",
+    "solution_text": "Let's find the solutions:\\n1) Within the first period $[0, 2\\\\pi]$, the equation $\\\\sin x = 1$ has exactly one solution at $x = \\\\frac{\\\\pi}{2}$.\\n2) Since the sine function is periodic with period $2\\\\pi$, the next solution in the range is:\\n   $x = \\\\frac{\\\\pi}{2} + 2\\\\pi = \\\\frac{5\\\\pi}{2}$.\\n3) The next periodic value would be $\\\\frac{9\\\\pi}{2}$ which is $4.5\\\\pi > 4\\\\pi$ (outside the interval).\\n4) Thus, there are exactly 2 solutions: $\\\\frac{\\\\pi}{2}$ and $\\\\frac{5\\\\pi}{2}$.\\nTherefore, the answer is 2.",
+    "common_mistake": "Counting solutions where $\\\\sin x = -1$, which are $3\\\\pi/2$ and $7\\\\pi/2$.",
+    "concept_slugs": [
+      "trigonometry-equations-solutions"
+    ]
+  },
+  {
+    "pattern_group": "trigonometry-equations-solutions",
+    "title": "The number of real values of $\\\\theta \\\\in [0, 2\\\\pi]$ satisfying the equation $\\\\sin^4 \\\\theta - 2\\\\sin^2 \\\\theta - 1 = 0$ is ________.",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2021",
+    "correct_answer": "0",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Define u = sin^2 theta, solve the quadratic equation, and verify if the roots are in the range of sin^2 theta.",
+    "solution_text": "Let $u = \\\\sin^2 \\\\theta$:\\n1) The equation becomes: $u^2 - 2u - 1 = 0$.\\n2) Solve the quadratic equation in $u$:\\n   $u = \\\\frac{2 \\\\pm \\\\sqrt{(-2)^2 - 4(1)(-1)}}{2} = \\\\frac{2 \\\\pm \\\\sqrt{8}}{2} = 1 \\\\pm \\\\sqrt{2}$.\\n3) This yields two values for $u$:\\n   - $u_1 = 1 + \\\\sqrt{2} \\\\approx 2.414$.\\n   - $u_2 = 1 - \\\\sqrt{2} \\\\approx -0.414$.\\n4) Let's check the constraints on $u = \\\\sin^2 \\\\theta$:\\n   Since $\\\\sin \\\\theta$ is a real number, we must have $0 \\\\le \\\\sin^2 \\\\theta \\\\le 1 \\\\implies 0 \\\\le u \\\\le 1$.\\n5) Neither $u_1 = 2.414$ nor $u_2 = -0.414$ lies in $[0, 1]$.\\n6) Therefore, there are no real solutions.\\nThe answer is 0.",
+    "common_mistake": "Assuming $\\\\sin^2 \\\\theta = 1 - \\\\sqrt{2}$ has solutions by forgetting that a square cannot be negative.",
+    "concept_slugs": [
+      "trigonometry-equations-solutions"
+    ]
+  },
+  {
+    "pattern_group": "trigonometry-equations-solutions",
+    "title": "The total number of real solutions of the equation $\\\\sin x = \\\\frac{x}{10}$ (where $x$ is measured in radians) is ________.",
+    "difficulty": "hard",
+    "type": "practice",
+    "correct_answer": "7",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Find the number of intersection points between the curves y = sin x and y = x/10 by bounding x.",
+    "solution_text": "Let's analyze the graphs of $y = \\\\sin x$ and $y = \\\\frac{x}{10}$:\\n1) Since $|\\\\sin x| \\\\le 1$, any intersection must satisfy $\\\\left|\\\\frac{x}{10}\\\\right| \\\\le 1 \\\\implies -10 \\\\le x \\\\le 10$.\\n2) The value $10$ radians is between $3\\\\pi \\\\approx 9.42$ and $4\\\\pi \\\\approx 12.57$.\\n3) Let's analyze positive solutions ($x > 0$):\\n   - In $[0, \\\\pi]$, the line starts at 0 and goes to $\\\\pi/10 \\\\approx 0.314$. The sine curve rises to 1 and drops to 0. Since the line slope is small, they intersect exactly once in $(0, \\\\pi)$.\\n   - In $[\\\\pi, 2\\\\pi]$, $\\\\sin x < 0$ while the line is positive, so there are no intersections.\\n   - In $[2\\\\pi, 3\\\\pi]$, the line values are between $2\\\\pi/10 \\\\approx 0.628$ and $3\\\\pi/10 \\\\approx 0.942$. The sine curve rises to 1 and drops to 0. The line intersects the sine curve twice in this interval.\\n   - For $x > 3\\\\pi$, the line is above 1 before $\\\\sin x$ becomes positive again (which is at $4\\\\pi$), so no more positive intersections.\\n   - Thus, there are exactly $1 + 2 = 3$ positive solutions.\\n4) By symmetry, there are exactly 3 negative solutions ($x < 0$).\\n5) $x=0$ is also a solution.\\n6) Total number of solutions $= 3 \\\\text{ (positive)} + 3 \\\\text{ (negative)} + 1 \\\\text{ (zero)} = 7$.\\nThe answer is 7.",
+    "common_mistake": "Neglecting to check intervals where $\\\\sin x$ is negative, or counting intersections outside the bounds $[-10, 10]$.",
+    "concept_slugs": [
+      "trigonometry-equations-solutions"
+    ]
+  },
+  {
+    "pattern_group": "trigonometry-inverse-properties",
+    "title": "The principal value branch (range) of the inverse sine function, $f(x) = \\\\sin^{-1} x$, is:",
+    "difficulty": "easy",
+    "type": "concept",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$[-\\\\frac{\\\\pi}{2}, \\\\frac{\\\\pi}{2}]$",
+      "B": "$[0, \\\\pi]$",
+      "C": "$(-\\\\frac{\\\\pi}{2}, \\\\frac{\\\\pi}{2})$",
+      "D": "$[0, \\\\frac{\\\\pi}{2}]$"
+    },
+    "notes": "Recall the standard interval definition of inverse trigonometric functions in calculus.",
+    "solution_text": "By standard definition in mathematics:\\n1) The domain of $\\\\sin^{-1} x$ is $[-1, 1]$.\\n2) To make the function bijective, we restrict the range to the interval containing 0 where sine is monotonic, which is $[-\\\\frac{\\\\pi}{2}, \\\\frac{\\\\pi}{2}]$.\\nOption A is correct.",
+    "common_mistake": "Confusing the range of $\\\\sin^{-1} x$ with $\\\\cos^{-1} x$ (Option B) or $\\\\tan^{-1} x$ (Option C).",
+    "concept_slugs": [
+      "trigonometry-inverse-properties"
+    ]
+  },
+  {
+    "pattern_group": "trigonometry-inverse-properties",
+    "title": "The principal value of $\\\\cos^{-1}\\\\left(-\\\\frac{1}{2}\\\\right)$ is equal to:",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$-\\\\frac{\\\\pi}{3}$",
+      "B": "$\\\\frac{2\\\\pi}{3}$",
+      "C": "$\\\\frac{\\\\pi}{3}$",
+      "D": "$\\\\frac{5\\\\pi}{6}$"
+    },
+    "notes": "Use the property cos^-1(-x) = pi - cos^-1(x) for x > 0.",
+    "solution_text": "Let's evaluate using inverse cosine properties:\\n1) Use the identity $\\\\cos^{-1}(-x) = \\\\pi - \\\\cos^{-1}(x)$.\\n2) For $x = 1/2$:\\n   $\\\\cos^{-1}(-1/2) = \\\\pi - \\\\cos^{-1}(1/2)$.\\n3) Since $\\\\cos(\\\\pi/3) = 1/2 \\\\implies \\\\cos^{-1}(1/2) = \\\\frac{\\\\pi}{3}$:\\n   $\\\\cos^{-1}(-1/2) = \\\\pi - \\\\frac{\\\\pi}{3} = \\\\frac{2\\\\pi}{3}$.\\nOption B is correct.",
+    "common_mistake": "Mistaking it for $-\\\\pi/3$ (Option A), forgetting that the range of principal values for cosine inverse is $[0, \\\\pi]$.",
+    "concept_slugs": [
+      "trigonometry-inverse-properties"
+    ]
+  },
+  {
+    "pattern_group": "trigonometry-inverse-properties",
+    "title": "The value of the expression $\\\\sin^{-1}(\\\\sin 10)$ is:",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2023",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$3\\\\pi - 10$",
+      "B": "$10 - 3\\\\pi$",
+      "C": "$10$",
+      "D": "$2\\\\pi - 10$"
+    },
+    "notes": "Find the multiple of pi closest to 10 radians, and adjust so the angle falls in [-pi/2, pi/2].",
+    "solution_text": "Let's analyze the angle in radians:\\n1) The value $10$ is close to $3\\\\pi \\\\approx 3 \\\\times 3.1416 = 9.4248$.\\n2) We need an angle $\\\\theta \\\\in [-\\\\pi/2, \\\\pi/2]$ such that $\\\\sin\\\\theta = \\\\sin 10$.\\n3) The difference $3\\\\pi - 10 \\\\approx 9.4248 - 10 = -0.575$ radians, which lies in $[-\\\\pi/2, \\\\pi/2]$.\\n4) By trigonometry: $\\\\sin(3\\\\pi - 10) = \\\\sin(\\\\pi - 10) = \\\\sin 10$.\\n5) Therefore, $\\\\sin^{-1}(\\\\sin 10) = 3\\\\pi - 10$.\\nOption A is correct.",
+    "common_mistake": "Incorrectly stating the value as 10 (Option C), forgetting that 10 is not in the principal value branch $[-\\\\pi/2, \\\\pi/2]$.",
+    "concept_slugs": [
+      "trigonometry-inverse-properties"
+    ]
+  },
+  {
+    "pattern_group": "trigonometry-inverse-properties",
+    "title": "The value of $\\\\tan\\\\left(\\\\cos^{-1}\\\\left(\\\\frac{4}{5}\\\\right) + \\\\tan^{-1}\\\\left(\\\\frac{2}{3}\\\\right)\\\\right)$ is:",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\\\frac{17}{6}$",
+      "B": "$\\\\frac{11}{6}$",
+      "C": "$\\\\frac{17}{12}$",
+      "D": "$\\\\frac{5}{6}$"
+    },
+    "notes": "Convert cos^-1(4/5) to tan^-1, and apply the formula tan(A + B) = (tan A + tan B) / (1 - tan A tan B).",
+    "solution_text": "Let's perform the conversions:\\n1) Let $\\\\theta = \\\\cos^{-1}(4/5) \\\\implies \\\\cos\\\\theta = 4/5$.\\n2) In a right triangle, this corresponds to base $= 4$ and hypotenuse $= 5$, so perpendicular $= 3$.\\n   Thus, $\\\\tan\\\\theta = 3/4 \\\\implies \\\\cos^{-1}(4/5) = \\\\tan^{-1}(3/4)$.\\n3) The expression becomes $\\\\tan(A + B)$ where $A = \\\\tan^{-1}(3/4)$ and $B = \\\\tan^{-1}(2/3)$:\\n   $\\\\tan(A+B) = \\\\frac{\\\\tan A + \\\\tan B}{1 - \\\\tan A \\\\tan B} = \\\\frac{3/4 + 2/3}{1 - (3/4)(2/3)}$.\\n4) Simplify the fraction:\\n   $\\\\tan(A+B) = \\\\frac{17/12}{1 - 6/12} = \\\\frac{17/12}{6/12} = \\\\frac{17}{6}$.\\nOption A is correct.",
+    "common_mistake": "Neglecting to convert the cosine inverse to tangent inverse, or making arithmetic errors in fraction addition.",
+    "concept_slugs": [
+      "trigonometry-inverse-properties"
+    ]
+  },
+  {
+    "pattern_group": "trigonometry-inverse-properties",
+    "title": "The value of $\\\\sin\\\\left(\\\\cot^{-1}\\\\left(\\\\cos\\\\left(\\\\tan^{-1} 1\\\\right)\\\\right)\\\\right)$ is:",
+    "difficulty": "hard",
+    "type": "pyq",
+    "source": "JEE Advanced 2022",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\\\sqrt{\\\\frac{2}{3}}$",
+      "B": "$\\\\sqrt{\\\\frac{1}{3}}$",
+      "C": "$\\\\frac{\\\\sqrt{2}}{3}$",
+      "D": "$\\\\frac{1}{3}$"
+    },
+    "notes": "Evaluate the composition of trigonometric and inverse trigonometric functions from inside out.",
+    "solution_text": "Let's evaluate step-by-step from the inside:\\n1) $\\\\tan^{-1} 1 = \\\\frac{\\\\pi}{4}$.\\n2) $\\\\cos(\\\\tan^{-1} 1) = \\\\cos\\\\left(\\\\frac{\\\\pi}{4}\\\\right) = \\\\frac{1}{\\\\sqrt{2}}$.\\n3) The expression becomes: $\\\\sin\\\\left(\\\\cot^{-1}\\\\left(\\\\frac{1}{\\\\sqrt{2}}\\\\right)\\\\right)$.\\n4) Let $\\\\theta = \\\\cot^{-1}\\\\left(\\\\frac{1}{\\\\sqrt{2}}\\\\right) \\\\implies \\\\cot\\\\theta = \\\\frac{1}{\\\\sqrt{2}} = \\\\frac{\\\\text{base}}{\\\\text{perpendicular}}$.\\n5) Hypotenuse $= \\\\sqrt{\\\\text{base}^2 + \\\\text{perpendicular}^2} = \\\\sqrt{1^2 + (\\\\sqrt{2})^2} = \\\\sqrt{3}$.\\n6) Since $\\\\sin\\\\theta = \\\\frac{\\\\text{perpendicular}}{\\\\text{hypotenuse}}$:\\n   $\\\\sin\\\\theta = \\\\frac{\\\\sqrt{2}}{\\\\sqrt{3}} = \\\\sqrt{\\\\frac{2}{3}}$.\\nOption A is correct.",
+    "common_mistake": "Incorrectly setting hypotenuse $= \\\\sqrt{1 + 2} = 3$ without taking the root, or incorrect definition of cotangent as perpendicular/base.",
+    "concept_slugs": [
+      "trigonometry-inverse-properties"
+    ]
+  },
+  {
+    "pattern_group": "trigonometry-inverse-properties",
+    "title": "The value of the expression $\\\\frac{4}{\\\\pi} \\\\left( \\\\sin^{-1}(1) + \\\\cos^{-1}(1) + \\\\tan^{-1}(1) \\\\right)$ is ________.",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "3",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Recall the principal values: sin^-1(1) = pi/2, cos^-1(1) = 0, tan^-1(1) = pi/4.",
+    "solution_text": "Let's substitute the principal values:\\n1) $\\\\sin^{-1}(1) = \\\\frac{\\\\pi}{2}$.\\n2) $\\\\cos^{-1}(1) = 0$.\\n3) $\\\\tan^{-1}(1) = \\\\frac{\\\\pi}{4}$.\\n4) Sum $= \\\\frac{\\\\pi}{2} + 0 + \\\\frac{\\\\pi}{4} = \\\\frac{3\\\\pi}{4}$.\\n5) Multiply by the factor $\\\\frac{4}{\\\\pi}$:\\n   $\\\\frac{4}{\\\\pi} \\\\times \\\\frac{3\\\\pi}{4} = 3$.\\nTherefore, the answer is 3.",
+    "common_mistake": "Incorrectly evaluating $\\\\cos^{-1}(1) = \\\\pi/2$, leading to a sum of $\\\\pi \\\\implies 4$.",
+    "concept_slugs": [
+      "trigonometry-inverse-properties"
+    ]
+  },
+  {
+    "pattern_group": "trigonometry-inverse-properties",
+    "title": "If $\\\\sin^{-1} x + \\\\sin^{-1} y + \\\\sin^{-1} z = \\\\frac{3\\\\pi}{2}$, then the value of $x^{100} + y^{100} + z^{100}$ is ________.",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2021",
+    "correct_answer": "3",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Recall that the maximum value of sin^-1(u) is pi/2. For the sum to be 3pi/2, each term must reach its maximum.",
+    "solution_text": "Let's analyze bounds:\\n1) The range of $\\\\sin^{-1} u$ is $[-\\\\pi/2, \\\\pi/2]$, which means the maximum possible value of any term is $\\\\frac{\\\\pi}{2}$.\\n2) For the sum of three terms to equal the sum of their maximums:\\n   $\\\\sin^{-1} x + \\\\sin^{-1} y + \\\\sin^{-1} z = \\\\frac{\\\\pi}{2} + \\\\frac{\\\\pi}{2} + \\\\frac{\\\\pi}{2} = \\\\frac{3\\\\pi}{2}$.\\n3) This requires each term to be at its maximum:\\n   $\\\\sin^{-1} x = \\\\frac{\\\\pi}{2} \\\\implies x = 1$.\\n   $\\\\sin^{-1} y = \\\\frac{\\\\pi}{2} \\\\implies y = 1$.\\n   $\\\\sin^{-1} z = \\\\frac{\\\\pi}{2} \\\\implies z = 1$.\\n4) Calculate the sum of powers:\\n   $1^{100} + 1^{100} + 1^{100} = 1 + 1 + 1 = 3$.\\nThe answer is 3.",
+    "common_mistake": "Confusing maximum values or assuming values of x, y, z are $1/2$.",
+    "concept_slugs": [
+      "trigonometry-inverse-properties"
+    ]
+  },
+  {
+    "pattern_group": "trigonometry-inverse-properties",
+    "title": "If $\\\\cos^{-1} x + \\\\cos^{-1} y = \\\\frac{\\\\pi}{3}$, then the value of the expression $\\\\sin^{-1} x + \\\\sin^{-1} y$ can be represented as $\\\\frac{A\\\\pi}{3}$. The value of the integer $A$ is ________.",
+    "difficulty": "hard",
+    "type": "practice",
+    "correct_answer": "2",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Use the identity sin^-1 u + cos^-1 u = pi/2 for both variables.",
+    "solution_text": "Let's substitute the identity $\\\\cos^{-1} u = \\\\frac{\\\\pi}{2} - \\\\sin^{-1} u$:\\n1) Given: $\\\\cos^{-1} x + \\\\cos^{-1} y = \\\\frac{\\\\pi}{3}$.\\n2) Replace terms:\\n   $\\\\left(\\\\frac{\\\\pi}{2} - \\\\sin^{-1} x\\\\right) + \\\\left(\\\\frac{\\\\pi}{2} - \\\\sin^{-1} y\\\\right) = \\\\frac{\\\\pi}{3}$.\\n3) Combine terms:\\n   \\\\pi - (\\\\sin^{-1} x + \\\\sin^{-1} y) = \\\\frac{\\\\pi}{3}$.\\n4) Solve for the target sum:\\n   $\\\\sin^{-1} x + \\\\sin^{-1} y = \\\\pi - \\\\frac{\\\\pi}{3} = \\\\frac{2\\\\pi}{3}$.\\n5) Comparing with $\\\\frac{A\\\\pi}{3}$, we get $A = 2$.\\nThe answer is 2.",
+    "common_mistake": "Neglecting to divide by 3 or signs errors in subtraction.",
+    "concept_slugs": [
+      "trigonometry-inverse-properties"
+    ]
+  },
+  {
+    "pattern_group": "trigonometry-inverse-relations",
+    "title": "The addition formula $\\\\tan^{-1} x + \\\\tan^{-1} y = \\\\tan^{-1}\\\\left(\\\\frac{x+y}{1-xy}\\\\right)$ is valid if and only if the product $xy$ satisfies:",
+    "difficulty": "easy",
+    "type": "concept",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$xy > 1$",
+      "B": "$xy < 1$",
+      "C": "$xy = 1$",
+      "D": "$xy \\\\le 0$"
+    },
+    "notes": "Recall the principal range constraints of the tangent function.",
+    "solution_text": "The principal range of $\\\\tan^{-1}$ is $(-\\\\pi/2, \\\\pi/2)$:\\n1) If $xy < 1$, the sum of the angles remains within the principal interval, so the standard formula holds without adjustments.\\n2) If $xy > 1$ and $x,y > 0$, the sum exceeds $\\\\pi/2$, requiring an addition of $\\\\pi$ to the right side.\\n3) If $xy > 1$ and $x,y < 0$, a subtraction of $\\\\pi$ is required.\\nOption B is correct.",
+    "common_mistake": "Assuming the relation is unconditionally true for all real numbers.",
+    "concept_slugs": [
+      "trigonometry-inverse-relations"
+    ]
+  },
+  {
+    "pattern_group": "trigonometry-inverse-relations",
+    "title": "The value of the expression $\\\\tan^{-1}\\\\left(\\\\frac{1}{2}\\\\right) + \\\\tan^{-1}\\\\left(\\\\frac{1}{3}\\\\right)$ is:",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\\\frac{\\\\pi}{2}$",
+      "B": "$\\\\frac{\\\\pi}{4}$",
+      "C": "$\\\\frac{\\\\pi}{3}$",
+      "D": "$\\\\frac{\\\\pi}{6}$"
+    },
+    "notes": "Verify that xy < 1 first, then apply the tangent inverse sum formula.",
+    "solution_text": "Let's verify $xy$ first:\\n1) $x = 1/2$, $y = 1/3 \\\\implies xy = 1/6 < 1$. We can use the standard formula:\\n   $\\\\tan^{-1} x + \\\\tan^{-1} y = \\\\tan^{-1}\\\\left(\\\\frac{x+y}{1-xy}\\\\right)$.\\n2) Substitute values:\\n   $\\\\tan^{-1}(1/2) + \\\\tan^{-1}(1/3) = \\\\tan^{-1}\\\\left(\\\\frac{1/2 + 1/3}{1 - 1/6}\\\\right) = \\\\tan^{-1}\\\\left(\\\\frac{5/6}{5/6}\\\\right) = \\\\tan^{-1}(1)$.\\n3) Since the principal value of $\\\\tan^{-1}(1) = \\\\frac{\\\\pi}{4}$:\\n   Sum $= \\\\frac{\\\\pi}{4}$.\\nOption B is correct.",
+    "common_mistake": "Incorrectly calculating the numerator or denominator, leading to a wrong angle like $\\\\pi/3$.",
+    "concept_slugs": [
+      "trigonometry-inverse-relations"
+    ]
+  },
+  {
+    "pattern_group": "trigonometry-inverse-relations",
+    "title": "The sum of the infinite telescoping series $\\\\sum_{n=1}^{\\\\infty} \\\\tan^{-1}\\\\left(\\\\frac{1}{1 + n + n^2}\\\\right)$ is:",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2022",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\\\frac{\\\\pi}{4}$",
+      "B": "$\\\\frac{\\\\pi}{2}$",
+      "C": "$\\\\frac{\\\\pi}{3}$",
+      "D": "$\\\\pi$"
+    },
+    "notes": "Rewrite the argument as ((n+1) - n) / (1 + n*(n+1)) and evaluate the telescoping sum.",
+    "solution_text": "Let's find the general term $T_n$:\\n1) $T_n = \\\\tan^{-1}\\\\left(\\\\frac{1}{1 + n(n+1)}\\\\right) = \\\\tan^{-1}\\\\left(\\\\frac{(n+1) - n}{1 + n(n+1)}\\\\right)$.\\n2) Apply identity $\\\\tan^{-1}\\\\left(\\\\frac{a-b}{1+ab}\\\\right) = \\\\tan^{-1} a - \\\\tan^{-1} b$:\\n   $T_n = \\\\tan^{-1}(n+1) - \\\\tan^{-1}(n)$.\\n3) Write the partial sum of the first $N$ terms $S_N$:\\n   $S_N = \\\\sum_{n=1}^N [\\\\tan^{-1}(n+1) - \\\\tan^{-1}(n)]$\\n   $S_N = [\\\\tan^{-1}(2) - \\\\tan^{-1}(1)] + [\\\\tan^{-1}(3) - \\\\tan^{-1}(2)] + \\\\ldots + [\\\\tan^{-1}(N+1) - \\\\tan^{-1}(N)]$.\\n4) After cancellation, only the boundary terms remain:\\n   $S_N = \\\\tan^{-1}(N+1) - \\\\tan^{-1}(1)$.\\n5) Take the limit as $N \\\\to \\\\infty$:\\n   $S_{\\\\infty} = \\\\lim_{N \\\\to \\\\infty} \\\\tan^{-1}(N+1) - \\\\tan^{-1}(1) = \\\\frac{\\\\pi}{2} - \\\\frac{\\\\pi}{4} = \\\\frac{\\\\pi}{4}$.\\nOption A is correct.",
+    "common_mistake": "Neglecting the $\\\\tan^{-1}(1)$ term, which results in $\\\\pi/2$ (Option B).",
+    "concept_slugs": [
+      "trigonometry-inverse-relations"
+    ]
+  },
+  {
+    "pattern_group": "trigonometry-inverse-relations",
+    "title": "The value of the expression $\\\\tan^{-1}(2) + \\\\tan^{-1}(3)$ is:",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\\\frac{3\\\\pi}{4}$",
+      "B": "$-\\\\frac{\\\\pi}{4}$",
+      "C": "$\\\\frac{\\\\pi}{4}$",
+      "D": "$\\\\frac{5\\\\pi}{4}$"
+    },
+    "notes": "Since xy = 6 > 1 and x, y > 0, apply the formula tan^-1 x + tan^-1 y = pi + tan^-1((x+y)/(1-xy)).",
+    "solution_text": "Let's check the product $xy$:\\n1) $x = 2$ and $y = 3 \\\\implies xy = 6 > 1$.\\n2) Since $x, y > 0$ and $xy > 1$, we use the adjusted sum formula:\\n   $\\\\tan^{-1} x + \\\\tan^{-1} y = \\\\pi + \\\\tan^{-1}\\\\left(\\\\frac{x+y}{1-xy}\\\\right)$.\\n3) Substitute the values:\\n   $\\\\tan^{-1}(2) + \\\\tan^{-1}(3) = \\\\pi + \\\\tan^{-1}\\\\left(\\\\frac{2+3}{1-6}\\\\right) = \\\\pi + \\\\tan^{-1}\\\\left(\\\\frac{5}{-5}\\\\right) = \\\\pi + \\\\tan^{-1}(-1)$.\\n4) Since $\\\\tan^{-1}(-1) = -\\\\frac{\\\\pi}{4}$:\\n   Sum $= \\\\pi - \\\\frac{\\\\pi}{4} = \\\\frac{3\\\\pi}{4}$.\\nOption A is correct.",
+    "common_mistake": "Neglecting to add $\\\\pi$, which yields $-\\\\frac{\\\\pi}{4}$ (Option B) or $\\\\frac{\\\\pi}{4}$ (Option C).",
+    "concept_slugs": [
+      "trigonometry-inverse-relations"
+    ]
+  },
+  {
+    "pattern_group": "trigonometry-inverse-relations",
+    "title": "The sum of the infinite series $\\\\sum_{k=1}^{\\\\infty} \\\\text{cot}^{-1}(2k^2)$ is:",
+    "difficulty": "hard",
+    "type": "pyq",
+    "source": "JEE Advanced 2021",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\\\frac{\\\\pi}{4}$",
+      "B": "$\\\\frac{\\\\pi}{2}$",
+      "C": "$\\\\frac{\\\\pi}{3}$",
+      "D": "$\\\\pi$"
+    },
+    "notes": "Convert cot^-1(2k^2) to tan^-1(1/(2k^2)) and multiply numerator and denominator by 2 to write as telescoping terms.",
+    "solution_text": "Let's find the general term $T_k$:\\n1) $T_k = \\\\text{cot}^{-1}(2k^2) = \\\\tan^{-1}\\\\left(\\\\frac{1}{2k^2}\\\\right)$.\\n2) Multiply numerator and denominator of the argument by 2:\\n   $T_k = \\\\tan^{-1}\\\\left(\\\\frac{2}{4k^2}\\\\right) = \\\\tan^{-1}\\\\left(\\\\frac{(2k+1) - (2k-1)}{1 + (4k^2 - 1)}\\\\right) = \\\\tan^{-1}\\\\left(\\\\frac{(2k+1) - (2k-1)}{1 + (2k-1)(2k+1)}\\\\right)$.\\n3) Apply the subtraction formula:\\n   $T_k = \\\\tan^{-1}(2k+1) - \\\\tan^{-1}(2k-1)$.\\n4) Write the sum $S_N = \\\\sum_{k=1}^N T_k$:\\n   $S_N = [\\\\tan^{-1}(3) - \\\\tan^{-1}(1)] + [\\\\tan^{-1}(5) - \\\\tan^{-1}(3)] + \\\\ldots + [\\\\tan^{-1}(2N+1) - \\\\tan^{-1}(2N-1)]$.\\n5) After cancellation:\\n   $S_N = \\\\tan^{-1}(2N+1) - \\\\tan^{-1}(1)$.\\n6) Taking the limit as $N \\\\to \\\\infty$:\\n   $S_{\\\\infty} = \\\\frac{\\\\pi}{2} - \\\\frac{\\\\pi}{4} = \\\\frac{\\\\pi}{4}$.\\nOption A is correct.",
+    "common_mistake": "Neglecting the scaling factor 2 when rewriting the fraction, leading to algebra errors.",
+    "concept_slugs": [
+      "trigonometry-inverse-relations"
+    ]
+  },
+  {
+    "pattern_group": "trigonometry-inverse-relations",
+    "title": "If $2 \\\\tan^{-1}\\\\left(\\\\frac{1}{3}\\\\right) = \\\\tan^{-1}(x)$, then the value of $4x$ is ________.",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "3",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Use the double-angle formula for tangent inverse: 2 tan^-1 y = tan^-1(2y / (1-y^2)).",
+    "solution_text": "Let's apply the double-angle formula for $y = 1/3$:\\n1) $2 \\\\tan^{-1}(1/3) = \\\\tan^{-1}\\\\left(\\\\frac{2 \\\\cdot (1/3)}{1 - (1/3)^2}\\\\right) = \\\\tan^{-1}\\\\left(\\\\frac{2/3}{1 - 1/9}\\\\right) = \\\\tan^{-1}\\\\left(\\\\frac{2/3}{8/9}\\\\right)$.\\n2) Simplify the argument:\\n   $\\\\frac{2}{3} \\\\times \\\\frac{9}{8} = \\\\frac{3}{4} \\\\implies 2 \\\\tan^{-1}(1/3) = \\\\tan^{-1}\\\\left(\\\\frac{3}{4}\\\\right)$.\\n3) Thus, $x = \\\\frac{3}{4}$.\\n4) We need $4x = 4 \\\\times \\\\frac{3}{4} = 3$.\\nThe answer is 3.",
+    "common_mistake": "Neglecting to square $1/3$ in the denominator, resulting in a wrong value for $x$.",
+    "concept_slugs": [
+      "trigonometry-inverse-relations"
+    ]
+  },
+  {
+    "pattern_group": "trigonometry-inverse-relations",
+    "title": "If $\\\\sin^{-1}\\\\left(\\\\frac{3}{5}\\\\right) + \\\\cos^{-1}\\\\left(\\\\frac{12}{13}\\\\right) = \\\\sin^{-1}(x)$, then the value of $65x$ is ________.",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2023",
+    "correct_answer": "56",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Convert the angles to sine representation, and apply the formula sin(A + B) = sin A cos B + cos A sin B.",
+    "solution_text": "Let's define $A = \\\\sin^{-1}(3/5)$ and $B = \\\\cos^{-1}(12/13)$:\\n1) This gives:\\n   - $\\\\sin A = 3/5 \\\\implies \\\\cos A = 4/5$.\\n   - $\\\\cos B = 12/13 \\\\implies \\\\sin B = 5/13$.\\n2) We have $A + B = \\\\sin^{-1}(x) \\\\implies x = \\\\sin(A + B)$.\\n3) Apply the sum of angles formula:\\n   $\\\\sin(A + B) = \\\\sin A \\\\cos B + \\\\cos A \\\\sin B$\\n   $x = \\\\left(\\\\frac{3}{5}\\\\right)\\\\left(\\\\frac{12}{13}\\\\right) + \\\\left(\\\\frac{4}{5}\\\\right)\\\\left(\\\\frac{5}{13}\\\\right) = \\\\frac{36}{65} + \\\\frac{20}{65} = \\\\frac{56}{65}$.\\n4) We need $65x = 65 \\\\times \\\\frac{56}{65} = 56$.\\nThe answer is 56.",
+    "common_mistake": "Subtracting terms instead of adding, which calculates $\\\\sin(A-B)$ and yields $16/65$.",
+    "concept_slugs": [
+      "trigonometry-inverse-relations"
+    ]
+  },
+  {
+    "pattern_group": "trigonometry-inverse-relations",
+    "title": "If the telescoping sum $\\\\sum_{r=1}^5 \\\\tan^{-1}\\\\left(\\\\frac{1}{r^2 + r + 1}\\\\right) = \\\\tan^{-1}\\\\left(\\\\frac{A}{7}\\\\right)$, then the value of the integer $A$ is ________.",
+    "difficulty": "hard",
+    "type": "practice",
+    "correct_answer": "5",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Find the partial sum up to r = 5 using the telescoping identity tan^-1(r+1) - tan^-1(r).",
+    "solution_text": "Let's write the sum of the telescoping terms:\\n1) The general term is $T_r = \\\\tan^{-1}(r+1) - \\\\tan^{-1}(r)$.\\n2) The sum from $r=1$ to $5$ is:\\n   $S_5 = \\\\tan^{-1}(6) - \\\\tan^{-1}(1)$.\\n3) Apply the tangent subtraction formula:\\n   $S_5 = \\\\tan^{-1}\\\\left(\\\\frac{6 - 1}{1 + 6 \\\\cdot 1}\\\\right) = \\\\tan^{-1}\\\\left(\\\\frac{5}{7}\\\\right)$.\\n4) Comparing with $\\\\tan^{-1}\\\\left(\\\\frac{A}{7}\\\\right)$, we get $A = 5$.\\nThe answer is 5.",
+    "common_mistake": "Summing terms up to 6 instead of 5, or incorrect algebraic division.",
+    "concept_slugs": [
+      "trigonometry-inverse-relations"
+    ]
+  },
+  {
+    "pattern_group": "trigonometry-properties-triangles",
+    "title": "In any triangle $ABC$ with circumradius $R$, the Sine Rule is represented as:",
+    "difficulty": "easy",
+    "type": "concept",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\\\frac{a}{\\\\sin A} = \\\\frac{b}{\\\\sin B} = \\\\frac{c}{\\\\sin C} = 2R$",
+      "B": "$\\\\frac{\\\\sin A}{a} = \\\\frac{\\\\sin B}{b} = \\\\frac{\\\\sin C}{c} = R$",
+      "C": "$a \\\\sin A = b \\\\sin B = c \\\\sin C = 2R$",
+      "D": "$\\\\frac{a}{\\\\sin A} = \\\\frac{b}{\\\\sin B} = \\\\frac{c}{\\\\sin C} = R$"
+    },
+    "notes": "Recall the circumradius scaling factor in the Sine Rule.",
+    "solution_text": "In a triangle $ABC$, by construction of the circumcircle:\\n1) The angle subtended by the side $a$ at the center is $2A$, yielding the relationship $a = 2R \\\\sin A$.\\n2) Thus, $\\\\frac{a}{\\\\sin A} = 2R$.\\n3) By symmetry, this holds for all three sides: $\\\\frac{a}{\\\\sin A} = \\\\frac{b}{\\\\sin B} = \\\\frac{c}{\\\\sin C} = 2R$.\\nOption A is correct.",
+    "common_mistake": "Forgetting the factor of 2, identifying the ratio as equal to $R$ (Option D).",
+    "concept_slugs": [
+      "trigonometry-properties-triangles"
+    ]
+  },
+  {
+    "pattern_group": "trigonometry-properties-triangles",
+    "title": "In a triangle $ABC$, if side lengths are $a = 2$, $b = 3$, and $\\\\cos C = \\\\frac{11}{12}$, then the side length $c$ is:",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\\\sqrt{2}$",
+      "B": "$2$",
+      "C": "$\\\\sqrt{3}$",
+      "D": "$3$"
+    },
+    "notes": "Apply the Cosine Rule: c^2 = a^2 + b^2 - 2ab cos C.",
+    "solution_text": "Let's apply the Cosine Rule for side $c$:\\n1) $c^2 = a^2 + b^2 - 2ab \\\\cos C$.\\n2) Substitute the given values:\\n   $c^2 = 2^2 + 3^2 - 2(2)(3)\\\\left(\\\\frac{11}{12}\\\\right)$\\n   $c^2 = 4 + 9 - 12\\\\left(\\\\frac{11}{12}\\\\right) = 13 - 11 = 2$.\\n3) Since length must be positive, $c = \\\\sqrt{2}$.\\nOption A is correct.",
+    "common_mistake": "Adding instead of subtracting the last term, leading to $c^2 = 24$.",
+    "concept_slugs": [
+      "trigonometry-properties-triangles"
+    ]
+  },
+  {
+    "pattern_group": "trigonometry-properties-triangles",
+    "title": "In a triangle $ABC$, if the side lengths are in the ratio $3:4:5$, the ratio of the sines of the angles, $\\\\sin A : \\\\sin B : \\\\sin C$, is:",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2022",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$3:4:5$",
+      "B": "$4:3:5$",
+      "C": "$5:4:3$",
+      "D": "None of these"
+    },
+    "notes": "Recall that by Sine Rule, side lengths are directly proportional to the sines of their opposite angles.",
+    "solution_text": "Let's apply the Sine Rule:\\n1) We have $\\\\frac{a}{\\\\sin A} = \\\\frac{b}{\\\\sin B} = \\\\frac{c}{\\\\sin C} = k \\\\implies a = k\\\\sin A, b = k\\\\sin B, c = k\\\\sin C$.\\n2) Therefore, the ratio of sines is equal to the ratio of the opposite side lengths:\\n   $\\\\sin A : \\\\sin B : \\\\sin C = a : b : c$.\\n3) Given $a:b:c = 3:4:5$, the ratio of the sines is also $3:4:5$.\\nOption A is correct.",
+    "common_mistake": "Thinking the sines are inversely proportional to side lengths, attempting to write $1/3:1/4:1/5$.",
+    "concept_slugs": [
+      "trigonometry-properties-triangles"
+    ]
+  },
+  {
+    "pattern_group": "trigonometry-properties-triangles",
+    "title": "In any triangle $ABC$, the expression $(b+c)\\\\cos A + (c+a)\\\\cos B + (a+b)\\\\cos C$ simplifies to:",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$a+b+c$",
+      "B": "$2(a+b+c)$",
+      "C": "$\\\\frac{1}{2}(a+b+c)$",
+      "D": "$0$"
+    },
+    "notes": "Expand the expression and group terms to apply the Projection Rule: a = b cos C + c cos B.",
+    "solution_text": "Let's expand the terms and regroup them:\\n1) Expression $= b\\\\cos A + c\\\\cos A + c\\\\cos B + a\\\\cos B + a\\\\cos C + b\\\\cos C$.\\n2) Group the termsCyclically:\\n   Expression $= (b\\\\cos A + a\\\\cos B) + (c\\\\cos A + a\\\\cos C) + (c\\\\cos B + b\\\\cos C)$.\\n3) Apply the Projection Rules:\\n   - $c = a\\\\cos B + b\\\\cos A$\\n   - $b = a\\\\cos C + c\\\\cos A$\\n   - $a = b\\\\cos C + c\\\\cos A$.\\n4) Substitute these back:\\n   Expression $= c + b + a = a + b + c$.\\nOption A is correct.",
+    "common_mistake": "Confusing the cosine projection rule components or signs, resulting in 0 (Option D).",
+    "concept_slugs": [
+      "trigonometry-properties-triangles"
+    ]
+  },
+  {
+    "pattern_group": "trigonometry-properties-triangles",
+    "title": "In a triangle $ABC$, if $a=4$, $b=3$, and the angle $C = 60^\\\\circ$, then the area of the triangle is:",
+    "difficulty": "hard",
+    "type": "pyq",
+    "source": "JEE Advanced 2020",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$3\\\\sqrt{3}$",
+      "B": "$6\\\\sqrt{3}$",
+      "C": "$4\\\\sqrt{3}$",
+      "D": "$2\\\\sqrt{3}$"
+    },
+    "notes": "Use the triangle area formula: Area = 1/2 * a * b * sin C.",
+    "solution_text": "Let's apply the area formula:\\n1) $\\\\text{Area} = \\\\frac{1}{2} a b \\\\sin C$.\\n2) Substitute the given values:\\n   $\\\\text{Area} = \\\\frac{1}{2} \\\\times 4 \\\\times 3 \\\\times \\\\sin 60^\\\\circ$.\\n3) Since $\\\\sin 60^\\\\circ = \\\\frac{\\\\sqrt{3}}{2}$:\\n   $\\\\text{Area} = 6 \\\\times \\\\frac{\\\\sqrt{3}}{2} = 3\\\\sqrt{3}$.\\nOption A is correct.",
+    "common_mistake": "Forgetting the factor of $1/2$, resulting in $6\\\\sqrt{3}$ (Option B).",
+    "concept_slugs": [
+      "trigonometry-properties-triangles"
+    ]
+  },
+  {
+    "pattern_group": "trigonometry-properties-triangles",
+    "title": "In a triangle $ABC$, if side lengths are $a = 5, b = 7, c = 8$, then the value of $16 \\\\cos B$ is ________.",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "8",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Use the Cosine Rule: cos B = (a^2 + c^2 - b^2) / 2ac.",
+    "solution_text": "Let's apply the Cosine Rule for angle $B$:\\n1) $\\\\cos B = \\\\frac{a^2 + c^2 - b^2}{2ac}$.\\n2) Substitute the given values $a=5$, $b=7$, and $c=8$:\\n   $\\\\cos B = \\\\frac{5^2 + 8^2 - 7^2}{2(5)(8)} = \\\\frac{25 + 64 - 49}{80} = \\\\frac{40}{80} = \\\\frac{1}{2}$.\\n3) We need $16 \\\\cos B = 16 \\\\times \\\\frac{1}{2} = 8$.\\nThe answer is 8.",
+    "common_mistake": "Incorrectly subtracting terms in the numerator, or using the wrong side variables in the formula denominator.",
+    "concept_slugs": [
+      "trigonometry-properties-triangles"
+    ]
+  },
+  {
+    "pattern_group": "trigonometry-properties-triangles",
+    "title": "In a right-angled triangle $ABC$, if side lengths are $a = 6$, $b = 8$, and the hypotenuse is $c = 10$, then the circumradius $R$ of the triangle is ________.",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2021",
+    "correct_answer": "5",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "In a right-angled triangle, the circumradius R is equal to half of the hypotenuse length.",
+    "solution_text": "Let's analyze geometrically:\\n1) By the Sine Rule: $2R = \\\\frac{c}{\\\\sin C}$.\\n2) Since the triangle is right-angled at $C$, the angle $C = 90^\\\\circ \\\\implies \\\\sin C = 1$.\\n3) Thus, $2R = c \\\\implies R = \\\\frac{c}{2}$.\\n4) Given the hypotenuse $c = 10$:\\n   $R = \\\\frac{10}{2} = 5$.\\nTherefore, the circumradius is 5.",
+    "common_mistake": "Calculating $R = a b c / 4\\\\Delta$ and making arithmetic errors (though it works, it is slow).",
+    "concept_slugs": [
+      "trigonometry-properties-triangles"
+    ]
+  },
+  {
+    "pattern_group": "trigonometry-properties-triangles",
+    "title": "In a triangle $ABC$, if side lengths are $a = 13, b = 14, c = 15$, then the inradius $r$ of the triangle is ________.",
+    "difficulty": "hard",
+    "type": "practice",
+    "correct_answer": "4",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Use Heron's formula to find the area delta, calculate semi-perimeter s, and apply r = delta / s.",
+    "solution_text": "Let's find the semi-perimeter and area:\\n1) Semi-perimeter $s = \\\\frac{13 + 14 + 15}{2} = 21$.\\n2) Area $\\\\Delta$ using Heron's formula:\\n   $\\\\Delta = \\\\sqrt{s(s-a)(s-b)(s-c)} = \\\\sqrt{21(21-13)(21-14)(21-15)} = \\\\sqrt{21 \\\\times 8 \\\\times 7 \\\\times 6}$.\\n3) Simplify the surd:\\n   $\\\\Delta = \\\\sqrt{(7 \\\\times 3) \\\\times 8 \\\\times 7 \\\\times (2 \\\\times 3)} = \\\\sqrt{7^2 \\\\times 3^2 \\\\times 16} = 7 \\\\times 3 \\\\times 4 = 84$.\\n4) Calculate inradius $r$ using the formula $r = \\\\frac{\\\\Delta}{s}$:\\n   $r = \\\\frac{84}{21} = 4$.\\nThe inradius is 4.",
+    "common_mistake": "Making errors in Heron's square root calculation or dividing $s$ by $\\\\Delta$ instead of $\\\\Delta$ by $s$.",
+    "concept_slugs": [
+      "trigonometry-properties-triangles"
+    ]
+  },
+  {
+    "pattern_group": "trigonometry-heights-distances",
+    "title": "The angle between the observer's line of sight and the horizontal plane when the observed object is above the observer's level is called the:",
+    "difficulty": "easy",
+    "type": "concept",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Angle of elevation",
+      "B": "Angle of depression",
+      "C": "Angle of inclination",
+      "D": "Horizontal angle"
+    },
+    "notes": "This is the basic definition of angular terms in height and distance geometry.",
+    "solution_text": "By definition:\\n1) When an observer looks upwards at an object, the line of sight is above the horizontal line.\\n2) The angle between these two lines is called the angle of elevation.\\nOption A is correct.",
+    "common_mistake": "Confusing it with the angle of depression (Option B), which is used when looking downwards at an object.",
+    "concept_slugs": [
+      "trigonometry-heights-distances"
+    ]
+  },
+  {
+    "pattern_group": "trigonometry-heights-distances",
+    "title": "A vertical pole of height 10 meters casts a shadow of length $\\\\frac{10}{\\\\sqrt{3}}$ meters on the ground. The angle of elevation of the sun is:",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$60^\\\\circ$",
+      "B": "$30^\\\\circ$",
+      "C": "$45^\\\\circ$",
+      "D": "$90^\\\\circ$"
+    },
+    "notes": "Represent as a right triangle and use tan(theta) = opposite / adjacent.",
+    "solution_text": "Let $\\\\theta$ be the angle of elevation of the sun:\\n1) The vertical height (opposite side) is $10$ meters.\\n2) The shadow length (adjacent side) is $\\\\frac{10}{\\\\sqrt{3}}$ meters.\\n3) Apply tangent:\\n   $\\\\tan \\\\theta = \\\\frac{\\\\text{height}}{\\\\text{shadow}} = \\\\frac{10}{10/\\\\sqrt{3}} = \\\\sqrt{3}$.\\n4) Since $\\\\tan 60^\\\\circ = \\\\sqrt{3}$, we have $\\\\theta = 60^\\\\circ$.\\nOption A is correct.",
+    "common_mistake": "Setting $\\\\tan \\\\theta = \\\\text{shadow}/\\\\text{height} = 1/\\\\sqrt{3} \\\\implies 30^\\\\circ$ (Option B), which is incorrect.",
+    "concept_slugs": [
+      "trigonometry-heights-distances"
+    ]
+  },
+  {
+    "pattern_group": "trigonometry-heights-distances",
+    "title": "A tower stands vertically on a horizontal ground. From a point on the ground 30 meters away from the foot of the tower, the angle of elevation of its top is $30^\\\\circ$. The height of the tower is:",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2023",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$10\\\\sqrt{3}$ m",
+      "B": "$20\\\\sqrt{3}$ m",
+      "C": "$15$ m",
+      "D": "$30$ m"
+    },
+    "notes": "Define height h and apply tan 30 degrees = h / 30.",
+    "solution_text": "Let $h$ be the height of the tower:\\n1) Distance from foot $= 30$ meters.\\n2) Angle of elevation $= 30^\\\\circ$.\\n3) $\\\\tan 30^\\\\circ = \\\\frac{h}{30} \\\\implies h = 30 \\\\tan 30^\\\\circ$.\\n4) Substitute $\\\\tan 30^\\\\circ = \\\\frac{1}{\\\\sqrt{3}}$:\\n   $h = \\\\frac{30}{\\\\sqrt{3}} = 10\\\\sqrt{3}$ meters.\\nOption A is correct.",
+    "common_mistake": "Multiplying by $\\\\sqrt{3}$ instead of dividing, leading to $30\\\\sqrt{3}$ or other errors.",
+    "concept_slugs": [
+      "trigonometry-heights-distances"
+    ]
+  },
+  {
+    "pattern_group": "trigonometry-heights-distances",
+    "title": "The angles of elevation of the top of a tower from two points on the ground at distances $a$ and $b$ (where $a, b > 0$) from its foot, in the same straight line, are complementary. The height of the tower is:",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\\\sqrt{ab}$",
+      "B": "$ab$",
+      "C": "$\\\\sqrt{\\\\frac{a}{b}}$",
+      "D": "$a+b$"
+    },
+    "notes": "Let height be h and angles be theta and 90 - theta. Write two equations in tangent.",
+    "solution_text": "Let $h$ be the height of the tower, and $\\\\theta$, $90^\\\\circ - \\\\theta$ be the complementary angles of elevation:\\n1) From distance $a$: $\\\\tan \\\\theta = \\\\frac{h}{a}$.\\n2) From distance $b$: $\\\\tan(90^\\\\circ - \\\\theta) = \\\\frac{h}{b} \\\\implies \\\\cot \\\\theta = \\\\frac{h}{b}$.\\n3) Multiply the two equations together:\\n   $\\\\tan \\\\theta \\\\cdot \\\\cot \\\\theta = \\\\left(\\\\frac{h}{a}\\\\right) \\\\left(\\\\frac{h}{b}\\\\right)$.\\n4) Since $\\\\tan \\\\theta \\\\cot \\\\theta = 1$:\\n   $1 = \\\\frac{h^2}{ab} \\\\implies h^2 = ab \\\\implies h = \\\\sqrt{ab}$.\\nOption A is correct.",
+    "common_mistake": "Adding the equations instead of multiplying them, leading to incorrect forms like Option D.",
+    "concept_slugs": [
+      "trigonometry-heights-distances"
+    ]
+  },
+  {
+    "pattern_group": "trigonometry-heights-distances",
+    "title": "A person standing on the bank of a river observes that the angle of elevation of the top of a tree on the opposite bank is $60^\\\\circ$. When he retires 40 meters from the bank, he finds the angle of elevation to be $30^\\\\circ$. The width of the river is:",
+    "difficulty": "hard",
+    "type": "pyq",
+    "source": "JEE Advanced 2021",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "20 m",
+      "B": "10 m",
+      "C": "30 m",
+      "D": "40 m"
+    },
+    "notes": "Let height be h and width be w. Set up two tangent equations for the two observer locations.",
+    "solution_text": "Let $h$ be the height of the tree, and $w$ be the width of the river:\\n1) From the bank: $\\\\tan 60^\\\\circ = \\\\frac{h}{w} \\\\implies h = w\\\\sqrt{3}$.\\n2) From 40m back: $\\\\tan 30^\\\\circ = \\\\frac{h}{w + 40} \\\\implies h = \\\\frac{w + 40}{\\\\sqrt{3}}$.\\n3) Equate the two expressions for $h$:\\n   $w\\\\sqrt{3} = \\\\frac{w + 40}{\\\\sqrt{3}} \\\\implies 3w = w + 40$.\\n4) Solve for $w$:\\n   $2w = 40 \\\\implies w = 20$ meters.\\nOption A is correct.",
+    "common_mistake": "Confusing angles and setting $h/w = \\\\tan 30^\\\\circ$, resulting in a wrong width.",
+    "concept_slugs": [
+      "trigonometry-heights-distances"
+    ]
+  },
+  {
+    "pattern_group": "trigonometry-heights-distances",
+    "title": "A ladder leaning against a vertical wall makes an angle of $60^\\\\circ$ with the ground. If the foot of the ladder is exactly 5 meters away from the wall, then the length of the ladder in meters is ________.",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "10",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Identify adjacent side = 5, hypotenuse = length L, and angle = 60 degrees. Apply cos 60 = 5 / L.",
+    "solution_text": "Let $L$ be the length of the ladder:\\n1) We have the adjacent side (distance to wall) $= 5$ meters.\\n2) The angle of inclination with ground is $60^\\\\circ$.\\n3) The cosine ratio relates adjacent side and hypotenuse:\\n   $\\\\cos 60^\\\\circ = \\\\frac{\\\\text{adjacent}}{\\\\text{hypotenuse}} = \\\\frac{5}{L}$.\\n4) Substitute $\\\\cos 60^\\\\circ = \\\\frac{1}{2}$:\\n   $\\\\frac{1}{2} = \\\\frac{5}{L} \\\\implies L = 10$ meters.\\nThe length of the ladder is 10.",
+    "common_mistake": "Using sine instead of cosine, resulting in a height calculation instead of length.",
+    "concept_slugs": [
+      "trigonometry-heights-distances"
+    ]
+  },
+  {
+    "pattern_group": "trigonometry-heights-distances",
+    "title": "From the top of a lighthouse 60 meters high, the angles of depression of two ships on the same side of it are $30^\\\\circ$ and $45^\\\\circ$. If the distance between the ships is $D$ meters, then the value of $\\\\frac{D}{\\\\sqrt{3}-1}$ is ________.",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2022",
+    "correct_answer": "60",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Define ship distances as x1 and x2 from lighthouse base. Write expressions using cotangents.",
+    "solution_text": "Let $x_1$ and $x_2$ be the horizontal distances of the two ships from the base of the lighthouse ($x_2 > x_1$):\\n1) For the closer ship ($45^\\\\circ$ depression):\\n   $\\\\tan 45^\\\\circ = \\\\frac{60}{x_1} \\\\implies x_1 = 60$ meters.\\n2) For the farther ship ($30^\\\\circ$ depression):\\n   $\\\\tan 30^\\\\circ = \\\\frac{60}{x_2} \\\\implies x_2 = 60\\\\sqrt{3}$ meters.\\n3) The distance between the ships is:\\n   $D = x_2 - x_1 = 60\\\\sqrt{3} - 60 = 60(\\\\sqrt{3}-1)$ meters.\\n4) We need the value of:\\n   $\\\\frac{D}{\\\\sqrt{3}-1} = \\\\frac{60(\\\\sqrt{3}-1)}{\\\\sqrt{3}-1} = 60$.\\nThe answer is 60.",
+    "common_mistake": "Adding the distances instead of subtracting them, or using wrong tangent values.",
+    "concept_slugs": [
+      "trigonometry-heights-distances"
+    ]
+  },
+  {
+    "pattern_group": "trigonometry-heights-distances",
+    "title": "A vertical tower stands on a horizontal plane and is surmounted by a vertical flagstaff of height 6 meters. At a point on the plane, the angle of elevation of the bottom of the flagstaff is $30^\\\\circ$ and that of the top of the flagstaff is $60^\\\\circ$. The height of the tower in meters is ________.",
+    "difficulty": "hard",
+    "type": "practice",
+    "correct_answer": "3",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Let height of tower be h and distance of point be x. Set up two tangent equations.",
+    "solution_text": "Let $h$ be the height of the tower, and $x$ be the distance of the point on the ground from the base of the tower:\\n1) For the bottom of the flagstaff (which is the top of the tower):\\n   $\\\\tan 30^\\\\circ = \\\\frac{h}{x} \\\\implies x = h\\\\sqrt{3}$.\\n2) For the top of the flagstaff (height is $h + 6$):\\n   $\\\\tan 60^\\\\circ = \\\\frac{h + 6}{x} \\\\implies \\\\sqrt{3} = \\\\frac{h+6}{h\\\\sqrt{3}}$.\\n3) Solve for $h$:\\n   $\\\\sqrt{3} \\\\cdot h\\\\sqrt{3} = h + 6 \\\\implies 3h = h + 6$.\\n   $2h = 6 \\\\implies h = 3$ meters.\\nThe height of the tower is 3.",
+    "common_mistake": "Confusing the tower height with flagstaff height, or incorrect algebraic substitution.",
+    "concept_slugs": [
+      "trigonometry-heights-distances"
+    ]
+  }
+]
