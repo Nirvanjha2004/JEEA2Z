@@ -114,12 +114,8 @@ export default function QuestionRow({ question, index, onStatusChange, onOpenNot
                 }`}
                 title={title.replace(/\$[^$]*\$/g, '').replace(/\\[a-zA-Z]+/g, '').trim()}
               >
-                {/* Height-clip to 1 line, fade right edge */}
-                <div className="relative overflow-hidden" style={{ maxHeight: '1.4rem' }}>
+                <div className="truncate w-full">
                   <MathText text={title} />
-                  <div className="absolute inset-y-0 right-0 w-12 pointer-events-none"
-                    style={{ background: 'linear-gradient(to right, transparent, var(--bg-app))' }}
-                  />
                 </div>
               </button>
               <div className="flex flex-wrap items-center gap-2">
