@@ -1,5 +1,7 @@
 import 'dotenv/config';
 import pool from './index.js';
+import fs from 'fs';
+import { execSync } from 'child_process';
 
 const SOLUTION_URL = 'https://youtube.com/watch?v=placeholder';
 
@@ -593,11 +595,30 @@ async function seed() {
 
     // Drop tables in reverse dependency order
     console.log('Dropping existing tables...');
+    await client.query('DROP TABLE IF EXISTS comment_upvotes CASCADE');
+    await client.query('DROP TABLE IF EXISTS discussion_comments CASCADE');
+    await client.query('DROP TABLE IF EXISTS spaced_repetition CASCADE');
+    await client.query('DROP TABLE IF EXISTS mock_test_questions CASCADE');
+    await client.query('DROP TABLE IF EXISTS mock_tests CASCADE');
+    await client.query('DROP TABLE IF EXISTS streak_activity CASCADE');
+    await client.query('DROP TABLE IF EXISTS streaks CASCADE');
+    await client.query('DROP TABLE IF EXISTS bookmarks CASCADE');
+    await client.query('DROP TABLE IF EXISTS question_notes CASCADE');
+    await client.query('DROP TABLE IF EXISTS hint_usage CASCADE');
+    await client.query('DROP TABLE IF EXISTS hint_cache CASCADE');
+    await client.query('DROP TABLE IF EXISTS formulas CASCADE');
+    await client.query('DROP TABLE IF EXISTS formula_sheets CASCADE');
+    await client.query('DROP TABLE IF EXISTS question_concepts CASCADE');
+    await client.query('DROP TABLE IF EXISTS concept_mastery CASCADE');
+    await client.query('DROP TABLE IF EXISTS concepts CASCADE');
+    await client.query('DROP TABLE IF EXISTS question_options CASCADE');
+    await client.query('DROP TABLE IF EXISTS pattern_mastery CASCADE');
     await client.query('DROP TABLE IF EXISTS user_progress CASCADE');
     await client.query('DROP TABLE IF EXISTS questions CASCADE');
     await client.query('DROP TABLE IF EXISTS chapters CASCADE');
     await client.query('DROP TABLE IF EXISTS subjects CASCADE');
     await client.query('DROP TABLE IF EXISTS users CASCADE');
+
 
     // Create tables
     console.log('Creating tables...');
@@ -711,7 +732,33 @@ async function seed() {
     console.log(`Subjects: ${seedData.subjects.length}`);
     console.log(`Chapters: ${totalChapters}`);
     console.log(`Questions: ${totalQuestions}`);
-    console.log('Seeding completed successfully!');
+    console.log('Base seeding completed successfully!');
+
+    // 1. Run database migrations to construct V2/V3 tables
+    console.log('\nRunning database migrations...');
+    execSync('node src/db/migrate.js', { stdio: 'inherit' });
+    execSync('node src/db/migrate_v3.js', { stdio: 'inherit' });
+    execSync('node src/db/migrate_concepts.js', { stdio: 'inherit' });
+
+    execSync('node src/db/migrate_v3_7_v2.js', { stdio: 'inherit' });
+    execSync('node src/db/migrate_v3_8.js', { stdio: 'inherit' });
+
+    // 2. Run all individual chapter seeders dynamically
+    console.log('\nRunning individual chapter seeders...');
+    const files = fs.readdirSync('src/db');
+    for (const file of files) {
+      if (file.startsWith('seed-') && file.endsWith('.js')) {
+        console.log(`Executing: ${file}`);
+        execSync(`node src/db/${file}`, { stdio: 'inherit' });
+      }
+    }
+
+    // 3. Run formulas sheet seeder
+    console.log('\nRunning formula sheets seeder...');
+    execSync('node src/db/seed_formulas.js', { stdio: 'inherit' });
+
+    console.log('\nDatabase seeding integration completed successfully!');
+
   } catch (error) {
     await client.query('ROLLBACK');
     console.error('Seeding failed:', error);
