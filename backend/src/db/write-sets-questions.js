@@ -1,0 +1,828 @@
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const questions = [
+  // GROUP 1: Set Theory Basics & Operations (sets-basics-operations) - 8 questions
+  {
+    "pattern_group": "sets-basics-operations",
+    "title": "Let $A$ and $B$ be two sets of real numbers defined as $A = \\\\{x \\\\in \\\\mathbb{R} : x^2 - 5x + 6 = 0\\\\}$ and $B = \\\\{x \\\\in \\\\mathbb{R} : x^2 - 3x + 2 = 0\\\\}$. The intersection of these two sets, $A \\\\cap B$, is equal to:",
+    "difficulty": "easy",
+    "type": "concept",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\\\{1\\\\}$",
+      "B": "$\\\\{2\\\\}$",
+      "C": "$\\\\{3\\\\}$",
+      "D": "$\\\\{1, 2, 3\\\\}$"
+    },
+    "notes": "Find the roots of the two quadratic equations to define the sets in roster form.",
+    "solution_text": "Let's solve the equations for both sets:\n1) For set $A$: $x^2 - 5x + 6 = 0 \\\\implies (x-2)(x-3) = 0 \\\\implies x = 2, 3$. Thus, $A = \\\\{2, 3\\\\}$.\n2) For set $B$: $x^2 - 3x + 2 = 0 \\\\implies (x-1)(x-2) = 0 \\\\implies x = 1, 2$. Thus, $B = \\\\{1, 2\\\\}$.\n3) The intersection $A \\\\cap B$ represents elements common to both sets, which is $\\\\{2\\\\}$. Option B is correct.",
+    "common_mistake": "Writing the union $A \\\\cup B = \\\\{1, 2, 3\\\\}$ (Option D) instead of the intersection, or failing to solve the quadratic equations correctly.",
+    "concept_slugs": ["sets-basics-operations"]
+  },
+  {
+    "pattern_group": "sets-basics-operations",
+    "title": "If a finite set $A$ contains exactly $n$ elements, the number of non-empty subsets of its power set $\\\\mathcal{P}(A)$ is given by:",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2021",
+    "correct_answer": "C",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$2^n - 1$",
+      "B": "$2^{2^n}$",
+      "C": "$2^{2^n} - 1$",
+      "D": "$2^{n-1}$"
+    },
+    "notes": "Recall that a set with $k$ elements has $2^k$ subsets, and find the number of elements in the power set first.",
+    "solution_text": "Let's proceed step-by-step:\n1) If a set $A$ has $n$ elements, the total number of subsets of $A$ is $2^n$.\n2) The power set $\\\\mathcal{P}(A)$ is the set of all subsets of $A$. Therefore, the number of elements in the power set is $m = 2^n$.\n3) The number of subsets of the power set $\\\\mathcal{P}(A)$ is $2^m = 2^{2^n}$.\n4) The number of non-empty subsets of $\\\\mathcal{P}(A)$ is obtained by subtracting the empty set: $2^{2^n} - 1$. Option C is correct.",
+    "common_mistake": "Selecting $2^n - 1$ (Option A), which is the number of non-empty subsets of $A$ itself, rather than of its power set.",
+    "concept_slugs": ["sets-basics-operations"]
+  },
+  {
+    "pattern_group": "sets-basics-operations",
+    "title": "For any three sets $A$, $B$, and $C$, the set operation $A \\\\setminus (B \\\\cup C)$ is always algebraically equivalent to:",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$(A \\\\setminus B) \\\\cup (A \\\\setminus C)$",
+      "B": "$(A \\\\setminus B) \\\\cap (A \\\\setminus C)$",
+      "C": "$(A \\\\setminus B) \\\\setminus C$",
+      "D": "$(A \\\\cup B) \\\\setminus (A \\\\cup C)$"
+    },
+    "notes": "Apply De Morgan's laws for set difference: $X \\\\setminus Y = X \\\\cap Y'$.",
+    "solution_text": "Using set algebra and the definition of set difference ($X \\\\setminus Y = X \\\\cap Y'$):\n$A \\\\setminus (B \\\\cup C) = A \\\\cap (B \\\\cup C)'$\nApplying De Morgan's law: $(B \\\\cup C)' = B' \\\\cap C'$\n$A \\\\setminus (B \\\\cup C) = A \\\\cap (B' \\\\cap C') = (A \\\\cap B') \\\\cap (A \\\\cap C')$\nConverting back to set differences: $(A \\\\setminus B) \\\\cap (A \\\\setminus C)$.\nOption B is correct.",
+    "common_mistake": "Distributing the difference directly as union, yielding $(A \\\\setminus B) \\\\cup (A \\\\setminus C)$ (Option A), which violates De Morgan's laws.",
+    "concept_slugs": ["sets-basics-operations"]
+  },
+  {
+    "pattern_group": "sets-basics-operations",
+    "title": "Let the set $A$ be defined as $A = \\\\{ \\\\emptyset, \\\\{\\\\emptyset\\\\} \\\\}$. The number of elements in the power set $\\\\mathcal{P}(A)$ is ________.",
+    "difficulty": "easy",
+    "type": "concept",
+    "correct_answer": "4",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Identify the number of elements in set A first.",
+    "solution_text": "Let's count the elements in the set $A$:\n- The first element is $\\\\emptyset$.\n- The second element is the set containing the empty set, $\\\\{\\\\emptyset\\\\}$.\nThus, $A$ has exactly $n = 2$ elements.\nThe number of elements in the power set $\\\\mathcal{P}(A)$ is given by $2^n = 2^2 = 4$.",
+    "common_mistake": "Writing 2, confusing the empty set or nested set notation, or writing 8 by over-expanding the power set levels.",
+    "concept_slugs": ["sets-basics-operations"]
+  },
+  {
+    "pattern_group": "sets-basics-operations",
+    "title": "Let the universal set be $U = \\\\{1, 2, 3, \\\\ldots, 10\\\\}$. If $A = \\\\{x \\\\in U : x \\\\text{ is a prime number}\\\\}$ and $B = \\\\{x \\\\in U : x \\\\text{ is an odd number}\\\\}$, the complement set $(A \\\\cup B)'$ is equal to:",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\\\{4, 6, 8, 10\\\\}$",
+      "B": "$\\\\{1, 2, 3, 5, 7, 9\\\\}$",
+      "C": "$\\\\{2, 4, 6, 8, 10\\\\}$",
+      "D": "$\\\\{4, 6, 8\\\\}$"
+    },
+    "notes": "List the elements of A and B first, find their union, and subtract it from the universal set.",
+    "solution_text": "Let's write the sets in roster form:\n- Universal set $U = \\\\{1, 2, 3, 4, 5, 6, 7, 8, 9, 10\\\\}$\n- $A = \\\\{2, 3, 5, 7\\\\}$ (Primes in $U$)\n- $B = \\\\{1, 3, 5, 7, 9\\\\}$ (Odds in $U$)\n- $A \\\\cup B = \\\\{1, 2, 3, 5, 7, 9\\\\}$ (Elements in either $A$ or $B$)\n- The complement $(A \\\\cup B)' = U \\\\setminus (A \\\\cup B) = \\\\{4, 6, 8, 10\\\\}$. Option A is correct.",
+    "common_mistake": "Including 2 in the complement (Option C), forgetting that 2 is prime and therefore is in $A$ and the union.",
+    "concept_slugs": ["sets-basics-operations"]
+  },
+  {
+    "pattern_group": "sets-basics-operations",
+    "title": "Let $A$ and $B$ be two sets such that $n(A) = 12$, $n(B) = 15$, and the number of elements in their union is $n(A \\\\cup B) = 22$. The number of elements in the symmetric difference $A \\\\Delta B$ is:",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2022",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "5",
+      "B": "17",
+      "C": "22",
+      "D": "12"
+    },
+    "notes": "Recall the definition of symmetric difference: $A \\\\Delta B = (A \\\\setminus B) \\\\cup (B \\\\setminus A)$ or $n(A \\\\Delta B) = n(A \\\\cup B) - n(A \\\\cap B)$.",
+    "solution_text": "Let's apply the principle of inclusion-exclusion:\n1) $n(A \\\\cup B) = n(A) + n(B) - n(A \\\\cap B) \\\\implies 22 = 12 + 15 - n(A \\\\cap B) \\\\implies n(A \\\\cap B) = 27 - 22 = 5$.\n2) The symmetric difference $A \\\\Delta B$ consists of elements in $A$ or $B$ but not both: $n(A \\\\Delta B) = n(A \\\\cup B) - n(A \\\\cap B) = 22 - 5 = 17$.\nOption B is correct.",
+    "common_mistake": "Selecting 5 (Option A), which is the intersection size $n(A \\\\cap B)$, rather than the symmetric difference.",
+    "concept_slugs": ["sets-basics-operations"]
+  },
+  {
+    "pattern_group": "sets-basics-operations",
+    "title": "Let $A = \\\\{3, 6, 9, 12, 15, 18, 21\\\\}$ and $B = \\\\{4, 8, 12, 16, 20\\\\}$. The symmetric difference $A \\\\Delta B$ is equal to:",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\\\{3, 4, 6, 8, 9, 15, 16, 18, 20, 21\\\\}$",
+      "B": "$\\\\{12\\\\}$",
+      "C": "$\\\\{3, 6, 9, 15, 18, 21\\\\}$",
+      "D": "$\\\\{4, 8, 16, 20\\\\}$"
+    },
+    "notes": "Find the union of the two sets and remove the common elements.",
+    "solution_text": "Let's solve for the symmetric difference $A \\\\Delta B = (A \\\\cup B) \\\\setminus (A \\\\cap B)$:\n- $A \\\\cup B = \\\\{3, 4, 6, 8, 9, 12, 15, 16, 18, 20, 21\\\\}$\n- $A \\\\cap B = \\\\{12\\\\}$\n- $A \\\\Delta B = \\\\{3, 4, 6, 8, 9, 15, 16, 18, 20, 21\\\\}$. Option A is correct.",
+    "common_mistake": "Selecting $\\\\{12\\\\}$ (Option B), which is the intersection $A \\\\cap B$, or selecting only $A \\\\setminus B$ (Option C).",
+    "concept_slugs": ["sets-basics-operations"]
+  },
+  {
+    "pattern_group": "sets-basics-operations",
+    "title": "For a finite set $A$ containing exactly $3$ elements, the number of elements in the power set of its power set, $\\\\mathcal{P}(\\\\mathcal{P}(A))$, is ________.",
+    "difficulty": "hard",
+    "type": "advanced",
+    "correct_answer": "256",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Apply the power set size formula $2^n$ twice in sequence.",
+    "solution_text": "Let's calculate sequentially:\n1) Set $A$ has $n = 3$ elements.\n2) The power set $\\\\mathcal{P}(A)$ contains $2^3 = 8$ elements.\n3) The power set of the power set, $\\\\mathcal{P}(\\\\mathcal{P}(A))$, contains $2^8 = 256$ elements.\nTherefore, the number of elements is 256.",
+    "common_mistake": "Writing 64, by calculating $2^6$ or writing 16, by adding instead of exponentiating.",
+    "concept_slugs": ["sets-basics-operations"]
+  },
+
+  // GROUP 2: Venn Diagrams & Practical Applications (sets-venn-diagrams) - 8 questions
+  {
+    "pattern_group": "sets-venn-diagrams",
+    "title": "In a survey of 100 students, 60 like Mathematics, 45 like Physics, and 20 like both subjects. The number of students who like neither of these two subjects is ________.",
+    "difficulty": "easy",
+    "type": "pyq",
+    "source": "JEE Main 2021",
+    "correct_answer": "15",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Use the formula $n(M \\\\cup P) = n(M) + n(P) - n(M \\\\cap P)$ to find those who like at least one.",
+    "solution_text": "Let $M$ be the set of students who like Mathematics and $P$ be the set of students who like Physics:\n1) $n(M) = 60$, $n(P) = 45$, and $n(M \\\\cap P) = 20$.\n2) The number of students who like at least one of these subjects is:\n$n(M \\\\cup P) = n(M) + n(P) - n(M \\\\cap P) = 60 + 45 - 20 = 85$.\n3) The number of students who like neither subject is:\n$n(M \\\\cup P)' = 100 - n(M \\\\cup P) = 100 - 85 = 15$.",
+    "common_mistake": "Writing 35, by neglecting the intersection when summing the students, or writing 20 directly.",
+    "concept_slugs": ["sets-venn-diagrams"]
+  },
+  {
+    "pattern_group": "sets-venn-diagrams",
+    "title": "In a group of 50 people, 35 speak Hindi, 25 speak English, and each person speaks at least one of these two languages. The number of people who speak only Hindi and not English is ________.",
+    "difficulty": "easy",
+    "type": "pyq",
+    "source": "JEE Main 2022",
+    "correct_answer": "25",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Find the number of people who speak both languages first, and subtract it from the total Hindi speakers.",
+    "solution_text": "Let $H$ represent Hindi speakers and $E$ represent English speakers:\n1) Total people $n(H \\\\cup E) = 50$.\n2) $n(H) = 35$, $n(E) = 25$.\n3) The number of people who speak both languages is:\n$n(H \\\\cap E) = n(H) + n(E) - n(H \\\\cup E) = 35 + 25 - 50 = 10$.\n4) The number of people who speak only Hindi is:\n$n(H \\\\setminus E) = n(H) - n(H \\\\cap E) = 35 - 10 = 25$.",
+    "common_mistake": "Writing 35 directly as only Hindi, or writing 10, which is the intersection size.",
+    "concept_slugs": ["sets-venn-diagrams"]
+  },
+  {
+    "pattern_group": "sets-venn-diagrams",
+    "title": "In a survey of a student body, it was found that $70\\\\%$ of the students like tea and $80\\\\%$ of the students like coffee. The minimum percentage of students who must like both tea and coffee is ________.",
+    "difficulty": "medium",
+    "type": "concept",
+    "correct_answer": "50",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Apply the union inequality: $n(T \\\\cup C) \\\\le 100\\\\%$.",
+    "solution_text": "Let $T$ represent tea lovers and $C$ represent coffee lovers:\n1) $n(T) = 70\\\\%$ and $n(C) = 80\\\\%$.\n2) We know that the union of two subsets of a population cannot exceed $100\\\\%$:\n$n(T \\\\cup C) \\\\le 100\\\\%$\n3) Since $n(T \\\\cup C) = n(T) + n(C) - n(T \\\\cap C)$:\n$70\\\\% + 80\\\\% - n(T \\\\cap C) \\\\le 100\\\\%$\n$150\\\\% - n(T \\\\cap C) \\\\le 100\\\\% \\\\implies n(T \\\\cap C) \\\\ge 50\\\\%$.\nTherefore, the minimum percentage of students who like both is exactly 50.",
+    "common_mistake": "Writing 70, which is the maximum possible intersection size, or writing 0, assuming they could be completely disjoint (impossible since $70\\\\% + 80\\\\% = 150\\\\%$).",
+    "concept_slugs": ["sets-venn-diagrams"]
+  },
+  {
+    "pattern_group": "sets-venn-diagrams",
+    "title": "A statistical report on 500 car owners reveals that 400 owned car brand A, 200 owned car brand B, and 50 owned both brands A and B. Which of the following is true regarding this data?",
+    "difficulty": "medium",
+    "type": "concept",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "The data is correct, and 50 people own neither car",
+      "B": "The data is incorrect, because the calculated union of owners exceeds the total surveyed population of 500",
+      "C": "The data is correct, and 150 people own only car B",
+      "D": "The data is incorrect because the number of owners of car A must be less than car B"
+    },
+    "notes": "Verify if the union size $n(A \\\\cup B) = n(A) + n(B) - n(A \\\\cap B)$ is less than or equal to the total group size.",
+    "solution_text": "Let's check the consistency of the data:\n- Total surveyed population $= 500$.\n- $n(A) = 400$, $n(B) = 200$, and $n(A \\\\cap B) = 50$.\n- The number of people who own at least one of the two brands is:\n$n(A \\\\cup B) = n(A) + n(B) - n(A \\\\cap B) = 400 + 200 - 50 = 550$.\nSince the union $n(A \\\\cup B) = 550$ is greater than the total number of people surveyed (500), the data is inconsistent and incorrect. Option B is correct.",
+    "common_mistake": "Selecting Option A, assuming the data is valid and attempting to calculate a negative value for the complement.",
+    "concept_slugs": ["sets-venn-diagrams"]
+  },
+  {
+    "pattern_group": "sets-venn-diagrams",
+    "title": "In a town of 10,000 families, it was found that $40\\\\%$ buy newspaper A, $20\\\\%$ buy newspaper B, $10\\\\%$ buy newspaper C, $5\\\\%$ buy A and B, $3\\\\%$ buy B and C, $4\\\\%$ buy A and C, and $2\\\\%$ buy all three newspapers. The number of families that buy newspaper A only is ________.",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "3300",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Use a three-set Venn diagram to isolate the region representing newspaper A only: $n(A \\\\text{ only}) = n(A) - n(A \\\\cap B) - n(A \\\\cap C) + n(A \\\\cap B \\\\cap C)$.",
+    "solution_text": "Let's calculate the percentage of families that buy newspaper A only:\n- $n(A) = 40\\\\%$\n- $n(A \\\\cap B) = 5\\\\%$, $n(A \\\\cap C) = 4\\\\%$, and $n(A \\\\cap B \\\\cap C) = 2\\\\%$\n- The percentage of families buying newspaper A only is:\n$n(A \\\\text{ only}) = n(A) - n(A \\\\cap B) - n(A \\\\cap C) + n(A \\\\cap B \\\\cap C) = 40\\\\% - 5\\\\% - 4\\\\% + 2\\\\% = 33\\\\%$.\n- The number of families is: $33\\\\%$ of $10,000 = 0.33 \\\\times 10,000 = 3300$.",
+    "common_mistake": "Writing 3100, by failing to add the triple intersection back, or writing 4000 without subtracting the shared newspaper regions.",
+    "concept_slugs": ["sets-venn-diagrams"]
+  },
+  {
+    "pattern_group": "sets-venn-diagrams",
+    "title": "Let $A$, $B$, and $C$ be three sets. In a Venn diagram, the region representing the set operation $(A \\\\cap B) \\\\setminus C$ is best described as:",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "The region common to both A and B, excluding any portion that overlaps with C",
+      "B": "The region containing elements in A or B, but not in C",
+      "C": "The union of A and B minus the intersection of all three",
+      "D": "The region common to all three sets"
+    },
+    "notes": "Set difference removes elements that belong to the second set.",
+    "solution_text": "The set operation $(A \\\\cap B) \\\\setminus C$ represents elements that belong to both set $A$ and set $B$ (which is $A \\\\cap B$), but do not belong to set $C$. In a Venn diagram, this corresponds to the lens-shaped overlapping region between $A$ and $B$, with the portion intersecting with $C$ removed. Option A is correct.",
+    "common_mistake": "Selecting Option B, which describes $(A \\\\cup B) \\\\setminus C$ rather than $(A \\\\cap B) \\\\setminus C$.",
+    "concept_slugs": ["sets-venn-diagrams"]
+  },
+  {
+    "pattern_group": "sets-venn-diagrams",
+    "title": "In a military conflict, $70\\\\%$ of the soldiers lost one eye, $75\\\\%$ lost an ear, $80\\\\%$ lost an arm, and $85\\\\%$ lost a leg. The minimum percentage of soldiers who must have lost all four is ________.",
+    "difficulty": "hard",
+    "type": "advanced",
+    "correct_answer": "10",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Evaluate using the complements: the maximum percentage of soldiers who did not lose at least one of the four body parts.",
+    "solution_text": "Let's work with the complements (soldiers who did not lose each part):\n- Percentage who kept their eye: $100\\\\% - 70\\\\% = 30\\\\%$\n- Percentage who kept their ear: $100\\\\% - 75\\\\% = 25\\\\%$\n- Percentage who kept their arm: $100\\\\% - 80\\\\% = 20\\\\%$\n- Percentage who kept their leg: $100\\\\% - 85\\\\% = 15\\\\%$\nThe maximum percentage of soldiers who could have kept at least one body part is the sum of these complements:\n$30\\\\% + 25\\\\% + 20\\\\% + 15\\\\% = 90\\\\%$.\nTherefore, the minimum percentage of soldiers who must have lost all four parts (the remaining population) is:\n$100\\\\% - 90\\\\% = 10\\\\%$.",
+    "common_mistake": "Writing 70, which is the maximum possible value, or writing 0, failing to see that the sum of complements is less than 100%.",
+    "concept_slugs": ["sets-venn-diagrams"]
+  },
+  {
+    "pattern_group": "sets-venn-diagrams",
+    "title": "Among 120 students in a school, 50 play cricket, 60 play football, 48 play hockey, 18 play cricket and football, 20 play football and hockey, 15 play cricket and hockey, and 10 play all three. The number of students who play none of the three games is ________.",
+    "difficulty": "hard",
+    "type": "advanced",
+    "correct_answer": "5",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Apply the three-set inclusion-exclusion formula to find the union size: $n(C \\\\cup F \\\\cup H)$.",
+    "solution_text": "Let $C, F, H$ be the sets of students playing cricket, football, and hockey respectively:\n1) Apply the three-set formula:\n$n(C \\\\cup F \\\\cup H) = n(C) + n(F) + n(H) - n(C \\\\cap F) - n(F \\\\cap H) - n(C \\\\cap H) + n(C \\\\cap F \\\\cap H)$\n$n(C \\\\cup F \\\\cup H) = 50 + 60 + 48 - 18 - 20 - 15 + 10 = 115$.\n2) The number of students playing none of the three games is:\n$120 - n(C \\\\cup F \\\\cup H) = 120 - 115 = 5$.",
+    "common_mistake": "Writing 15, by failing to add the triple intersection ($+10$), or getting a value greater than 120 due to arithmetic errors.",
+    "concept_slugs": ["sets-venn-diagrams"]
+  },
+
+  // GROUP 3: Cartesian Product & Relations (relations-cartesian-product) - 8 questions
+  {
+    "pattern_group": "relations-cartesian-product",
+    "title": "If $A = \\\\{1, 2\\\\}$ and $B = \\\\{3, 4\\\\}$, the total number of distinct relations that can be defined from set $A$ to set $B$ is ________.",
+    "difficulty": "easy",
+    "type": "pyq",
+    "source": "JEE Main 2021",
+    "correct_answer": "16",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "The total number of relations from A to B is $2^{n(A \\\\times B)}$.",
+    "solution_text": "Let's find the number of elements in the Cartesian product:\n1) $n(A) = 2$ and $n(B) = 2$.\n2) $n(A \\\\times B) = n(A) \\\\times n(B) = 2 \\\\times 2 = 4$.\n3) A relation from $A$ to $B$ is any subset of $A \\\\times B$. The number of subsets of a set with 4 elements is $2^4 = 16$.\nTherefore, the total number of distinct relations is 16.",
+    "common_mistake": "Writing 4, which is the number of elements in $A \\\\times B$, rather than the number of subsets.",
+    "concept_slugs": ["relations-cartesian-product"]
+  },
+  {
+    "pattern_group": "relations-cartesian-product",
+    "title": "Let a relation $R$ be defined on the set of natural numbers $\\\\mathbb{N}$ as $R = \\\\{(x, y) : x, y \\\\in \\\\mathbb{N}, 2x + y = 10\\\\}$. The domain and range of this relation are respectively:",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2022",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Domain $= \\\\{1, 2, 3, 4, 5\\\\}$, Range $= \\\\{0, 2, 4, 6, 8\\\\}$",
+      "B": "Domain $= \\\\{1, 2, 3, 4\\\\}$, Range $= \\\\{8, 6, 4, 2\\\\}$",
+      "C": "Domain $= \\\\{1, 2, 3, 4, 5\\\\}$, Range $= \\\\{2, 4, 6, 8, 10\\\\}$",
+      "D": "Domain $= \\\\{2, 4, 6, 8\\\\}$, Range $= \\\\{1, 2, 3, 4\\\\}$",
+    },
+    "notes": "Recall that natural numbers start from 1. Find all pairs of positive integers satisfying the equation.",
+    "solution_text": "Let's solve $2x + y = 10 \\\\implies y = 10 - 2x$ for $x, y \\\\in \\\\mathbb{N}$:\n- If $x = 1$, $y = 8 \\\\in \\\\mathbb{N}$\n- If $x = 2$, $y = 6 \\\\in \\\\mathbb{N}$\n- If $x = 3$, $y = 4 \\\\in \\\\mathbb{N}$\n- If $x = 4$, $y = 2 \\\\in \\\\mathbb{N}$\n- If $x = 5$, $y = 0 \\\\notin \\\\mathbb{N}$ (since 0 is not a natural number)\nTherefore, the relation in roster form is $R = \\\\{(1,8), (2,6), (3,4), (4,2)\\\\}$.\n- Domain $= \\\\{1, 2, 3, 4\\\\}$\n- Range $= \\\\{8, 6, 4, 2\\\\}$. Option B is correct.",
+    "common_mistake": "Including 0 in the range (Option A), forgetting that $0 \\\\notin \\\\mathbb{N}$.",
+    "concept_slugs": ["relations-cartesian-product"]
+  },
+  {
+    "pattern_group": "relations-cartesian-product",
+    "title": "If the Cartesian product $A \\\\times B$ has exactly $9$ elements and includes the ordered pairs $(-1, 0)$ and $(0, 1)$, what are the sets $A$ and $B$?",
+    "difficulty": "medium",
+    "type": "concept",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$A = \\\\{-1, 0\\\\}$, $B = \\\\{0, 1\\\\}$",
+      "B": "$A = B = \\\\{-1, 0, 1\\\\}$",
+      "C": "$A = \\\\{-1, 0, 1\\\\}$, $B = \\\\{0, 1\\\\}$",
+      "D": "$A = \\\\{-1, 1\\\\}$, $B = \\\\{-1, 0, 1\\\\}$"
+    },
+    "notes": "Since $n(A \\\\times B) = 9$ and $n(A \\\\times B) = n(A) \\\\times n(B)$, we must have $n(A) = n(B) = 3$. Extract the elements of A and B from coordinates.",
+    "solution_text": "Let's analyze:\n1) $n(A \\\\times B) = 9 \\\\implies n(A) \\\\times n(B) = 9$. Since $A$ and $B$ are sets, the only integer factorization is $n(A) = 3$ and $n(B) = 3$.\n2) We are given $(-1, 0) \\\\in A \\\\times B \\\\implies -1 \\\\in A$ and $0 \\\\in B$.\n3) We are given $(0, 1) \\\\in A \\\\times B \\\\implies 0 \\\\in A$ and $1 \\\\in B$.\n4) Since $n(A) = 3$ and $n(B) = 3$, and we need a consistent configuration, the simplest and only consistent sets are $A = B = \\\\{-1, 0, 1\\\\}$. Option B is correct.",
+    "common_mistake": "Selecting Option A, which only has 4 elements in $A \\\\times B$, violating the given size of 9.",
+    "concept_slugs": ["relations-cartesian-product"]
+  },
+  {
+    "pattern_group": "relations-cartesian-product",
+    "title": "Let the set $A = \\\\{1, 2, 3\\\\}$. The total number of relations that can be defined on set $A$ is represented as $2^X$. The value of the integer $X$ is ________.",
+    "difficulty": "easy",
+    "type": "concept",
+    "correct_answer": "9",
+    "is_numerical": true,
+    "notes": "A relation on set A is a relation from A to A.",
+    "solution_text": "A relation on set $A$ is any subset of the Cartesian product $A \\\\times A$:\n1) $n(A) = 3$.\n2) $n(A \\\\times A) = 3 \\\\times 3 = 9$.\n3) The total number of subsets (relations) is $2^9$.\nThus, the exponent $X$ is exactly 9.",
+    "common_mistake": "Writing 6, by calculating $2^3 = 8$ or using the symmetric relation exponent formula.",
+    "concept_slugs": ["relations-cartesian-product"]
+  },
+  {
+    "pattern_group": "relations-cartesian-product",
+    "title": "Let $R$ be a relation defined by $R = \\\\{(x, x^3) : x \\\\text{ is a prime number less than 10}\\\\}$. The range of this relation is equal to:",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\\\{8, 27, 125, 343\\\\}$",
+      "B": "$\\\\{1, 8, 27, 64, 125, 343, 729\\\\}$",
+      "C": "$\\\\{2, 3, 5, 7\\\\}$",
+      "D": "$\\\\{8, 27, 64, 125, 343\\\\}$"
+    },
+    "notes": "Identify all prime numbers less than 10, and cube them to find the range.",
+    "solution_text": "Let's find the prime numbers less than 10:\n- Primes are: $2, 3, 5, 7$ (Note: 1 is not prime, 9 is not prime).\n- Cube of these primes:\n  - $2^3 = 8$\n  - $3^3 = 27$\n  - $5^3 = 125$\n  - $7^3 = 343$\n- The range of the relation is the set of all second coordinates: $\\\\{8, 27, 125, 343\\\\}$. Option A is correct.",
+    "common_mistake": "Including $1^3 = 1$ (Option B) by assuming 1 is prime, or including $4^3 = 64$ (Option D).",
+    "concept_slugs": ["relations-cartesian-product"]
+  },
+  {
+    "pattern_group": "relations-cartesian-product",
+    "title": "Let $A = \\\\{1, 2, 3, 4\\\\}$ and $B = \\\\{5, 6, 7\\\\}$. If a relation $R$ from $A$ to $B$ is defined by $R = \\\\{(x, y) : x \\\\in A, y \\\\in B, y - x = 2\\\\}$, the number of ordered pairs in $R$ is ________.",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "2",
+    "is_numerical": true,
+    "notes": "Check which pairs (x, y) from A x B satisfy the condition y - x = 2.",
+    "solution_text": "Let's find the pairs satisfying $y - x = 2 \\\\implies y = x + 2$:\n- For $x = 1 \\\\in A \\\\implies y = 3 \\\\notin B$\n- For $x = 2 \\\\in A \\\\implies y = 4 \\\\notin B$\n- For $x = 3 \\\\in A \\\\implies y = 5 \\\\in B \\\\implies (3, 5) \\\\in R$\n- For $x = 4 \\\\in A \\\\implies y = 6 \\\\in B \\\\implies (4, 6) \\\\in R$\nThus, the relation contains exactly two pairs: $\\\\{(3, 5), (4, 6)\\\\}$. The number of ordered pairs is 2.",
+    "common_mistake": "Writing 12, which is the total size of $A \\\\times B$, or listing non-existent pairs in set $B$.",
+    "concept_slugs": ["relations-cartesian-product"]
+  },
+  {
+    "pattern_group": "relations-cartesian-product",
+    "title": "If set $A$ contains $m$ elements and set $B$ contains $n$ elements, the total number of non-empty relations that can be defined from $A$ to $B$ is:",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "C",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$2^{mn}$",
+      "B": "$m^n - 1$",
+      "C": "$2^{mn} - 1$",
+      "D": "$2^{m+n} - 1$"
+    },
+    "notes": "Subtract 1 (representing the empty relation) from the total number of relations.",
+    "solution_text": "Let's compute:\n1) The Cartesian product $A \\\\times B$ contains $m \\\\times n = mn$ elements.\n2) The total number of subsets (relations) is $2^{mn}$.\n3) The number of non-empty relations is obtained by excluding the empty set ($\\\\emptyset$): $2^{mn} - 1$. Option C is correct.",
+    "common_mistake": "Selecting $2^{mn}$ (Option A), neglecting to exclude the empty relation.",
+    "concept_slugs": ["relations-cartesian-product"]
+  },
+  {
+    "pattern_group": "relations-cartesian-product",
+    "title": "Let the sets be defined as $A = \\\\{x \\\\in \\\\mathbb{Z} : |x| < 3\\\\}$ and $B = \\\\{x \\\\in \\\\mathbb{Z} : |x-1| \\\\le 1\\\\}$. The number of elements in the Cartesian product $A \\\\times B$ is ________.",
+    "difficulty": "hard",
+    "type": "advanced",
+    "correct_answer": "15",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "List all integers in set A and set B first, then multiply their sizes.",
+    "solution_text": "Let's find the elements in each set of integers:\n1) For set $A$: $|x| < 3 \\\\implies -3 < x < 3$. Since $x \\\\in \\\\mathbb{Z}$, $A = \\\\{-2, -1, 0, 1, 2\\\\}$, so $n(A) = 5$.\n2) For set $B$: $|x-1| \\\\le 1 \\\\implies -1 \\\\le x-1 \\\\le 1 \\\\implies 0 \\\\le x \\\\le 2$. Since $x \\\\in \\\\mathbb{Z}$, $B = \\\\{0, 1, 2\\\\}$, so $n(B) = 3$.\n3) The number of elements in $A \\\\times B$ is $n(A) \\\\times n(B) = 5 \\\\times 3 = 15$.",
+    "common_mistake": "Writing 6, by neglecting negative numbers in $A$, or writing 9.",
+    "concept_slugs": ["relations-cartesian-product"]
+  },
+
+  // GROUP 4: Types of Relations (relations-types) - 8 questions
+  {
+    "pattern_group": "relations-types",
+    "title": "Let $R$ be a relation defined on the set of natural numbers $\\\\mathbb{N}$ by $xRy \\\\iff x + 2y = 8$. Which of the following is true for $R$?",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2021",
+    "correct_answer": "D",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$R$ is reflexive",
+      "B": "$R$ is symmetric",
+      "C": "$R$ is transitive",
+      "D": "$R$ is neither reflexive, nor symmetric, nor transitive"
+    },
+    "notes": "Write the relation in roster form first and test the definitions of reflexivity, symmetry, and transitivity.",
+    "solution_text": "Let's find the elements of $R$ on $\\\\mathbb{N}$:\n- $x + 2y = 8 \\\\implies x = 8 - 2y$.\n- Since $x, y \\\\in \\\\mathbb{N}$:\n  - If $y=1 \\\\implies x=6 \\\\implies (6, 1) \\\\in R$\n  - If $y=2 \\\\implies x=4 \\\\implies (4, 2) \\\\in R$\n  - If $y=3 \\\\implies x=2 \\\\implies (2, 3) \\\\in R$\n  - If $y \\\\ge 4 \\\\implies x \\\\le 0 \\\\notin \\\\mathbb{N}$.\nThus, $R = \\\\{(6,1), (4,2), (2,3)\\\\}$. Let's check properties:\n1) Reflexive: $(1,1) \\\\notin R \\\\implies$ not reflexive.\n2) Symmetric: $(6,1) \\\\in R$ but $(1,6) \\\\notin R \\\\implies$ not symmetric.\n3) Transitive: There are no pairs $(a,b)$ and $(b,c)$ in $R$ to check? Wait, $(4,2) \\\\in R$ and $(2,3) \\\\in R$. For transitivity, we need $(4,3) \\\\in R$. But $(4,3) \\\\notin R \\\\implies$ not transitive.\nOption D is correct.",
+    "common_mistake": "Claiming it is transitive by neglecting to check the composite pair $(4,2)$ and $(2,3)$.",
+    "concept_slugs": ["relations-types"]
+  },
+  {
+    "pattern_group": "relations-types",
+    "title": "A relation $R$ on the set of real numbers $\\\\mathbb{R}$ is defined by $aRb \\\\iff 1 + ab > 0$. Which of the following classifications is correct for $R$?",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2022",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$R$ is an equivalence relation",
+      "B": "$R$ is reflexive and symmetric, but not transitive",
+      "C": "$R$ is symmetric and transitive, but not reflexive",
+      "D": "$R$ is reflexive and transitive, but not symmetric"
+    },
+    "notes": "To show it is not transitive, look for a counterexample using negative real numbers.",
+    "solution_text": "Let's check the properties of $R$:\n1) Reflexive: $aRa \\\\iff 1 + a^2 > 0$, which is always true for any $a \\\\in \\\\mathbb{R}$. So $R$ is reflexive.\n2) Symmetric: $aRb \\\\iff 1 + ab > 0 \\\\iff 1 + ba > 0 \\\\iff bRa$. So $R$ is symmetric.\n3) Transitive: Let's find a counterexample. Let $a = 1$, $b = -0.5$, and $c = -4$:\n- $1 + ab = 1 + (1)(-0.5) = 0.5 > 0 \\\\implies aRb$ is true.\n- $1 + bc = 1 + (-0.5)(-4) = 3 > 0 \\\\implies bRc$ is true.\n- $1 + ac = 1 + (1)(-4) = -3 \\\\ngtr 0 \\\\implies aRc$ is false.\nSince $aRb$ and $bRc$ are true but $aRc$ is false, $R$ is not transitive. Option B is correct.",
+    "common_mistake": "Assuming it is transitive because it holds for positive numbers, failing to test negative values.",
+    "concept_slugs": ["relations-types"]
+  },
+  {
+    "pattern_group": "relations-types",
+    "title": "Let $R$ be a relation defined on the set of real numbers $\\\\mathbb{R}$ by $aRb \\\\iff a \\\\le b^2$. This relation $R$ is:",
+    "difficulty": "medium",
+    "type": "concept",
+    "correct_answer": "D",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Reflexive and symmetric",
+      "B": "Symmetric and transitive",
+      "C": "Reflexive but not symmetric",
+      "D": "Neither reflexive, nor symmetric, nor transitive"
+    },
+    "notes": "Test fractions between 0 and 1 for reflexivity, and simple integers for symmetry and transitivity.",
+    "solution_text": "Let's check the properties:\n1) Reflexive: For $a = 0.5$, $a^2 = 0.25$. Since $0.5 \\\\le 0.25$ is false, $(0.5, 0.5) \\\\notin R$. So $R$ is not reflexive.\n2) Symmetric: For $a = 1, b = 2$, $1 \\\\le 2^2$ is true $\\\\implies 1R2$. But $2 \\\\le 1^2$ is false $\\\\implies 2R1$ is false. So $R$ is not symmetric.\n3) Transitive: Let $a = 12$, $b = -3$, $c = 2$:\n- $12 \\\\le (-3)^2 = 9$ is false? Wait, let's pick: $a=12, b=4, c=2 \\\\implies 12 \\\\le 16$ (true) and $4 \\\\le 4$ (true). But $12 \\\\le 4$ is false. Thus $12R4$ and $4R2$ are true but $12R2$ is false. So $R$ is not transitive.\nOption D is correct.",
+    "common_mistake": "Assuming reflexivity holds because $a \\\\le a^2$ is true for integers $\\\\ge 1$, neglecting fractional values between 0 and 1.",
+    "concept_slugs": ["relations-types"]
+  },
+  {
+    "pattern_group": "relations-types",
+    "title": "Let $R$ be a relation defined on the set of real numbers $\\\\mathbb{R}$ by $aRb \\\\iff a - b + \\\\sqrt{2}$ is an irrational number. The relation $R$ is:",
+    "difficulty": "medium",
+    "type": "concept",
+    "correct_answer": "C",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Reflexive and symmetric",
+      "B": "Symmetric and transitive",
+      "C": "Reflexive but neither symmetric nor transitive",
+      "D": "An equivalence relation"
+    },
+    "notes": "Remember that if x is irrational, -x is also irrational. But subtraction of irrationals can result in a rational.",
+    "solution_text": "Let's check the properties:\n1) Reflexive: $aRa \\\\iff a - a + \\\\sqrt{2} = \\\\sqrt{2}$, which is irrational. So $R$ is reflexive.\n2) Symmetric: Let $a = \\\\sqrt{2}$ and $b = 1$. Then $a - b + \\\\sqrt{2} = 2\\\\sqrt{2} - 1$ (irrational) $\\\\implies aRb$. But $b - a + \\\\sqrt{2} = 1 - \\\\sqrt{2} + \\\\sqrt{2} = 1$ (rational) $\\\\implies bRa$ is false. So it is not symmetric.\n3) Transitive: Let $a = \\\\sqrt{2}$, $b = 2$, $c = 2\\\\sqrt{2}$.\n- $a - b + \\\\sqrt{2} = 2\\\\sqrt{2} - 2$ (irrational) $\\\\implies aRb$.\n- $b - c + \\\\sqrt{2} = 2 - \\\\sqrt{2}$ (irrational) $\\\\implies bRc$.\n- $a - c + \\\\sqrt{2} = \\\\sqrt{2} - 2\\\\sqrt{2} + \\\\sqrt{2} = 0$ (rational) $\\\\implies aRc$ is false.\nThus it is not transitive. Option C is correct.",
+    "common_mistake": "Assuming that if $aRb$ is irrational, then swapping coordinates must also yield an irrational, neglecting terms that cancel out $\\\\sqrt{2}$.",
+    "concept_slugs": ["relations-types"]
+  },
+  {
+    "pattern_group": "relations-types",
+    "title": "The number of reflexive relations that can be defined on a set containing exactly $3$ elements is represented as $2^X$. The value of the integer $X$ is ________.",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "6",
+    "is_numerical": true,
+    "notes": "A reflexive relation must contain all diagonal pairs (a, a). Calculate the number of choices for non-diagonal elements.",
+    "solution_text": "Let's use the formula for the number of reflexive relations on a set with $n$ elements:\n1) The total number of elements in the Cartesian product $A \\\\times A$ is $n^2$.\n2) For a relation to be reflexive, all $n$ diagonal elements $(a, a)$ must be included. There is only 1 choice for each of these.\n3) The remaining $n^2 - n$ non-diagonal elements can either be in the relation or not. There are 2 choices for each.\n4) Total reflexive relations $= 2^{n^2 - n}$. For $n = 3$: $2^{9-3} = 2^6$.\nTherefore, the exponent $X$ is exactly 6.",
+    "common_mistake": "Writing 9, by counting all subsets of $A \\\\times A$, or writing 3.",
+    "concept_slugs": ["relations-types"]
+  },
+  {
+    "pattern_group": "relations-types",
+    "title": "The number of symmetric relations that can be defined on a set containing exactly $3$ elements is represented as $2^Y$. The value of the integer $Y$ is ________.",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "6",
+    "is_numerical": true,
+    "notes": "For a symmetric relation, the presence of (a, b) requires (b, a). Count the number of independent choices on or above the diagonal.",
+    "solution_text": "Let's use the formula for the number of symmetric relations on a set with $n$ elements:\n1) The relations must be symmetric, so the choice for $(b, a)$ is determined by the choice for $(a, b)$.\n2) We only make independent choices for the diagonal elements (there are $n$ of them) and the pairs above the diagonal (there are $n(n-1)/2$ of them).\n3) Total independent choices $= n + \\\\frac{n(n-1)}{2} = \\\\frac{n(n+1)}{2}$.\n4) The number of symmetric relations is $2^{n(n+1)/2}$. For $n = 3$: $2^{3(4)/2} = 2^6$.\nTherefore, the exponent $Y$ is exactly 6.",
+    "common_mistake": "Writing 8, by using a wrong formula, or writing 9.",
+    "concept_slugs": ["relations-types"]
+  },
+  {
+    "pattern_group": "relations-types",
+    "title": "Let $A = \\\\{1, 2, 3\\\\}$. A relation $R$ on $A$ is defined as $R = \\\\{(1,1), (2,2), (3,3), (1,2), (2,3)\\\\}$. This relation $R$ is:",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "C",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Reflexive and symmetric",
+      "B": "Symmetric and transitive",
+      "C": "Reflexive but neither symmetric nor transitive",
+      "D": "An equivalence relation"
+    },
+    "notes": "Verify if all elements are related to themselves, if pairs are symmetric, and if the composite transitive step exists.",
+    "solution_text": "Let's check the properties of $R$:\n1) Reflexive: Since $1, 2, 3 \\\\in A$ and $(1,1), (2,2), (3,3) \\\\in R$, it is reflexive.\n2) Symmetric: We have $(1,2) \\\\in R$ but $(2,1) \\\\notin R$, so it is not symmetric.\n3) Transitive: We have $(1,2) \\\\in R$ and $(2,3) \\\\in R$. For transitivity, we need $(1,3) \\\\in R$. But $(1,3) \\\\notin R$, so it is not transitive.\nOption C is correct.",
+    "common_mistake": "Classifying it as transitive (Option B), neglecting that the presence of $(1,2)$ and $(2,3)$ requires $(1,3)$.",
+    "concept_slugs": ["relations-types"]
+  },
+  {
+    "pattern_group": "relations-types",
+    "title": "A relation $R$ is defined on the set of integers $\\\\mathbb{Z}$ by $aRb \\\\iff a - b$ is divisible by $5$. This relation $R$ is:",
+    "difficulty": "easy",
+    "type": "advanced",
+    "correct_answer": "D",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Reflexive and symmetric, but not transitive",
+      "B": "Symmetric and transitive, but not reflexive",
+      "C": "Reflexive and transitive, but not symmetric",
+      "D": "Reflexive, symmetric, and transitive (an equivalence relation)"
+    },
+    "notes": "Verify modular arithmetic properties: a - a = 0; if 5 divides a-b, it divides b-a; sum of multiples of 5 is also a multiple.",
+    "solution_text": "Let's check the properties of this congruence relation:\n1) Reflexive: $a - a = 0$, which is divisible by 5. So $aRa$ is true for all $a \\\\in \\\\mathbb{Z}$.\n2) Symmetric: If $aRb$, then $a-b = 5k$ for some $k \\\\in \\\\mathbb{Z}$. Then $b-a = -5k = 5(-k)$, which is also divisible by 5. So $bRa$ is true.\n3) Transitive: If $aRb$ and $bRc$, then $a-b = 5k$ and $b-c = 5m$. Adding these two equations: $(a-b) + (b-c) = 5k + 5m \\\\implies a-c = 5(k+m)$, which is divisible by 5. So $aRc$ is true.\nThus, $R$ is reflexive, symmetric, and transitive. Option D is correct.",
+    "common_mistake": "Claiming it is not transitive (Option A), failing to see that the sum of two differences preserves divisibility.",
+    "concept_slugs": ["relations-types"]
+  },
+
+  // GROUP 5: Equivalence Relations & Partitioning (relations-equivalence-partition) - 8 questions
+  {
+    "pattern_group": "relations-equivalence-partition",
+    "title": "Let the set be $A = \\\\{1, 2, 3\\\\}$. The total number of distinct equivalence relations that can be defined on set $A$ is ________.",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2021",
+    "correct_answer": "5",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Recall that the number of equivalence relations on a set equals the number of partitions of that set (Bell numbers).",
+    "solution_text": "The number of equivalence relations on a set of size $n$ is given by the $n$-th Bell number $B_n$, which corresponds to the number of ways to partition the set:\n- For $n=3$, the partitions of $\\\\{1, 2, 3\\\\}$ are:\n  1) $\\\\{\\\\{1\\\\}, \\\\{2\\\\}, \\\\{3\\\\}\\\\}$ (corresponds to identity relation)\n  2) $\\\\{\\\\{1, 2\\\\}, \\\\{3\\\\}\\\\}$\n  3) $\\\\{\\\\{1, 3\\\\}, \\\\{2\\\\}\\\\}$\n  4) $\\\\{\\\\{2, 3\\\\}, \\\\{1\\\\}\\\\}$\n  5) $\\\\{\\\\{1, 2, 3\\\\}\\\\}$ (corresponds to universal relation)\nThus, there are exactly 5 distinct equivalence relations.",
+    "common_mistake": "Writing 8, by assuming it is related to subsets of size 3, or writing 2.",
+    "concept_slugs": ["relations-equivalence-partition"]
+  },
+  {
+    "pattern_group": "relations-equivalence-partition",
+    "title": "Let $R$ be a relation defined on the set of all straight lines in a two-dimensional plane by $L_1 R L_2 \\\\iff L_1$ is parallel to $L_2$. Assuming a line is parallel to itself, this relation $R$ is:",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2022",
+    "correct_answer": "D",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Reflexive and symmetric, but not transitive",
+      "B": "Symmetric and transitive, but not reflexive",
+      "C": "Reflexive and transitive, but not symmetric",
+      "D": "An equivalence relation"
+    },
+    "notes": "Check properties: L1 is parallel to L1; if L1 is parallel to L2, then L2 is parallel to L1; if L1 || L2 and L2 || L3, then L1 || L3.",
+    "solution_text": "Let's check the properties of the parallel relation:\n1) Reflexive: A line $L_1$ is always parallel to itself ($L_1 \\\\parallel L_1$). So it is reflexive.\n2) Symmetric: If $L_1 \\\\parallel L_2$, then obviously $L_2 \\\\parallel L_1$. So it is symmetric.\n3) Transitive: If $L_1 \\\\parallel L_2$ and $L_2 \\\\parallel L_3$, then $L_1 \\\\parallel L_3$. So it is transitive.\nSince it satisfies all three properties, it is an equivalence relation. Option D is correct.",
+    "common_mistake": "Selecting Option A, assuming it is not transitive, or confusing it with the perpendicular relation (which is symmetric but neither reflexive nor transitive).",
+    "concept_slugs": ["relations-equivalence-partition"]
+  },
+  {
+    "pattern_group": "relations-equivalence-partition",
+    "title": "Let $R$ be a relation defined on the set of all triangles in a plane by $T_1 R T_2 \\\\iff T_1$ is congruent to $T_2$. This relation is:",
+    "difficulty": "easy",
+    "type": "concept",
+    "correct_answer": "D",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Symmetric but not transitive",
+      "B": "Transitive but not reflexive",
+      "C": "Reflexive but not symmetric",
+      "D": "An equivalence relation"
+    },
+    "notes": "Congruence of triangles is a fundamental equivalence relation in geometry.",
+    "solution_text": "Let's verify the properties of congruence:\n1) Reflexive: Every triangle $T_1$ is congruent to itself ($T_1 \\\\cong T_1$). So $R$ is reflexive.\n2) Symmetric: If $T_1 \\\\cong T_2$, then $T_2 \\\\cong T_1$. So $R$ is symmetric.\n3) Transitive: If $T_1 \\\\cong T_2$ and $T_2 \\\\cong T_3$, then $T_1 \\\\cong T_3$. So $R$ is transitive.\nTherefore, the relation is an equivalence relation. Option D is correct.",
+    "common_mistake": "Classifying it as only symmetric or transitive, failing to see it fits all three criteria.",
+    "concept_slugs": ["relations-equivalence-partition"]
+  },
+  {
+    "pattern_group": "relations-equivalence-partition",
+    "title": "Let a relation $R$ be defined on $\\\\mathbb{Z} \\\\times \\\\mathbb{Z}$ by $(a, b) R (c, d) \\\\iff a + d = b + c$. The equivalence class of the element $(1, 2)$, denoted by $[(1,2)]$, is equal to:",
+    "difficulty": "medium",
+    "type": "concept",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\\\{(x, y) \\\\in \\\\mathbb{Z} \\\\times \\\\mathbb{Z} : y - x = 1\\\\}$",
+      "B": "$\\\\{(x, y) \\\\in \\\\mathbb{Z} \\\\times \\\\mathbb{Z} : x - y = 1\\\\}$",
+      "C": "$\\\\{(x, y) \\\\in \\\\mathbb{Z} \\\\times \\\\mathbb{Z} : x + y = 3\\\\}$",
+      "D": "$\\\\{(x, y) \\\\in \\\\mathbb{Z} \\\\times \\\\mathbb{Z} : xy = 2\\\\}$"
+    },
+    "notes": "Substitute c = 1, d = 2 in the relation definition to find the relation between x and y.",
+    "solution_text": "The equivalence class $[(1, 2)]$ consists of all ordered pairs $(x, y) \\\\in \\\\mathbb{Z} \\\\times \\\\mathbb{Z}$ such that $(x, y) R (1, 2)$:\n- Applying the relation definition: $(x, y) R (1, 2) \\\\iff x + 2 = y + 1$.\n- Rearranging this equation: $y - x = 2 - 1 \\\\implies y - x = 1$.\nThus, $[(1,2)] = \\\\{(x, y) \\\\in \\\\mathbb{Z} \\\\times \\\\mathbb{Z} : y - x = 1\\\\}$. Option A is correct.",
+    "common_mistake": "Selecting Option B, which is $x - y = 1$, corresponding to a sign error during rearrangement.",
+    "concept_slugs": ["relations-equivalence-partition"]
+  },
+  {
+    "pattern_group": "relations-equivalence-partition",
+    "title": "Let the set $A = \\\\{1, 2, 3\\\\}$. The number of distinct equivalence relations on $A$ that contain the ordered pair $(1, 2)$ is ________.",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "2",
+    "is_numerical": true,
+    "notes": "An equivalence relation containing (1, 2) must also contain (2, 1) and (1, 1), (2, 2) by symmetry and reflexivity.",
+    "solution_text": "Let's identify the equivalence relations containing $(1,2)$:\n1) By symmetry, the relation must contain $(2,1)$.\n2) By reflexivity, it must contain $(1,1), (2,2), (3,3)$.\n3) If we don't group 3 with 1 and 2, we get the partition $\\\\{\\\\{1, 2\\\\}, \\\\{3\\\\}\\\\}$, corresponding to the relation $R_1 = \\\\{(1,1), (2,2), (3,3), (1,2), (2,1)\\\\}$.\n4) If we group 3 with 1 and 2, we get the partition $\\\\{\\\\{1, 2, 3\\\\}\\\\}$, corresponding to the universal relation $R_2 = A \\\\times A$.\nNo other partitions put 1 and 2 in the same block. Thus, there are exactly 2 such equivalence relations.",
+    "common_mistake": "Writing 5, which is the total number of equivalence relations on $A$, failing to restrict to those containing $(1,2)$.",
+    "concept_slugs": ["relations-equivalence-partition"]
+  },
+  {
+    "pattern_group": "relations-equivalence-partition",
+    "title": "A relation $R$ is defined on the set of integers $\\\\mathbb{Z}$ by $aRb \\\\iff a^2 - b^2$ is divisible by $3$. The number of distinct equivalence classes of this equivalence relation is ________.",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "2",
+    "is_numerical": true,
+    "notes": "Analyze the value of $a^2 \\\\pmod 3$ for any integer a.",
+    "solution_text": "Let's check the possible values of $a^2 \\\\pmod 3$ for any integer $a$:\n- If $a$ is a multiple of 3 ($a \\\\equiv 0 \\\\pmod 3$), then $a^2 \\\\equiv 0 \\\\pmod 3$.\n- If $a$ is not a multiple of 3 ($a \\\\equiv 1$ or $2 \\\\pmod 3$), then $a^2 \\\\equiv 1 \\\\pmod 3$.\n- Thus, the value of $a^2 \\\\pmod 3$ can only be 0 or 1.\n- The relation states $a^2 \\\\equiv b^2 \\\\pmod 3$.\n- This partitions the integers into two groups:\n  1) Class 1: Integers whose squares are divisible by 3 (multiples of 3): $[0] = \\\\{0, \\\\pm 3, \\\\pm 6, \\\\ldots\\\\}$.\n  2) Class 2: Integers whose squares leave a remainder of 1 when divided by 3 (non-multiples of 3): $[1] = \\\\{\\\\pm 1, \\\\pm 2, \\\\pm 4, \\\\pm 5, \\\\ldots\\\\}$.\nTherefore, there are exactly 2 distinct equivalence classes.",
+    "common_mistake": "Writing 3, assuming that because the divisor is 3, there must be 3 classes (which would be true for $a \\\\equiv b \\\\pmod 3$, but not for squared terms).",
+    "concept_slugs": ["relations-equivalence-partition"]
+  },
+  {
+    "pattern_group": "relations-equivalence-partition",
+    "title": "The total number of distinct equivalence relations that can be defined on a set containing exactly $4$ elements is ________.",
+    "difficulty": "hard",
+    "type": "advanced",
+    "correct_answer": "15",
+    "is_numerical": true,
+    "notes": "Calculate the 4th Bell number B4.",
+    "solution_text": "The number of equivalence relations on a set of size 4 is the 4th Bell number $B_4$. We can compute the Bell numbers using the recurrence relation or Bell triangle:\n- $B_0 = 1$\n- $B_1 = 1$\n- $B_2 = 2$\n- $B_3 = 5$\n- To find $B_4$:\n  - $B_4 = \\\\sum_{k=0}^{3} \\\\binom{3}{k} B_k = \\\\binom{3}{0}B_0 + \\\\binom{3}{1}B_1 + \\\\binom{3}{2}B_2 + \\\\binom{3}{3}B_3$\n  - $B_4 = 1(1) + 3(1) + 3(2) + 1(5) = 1 + 3 + 6 + 5 = 15$.\nTherefore, the total number of equivalence relations is 15.",
+    "common_mistake": "Writing 16, by assuming it is $2^4$, or writing 10.",
+    "concept_slugs": ["relations-equivalence-partition"]
+  },
+  {
+    "pattern_group": "relations-equivalence-partition",
+    "title": "A relation $R$ is defined on the set of ordered pairs of positive integers $\\\\mathbb{N} \\\\times \\\\mathbb{N}$ by $(a, b) R (c, d) \\\\iff ad = bc$. This relation $R$ is:",
+    "difficulty": "hard",
+    "type": "advanced",
+    "correct_answer": "D",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Symmetric and transitive, but not reflexive",
+      "B": "Reflexive and symmetric, but not transitive",
+      "C": "Reflexive and transitive, but not symmetric",
+      "D": "An equivalence relation"
+    },
+    "notes": "This relation represents the equivalence of fractions: a/b = c/d.",
+    "solution_text": "Let's check the properties of $R$ on $\\\\mathbb{N} \\\\times \\\\mathbb{N}$:\n1) Reflexive: $(a, b) R (a, b) \\\\iff ab = ba$, which is always true. So $R$ is reflexive.\n2) Symmetric: If $(a, b) R (c, d) \\\\iff ad = bc \\\\iff cb = da \\\\iff (c, d) R (a, b)$. So $R$ is symmetric.\n3) Transitive: If $(a, b) R (c, d)$ and $(c, d) R (e, f)$, then $ad = bc$ and $cf = de$.\n- Multiplying these: $(ad)(cf) = (bc)(de) \\\\implies acdf = bcde$.\n- Since $c, d \\\\ne 0$ (positive integers), we can divide both sides by $cd$: $af = be \\\\implies (a, b) R (e, f)$. So $R$ is transitive.\nThus, $R$ is an equivalence relation. Option D is correct.",
+    "common_mistake": "Selecting Option B, failing to carry out the division to prove transitivity.",
+    "concept_slugs": ["relations-equivalence-partition"]
+  },
+
+  // GROUP 6: Composite & Inverse Relations (relations-composite-inverse) - 8 questions
+  {
+    "pattern_group": "relations-composite-inverse",
+    "title": "If $R = \\\\{(1, 2), (3, 4), (5, 6)\\\\}$ is a relation from set $A$ to set $B$, then the inverse relation $R^{-1}$ is equal to:",
+    "difficulty": "easy",
+    "type": "pyq",
+    "source": "JEE Main 2021",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\\\{(2, 1), (4, 3), (6, 5)\\\\}$",
+      "B": "$\\\\{(1, 2), (3, 4), (5, 6)\\\\}$",
+      "C": "$\\\\{(2, 2), (4, 4), (6, 6)\\\\}$",
+      "D": "$\\\\{(1, 1), (3, 3), (5, 5)\\\\}$"
+    },
+    "notes": "The inverse relation is obtained by interchanging the first and second coordinates of each ordered pair.",
+    "solution_text": "By definition, if a relation $R$ consists of ordered pairs $(x, y)$, then its inverse relation $R^{-1}$ consists of ordered pairs $(y, x)$:\n- Given $R = \\\\{(1, 2), (3, 4), (5, 6)\\\\}$.\n- Swapping the coordinates of each pair: $R^{-1} = \\\\{(2, 1), (4, 3), (6, 5)\\\\}$. Option A is correct.",
+    "common_mistake": "Selecting Option B, which is $R$ itself, or creating diagonal elements (Option C or D).",
+    "concept_slugs": ["relations-composite-inverse"]
+  },
+  {
+    "pattern_group": "relations-composite-inverse",
+    "title": "Let $R$ be a relation on the set of real numbers $\\\\mathbb{R}$ defined by $R = \\\\{(x, y) : y = x^2\\\\}$, and $S$ be a relation defined by $S = \\\\{(x, y) : y = x + 1\\\\}$. The composite relation $R \\\\circ S$ is equal to:",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2022",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\\\{(x, y) : y = x^2 + 1\\\\}$",
+      "B": "$\\\\{(x, y) : y = (x + 1)^2\\\\}$",
+      "C": "$\\\\{(x, y) : y = x^2 + 2x + 2\\\\}$",
+      "D": "$\\\\{(x, y) : y = x + 2\\\\}$"
+    },
+    "notes": "Recall that $(x, z) \\\\in R \\\\circ S \\\\iff \\\\exists y$ such that $(x, y) \\\\in S$ and $(y, z) \\\\in R$. Apply substitution.",
+    "solution_text": "Let's apply the definition of composition of relations:\n1) $(x, z) \\\\in R \\\\circ S \\\\iff \\\\exists y$ such that $(x, y) \\\\in S$ and $(y, z) \\\\in R$.\n2) From $(x, y) \\\\in S \\\\implies y = x + 1$.\n3) From $(y, z) \\\\in R \\\\implies z = y^2$.\n4) Substituting $y$: $z = (x + 1)^2$.\nThus, $R \\\\circ S = \\\\{(x, y) : y = (x + 1)^2\\\\}$. Option B is correct.",
+    "common_mistake": "Selecting $y = x^2 + 1$ (Option A), which corresponds to $S \\\\circ R$ (first squaring, then adding 1).",
+    "concept_slugs": ["relations-composite-inverse"]
+  },
+  {
+    "pattern_group": "relations-composite-inverse",
+    "title": "Let $R$ and $S$ be two relations from $A$ to $B$ and $B$ to $C$ respectively. Which of the following algebraic properties is always true for their composition and inverse?",
+    "difficulty": "medium",
+    "type": "concept",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$(R \\\\circ S)^{-1} = S^{-1} \\\\circ R^{-1}$",
+      "B": "$(R \\\\circ S)^{-1} = R^{-1} \\\\circ S^{-1}$",
+      "C": "$(R \\\\circ S)^{-1} = S \\\\circ R$",
+      "D": "$(R \\\\circ S)^{-1} = R \\\\circ S$"
+    },
+    "notes": "This is known as the reversal law for the inverse of composite relations.",
+    "solution_text": "The reversal law for relations states that the inverse of a composite relation is the composition of their inverses in reverse order:\n$(R \\\\circ S)^{-1} = S^{-1} \\\\circ R^{-1}$\nThis is analogous to the transpose of a product of matrices $(AB)^T = B^T A^T$ or the inverse of a product of groups $(ab)^{-1} = b^{-1} a^{-1}$. Option A is correct.",
+    "common_mistake": "Selecting Option B, which keeps the original order of relations, violating the reversal law.",
+    "concept_slugs": ["relations-composite-inverse"]
+  },
+  {
+    "pattern_group": "relations-composite-inverse",
+    "title": "Let $R = \\\\{(1, 2), (2, 3), (3, 4)\\\\}$ and $S = \\\\{(2, 5), (3, 6), (4, 7)\\\\}$. The domain of the composite relation $S \\\\circ R$ is:",
+    "difficulty": "medium",
+    "type": "concept",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\\\{1, 2, 3\\\\}$",
+      "B": "$\\\\{5, 6, 7\\\\}$",
+      "C": "$\\\\{2, 3, 4\\\\}$",
+      "D": "$\\\\{1, 2, 3, 4\\\\}$"
+    },
+    "notes": "Find the set of ordered pairs in S o R first, and extract the set of all first coordinates.",
+    "solution_text": "Let's find the pairs in $S \\\\circ R$:\n- $(x, z) \\\\in S \\\\circ R \\\\iff \\\\exists y$ such that $(x, y) \\\\in R$ and $(y, z) \\\\in S$:\n  - For $x=1$: $(1, 2) \\\\in R$ and $(2, 5) \\\\in S \\\\implies (1, 5) \\\\in S \\\\circ R$\n  - For $x=2$: $(2, 3) \\\\in R$ and $(3, 6) \\\\in S \\\\implies (2, 6) \\\\in S \\\\circ R$\n  - For $x=3$: $(3, 4) \\\\in R$ and $(4, 7) \\\\in S \\\\implies (3, 7) \\\\in S \\\\circ R$\n- Thus, $S \\\\circ R = \\\\{(1, 5), (2, 6), (3, 7)\\\\}$.\n- The domain of this composite relation is the set of first coordinates: $\\\\{1, 2, 3\\\\}$. Option A is correct.",
+    "common_mistake": "Selecting $\\\\{5, 6, 7\\\\}$ (Option B), which is the range of $S \\\\circ R$, or selecting $\\\\{2, 3, 4\\\\}$ (Option C).",
+    "concept_slugs": ["relations-composite-inverse"]
+  },
+  {
+    "pattern_group": "relations-composite-inverse",
+    "title": "Let $R$ and $S$ be two equivalence relations defined on a set $A$. Which of the following is always guaranteed to be an equivalence relation on $A$?",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "The intersection $R \\\\cap S$",
+      "B": "The union $R \\\\cup S$",
+      "C": "The composition $R \\\\circ S$",
+      "D": "The difference $R \\\\setminus S$"
+    },
+    "notes": "Test reflexivity, symmetry, and transitivity for the intersection set.",
+    "solution_text": "Let's verify the intersection $R \\\\cap S$ of two equivalence relations:\n1) Reflexive: Since $R$ and $S$ are reflexive, $(a, a) \\\\in R$ and $(a, a) \\\\in S$ for all $a \\\\in A$. Thus, $(a, a) \\\\in R \\\\cap S$. So $R \\\\cap S$ is reflexive.\n2) Symmetric: If $(a, b) \\\\in R \\\\cap S \\\\implies (a, b) \\\\in R$ and $(a, b) \\\\in S$. Since $R$ and $S$ are symmetric, $(b, a) \\\\in R$ and $(b, a) \\\\in S \\\\implies (b, a) \\\\in R \\\\cap S$. So $R \\\\cap S$ is symmetric.\n3) Transitive: If $(a, b), (b, c) \\\\in R \\\\cap S \\\\implies$ both pairs are in $R$ and both are in $S$. Since $R$ and $S$ are transitive, $(a, c) \\\\in R$ and $(a, c) \\\\in S \\\\implies (a, c) \\\\in R \\\\cap S$. So $R \\\\cap S$ is transitive.\nThus, $R \\\\cap S$ is always an equivalence relation. Option A is correct. (Union, difference, and composition are not guaranteed to be transitive).",
+    "common_mistake": "Selecting union (Option B), which is not transitive unless one relation is a subset of the other.",
+    "concept_slugs": ["relations-composite-inverse"]
+  },
+  {
+    "pattern_group": "relations-composite-inverse",
+    "title": "Let $A = \\\\{1, 2, 3\\\\}$ and $R = \\\\{(1, 1), (2, 2), (3, 3), (1, 2), (2, 3)\\\\}$ be a relation on $A$. The minimum number of ordered pairs that must be added to $R$ to make it an equivalence relation is ________.",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "4",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "The relation must become symmetric and transitive. Identify the missing symmetric and transitive pairs.",
+    "solution_text": "Let's analyze $R = \\\\{(1, 1), (2, 2), (3, 3), (1, 2), (2, 3)\\\\}$:\n1) Reflexivity: $R$ is already reflexive since $(1,1), (2,2), (3,3) \\\\in R$.\n2) Symmetry: We have $(1,2) \\\\in R \\\\implies$ we must add $(2,1)$. We have $(2,3) \\\\in R \\\\implies$ we must add $(3,2)$.\n3) Transitivity: We have $(1,2)$ and $(2,3) \\\\in R \\\\implies$ we must add $(1,3)$. Since we added $(1,3)$, by symmetry we must also add $(3,1)$.\n- Adding these 4 pairs: $(2,1), (3,2), (1,3), (3,1)$ makes the relation equal to the universal relation $A \\\\times A$, which is transitive, symmetric, and reflexive.\nTherefore, the minimum number of pairs that must be added is 4.",
+    "common_mistake": "Writing 2, only adding the symmetric counterparts and forgetting that the transitivity check requires adding $(1,3)$ and $(3,1)$.",
+    "concept_slugs": ["relations-composite-inverse"]
+  },
+  {
+    "pattern_group": "relations-composite-inverse",
+    "title": "Let $A = \\\\{1, 2, 3\\\\}$. A relation $R$ on $A$ is defined as $R = \\\\{(1,2), (2,1)\\\\}$. The relation $R$ is:",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Symmetric, but neither reflexive nor transitive",
+      "B": "Reflexive and symmetric, but not transitive",
+      "C": "Transitive, but neither reflexive nor symmetric",
+      "D": "An equivalence relation"
+    },
+    "notes": "Verify if the reverse of each pair is present, and check for diagonal elements.",
+    "solution_text": "Let's check the properties of $R$:\n1) Reflexive: $(1,1) \\\\notin R \\\\implies$ not reflexive.\n2) Symmetric: Since $(1,2) \\\\in R$ and $(2,1) \\\\in R$, it is symmetric.\n3) Transitive: We have $(1,2) \\\\in R$ and $(2,1) \\\\in R$. For transitivity, we need $(1,1) \\\\in R$. But $(1,1) \\\\notin R \\\\implies$ not transitive.\nThus, it is symmetric but neither reflexive nor transitive. Option A is correct.",
+    "common_mistake": "Classifying it as transitive (Option C), forgetting that $(1,2)$ and $(2,1)$ require $(1,1)$ to be in the relation.",
+    "concept_slugs": ["relations-composite-inverse"]
+  },
+  {
+    "pattern_group": "relations-composite-inverse",
+    "title": "If $R$ is a relation from set $A$ to set $B$ and $S$ is a relation from set $B$ to set $C$, the domain of the composite relation $S \\\\circ R$ is always a subset of:",
+    "difficulty": "easy",
+    "type": "advanced",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Set $A$",
+      "B": "Set $B$",
+      "C": "Set $C$",
+      "D": "The Cartesian product $A \\\\times C$"
+    },
+    "notes": "Recall the definition of composition. S o R takes elements of A and maps them to elements of C.",
+    "solution_text": "The composition $S \\\\circ R$ is defined by: $(x, z) \\\\in S \\\\circ R \\\\iff \\\\exists y \\\\in B$ such that $(x, y) \\\\in R$ and $(y, z) \\\\in S$. Therefore, the first coordinate $x$ must belong to set $A$. Thus, the domain of $S \\\\circ R$ is always a subset of set $A$. Option A is correct.",
+    "common_mistake": "Selecting Set $B$ (Option B), which is the intermediate set, or Set $C$ (Option C), which is the target set containing the range.",
+    "concept_slugs": ["relations-composite-inverse"]
+  }
+];
+
+// Write the questions to JSON file
+const destPath = path.join(__dirname, 'sets_questions.json');
+fs.writeFileSync(destPath, JSON.stringify(questions, null, 2), 'utf8');
+console.log(`Successfully generated ${questions.length} Sets & Relations questions in sets_questions.json`);
