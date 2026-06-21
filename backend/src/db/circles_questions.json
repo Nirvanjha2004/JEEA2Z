@@ -14,7 +14,7 @@
       "D": "Center $(4, -6)$, Radius $5$"
     },
     "notes": "Compare with the general equation: x^2 + y^2 + 2gx + 2fy + c = 0. Center is (-g, -f) and radius is sqrt(g^2 + f^2 - c).",
-    "solution_text": "Let's find the parameters by comparing with the general equation:\\n1) $2g = -4 \\\\implies g = -2$.\\n2) $2f = 6 \\\\implies f = 3$.\\n3) $c = -12$.\\n4) Center is $(-g, -f) = (2, -3)$.\\n5) Radius is $r = \\\\sqrt{g^2 + f^2 - c} = \\\\sqrt{(-2)^2 + 3^2 - (-12)} = \\\\sqrt{4 + 9 + 12} = \\\\sqrt{25} = 5$.\\nOption A is correct.",
+    "solution_text": "Let's find the parameters by comparing with the general equation:\\n1) $2g = -4 \\implies g = -2$.\\n2) $2f = 6 \\implies f = 3$.\\n3) $c = -12$.\\n4) Center is $(-g, -f) = (2, -3)$.\\n5) Radius is $r = \\sqrt{g^2 + f^2 - c} = \\sqrt{(-2)^2 + 3^2 - (-12)} = \\sqrt{4 + 9 + 12} = \\sqrt{25} = 5$.\\nOption A is correct.",
     "common_mistake": "Incorrect signs for center coordinates (Option B) or forgetting to take the square root of radius squared (Option C).",
     "concept_slugs": [
       "circles-equations-tangents"
@@ -35,7 +35,7 @@
       "D": "$x^2 + y^2 - x + 2y - 4 = 0$"
     },
     "notes": "Use the central form equation: (x - h)^2 + (y - k)^2 = r^2.",
-    "solution_text": "Let's expand the central form equation with center $(h, k) = (1, -2)$ and $r = 3$:\\n1) $(x - 1)^2 + (y - (-2))^2 = 3^2$.\\n2) Expand the binomials:\\n   $(x - 1)^2 + (y + 2)^2 = 9 \\\\implies x^2 - 2x + 1 + y^2 + 4y + 4 = 9$.\\n3) Group terms and simplify:\\n   $x^2 + y^2 - 2x + 4y + 5 = 9 \\\\implies x^2 + y^2 - 2x + 4y - 4 = 0$.\\nOption A is correct.",
+    "solution_text": "Let's expand the central form equation with center $(h, k) = (1, -2)$ and $r = 3$:\\n1) $(x - 1)^2 + (y - (-2))^2 = 3^2$.\\n2) Expand the binomials:\\n   $(x - 1)^2 + (y + 2)^2 = 9 \\implies x^2 - 2x + 1 + y^2 + 4y + 4 = 9$.\\n3) Group terms and simplify:\\n   $x^2 + y^2 - 2x + 4y + 5 = 9 \\implies x^2 + y^2 - 2x + 4y - 4 = 0$.\\nOption A is correct.",
     "common_mistake": "Sign errors during binomial expansion of $(y+2)^2$ or radius transposition (Option B).",
     "concept_slugs": [
       "circles-equations-tangents"
@@ -57,7 +57,7 @@
       "D": "$10$"
     },
     "notes": "The length of the intercept made by a circle on the x-axis is given by 2 * sqrt(g^2 - c).",
-    "solution_text": "Let's find the x-intercept using the standard formula:\\n1) Compare with general equation: $2g = -10 \\\\implies g = -5$, and $c = 9$.\\n2) The formula for x-intercept is $L = 2\\\\sqrt{g^2 - c}$.\\n3) Substitute the values:\\n   $L = 2\\\\sqrt{(-5)^2 - 9} = 2\\\\sqrt{25 - 9} = 2\\\\sqrt{16} = 2(4) = 8$.\\nOption A is correct.",
+    "solution_text": "Let's find the x-intercept using the standard formula:\\n1) Compare with general equation: $2g = -10 \\implies g = -5$, and $c = 9$.\\n2) The formula for x-intercept is $L = 2\\sqrt{g^2 - c}$.\\n3) Substitute the values:\\n   $L = 2\\sqrt{(-5)^2 - 9} = 2\\sqrt{25 - 9} = 2\\sqrt{16} = 2(4) = 8$.\\nOption A is correct.",
     "common_mistake": "Forgetting the factor of 2 in the intercept formula, resulting in 4 (Option B).",
     "concept_slugs": [
       "circles-equations-tangents"
@@ -65,20 +65,20 @@
   },
   {
     "pattern_group": "circles-equations-tangents",
-    "title": "The parametric equations of the circle $x^2 + y^2 = 9$ are given by (where $\\\\theta$ is the parameter):",
+    "title": "The parametric equations of the circle $x^2 + y^2 = 9$ are given by (where $\\theta$ is the parameter):",
     "difficulty": "medium",
     "type": "practice",
     "correct_answer": "B",
     "is_numerical": false,
     "question_format": "mcq",
     "options": {
-      "A": "$x = 9\\\\cos\\\\theta, y = 9\\\\sin\\\\theta$",
-      "B": "$x = 3\\\\cos\\\\theta, y = 3\\\\sin\\\\theta$",
-      "C": "$x = 3\\\\sec\\\\theta, y = 3\\\\tan\\\\theta$",
-      "D": "$x = 3\\\\cos^2\\\\theta, y = 3\\\\sin^2\\\\theta$"
+      "A": "$x = 9\\cos\\theta, y = 9\\sin\\theta$",
+      "B": "$x = 3\\cos\\theta, y = 3\\sin\\theta$",
+      "C": "$x = 3\\sec\\theta, y = 3\\tan\\theta$",
+      "D": "$x = 3\\cos^2\\theta, y = 3\\sin^2\\theta$"
     },
     "notes": "Parametric form of x^2 + y^2 = r^2 is x = r cos(theta) and y = r sin(theta).",
-    "solution_text": "Let's identify the radius $r$ from the equation:\\n1) $r^2 = 9 \\\\implies r = 3$.\\n2) The parametric coordinates of a point on a circle of radius $r$ centered at origin are $(r\\\\cos\\\\theta, r\\\\sin\\\\theta)$.\\n3) Substituting $r = 3$ gives $x = 3\\\\cos\\\\theta, y = 3\\\\sin\\\\theta$.\\nOption B is correct.",
+    "solution_text": "Let's identify the radius $r$ from the equation:\\n1) $r^2 = 9 \\implies r = 3$.\\n2) The parametric coordinates of a point on a circle of radius $r$ centered at origin are $(r\\cos\\theta, r\\sin\\theta)$.\\n3) Substituting $r = 3$ gives $x = 3\\cos\\theta, y = 3\\sin\\theta$.\\nOption B is correct.",
     "common_mistake": "Using $r^2$ instead of $r$ as the amplitude (Option A), or using wrong trigonometric functions (Option C).",
     "concept_slugs": [
       "circles-equations-tangents"
@@ -100,7 +100,7 @@
       "D": "lies at the center of the circle"
     },
     "notes": "Find the value of S1 by substituting the point coordinates into the circle's equation and check its sign.",
-    "solution_text": "Let's evaluate $S_1$ for the point $(x_1, y_1) = (3, 4)$:\\n1) $S_1 = x_1^2 + y_1^2 - 6x_1 - 8y_1 + 9$.\\n2) Substitute values:\\n   $S_1 = 3^2 + 4^2 - 6(3) - 8(4) + 9 = 9 + 16 - 18 - 32 + 9$.\\n   $S_1 = 34 - 50 = -16$.\\n3) Since $S_1 = -16 < 0$, the point lies inside the circle.\\n4) Let's check the center of the circle: $(3, 4)$ is actually the center of the circle? No! Center is $(3, 4)$.\\n   Wait, let's verify center: $2g = -6 \\\\implies g = -3$, $2f = -8 \\\\implies f = -4$. Center is $(-g, -f) = (3, 4)$.\\n   Ah! If the point is $(3, 4)$, it is exactly the center of the circle!\\n   Let's check if $S_1$ at center: $S_1 = -16$, which is $-r^2$. Since $r^2 = 9 + 16 - 9 = 16$, the center indeed has $S_1 = -16$.\\n   So the point is exactly the center of the circle. Let's adjust Option D to be the correct answer.",
+    "solution_text": "Let's evaluate $S_1$ for the point $(x_1, y_1) = (3, 4)$:\\n1) $S_1 = x_1^2 + y_1^2 - 6x_1 - 8y_1 + 9$.\\n2) Substitute values:\\n   $S_1 = 3^2 + 4^2 - 6(3) - 8(4) + 9 = 9 + 16 - 18 - 32 + 9$.\\n   $S_1 = 34 - 50 = -16$.\\n3) Since $S_1 = -16 < 0$, the point lies inside the circle.\\n4) Let's check the center of the circle: $(3, 4)$ is actually the center of the circle? No! Center is $(3, 4)$.\\n   Wait, let's verify center: $2g = -6 \\implies g = -3$, $2f = -8 \\implies f = -4$. Center is $(-g, -f) = (3, 4)$.\\n   Ah! If the point is $(3, 4)$, it is exactly the center of the circle!\\n   Let's check if $S_1$ at center: $S_1 = -16$, which is $-r^2$. Since $r^2 = 9 + 16 - 9 = 16$, the center indeed has $S_1 = -16$.\\n   So the point is exactly the center of the circle. Let's adjust Option D to be the correct answer.",
     "common_mistake": "Stating it is inside but not checking if it matches the center coordinates.",
     "concept_slugs": [
       "circles-equations-tangents"
@@ -115,7 +115,7 @@
     "is_numerical": true,
     "question_format": "numerical",
     "notes": "Identify the values of g, f, and c from the equation and use the radius formula.",
-    "solution_text": "Let's find the radius:\\n1) Compare with general equation: $2g = -8 \\\\implies g = -4$; $2f = -10 \\\\implies f = -5$; $c = -8$.\\n2) Radius $r = \\\\sqrt{g^2 + f^2 - c} = \\\\sqrt{(-4)^2 + (-5)^2 - (-8)}$.\\n3) Simplify:\\n   $r = \\\\sqrt{16 + 25 + 8} = \\\\sqrt{49} = 7$.\\nThe radius is 7.",
+    "solution_text": "Let's find the radius:\\n1) Compare with general equation: $2g = -8 \\implies g = -4$; $2f = -10 \\implies f = -5$; $c = -8$.\\n2) Radius $r = \\sqrt{g^2 + f^2 - c} = \\sqrt{(-4)^2 + (-5)^2 - (-8)}$.\\n3) Simplify:\\n   $r = \\sqrt{16 + 25 + 8} = \\sqrt{49} = 7$.\\nThe radius is 7.",
     "common_mistake": "Sign errors inside the square root (e.g. subtracting 8 instead of adding it).",
     "concept_slugs": [
       "circles-equations-tangents"
@@ -131,7 +131,7 @@
     "is_numerical": true,
     "question_format": "numerical",
     "notes": "The length of the y-intercept is given by 2 * sqrt(f^2 - c).",
-    "solution_text": "Let's apply the y-intercept formula:\\n1) Here $2f = -8 \\\\implies f = -4$, and $c = 12$.\\n2) Intercept length is $L = 2\\\\sqrt{f^2 - c}$.\\n3) Substitute values:\\n   $L = 2\\\\sqrt{(-4)^2 - 12} = 2\\\\sqrt{16 - 12} = 2\\\\sqrt{4} = 2(2) = 4$.\\nThe y-intercept is 4.",
+    "solution_text": "Let's apply the y-intercept formula:\\n1) Here $2f = -8 \\implies f = -4$, and $c = 12$.\\n2) Intercept length is $L = 2\\sqrt{f^2 - c}$.\\n3) Substitute values:\\n   $L = 2\\sqrt{(-4)^2 - 12} = 2\\sqrt{16 - 12} = 2\\sqrt{4} = 2(2) = 4$.\\nThe y-intercept is 4.",
     "common_mistake": "Confusing it with the x-intercept formula and using g instead of f.",
     "concept_slugs": [
       "circles-equations-tangents"
@@ -146,7 +146,7 @@
     "is_numerical": true,
     "question_format": "numerical",
     "notes": "First divide the entire equation by 3 to normalize the x^2 and y^2 coefficients to 1.",
-    "solution_text": "Let's normalize the circle equation:\\n1) Divide by 3:\\n   $x^2 + y^2 - 4x + 6y + \\\\frac{k}{3} = 0$.\\n2) Compare coefficients: $2g = -4 \\\\implies g = -2$, $2f = 6 \\\\implies f = 3$, and $c = \\\\frac{k}{3}$.\\n3) The radius is given as $4$:\\n   $\\\\sqrt{(-2)^2 + 3^2 - \\\\frac{k}{3}} = 4 \\\\implies 4 + 9 - \\\\frac{k}{3} = 16$.\\n4) Solve for $k$:\\n   $13 - \\\\frac{k}{3} = 16 \\\\implies -\\\\frac{k}{3} = 3 \\\\implies k = -9$.\\nThe value of $k$ is -9.",
+    "solution_text": "Let's normalize the circle equation:\\n1) Divide by 3:\\n   $x^2 + y^2 - 4x + 6y + \\frac{k}{3} = 0$.\\n2) Compare coefficients: $2g = -4 \\implies g = -2$, $2f = 6 \\implies f = 3$, and $c = \\frac{k}{3}$.\\n3) The radius is given as $4$:\\n   $\\sqrt{(-2)^2 + 3^2 - \\frac{k}{3}} = 4 \\implies 4 + 9 - \\frac{k}{3} = 16$.\\n4) Solve for $k$:\\n   $13 - \\frac{k}{3} = 16 \\implies -\\frac{k}{3} = 3 \\implies k = -9$.\\nThe value of $k$ is -9.",
     "common_mistake": "Neglecting to divide by 3 before identifying g, f, and c, leading to a wrong calculation.",
     "concept_slugs": [
       "circles-equations-tangents"
@@ -167,7 +167,7 @@
       "D": "$3x + 4y - 5 = 0$"
     },
     "notes": "Apply the point form of the tangent: x*x1 + y*y1 = a^2.",
-    "solution_text": "Let's write the tangent equation for $x^2 + y^2 = a^2$ at $(x_1, y_1) = (3, 4)$:\\n1) The tangent form is $x x_1 + y y_1 = a^2$.\\n2) Substitute coordinates and $a^2 = 25$:\\n   $3x + 4y = 25 \\\\implies 3x + 4y - 25 = 0$.\\nOption A is correct.",
+    "solution_text": "Let's write the tangent equation for $x^2 + y^2 = a^2$ at $(x_1, y_1) = (3, 4)$:\\n1) The tangent form is $x x_1 + y y_1 = a^2$.\\n2) Substitute coordinates and $a^2 = 25$:\\n   $3x + 4y = 25 \\implies 3x + 4y - 25 = 0$.\\nOption A is correct.",
     "common_mistake": "Interchanging the coordinates (Option C) or writing $r$ instead of $r^2$ (Option D).",
     "concept_slugs": [
       "circles-tangent-properties"
@@ -182,13 +182,13 @@
     "is_numerical": false,
     "question_format": "mcq",
     "options": {
-      "A": "$3\\\\sqrt{3}$",
+      "A": "$3\\sqrt{3}$",
       "B": "$3$",
       "C": "$27$",
       "D": "$5$"
     },
     "notes": "The length of the tangent from (x1, y1) is given by sqrt(S1).",
-    "solution_text": "Let's find the length of the tangent:\\n1) The expression for the circle is $S = x^2 + y^2 - 25 = 0$.\\n2) Substitute the point $(4, 6)$ to find $S_1$:\\n   $S_1 = 4^2 + 6^2 - 25 = 16 + 36 - 25 = 27$.\\n3) The length of the tangent is $\\\\sqrt{S_1} = \\\\sqrt{27} = 3\\\\sqrt{3}$.\\nOption A is correct.",
+    "solution_text": "Let's find the length of the tangent:\\n1) The expression for the circle is $S = x^2 + y^2 - 25 = 0$.\\n2) Substitute the point $(4, 6)$ to find $S_1$:\\n   $S_1 = 4^2 + 6^2 - 25 = 16 + 36 - 25 = 27$.\\n3) The length of the tangent is $\\sqrt{S_1} = \\sqrt{27} = 3\\sqrt{3}$.\\nOption A is correct.",
     "common_mistake": "Forgetting to take the square root of S1, resulting in 27 (Option C).",
     "concept_slugs": [
       "circles-tangent-properties"
@@ -210,7 +210,7 @@
       "D": "$c^2 = a^2 m^2$"
     },
     "notes": "Equate the perpendicular distance from center (0, 0) to the line with the radius a.",
-    "solution_text": "Let's analyze the tangency condition:\\n1) Perpendicular distance from center $(0,0)$ to the line $mx - y + c = 0$ must equal the radius $a$:\\n   $d = \\\\frac{|c|}{\\\\sqrt{m^2 + (-1)^2}} = a$.\\n2) Square both sides:\\n   $\\\\frac{c^2}{1 + m^2} = a^2 \\\\implies c^2 = a^2(1 + m^2)$.\\nOption B is correct.",
+    "solution_text": "Let's analyze the tangency condition:\\n1) Perpendicular distance from center $(0,0)$ to the line $mx - y + c = 0$ must equal the radius $a$:\\n   $d = \\frac{|c|}{\\sqrt{m^2 + (-1)^2}} = a$.\\n2) Square both sides:\\n   $\\frac{c^2}{1 + m^2} = a^2 \\implies c^2 = a^2(1 + m^2)$.\\nOption B is correct.",
     "common_mistake": "Sign errors inside the parentheses (Option A).",
     "concept_slugs": [
       "circles-tangent-properties"
@@ -225,14 +225,14 @@
     "is_numerical": false,
     "question_format": "mcq",
     "options": {
-      "A": "$3x + 4y \\\\pm 5 = 0$",
-      "B": "$3x + 4y \\\\pm 15 = 0$",
-      "C": "$3x + 4y \\\\pm 9 = 0$",
-      "D": "$4x - 3y \\\\pm 15 = 0$"
+      "A": "$3x + 4y \\pm 5 = 0$",
+      "B": "$3x + 4y \\pm 15 = 0$",
+      "C": "$3x + 4y \\pm 9 = 0$",
+      "D": "$4x - 3y \\pm 15 = 0$"
     },
     "notes": "Let the parallel line be 3x + 4y + k = 0 and equate its distance from origin to the radius 3.",
-    "solution_text": "Let's write the equation of the parallel tangent:\\n1) Any line parallel to $3x + 4y = 0$ is $3x + 4y + k = 0$.\\n2) The distance from center $(0, 0)$ to this line must equal the radius $3$:\\n   $\\\\frac{|k|}{\\\\sqrt{3^2 + 4^2}} = 3 \\\\implies \\\\frac{|k|}{5} = 3 \\\\implies |k| = 15$.\\n3) Thus, the equations are $3x + 4y \\\\pm 15 = 0$.\\nOption B is correct.",
-    "common_mistake": "Using radius 1 instead of 3, leading to $\\\\pm 5$ (Option A).",
+    "solution_text": "Let's write the equation of the parallel tangent:\\n1) Any line parallel to $3x + 4y = 0$ is $3x + 4y + k = 0$.\\n2) The distance from center $(0, 0)$ to this line must equal the radius $3$:\\n   $\\frac{|k|}{\\sqrt{3^2 + 4^2}} = 3 \\implies \\frac{|k|}{5} = 3 \\implies |k| = 15$.\\n3) Thus, the equations are $3x + 4y \\pm 15 = 0$.\\nOption B is correct.",
+    "common_mistake": "Using radius 1 instead of 3, leading to $\\pm 5$ (Option A).",
     "concept_slugs": [
       "circles-tangent-properties"
     ]
@@ -247,13 +247,13 @@
     "is_numerical": false,
     "question_format": "mcq",
     "options": {
-      "A": "$2\\\\sin^{-1}\\\\left(\\\\frac{3}{5}\\\\right)$",
-      "B": "$2\\\\cos^{-1}\\\\left(\\\\frac{3}{5}\\\\right)$",
-      "C": "$\\\\sin^{-1}\\\\left(\\\\frac{3}{5}\\\\right)$",
-      "D": "$2\\\\tan^{-1}\\\\left(\\\\frac{3}{4}\\\\right)$"
+      "A": "$2\\sin^{-1}\\left(\\frac{3}{5}\\right)$",
+      "B": "$2\\cos^{-1}\\left(\\frac{3}{5}\\right)$",
+      "C": "$\\sin^{-1}\\left(\\frac{3}{5}\\right)$",
+      "D": "$2\\tan^{-1}\\left(\\frac{3}{4}\\right)$"
     },
     "notes": "Relate the angle theta between tangents to the right-angled triangle formed by the center, point P, and point of contact.",
-    "solution_text": "Let's analyze the geometry of tangents:\\n1) Let $O$ be the center $(0, 0)$, $P$ be $(4, 3)$, and $T$ be a point of contact.\\n2) The triangle $OTP$ is right-angled at $T$ since radius is perpendicular to tangent.\\n3) Length of $OP = \\\\sqrt{4^2 + 3^2} = 5$.\\n4) Radius $OT = 3$.\\n5) Let $\\\\theta$ be the angle between the two tangents. The line $OP$ bisects this angle, so $\\\\angle OPT = \\\\frac{\\\\theta}{2}$.\\n6) In $\\\\triangle OTP$:\\n   $\\\\sin\\\\left(\\\\frac{\\\\theta}{2}\\\\right) = \\\\frac{OT}{OP} = \\\\frac{3}{5} \\\\implies \\\\frac{\\\\theta}{2} = \\\\sin^{-1}\\\\left(\\\\frac{3}{5}\\\\right) \\\\implies \\\\theta = 2\\\\sin^{-1}\\\\left(\\\\frac{3}{5}\\\\right)$.\\nOption A is correct.",
+    "solution_text": "Let's analyze the geometry of tangents:\\n1) Let $O$ be the center $(0, 0)$, $P$ be $(4, 3)$, and $T$ be a point of contact.\\n2) The triangle $OTP$ is right-angled at $T$ since radius is perpendicular to tangent.\\n3) Length of $OP = \\sqrt{4^2 + 3^2} = 5$.\\n4) Radius $OT = 3$.\\n5) Let $\\theta$ be the angle between the two tangents. The line $OP$ bisects this angle, so $\\angle OPT = \\frac{\\theta}{2}$.\\n6) In $\\triangle OTP$:\\n   $\\sin\\left(\\frac{\\theta}{2}\\right) = \\frac{OT}{OP} = \\frac{3}{5} \\implies \\frac{\\theta}{2} = \\sin^{-1}\\left(\\frac{3}{5}\\right) \\implies \\theta = 2\\sin^{-1}\\left(\\frac{3}{5}\\right)$.\\nOption A is correct.",
     "common_mistake": "Confusing the trigonometric ratio (e.g. using cosine instead of sine).",
     "concept_slugs": [
       "circles-tangent-properties"
@@ -268,7 +268,7 @@
     "is_numerical": true,
     "question_format": "numerical",
     "notes": "Apply the formula L = sqrt(S1) to find the length.",
-    "solution_text": "Let's compute $S_1$ for the point $(5, 7)$:\\n1) $S_1 = 5^2 + 7^2 - 4(5) - 6(7) - 3$.\\n2) Evaluate terms:\\n   $S_1 = 25 + 49 - 20 - 42 - 3 = 74 - 65 = 9$.\\n3) The length of the tangent is $\\\\sqrt{S_1} = \\\\sqrt{9} = 3$.\\nThe answer is 3.",
+    "solution_text": "Let's compute $S_1$ for the point $(5, 7)$:\\n1) $S_1 = 5^2 + 7^2 - 4(5) - 6(7) - 3$.\\n2) Evaluate terms:\\n   $S_1 = 25 + 49 - 20 - 42 - 3 = 74 - 65 = 9$.\\n3) The length of the tangent is $\\sqrt{S_1} = \\sqrt{9} = 3$.\\nThe answer is 3.",
     "common_mistake": "Errors in arithmetic addition/subtraction or not taking the square root.",
     "concept_slugs": [
       "circles-tangent-properties"
@@ -284,7 +284,7 @@
     "is_numerical": true,
     "question_format": "numerical",
     "notes": "Equate the distance from origin (0, 0) to 3x + 4y - c = 0 with the circle radius 4.",
-    "solution_text": "Let's write down the perpendicular distance equation:\\n1) Radius $r = 4$.\\n2) Distance from $(0, 0)$ to the line is:\\n   $d = \\\\frac{|-c|}{\\\\sqrt{3^2 + 4^2}} = \\\\frac{|c|}{5}$.\\n3) Set $d = r$:\\n   $\\\\frac{|c|}{5} = 4 \\\\implies |c| = 20$.\\n4) Since $c > 0$, we have $c = 20$.\\nThe answer is 20.",
+    "solution_text": "Let's write down the perpendicular distance equation:\\n1) Radius $r = 4$.\\n2) Distance from $(0, 0)$ to the line is:\\n   $d = \\frac{|-c|}{\\sqrt{3^2 + 4^2}} = \\frac{|c|}{5}$.\\n3) Set $d = r$:\\n   $\\frac{|c|}{5} = 4 \\implies |c| = 20$.\\n4) Since $c > 0$, we have $c = 20$.\\nThe answer is 20.",
     "common_mistake": "Neglecting to take the square root of 3^2 + 4^2, or using radius 16 by mistake.",
     "concept_slugs": [
       "circles-tangent-properties"
@@ -299,7 +299,7 @@
     "is_numerical": true,
     "question_format": "numerical",
     "notes": "First find the center and radius of the circle, then use the tangency condition to solve for c.",
-    "solution_text": "Let's find the center and radius of the circle:\\n1) Center is $(1, 2)$ and radius is $r = \\\\sqrt{1^2 + 2^2 - 3} = \\\\sqrt{2}$.\\n2) The line equation is $x - y + c = 0$.\\n3) Distance from center $(1, 2)$ to the line must equal $r = \\\\sqrt{2}$:\\n   $\\\\frac{|1(1) - 1(2) + c|}{\\\\sqrt{1^2 + (-1)^2}} = \\\\sqrt{2} \\\\implies \\\\frac{|c - 1|}{\\\\sqrt{2}} = \\\\sqrt{2}$.\\n4) Solve for $c$:\\n   $|c - 1| = 2 \\\\implies c - 1 = 2$ or $c - 1 = -2 \\\\implies c = 3$ or $c = -1$.\\n5) Given $c > 0$, we choose $c = 3$.\\n6) Calculate the target expression $c^2 + 2c$:\\n   $c^2 + 2c = 3^2 + 2(3) = 9 + 6 = 15$.\\nThe answer is 15.",
+    "solution_text": "Let's find the center and radius of the circle:\\n1) Center is $(1, 2)$ and radius is $r = \\sqrt{1^2 + 2^2 - 3} = \\sqrt{2}$.\\n2) The line equation is $x - y + c = 0$.\\n3) Distance from center $(1, 2)$ to the line must equal $r = \\sqrt{2}$:\\n   $\\frac{|1(1) - 1(2) + c|}{\\sqrt{1^2 + (-1)^2}} = \\sqrt{2} \\implies \\frac{|c - 1|}{\\sqrt{2}} = \\sqrt{2}$.\\n4) Solve for $c$:\\n   $|c - 1| = 2 \\implies c - 1 = 2$ or $c - 1 = -2 \\implies c = 3$ or $c = -1$.\\n5) Given $c > 0$, we choose $c = 3$.\\n6) Calculate the target expression $c^2 + 2c$:\\n   $c^2 + 2c = 3^2 + 2(3) = 9 + 6 = 15$.\\nThe answer is 15.",
     "common_mistake": "Assuming c = -1 is the only root, or arithmetic errors in the distance calculation.",
     "concept_slugs": [
       "circles-tangent-properties"
@@ -320,7 +320,7 @@
       "D": "$3x + 4y = 25$"
     },
     "notes": "The normal to any circle at a point P always passes through the center of the circle.",
-    "solution_text": "Let's find the normal equation:\\n1) The center of the circle $x^2 + y^2 = 25$ is $O(0, 0)$.\\n2) The normal must pass through $O(0, 0)$ and the point of contact $P(3, 4)$.\\n3) The slope of the normal is $m = \\\\frac{4 - 0}{3 - 0} = \\\\frac{4}{3}$.\\n4) The equation of the line is $y - 0 = \\\\frac{4}{3}(x - 0) \\\\implies 4x - 3y = 0$.\\nOption A is correct.",
+    "solution_text": "Let's find the normal equation:\\n1) The center of the circle $x^2 + y^2 = 25$ is $O(0, 0)$.\\n2) The normal must pass through $O(0, 0)$ and the point of contact $P(3, 4)$.\\n3) The slope of the normal is $m = \\frac{4 - 0}{3 - 0} = \\frac{4}{3}$.\\n4) The equation of the line is $y - 0 = \\frac{4}{3}(x - 0) \\implies 4x - 3y = 0$.\\nOption A is correct.",
     "common_mistake": "Inverting the slope coordinates, resulting in Option B.",
     "concept_slugs": [
       "circles-normals-orthogonality"
@@ -341,8 +341,8 @@
       "D": "$2x + y = 0$"
     },
     "notes": "Find the center of the circle and write the equation of the line passing through center and origin.",
-    "solution_text": "Let's find the center of the circle:\\n1) Compare with general equation: $2g = -2 \\\\implies g = -1$; $2f = -4 \\\\implies f = -2$.\\n   The center is $(-g, -f) = (1, 2)$.\\n2) The normal passes through $(0,0)$ and the center $(1, 2)$.\\n3) Slope of this normal line is $m = \\\\frac{2 - 0}{1 - 0} = 2$.\\n4) The line equation is $y = 2x \\\\implies 2x - y = 0$.\\nOption B is correct.",
-    "common_mistake": "Inverting slope, obtaining $y = x/2 \\\\implies x - 2y = 0$ (Option A).",
+    "solution_text": "Let's find the center of the circle:\\n1) Compare with general equation: $2g = -2 \\implies g = -1$; $2f = -4 \\implies f = -2$.\\n   The center is $(-g, -f) = (1, 2)$.\\n2) The normal passes through $(0,0)$ and the center $(1, 2)$.\\n3) Slope of this normal line is $m = \\frac{2 - 0}{1 - 0} = 2$.\\n4) The line equation is $y = 2x \\implies 2x - y = 0$.\\nOption B is correct.",
+    "common_mistake": "Inverting slope, obtaining $y = x/2 \\implies x - 2y = 0$ (Option A).",
     "concept_slugs": [
       "circles-normals-orthogonality"
     ]
@@ -363,7 +363,7 @@
       "D": "$2gg' + 2ff' = 0$"
     },
     "notes": "Apply the orthogonality condition: d^2 = r1^2 + r2^2, where d is the distance between centers.",
-    "solution_text": "Let's derive the orthogonality condition:\\n1) Let the centers be $C_1(g, f)$ and $C_2(g', f')$, and radii $r_1^2 = g^2 + f^2 - c$, $r_2^2 = g'^2 + f'^2 - c'$.\\n2) The distance squared between centers is $d^2 = (g - g')^2 + (f - f')^2$.\\n3) Orthogonality condition is $d^2 = r_1^2 + r_2^2$:\\n   $(g - g')^2 + (f - f')^2 = (g^2 + f^2 - c) + (g'^2 + f'^2 - c')$.\\n4) Expand both sides:\\n   $g^2 - 2gg' + g'^2 + f^2 - 2ff' + f'^2 = g^2 + f^2 + g'^2 + f'^2 - c - c'$.\\n5) Simplify to:\\n   $-2gg' - 2ff' = -c - c' \\\\implies 2gg' + 2ff' = c + c'$.\\nOption B is correct.",
+    "solution_text": "Let's derive the orthogonality condition:\\n1) Let the centers be $C_1(g, f)$ and $C_2(g', f')$, and radii $r_1^2 = g^2 + f^2 - c$, $r_2^2 = g'^2 + f'^2 - c'$.\\n2) The distance squared between centers is $d^2 = (g - g')^2 + (f - f')^2$.\\n3) Orthogonality condition is $d^2 = r_1^2 + r_2^2$:\\n   $(g - g')^2 + (f - f')^2 = (g^2 + f^2 - c) + (g'^2 + f'^2 - c')$.\\n4) Expand both sides:\\n   $g^2 - 2gg' + g'^2 + f^2 - 2ff' + f'^2 = g^2 + f^2 + g'^2 + f'^2 - c - c'$.\\n5) Simplify to:\\n   $-2gg' - 2ff' = -c - c' \\implies 2gg' + 2ff' = c + c'$.\\nOption B is correct.",
     "common_mistake": "Forgetting the factor of 2 (Option A) or setting constant terms to zero (Option D).",
     "concept_slugs": [
       "circles-normals-orthogonality"
@@ -384,7 +384,7 @@
       "D": "$2x - 3y + 18 = 0$"
     },
     "notes": "Identify circle center and write normal line passing through center and P.",
-    "solution_text": "Let's find the normal line:\\n1) Center of circle is $(-g, -f) = (3, -4)$.\\n2) Point of contact is $P(9, 0)$.\\n3) Slope of the normal is $m = \\\\frac{-4 - 0}{3 - 9} = \\\\frac{-4}{-6} = \\\\frac{2}{3}$.\\n4) The line equation is:\\n   $y - 0 = \\\\frac{2}{3}(x - 9) \\\\implies 3y = 2x - 18 \\\\implies 2x - 3y - 18 = 0$.\\nOption B is correct.",
+    "solution_text": "Let's find the normal line:\\n1) Center of circle is $(-g, -f) = (3, -4)$.\\n2) Point of contact is $P(9, 0)$.\\n3) Slope of the normal is $m = \\frac{-4 - 0}{3 - 9} = \\frac{-4}{-6} = \\frac{2}{3}$.\\n4) The line equation is:\\n   $y - 0 = \\frac{2}{3}(x - 9) \\implies 3y = 2x - 18 \\implies 2x - 3y - 18 = 0$.\\nOption B is correct.",
     "common_mistake": "Sign errors during the slope calculation, leading to Option D or Option A.",
     "concept_slugs": [
       "circles-normals-orthogonality"
@@ -400,13 +400,13 @@
     "is_numerical": false,
     "question_format": "mcq",
     "options": {
-      "A": "$30^\\\\circ$",
-      "B": "$45^\\\\circ$",
-      "C": "$60^\\\\circ$",
-      "D": "$90^\\\\circ$"
+      "A": "$30^\\circ$",
+      "B": "$45^\\circ$",
+      "C": "$60^\\circ$",
+      "D": "$90^\\circ$"
     },
     "notes": "Find centers and radii of both circles, and use the cosine formula for angle of intersection: cos theta = (r1^2 + r2^2 - d^2) / (2*r1*r2).",
-    "solution_text": "Let's identify the geometry of both circles:\\n1) Circle 1: center $C_1(2, 1)$, radius $r_1 = \\\\sqrt{4+1-4} = 1$.\\n2) Circle 2: center $C_2(1, 2)$, radius $r_2 = \\\\sqrt{1+4-4} = 1$.\\n3) Distance squared between centers: $d^2 = (2-1)^2 + (1-2)^2 = 1 + 1 = 2$.\\n4) Apply the intersection angle formula:\\n   $\\\\cos\\\\theta = \\\\frac{r_1^2 + r_2^2 - d^2}{2 r_1 r_2}$.\\n5) Substitute values:\\n   $\\\\cos\\\\theta = \\\\frac{1^2 + 1^2 - 2}{2(1)(1)} = \\\\frac{1 + 1 - 2}{2} = 0$.\\n6) Since $\\\\cos\\\\theta = 0$, the angle of intersection is $\\\\theta = 90^\\\\circ$ (the circles are orthogonal).\\nOption D is correct.",
+    "solution_text": "Let's identify the geometry of both circles:\\n1) Circle 1: center $C_1(2, 1)$, radius $r_1 = \\sqrt{4+1-4} = 1$.\\n2) Circle 2: center $C_2(1, 2)$, radius $r_2 = \\sqrt{1+4-4} = 1$.\\n3) Distance squared between centers: $d^2 = (2-1)^2 + (1-2)^2 = 1 + 1 = 2$.\\n4) Apply the intersection angle formula:\\n   $\\cos\\theta = \\frac{r_1^2 + r_2^2 - d^2}{2 r_1 r_2}$.\\n5) Substitute values:\\n   $\\cos\\theta = \\frac{1^2 + 1^2 - 2}{2(1)(1)} = \\frac{1 + 1 - 2}{2} = 0$.\\n6) Since $\\cos\\theta = 0$, the angle of intersection is $\\theta = 90^\\circ$ (the circles are orthogonal).\\nOption D is correct.",
     "common_mistake": "Neglecting to subtract d^2 correctly, leading to a non-zero cosine value.",
     "concept_slugs": [
       "circles-normals-orthogonality"
@@ -437,7 +437,7 @@
     "is_numerical": true,
     "question_format": "numerical",
     "notes": "Apply the relation 2gg' + 2ff' = c + c' directly.",
-    "solution_text": "Let's identify the parameters from both circle equations:\\n1) Circle 1: $g_1 = -1, f_1 = -2, c_1 = c$.\\n2) Circle 2: $g_2 = -2, f_2 = -3, c_2 = 9$.\\n3) The orthogonality condition is $2g_1g_2 + 2f_1f_2 = c_1 + c_2$.\\n4) Substitute the values:\\n   $2(-1)(-2) + 2(-2)(-3) = c + 9$\\n   $4 + 12 = c + 9 \\\\implies 16 = c + 9 \\\\implies c = 7$.\\nThe value of $c$ is 7.",
+    "solution_text": "Let's identify the parameters from both circle equations:\\n1) Circle 1: $g_1 = -1, f_1 = -2, c_1 = c$.\\n2) Circle 2: $g_2 = -2, f_2 = -3, c_2 = 9$.\\n3) The orthogonality condition is $2g_1g_2 + 2f_1f_2 = c_1 + c_2$.\\n4) Substitute the values:\\n   $2(-1)(-2) + 2(-2)(-3) = c + 9$\\n   $4 + 12 = c + 9 \\implies 16 = c + 9 \\implies c = 7$.\\nThe value of $c$ is 7.",
     "common_mistake": "Arithmetic errors or applying wrong sign configurations for g and f.",
     "concept_slugs": [
       "circles-normals-orthogonality"
@@ -452,7 +452,7 @@
     "is_numerical": true,
     "question_format": "numerical",
     "notes": "Identify the values of g, f, and c for both circles and apply the orthogonality formula.",
-    "solution_text": "Let's identify coefficients for both circles:\\n1) Circle 1: $2g_1 = -4 \\\\implies g_1 = -2$; $2f_1 = -6 \\\\implies f_1 = -3$; $c_1 = 11$.\\n2) Circle 2: $2g_2 = -10 \\\\implies g_2 = -5$; $2f_2 = -12 \\\\implies f_2 = -6$; $c_2 = c$.\\n3) Use the orthogonality relation $2g_1g_2 + 2f_1f_2 = c_1 + c_2$:\\n   $2(-2)(-5) + 2(-3)(-6) = 11 + c$.\\n4) Evaluate and simplify:\\n   $20 + 36 = 11 + c \\\\implies 56 = 11 + c \\\\implies c = 45$.\\n5) Calculate the target value $c - 20$:\\n   $c - 20 = 45 - 20 = 25$.\\nThe answer is 25.",
+    "solution_text": "Let's identify coefficients for both circles:\\n1) Circle 1: $2g_1 = -4 \\implies g_1 = -2$; $2f_1 = -6 \\implies f_1 = -3$; $c_1 = 11$.\\n2) Circle 2: $2g_2 = -10 \\implies g_2 = -5$; $2f_2 = -12 \\implies f_2 = -6$; $c_2 = c$.\\n3) Use the orthogonality relation $2g_1g_2 + 2f_1f_2 = c_1 + c_2$:\\n   $2(-2)(-5) + 2(-3)(-6) = 11 + c$.\\n4) Evaluate and simplify:\\n   $20 + 36 = 11 + c \\implies 56 = 11 + c \\implies c = 45$.\\n5) Calculate the target value $c - 20$:\\n   $c - 20 = 45 - 20 = 25$.\\nThe answer is 25.",
     "common_mistake": "Forgetting to scale down coefficients of general equation by 2 to get g and f.",
     "concept_slugs": [
       "circles-normals-orthogonality"
@@ -473,7 +473,7 @@
       "D": "$4x + 5y - 3 = 0$"
     },
     "notes": "The equation of the chord of contact is represented by T = 0.",
-    "solution_text": "Let's write the equation of the chord of contact:\\n1) The equation is $T = 0$, which is $x x_1 + y y_1 = a^2$.\\n2) Substitute $(x_1, y_1) = (4, 5)$ and $a^2 = 9$:\\n   $4x + 5y = 9 \\\\implies 4x + 5y - 9 = 0$.\\nOption A is correct.",
+    "solution_text": "Let's write the equation of the chord of contact:\\n1) The equation is $T = 0$, which is $x x_1 + y y_1 = a^2$.\\n2) Substitute $(x_1, y_1) = (4, 5)$ and $a^2 = 9$:\\n   $4x + 5y = 9 \\implies 4x + 5y - 9 = 0$.\\nOption A is correct.",
     "common_mistake": "Swapping the coordinates of the point (Option C) or writing $r$ instead of $r^2$ (Option D).",
     "concept_slugs": [
       "circles-chords-midpoints"
@@ -494,7 +494,7 @@
       "D": "$10$"
     },
     "notes": "Compute the perpendicular distance from center to midpoint and apply the chord length formula.",
-    "solution_text": "Let's find the chord length:\\n1) The midpoint of the chord is $M(3, 0)$.\\n2) The center of the circle is $O(0, 0)$, so the perpendicular distance from center is $d = OM = 3$.\\n3) The radius of the circle is $r = 5$.\\n4) The half-length of the chord is $\\\\sqrt{r^2 - d^2} = \\\\sqrt{5^2 - 3^2} = \\\\sqrt{25 - 9} = \\\\sqrt{16} = 4$.\\n5) The total length of the chord is $2 \\\\times 4 = 8$.\\nOption A is correct.",
+    "solution_text": "Let's find the chord length:\\n1) The midpoint of the chord is $M(3, 0)$.\\n2) The center of the circle is $O(0, 0)$, so the perpendicular distance from center is $d = OM = 3$.\\n3) The radius of the circle is $r = 5$.\\n4) The half-length of the chord is $\\sqrt{r^2 - d^2} = \\sqrt{5^2 - 3^2} = \\sqrt{25 - 9} = \\sqrt{16} = 4$.\\n5) The total length of the chord is $2 \\times 4 = 8$.\\nOption A is correct.",
     "common_mistake": "Stating the half-length 4 (Option B) instead of the total chord length.",
     "concept_slugs": [
       "circles-chords-midpoints"
@@ -516,7 +516,7 @@
       "D": "$x - 2y + 3 = 0$"
     },
     "notes": "Apply the chord with midpoint formula: T = S1.",
-    "solution_text": "Let's apply the midpoint chord formula $T = S_1$:\\n1) $T$ is $x x_1 + y y_1 - 16$.\\n2) $S_1$ is $x_1^2 + y_1^2 - 16$.\\n3) Equate $T = S_1$:\\n   $x x_1 + y y_1 = x_1^2 + y_1^2$.\\n4) Substitute $(x_1, y_1) = (1, 2)$:\\n   $x(1) + y(2) = 1^2 + 2^2 \\\\implies x + 2y = 5 \\\\implies x + 2y - 5 = 0$.\\nOption A is correct.",
+    "solution_text": "Let's apply the midpoint chord formula $T = S_1$:\\n1) $T$ is $x x_1 + y y_1 - 16$.\\n2) $S_1$ is $x_1^2 + y_1^2 - 16$.\\n3) Equate $T = S_1$:\\n   $x x_1 + y y_1 = x_1^2 + y_1^2$.\\n4) Substitute $(x_1, y_1) = (1, 2)$:\\n   $x(1) + y(2) = 1^2 + 2^2 \\implies x + 2y = 5 \\implies x + 2y - 5 = 0$.\\nOption A is correct.",
     "common_mistake": "Neglecting to calculate S1 properly or interchanging coordinates.",
     "concept_slugs": [
       "circles-chords-midpoints"
@@ -556,11 +556,11 @@
       "A": "$x^2 + y^2 = 1$",
       "B": "$x^2 + y^2 = 3$",
       "C": "$x^2 + y^2 = 2$",
-      "D": "$x^2 + y^2 = \\\\frac{1}{2}$"
+      "D": "$x^2 + y^2 = \\frac{1}{2}$"
     },
     "notes": "Relate the distance from origin to the midpoint to the triangle properties using trigonometric ratios.",
-    "solution_text": "Let the midpoint of the chord be $P(h, k)$:\\n1) The perpendicular distance of this chord from center $O(0, 0)$ is $d = OP = \\\\sqrt{h^2 + k^2}$.\\n2) The chord subtends a right angle ($90^\\\\circ$) at the center $O$.\\n3) In the right triangle formed by the center, midpoint, and one end of the chord, the angle at center is $45^\\\\circ$.\\n4) The distance is $d = r \\\\cos 45^\\\\circ$, where $r = 2$ is the radius of the circle.\\n5) Substitute value:\\n   $\\\\sqrt{h^2 + k^2} = 2 \\\\times \\\\frac{1}{\\\\sqrt{2}} = \\\\sqrt{2}$.\\n6) Square both sides:\\n   $h^2 + k^2 = 2 \\\\implies x^2 + y^2 = 2$.\\nOption C is correct.",
-    "common_mistake": "Assuming the distance is $r \\\\sin 90^\\\\circ = 2$, which gives Option A.",
+    "solution_text": "Let the midpoint of the chord be $P(h, k)$:\\n1) The perpendicular distance of this chord from center $O(0, 0)$ is $d = OP = \\sqrt{h^2 + k^2}$.\\n2) The chord subtends a right angle ($90^\\circ$) at the center $O$.\\n3) In the right triangle formed by the center, midpoint, and one end of the chord, the angle at center is $45^\\circ$.\\n4) The distance is $d = r \\cos 45^\\circ$, where $r = 2$ is the radius of the circle.\\n5) Substitute value:\\n   $\\sqrt{h^2 + k^2} = 2 \\times \\frac{1}{\\sqrt{2}} = \\sqrt{2}$.\\n6) Square both sides:\\n   $h^2 + k^2 = 2 \\implies x^2 + y^2 = 2$.\\nOption C is correct.",
+    "common_mistake": "Assuming the distance is $r \\sin 90^\\circ = 2$, which gives Option A.",
     "concept_slugs": [
       "circles-chords-midpoints"
     ]
@@ -574,7 +574,7 @@
     "is_numerical": true,
     "question_format": "numerical",
     "notes": "Identify radius = 10, distance from center = 6, and apply the half-chord formula.",
-    "solution_text": "Let's calculate the length of the chord:\\n1) Radius $r = \\\\sqrt{100} = 10$.\\n2) Midpoint is $(0, 6)$, so perpendicular distance $d = \\\\sqrt{0^2 + 6^2} = 6$.\\n3) Half-length of the chord is:\\n   $\\\\sqrt{r^2 - d^2} = \\\\sqrt{10^2 - 6^2} = \\\\sqrt{100 - 36} = \\\\sqrt{64} = 8$.\\n4) Total length is $2 \\\\times 8 = 16$.\\nThe answer is 16.",
+    "solution_text": "Let's calculate the length of the chord:\\n1) Radius $r = \\sqrt{100} = 10$.\\n2) Midpoint is $(0, 6)$, so perpendicular distance $d = \\sqrt{0^2 + 6^2} = 6$.\\n3) Half-length of the chord is:\\n   $\\sqrt{r^2 - d^2} = \\sqrt{10^2 - 6^2} = \\sqrt{100 - 36} = \\sqrt{64} = 8$.\\n4) Total length is $2 \\times 8 = 16$.\\nThe answer is 16.",
     "common_mistake": "Arithmetic errors or reporting the half-length 8.",
     "concept_slugs": [
       "circles-chords-midpoints"
@@ -605,7 +605,7 @@
     "is_numerical": true,
     "question_format": "numerical",
     "notes": "Find the tangent lengths and the coordinates of the chord of contact points to compute the triangle area.",
-    "solution_text": "Let's evaluate the area $A$ of the triangle:\\n1) Tangents are drawn from $P(0, 4)$ to $x^2 + y^2 = 4$ (radius $a=2$).\\n2) The distance of $P$ from origin is $d = 4$.\\n3) The formula for the area of the triangle formed by tangents and chord of contact is:\\n   $\\\\text{Area } A = \\\\frac{a(d^2 - a^2)^{3/2}}{d^2}$.\\n4) Substitute $a = 2$ and $d = 4$:\\n   $A = \\\\frac{2(4^2 - 2^2)^{3/2}}{4^2} = \\\\frac{2(16 - 4)^{3/2}}{16} = \\\\frac{2(12)^{3/2}}{16}$.\\n5) Simplify: $A = \\\\frac{12\\\\sqrt{12}}{8} = \\\\frac{24\\\\sqrt{3}}{8} = 3\\\\sqrt{3}$.\\n6) Calculate the target expression $A^2$:\\n   $A^2 = (3\\\\sqrt{3})^2 = 9 \\\\times 3 = 27$.\\nThe answer is 27.",
+    "solution_text": "Let's evaluate the area $A$ of the triangle:\\n1) Tangents are drawn from $P(0, 4)$ to $x^2 + y^2 = 4$ (radius $a=2$).\\n2) The distance of $P$ from origin is $d = 4$.\\n3) The formula for the area of the triangle formed by tangents and chord of contact is:\\n   $\\text{Area } A = \\frac{a(d^2 - a^2)^{3/2}}{d^2}$.\\n4) Substitute $a = 2$ and $d = 4$:\\n   $A = \\frac{2(4^2 - 2^2)^{3/2}}{4^2} = \\frac{2(16 - 4)^{3/2}}{16} = \\frac{2(12)^{3/2}}{16}$.\\n5) Simplify: $A = \\frac{12\\sqrt{12}}{8} = \\frac{24\\sqrt{3}}{8} = 3\\sqrt{3}$.\\n6) Calculate the target expression $A^2$:\\n   $A^2 = (3\\sqrt{3})^2 = 9 \\times 3 = 27$.\\nThe answer is 27.",
     "common_mistake": "Neglecting to divide by d^2 in the area formula or arithmetic errors with surds.",
     "concept_slugs": [
       "circles-chords-midpoints"
@@ -626,7 +626,7 @@
       "D": "One lies entirely inside the other"
     },
     "notes": "Find centers and radii, and compare center distance with the sum of radii.",
-    "solution_text": "Let's analyze both circles:\\n1) Circle 1: center $C_1(0, 0)$, radius $r_1 = 2$.\\n2) Circle 2: center $C_2(3, 4)$, radius $r_2 = \\\\sqrt{3^2 + 4^2 - 21} = \\\\sqrt{25 - 21} = 2$.\\n3) The distance between the centers is $d = C_1C_2 = \\\\sqrt{3^2 + 4^2} = 5$.\\n4) The sum of the radii is $r_1 + r_2 = 2 + 2 = 4$.\\n5) Since $d = 5 > r_1 + r_2 = 4$, the circles are separate and do not intersect.\\nOption A is correct.",
+    "solution_text": "Let's analyze both circles:\\n1) Circle 1: center $C_1(0, 0)$, radius $r_1 = 2$.\\n2) Circle 2: center $C_2(3, 4)$, radius $r_2 = \\sqrt{3^2 + 4^2 - 21} = \\sqrt{25 - 21} = 2$.\\n3) The distance between the centers is $d = C_1C_2 = \\sqrt{3^2 + 4^2} = 5$.\\n4) The sum of the radii is $r_1 + r_2 = 2 + 2 = 4$.\\n5) Since $d = 5 > r_1 + r_2 = 4$, the circles are separate and do not intersect.\\nOption A is correct.",
     "common_mistake": "Comparing with difference of radii instead of sum, or arithmetic errors in the distance formula.",
     "concept_slugs": [
       "circles-common-tangents-radical"
@@ -690,7 +690,7 @@
       "D": "$1$"
     },
     "notes": "Find centers and radii of both circles, and determine if they touch internally or externally.",
-    "solution_text": "Let's find the centers and radii of both circles:\\n1) Circle 1: center $C_1(2, 3)$, radius $r_1 = \\\\sqrt{4+9 - (-12)} = \\\\sqrt{25} = 5$.\\n2) Circle 2: center $C_2(-3, -9)$, radius $r_2 = \\\\sqrt{(-3)^2 + (-9)^2 - 26} = \\\\sqrt{9 + 81 - 26} = \\\\sqrt{64} = 8$.\\n3) Center distance: $d = C_1C_2 = \\\\sqrt{(2 - (-3))^2 + (3 - (-9))^2} = \\\\sqrt{5^2 + 12^2} = 13$.\\n4) Sum of radii: $r_1 + r_2 = 5 + 8 = 13$.\\n5) Since $d = r_1 + r_2 = 13$, the circles touch each other externally.\\n6) Two circles touching externally have exactly 3 common tangents.\\nOption B is correct.",
+    "solution_text": "Let's find the centers and radii of both circles:\\n1) Circle 1: center $C_1(2, 3)$, radius $r_1 = \\sqrt{4+9 - (-12)} = \\sqrt{25} = 5$.\\n2) Circle 2: center $C_2(-3, -9)$, radius $r_2 = \\sqrt{(-3)^2 + (-9)^2 - 26} = \\sqrt{9 + 81 - 26} = \\sqrt{64} = 8$.\\n3) Center distance: $d = C_1C_2 = \\sqrt{(2 - (-3))^2 + (3 - (-9))^2} = \\sqrt{5^2 + 12^2} = 13$.\\n4) Sum of radii: $r_1 + r_2 = 5 + 8 = 13$.\\n5) Since $d = r_1 + r_2 = 13$, the circles touch each other externally.\\n6) Two circles touching externally have exactly 3 common tangents.\\nOption B is correct.",
     "common_mistake": "Stating there are 4 common tangents because they are assumed to be separate without checking the touch condition.",
     "concept_slugs": [
       "circles-common-tangents-radical"
@@ -712,7 +712,7 @@
       "D": "$(0, 0)$"
     },
     "notes": "Find the equations of the radical axes between pairs of circles, and solve for their intersection.",
-    "solution_text": "Let's find the radical center by intersecting two radical axes:\\n1) Let the circles be $S_1 = x^2 + y^2 - 4 = 0$, $S_2 = x^2 + y^2 - 2x - 4y + 4 = 0$, and $S_3 = x^2 + y^2 - 4x - 2y + 4 = 0$.\\n2) Radical axis of $S_1$ and $S_2$ ($S_1 - S_2 = 0$):\\n   $2x + 4y - 8 = 0 \\\\implies x + 2y - 4 = 0$.\\n3) Radical axis of $S_1$ and $S_3$ ($S_1 - S_3 = 0$):\\n   $4x + 2y - 8 = 0 \\\\implies 2x + y - 4 = 0$.\\n4) Intersect these two lines to find the radical center:\\n   - From Line 1: $x = 4 - 2y$.\\n   - Substitute in Line 2: $2(4 - 2y) + y - 4 = 0 \\\\implies 8 - 4y + y - 4 = 0 \\\\implies 4 - 3y = 0$? Wait! Let's check:\\n   $S_1 - S_2 = x^2+y^2-4 - (x^2+y^2-2x-4y+4) = 2x+4y-8 = 0 \\\\implies x+2y=4$.\\n   Let's check $S_2 - S_3 = 2x - 2y = 0 \\\\implies y = x$.\\n   Substitute $y=x$ into $x+2y=4 \\\\implies 3x = 4 \\\\implies x = 4/3, y = 4/3$.\\n   Wait! The options list $(1, 1)$ as a choice. Let's check: if $S_2 = x^2 + y^2 - 2x - 4y + 2 = 0$? Let's write the correct intersection for our three equations. The intersection is $(4/3, 4/3)$. Let's modify Option A to be $(4/3, 4/3)$. Wait, let's keep $(1, 1)$ as choice A but make the circles $S_1 = x^2+y^2-4$, $S_2 = x^2+y^2-2x-4y+4$, $S_3 = x^2+y^2-4x-2y+4$. If we change $S_2$ and $S_3$ constant terms: $S_2 = x^2+y^2-2x-4y+5 = 0$, and $S_3 = x^2+y^2-4x-2y+5 = 0$.\\n   Let's check: $S_1-S_2 = 2x+4y-9 = 0$. $S_2-S_3 = 2x-2y=0 \\\\implies y=x$. Then $6x=9 \\\\implies x=1.5$.\\n   Let's check if $S_1=x^2+y^2-2$, $S_2 = x^2+y^2-2x-4y+4$, $S_3 = x^2+y^2-4x-2y+4$.\\n   $S_1-S_2 = 2x+4y-6 = 0 \\\\implies x+2y=3$.\\n   $S_2-S_3 = 2x-2y=0 \\\\implies y=x$.\\n   $3x=3 \\\\implies x=1, y=1$. Point is $(1, 1)$. Yes! Let's define the first circle as $x^2+y^2 = 2$ in the title, and the center will be exactly $(1, 1)$. Let's do that! Option A is $(1, 1)$.",
+    "solution_text": "Let's find the radical center by intersecting two radical axes:\\n1) Let the circles be $S_1 = x^2 + y^2 - 4 = 0$, $S_2 = x^2 + y^2 - 2x - 4y + 4 = 0$, and $S_3 = x^2 + y^2 - 4x - 2y + 4 = 0$.\\n2) Radical axis of $S_1$ and $S_2$ ($S_1 - S_2 = 0$):\\n   $2x + 4y - 8 = 0 \\implies x + 2y - 4 = 0$.\\n3) Radical axis of $S_1$ and $S_3$ ($S_1 - S_3 = 0$):\\n   $4x + 2y - 8 = 0 \\implies 2x + y - 4 = 0$.\\n4) Intersect these two lines to find the radical center:\\n   - From Line 1: $x = 4 - 2y$.\\n   - Substitute in Line 2: $2(4 - 2y) + y - 4 = 0 \\implies 8 - 4y + y - 4 = 0 \\implies 4 - 3y = 0$? Wait! Let's check:\\n   $S_1 - S_2 = x^2+y^2-4 - (x^2+y^2-2x-4y+4) = 2x+4y-8 = 0 \\implies x+2y=4$.\\n   Let's check $S_2 - S_3 = 2x - 2y = 0 \\implies y = x$.\\n   Substitute $y=x$ into $x+2y=4 \\implies 3x = 4 \\implies x = 4/3, y = 4/3$.\\n   Wait! The options list $(1, 1)$ as a choice. Let's check: if $S_2 = x^2 + y^2 - 2x - 4y + 2 = 0$? Let's write the correct intersection for our three equations. The intersection is $(4/3, 4/3)$. Let's modify Option A to be $(4/3, 4/3)$. Wait, let's keep $(1, 1)$ as choice A but make the circles $S_1 = x^2+y^2-4$, $S_2 = x^2+y^2-2x-4y+4$, $S_3 = x^2+y^2-4x-2y+4$. If we change $S_2$ and $S_3$ constant terms: $S_2 = x^2+y^2-2x-4y+5 = 0$, and $S_3 = x^2+y^2-4x-2y+5 = 0$.\\n   Let's check: $S_1-S_2 = 2x+4y-9 = 0$. $S_2-S_3 = 2x-2y=0 \\implies y=x$. Then $6x=9 \\implies x=1.5$.\\n   Let's check if $S_1=x^2+y^2-2$, $S_2 = x^2+y^2-2x-4y+4$, $S_3 = x^2+y^2-4x-2y+4$.\\n   $S_1-S_2 = 2x+4y-6 = 0 \\implies x+2y=3$.\\n   $S_2-S_3 = 2x-2y=0 \\implies y=x$.\\n   $3x=3 \\implies x=1, y=1$. Point is $(1, 1)$. Yes! Let's define the first circle as $x^2+y^2 = 2$ in the title, and the center will be exactly $(1, 1)$. Let's do that! Option A is $(1, 1)$.",
     "common_mistake": "Solving the intersection incorrectly or using wrong equations for radical axes.",
     "concept_slugs": [
       "circles-common-tangents-radical"
@@ -743,7 +743,7 @@
     "is_numerical": true,
     "question_format": "numerical",
     "notes": "Equate the sum of the radii to the distance between centers, and solve for the constant c.",
-    "solution_text": "Let's identify centers and radii:\\n1) Circle 1: center $C_1(0, 0)$, radius $r_1 = 3$.\\n2) Circle 2: center $C_2(8, 6)$, radius $r_2 = \\\\sqrt{8^2 + 6^2 - c} = \\\\sqrt{100 - c}$.\\n3) The distance between the centers is:\\n   $d = C_1C_2 = \\\\sqrt{8^2 + 6^2} = \\\\sqrt{64 + 36} = 10$.\\n4) Since they touch externally, the distance must equal the sum of their radii:\\n   $r_1 + r_2 = d \\\\implies 3 + \\\\sqrt{100 - c} = 10$.\\n5) Solve for $c$:\\n   $\\\\sqrt{100 - c} = 7 \\\\implies 100 - c = 49 \\\\implies c = 51$.\\nThe value of $c$ is 51.",
+    "solution_text": "Let's identify centers and radii:\\n1) Circle 1: center $C_1(0, 0)$, radius $r_1 = 3$.\\n2) Circle 2: center $C_2(8, 6)$, radius $r_2 = \\sqrt{8^2 + 6^2 - c} = \\sqrt{100 - c}$.\\n3) The distance between the centers is:\\n   $d = C_1C_2 = \\sqrt{8^2 + 6^2} = \\sqrt{64 + 36} = 10$.\\n4) Since they touch externally, the distance must equal the sum of their radii:\\n   $r_1 + r_2 = d \\implies 3 + \\sqrt{100 - c} = 10$.\\n5) Solve for $c$:\\n   $\\sqrt{100 - c} = 7 \\implies 100 - c = 49 \\implies c = 51$.\\nThe value of $c$ is 51.",
     "common_mistake": "Subtracting radii instead of adding them, which corresponds to internal touch condition.",
     "concept_slugs": [
       "circles-common-tangents-radical"
@@ -758,7 +758,7 @@
     "is_numerical": true,
     "question_format": "numerical",
     "notes": "Write the radical axis by subtracting the circle equations and compare coefficients with the given line equation.",
-    "solution_text": "Let's find the radical axis of the two circles:\\n1) Radical axis is $S_1 - S_2 = 0$:\\n   $(x^2 + y^2 - 4) - (x^2 + y^2 - 2gx - 2fy) = 0 \\\\implies 2gx + 2fy - 4 = 0$.\\n2) Divide by 2:\\n   $gx + fy - 2 = 0$.\\n3) This line must represent the line $x + 2y - 2 = 0$.\\n4) Compare coefficients of the two equations:\\n   $g = 1$ and $f = 2$.\\n5) Calculate the value of $g^2 + f^2$:\\n   $g^2 + f^2 = 1^2 + 2^2 = 1 + 4 = 5$.\\nThe answer is 5.",
+    "solution_text": "Let's find the radical axis of the two circles:\\n1) Radical axis is $S_1 - S_2 = 0$:\\n   $(x^2 + y^2 - 4) - (x^2 + y^2 - 2gx - 2fy) = 0 \\implies 2gx + 2fy - 4 = 0$.\\n2) Divide by 2:\\n   $gx + fy - 2 = 0$.\\n3) This line must represent the line $x + 2y - 2 = 0$.\\n4) Compare coefficients of the two equations:\\n   $g = 1$ and $f = 2$.\\n5) Calculate the value of $g^2 + f^2$:\\n   $g^2 + f^2 = 1^2 + 2^2 = 1 + 4 = 5$.\\nThe answer is 5.",
     "common_mistake": "Neglecting to match the constant term (-2) before comparing coefficients.",
     "concept_slugs": [
       "circles-common-tangents-radical"
@@ -766,20 +766,20 @@
   },
   {
     "pattern_group": "circles-family-of-circles",
-    "title": "The general equation of the family of circles passing through the intersection of the circle $S(x,y) = 0$ and the straight line $L(x,y) = 0$ is given by (where $\\\\lambda$ is a real parameter):",
+    "title": "The general equation of the family of circles passing through the intersection of the circle $S(x,y) = 0$ and the straight line $L(x,y) = 0$ is given by (where $\\lambda$ is a real parameter):",
     "difficulty": "easy",
     "type": "concept",
     "correct_answer": "A",
     "is_numerical": false,
     "question_format": "mcq",
     "options": {
-      "A": "$S + \\\\lambda L = 0$",
-      "B": "$S \\\\cdot L = 0$",
-      "C": "$\\\\lambda S + L = 0$ only for $\\\\lambda > 0$",
-      "D": "$S + \\\\lambda = 0$"
+      "A": "$S + \\lambda L = 0$",
+      "B": "$S \\cdot L = 0$",
+      "C": "$\\lambda S + L = 0$ only for $\\lambda > 0$",
+      "D": "$S + \\lambda = 0$"
     },
     "notes": "Recall the linear combination formula for the family of curves in coordinate geometry.",
-    "solution_text": "The family of circles passing through the intersection of a circle $S = 0$ and a line $L = 0$ is represented by a linear combination:\\n1) The equation is $S + \\\\lambda L = 0$, where $\\\\lambda$ is any real number parameter.\\nOption A is correct.",
+    "solution_text": "The family of circles passing through the intersection of a circle $S = 0$ and a line $L = 0$ is represented by a linear combination:\\n1) The equation is $S + \\lambda L = 0$, where $\\lambda$ is any real number parameter.\\nOption A is correct.",
     "common_mistake": "Using product form (Option B) which represents two distinct curves rather than a family.",
     "concept_slugs": [
       "circles-family-of-circles"
@@ -787,7 +787,7 @@
   },
   {
     "pattern_group": "circles-family-of-circles",
-    "title": "The general equation of the family of circles passing through the points of intersection of two circles $S_1 = 0$ and $S_2 = 0$ is (where $\\\\lambda \\\\neq -1$):",
+    "title": "The general equation of the family of circles passing through the points of intersection of two circles $S_1 = 0$ and $S_2 = 0$ is (where $\\lambda \\neq -1$):",
     "difficulty": "easy",
     "type": "practice",
     "correct_answer": "B",
@@ -795,12 +795,12 @@
     "question_format": "mcq",
     "options": {
       "A": "$S_1 - S_2 = 0$",
-      "B": "$S_1 + \\\\lambda S_2 = 0$",
-      "C": "$S_1 \\\\cdot S_2 = 0$",
+      "B": "$S_1 + \\lambda S_2 = 0$",
+      "C": "$S_1 \\cdot S_2 = 0$",
       "D": "$S_1 + S_2 = 0$ only"
     },
     "notes": "Verify why the parameter lambda cannot be -1 in this family representation.",
-    "solution_text": "The family of circles passing through the intersections of two circles $S_1 = 0$ and $S_2 = 0$ is represented by:\\n1) $S_1 + \\\\lambda S_2 = 0$.\\n2) If $\\\\lambda = -1$, the quadratic terms $x^2$ and $y^2$ cancel, yielding the radical axis (a straight line) instead of a circle.\\n3) Thus, for any $\\\\lambda \\\\neq -1$, this represents the family of circles.\\nOption B is correct.",
+    "solution_text": "The family of circles passing through the intersections of two circles $S_1 = 0$ and $S_2 = 0$ is represented by:\\n1) $S_1 + \\lambda S_2 = 0$.\\n2) If $\\lambda = -1$, the quadratic terms $x^2$ and $y^2$ cancel, yielding the radical axis (a straight line) instead of a circle.\\n3) Thus, for any $\\lambda \\neq -1$, this represents the family of circles.\\nOption B is correct.",
     "common_mistake": "Selecting S1 - S2 = 0 (Option A) which represents only the radical axis.",
     "concept_slugs": [
       "circles-family-of-circles"
@@ -822,7 +822,7 @@
       "D": "$x^2 + y^2 - 2x - 2y + 2 = 0$"
     },
     "notes": "For the radius to be minimum, the segment joining the two points must act as the diameter of the circle.",
-    "solution_text": "Let's find the circle with minimum radius:\\n1) If a circle passes through $A(1, 1)$ and $B(2, 2)$, its radius is minimized when the line segment $AB$ is a diameter.\\n2) Diameter form equation is $(x - x_1)(x - x_2) + (y - y_1)(y - y_2) = 0$.\\n3) Substitute $(x_1, y_1) = (1, 1)$ and $(x_2, y_2) = (2, 2)$:\\n   $(x - 1)(x - 2) + (y - 1)(y - 2) = 0$.\\n4) Expand the terms:\\n   $(x^2 - 3x + 2) + (y^2 - 3y + 2) = 0 \\\\implies x^2 + y^2 - 3x - 3y + 4 = 0$.\\nOption A is correct.",
+    "solution_text": "Let's find the circle with minimum radius:\\n1) If a circle passes through $A(1, 1)$ and $B(2, 2)$, its radius is minimized when the line segment $AB$ is a diameter.\\n2) Diameter form equation is $(x - x_1)(x - x_2) + (y - y_1)(y - y_2) = 0$.\\n3) Substitute $(x_1, y_1) = (1, 1)$ and $(x_2, y_2) = (2, 2)$:\\n   $(x - 1)(x - 2) + (y - 1)(y - 2) = 0$.\\n4) Expand the terms:\\n   $(x^2 - 3x + 2) + (y^2 - 3y + 2) = 0 \\implies x^2 + y^2 - 3x - 3y + 4 = 0$.\\nOption A is correct.",
     "common_mistake": "Arithmetic errors during expansion, leading to sign errors (Option B).",
     "concept_slugs": [
       "circles-family-of-circles"
@@ -843,7 +843,7 @@
       "D": "$x^2 + y^2 - 2x - 4y - 4 = 0$"
     },
     "notes": "Represent the circle in the family form S + lambda * L = 0, substitute the point (1, 1) to find lambda.",
-    "solution_text": "Let's write the family equation:\\n1) $S + \\\\lambda L = (x^2 + y^2 - 6x) + \\\\lambda (x + y - 2) = 0$.\\n2) Since it passes through $(1, 1)$, substitute these coordinates:\\n   $(1^2 + 1^2 - 6(1)) + \\\\lambda (1 + 1 - 2) = 0$.\\n3) Simplify:\\n   $(1 + 1 - 6) + \\\\lambda (0) = 0 \\\\implies -4 = 0$, which has no solution!\\n   Wait! The calculation indicates $\\\\lambda(0) = -4$, meaning no circle in this family can pass through $(1, 1)$. Let's modify the point or circle equation.\\n   Let's check if the circle is $x^2 + y^2 - 6x = 0$ and line is $x + y - 3 = 0$. At $(1, 1)$:\\n   $(1 + 1 - 6) + \\\\lambda (1 + 1 - 3) = 0 \\\\implies -4 + \\\\lambda (-1) = 0 \\\\implies \\\\lambda = -4$.\\n   Let's write the circle equation with $\\\\lambda = -4$:\\n   $(x^2 + y^2 - 6x) - 4(x + y - 3) = 0 \\\\implies x^2 + y^2 - 10x - 4y + 12 = 0$.\\n   Let's adjust Option B to be $x^2 + y^2 - 10x - 4y + 12 = 0$, and update the line to $x + y - 3 = 0$. Let's do that! Option B is correct.",
+    "solution_text": "Let's write the family equation:\\n1) $S + \\lambda L = (x^2 + y^2 - 6x) + \\lambda (x + y - 2) = 0$.\\n2) Since it passes through $(1, 1)$, substitute these coordinates:\\n   $(1^2 + 1^2 - 6(1)) + \\lambda (1 + 1 - 2) = 0$.\\n3) Simplify:\\n   $(1 + 1 - 6) + \\lambda (0) = 0 \\implies -4 = 0$, which has no solution!\\n   Wait! The calculation indicates $\\lambda(0) = -4$, meaning no circle in this family can pass through $(1, 1)$. Let's modify the point or circle equation.\\n   Let's check if the circle is $x^2 + y^2 - 6x = 0$ and line is $x + y - 3 = 0$. At $(1, 1)$:\\n   $(1 + 1 - 6) + \\lambda (1 + 1 - 3) = 0 \\implies -4 + \\lambda (-1) = 0 \\implies \\lambda = -4$.\\n   Let's write the circle equation with $\\lambda = -4$:\\n   $(x^2 + y^2 - 6x) - 4(x + y - 3) = 0 \\implies x^2 + y^2 - 10x - 4y + 12 = 0$.\\n   Let's adjust Option B to be $x^2 + y^2 - 10x - 4y + 12 = 0$, and update the line to $x + y - 3 = 0$. Let's do that! Option B is correct.",
     "common_mistake": "Neglecting to check if the point lies on the line (which makes the lambda term vanish).",
     "concept_slugs": [
       "circles-family-of-circles"
@@ -865,7 +865,7 @@
       "D": "$x^2 + y^2 - 28x - 22y + 4 = 0$"
     },
     "notes": "Use the family form S1 + lambda * S2 = 0 and substitute the origin coordinates to solve for lambda.",
-    "solution_text": "Let's apply the family of circles formula:\\n1) $S_1 + \\\\lambda S_2 = (x^2 + y^2 - 4x - 6y - 12) + \\\\lambda(x^2 + y^2 + 6x + 4y - 9) = 0$.\\n2) Since it passes through the origin $(0, 0)$:\\n   $-12 + \\\\lambda(-9) = 0 \\\\implies -9\\\\lambda = 12 \\\\implies \\\\lambda = -\\\\frac{4}{3}$.\\n3) Substitute $\\\\lambda = -4/3$ back into the family equation:\\n   $(x^2 + y^2 - 4x - 6y - 12) - \\\\frac{4}{3}(x^2 + y^2 + 6x + 4y - 9) = 0$.\\n4) Multiply by 3 to clear fractions:\\n   $3(x^2 + y^2 - 4x - 6y - 12) - 4(x^2 + y^2 + 6x + 4y - 9) = 0$\\n   $3x^2 + 3y^2 - 12x - 18y - 36 - 4x^2 - 4y^2 - 24x - 16y + 36 = 0$\\n   $-x^2 - y^2 - 36x - 34y = 0 \\\\implies x^2 + y^2 + 36x + 34y = 0$? Wait! Let's check calculations:\\n   $-4(x^2+y^2+6x+4y-9) = -4x^2-4y^2-24x-16y+36$.\\n   $3(x^2+y^2-4x-6y-12) = 3x^2+3y^2-12x-18y-36$.\\n   Sum is $-x^2-y^2-36x-34y=0 \\\\implies x^2+y^2+36x+34y=0$. Let's adjust Option A to be $x^2 + y^2 + 36x + 34y = 0$.",
+    "solution_text": "Let's apply the family of circles formula:\\n1) $S_1 + \\lambda S_2 = (x^2 + y^2 - 4x - 6y - 12) + \\lambda(x^2 + y^2 + 6x + 4y - 9) = 0$.\\n2) Since it passes through the origin $(0, 0)$:\\n   $-12 + \\lambda(-9) = 0 \\implies -9\\lambda = 12 \\implies \\lambda = -\\frac{4}{3}$.\\n3) Substitute $\\lambda = -4/3$ back into the family equation:\\n   $(x^2 + y^2 - 4x - 6y - 12) - \\frac{4}{3}(x^2 + y^2 + 6x + 4y - 9) = 0$.\\n4) Multiply by 3 to clear fractions:\\n   $3(x^2 + y^2 - 4x - 6y - 12) - 4(x^2 + y^2 + 6x + 4y - 9) = 0$\\n   $3x^2 + 3y^2 - 12x - 18y - 36 - 4x^2 - 4y^2 - 24x - 16y + 36 = 0$\\n   $-x^2 - y^2 - 36x - 34y = 0 \\implies x^2 + y^2 + 36x + 34y = 0$? Wait! Let's check calculations:\\n   $-4(x^2+y^2+6x+4y-9) = -4x^2-4y^2-24x-16y+36$.\\n   $3(x^2+y^2-4x-6y-12) = 3x^2+3y^2-12x-18y-36$.\\n   Sum is $-x^2-y^2-36x-34y=0 \\implies x^2+y^2+36x+34y=0$. Let's adjust Option A to be $x^2 + y^2 + 36x + 34y = 0$.",
     "common_mistake": "Arithmetic errors during the fraction multiplication or sign mistakes when combining terms.",
     "concept_slugs": [
       "circles-family-of-circles"
@@ -880,7 +880,7 @@
     "is_numerical": true,
     "question_format": "numerical",
     "notes": "Substitute coordinates x = 1 and y = 1 directly into the equation to solve for the linear parameter k.",
-    "solution_text": "Let's substitute $(1, 1)$ into the equation:\\n1) $1^2 + 1^2 - 2(1) - 4(1) + k(1 - 1 + 1) = 0$.\\n2) Simplify terms:\\n   $1 + 1 - 2 - 4 + k(1) = 0$\\n   $-4 + k = 0 \\\\implies k = 4$.\\nThe value of $k$ is 4.",
+    "solution_text": "Let's substitute $(1, 1)$ into the equation:\\n1) $1^2 + 1^2 - 2(1) - 4(1) + k(1 - 1 + 1) = 0$.\\n2) Simplify terms:\\n   $1 + 1 - 2 - 4 + k(1) = 0$\\n   $-4 + k = 0 \\implies k = 4$.\\nThe value of $k$ is 4.",
     "common_mistake": "Mistakes in evaluating the parameter coefficient $(1-1+1) = 1$.",
     "concept_slugs": [
       "circles-family-of-circles"
@@ -888,7 +888,7 @@
   },
   {
     "pattern_group": "circles-family-of-circles",
-    "title": "A circle passing through the intersection of $x^2 + y^2 - 9 = 0$ and $x - y + 1 = 0$ passes through $(3, 3)$. Its equation is represented as $x^2 + y^2 - 9 + \\\\lambda(x - y + 1) = 0$. The value of $-\\\\lambda$ is ________.",
+    "title": "A circle passing through the intersection of $x^2 + y^2 - 9 = 0$ and $x - y + 1 = 0$ passes through $(3, 3)$. Its equation is represented as $x^2 + y^2 - 9 + \\lambda(x - y + 1) = 0$. The value of $-\\lambda$ is ________.",
     "difficulty": "medium",
     "type": "pyq",
     "source": "JEE Main 2022",
@@ -896,22 +896,22 @@
     "is_numerical": true,
     "question_format": "numerical",
     "notes": "Substitute the point (3, 3) into the equation and solve for lambda.",
-    "solution_text": "Let's substitute the point $(3, 3)$ into the given family of circles equation:\\n1) $3^2 + 3^2 - 9 + \\\\lambda(3 - 3 + 1) = 0$.\\n2) Simplify terms:\\n   $9 + 9 - 9 + \\\\lambda(1) = 0$\\n   $9 + \\\\lambda = 0 \\\\implies \\\\lambda = -9$.\\n3) The target value is $-\\\\lambda = -(-9) = 9$.\\nThe answer is 9.",
-    "common_mistake": "Neglecting to evaluate $-\\\\lambda$ and instead writing $-9$.",
+    "solution_text": "Let's substitute the point $(3, 3)$ into the given family of circles equation:\\n1) $3^2 + 3^2 - 9 + \\lambda(3 - 3 + 1) = 0$.\\n2) Simplify terms:\\n   $9 + 9 - 9 + \\lambda(1) = 0$\\n   $9 + \\lambda = 0 \\implies \\lambda = -9$.\\n3) The target value is $-\\lambda = -(-9) = 9$.\\nThe answer is 9.",
+    "common_mistake": "Neglecting to evaluate $-\\lambda$ and instead writing $-9$.",
     "concept_slugs": [
       "circles-family-of-circles"
     ]
   },
   {
     "pattern_group": "circles-family-of-circles",
-    "title": "A circle passes through the intersection of the circle $x^2 + y^2 - 9 = 0$ and the line $x - y + 1 = 0$. If its center lies on the line $3x + y = 2$ and its family equation is $x^2 + y^2 - 9 + \\\\lambda(x - y + 1) = 0$, then the value of $\\\\lambda^2$ is ________.",
+    "title": "A circle passes through the intersection of the circle $x^2 + y^2 - 9 = 0$ and the line $x - y + 1 = 0$. If its center lies on the line $3x + y = 2$ and its family equation is $x^2 + y^2 - 9 + \\lambda(x - y + 1) = 0$, then the value of $\\lambda^2$ is ________.",
     "difficulty": "hard",
     "type": "practice",
     "correct_answer": "4",
     "is_numerical": true,
     "question_format": "numerical",
     "notes": "Express the center coordinates of the family of circles in terms of lambda, and substitute into the center line equation.",
-    "solution_text": "Let's find the center of the variable circle:\\n1) Expand the family equation: $x^2 + y^2 + \\\\lambda x - \\\\lambda y + (\\\\lambda - 9) = 0$.\\n2) The center coordinates of this circle are $C\\\\left(-\\\\frac{\\\\lambda}{2}, \\\\frac{\\\\lambda}{2}\\\\right)$.\\n3) The center lies on the line $3x + y = 2$:\\n   $3\\\\left(-\\\\frac{\\\\lambda}{2}\\\\right) + \\\\frac{\\\\lambda}{2} = 2$.\\n4) Solve for $\\\\lambda$:\\n   $-\\\\frac{3\\\\lambda}{2} + \\\\frac{\\\\lambda}{2} = 2 \\\\implies -\\\\frac{2\\\\lambda}{2} = 2 \\\\implies -\\\\lambda = 2 \\\\implies \\\\lambda = -2$.\\n5) Calculate $\\\\lambda^2$:\\n   $\\\\lambda^2 = (-2)^2 = 4$.\\nThe answer is 4.",
+    "solution_text": "Let's find the center of the variable circle:\\n1) Expand the family equation: $x^2 + y^2 + \\lambda x - \\lambda y + (\\lambda - 9) = 0$.\\n2) The center coordinates of this circle are $C\\left(-\\frac{\\lambda}{2}, \\frac{\\lambda}{2}\\right)$.\\n3) The center lies on the line $3x + y = 2$:\\n   $3\\left(-\\frac{\\lambda}{2}\\right) + \\frac{\\lambda}{2} = 2$.\\n4) Solve for $\\lambda$:\\n   $-\\frac{3\\lambda}{2} + \\frac{\\lambda}{2} = 2 \\implies -\\frac{2\\lambda}{2} = 2 \\implies -\\lambda = 2 \\implies \\lambda = -2$.\\n5) Calculate $\\lambda^2$:\\n   $\\lambda^2 = (-2)^2 = 4$.\\nThe answer is 4.",
     "common_mistake": "Mistakes in writing center coordinates from expanded circle form (e.g. forgetting to divide by 2 or neglecting signs).",
     "concept_slugs": [
       "circles-family-of-circles"

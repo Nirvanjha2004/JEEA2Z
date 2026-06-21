@@ -13,8 +13,8 @@
       "C": "820",
       "D": "830"
     },
-    "notes": "Use the standard AP sum formula $S_n = \\\\frac{n}{2}[2a + (n-1)d]$.",
-    "solution_text": "Given $a = 3$, $d = 4$, and $n = 20$:\n1) Apply the sum formula:\n   $S_n = \\\\frac{n}{2}[2a + (n-1)d]$\n   $S_{20} = \\\\frac{20}{2}[2(3) + (20-1)4]$\n   $S_{20} = 10[6 + 19 \\\\times 4]$\n   $S_{20} = 10[6 + 76] = 10[82] = 820$.\nThus, Option C is correct.",
+    "notes": "Use the standard AP sum formula $S_n = \\frac{n}{2}[2a + (n-1)d]$.",
+    "solution_text": "Given $a = 3$, $d = 4$, and $n = 20$:\n1) Apply the sum formula:\n   $S_n = \\frac{n}{2}[2a + (n-1)d]$\n   $S_{20} = \\frac{20}{2}[2(3) + (20-1)4]$\n   $S_{20} = 10[6 + 19 \\times 4]$\n   $S_{20} = 10[6 + 76] = 10[82] = 820$.\nThus, Option C is correct.",
     "common_mistake": "Using $n-1 = 20$ instead of 19, or making arithmetic errors in multiplication.",
     "concept_slugs": [
       "series-ap"
@@ -44,7 +44,7 @@
   },
   {
     "pattern_group": "series-ap",
-    "title": "Let $a_1, a_2, a_3, \\\\ldots, a_n$ be an arithmetic progression. The value of $\\\\sum_{k=1}^{n-1} \\\\frac{1}{\\\\sqrt{a_k} + \\\\sqrt{a_{k+1}}}$ is equal to:",
+    "title": "Let $a_1, a_2, a_3, \\ldots, a_n$ be an arithmetic progression. The value of $\\sum_{k=1}^{n-1} \\frac{1}{\\sqrt{a_k} + \\sqrt{a_{k+1}}}$ is equal to:",
     "difficulty": "medium",
     "type": "pyq",
     "source": "JEE Main 2022",
@@ -52,13 +52,13 @@
     "is_numerical": false,
     "question_format": "mcq",
     "options": {
-      "A": "\\\\frac{n-1}{\\\\sqrt{a_1} + \\\\sqrt{a_n}}",
-      "B": "\\\\frac{n}{\\\\sqrt{a_1} + \\\\sqrt{a_n}}",
-      "C": "\\\\frac{n-1}{\\\\sqrt{a_1} - \\\\sqrt{a_n}}",
-      "D": "\\\\frac{1}{\\\\sqrt{a_1} + \\\\sqrt{a_n}}"
+      "A": "\\frac{n-1}{\\sqrt{a_1} + \\sqrt{a_n}}",
+      "B": "\\frac{n}{\\sqrt{a_1} + \\sqrt{a_n}}",
+      "C": "\\frac{n-1}{\\sqrt{a_1} - \\sqrt{a_n}}",
+      "D": "\\frac{1}{\\sqrt{a_1} + \\sqrt{a_n}}"
     },
     "notes": "Rationalize the denominator of each term in the summation.",
-    "solution_text": "Let $d$ be the common difference of the AP, so $a_{k+1} - a_k = d$.\n1) Rationalize the general term:\n   $\\\\frac{1}{\\\\sqrt{a_k} + \\\\sqrt{a_{k+1}}} = \\\\frac{\\\\sqrt{a_{k+1}} - \\\\sqrt{a_k}}{a_{k+1} - a_k} = \\\\frac{\\\\sqrt{a_{k+1}} - \\\\sqrt{a_k}}{d}$\n2) Summing from $k=1$ to $n-1$:\n   $\\\\sum_{k=1}^{n-1} \\\\frac{1}{\\\\sqrt{a_k} + \\\\sqrt{a_{k+1}}} = \\\\frac{1}{d} \\\\sum_{k=1}^{n-1} (\\\\sqrt{a_{k+1}} - \\\\sqrt{a_k})$\n   This is a telescoping sum:\n   $\\\\frac{1}{d} [(\\\\sqrt{a_2} - \\\\sqrt{a_1}) + (\\\\sqrt{a_3} - \\\\sqrt{a_2}) + \\\\dots + (\\\\sqrt{a_n} - \\\\sqrt{a_{n-1}})] = \\\\frac{\\\\sqrt{a_n} - \\\\sqrt{a_1}}{d}$\n3) Since $a_n = a_1 + (n-1)d \\\\implies (n-1)d = a_n - a_1 = (\\\\sqrt{a_n} - \\\\sqrt{a_1})(\\\\sqrt{a_n} + \\\\sqrt{a_1})$:\n   $\\\\frac{\\\\sqrt{a_n} - \\\\sqrt{a_1}}{d} = \\\\frac{n-1}{\\\\sqrt{a_1} + \\\\sqrt{a_n}}$.\nThus, Option A is correct.",
+    "solution_text": "Let $d$ be the common difference of the AP, so $a_{k+1} - a_k = d$.\n1) Rationalize the general term:\n   $\\frac{1}{\\sqrt{a_k} + \\sqrt{a_{k+1}}} = \\frac{\\sqrt{a_{k+1}} - \\sqrt{a_k}}{a_{k+1} - a_k} = \\frac{\\sqrt{a_{k+1}} - \\sqrt{a_k}}{d}$\n2) Summing from $k=1$ to $n-1$:\n   $\\sum_{k=1}^{n-1} \\frac{1}{\\sqrt{a_k} + \\sqrt{a_{k+1}}} = \\frac{1}{d} \\sum_{k=1}^{n-1} (\\sqrt{a_{k+1}} - \\sqrt{a_k})$\n   This is a telescoping sum:\n   $\\frac{1}{d} [(\\sqrt{a_2} - \\sqrt{a_1}) + (\\sqrt{a_3} - \\sqrt{a_2}) + \\dots + (\\sqrt{a_n} - \\sqrt{a_{n-1}})] = \\frac{\\sqrt{a_n} - \\sqrt{a_1}}{d}$\n3) Since $a_n = a_1 + (n-1)d \\implies (n-1)d = a_n - a_1 = (\\sqrt{a_n} - \\sqrt{a_1})(\\sqrt{a_n} + \\sqrt{a_1})$:\n   $\\frac{\\sqrt{a_n} - \\sqrt{a_1}}{d} = \\frac{n-1}{\\sqrt{a_1} + \\sqrt{a_n}}$.\nThus, Option A is correct.",
     "common_mistake": "Failing to realize that the sum telescopes, or misinterpreting the relation between $a_n - a_1$ and $d$.",
     "concept_slugs": [
       "series-ap"
@@ -72,7 +72,7 @@
     "is_numerical": true,
     "question_format": "numerical",
     "notes": "Identify the first and last two-digit numbers divisible by 3, count the terms, and apply the AP sum formula.",
-    "solution_text": "Let's find the sequence of two-digit numbers divisible by 3:\n1) First term $a = 12$, Last term $l = 99$, Common difference $d = 3$.\n2) Number of terms $n$:\n   $l = a + (n-1)d \\\\implies 99 = 12 + (n-1)3 \\\\implies 87 = (n-1)3 \\\\implies n-1 = 29 \\\\implies n = 30$.\n3) Sum of the AP:\n   $S_n = \\\\frac{n}{2}[a + l]$\n   $S_{30} = \\\\frac{30}{2}[12 + 99] = 15 \\\\times 111 = 1665$.\nThus, the sum is 1665.",
+    "solution_text": "Let's find the sequence of two-digit numbers divisible by 3:\n1) First term $a = 12$, Last term $l = 99$, Common difference $d = 3$.\n2) Number of terms $n$:\n   $l = a + (n-1)d \\implies 99 = 12 + (n-1)3 \\implies 87 = (n-1)3 \\implies n-1 = 29 \\implies n = 30$.\n3) Sum of the AP:\n   $S_n = \\frac{n}{2}[a + l]$\n   $S_{30} = \\frac{30}{2}[12 + 99] = 15 \\times 111 = 1665$.\nThus, the sum is 1665.",
     "common_mistake": "Including 9 as a term (which is a one-digit number), or using $n = 33$ (total numbers up to 100 divisible by 3).",
     "concept_slugs": [
       "series-ap"
@@ -85,8 +85,8 @@
     "type": "practice",
     "is_numerical": true,
     "question_format": "numerical",
-    "notes": "Recall that the sum of $n$ arithmetic means inserted between $a$ and $b$ is equal to $n \\\\times \\\\left(\\\\frac{a+b}{2}\\\\right)$.",
-    "solution_text": "Let $A_1, A_2, \\\\ldots, A_{11}$ be the 11 arithmetic means between $a = 3$ and $b = 27$:\n1) The sum of $n$ arithmetic means between $a$ and $b$ is given by:\n   $S_{AM} = n \\\\cdot \\\\frac{a+b}{2}$\n2) Substitute $n = 11$, $a = 3$, $b = 27$:\n   $S_{AM} = 11 \\\\cdot \\\\frac{3 + 27}{2} = 11 \\\\cdot 15 = 165$.\nThus, the sum of the means is 165.",
+    "notes": "Recall that the sum of $n$ arithmetic means inserted between $a$ and $b$ is equal to $n \\times \\left(\\frac{a+b}{2}\\right)$.",
+    "solution_text": "Let $A_1, A_2, \\ldots, A_{11}$ be the 11 arithmetic means between $a = 3$ and $b = 27$:\n1) The sum of $n$ arithmetic means between $a$ and $b$ is given by:\n   $S_{AM} = n \\cdot \\frac{a+b}{2}$\n2) Substitute $n = 11$, $a = 3$, $b = 27$:\n   $S_{AM} = 11 \\cdot \\frac{3 + 27}{2} = 11 \\cdot 15 = 165$.\nThus, the sum of the means is 165.",
     "common_mistake": "Calculating the sum of the entire AP (13 terms including 3 and 27) instead of just the 11 inserted means.",
     "concept_slugs": [
       "series-ap"
@@ -107,7 +107,7 @@
       "D": "6"
     },
     "notes": "Use the AP sum formula to write the given relation, and solve for the relation between $a$ and $d$.",
-    "solution_text": "Let the first term be $a$ and the common difference be $d$:\n1) $S_n = \\\\frac{n}{2}[2a + (n-1)d]$ and $S_{2n} = n[2a + (2n-1)d]$.\n2) We are given $S_{2n} = 3S_n$:\n   $n[2a + (2n-1)d] = 3 \\\\frac{n}{2}[2a + (n-1)d]$\n   $2[2a + (2n-1)d] = 3[2a + (n-1)d]$\n   $4a + (4n-2)d = 6a + (3n-3)d$\n   $2a = (4n-2 - (3n-3))d = (n+1)d \\\\implies 2a = (n+1)d$.\n3) We need to find $S_{3n} : S_n$:\n   $S_{3n} = \\\\frac{3n}{2}[2a + (3n-1)d]$\n   Substitute $2a = (n+1)d$ into both expressions:\n   - $2a + (3n-1)d = (n+1)d + (3n-1)d = 4nd$\n   - $2a + (n-1)d = (n+1)d + (n-1)d = 2nd$\n   Thus:\n   - $S_{3n} = \\\\frac{3n}{2}[4nd] = 6n^2 d$\n   - $S_n = \\\\frac{n}{2}[2nd] = n^2 d$\n   Ratio: $S_{3n} / S_n = 6n^2 d / n^2 d = 6$.\nOption D is correct.",
+    "solution_text": "Let the first term be $a$ and the common difference be $d$:\n1) $S_n = \\frac{n}{2}[2a + (n-1)d]$ and $S_{2n} = n[2a + (2n-1)d]$.\n2) We are given $S_{2n} = 3S_n$:\n   $n[2a + (2n-1)d] = 3 \\frac{n}{2}[2a + (n-1)d]$\n   $2[2a + (2n-1)d] = 3[2a + (n-1)d]$\n   $4a + (4n-2)d = 6a + (3n-3)d$\n   $2a = (4n-2 - (3n-3))d = (n+1)d \\implies 2a = (n+1)d$.\n3) We need to find $S_{3n} : S_n$:\n   $S_{3n} = \\frac{3n}{2}[2a + (3n-1)d]$\n   Substitute $2a = (n+1)d$ into both expressions:\n   - $2a + (3n-1)d = (n+1)d + (3n-1)d = 4nd$\n   - $2a + (n-1)d = (n+1)d + (n-1)d = 2nd$\n   Thus:\n   - $S_{3n} = \\frac{3n}{2}[4nd] = 6n^2 d$\n   - $S_n = \\frac{n}{2}[2nd] = n^2 d$\n   Ratio: $S_{3n} / S_n = 6n^2 d / n^2 d = 6$.\nOption D is correct.",
     "common_mistake": "Assuming specific values for $a$ and $d$ without verifying compatibility with $2a=(n+1)d$ across all $n$.",
     "concept_slugs": [
       "series-ap"
@@ -115,7 +115,7 @@
   },
   {
     "pattern_group": "series-ap",
-    "title": "Let $a_1, a_2, a_3, \\\\dots, a_{24}$ be in arithmetic progression. If $a_1 + a_5 + a_{10} + a_{15} + a_{20} + a_{24} = 225$, the sum of the first 24 terms $S_{24}$ is ________.",
+    "title": "Let $a_1, a_2, a_3, \\dots, a_{24}$ be in arithmetic progression. If $a_1 + a_5 + a_{10} + a_{15} + a_{20} + a_{24} = 225$, the sum of the first 24 terms $S_{24}$ is ________.",
     "difficulty": "hard",
     "type": "pyq",
     "source": "JEE Advanced 2016",
@@ -123,7 +123,7 @@
     "is_numerical": true,
     "question_format": "numerical",
     "notes": "Use the property of AP: the sum of terms equidistant from the beginning and end is constant: $a_k + a_{n-k+1} = a_1 + a_n$.",
-    "solution_text": "In an AP of 24 terms:\n1) $a_1 + a_{24} = a_5 + a_{20} = a_{10} + a_{15}$.\n2) We are given:\n   $(a_1 + a_{24}) + (a_5 + a_{20}) + (a_{10} + a_{15}) = 225$\n   Since these three pairs are equal, we can write:\n   $3(a_1 + a_{24}) = 225 \\\\implies a_1 + a_{24} = 75$.\n3) The sum of the first 24 terms is:\n   $S_{24} = \\\\frac{24}{2}(a_1 + a_{24}) = 12 \\\\times 75 = 900$.",
+    "solution_text": "In an AP of 24 terms:\n1) $a_1 + a_{24} = a_5 + a_{20} = a_{10} + a_{15}$.\n2) We are given:\n   $(a_1 + a_{24}) + (a_5 + a_{20}) + (a_{10} + a_{15}) = 225$\n   Since these three pairs are equal, we can write:\n   $3(a_1 + a_{24}) = 225 \\implies a_1 + a_{24} = 75$.\n3) The sum of the first 24 terms is:\n   $S_{24} = \\frac{24}{2}(a_1 + a_{24}) = 12 \\times 75 = 900$.",
     "common_mistake": "Trying to solve for $a$ and $d$ separately, which is impossible because there is only one equation given.",
     "concept_slugs": [
       "series-ap"
@@ -138,21 +138,21 @@
     "is_numerical": false,
     "question_format": "mcq",
     "options": {
-      "A": "$\\\\frac{m-1}{n-1}$",
-      "B": "$\\\\frac{2m}{2n}$",
-      "C": "$\\\\frac{2m-1}{2n-1}$",
-      "D": "$\\\\frac{2m+1}{2n+1}$"
+      "A": "$\\frac{m-1}{n-1}$",
+      "B": "$\\frac{2m}{2n}$",
+      "C": "$\\frac{2m-1}{2n-1}$",
+      "D": "$\\frac{2m+1}{2n+1}$"
     },
-    "notes": "Write the ratio of sums $\\\\frac{S_m}{S_n} = \\\\frac{m^2}{n^2}$, simplify to find the relation between $a$ and $d$, and replace $m, n$ with $2m-1, 2n-1$.",
-    "solution_text": "Let $S_m$ and $S_n$ be the sums:\n1) $\\\\frac{S_m}{S_n} = \\\\frac{\\\\frac{m}{2}[2a+(m-1)d]}{\\\\frac{n}{2}[2a+(n-1)d]} = \\\\frac{m^2}{n^2}$\n   $\\\\frac{2a+(m-1)d}{2a+(n-1)d} = \\\\frac{m}{n}$\n2) We need the ratio of the $m$-th and $n$-th terms: $\\\\frac{T_m}{T_n} = \\\\frac{a+(m-1)d}{a+(n-1)d} = \\\\frac{2a+(2m-2)d}{2a+(2n-2)d}$.\n3) Looking at the ratio from step 1, if we substitute $m \\\\leftarrow 2m-1$ and $n \\\\leftarrow 2n-1$, we get exactly the term ratio:\n   $\\\\frac{T_m}{T_n} = \\\\frac{2m-1}{2n-1}$.\nOption C is correct.",
-    "common_mistake": "Claiming the ratio is $\\\\frac{m}{n}$ or $\\\\frac{m-1}{n-1}$, forgetting the factor of 2 in the term replacement.",
+    "notes": "Write the ratio of sums $\\frac{S_m}{S_n} = \\frac{m^2}{n^2}$, simplify to find the relation between $a$ and $d$, and replace $m, n$ with $2m-1, 2n-1$.",
+    "solution_text": "Let $S_m$ and $S_n$ be the sums:\n1) $\\frac{S_m}{S_n} = \\frac{\\frac{m}{2}[2a+(m-1)d]}{\\frac{n}{2}[2a+(n-1)d]} = \\frac{m^2}{n^2}$\n   $\\frac{2a+(m-1)d}{2a+(n-1)d} = \\frac{m}{n}$\n2) We need the ratio of the $m$-th and $n$-th terms: $\\frac{T_m}{T_n} = \\frac{a+(m-1)d}{a+(n-1)d} = \\frac{2a+(2m-2)d}{2a+(2n-2)d}$.\n3) Looking at the ratio from step 1, if we substitute $m \\leftarrow 2m-1$ and $n \\leftarrow 2n-1$, we get exactly the term ratio:\n   $\\frac{T_m}{T_n} = \\frac{2m-1}{2n-1}$.\nOption C is correct.",
+    "common_mistake": "Claiming the ratio is $\\frac{m}{n}$ or $\\frac{m-1}{n-1}$, forgetting the factor of 2 in the term replacement.",
     "concept_slugs": [
       "series-ap"
     ]
   },
   {
     "pattern_group": "series-gp",
-    "title": "Find the sum of the infinite geometric progression: $3 + 1 + \\\\frac{1}{3} + \\\\frac{1}{9} + \\\\dots$",
+    "title": "Find the sum of the infinite geometric progression: $3 + 1 + \\frac{1}{3} + \\frac{1}{9} + \\dots$",
     "difficulty": "easy",
     "type": "concept",
     "correct_answer": "B",
@@ -164,8 +164,8 @@
       "C": "5",
       "D": "3.5"
     },
-    "notes": "Apply the infinite GP sum formula $S_\\\\infty = \\\\frac{a}{1-r}$ with $|r| < 1$.",
-    "solution_text": "Given the series: $3 + 1 + 1/3 + 1/9 + \\\\dots$\n1) First term $a = 3$, Common ratio $r = 1/3$.\n2) Since $|r| = 1/3 < 1$, we can sum to infinity:\n   $S_\\\\infty = \\\\frac{a}{1-r} = \\\\frac{3}{1 - 1/3} = \\\\frac{3}{2/3} = \\\\frac{9}{2} = 4.5$.\nThus, Option B is correct.",
+    "notes": "Apply the infinite GP sum formula $S_\\infty = \\frac{a}{1-r}$ with $|r| < 1$.",
+    "solution_text": "Given the series: $3 + 1 + 1/3 + 1/9 + \\dots$\n1) First term $a = 3$, Common ratio $r = 1/3$.\n2) Since $|r| = 1/3 < 1$, we can sum to infinity:\n   $S_\\infty = \\frac{a}{1-r} = \\frac{3}{1 - 1/3} = \\frac{3}{2/3} = \\frac{9}{2} = 4.5$.\nThus, Option B is correct.",
     "common_mistake": "Using $r = 3$ instead of $1/3$, or miscalculating $1 - 1/3 = 1/3$ to get 9.",
     "concept_slugs": [
       "series-gp"
@@ -173,7 +173,7 @@
   },
   {
     "pattern_group": "series-gp",
-    "title": "The sum of the first $n$ terms of the series $0.7 + 0.77 + 0.777 + \\\\dots$ is given by:",
+    "title": "The sum of the first $n$ terms of the series $0.7 + 0.77 + 0.777 + \\dots$ is given by:",
     "difficulty": "medium",
     "type": "pyq",
     "source": "JEE Main 2020",
@@ -181,13 +181,13 @@
     "is_numerical": false,
     "question_format": "mcq",
     "options": {
-      "A": "\\\\frac{7}{9} \\\\left[ n - \\\\frac{1}{9}(1 - 10^{-n}) \\\\right]",
-      "B": "\\\\frac{7}{9} \\\\left[ n + \\\\frac{1}{9}(1 - 10^{-n}) \\\\right]",
-      "C": "\\\\frac{7}{81} \\\\left[ 9n - (1 - 10^{-n}) \\\\right]",
-      "D": "\\\\frac{7}{9} \\\\left[ 9n - (1 - 10^{-n}) \\\\right]"
+      "A": "\\frac{7}{9} \\left[ n - \\frac{1}{9}(1 - 10^{-n}) \\right]",
+      "B": "\\frac{7}{9} \\left[ n + \\frac{1}{9}(1 - 10^{-n}) \\right]",
+      "C": "\\frac{7}{81} \\left[ 9n - (1 - 10^{-n}) \\right]",
+      "D": "\\frac{7}{9} \\left[ 9n - (1 - 10^{-n}) \\right]"
     },
-    "notes": "Express the terms as $\\\\frac{7}{9}(9/10 + 99/100 + \\\\dots)$ and write $99\\\\dots$ as $10^k - 1$.",
-    "solution_text": "Let's factor out 7 and convert to 9s:\n$S_n = 0.7 + 0.77 + 0.777 + \\\\dots + \\\\text{to } n \\\\text{ terms}$\n$S_n = 7(0.1 + 0.11 + 0.111 + \\\\dots)$\n$S_n = \\\\frac{7}{9}(0.9 + 0.99 + 0.999 + \\\\dots)$\n$S_n = \\\\frac{7}{9} \\\\left[ \\\\left(1 - \\\\frac{1}{10}\\\\right) + \\\\left(1 - \\\\frac{1}{100}\\\\right) + \\\\dots + \\\\left(1 - \\\\frac{1}{10^n}\\\\right) \\\\right]$\n$S_n = \\\\frac{7}{9} \\\\left[ n - \\\\left(\\\\frac{1}{10} + \\\\frac{1}{100} + \\\\dots + \\\\frac{1}{10^n}\\\\right) \\\\right]$\nThe sum of the GP inside is:\n$S_{GP} = \\\\frac{1/10 (1 - 10^{-n})}{1 - 1/10} = \\\\frac{1}{9}(1 - 10^{-n})$\nThus, $S_n = \\\\frac{7}{9} \\\\left[ n - \\\\frac{1}{9}(1 - 10^{-n}) \\\\right]$. Option A is correct.",
+    "notes": "Express the terms as $\\frac{7}{9}(9/10 + 99/100 + \\dots)$ and write $99\\dots$ as $10^k - 1$.",
+    "solution_text": "Let's factor out 7 and convert to 9s:\n$S_n = 0.7 + 0.77 + 0.777 + \\dots + \\text{to } n \\text{ terms}$\n$S_n = 7(0.1 + 0.11 + 0.111 + \\dots)$\n$S_n = \\frac{7}{9}(0.9 + 0.99 + 0.999 + \\dots)$\n$S_n = \\frac{7}{9} \\left[ \\left(1 - \\frac{1}{10}\\right) + \\left(1 - \\frac{1}{100}\\right) + \\dots + \\left(1 - \\frac{1}{10^n}\\right) \\right]$\n$S_n = \\frac{7}{9} \\left[ n - \\left(\\frac{1}{10} + \\frac{1}{100} + \\dots + \\frac{1}{10^n}\\right) \\right]$\nThe sum of the GP inside is:\n$S_{GP} = \\frac{1/10 (1 - 10^{-n})}{1 - 1/10} = \\frac{1}{9}(1 - 10^{-n})$\nThus, $S_n = \\frac{7}{9} \\left[ n - \\frac{1}{9}(1 - 10^{-n}) \\right]$. Option A is correct.",
     "common_mistake": "Sign errors in the GP sum, or mismatching factors of 9 and 81.",
     "concept_slugs": [
       "series-gp"
@@ -201,8 +201,8 @@
     "is_numerical": true,
     "question_format": "numerical",
     "notes": "Use the general term formula $a_n = a r^{n-1}$ to write two equations and find $a$ and $r$.",
-    "solution_text": "Let the GP be $a, ar, ar^2, \\\\dots$:\n1) 3rd term: $a_3 = a r^2 = 24$\n2) 6th term: $a_6 = a r^5 = 192$\n3) Divide (2) by (1):\n   $\\\\frac{a r^5}{a r^2} = \\\\frac{192}{24} \\\\implies r^3 = 8 \\\\implies r = 2$.\n4) Substitute $r=2$ back into (1):\n   $a (2)^2 = 24 \\\\implies 4a = 24 \\\\implies a = 6$.\n5) The 10th term is:\n   $a_{10} = a r^9 = 6 \\\\times 2^9 = 6 \\\\times 512 = 3072$.",
-    "common_mistake": "Calculating $a_{10} = a r^{10}$, leading to $6 \\\\times 1024 = 6144$ by mistake.",
+    "solution_text": "Let the GP be $a, ar, ar^2, \\dots$:\n1) 3rd term: $a_3 = a r^2 = 24$\n2) 6th term: $a_6 = a r^5 = 192$\n3) Divide (2) by (1):\n   $\\frac{a r^5}{a r^2} = \\frac{192}{24} \\implies r^3 = 8 \\implies r = 2$.\n4) Substitute $r=2$ back into (1):\n   $a (2)^2 = 24 \\implies 4a = 24 \\implies a = 6$.\n5) The 10th term is:\n   $a_{10} = a r^9 = 6 \\times 2^9 = 6 \\times 512 = 3072$.",
+    "common_mistake": "Calculating $a_{10} = a r^{10}$, leading to $6 \\times 1024 = 6144$ by mistake.",
     "concept_slugs": [
       "series-gp"
     ]
@@ -216,13 +216,13 @@
     "is_numerical": false,
     "question_format": "mcq",
     "options": {
-      "A": "$\\\\frac{2}{3}$",
-      "B": "$\\\\frac{3}{5}$",
-      "C": "$\\\\frac{4}{5}$",
-      "D": "$\\\\frac{2}{5}$"
+      "A": "$\\frac{2}{3}$",
+      "B": "$\\frac{3}{5}$",
+      "C": "$\\frac{4}{5}$",
+      "D": "$\\frac{2}{5}$"
     },
     "notes": "Write equations for $S_3$ and $S_6$, and divide them to eliminate the first term $a$.",
-    "solution_text": "Let $S_3$ and $S_6$ be the sums:\n1) $S_3 = \\\\frac{a(1-r^3)}{1-r}$ and $S_6 = \\\\frac{a(1-r^6)}{1-r}$.\n2) Ratio:\n   $\\\\frac{S_3}{S_6} = \\\\frac{1-r^3}{1-r^6} = \\\\frac{1-r^3}{(1-r^3)(1+r^3)} = \\\\frac{1}{1+r^3}$\n3) We are given $\\\\frac{S_3}{S_6} = \\\\frac{125}{152}$:\n   $\\\\frac{1}{1+r^3} = \\\\frac{125}{152} \\\\implies 1+r^3 = \\\\frac{152}{125} \\\\implies r^3 = \\\\frac{152}{125} - 1 = \\\\frac{27}{125}$\n   $r = \\\\sqrt[3]{\\\\frac{27}{125}} = \\\\frac{3}{5}$.\nOption B is correct.",
+    "solution_text": "Let $S_3$ and $S_6$ be the sums:\n1) $S_3 = \\frac{a(1-r^3)}{1-r}$ and $S_6 = \\frac{a(1-r^6)}{1-r}$.\n2) Ratio:\n   $\\frac{S_3}{S_6} = \\frac{1-r^3}{1-r^6} = \\frac{1-r^3}{(1-r^3)(1+r^3)} = \\frac{1}{1+r^3}$\n3) We are given $\\frac{S_3}{S_6} = \\frac{125}{152}$:\n   $\\frac{1}{1+r^3} = \\frac{125}{152} \\implies 1+r^3 = \\frac{152}{125} \\implies r^3 = \\frac{152}{125} - 1 = \\frac{27}{125}$\n   $r = \\sqrt[3]{\\frac{27}{125}} = \\frac{3}{5}$.\nOption B is correct.",
     "common_mistake": "Using $1+r^3 = 152$ directly without dividing by 125, or getting $r = 5/3$ by inverting the ratio.",
     "concept_slugs": [
       "series-gp"
@@ -243,7 +243,7 @@
       "D": "$x, y, z$ satisfy $y^2 = xz$"
     },
     "notes": "Take logarithms on all sides of the exponential equality to find the relation between the variables.",
-    "solution_text": "Let $a, b, c$ be in GP, so $b^2 = ac$. Taking natural log: $2\\\\ln b = \\\\ln a + \\\\ln c$.\n1) We are given $a^x = b^y = c^z = k$.\n2) Taking log:\n   - $x \\\\ln a = \\\\ln k \\\\implies \\\\ln a = \\\\frac{\\\\ln k}{x}$\n   - $y \\\\ln b = \\\\ln k \\\\implies \\\\ln b = \\\\frac{\\\\ln k}{y}$\n   - $z \\\\ln c = \\\\ln k \\\\implies \\\\ln c = \\\\frac{\\\\ln k}{z}$\n3) Substitute these into the GP relation $2\\\\ln b = \\\\ln a + \\\\ln c$:\n   $2 \\\\frac{\\\\ln k}{y} = \\\\frac{\\\\ln k}{x} + \\\\frac{\\\\ln k}{z}$\n   $\\\\frac{2}{y} = \\\\frac{1}{x} + \\\\frac{1}{z}$.\nThis is the exact definition of $x, y, z$ being in HP. Option A is correct.",
+    "solution_text": "Let $a, b, c$ be in GP, so $b^2 = ac$. Taking natural log: $2\\ln b = \\ln a + \\ln c$.\n1) We are given $a^x = b^y = c^z = k$.\n2) Taking log:\n   - $x \\ln a = \\ln k \\implies \\ln a = \\frac{\\ln k}{x}$\n   - $y \\ln b = \\ln k \\implies \\ln b = \\frac{\\ln k}{y}$\n   - $z \\ln c = \\ln k \\implies \\ln c = \\frac{\\ln k}{z}$\n3) Substitute these into the GP relation $2\\ln b = \\ln a + \\ln c$:\n   $2 \\frac{\\ln k}{y} = \\frac{\\ln k}{x} + \\frac{\\ln k}{z}$\n   $\\frac{2}{y} = \\frac{1}{x} + \\frac{1}{z}$.\nThis is the exact definition of $x, y, z$ being in HP. Option A is correct.",
     "common_mistake": "Concluding that $x, y, z$ are in AP (Option B) or GP (Option C) by failing to correctly convert exponential terms to logarithms.",
     "concept_slugs": [
       "series-gp"
@@ -258,8 +258,8 @@
     "correct_answer": "1.5",
     "is_numerical": true,
     "question_format": "numerical",
-    "notes": "Form equations for $S = \\\\frac{a}{1-r} = 3$ and $S_{sq} = \\\\frac{a^2}{1-r^2} = 3$, and solve for $a$ and $r$.",
-    "solution_text": "Let the GP be $a, ar, ar^2, \\\\dots$:\n1) Sum of infinite terms:\n   $S_\\\\infty = \\\\frac{a}{1-r} = 3 \\\\implies a = 3(1-r)$\n2) Sum of squares of terms ($a^2, a^2r^2, a^2r^4, \\\\dots$):\n   $S_{sq} = \\\\frac{a^2}{1-r^2} = 3$\n3) Substitute $a^2 = 9(1-r)^2$ into the second equation:\n   $\\\\frac{9(1-r)^2}{1-r^2} = 3 \\\\implies \\\\frac{9(1-r)^2}{(1-r)(1+r)} = 3$\n   $\\\\frac{9(1-r)}{1+r} = 3 \\\\implies 3(1-r) = 1+r \\\\implies 3 - 3r = 1 + r \\\\implies 4r = 2 \\\\implies r = 0.5$.\n4) Find $a$:\n   $a = 3(1 - 0.5) = 1.5$.\nThus, the first term $a$ is 1.5.",
+    "notes": "Form equations for $S = \\frac{a}{1-r} = 3$ and $S_{sq} = \\frac{a^2}{1-r^2} = 3$, and solve for $a$ and $r$.",
+    "solution_text": "Let the GP be $a, ar, ar^2, \\dots$:\n1) Sum of infinite terms:\n   $S_\\infty = \\frac{a}{1-r} = 3 \\implies a = 3(1-r)$\n2) Sum of squares of terms ($a^2, a^2r^2, a^2r^4, \\dots$):\n   $S_{sq} = \\frac{a^2}{1-r^2} = 3$\n3) Substitute $a^2 = 9(1-r)^2$ into the second equation:\n   $\\frac{9(1-r)^2}{1-r^2} = 3 \\implies \\frac{9(1-r)^2}{(1-r)(1+r)} = 3$\n   $\\frac{9(1-r)}{1+r} = 3 \\implies 3(1-r) = 1+r \\implies 3 - 3r = 1 + r \\implies 4r = 2 \\implies r = 0.5$.\n4) Find $a$:\n   $a = 3(1 - 0.5) = 1.5$.\nThus, the first term $a$ is 1.5.",
     "common_mistake": "Assuming $r = 1/3$, or miscalculating the ratio division, leading to $a = 2$.",
     "concept_slugs": [
       "series-gp"
@@ -272,8 +272,8 @@
     "type": "practice",
     "is_numerical": true,
     "question_format": "numerical",
-    "notes": "Identify the common ratio using $r = \\\\left(\\\\frac{b}{a}\\\\right)^{\\\\frac{1}{n+1}}$ and compute the 3rd mean $G_3 = a r^3$.",
-    "solution_text": "Let the GP be $a = 2, G_1, G_2, G_3, G_4, G_5, b = 1458$.\n1) The total terms in the GP is $5 + 2 = 7$.\n2) Thus, $a_7 = a r^6 = 1458 \\\\implies 2 r^6 = 1458 \\\\implies r^6 = 729 \\\\implies r = 3$.\n3) The geometric means are:\n   - $G_1 = a r = 6$\n   - $G_2 = a r^2 = 18$\n   - $G_3 = a r^3 = 54$.\nThus, the 3rd geometric mean is 54.",
+    "notes": "Identify the common ratio using $r = \\left(\\frac{b}{a}\\right)^{\\frac{1}{n+1}}$ and compute the 3rd mean $G_3 = a r^3$.",
+    "solution_text": "Let the GP be $a = 2, G_1, G_2, G_3, G_4, G_5, b = 1458$.\n1) The total terms in the GP is $5 + 2 = 7$.\n2) Thus, $a_7 = a r^6 = 1458 \\implies 2 r^6 = 1458 \\implies r^6 = 729 \\implies r = 3$.\n3) The geometric means are:\n   - $G_1 = a r = 6$\n   - $G_2 = a r^2 = 18$\n   - $G_3 = a r^3 = 54$.\nThus, the 3rd geometric mean is 54.",
     "common_mistake": "Calculating $G_3 = a r^2 = 18$ (which is $G_2$) or using an incorrect number of terms $n=5$ instead of $n=7$ to find the ratio.",
     "concept_slugs": [
       "series-gp"
@@ -288,13 +288,13 @@
     "is_numerical": false,
     "question_format": "mcq",
     "options": {
-      "A": "$\\\\left(\\\\frac{S_n}{R_n}\\\\right)^{2n}$",
-      "B": "$\\\\left(\\\\frac{S_n}{R_n}\\\\right)^n$",
-      "C": "$\\\\left(\\\\frac{R_n}{S_n}\\\\right)^n$",
-      "D": "$\\\\frac{S_n}{R_n}$"
+      "A": "$\\left(\\frac{S_n}{R_n}\\right)^{2n}$",
+      "B": "$\\left(\\frac{S_n}{R_n}\\right)^n$",
+      "C": "$\\left(\\frac{R_n}{S_n}\\right)^n$",
+      "D": "$\\frac{S_n}{R_n}$"
     },
     "notes": "Write expressions for $S_n$, $P_n$, and $R_n$ in terms of the first term $a$ and common ratio $r$.",
-    "solution_text": "Let the GP terms be $a, ar, ar^2, \\\\dots, ar^{n-1}$:\n1) $S_n = \\\\frac{a(r^n-1)}{r-1}$.\n2) $P_n = a \\\\cdot ar \\\\cdot ar^2 \\\\dots ar^{n-1} = a^n r^{1+2+\\\\dots+n-1} = a^n r^{\\\\frac{n(n-1)}{2}} \\\\implies P_n^2 = a^{2n} r^{n(n-1)}$.\n3) $R_n = \\\\frac{1}{a} + \\\\frac{1}{ar} + \\\\dots + \\\\frac{1}{ar^{n-1}} = \\\\frac{1}{a} \\\\left[ \\\\frac{1 - (1/r)^n}{1 - 1/r} \\\\right] = \\\\frac{1}{a} \\\\left[ \\\\frac{r^n - 1}{r^{n-1}(r-1)} \\\\right] = \\\\frac{r^n-1}{a r^{n-1}(r-1)}$.\n4) Divide $S_n$ by $R_n$:\n   $\\\\frac{S_n}{R_n} = \\\\frac{a(r^n-1)}{r-1} \\\\div \\\\frac{r^n-1}{a r^{n-1}(r-1)} = a^2 r^{n-1}$.\n5) Raise both sides to the power of $n$:\n   $\\\\left(\\\\frac{S_n}{R_n}\\\\right)^n = (a^2 r^{n-1})^n = a^{2n} r^{n(n-1)} = P_n^2$.\nThus, Option B is correct.",
+    "solution_text": "Let the GP terms be $a, ar, ar^2, \\dots, ar^{n-1}$:\n1) $S_n = \\frac{a(r^n-1)}{r-1}$.\n2) $P_n = a \\cdot ar \\cdot ar^2 \\dots ar^{n-1} = a^n r^{1+2+\\dots+n-1} = a^n r^{\\frac{n(n-1)}{2}} \\implies P_n^2 = a^{2n} r^{n(n-1)}$.\n3) $R_n = \\frac{1}{a} + \\frac{1}{ar} + \\dots + \\frac{1}{ar^{n-1}} = \\frac{1}{a} \\left[ \\frac{1 - (1/r)^n}{1 - 1/r} \\right] = \\frac{1}{a} \\left[ \\frac{r^n - 1}{r^{n-1}(r-1)} \\right] = \\frac{r^n-1}{a r^{n-1}(r-1)}$.\n4) Divide $S_n$ by $R_n$:\n   $\\frac{S_n}{R_n} = \\frac{a(r^n-1)}{r-1} \\div \\frac{r^n-1}{a r^{n-1}(r-1)} = a^2 r^{n-1}$.\n5) Raise both sides to the power of $n$:\n   $\\left(\\frac{S_n}{R_n}\\right)^n = (a^2 r^{n-1})^n = a^{2n} r^{n(n-1)} = P_n^2$.\nThus, Option B is correct.",
     "common_mistake": "Claiming the ratio is $S_n/R_n$ raised to $2n$, forgetting that the product already includes the term $a^n$.",
     "concept_slugs": [
       "series-gp"
@@ -309,13 +309,13 @@
     "is_numerical": false,
     "question_format": "mcq",
     "options": {
-      "A": "$\\\\frac{ac}{a+c}$",
-      "B": "$\\\\frac{2ac}{a+c}$",
-      "C": "$\\\\frac{a+c}{2}$",
-      "D": "\\\\sqrt{ac}"
+      "A": "$\\frac{ac}{a+c}$",
+      "B": "$\\frac{2ac}{a+c}$",
+      "C": "$\\frac{a+c}{2}$",
+      "D": "\\sqrt{ac}"
     },
     "notes": "If a, b, c are in HP, then $1/a, 1/b, 1/c$ are in AP.",
-    "solution_text": "By definition of Harmonic Progression:\n1) $1/a, 1/b, 1/c$ are in AP.\n2) By AP property:\n   $\\\\frac{2}{b} = \\\\frac{1}{a} + \\\\frac{1}{c} = \\\\frac{a+c}{ac}$\n3) Solving for $b$:\n   $b = \\\\frac{2ac}{a+c}$.\nOption B is correct.",
+    "solution_text": "By definition of Harmonic Progression:\n1) $1/a, 1/b, 1/c$ are in AP.\n2) By AP property:\n   $\\frac{2}{b} = \\frac{1}{a} + \\frac{1}{c} = \\frac{a+c}{ac}$\n3) Solving for $b$:\n   $b = \\frac{2ac}{a+c}$.\nOption B is correct.",
     "common_mistake": "Selecting Option A (missing the factor of 2) or Option C (which is the Arithmetic Mean).",
     "concept_slugs": [
       "series-hp-means-relations"
@@ -323,20 +323,20 @@
   },
   {
     "pattern_group": "series-hp-means-relations",
-    "title": "Find the 10th term of the Harmonic Progression (HP) whose first few terms are: $\\\\frac{1}{2}, \\\\frac{1}{5}, \\\\frac{1}{8}, \\\\frac{1}{11}, \\\\dots$",
+    "title": "Find the 10th term of the Harmonic Progression (HP) whose first few terms are: $\\frac{1}{2}, \\frac{1}{5}, \\frac{1}{8}, \\frac{1}{11}, \\dots$",
     "difficulty": "easy",
     "type": "practice",
     "correct_answer": "C",
     "is_numerical": false,
     "question_format": "mcq",
     "options": {
-      "A": "$\\\\frac{1}{27}$",
+      "A": "$\\frac{1}{27}$",
       "B": "29",
-      "C": "$\\\\frac{1}{29}$",
-      "D": "$\\\\frac{1}{32}$"
+      "C": "$\\frac{1}{29}$",
+      "D": "$\\frac{1}{32}$"
     },
     "notes": "Find the corresponding AP by taking reciprocals of the terms.",
-    "solution_text": "Let's invert the HP terms to find the corresponding AP:\n1) AP sequence: $2, 5, 8, 11, \\\\dots$\n2) For this AP, first term $A_1 = 2$, common difference $d = 3$.\n3) The 10th term of the AP is:\n   $T_{10} = A_1 + (10-1)d = 2 + 9(3) = 29$.\n4) The 10th term of the HP is the reciprocal of the 10th term of the AP:\n   $H_{10} = \\\\frac{1}{T_{10}} = \\\\frac{1}{29}$.\nOption C is correct.",
+    "solution_text": "Let's invert the HP terms to find the corresponding AP:\n1) AP sequence: $2, 5, 8, 11, \\dots$\n2) For this AP, first term $A_1 = 2$, common difference $d = 3$.\n3) The 10th term of the AP is:\n   $T_{10} = A_1 + (10-1)d = 2 + 9(3) = 29$.\n4) The 10th term of the HP is the reciprocal of the 10th term of the AP:\n   $H_{10} = \\frac{1}{T_{10}} = \\frac{1}{29}$.\nOption C is correct.",
     "common_mistake": "Selecting 29 (Option B) by forgetting to take the reciprocal at the final step, or using $d=2$ instead of 3.",
     "concept_slugs": [
       "series-hp-means-relations"
@@ -357,7 +357,7 @@
       "D": "Arithmetico-Geometric Progression"
     },
     "notes": "Express the progression properties algebraically and combine them to find the relation between $a, c, e$.",
-    "solution_text": "Let's translate the conditions to equations:\n1) $a, b, c$ in AP $\\\\implies 2b = a+c$\n2) $b, c, d$ in GP $\\\\implies c^2 = bd$\n3) $c, d, e$ in HP $\\\\implies d = \\\\frac{2ce}{c+e}$\nSubstitute $b = \\\\frac{a+c}{2}$ and $d = \\\\frac{2ce}{c+e}$ into the GP relation $c^2 = bd$:\n$c^2 = \\\\left(\\\\frac{a+c}{2}\\\\right) \\\\left(\\\\frac{2ce}{c+e}\\\\right)$\n$c^2 = \\\\frac{ce(a+c)}{c+e}$\nSince $c \\\\neq 0$, divide both sides by $c$:\n$c = \\\\frac{e(a+c)}{c+e} \\\\implies c(c+e) = e(a+c)$\n$c^2 + ce = ae + ce \\\\implies c^2 = ae$.\nThis is the condition for $a, c, e$ to be in GP. Option B is correct.",
+    "solution_text": "Let's translate the conditions to equations:\n1) $a, b, c$ in AP $\\implies 2b = a+c$\n2) $b, c, d$ in GP $\\implies c^2 = bd$\n3) $c, d, e$ in HP $\\implies d = \\frac{2ce}{c+e}$\nSubstitute $b = \\frac{a+c}{2}$ and $d = \\frac{2ce}{c+e}$ into the GP relation $c^2 = bd$:\n$c^2 = \\left(\\frac{a+c}{2}\\right) \\left(\\frac{2ce}{c+e}\\right)$\n$c^2 = \\frac{ce(a+c)}{c+e}$\nSince $c \\neq 0$, divide both sides by $c$:\n$c = \\frac{e(a+c)}{c+e} \\implies c(c+e) = e(a+c)$\n$c^2 + ce = ae + ce \\implies c^2 = ae$.\nThis is the condition for $a, c, e$ to be in GP. Option B is correct.",
     "common_mistake": "Struggling to eliminate variables $b$ and $d$, or misidentifying $c^2 = ae$ as an AP condition.",
     "concept_slugs": [
       "series-hp-means-relations"
@@ -372,8 +372,8 @@
     "correct_answer": "4",
     "is_numerical": true,
     "question_format": "numerical",
-    "notes": "Recall the fundamental relation between means: $G^2 = A \\\\cdot H$.",
-    "solution_text": "Let the two positive numbers be $a$ and $b$. We are given:\n- $A = 9$ (Arithmetic Mean)\n- $G = 6$ (Geometric Mean)\n1) The relationship between the means is:\n   $G^2 = A \\\\cdot H$\n2) Substitute the values:\n   $6^2 = 9 \\\\cdot H \\\\implies 36 = 9 \\\\cdot H \\\\implies H = 4$.\nThus, the Harmonic Mean is 4.",
+    "notes": "Recall the fundamental relation between means: $G^2 = A \\cdot H$.",
+    "solution_text": "Let the two positive numbers be $a$ and $b$. We are given:\n- $A = 9$ (Arithmetic Mean)\n- $G = 6$ (Geometric Mean)\n1) The relationship between the means is:\n   $G^2 = A \\cdot H$\n2) Substitute the values:\n   $6^2 = 9 \\cdot H \\implies 36 = 9 \\cdot H \\implies H = 4$.\nThus, the Harmonic Mean is 4.",
     "common_mistake": "Neglecting to square the GM, calculating $H = G^2/A$ incorrectly, or getting $H = 6/9 = 2/3$.",
     "concept_slugs": [
       "series-hp-means-relations"
@@ -381,20 +381,20 @@
   },
   {
     "pattern_group": "series-hp-means-relations",
-    "title": "If $a, b, c$ are in Harmonic Progression (HP), the value of the expression $\\\\frac{1}{b-a} + \\\\frac{1}{b-c}$ is equal to:",
+    "title": "If $a, b, c$ are in Harmonic Progression (HP), the value of the expression $\\frac{1}{b-a} + \\frac{1}{b-c}$ is equal to:",
     "difficulty": "hard",
     "type": "practice",
     "correct_answer": "C",
     "is_numerical": false,
     "question_format": "mcq",
     "options": {
-      "A": "$\\\\frac{1}{b}$",
-      "B": "$\\\\frac{1}{a} - \\\\frac{1}{c}$",
-      "C": "$\\\\frac{1}{a} + \\\\frac{1}{c}$",
-      "D": "$\\\\frac{2}{b}$"
+      "A": "$\\frac{1}{b}$",
+      "B": "$\\frac{1}{a} - \\frac{1}{c}$",
+      "C": "$\\frac{1}{a} + \\frac{1}{c}$",
+      "D": "$\\frac{2}{b}$"
     },
-    "notes": "Substitute $b = \\\\frac{2ac}{a+c}$ and simplify the algebraic fractions.",
-    "solution_text": "Let $b = \\\\frac{2ac}{a+c}$:\n1) First term:\n   $\\\\frac{1}{b-a} = \\\\frac{1}{\\\\frac{2ac}{a+c} - a} = \\\\frac{a+c}{2ac - a(a+c)} = \\\\frac{a+c}{a(c-a)}$\n2) Second term:\n   $\\\\frac{1}{b-c} = \\\\frac{1}{\\\\frac{2ac}{a+c} - c} = \\\\frac{a+c}{2ac - c(a+c)} = \\\\frac{a+c}{c(a-c)}$\n3) Add them:\n   $\\\\frac{1}{b-a} + \\\\frac{1}{b-c} = \\\\frac{a+c}{a(c-a)} - \\\\frac{a+c}{c(c-a)} = \\\\frac{a+c}{c-a} \\\\left( \\\\frac{1}{a} - \\\\frac{1}{c} \\\\right)$\n   $\\\\frac{a+c}{c-a} \\\\cdot \\\\frac{c-a}{ac} = \\\\frac{a+c}{ac} = \\\\frac{1}{c} + \\\\frac{1}{a}$.\nOption C is correct.",
+    "notes": "Substitute $b = \\frac{2ac}{a+c}$ and simplify the algebraic fractions.",
+    "solution_text": "Let $b = \\frac{2ac}{a+c}$:\n1) First term:\n   $\\frac{1}{b-a} = \\frac{1}{\\frac{2ac}{a+c} - a} = \\frac{a+c}{2ac - a(a+c)} = \\frac{a+c}{a(c-a)}$\n2) Second term:\n   $\\frac{1}{b-c} = \\frac{1}{\\frac{2ac}{a+c} - c} = \\frac{a+c}{2ac - c(a+c)} = \\frac{a+c}{c(a-c)}$\n3) Add them:\n   $\\frac{1}{b-a} + \\frac{1}{b-c} = \\frac{a+c}{a(c-a)} - \\frac{a+c}{c(c-a)} = \\frac{a+c}{c-a} \\left( \\frac{1}{a} - \\frac{1}{c} \\right)$\n   $\\frac{a+c}{c-a} \\cdot \\frac{c-a}{ac} = \\frac{a+c}{ac} = \\frac{1}{c} + \\frac{1}{a}$.\nOption C is correct.",
     "common_mistake": "Forgetting to change signs when combining terms with $(c-a)$ and $(a-c)$ in the denominator.",
     "concept_slugs": [
       "series-hp-means-relations"
@@ -402,7 +402,7 @@
   },
   {
     "pattern_group": "series-hp-means-relations",
-    "title": "Let $x$ and $y$ be positive real numbers. If their Arithmetic Mean is 8 and their Geometric Mean is $4\\\\sqrt{3}$, the positive difference $|x-y|$ is ________.",
+    "title": "Let $x$ and $y$ be positive real numbers. If their Arithmetic Mean is 8 and their Geometric Mean is $4\\sqrt{3}$, the positive difference $|x-y|$ is ________.",
     "difficulty": "hard",
     "type": "pyq",
     "source": "JEE Advanced 2021",
@@ -410,7 +410,7 @@
     "is_numerical": true,
     "question_format": "numerical",
     "notes": "Relate $(x-y)^2$ to the means $(x+y)^2 - 4xy$ and substitute $x+y=2A$ and $xy=G^2$.",
-    "solution_text": "We are given:\n- $A = \\\\frac{x+y}{2} = 8 \\\\implies x+y = 16$\n- $G = \\\\sqrt{xy} = 4\\\\sqrt{3} \\\\implies xy = 48$\n1) We need to find $|x-y|$:\n   $(x-y)^2 = (x+y)^2 - 4xy$\n   $(x-y)^2 = (16)^2 - 4(48) = 256 - 192 = 64$\n2) Taking the positive square root:\n   $|x-y| = \\\\sqrt{64} = 8$.",
+    "solution_text": "We are given:\n- $A = \\frac{x+y}{2} = 8 \\implies x+y = 16$\n- $G = \\sqrt{xy} = 4\\sqrt{3} \\implies xy = 48$\n1) We need to find $|x-y|$:\n   $(x-y)^2 = (x+y)^2 - 4xy$\n   $(x-y)^2 = (16)^2 - 4(48) = 256 - 192 = 64$\n2) Taking the positive square root:\n   $|x-y| = \\sqrt{64} = 8$.",
     "common_mistake": "Confusing $(x-y)^2$ with $(x+y)^2 - 2xy$, leading to $256 - 96 = 160$ which is incorrect.",
     "concept_slugs": [
       "series-hp-means-relations"
@@ -431,15 +431,15 @@
       "D": "$a + c < 2b$"
     },
     "notes": "Use the fact that the Arithmetic Mean of $a$ and $c$ is strictly greater than their Geometric Mean, which is greater than their Harmonic Mean.",
-    "solution_text": "Since $a, b, c$ are positive and distinct in HP, we know that $b$ is their Harmonic Mean:\n1) $b = \\\\frac{2ac}{a+c} < \\\\sqrt{ac}$ (since $HM < GM$)\n2) Squaring both sides: $b^2 < ac$.\n3) By AM-GM inequality for $a^2$ and $c^2$:\n   $\\\\frac{a^2 + c^2}{2} > ac$\n4) Combining these two inequalities:\n   $\\\\frac{a^2 + c^2}{2} > ac > b^2 \\\\implies a^2 + c^2 > 2b^2$.\nOption A is correct.",
-    "common_mistake": "Claiming $a+c < 2b$ (Option D), which contradicts $AM > HM \\\\implies \\\\frac{a+c}{2} > b \\\\implies a+c > 2b$.",
+    "solution_text": "Since $a, b, c$ are positive and distinct in HP, we know that $b$ is their Harmonic Mean:\n1) $b = \\frac{2ac}{a+c} < \\sqrt{ac}$ (since $HM < GM$)\n2) Squaring both sides: $b^2 < ac$.\n3) By AM-GM inequality for $a^2$ and $c^2$:\n   $\\frac{a^2 + c^2}{2} > ac$\n4) Combining these two inequalities:\n   $\\frac{a^2 + c^2}{2} > ac > b^2 \\implies a^2 + c^2 > 2b^2$.\nOption A is correct.",
+    "common_mistake": "Claiming $a+c < 2b$ (Option D), which contradicts $AM > HM \\implies \\frac{a+c}{2} > b \\implies a+c > 2b$.",
     "concept_slugs": [
       "series-hp-means-relations"
     ]
   },
   {
     "pattern_group": "series-hp-means-relations",
-    "title": "If three distinct positive numbers $a, b, c$ are in AP, and $a^2, b^2, c^2$ are in HP, then $a, b, -\\\\frac{c}{2}$ are in:",
+    "title": "If three distinct positive numbers $a, b, c$ are in AP, and $a^2, b^2, c^2$ are in HP, then $a, b, -\\frac{c}{2}$ are in:",
     "difficulty": "hard",
     "type": "pyq",
     "source": "JEE Main 2023",
@@ -453,7 +453,7 @@
       "D": "none of the above"
     },
     "notes": "Use AP and HP equations to write relations between a, b, c, and show they lead to $b^2 = -ac/2$.",
-    "solution_text": "Let's write down the conditions:\n1) $a, b, c$ in AP $\\\\implies 2b = a+c \\\\implies c = 2b-a$\n2) $a^2, b^2, c^2$ in HP $\\\\implies b^2 = \\\\frac{2a^2c^2}{a^2+c^2}$\n   $a^2b^2 + b^2c^2 = 2a^2c^2$\n   Divide by $a^2b^2c^2$: $\\\\frac{1}{c^2} + \\\\frac{1}{a^2} = \\\\frac{2}{b^2}$.\n   Substitute $c = 2b-a$:\n   $\\\\frac{1}{(2b-a)^2} + \\\\frac{1}{a^2} = \\\\frac{2}{b^2}$.\n   Solving this equation leads to the GP relation: $b^2 = -\\\\frac{ac}{2}$.\n3) For $a, b, -c/2$ to be in GP, we need the square of the middle term to equal the product of the first and third terms:\n   $b^2 = a \\\\cdot \\\\left(-\\\\frac{c}{2}\\\\right) = -\\\\frac{ac}{2}$.\nThis is exactly satisfied. Option B is correct.",
+    "solution_text": "Let's write down the conditions:\n1) $a, b, c$ in AP $\\implies 2b = a+c \\implies c = 2b-a$\n2) $a^2, b^2, c^2$ in HP $\\implies b^2 = \\frac{2a^2c^2}{a^2+c^2}$\n   $a^2b^2 + b^2c^2 = 2a^2c^2$\n   Divide by $a^2b^2c^2$: $\\frac{1}{c^2} + \\frac{1}{a^2} = \\frac{2}{b^2}$.\n   Substitute $c = 2b-a$:\n   $\\frac{1}{(2b-a)^2} + \\frac{1}{a^2} = \\frac{2}{b^2}$.\n   Solving this equation leads to the GP relation: $b^2 = -\\frac{ac}{2}$.\n3) For $a, b, -c/2$ to be in GP, we need the square of the middle term to equal the product of the first and third terms:\n   $b^2 = a \\cdot \\left(-\\frac{c}{2}\\right) = -\\frac{ac}{2}$.\nThis is exactly satisfied. Option B is correct.",
     "common_mistake": "Neglecting to carry out the detailed algebra linking the AP and HP conditions, assuming it must be an AP.",
     "concept_slugs": [
       "series-hp-means-relations"
@@ -461,7 +461,7 @@
   },
   {
     "pattern_group": "series-agp",
-    "title": "Find the sum to infinity of the arithmetico-geometric series: $1 + \\\\frac{2}{2} + \\\\frac{3}{4} + \\\\frac{4}{8} + \\\\frac{5}{16} + \\\\dots$",
+    "title": "Find the sum to infinity of the arithmetico-geometric series: $1 + \\frac{2}{2} + \\frac{3}{4} + \\frac{4}{8} + \\frac{5}{16} + \\dots$",
     "difficulty": "easy",
     "type": "concept",
     "correct_answer": "B",
@@ -474,7 +474,7 @@
       "D": "6"
     },
     "notes": "Let $S$ be the sum, write $S/2$, shift the terms, and subtract to find the sum.",
-    "solution_text": "Let $S = 1 + \\\\frac{2}{2} + \\\\frac{3}{4} + \\\\frac{4}{8} + \\\\dots$\n1) Multiply by the common ratio $r = 1/2$:\n   $\\\\frac{S}{2} = \\\\frac{1}{2} + \\\\frac{2}{4} + \\\\frac{3}{8} + \\\\frac{4}{16} + \\\\dots$\n2) Subtract $\\\\frac{S}{2}$ from $S$:\n   $S - \\\\frac{S}{2} = 1 + \\\\left(\\\\frac{2}{2} - \\\\frac{1}{2}\\\\right) + \\\\left(\\\\frac{3}{4} - \\\\frac{2}{4}\\\\right) + \\\\left(\\\\frac{4}{8} - \\\\frac{3}{8}\\\\right) + \\\\dots$\n   $\\\\frac{S}{2} = 1 + \\\\frac{1}{2} + \\\\frac{1}{4} + \\\\frac{1}{8} + \\\\dots$\n3) Sum the infinite GP on the right:\n   $\\\\frac{S}{2} = \\\\frac{1}{1 - 1/2} = 2 \\\\implies S = 4$.\nOption B is correct.",
+    "solution_text": "Let $S = 1 + \\frac{2}{2} + \\frac{3}{4} + \\frac{4}{8} + \\dots$\n1) Multiply by the common ratio $r = 1/2$:\n   $\\frac{S}{2} = \\frac{1}{2} + \\frac{2}{4} + \\frac{3}{8} + \\frac{4}{16} + \\dots$\n2) Subtract $\\frac{S}{2}$ from $S$:\n   $S - \\frac{S}{2} = 1 + \\left(\\frac{2}{2} - \\frac{1}{2}\\right) + \\left(\\frac{3}{4} - \\frac{2}{4}\\right) + \\left(\\frac{4}{8} - \\frac{3}{8}\\right) + \\dots$\n   $\\frac{S}{2} = 1 + \\frac{1}{2} + \\frac{1}{4} + \\frac{1}{8} + \\dots$\n3) Sum the infinite GP on the right:\n   $\\frac{S}{2} = \\frac{1}{1 - 1/2} = 2 \\implies S = 4$.\nOption B is correct.",
     "common_mistake": "Forgetting to multiply the final result by 2 (since we solved for $S/2 = 2$).",
     "concept_slugs": [
       "series-agp"
@@ -482,7 +482,7 @@
   },
   {
     "pattern_group": "series-agp",
-    "title": "For $|x| < 1$, the sum to infinity of the series $2 + 5x + 8x^2 + 11x^3 + \\\\dots$ is:",
+    "title": "For $|x| < 1$, the sum to infinity of the series $2 + 5x + 8x^2 + 11x^3 + \\dots$ is:",
     "difficulty": "medium",
     "type": "pyq",
     "source": "JEE Main 2019",
@@ -490,13 +490,13 @@
     "is_numerical": false,
     "question_format": "mcq",
     "options": {
-      "A": "\\\\frac{2+x}{(1-x)^2}",
-      "B": "\\\\frac{2-x}{(1-x)^2}",
-      "C": "\\\\frac{2+3x}{(1-x)^2}",
-      "D": "\\\\frac{2-3x}{(1-x)^2}"
+      "A": "\\frac{2+x}{(1-x)^2}",
+      "B": "\\frac{2-x}{(1-x)^2}",
+      "C": "\\frac{2+3x}{(1-x)^2}",
+      "D": "\\frac{2-3x}{(1-x)^2}"
     },
     "notes": "Use the standard method of difference by multiplying by x and subtracting.",
-    "solution_text": "Let $S = 2 + 5x + 8x^2 + 11x^3 + \\\\dots$\n1) Multiply by $x$:\n   $xS = 2x + 5x^2 + 8x^3 + \\\\dots$\n2) Subtract $xS$ from $S$:\n   $S(1-x) = 2 + 3x + 3x^2 + 3x^3 + \\\\dots$\n   $S(1-x) = 2 + 3x(1 + x + x^2 + \\\\dots)$\n3) Sum the infinite GP inside the parentheses:\n   $1 + x + x^2 + \\\\dots = \\\\frac{1}{1-x}$\n   $S(1-x) = 2 + \\\\frac{3x}{1-x} = \\\\frac{2(1-x) + 3x}{1-x} = \\\\frac{2+x}{1-x}$\n4) Solve for $S$:\n   $S = \\\\frac{2+x}{(1-x)^2}$.\nOption A is correct.",
+    "solution_text": "Let $S = 2 + 5x + 8x^2 + 11x^3 + \\dots$\n1) Multiply by $x$:\n   $xS = 2x + 5x^2 + 8x^3 + \\dots$\n2) Subtract $xS$ from $S$:\n   $S(1-x) = 2 + 3x + 3x^2 + 3x^3 + \\dots$\n   $S(1-x) = 2 + 3x(1 + x + x^2 + \\dots)$\n3) Sum the infinite GP inside the parentheses:\n   $1 + x + x^2 + \\dots = \\frac{1}{1-x}$\n   $S(1-x) = 2 + \\frac{3x}{1-x} = \\frac{2(1-x) + 3x}{1-x} = \\frac{2+x}{1-x}$\n4) Solve for $S$:\n   $S = \\frac{2+x}{(1-x)^2}$.\nOption A is correct.",
     "common_mistake": "Writing the numerator as $2-x$ or misapplying the infinite GP sum formula.",
     "concept_slugs": [
       "series-agp"
@@ -504,7 +504,7 @@
   },
   {
     "pattern_group": "series-agp",
-    "title": "The sum of the infinite series $1 + 3x + 5x^2 + 7x^3 + \\\\dots$ for $|x| < 1$ is:",
+    "title": "The sum of the infinite series $1 + 3x + 5x^2 + 7x^3 + \\dots$ for $|x| < 1$ is:",
     "difficulty": "medium",
     "type": "pyq",
     "source": "JEE Main 2021",
@@ -512,13 +512,13 @@
     "is_numerical": false,
     "question_format": "mcq",
     "options": {
-      "A": "\\\\frac{1+x}{(1-x)^2}",
-      "B": "\\\\frac{1-x}{(1-x)^2}",
-      "C": "\\\\frac{1+2x}{(1-x)^2}",
-      "D": "\\\\frac{1-2x}{(1-x)^2}"
+      "A": "\\frac{1+x}{(1-x)^2}",
+      "B": "\\frac{1-x}{(1-x)^2}",
+      "C": "\\frac{1+2x}{(1-x)^2}",
+      "D": "\\frac{1-2x}{(1-x)^2}"
     },
     "notes": "Apply the standard AGP method of difference using the common ratio x.",
-    "solution_text": "Let $S = 1 + 3x + 5x^2 + 7x^3 + \\\\dots$\n1) Multiply by $x$:\n   $xS = x + 3x^2 + 5x^3 + \\\\dots$\n2) Subtract:\n   $S(1-x) = 1 + 2x + 2x^2 + 2x^3 + \\\\dots$\n   $S(1-x) = 1 + 2x(1 + x + x^2 + \\\\dots)$\n3) Evaluate the GP:\n   $S(1-x) = 1 + \\\\frac{2x}{1-x} = \\\\frac{1+x}{1-x}$\n4) Solve for $S$:\n   $S = \\\\frac{1+x}{(1-x)^2}$.\nOption A is correct.",
+    "solution_text": "Let $S = 1 + 3x + 5x^2 + 7x^3 + \\dots$\n1) Multiply by $x$:\n   $xS = x + 3x^2 + 5x^3 + \\dots$\n2) Subtract:\n   $S(1-x) = 1 + 2x + 2x^2 + 2x^3 + \\dots$\n   $S(1-x) = 1 + 2x(1 + x + x^2 + \\dots)$\n3) Evaluate the GP:\n   $S(1-x) = 1 + \\frac{2x}{1-x} = \\frac{1+x}{1-x}$\n4) Solve for $S$:\n   $S = \\frac{1+x}{(1-x)^2}$.\nOption A is correct.",
     "common_mistake": "Selecting Option B due to sign errors, or miscalculating the difference between odd coefficients.",
     "concept_slugs": [
       "series-agp"
@@ -526,13 +526,13 @@
   },
   {
     "pattern_group": "series-agp",
-    "title": "The sum to infinity of the series $1 + \\\\frac{3}{3} + \\\\frac{5}{9} + \\\\frac{7}{27} + \\\\dots$ is ________.",
+    "title": "The sum to infinity of the series $1 + \\frac{3}{3} + \\frac{5}{9} + \\frac{7}{27} + \\dots$ is ________.",
     "difficulty": "easy",
     "type": "practice",
     "is_numerical": true,
     "question_format": "numerical",
     "notes": "This is an AGP with $a = 1, d = 2, r = 1/3$. Multiply by $1/3$ and subtract.",
-    "solution_text": "Let $S = 1 + \\\\frac{3}{3} + \\\\frac{5}{9} + \\\\frac{7}{27} + \\\\dots$\n1) Multiply by $1/3$:\n   $\\\\frac{S}{3} = \\\\frac{1}{3} + \\\\frac{3}{9} + \\\\frac{5}{27} + \\\\dots$\n2) Subtract:\n   $S - \\\\frac{S}{3} = 1 + \\\\frac{2}{3} + \\\\frac{2}{9} + \\\\frac{2}{27} + \\\\dots$\n   $\\\\frac{2S}{3} = 1 + 2 \\\\left( \\\\frac{1}{3} + \\\\frac{1}{9} + \\\\frac{1}{27} + \\\\dots \\\\right)$\n3) Sum the GP:\n   $\\\\frac{2S}{3} = 1 + 2 \\\\left( \\\\frac{1/3}{1 - 1/3} \\\\right) = 1 + 2 \\\\left( \\\\frac{1}{2} \\\\right) = 2$\n4) Find $S$:\n   $\\\\frac{2S}{3} = 2 \\\\implies S = 3$.",
+    "solution_text": "Let $S = 1 + \\frac{3}{3} + \\frac{5}{9} + \\frac{7}{27} + \\dots$\n1) Multiply by $1/3$:\n   $\\frac{S}{3} = \\frac{1}{3} + \\frac{3}{9} + \\frac{5}{27} + \\dots$\n2) Subtract:\n   $S - \\frac{S}{3} = 1 + \\frac{2}{3} + \\frac{2}{9} + \\frac{2}{27} + \\dots$\n   $\\frac{2S}{3} = 1 + 2 \\left( \\frac{1}{3} + \\frac{1}{9} + \\frac{1}{27} + \\dots \\right)$\n3) Sum the GP:\n   $\\frac{2S}{3} = 1 + 2 \\left( \\frac{1/3}{1 - 1/3} \\right) = 1 + 2 \\left( \\frac{1}{2} \\right) = 2$\n4) Find $S$:\n   $\\frac{2S}{3} = 2 \\implies S = 3$.",
     "common_mistake": "Neglecting to divide by the GP factor $1 - r$ or forgetting to multiply by 3/2 at the end.",
     "concept_slugs": [
       "series-agp"
@@ -540,7 +540,7 @@
   },
   {
     "pattern_group": "series-agp",
-    "title": "If the sum of the infinite AGP $1 + (1+d)r + (1+2d)r^2 + \\\\dots$ is 8, and the common ratio is $r = \\\\frac{1}{2}$, then the common difference $d$ of the AP part is:",
+    "title": "If the sum of the infinite AGP $1 + (1+d)r + (1+2d)r^2 + \\dots$ is 8, and the common ratio is $r = \\frac{1}{2}$, then the common difference $d$ of the AP part is:",
     "difficulty": "hard",
     "type": "practice",
     "correct_answer": "B",
@@ -552,8 +552,8 @@
       "C": "4",
       "D": "1.5"
     },
-    "notes": "Use the infinite AGP sum formula $S = \\\\frac{a}{1-r} + \\\\frac{dr}{(1-r)^2}$.",
-    "solution_text": "For the infinite AGP $S = \\\\frac{a}{1-r} + \\\\frac{dr}{(1-r)^2}$:\n1) Given $a = 1$, $r = 1/2$, and $S = 8$:\n   $8 = \\\\frac{1}{1 - 1/2} + \\\\frac{d(1/2)}{(1 - 1/2)^2}$\n   $8 = 2 + \\\\frac{d/2}{1/4}$\n   $8 = 2 + 2d \\\\implies 2d = 6 \\\\implies d = 3$.\nOption B is correct.",
+    "notes": "Use the infinite AGP sum formula $S = \\frac{a}{1-r} + \\frac{dr}{(1-r)^2}$.",
+    "solution_text": "For the infinite AGP $S = \\frac{a}{1-r} + \\frac{dr}{(1-r)^2}$:\n1) Given $a = 1$, $r = 1/2$, and $S = 8$:\n   $8 = \\frac{1}{1 - 1/2} + \\frac{d(1/2)}{(1 - 1/2)^2}$\n   $8 = 2 + \\frac{d/2}{1/4}$\n   $8 = 2 + 2d \\implies 2d = 6 \\implies d = 3$.\nOption B is correct.",
     "common_mistake": "Misapplying the formula by placing $r$ in the numerator of the first term, or making errors in fraction simplification.",
     "concept_slugs": [
       "series-agp"
@@ -561,7 +561,7 @@
   },
   {
     "pattern_group": "series-agp",
-    "title": "If $1 + \\\\frac{4}{5} + \\\\frac{7}{25} + \\\\frac{10}{125} + \\\\dots = \\\\frac{X}{16}$, the value of the integer $X$ is ________.",
+    "title": "If $1 + \\frac{4}{5} + \\frac{7}{25} + \\frac{10}{125} + \\dots = \\frac{X}{16}$, the value of the integer $X$ is ________.",
     "difficulty": "hard",
     "type": "pyq",
     "source": "JEE Main 2021",
@@ -569,7 +569,7 @@
     "is_numerical": true,
     "question_format": "numerical",
     "notes": "Find the sum of the infinite AGP, equate it to X/16, and solve for X.",
-    "solution_text": "Let $S = 1 + \\\\frac{4}{5} + \\\\frac{7}{25} + \\\\frac{10}{125} + \\\\dots$\n1) Multiply by $1/5$:\n   $\\\\frac{S}{5} = \\\\frac{1}{5} + \\\\frac{4}{25} + \\\\frac{7}{125} + \\\\dots$\n2) Subtract:\n   $S - \\\\frac{S}{5} = 1 + \\\\frac{3}{5} + \\\\frac{3}{25} + \\\\frac{3}{125} + \\\\dots$\n   $\\\\frac{4S}{5} = 1 + 3 \\\\left( \\\\frac{1}{5} + \\\\frac{1}{25} + \\\\frac{1}{125} + \\\\dots \\\\right)$\n3) Sum the GP:\n   $\\\\frac{4S}{5} = 1 + 3 \\\\left( \\\\frac{1/5}{1 - 1/5} \\\\right) = 1 + 3 \\\\left( \\\\frac{1}{4} \\\\right) = 1.75 = \\\\frac{7}{4}$\n4) Solve for $S$:\n   $S = \\\\frac{7}{4} \\\\cdot \\\\frac{5}{4} = \\\\frac{35}{16}$\n5) Equating to $\\\\frac{X}{16}$:\n   $\\\\frac{X}{16} = \\\\frac{35}{16} \\\\implies X = 35$.",
+    "solution_text": "Let $S = 1 + \\frac{4}{5} + \\frac{7}{25} + \\frac{10}{125} + \\dots$\n1) Multiply by $1/5$:\n   $\\frac{S}{5} = \\frac{1}{5} + \\frac{4}{25} + \\frac{7}{125} + \\dots$\n2) Subtract:\n   $S - \\frac{S}{5} = 1 + \\frac{3}{5} + \\frac{3}{25} + \\frac{3}{125} + \\dots$\n   $\\frac{4S}{5} = 1 + 3 \\left( \\frac{1}{5} + \\frac{1}{25} + \\frac{1}{125} + \\dots \\right)$\n3) Sum the GP:\n   $\\frac{4S}{5} = 1 + 3 \\left( \\frac{1/5}{1 - 1/5} \\right) = 1 + 3 \\left( \\frac{1}{4} \\right) = 1.75 = \\frac{7}{4}$\n4) Solve for $S$:\n   $S = \\frac{7}{4} \\cdot \\frac{5}{4} = \\frac{35}{16}$\n5) Equating to $\\frac{X}{16}$:\n   $\\frac{X}{16} = \\frac{35}{16} \\implies X = 35$.",
     "common_mistake": "Neglecting to sum the GP correctly or making fraction subtraction errors.",
     "concept_slugs": [
       "series-agp"
@@ -577,20 +577,20 @@
   },
   {
     "pattern_group": "series-agp",
-    "title": "The sum of the first $n$ terms of the series $1 + 2x + 3x^2 + 4x^3 + \\\\dots$ ($x \\\\neq 1$) is:",
+    "title": "The sum of the first $n$ terms of the series $1 + 2x + 3x^2 + 4x^3 + \\dots$ ($x \\neq 1$) is:",
     "difficulty": "medium",
     "type": "practice",
     "correct_answer": "A",
     "is_numerical": false,
     "question_format": "mcq",
     "options": {
-      "A": "\\\\frac{1 - (n+1)x^n + n x^{n+1}}{(1-x)^2}",
-      "B": "\\\\frac{1 - n x^n + (n-1) x^{n+1}}{(1-x)^2}",
-      "C": "\\\\frac{1 - (n-1)x^n + n x^{n+1}}{(1-x)^2}",
-      "D": "\\\\frac{1 - (n+1)x^n + (n-1) x^{n+1}}{(1-x)^2}"
+      "A": "\\frac{1 - (n+1)x^n + n x^{n+1}}{(1-x)^2}",
+      "B": "\\frac{1 - n x^n + (n-1) x^{n+1}}{(1-x)^2}",
+      "C": "\\frac{1 - (n-1)x^n + n x^{n+1}}{(1-x)^2}",
+      "D": "\\frac{1 - (n+1)x^n + (n-1) x^{n+1}}{(1-x)^2}"
     },
     "notes": "Find the finite sum to n terms of the AGP using the method of differences.",
-    "solution_text": "Let $S_n = 1 + 2x + 3x^2 + \\\\dots + n x^{n-1}$:\n1) $x S_n = x + 2x^2 + 3x^3 + \\\\dots + (n-1)x^{n-1} + n x^n$.\n2) Subtract:\n   $S_n(1-x) = 1 + x + x^2 + \\\\dots + x^{n-1} - n x^n$\n3) Sum the GP $1 + x + \\\\dots + x^{n-1}$:\n   $S_n(1-x) = \\\\frac{1-x^n}{1-x} - n x^n$\n   $S_n(1-x) = \\\\frac{1 - x^n - n x^n (1-x)}{1-x} = \\\\frac{1 - (n+1)x^n + n x^{n+1}}{1-x}$\n4) Solve for $S_n$:\n   $S_n = \\\\frac{1 - (n+1)x^n + n x^{n+1}}{(1-x)^2}$.\nOption A is correct.",
+    "solution_text": "Let $S_n = 1 + 2x + 3x^2 + \\dots + n x^{n-1}$:\n1) $x S_n = x + 2x^2 + 3x^3 + \\dots + (n-1)x^{n-1} + n x^n$.\n2) Subtract:\n   $S_n(1-x) = 1 + x + x^2 + \\dots + x^{n-1} - n x^n$\n3) Sum the GP $1 + x + \\dots + x^{n-1}$:\n   $S_n(1-x) = \\frac{1-x^n}{1-x} - n x^n$\n   $S_n(1-x) = \\frac{1 - x^n - n x^n (1-x)}{1-x} = \\frac{1 - (n+1)x^n + n x^{n+1}}{1-x}$\n4) Solve for $S_n$:\n   $S_n = \\frac{1 - (n+1)x^n + n x^{n+1}}{(1-x)^2}$.\nOption A is correct.",
     "common_mistake": "Incorrectly carrying the final term $-n x^n$ or failing to divide by $1-x$ at the final step.",
     "concept_slugs": [
       "series-agp"
@@ -598,20 +598,20 @@
   },
   {
     "pattern_group": "series-agp",
-    "title": "Find the sum of the infinite series $S = 1 + 4x + 7x^2 + 10x^3 + \\\\dots$ for $x = \\\\frac{1}{3}$.",
+    "title": "Find the sum of the infinite series $S = 1 + 4x + 7x^2 + 10x^3 + \\dots$ for $x = \\frac{1}{3}$.",
     "difficulty": "medium",
     "type": "practice",
     "correct_answer": "A",
     "is_numerical": false,
     "question_format": "mcq",
     "options": {
-      "A": "$\\\\frac{15}{4}$",
-      "B": "$\\\\frac{21}{8}$",
-      "C": "$\\\\frac{9}{4}$",
-      "D": "$\\\\frac{27}{8}$"
+      "A": "$\\frac{15}{4}$",
+      "B": "$\\frac{21}{8}$",
+      "C": "$\\frac{9}{4}$",
+      "D": "$\\frac{27}{8}$"
     },
     "notes": "Apply the AGP sum formula or method of differences for the specific value of x.",
-    "solution_text": "Let $S = 1 + 4x + 7x^2 + 10x^3 + \\\\dots$\n1) Multiply by $x$:\n   $xS = x + 4x^2 + 7x^3 + \\\\dots$\n2) Subtract:\n   $S(1-x) = 1 + 3x + 3x^2 + 3x^3 + \\\\dots$\n   $S(1-x) = 1 + \\\\frac{3x}{1-x}$\n3) Substitute $x = 1/3$:\n   $S(1 - 1/3) = 1 + \\\\frac{3(1/3)}{1 - 1/3}$\n   $\\\\frac{2S}{3} = 1 + \\\\frac{1}{2/3} = 1 + 1.5 = 2.5 = \\\\frac{5}{2}$\n4) Solve for $S$:\n   $S = \\\\frac{5}{2} \\\\cdot \\\\frac{3}{2} = \\\\frac{15}{4}$.\nWait! Let's re-calculate: $1 + 1.5 = 2.5 = 5/2$. Thus $S = 15/4$. Option A is correct! Let's change correct_answer to 'A'.",
+    "solution_text": "Let $S = 1 + 4x + 7x^2 + 10x^3 + \\dots$\n1) Multiply by $x$:\n   $xS = x + 4x^2 + 7x^3 + \\dots$\n2) Subtract:\n   $S(1-x) = 1 + 3x + 3x^2 + 3x^3 + \\dots$\n   $S(1-x) = 1 + \\frac{3x}{1-x}$\n3) Substitute $x = 1/3$:\n   $S(1 - 1/3) = 1 + \\frac{3(1/3)}{1 - 1/3}$\n   $\\frac{2S}{3} = 1 + \\frac{1}{2/3} = 1 + 1.5 = 2.5 = \\frac{5}{2}$\n4) Solve for $S$:\n   $S = \\frac{5}{2} \\cdot \\frac{3}{2} = \\frac{15}{4}$.\nWait! Let's re-calculate: $1 + 1.5 = 2.5 = 5/2$. Thus $S = 15/4$. Option A is correct! Let's change correct_answer to 'A'.",
     "common_mistake": "Assuming the sum is 21/8 due to arithmetic slips during the substitution of $x = 1/3$.",
     "concept_slugs": [
       "series-agp"
@@ -619,7 +619,7 @@
   },
   {
     "pattern_group": "series-special-telescoping",
-    "title": "Find the sum of the first 10 terms of the series: $1 \\\\cdot 2 + 2 \\\\cdot 3 + 3 \\\\cdot 4 + \\\\dots$",
+    "title": "Find the sum of the first 10 terms of the series: $1 \\cdot 2 + 2 \\cdot 3 + 3 \\cdot 4 + \\dots$",
     "difficulty": "easy",
     "type": "concept",
     "correct_answer": "C",
@@ -631,8 +631,8 @@
       "C": "440",
       "D": "480"
     },
-    "notes": "The general term is $T_r = r(r+1) = r^2 + r$. Sum using $\\\\sum r^2$ and $\\\\sum r$.",
-    "solution_text": "The general term is $T_r = r(r+1) = r^2 + r$:\n1) Sum to 10 terms:\n   $S_{10} = \\\\sum_{r=1}^{10} (r^2 + r) = \\\\sum_{r=1}^{10} r^2 + \\\\sum_{r=1}^{10} r$\n2) Apply formulas:\n   - $\\\\sum_{r=1}^{n} r^2 = \\\\frac{n(n+1)(2n+1)}{6} \\\\implies \\\\sum_{r=1}^{10} r^2 = \\\\frac{10 \\\\times 11 \\\\times 21}{6} = 385$\n   - $\\\\sum_{r=1}^{n} r = \\\\frac{n(n+1)}{2} \\\\implies \\\\sum_{r=1}^{10} r = \\\\frac{10 \\\\times 11}{2} = 55$\n3) Total sum: $385 + 55 = 440$.\nOption C is correct.",
+    "notes": "The general term is $T_r = r(r+1) = r^2 + r$. Sum using $\\sum r^2$ and $\\sum r$.",
+    "solution_text": "The general term is $T_r = r(r+1) = r^2 + r$:\n1) Sum to 10 terms:\n   $S_{10} = \\sum_{r=1}^{10} (r^2 + r) = \\sum_{r=1}^{10} r^2 + \\sum_{r=1}^{10} r$\n2) Apply formulas:\n   - $\\sum_{r=1}^{n} r^2 = \\frac{n(n+1)(2n+1)}{6} \\implies \\sum_{r=1}^{10} r^2 = \\frac{10 \\times 11 \\times 21}{6} = 385$\n   - $\\sum_{r=1}^{n} r = \\frac{n(n+1)}{2} \\implies \\sum_{r=1}^{10} r = \\frac{10 \\times 11}{2} = 55$\n3) Total sum: $385 + 55 = 440$.\nOption C is correct.",
     "common_mistake": "Only calculating the sum of squares (385) and neglecting the linear sum part (55).",
     "concept_slugs": [
       "series-special-telescoping"
@@ -640,7 +640,7 @@
   },
   {
     "pattern_group": "series-special-telescoping",
-    "title": "The sum to $n$ terms of the series $\\\\frac{1}{1 \\\\cdot 2} + \\\\frac{1}{2 \\\\cdot 3} + \\\\frac{1}{3 \\\\cdot 4} + \\\\dots$ is equal to:",
+    "title": "The sum to $n$ terms of the series $\\frac{1}{1 \\cdot 2} + \\frac{1}{2 \\cdot 3} + \\frac{1}{3 \\cdot 4} + \\dots$ is equal to:",
     "difficulty": "medium",
     "type": "pyq",
     "source": "JEE Main 2020",
@@ -648,21 +648,21 @@
     "is_numerical": false,
     "question_format": "mcq",
     "options": {
-      "A": "\\\\frac{1}{n+1}",
-      "B": "\\\\frac{n}{n+1}",
-      "C": "\\\\frac{n-1}{n+1}",
-      "D": "\\\\frac{n+1}{n+2}"
+      "A": "\\frac{1}{n+1}",
+      "B": "\\frac{n}{n+1}",
+      "C": "\\frac{n-1}{n+1}",
+      "D": "\\frac{n+1}{n+2}"
     },
-    "notes": "Write the general term $T_r = \\\\frac{1}{r(r+1)}$ as a partial fraction $\\\\frac{1}{r} - \\\\frac{1}{r+1}$ to form a telescoping series.",
-    "solution_text": "Let's analyze the general term:\n1) $T_r = \\\\frac{1}{r(r+1)} = \\\\frac{(r+1) - r}{r(r+1)} = \\\\frac{1}{r} - \\\\frac{1}{r+1}$\n2) Summing from $r=1$ to $n$:\n   $S_n = \\\\sum_{r=1}^{n} \\\\left( \\\\frac{1}{r} - \\\\frac{1}{r+1} \\\\right)$\n   $S_n = \\\\left(1 - \\\\frac{1}{2}\\\\right) + \\\\left(\\\\frac{1}{2} - \\\\frac{1}{3}\\\\right) + \\\\dots + \\\\left(\\\\frac{1}{n} - \\\\frac{1}{n+1}\\\\right)$\n3) All intermediate terms cancel out, leaving:\n   $S_n = 1 - \\\\frac{1}{n+1} = \\\\frac{n}{n+1}$.\nOption B is correct.",
-    "common_mistake": "Assuming the sum is $\\\\frac{1}{n+1}$ (Option A) by failing to cancel the telescoping terms properly.",
+    "notes": "Write the general term $T_r = \\frac{1}{r(r+1)}$ as a partial fraction $\\frac{1}{r} - \\frac{1}{r+1}$ to form a telescoping series.",
+    "solution_text": "Let's analyze the general term:\n1) $T_r = \\frac{1}{r(r+1)} = \\frac{(r+1) - r}{r(r+1)} = \\frac{1}{r} - \\frac{1}{r+1}$\n2) Summing from $r=1$ to $n$:\n   $S_n = \\sum_{r=1}^{n} \\left( \\frac{1}{r} - \\frac{1}{r+1} \\right)$\n   $S_n = \\left(1 - \\frac{1}{2}\\right) + \\left(\\frac{1}{2} - \\frac{1}{3}\\right) + \\dots + \\left(\\frac{1}{n} - \\frac{1}{n+1}\\right)$\n3) All intermediate terms cancel out, leaving:\n   $S_n = 1 - \\frac{1}{n+1} = \\frac{n}{n+1}$.\nOption B is correct.",
+    "common_mistake": "Assuming the sum is $\\frac{1}{n+1}$ (Option A) by failing to cancel the telescoping terms properly.",
     "concept_slugs": [
       "series-special-telescoping"
     ]
   },
   {
     "pattern_group": "series-special-telescoping",
-    "title": "The sum of the series $\\\\sum_{r=1}^{n} \\\\frac{1}{r(r+1)(r+2)}$ is given by:",
+    "title": "The sum of the series $\\sum_{r=1}^{n} \\frac{1}{r(r+1)(r+2)}$ is given by:",
     "difficulty": "medium",
     "type": "pyq",
     "source": "JEE Main 2022",
@@ -670,13 +670,13 @@
     "is_numerical": false,
     "question_format": "mcq",
     "options": {
-      "A": "\\\\frac{1}{4} - \\\\frac{1}{2(n+1)(n+2)}",
-      "B": "\\\\frac{1}{2} - \\\\frac{1}{2(n+1)(n+2)}",
-      "C": "\\\\frac{1}{4} + \\\\frac{1}{2(n+1)(n+2)}",
-      "D": "\\\\frac{1}{2} - \\\\frac{1}{4(n+1)(n+2)}"
+      "A": "\\frac{1}{4} - \\frac{1}{2(n+1)(n+2)}",
+      "B": "\\frac{1}{2} - \\frac{1}{2(n+1)(n+2)}",
+      "C": "\\frac{1}{4} + \\frac{1}{2(n+1)(n+2)}",
+      "D": "\\frac{1}{2} - \\frac{1}{4(n+1)(n+2)}"
     },
-    "notes": "Split $T_r$ as $\\\\frac{1}{2} \\\\left( \\\\frac{1}{r(r+1)} - \\\\frac{1}{(r+1)(r+2)} \\\\right)$.",
-    "solution_text": "Let $T_r = \\\\frac{1}{r(r+1)(r+2)}$:\n1) Split using method of differences:\n   $T_r = \\\\frac{1}{2} \\\\cdot \\\\frac{(r+2) - r}{r(r+1)(r+2)} = \\\\frac{1}{2} \\\\left( \\\\frac{1}{r(r+1)} - \\\\frac{1}{(r+1)(r+2)} \\\\right)$\n2) Summing from $r=1$ to $n$:\n   $S_n = \\\\frac{1}{2} \\\\sum_{r=1}^{n} \\\\left( \\\\frac{1}{r(r+1)} - \\\\frac{1}{(r+1)(r+2)} \\\\right)$\n   This telescopes:\n   $S_n = \\\\frac{1}{2} \\\\left[ \\\\frac{1}{1 \\\\cdot 2} - \\\\frac{1}{(n+1)(n+2)} \\\\right] = \\\\frac{1}{2} \\\\left[ \\\\frac{1}{2} - \\\\frac{1}{(n+1)(n+2)} \\\\right]$\n   $S_n = \\\\frac{1}{4} - \\\\frac{1}{2(n+1)(n+2)}$.\nOption A is correct.",
+    "notes": "Split $T_r$ as $\\frac{1}{2} \\left( \\frac{1}{r(r+1)} - \\frac{1}{(r+1)(r+2)} \\right)$.",
+    "solution_text": "Let $T_r = \\frac{1}{r(r+1)(r+2)}$:\n1) Split using method of differences:\n   $T_r = \\frac{1}{2} \\cdot \\frac{(r+2) - r}{r(r+1)(r+2)} = \\frac{1}{2} \\left( \\frac{1}{r(r+1)} - \\frac{1}{(r+1)(r+2)} \\right)$\n2) Summing from $r=1$ to $n$:\n   $S_n = \\frac{1}{2} \\sum_{r=1}^{n} \\left( \\frac{1}{r(r+1)} - \\frac{1}{(r+1)(r+2)} \\right)$\n   This telescopes:\n   $S_n = \\frac{1}{2} \\left[ \\frac{1}{1 \\cdot 2} - \\frac{1}{(n+1)(n+2)} \\right] = \\frac{1}{2} \\left[ \\frac{1}{2} - \\frac{1}{(n+1)(n+2)} \\right]$\n   $S_n = \\frac{1}{4} - \\frac{1}{2(n+1)(n+2)}$.\nOption A is correct.",
     "common_mistake": "Neglecting the factor of $1/2$ from the difference expansion, yielding Option B.",
     "concept_slugs": [
       "series-special-telescoping"
@@ -684,29 +684,29 @@
   },
   {
     "pattern_group": "series-special-telescoping",
-    "title": "The value of the summation $\\\\sum_{k=1}^{10} (k^2 + 2k)$ is ________.",
+    "title": "The value of the summation $\\sum_{k=1}^{10} (k^2 + 2k)$ is ________.",
     "difficulty": "easy",
     "type": "practice",
     "is_numerical": true,
     "question_format": "numerical",
-    "notes": "Evaluate the sums $\\\\sum k^2$ and $2 \\\\sum k$ from 1 to 10.",
-    "solution_text": "Let's divide the summation:\n1) $\\\\sum_{k=1}^{10} k^2 = \\\\frac{10 \\\\times 11 \\\\times 21}{6} = 385$\n2) $2 \\\\sum_{k=1}^{10} k = 2 \\\\times \\\\frac{10 \\\\times 11}{2} = 110$\n3) Adding both parts: $385 + 110 = 495$.",
-    "common_mistake": "Mistaking $\\\\sum 2k$ as just $2k = 20$ (constant term error).",
+    "notes": "Evaluate the sums $\\sum k^2$ and $2 \\sum k$ from 1 to 10.",
+    "solution_text": "Let's divide the summation:\n1) $\\sum_{k=1}^{10} k^2 = \\frac{10 \\times 11 \\times 21}{6} = 385$\n2) $2 \\sum_{k=1}^{10} k = 2 \\times \\frac{10 \\times 11}{2} = 110$\n3) Adding both parts: $385 + 110 = 495$.",
+    "common_mistake": "Mistaking $\\sum 2k$ as just $2k = 20$ (constant term error).",
     "concept_slugs": [
       "series-special-telescoping"
     ]
   },
   {
     "pattern_group": "series-special-telescoping",
-    "title": "If the sum of the series $1^2 - 2^2 + 3^2 - 4^2 + 5^2 - 6^2 + \\\\dots$ to $2n$ terms is equal to $-210$ for some positive integer $n$, then the value of $n$ is ________.",
+    "title": "If the sum of the series $1^2 - 2^2 + 3^2 - 4^2 + 5^2 - 6^2 + \\dots$ to $2n$ terms is equal to $-210$ for some positive integer $n$, then the value of $n$ is ________.",
     "difficulty": "hard",
     "type": "pyq",
     "source": "JEE Main 2021",
     "correct_answer": "10",
     "is_numerical": true,
     "question_format": "numerical",
-    "notes": "Group terms in pairs: $(1^2 - 2^2) + (3^2 - 4^2) + \\\\dots + ((2n-1)^2 - (2n)^2)$ and apply $a^2-b^2 = (a-b)(a+b)$.",
-    "solution_text": "Let's analyze the grouping of pairs:\n1) $S_{2n} = (1^2 - 2^2) + (3^2 - 4^2) + \\\\dots + ((2n-1)^2 - (2n)^2)$\n2) Since $(k)^2 - (k+1)^2 = (k - (k+1))(k + k + 1) = -1(2k+1)$:\n   - $1^2 - 2^2 = -1(3)$\n   - $3^2 - 4^2 = -1(7)$\n   - $(2n-1)^2 - (2n)^2 = -1(4n-1)$\n3) Sum: $S_{2n} = - [3 + 7 + 11 + \\\\dots + (4n-1)]$\n4) This is an AP with $a = 3$, $d = 4$, $l = 4n-1$, $n$ terms:\n   $S_{2n} = - \\\\frac{n}{2}[3 + 4n - 1] = - \\\\frac{n}{2}[4n + 2] = -n(2n+1)$\n5) Given $S_{2n} = -210$:\n   $-n(2n+1) = -210 \\\\implies n(2n+1) = 210$\n   $2n^2 + n - 210 = 0 \\\\implies (n-10)(2n+21) = 0 \\\\implies n = 10$. Wait! Let's check:\n   If $n=10$, the sum of 20 terms is $-10(21) = -210$. This is perfect! The answer for $n$ is 10. Let's update correct_answer = '10'.",
+    "notes": "Group terms in pairs: $(1^2 - 2^2) + (3^2 - 4^2) + \\dots + ((2n-1)^2 - (2n)^2)$ and apply $a^2-b^2 = (a-b)(a+b)$.",
+    "solution_text": "Let's analyze the grouping of pairs:\n1) $S_{2n} = (1^2 - 2^2) + (3^2 - 4^2) + \\dots + ((2n-1)^2 - (2n)^2)$\n2) Since $(k)^2 - (k+1)^2 = (k - (k+1))(k + k + 1) = -1(2k+1)$:\n   - $1^2 - 2^2 = -1(3)$\n   - $3^2 - 4^2 = -1(7)$\n   - $(2n-1)^2 - (2n)^2 = -1(4n-1)$\n3) Sum: $S_{2n} = - [3 + 7 + 11 + \\dots + (4n-1)]$\n4) This is an AP with $a = 3$, $d = 4$, $l = 4n-1$, $n$ terms:\n   $S_{2n} = - \\frac{n}{2}[3 + 4n - 1] = - \\frac{n}{2}[4n + 2] = -n(2n+1)$\n5) Given $S_{2n} = -210$:\n   $-n(2n+1) = -210 \\implies n(2n+1) = 210$\n   $2n^2 + n - 210 = 0 \\implies (n-10)(2n+21) = 0 \\implies n = 10$. Wait! Let's check:\n   If $n=10$, the sum of 20 terms is $-10(21) = -210$. This is perfect! The answer for $n$ is 10. Let's update correct_answer = '10'.",
     "common_mistake": "Getting $n=20$ by misidentifying the total number of terms $2n = 20$ as the parameter $n$.",
     "concept_slugs": [
       "series-special-telescoping"
@@ -714,13 +714,13 @@
   },
   {
     "pattern_group": "series-special-telescoping",
-    "title": "The value of $21 \\\\times \\\\sum_{k=1}^{20} \\\\frac{1}{k^2 + k}$ is ________.",
+    "title": "The value of $21 \\times \\sum_{k=1}^{20} \\frac{1}{k^2 + k}$ is ________.",
     "difficulty": "medium",
     "type": "practice",
     "is_numerical": true,
     "question_format": "numerical",
     "notes": "Evaluate the telescoping sum first, then multiply by 21.",
-    "solution_text": "Let's compute the summation:\n1) $\\\\sum_{k=1}^{20} \\\\frac{1}{k(k+1)} = \\\\sum_{k=1}^{20} \\\\left( \\\\frac{1}{k} - \\\\frac{1}{k+1} \\\\right) = 1 - \\\\frac{1}{21} = \\\\frac{20}{21}$\n2) Multiply by 21:\n   $21 \\\\times \\\\frac{20}{21} = 20$.",
+    "solution_text": "Let's compute the summation:\n1) $\\sum_{k=1}^{20} \\frac{1}{k(k+1)} = \\sum_{k=1}^{20} \\left( \\frac{1}{k} - \\frac{1}{k+1} \\right) = 1 - \\frac{1}{21} = \\frac{20}{21}$\n2) Multiply by 21:\n   $21 \\times \\frac{20}{21} = 20$.",
     "common_mistake": "Neglecting to multiply by 21, leaving the answer as a fraction which is not an integer.",
     "concept_slugs": [
       "series-special-telescoping"
@@ -728,13 +728,13 @@
   },
   {
     "pattern_group": "series-special-telescoping",
-    "title": "The value of the summation $\\\\sum_{r=1}^{10} (r^3 - r)$ is ________.",
+    "title": "The value of the summation $\\sum_{r=1}^{10} (r^3 - r)$ is ________.",
     "difficulty": "easy",
     "type": "practice",
     "is_numerical": true,
     "question_format": "numerical",
     "notes": "Apply the formulas for sum of cubes and sum of first $n$ natural numbers.",
-    "solution_text": "Let's divide the summation:\n1) $\\\\sum_{r=1}^{10} r^3 = \\\\left( \\\\frac{10 \\\\times 11}{2} \\\\right)^2 = (55)^2 = 3025$\n2) $\\\\sum_{r=1}^{10} r = 55$\n3) Difference: $3025 - 55 = 2970$.",
+    "solution_text": "Let's divide the summation:\n1) $\\sum_{r=1}^{10} r^3 = \\left( \\frac{10 \\times 11}{2} \\right)^2 = (55)^2 = 3025$\n2) $\\sum_{r=1}^{10} r = 55$\n3) Difference: $3025 - 55 = 2970$.",
     "common_mistake": "Evaluating the sum of squares instead of cubes, or making basic calculation errors with $55^2$.",
     "concept_slugs": [
       "series-special-telescoping"
@@ -742,20 +742,20 @@
   },
   {
     "pattern_group": "series-special-telescoping",
-    "title": "Find the sum of the first $n$ terms of the series $3 + 7 + 13 + 21 + 31 + \\\\dots$ using the method of differences.",
+    "title": "Find the sum of the first $n$ terms of the series $3 + 7 + 13 + 21 + 31 + \\dots$ using the method of differences.",
     "difficulty": "hard",
     "type": "advanced",
     "correct_answer": "A",
     "is_numerical": false,
     "question_format": "mcq",
     "options": {
-      "A": "\\\\frac{n(n^2 + 3n + 5)}{3}",
-      "B": "\\\\frac{n(n^2 + 2n + 3)}{3}",
-      "C": "\\\\frac{n(n^2 + n + 1)}{3}",
-      "D": "\\\\frac{n(n^2 + 3n + 8)}{3}"
+      "A": "\\frac{n(n^2 + 3n + 5)}{3}",
+      "B": "\\frac{n(n^2 + 2n + 3)}{3}",
+      "C": "\\frac{n(n^2 + n + 1)}{3}",
+      "D": "\\frac{n(n^2 + 3n + 8)}{3}"
     },
     "notes": "Write the difference of consecutive terms: 4, 6, 8, 10, ... which is an AP. Find the general term $T_n$.",
-    "solution_text": "Let $S_n = 3 + 7 + 13 + 21 + \\\\dots + T_n$.\n1) Find the differences: $7-3=4, 13-7=6, 21-13=8...$ which are in AP.\n2) Using the method of differences:\n   $T_n = 3 + \\\\sum_{r=1}^{n-1} (4 + (r-1)2) = 3 + \\\\sum_{r=1}^{n-1} (2r + 2)$\n   $T_n = 3 + 2 \\\\frac{(n-1)n}{2} + 2(n-1) = 3 + n^2 - n + 2n - 2 = n^2 + n + 1$.\n3) Now sum $T_r$ from $r=1$ to $n$:\n   $S_n = \\\\sum_{r=1}^{n} (r^2 + r + 1) = \\\\sum r^2 + \\\\sum r + \\\\sum 1$\n   $S_n = \\\\frac{n(n+1)(2n+1)}{6} + \\\\frac{n(n+1)}{2} + n$\n   $S_n = \\\\frac{n}{6} [(2n^2 + 3n + 1) + (3n + 3) + 6] = \\\\frac{n}{6} [2n^2 + 6n + 10] = \\\\frac{n(n^2 + 3n + 5)}{3}$.\nOption A is correct.",
+    "solution_text": "Let $S_n = 3 + 7 + 13 + 21 + \\dots + T_n$.\n1) Find the differences: $7-3=4, 13-7=6, 21-13=8...$ which are in AP.\n2) Using the method of differences:\n   $T_n = 3 + \\sum_{r=1}^{n-1} (4 + (r-1)2) = 3 + \\sum_{r=1}^{n-1} (2r + 2)$\n   $T_n = 3 + 2 \\frac{(n-1)n}{2} + 2(n-1) = 3 + n^2 - n + 2n - 2 = n^2 + n + 1$.\n3) Now sum $T_r$ from $r=1$ to $n$:\n   $S_n = \\sum_{r=1}^{n} (r^2 + r + 1) = \\sum r^2 + \\sum r + \\sum 1$\n   $S_n = \\frac{n(n+1)(2n+1)}{6} + \\frac{n(n+1)}{2} + n$\n   $S_n = \\frac{n}{6} [(2n^2 + 3n + 1) + (3n + 3) + 6] = \\frac{n}{6} [2n^2 + 6n + 10] = \\frac{n(n^2 + 3n + 5)}{3}$.\nOption A is correct.",
     "common_mistake": "Mistakenly writing $T_n = n^2 + n + 3$, or making algebraic simplification errors.",
     "concept_slugs": [
       "series-special-telescoping"
@@ -763,7 +763,7 @@
   },
   {
     "pattern_group": "series-inequalities-misc",
-    "title": "The minimum value of the expression $x + \\\\frac{1}{x}$ for positive real values of $x$ is equal to:",
+    "title": "The minimum value of the expression $x + \\frac{1}{x}$ for positive real values of $x$ is equal to:",
     "difficulty": "easy",
     "type": "concept",
     "correct_answer": "B",
@@ -775,8 +775,8 @@
       "C": "0",
       "D": "0.5"
     },
-    "notes": "Apply the AM-GM inequality: $\\\\frac{a+b}{2} \\\\ge \\\\sqrt{ab}$ for positive numbers.",
-    "solution_text": "Since $x > 0$ and $1/x > 0$:\n1) Apply AM-GM inequality:\n   $\\\\frac{x + 1/x}{2} \\\\ge \\\\sqrt{x \\\\cdot \\\\frac{1}{x}} = 1$\n2) Multiply by 2:\n   $x + \\\\frac{1}{x} \\\\ge 2$.\nEquality holds when $x = 1/x \\\\implies x^2 = 1 \\\\implies x = 1$.\nOption B is correct.",
+    "notes": "Apply the AM-GM inequality: $\\frac{a+b}{2} \\ge \\sqrt{ab}$ for positive numbers.",
+    "solution_text": "Since $x > 0$ and $1/x > 0$:\n1) Apply AM-GM inequality:\n   $\\frac{x + 1/x}{2} \\ge \\sqrt{x \\cdot \\frac{1}{x}} = 1$\n2) Multiply by 2:\n   $x + \\frac{1}{x} \\ge 2$.\nEquality holds when $x = 1/x \\implies x^2 = 1 \\implies x = 1$.\nOption B is correct.",
     "common_mistake": "Assuming the minimum is 1 (Option A) by forgetting the division factor in the AM-GM formula.",
     "concept_slugs": [
       "series-inequalities-misc"
@@ -798,7 +798,7 @@
       "D": "125"
     },
     "notes": "Apply the AM-GM inequality for the three positive terms $x, y, z$.",
-    "solution_text": "Since $x, y, z > 0$, by AM-GM inequality:\n1) $\\\\frac{x+y+z}{3} \\\\ge \\\\sqrt[3]{xyz}$\n2) Substitute $x+y+z = 12$:\n   $\\\\frac{12}{3} \\\\ge \\\\sqrt[3]{xyz} \\\\implies 4 \\\\ge \\\\sqrt[3]{xyz}$\n3) Cube both sides:\n   $64 \\\\ge xyz$.\nEquality holds when $x = y = z = 4$.\nThus, the maximum value is 64. Option A is correct.",
+    "solution_text": "Since $x, y, z > 0$, by AM-GM inequality:\n1) $\\frac{x+y+z}{3} \\ge \\sqrt[3]{xyz}$\n2) Substitute $x+y+z = 12$:\n   $\\frac{12}{3} \\ge \\sqrt[3]{xyz} \\implies 4 \\ge \\sqrt[3]{xyz}$\n3) Cube both sides:\n   $64 \\ge xyz$.\nEquality holds when $x = y = z = 4$.\nThus, the maximum value is 64. Option A is correct.",
     "common_mistake": "Claiming the maximum occurs when values are unequal, violating the equality condition $x=y=z$.",
     "concept_slugs": [
       "series-inequalities-misc"
@@ -806,7 +806,7 @@
   },
   {
     "pattern_group": "series-inequalities-misc",
-    "title": "If $a, b, c$ are positive real numbers such that $a+b+c=9$, the minimum value of $\\\\frac{1}{a} + \\\\frac{1}{b} + \\\\frac{1}{c}$ is:",
+    "title": "If $a, b, c$ are positive real numbers such that $a+b+c=9$, the minimum value of $\\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c}$ is:",
     "difficulty": "medium",
     "type": "practice",
     "correct_answer": "A",
@@ -815,25 +815,25 @@
     "options": {
       "A": "$1$",
       "B": "$3$",
-      "C": "$\\\\frac{1}{3}$",
+      "C": "$\\frac{1}{3}$",
       "D": "$9$"
     },
-    "notes": "Use the relation between Arithmetic Mean (AM) and Harmonic Mean (HM): $AM \\\\ge HM$.",
-    "solution_text": "By AM-HM inequality for positive numbers $a, b, c$:\n1) $\\\\frac{a+b+c}{3} \\\\ge \\\\frac{3}{\\\\frac{1}{a} + \\\\frac{1}{b} + \\\\frac{1}{c}}$\n2) Substitute $a+b+c = 9$:\n   $\\\\frac{9}{3} \\\\ge \\\\frac{3}{\\\\frac{1}{a} + \\\\frac{1}{b} + \\\\frac{1}{c}} \\\\implies 3 \\\\ge \\\\frac{3}{\\\\frac{1}{a} + \\\\frac{1}{b} + \\\\frac{1}{c}}$\n3) Rearranging:\n   $\\\\frac{1}{a} + \\\\frac{1}{b} + \\\\frac{1}{c} \\\\ge 1$.\nOption A is correct.",
-    "common_mistake": "Assuming the minimum is 3 (Option B) by forgetting that $AM \\\\ge HM$ is an inverse inequality.",
+    "notes": "Use the relation between Arithmetic Mean (AM) and Harmonic Mean (HM): $AM \\ge HM$.",
+    "solution_text": "By AM-HM inequality for positive numbers $a, b, c$:\n1) $\\frac{a+b+c}{3} \\ge \\frac{3}{\\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c}}$\n2) Substitute $a+b+c = 9$:\n   $\\frac{9}{3} \\ge \\frac{3}{\\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c}} \\implies 3 \\ge \\frac{3}{\\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c}}$\n3) Rearranging:\n   $\\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c} \\ge 1$.\nOption A is correct.",
+    "common_mistake": "Assuming the minimum is 3 (Option B) by forgetting that $AM \\ge HM$ is an inverse inequality.",
     "concept_slugs": [
       "series-inequalities-misc"
     ]
   },
   {
     "pattern_group": "series-inequalities-misc",
-    "title": "If $x$ is a positive real number, the minimum value of the expression $4x + \\\\frac{9}{x}$ is ________.",
+    "title": "If $x$ is a positive real number, the minimum value of the expression $4x + \\frac{9}{x}$ is ________.",
     "difficulty": "easy",
     "type": "practice",
     "is_numerical": true,
     "question_format": "numerical",
     "notes": "Apply the AM-GM inequality to the positive terms $4x$ and $9/x$.",
-    "solution_text": "Since $x > 0$, both $4x$ and $9/x$ are positive real numbers:\n1) By AM-GM inequality:\n   $\\\\frac{4x + 9/x}{2} \\\\ge \\\\sqrt{4x \\\\cdot \\\\frac{9}{x}}$\n   $\\\\frac{4x + 9/x}{2} \\\\ge \\\\sqrt{36} = 6$\n2) Multiply by 2:\n   $4x + \\\\frac{9}{x} \\\\ge 12$.\nEquality holds when $4x = 9/x \\\\implies 4x^2 = 9 \\\\implies x^2 = 2.25 \\\\implies x = 1.5$.",
+    "solution_text": "Since $x > 0$, both $4x$ and $9/x$ are positive real numbers:\n1) By AM-GM inequality:\n   $\\frac{4x + 9/x}{2} \\ge \\sqrt{4x \\cdot \\frac{9}{x}}$\n   $\\frac{4x + 9/x}{2} \\ge \\sqrt{36} = 6$\n2) Multiply by 2:\n   $4x + \\frac{9}{x} \\ge 12$.\nEquality holds when $4x = 9/x \\implies 4x^2 = 9 \\implies x^2 = 2.25 \\implies x = 1.5$.",
     "common_mistake": "Evaluating the expression at $x = 1$ to get 13, failing to locate the true mathematical minimum at $x = 1.5$.",
     "concept_slugs": [
       "series-inequalities-misc"
@@ -841,7 +841,7 @@
   },
   {
     "pattern_group": "series-inequalities-misc",
-    "title": "If $a, b, c$ are positive real numbers, the minimum value of $(a+b+c)\\\\left(\\\\frac{1}{a} + \\\\frac{1}{b} + \\\\frac{1}{c}\\\\right)$ is equal to:",
+    "title": "If $a, b, c$ are positive real numbers, the minimum value of $(a+b+c)\\left(\\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c}\\right)$ is equal to:",
     "difficulty": "hard",
     "type": "practice",
     "correct_answer": "C",
@@ -853,8 +853,8 @@
       "C": "9",
       "D": "12"
     },
-    "notes": "Apply Cauchy-Schwarz inequality or simply use $AM \\\\ge HM$ directly.",
-    "solution_text": "By AM-HM inequality:\n1) $\\\\frac{a+b+c}{3} \\\\ge \\\\frac{3}{\\\\frac{1}{a} + \\\\frac{1}{b} + \\\\frac{1}{c}}$\n2) Cross-multiplying the terms:\n   $(a+b+c) \\\\left( \\\\frac{1}{a} + \\\\frac{1}{b} + \\\\frac{1}{c} \\\\right) \\\\ge 9$.\nEquality holds when $a = b = c$.\nOption C is correct.",
+    "notes": "Apply Cauchy-Schwarz inequality or simply use $AM \\ge HM$ directly.",
+    "solution_text": "By AM-HM inequality:\n1) $\\frac{a+b+c}{3} \\ge \\frac{3}{\\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c}}$\n2) Cross-multiplying the terms:\n   $(a+b+c) \\left( \\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c} \\right) \\ge 9$.\nEquality holds when $a = b = c$.\nOption C is correct.",
     "common_mistake": "Claiming the minimum is 3 (Option A) by confusing it with the three-variable sum minimum.",
     "concept_slugs": [
       "series-inequalities-misc"
@@ -868,7 +868,7 @@
     "is_numerical": true,
     "question_format": "numerical",
     "notes": "Use the AM-GM inequality for the positive numbers $9^x$ and $9^{1-x}$.",
-    "solution_text": "Since $9^x > 0$ and $9^{1-x} > 0$ for all real $x$:\n1) Apply AM-GM inequality:\n   $\\\\frac{9^x + 9^{1-x}}{2} \\\\ge \\\\sqrt{9^x \\\\cdot 9^{1-x}}$\n2) Simplify the product under the root:\n   $9^x \\\\cdot 9^{1-x} = 9^{x + 1 - x} = 9$\n   $\\\\frac{9^x + 9^{1-x}}{2} \\\\ge \\\\sqrt{9} = 3$\n3) Multiply by 2:\n   $9^x + 9^{1-x} \\\\ge 6$.\nEquality holds when $9^x = 9^{1-x} \\\\implies x = 1-x \\\\implies 2x = 1 \\\\implies x = 0.5$.",
+    "solution_text": "Since $9^x > 0$ and $9^{1-x} > 0$ for all real $x$:\n1) Apply AM-GM inequality:\n   $\\frac{9^x + 9^{1-x}}{2} \\ge \\sqrt{9^x \\cdot 9^{1-x}}$\n2) Simplify the product under the root:\n   $9^x \\cdot 9^{1-x} = 9^{x + 1 - x} = 9$\n   $\\frac{9^x + 9^{1-x}}{2} \\ge \\sqrt{9} = 3$\n3) Multiply by 2:\n   $9^x + 9^{1-x} \\ge 6$.\nEquality holds when $9^x = 9^{1-x} \\implies x = 1-x \\implies 2x = 1 \\implies x = 0.5$.",
     "common_mistake": "Assuming the minimum is 9 (by substituting $x=1$ or $x=0$), or failing to simplify the exponent product.",
     "concept_slugs": [
       "series-inequalities-misc"
@@ -876,21 +876,21 @@
   },
   {
     "pattern_group": "series-inequalities-misc",
-    "title": "Let $a_1, a_2, \\\\dots$ is a sequence with $a_1 = 2$ and $a_{n+1} = a_n + 2n$ for all $n \\\\ge 1$. The value of $a_{10}$ is ________.",
+    "title": "Let $a_1, a_2, \\dots$ is a sequence with $a_1 = 2$ and $a_{n+1} = a_n + 2n$ for all $n \\ge 1$. The value of $a_{10}$ is ________.",
     "difficulty": "hard",
     "type": "practice",
     "is_numerical": true,
     "question_format": "numerical",
-    "notes": "Form the summation of differences $a_{n} - a_1 = \\\\sum_{k=1}^{n-1} (a_{k+1} - a_k)$ to find the general term.",
-    "solution_text": "We are given $a_{k+1} - a_k = 2k$:\n1) Write the telescoping summation:\n   $a_n - a_1 = \\\\sum_{k=1}^{n-1} (a_{k+1} - a_k) = \\\\sum_{k=1}^{n-1} 2k$\n   $a_n - a_1 = 2 \\\\cdot \\\\frac{(n-1)n}{2} = n(n-1)$\n2) Substitute $a_1 = 2$:\n   $a_n = n(n-1) + 2$\n3) For $n = 10$:\n   $a_{10} = 10(9) + 2 = 90 + 2 = 92$.\nThus, the 10th term is 92.",
-    "common_mistake": "Miscounting the limits of the summation as $n$ instead of $n-1$, leading to $10 \\\\times 11 + 2 = 112$.",
+    "notes": "Form the summation of differences $a_{n} - a_1 = \\sum_{k=1}^{n-1} (a_{k+1} - a_k)$ to find the general term.",
+    "solution_text": "We are given $a_{k+1} - a_k = 2k$:\n1) Write the telescoping summation:\n   $a_n - a_1 = \\sum_{k=1}^{n-1} (a_{k+1} - a_k) = \\sum_{k=1}^{n-1} 2k$\n   $a_n - a_1 = 2 \\cdot \\frac{(n-1)n}{2} = n(n-1)$\n2) Substitute $a_1 = 2$:\n   $a_n = n(n-1) + 2$\n3) For $n = 10$:\n   $a_{10} = 10(9) + 2 = 90 + 2 = 92$.\nThus, the 10th term is 92.",
+    "common_mistake": "Miscounting the limits of the summation as $n$ instead of $n-1$, leading to $10 \\times 11 + 2 = 112$.",
     "concept_slugs": [
       "series-inequalities-misc"
     ]
   },
   {
     "pattern_group": "series-inequalities-misc",
-    "title": "If the sum of the infinite series $\\\\sum_{r=1}^{\\\\infty} \\\\frac{r^2}{r!}$ is $2e$, the value of the infinite series $\\\\sum_{r=1}^{\\\\infty} \\\\frac{r}{r!}$ is equal to:",
+    "title": "If the sum of the infinite series $\\sum_{r=1}^{\\infty} \\frac{r^2}{r!}$ is $2e$, the value of the infinite series $\\sum_{r=1}^{\\infty} \\frac{r}{r!}$ is equal to:",
     "difficulty": "hard",
     "type": "advanced",
     "correct_answer": "A",
@@ -903,7 +903,7 @@
       "D": "$1$"
     },
     "notes": "Expand the terms using $r/r! = 1/(r-1)!$ and sum the series from 1 to infinity.",
-    "solution_text": "Let's analyze the summation:\n1) $\\\\sum_{r=1}^{\\\\infty} \\\\frac{r}{r!} = \\\\sum_{r=1}^{\\\\infty} \\\\frac{r}{r \\\\cdot (r-1)!} = \\\\sum_{r=1}^{\\\\infty} \\\\frac{1}{(r-1)!}$\n2) Substitute $k = r-1$, when $r=1 \\\\implies k=0$:\n   $\\\\sum_{k=0}^{\\\\infty} \\\\frac{1}{k!} = \\\\frac{1}{0!} + \\\\frac{1}{1!} + \\\\frac{1}{2!} + \\\\dots$\n3) This is the standard Maclaurin expansion of $e^x$ evaluated at $x = 1$:\n   $e^1 = 1 + 1 + \\\\frac{1}{2} + \\\\dots = e$.\nThus, the sum is $e$. Option A is correct.",
+    "solution_text": "Let's analyze the summation:\n1) $\\sum_{r=1}^{\\infty} \\frac{r}{r!} = \\sum_{r=1}^{\\infty} \\frac{r}{r \\cdot (r-1)!} = \\sum_{r=1}^{\\infty} \\frac{1}{(r-1)!}$\n2) Substitute $k = r-1$, when $r=1 \\implies k=0$:\n   $\\sum_{k=0}^{\\infty} \\frac{1}{k!} = \\frac{1}{0!} + \\frac{1}{1!} + \\frac{1}{2!} + \\dots$\n3) This is the standard Maclaurin expansion of $e^x$ evaluated at $x = 1$:\n   $e^1 = 1 + 1 + \\frac{1}{2} + \\dots = e$.\nThus, the sum is $e$. Option A is correct.",
     "common_mistake": "Claiming the sum is $e-1$ (Option C) by starting the summation index from $k=1$ instead of $k=0$.",
     "concept_slugs": [
       "series-inequalities-misc"

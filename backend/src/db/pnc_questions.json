@@ -14,8 +14,8 @@
       "D": "150"
     },
     "notes": "Use the multiplication principle of counting. Each place (units, tens, hundreds) can be filled in 5 ways.",
-    "solution_text": "We want to form a 3-digit number. There are three positions to fill: Hundreds, Tens, and Units.\n1) Since repetition is allowed:\n   - Hundreds place can be filled in 5 ways ($1, 2, 3, 4,$ or $5$).\n   - Tens place can be filled in 5 ways.\n   - Units place can be filled in 5 ways.\n2) By the multiplication principle, the total number of ways is $5 \\\\times 5 \\\\times 5 = 125$.\nThus, Option C is correct.",
-    "common_mistake": "Calculating $5 \\\\times 4 \\\\times 3 = 60$ (Option A) by assuming repetition is not allowed.",
+    "solution_text": "We want to form a 3-digit number. There are three positions to fill: Hundreds, Tens, and Units.\n1) Since repetition is allowed:\n   - Hundreds place can be filled in 5 ways ($1, 2, 3, 4,$ or $5$).\n   - Tens place can be filled in 5 ways.\n   - Units place can be filled in 5 ways.\n2) By the multiplication principle, the total number of ways is $5 \\times 5 \\times 5 = 125$.\nThus, Option C is correct.",
+    "common_mistake": "Calculating $5 \\times 4 \\times 3 = 60$ (Option A) by assuming repetition is not allowed.",
     "concept_slugs": [
       "pnc-fundamental-principles"
     ]
@@ -35,7 +35,7 @@
       "D": "120"
     },
     "notes": "Each place must be filled with a distinct digit. Hundreds has 5 options, Tens has 4, and Units has 3.",
-    "solution_text": "Since repetition is not allowed:\n1) Hundreds place can be filled in 5 ways ($1, 2, 3, 4,$ or $5$).\n2) Since one digit is used, Tens place can be filled in $5 - 1 = 4$ ways.\n3) Since two digits are used, Units place can be filled in $5 - 2 = 3$ ways.\n4) Total number of ways is $5 \\\\times 4 \\\\times 3 = 60$.\nThus, Option A is correct.",
+    "solution_text": "Since repetition is not allowed:\n1) Hundreds place can be filled in 5 ways ($1, 2, 3, 4,$ or $5$).\n2) Since one digit is used, Tens place can be filled in $5 - 1 = 4$ ways.\n3) Since two digits are used, Units place can be filled in $5 - 2 = 3$ ways.\n4) Total number of ways is $5 \\times 4 \\times 3 = 60$.\nThus, Option A is correct.",
     "common_mistake": "Allowing repetition and calculating $5^3 = 125$ (Option B).",
     "concept_slugs": [
       "pnc-fundamental-principles"
@@ -57,22 +57,22 @@
       "D": "120"
     },
     "notes": "Divide into two cases: Case 1: the number ends in 0; Case 2: the number ends in 2 or 4.",
-    "solution_text": "To form an even 4-digit number using $0, 1, 2, 3, 4, 5$ without repetition, we divide into cases based on the units digit:\n1) Case 1: Units digit is $0$.\n   - Units place: 1 way (0).\n   - Thousands place: 5 ways (any of $1, 2, 3, 4, 5$).\n   - Hundreds place: 4 ways.\n   - Tens place: 3 ways.\n   - Total for Case 1 $= 5 \\\\times 4 \\\\times 3 \\\\times 1 = 60$ ways.\n2) Case 2: Units digit is $2$ or $4$.\n   - Units place: 2 ways (2 or 4).\n   - Thousands place: cannot be 0, and cannot be the units digit, so $6 - 2 = 4$ ways.\n   - Hundreds place: can include 0, so $6 - 2 = 4$ ways.\n   - Tens place: $6 - 3 = 3$ ways.\n   - Total for Case 2 $= 4 \\\\times 4 \\\\times 3 \\\\times 2 = 96$ ways.\n3) Grand Total $= 60 + 96 = 156$ ways.\nThus, Option B is correct.",
-    "common_mistake": "Neglecting the thousands place constraint (cannot be 0) in Case 2, leading to $5 \\\\times 4 \\\\times 3 \\\\times 2 = 120$ instead of 96.",
+    "solution_text": "To form an even 4-digit number using $0, 1, 2, 3, 4, 5$ without repetition, we divide into cases based on the units digit:\n1) Case 1: Units digit is $0$.\n   - Units place: 1 way (0).\n   - Thousands place: 5 ways (any of $1, 2, 3, 4, 5$).\n   - Hundreds place: 4 ways.\n   - Tens place: 3 ways.\n   - Total for Case 1 $= 5 \\times 4 \\times 3 \\times 1 = 60$ ways.\n2) Case 2: Units digit is $2$ or $4$.\n   - Units place: 2 ways (2 or 4).\n   - Thousands place: cannot be 0, and cannot be the units digit, so $6 - 2 = 4$ ways.\n   - Hundreds place: can include 0, so $6 - 2 = 4$ ways.\n   - Tens place: $6 - 3 = 3$ ways.\n   - Total for Case 2 $= 4 \\times 4 \\times 3 \\times 2 = 96$ ways.\n3) Grand Total $= 60 + 96 = 156$ ways.\nThus, Option B is correct.",
+    "common_mistake": "Neglecting the thousands place constraint (cannot be 0) in Case 2, leading to $5 \\times 4 \\times 3 \\times 2 = 120$ instead of 96.",
     "concept_slugs": [
       "pnc-fundamental-principles"
     ]
   },
   {
     "pattern_group": "pnc-fundamental-principles",
-    "title": "The value of the fraction $\\\\frac{10!}{8! \\\\times 2!}$ is ________.",
+    "title": "The value of the fraction $\\frac{10!}{8! \\times 2!}$ is ________.",
     "difficulty": "easy",
     "type": "practice",
     "is_numerical": true,
     "question_format": "numerical",
     "notes": "Simplify the factorial expression by expanding $10!$ in terms of $8!$.",
-    "solution_text": "Let's expand the factorials:\n1) $10! = 10 \\\\times 9 \\\\times 8!$\n2) Substitute this into the fraction:\n   $\\\\frac{10!}{8! \\\\times 2!} = \\\\frac{10 \\\\times 9 \\\\times 8!}{8! \\\\times 2 \\\\times 1} = \\\\frac{10 \\\\times 9}{2} = 5 \\\\times 9 = 45$.\nThus, the value is 45.",
-    "common_mistake": "Dividing the numbers directly inside factorials first, e.g. calculating $10/(8 \\\\times 2) = 10/16$ which is completely incorrect.",
+    "solution_text": "Let's expand the factorials:\n1) $10! = 10 \\times 9 \\times 8!$\n2) Substitute this into the fraction:\n   $\\frac{10!}{8! \\times 2!} = \\frac{10 \\times 9 \\times 8!}{8! \\times 2 \\times 1} = \\frac{10 \\times 9}{2} = 5 \\times 9 = 45$.\nThus, the value is 45.",
+    "common_mistake": "Dividing the numbers directly inside factorials first, e.g. calculating $10/(8 \\times 2) = 10/16$ which is completely incorrect.",
     "concept_slugs": [
       "pnc-fundamental-principles"
     ]
@@ -85,8 +85,8 @@
     "is_numerical": true,
     "question_format": "numerical",
     "notes": "Use the complement method: Total 3-digit numbers minus 3-digit numbers containing no 7.",
-    "solution_text": "Let's apply the complement method:\n1) Total 3-digit numbers: Hundreds place cannot be 0, so 9 options ($1-9$). Tens place has 10 options ($0-9$). Units place has 10 options ($0-9$).\n   Total $= 9 \\\\times 10 \\\\times 10 = 900$.\n2) 3-digit numbers with no 7s:\n   - Hundreds place: cannot be 0, and cannot be 7, so $10 - 2 = 8$ options.\n   - Tens place: cannot be 7, so $10 - 1 = 9$ options.\n   - Units place: cannot be 7, so $10 - 1 = 9$ options.\n   Total with no 7s $= 8 \\\\times 9 \\\\times 9 = 648$.\n3) Numbers with at least one 7 $= 900 - 648 = 252$.",
-    "common_mistake": "Calculating $9 \\\\times 9 \\\\times 9 = 729$ for no 7s by forgetting that 0 cannot be the hundreds digit.",
+    "solution_text": "Let's apply the complement method:\n1) Total 3-digit numbers: Hundreds place cannot be 0, so 9 options ($1-9$). Tens place has 10 options ($0-9$). Units place has 10 options ($0-9$).\n   Total $= 9 \\times 10 \\times 10 = 900$.\n2) 3-digit numbers with no 7s:\n   - Hundreds place: cannot be 0, and cannot be 7, so $10 - 2 = 8$ options.\n   - Tens place: cannot be 7, so $10 - 1 = 9$ options.\n   - Units place: cannot be 7, so $10 - 1 = 9$ options.\n   Total with no 7s $= 8 \\times 9 \\times 9 = 648$.\n3) Numbers with at least one 7 $= 900 - 648 = 252$.",
+    "common_mistake": "Calculating $9 \\times 9 \\times 9 = 729$ for no 7s by forgetting that 0 cannot be the hundreds digit.",
     "concept_slugs": [
       "pnc-fundamental-principles"
     ]
@@ -100,8 +100,8 @@
     "correct_answer": "93324",
     "is_numerical": true,
     "question_format": "numerical",
-    "notes": "Use the sum formula: (Sum of digits) $\\\\times (n-1)! \\\\times (111\\\\dots n \\\\text{ times})$.",
-    "solution_text": "We want to find the sum of all 4-digit numbers formed by $1, 2, 5, 6$ without repetition:\n1) There are $4! = 24$ such numbers.\n2) In each position (units, tens, hundreds, thousands), each of the 4 digits appears exactly $3! = 6$ times.\n3) Sum of digits: $1 + 2 + 5 + 6 = 14$.\n4) Sum of values at each place:\n   - Sum of units digits: $6 \\\\times 14 = 84$\n   - Sum of tens digits: $6 \\\\times 14 \\\\times 10 = 840$\n   - Sum of hundreds digits: $6 \\\\times 14 \\\\times 100 = 8400$\n   - Sum of thousands digits: $6 \\\\times 14 \\\\times 1000 = 84000$\n5) Grand Sum $= 84 + 840 + 8400 + 84000 = 84 \\\\times 1111 = 93324$.",
+    "notes": "Use the sum formula: (Sum of digits) $\\times (n-1)! \\times (111\\dots n \\text{ times})$.",
+    "solution_text": "We want to find the sum of all 4-digit numbers formed by $1, 2, 5, 6$ without repetition:\n1) There are $4! = 24$ such numbers.\n2) In each position (units, tens, hundreds, thousands), each of the 4 digits appears exactly $3! = 6$ times.\n3) Sum of digits: $1 + 2 + 5 + 6 = 14$.\n4) Sum of values at each place:\n   - Sum of units digits: $6 \\times 14 = 84$\n   - Sum of tens digits: $6 \\times 14 \\times 10 = 840$\n   - Sum of hundreds digits: $6 \\times 14 \\times 100 = 8400$\n   - Sum of thousands digits: $6 \\times 14 \\times 1000 = 84000$\n5) Grand Sum $= 84 + 840 + 8400 + 84000 = 84 \\times 1111 = 93324$.",
     "common_mistake": "Using $4! = 24$ as the multiplier instead of $(n-1)! = 6$, yielding a sum 4 times too large.",
     "concept_slugs": [
       "pnc-fundamental-principles"
@@ -122,7 +122,7 @@
       "D": "9990"
     },
     "notes": "Find the total number of combinations and subtract the 1 successful key combination.",
-    "solution_text": "Let's count the number of combinations:\n1) There are 4 rings, and each ring can be set in 10 different ways.\n2) Total combinations $= 10 \\\\times 10 \\\\times 10 \\\\times 10 = 10^4 = 10000$.\n3) Exactly 1 combination opens the lock.\n4) The maximum number of unsuccessful attempts is: $10000 - 1 = 9999$.\nOption C is correct.",
+    "solution_text": "Let's count the number of combinations:\n1) There are 4 rings, and each ring can be set in 10 different ways.\n2) Total combinations $= 10 \\times 10 \\times 10 \\times 10 = 10^4 = 10000$.\n3) Exactly 1 combination opens the lock.\n4) The maximum number of unsuccessful attempts is: $10000 - 1 = 9999$.\nOption C is correct.",
     "common_mistake": "Selecting 10000 (Option A) by forgetting to subtract the successful attempt.",
     "concept_slugs": [
       "pnc-fundamental-principles"
@@ -143,8 +143,8 @@
       "D": "18"
     },
     "notes": "A number is divisible by 4 if its last two digits are divisible by 4. Identify valid pairs from the set.",
-    "solution_text": "A number is divisible by 4 if the number formed by the last two digits is divisible by 4.\nFrom the digits $0, 1, 2, 3, 4$ without repetition, the valid two-digit endings are:\n- Endings containing 0: $04, 20, 40$ (3 endings)\n- Endings not containing 0: $12, 24, 32$ (3 endings)\nLet's calculate arrangements for each case:\n1) Case 1: Last two digits contain 0 ($04, 20, 40$):\n   - The remaining 3 places can be filled by the remaining 3 digits in $3! = 6$ ways.\n   - Total for Case 1 $= 3 \\\\times 6 = 18$ ways.\n2) Case 2: Last two digits do not contain 0 ($12, 24, 32$):\n   - The remaining digits include 0, which cannot be in the ten-thousands place.\n   - First digit: 2 options (non-zero remaining digit).\n   - Second digit: 2 options.\n   - Third digit: 1 option.\n   - Total per ending $= 2 \\\\times 2 \\\\times 1 = 4$ ways.\n   - Total for Case 2 $= 3 \\\\times 4 = 12$ ways.\n3) Grand Total $= 18 + 12 = 30$ ways.\nOption B is correct.",
-    "common_mistake": "Treating all endings uniformly without separating the '0' cases, which leads to $6 \\\\times 6 = 36$ (Option A).",
+    "solution_text": "A number is divisible by 4 if the number formed by the last two digits is divisible by 4.\nFrom the digits $0, 1, 2, 3, 4$ without repetition, the valid two-digit endings are:\n- Endings containing 0: $04, 20, 40$ (3 endings)\n- Endings not containing 0: $12, 24, 32$ (3 endings)\nLet's calculate arrangements for each case:\n1) Case 1: Last two digits contain 0 ($04, 20, 40$):\n   - The remaining 3 places can be filled by the remaining 3 digits in $3! = 6$ ways.\n   - Total for Case 1 $= 3 \\times 6 = 18$ ways.\n2) Case 2: Last two digits do not contain 0 ($12, 24, 32$):\n   - The remaining digits include 0, which cannot be in the ten-thousands place.\n   - First digit: 2 options (non-zero remaining digit).\n   - Second digit: 2 options.\n   - Third digit: 1 option.\n   - Total per ending $= 2 \\times 2 \\times 1 = 4$ ways.\n   - Total for Case 2 $= 3 \\times 4 = 12$ ways.\n3) Grand Total $= 18 + 12 = 30$ ways.\nOption B is correct.",
+    "common_mistake": "Treating all endings uniformly without separating the '0' cases, which leads to $6 \\times 6 = 36$ (Option A).",
     "concept_slugs": [
       "pnc-fundamental-principles"
     ]
@@ -156,8 +156,8 @@
     "type": "concept",
     "is_numerical": true,
     "question_format": "numerical",
-    "notes": "Use the permutation formula for objects where some are identical: $n! / (p! q! \\\\dots)$.",
-    "solution_text": "The word 'APPLE' has 5 letters in total, with 'P' repeating 2 times:\n1) Total letters $n = 5$, identical letters $p = 2$.\n2) Number of distinct permutations is:\n   $\\\\frac{5!}{2!} = \\\\frac{120}{2} = 60$.\nThus, the number of distinct arrangements is 60.",
+    "notes": "Use the permutation formula for objects where some are identical: $n! / (p! q! \\dots)$.",
+    "solution_text": "The word 'APPLE' has 5 letters in total, with 'P' repeating 2 times:\n1) Total letters $n = 5$, identical letters $p = 2$.\n2) Number of distinct permutations is:\n   $\\frac{5!}{2!} = \\frac{120}{2} = 60$.\nThus, the number of distinct arrangements is 60.",
     "common_mistake": "Calculating $5! = 120$ without dividing by $2!$ for the repeated letter 'P'.",
     "concept_slugs": [
       "pnc-permutations-linear"
@@ -173,13 +173,13 @@
     "is_numerical": false,
     "question_format": "mcq",
     "options": {
-      "A": "\\\\frac{8! \\\\times 4!}{2! \\\\times 2! \\\\times 2!}",
-      "B": "\\\\frac{8! \\\\times 4!}{2! \\\\times 2!}",
-      "C": "\\\\frac{7! \\\\times 4!}{2! \\\\times 2! \\\\times 2!}",
-      "D": "\\\\frac{8! \\\\times 4!}{2!}"
+      "A": "\\frac{8! \\times 4!}{2! \\times 2! \\times 2!}",
+      "B": "\\frac{8! \\times 4!}{2! \\times 2!}",
+      "C": "\\frac{7! \\times 4!}{2! \\times 2! \\times 2!}",
+      "D": "\\frac{8! \\times 4!}{2!}"
     },
     "notes": "Group all vowels (A, E, A, I) into a single bundle, and treat them as one object. Keep track of repetitions.",
-    "solution_text": "The word 'MATHEMATICS' has 11 letters:\n- Vowels: A, E, A, I (4 vowels, with 'A' repeating 2 times)\n- Consonants: M, T, H, M, T, C, S (7 consonants, with 'M' repeating 2 times and 'T' repeating 2 times)\n1) Bundle the vowels: (AAEI). Now we have 7 consonants + 1 bundle $= 8$ objects to arrange.\n2) Arrange the 8 objects. Since M and T repeat 2 times:\n   $\\\\text{Ways} = \\\\frac{8!}{2! \\\\times 2!}$\n3) Arrange the letters inside the vowel bundle (4 letters with A repeating 2 times):\n   $\\\\text{Vowel ways} = \\\\frac{4!}{2!}$\n4) Total arrangements $= \\\\frac{8!}{2! \\\\times 2!} \\\\times \\\\frac{4!}{2!} = \\\\frac{8! \\\\times 4!}{2! \\\\times 2! \\\\times 2!}$.\nOption A is correct.",
+    "solution_text": "The word 'MATHEMATICS' has 11 letters:\n- Vowels: A, E, A, I (4 vowels, with 'A' repeating 2 times)\n- Consonants: M, T, H, M, T, C, S (7 consonants, with 'M' repeating 2 times and 'T' repeating 2 times)\n1) Bundle the vowels: (AAEI). Now we have 7 consonants + 1 bundle $= 8$ objects to arrange.\n2) Arrange the 8 objects. Since M and T repeat 2 times:\n   $\\text{Ways} = \\frac{8!}{2! \\times 2!}$\n3) Arrange the letters inside the vowel bundle (4 letters with A repeating 2 times):\n   $\\text{Vowel ways} = \\frac{4!}{2!}$\n4) Total arrangements $= \\frac{8!}{2! \\times 2!} \\times \\frac{4!}{2!} = \\frac{8! \\times 4!}{2! \\times 2! \\times 2!}$.\nOption A is correct.",
     "common_mistake": "Neglecting the repetition of 'A' inside the vowel bundle, leading to Option B.",
     "concept_slugs": [
       "pnc-permutations-linear"
@@ -209,7 +209,7 @@
     "is_numerical": true,
     "question_format": "numerical",
     "notes": "Use the gap method: seat the boys first, then place the girls in the gaps between the boys.",
-    "solution_text": "Let's apply the gap method:\n1) Seat the 4 boys first: $4! = 24$ ways.\n2) This creates 5 gaps (one at each end and three in between boys): `_ B _ B _ B _ B _`\n3) We place the 2 girls in these 5 gaps: $^5P_2 = 5 \\\\times 4 = 20$ ways.\n4) Total arrangements $= 24 \\\\times 20 = 480$.\nThus, the total ways is 480.",
+    "solution_text": "Let's apply the gap method:\n1) Seat the 4 boys first: $4! = 24$ ways.\n2) This creates 5 gaps (one at each end and three in between boys): `_ B _ B _ B _ B _`\n3) We place the 2 girls in these 5 gaps: $^5P_2 = 5 \\times 4 = 20$ ways.\n4) Total arrangements $= 24 \\times 20 = 480$.\nThus, the total ways is 480.",
     "common_mistake": "Using $5! = 120$ for gaps instead of permutations $^5P_2$, or using boys $= 4$ without factorial.",
     "concept_slugs": [
       "pnc-permutations-linear"
@@ -230,7 +230,7 @@
       "D": "36"
     },
     "notes": "Subtract the arrangements where the three 'A's are together from the total arrangements.",
-    "solution_text": "Let's use the complement method:\n1) Total arrangements of 'BANANA' (6 letters: 3 A's, 2 N's, 1 B):\n   $T_{total} = \\\\frac{6!}{3! \\\\times 2!} = \\\\frac{720}{6 \\\\times 2} = 60$\n2) Arrangements where all three 'A's are together: bundle them as (AAA).\n   Objects to arrange: (AAA), B, N, N (4 objects, with N repeating 2 times).\n   $T_{together} = \\\\frac{4!}{2!} = 12$\n3) Arrangements where the three 'A's are NOT all together:\n   $T = T_{total} - T_{together} = 60 - 12 = 48$. Let's check options. Wait, my options have 50, 40, 30... let's change Option B to 48 and correct_answer = 'B'.",
+    "solution_text": "Let's use the complement method:\n1) Total arrangements of 'BANANA' (6 letters: 3 A's, 2 N's, 1 B):\n   $T_{total} = \\frac{6!}{3! \\times 2!} = \\frac{720}{6 \\times 2} = 60$\n2) Arrangements where all three 'A's are together: bundle them as (AAA).\n   Objects to arrange: (AAA), B, N, N (4 objects, with N repeating 2 times).\n   $T_{together} = \\frac{4!}{2!} = 12$\n3) Arrangements where the three 'A's are NOT all together:\n   $T = T_{total} - T_{together} = 60 - 12 = 48$. Let's check options. Wait, my options have 50, 40, 30... let's change Option B to 48 and correct_answer = 'B'.",
     "common_mistake": "Confusing 'all three A's together' with 'no two A's together', which requires a much stricter gap method constraint.",
     "concept_slugs": [
       "pnc-permutations-linear"
@@ -246,7 +246,7 @@
     "is_numerical": true,
     "question_format": "numerical",
     "notes": "Subtract the number of arrangements with the two R's together from the total arrangements.",
-    "solution_text": "Let's apply the complement method:\n1) Total arrangements of ARRANGE (7 letters: 2 A's, 2 R's, 1 N, 1 G, 1 E):\n   $T_{total} = \\\\frac{7!}{2! \\\\times 2!} = \\\\frac{5040}{4} = 1260$\n2) Arrangements with the two 'R's together: bundle them as (RR).\n   Objects: (RR), A, A, N, G, E (6 objects, with A repeating 2 times).\n   $T_{together} = \\\\frac{6!}{2!} = \\\\frac{720}{2} = 360$\n3) Arrangements with R's not together:\n   $T = 1260 - 360 = 900$.",
+    "solution_text": "Let's apply the complement method:\n1) Total arrangements of ARRANGE (7 letters: 2 A's, 2 R's, 1 N, 1 G, 1 E):\n   $T_{total} = \\frac{7!}{2! \\times 2!} = \\frac{5040}{4} = 1260$\n2) Arrangements with the two 'R's together: bundle them as (RR).\n   Objects: (RR), A, A, N, G, E (6 objects, with A repeating 2 times).\n   $T_{together} = \\frac{6!}{2!} = \\frac{720}{2} = 360$\n3) Arrangements with R's not together:\n   $T = 1260 - 360 = 900$.",
     "common_mistake": "Neglecting the repetition of 'A' when calculating the bundle arrangement, leading to $6! = 720$ and an incorrect result of 540.",
     "concept_slugs": [
       "pnc-permutations-linear"
@@ -260,7 +260,7 @@
     "is_numerical": true,
     "question_format": "numerical",
     "notes": "Subtract the number of arrangements where the two E's are together from the total arrangements.",
-    "solution_text": "Let's apply the complement method:\n1) Total arrangements of EAMCET (6 letters with E repeating 2 times):\n   $T_{total} = \\\\frac{6!}{2!} = \\\\frac{720}{2} = 360$\n2) Arrangements where E's are together: bundle them as (EE).\n   Objects: (EE), A, M, C, T (5 objects, no other repetitions).\n   $T_{together} = 5! = 120$\n3) Arrangements where E's are not together:\n   $T = 360 - 120 = 240$.",
+    "solution_text": "Let's apply the complement method:\n1) Total arrangements of EAMCET (6 letters with E repeating 2 times):\n   $T_{total} = \\frac{6!}{2!} = \\frac{720}{2} = 360$\n2) Arrangements where E's are together: bundle them as (EE).\n   Objects: (EE), A, M, C, T (5 objects, no other repetitions).\n   $T_{together} = 5! = 120$\n3) Arrangements where E's are not together:\n   $T = 360 - 120 = 240$.",
     "common_mistake": "Forgetting that 'EE' internally can only be arranged in 1 way, not 2, or neglecting total letter repetition division.",
     "concept_slugs": [
       "pnc-permutations-linear"
@@ -276,7 +276,7 @@
     "is_numerical": true,
     "question_format": "numerical",
     "notes": "Alphabetical order of letters: C, C, H, I, N, O. Count words starting with C, and then proceed letter by letter.",
-    "solution_text": "Alphabetical order of COCHIN letters: C, C, H, I, N, O.\n1) Since C is the first letter alphabetically, let's find the words starting with C:\n   - Word format: C _ _ _ _ _\n   - Remaining letters to arrange: C, H, I, N, O (5 distinct letters).\n   - Number of words starting with C $= 5! = 120$ ways. Wait! COCHIN starts with C, so we should NOT find all words starting with C. Instead, we should find sub-arrangements under C:\n2) Sub-arrangements starting with C:\n   - CC _ _ _ _: remaining letters H, I, N, O $\\\\implies 4! = 24$ words.\n   - CH _ _ _ _: remaining letters C, I, N, O $\\\\implies 4! = 24$ words.\n   - CI _ _ _ _: remaining letters C, H, N, O $\\\\implies 4! = 24$ words.\n   - CN _ _ _ _: remaining letters C, H, I, O $\\\\implies 4! = 24$ words.\n3) Now we reach CO. The alphabetical order of remaining letters is C, H, I, N.\n   - COC _ _ _: remaining letters H, I, N.\n     - COCH _ _: remaining letters I, N.\n       - COCHI _: remaining letters N $\\\\implies$ COCHIN itself is the first word in this group!\n4) Total words preceding COCHIN:\n   $24 \\\\text{ (for CC)} + 24 \\\\text{ (for CH)} + 24 \\\\text{ (for CI)} + 24 \\\\text{ (for CN)} = 96$ words.\n5) Therefore, the rank of COCHIN is $96 + 1 = 97$.",
+    "solution_text": "Alphabetical order of COCHIN letters: C, C, H, I, N, O.\n1) Since C is the first letter alphabetically, let's find the words starting with C:\n   - Word format: C _ _ _ _ _\n   - Remaining letters to arrange: C, H, I, N, O (5 distinct letters).\n   - Number of words starting with C $= 5! = 120$ ways. Wait! COCHIN starts with C, so we should NOT find all words starting with C. Instead, we should find sub-arrangements under C:\n2) Sub-arrangements starting with C:\n   - CC _ _ _ _: remaining letters H, I, N, O $\\implies 4! = 24$ words.\n   - CH _ _ _ _: remaining letters C, I, N, O $\\implies 4! = 24$ words.\n   - CI _ _ _ _: remaining letters C, H, N, O $\\implies 4! = 24$ words.\n   - CN _ _ _ _: remaining letters C, H, I, O $\\implies 4! = 24$ words.\n3) Now we reach CO. The alphabetical order of remaining letters is C, H, I, N.\n   - COC _ _ _: remaining letters H, I, N.\n     - COCH _ _: remaining letters I, N.\n       - COCHI _: remaining letters N $\\implies$ COCHIN itself is the first word in this group!\n4) Total words preceding COCHIN:\n   $24 \\text{ (for CC)} + 24 \\text{ (for CH)} + 24 \\text{ (for CI)} + 24 \\text{ (for CN)} = 96$ words.\n5) Therefore, the rank of COCHIN is $96 + 1 = 97$.",
     "common_mistake": "Incorrectly counting all words starting with C as preceding COCHIN, failing to see COCHIN itself starts with C.",
     "concept_slugs": [
       "pnc-permutations-linear"
@@ -297,7 +297,7 @@
       "D": "90"
     },
     "notes": "Select 2 ladies from 4 ($^4C_2$), and the remaining 3 members from 6 gentlemen ($^6C_3$).",
-    "solution_text": "We need to select exactly 2 ladies and 3 gentlemen:\n1) Selection of 2 ladies from 4:\n   $^4C_2 = \\\\frac{4 \\\\times 3}{2} = 6$ ways.\n2) Selection of 3 gentlemen from 6:\n   $^6C_3 = \\\\frac{6 \\\\times 5 \\\\times 4}{6} = 20$ ways.\n3) Total number of ways to form the committee:\n   $6 \\\\times 20 = 120$.\nOption B is correct.",
+    "solution_text": "We need to select exactly 2 ladies and 3 gentlemen:\n1) Selection of 2 ladies from 4:\n   $^4C_2 = \\frac{4 \\times 3}{2} = 6$ ways.\n2) Selection of 3 gentlemen from 6:\n   $^6C_3 = \\frac{6 \\times 5 \\times 4}{6} = 20$ ways.\n3) Total number of ways to form the committee:\n   $6 \\times 20 = 120$.\nOption B is correct.",
     "common_mistake": "Adding the selections ($6 + 20 = 26$) instead of multiplying them.",
     "concept_slugs": [
       "pnc-combinations-selection"
@@ -332,8 +332,8 @@
     "type": "practice",
     "is_numerical": true,
     "question_format": "numerical",
-    "notes": "Recall the polygon diagonal formula: $D = \\\\frac{n(n-3)}{2}$ for $n$ vertices.",
-    "solution_text": "A decagon has $n = 10$ vertices:\n1) The number of lines formed by joining 10 vertices is $^{10}C_2$.\n2) Subtract the 10 sides of the polygon, as they are not diagonals:\n   $D = ^{10}C_2 - 10$\n   $D = \\\\frac{10 \\\\times 9}{2} - 10 = 45 - 10 = 35$.\n3) Alternatively, use the formula:\n   $D = \\\\frac{10 \\\\times (10-3)}{2} = \\\\frac{10 \\\\times 7}{2} = 35$.",
+    "notes": "Recall the polygon diagonal formula: $D = \\frac{n(n-3)}{2}$ for $n$ vertices.",
+    "solution_text": "A decagon has $n = 10$ vertices:\n1) The number of lines formed by joining 10 vertices is $^{10}C_2$.\n2) Subtract the 10 sides of the polygon, as they are not diagonals:\n   $D = ^{10}C_2 - 10$\n   $D = \\frac{10 \\times 9}{2} - 10 = 45 - 10 = 35$.\n3) Alternatively, use the formula:\n   $D = \\frac{10 \\times (10-3)}{2} = \\frac{10 \\times 7}{2} = 35$.",
     "common_mistake": "Reporting 45 diagonals, forgetting that the 10 outer boundaries are sides, not diagonals.",
     "concept_slugs": [
       "pnc-combinations-selection"
@@ -346,8 +346,8 @@
     "type": "practice",
     "is_numerical": true,
     "question_format": "numerical",
-    "notes": "Use the combination identity: $^nC_x = ^nC_y \\\\implies x = y$ or $x + y = n$.",
-    "solution_text": "Given $^nC_8 = ^nC_2$:\n1) Since $8 \\\\neq 2$, by the identity $^nC_x = ^nC_y \\\\implies x + y = n$:\n   $n = 8 + 2 = 10$.\nThus, $n = 10$.",
+    "notes": "Use the combination identity: $^nC_x = ^nC_y \\implies x = y$ or $x + y = n$.",
+    "solution_text": "Given $^nC_8 = ^nC_2$:\n1) Since $8 \\neq 2$, by the identity $^nC_x = ^nC_y \\implies x + y = n$:\n   $n = 8 + 2 = 10$.\nThus, $n = 10$.",
     "common_mistake": "Claiming $n = 8$ or $n = 2$, violating the equality definition.",
     "concept_slugs": [
       "pnc-combinations-selection"
@@ -363,7 +363,7 @@
     "is_numerical": true,
     "question_format": "numerical",
     "notes": "A triangle requires 3 non-collinear points. Use the formula: $^{total}C_3 - ^{collinear}C_3$.",
-    "solution_text": "To find the number of triangles formed by 10 points where 4 are collinear:\n1) Selecting any 3 points from 10 yields $^{10}C_3$ possible groupings.\n2) If we select 3 points from the 4 collinear points, they will lie on the same line and cannot form a triangle. There are $^4C_3$ such invalid selections.\n3) The total number of valid triangles is:\n   $T = ^{10}C_3 - ^4C_3$\n   $T = \\\\frac{10 \\\\times 9 \\\\times 8}{6} - 4 = 120 - 4 = 116$.",
+    "solution_text": "To find the number of triangles formed by 10 points where 4 are collinear:\n1) Selecting any 3 points from 10 yields $^{10}C_3$ possible groupings.\n2) If we select 3 points from the 4 collinear points, they will lie on the same line and cannot form a triangle. There are $^4C_3$ such invalid selections.\n3) The total number of valid triangles is:\n   $T = ^{10}C_3 - ^4C_3$\n   $T = \\frac{10 \\times 9 \\times 8}{6} - 4 = 120 - 4 = 116$.",
     "common_mistake": "Adding 1 back (similar to the straight lines formula), which is incorrect because 3 collinear points form zero triangles, not one.",
     "concept_slugs": [
       "pnc-combinations-selection"
@@ -371,16 +371,16 @@
   },
   {
     "pattern_group": "pnc-combinations-selection",
-    "title": "The total number of rectangles that can be formed on a standard $8 \\\\times 8$ chessboard is ________.",
+    "title": "The total number of rectangles that can be formed on a standard $8 \\times 8$ chessboard is ________.",
     "difficulty": "hard",
     "type": "pyq",
     "source": "JEE Advanced 2015",
     "correct_answer": "1296",
     "is_numerical": true,
     "question_format": "numerical",
-    "notes": "An $8 \\\\times 8$ grid has 9 horizontal lines and 9 vertical lines. A rectangle is formed by selecting 2 of each.",
-    "solution_text": "A standard chessboard has 8 squares along each side, which means it is formed by:\n- 9 horizontal grid lines\n- 9 vertical grid lines\n1) A rectangle is defined uniquely by selecting any 2 horizontal lines and any 2 vertical lines.\n2) Number of ways to select 2 horizontal lines: $^9C_2 = 36$.\n3) Number of ways to select 2 vertical lines: $^9C_2 = 36$.\n4) Total number of rectangles $= 36 \\\\times 36 = 1296$.",
-    "common_mistake": "Calculating $8^2 + 7^2 + \\\\dots + 1^2 = 204$, which is the number of squares on a chessboard, not the total number of rectangles.",
+    "notes": "An $8 \\times 8$ grid has 9 horizontal lines and 9 vertical lines. A rectangle is formed by selecting 2 of each.",
+    "solution_text": "A standard chessboard has 8 squares along each side, which means it is formed by:\n- 9 horizontal grid lines\n- 9 vertical grid lines\n1) A rectangle is defined uniquely by selecting any 2 horizontal lines and any 2 vertical lines.\n2) Number of ways to select 2 horizontal lines: $^9C_2 = 36$.\n3) Number of ways to select 2 vertical lines: $^9C_2 = 36$.\n4) Total number of rectangles $= 36 \\times 36 = 1296$.",
+    "common_mistake": "Calculating $8^2 + 7^2 + \\dots + 1^2 = 204$, which is the number of squares on a chessboard, not the total number of rectangles.",
     "concept_slugs": [
       "pnc-combinations-selection"
     ]
@@ -399,8 +399,8 @@
       "C": "119",
       "D": "120"
     },
-    "notes": "For identical items, we choose $0, 1, \\\\dots, p$ (p+1 ways). For distinct items, we have $2^r$ choices. Subtract 1 for the empty selection.",
-    "solution_text": "Let's analyze the selection choices:\n1) For 4 identical apples: we can select 0, 1, 2, 3, or 4 apples. This gives $4 + 1 = 5$ choices.\n2) For 5 identical bananas: we can select 0, 1, 2, 3, 4, or 5 bananas. This gives $5 + 1 = 6$ choices.\n3) For 3 distinct oranges: each orange can either be selected or not. This gives $2^3 = 8$ choices.\n4) Total combinations of selections $= 5 \\\\times 6 \\\\times 8 = 240$.\n5) We must exclude the case where no fruit is selected at all (the empty selection):\n   $T = 240 - 1 = 239$.\nOption A is correct.",
+    "notes": "For identical items, we choose $0, 1, \\dots, p$ (p+1 ways). For distinct items, we have $2^r$ choices. Subtract 1 for the empty selection.",
+    "solution_text": "Let's analyze the selection choices:\n1) For 4 identical apples: we can select 0, 1, 2, 3, or 4 apples. This gives $4 + 1 = 5$ choices.\n2) For 5 identical bananas: we can select 0, 1, 2, 3, 4, or 5 bananas. This gives $5 + 1 = 6$ choices.\n3) For 3 distinct oranges: each orange can either be selected or not. This gives $2^3 = 8$ choices.\n4) Total combinations of selections $= 5 \\times 6 \\times 8 = 240$.\n5) We must exclude the case where no fruit is selected at all (the empty selection):\n   $T = 240 - 1 = 239$.\nOption A is correct.",
     "common_mistake": "Selecting 240 (Option B) by forgetting to subtract the case of choosing zero fruits.",
     "concept_slugs": [
       "pnc-combinations-selection"
@@ -421,7 +421,7 @@
       "D": "115"
     },
     "notes": "At least 2 black balls means we can choose exactly 2, 3, or 4 black balls.",
-    "solution_text": "We select 4 balls in total from 6 white and 4 black balls. We want at least 2 black balls:\n1) Case 1: Exactly 2 black balls and 2 white balls:\n   $^4C_2 \\\\times ^6C_2 = 6 \\\\times 15 = 90$ ways.\n2) Case 2: Exactly 3 black balls and 1 white ball:\n   $^4C_3 \\\\times ^6C_1 = 4 \\\\times 6 = 24$ ways.\n3) Case 3: Exactly 4 black balls and 0 white balls:\n   $^4C_4 \\\\times ^6C_0 = 1 \\\\times 1 = 1$ way.\n4) Total ways $= 90 + 24 + 1 = 115$.\nOption D is correct.",
+    "solution_text": "We select 4 balls in total from 6 white and 4 black balls. We want at least 2 black balls:\n1) Case 1: Exactly 2 black balls and 2 white balls:\n   $^4C_2 \\times ^6C_2 = 6 \\times 15 = 90$ ways.\n2) Case 2: Exactly 3 black balls and 1 white ball:\n   $^4C_3 \\times ^6C_1 = 4 \\times 6 = 24$ ways.\n3) Case 3: Exactly 4 black balls and 0 white balls:\n   $^4C_4 \\times ^6C_0 = 1 \\times 1 = 1$ way.\n4) Total ways $= 90 + 24 + 1 = 115$.\nOption D is correct.",
     "common_mistake": "Neglecting Case 3, leading to $90 + 24 = 114$, or making product computation errors.",
     "concept_slugs": [
       "pnc-combinations-selection"
@@ -442,7 +442,7 @@
       "D": "60"
     },
     "notes": "The circular permutation of n distinct objects is $(n-1)!$.",
-    "solution_text": "When arranging $n$ distinct objects in a circle, we fix one person to break symmetry:\n1) For 6 persons, the number of distinct circular seating arrangements is:\n   $(6-1)! = 5! = 5 \\\\times 4 \\\\times 3 \\\\times 2 \\\\times 1 = 120$.\nOption C is correct.",
+    "solution_text": "When arranging $n$ distinct objects in a circle, we fix one person to break symmetry:\n1) For 6 persons, the number of distinct circular seating arrangements is:\n   $(6-1)! = 5! = 5 \\times 4 \\times 3 \\times 2 \\times 1 = 120$.\nOption C is correct.",
     "common_mistake": "Using linear permutations $6! = 720$ (Option A).",
     "concept_slugs": [
       "pnc-circular-permutations"
@@ -458,7 +458,7 @@
     "is_numerical": true,
     "question_format": "numerical",
     "notes": "Arrange the boys in a circle first, then place the girls in the gaps.",
-    "solution_text": "Let's apply the circular gap method:\n1) First, arrange the 5 boys around the circular table:\n   $\\\\text{Ways} = (5-1)! = 4! = 24$ ways.\n2) This creates 5 distinct gaps in a circle between the boys.\n3) Since the boys are already seated, the gaps are distinct. We can place the 5 girls in these 5 gaps in $5! = 120$ ways.\n4) Total arrangements $= 24 \\\\times 120 = 2880$.",
+    "solution_text": "Let's apply the circular gap method:\n1) First, arrange the 5 boys around the circular table:\n   $\\text{Ways} = (5-1)! = 4! = 24$ ways.\n2) This creates 5 distinct gaps in a circle between the boys.\n3) Since the boys are already seated, the gaps are distinct. We can place the 5 girls in these 5 gaps in $5! = 120$ ways.\n4) Total arrangements $= 24 \\times 120 = 2880$.",
     "common_mistake": "Arranging the girls in $(5-1)! = 24$ ways as well, assuming both must be circular permutations, which is incorrect since the boys' positions already define a fixed coordinate system.",
     "concept_slugs": [
       "pnc-circular-permutations"
@@ -471,8 +471,8 @@
     "type": "practice",
     "is_numerical": true,
     "question_format": "numerical",
-    "notes": "For necklaces, clockwise and counter-clockwise arrangements are identical. Thus, the formula is $\\\\frac{(n-1)!}{2}$.",
-    "solution_text": "For 8 beads in a necklace:\n1) A circular arrangement of 8 objects is $(8-1)! = 7! = 5040$ ways.\n2) In a necklace, flipping it over reverses the order of the beads (clockwise and counter-clockwise are equivalent).\n3) Thus, the number of distinct necklaces is:\n   $\\\\frac{7!}{2} = \\\\frac{5040}{2} = 2520$.",
+    "notes": "For necklaces, clockwise and counter-clockwise arrangements are identical. Thus, the formula is $\\frac{(n-1)!}{2}$.",
+    "solution_text": "For 8 beads in a necklace:\n1) A circular arrangement of 8 objects is $(8-1)! = 7! = 5040$ ways.\n2) In a necklace, flipping it over reverses the order of the beads (clockwise and counter-clockwise are equivalent).\n3) Thus, the number of distinct necklaces is:\n   $\\frac{7!}{2} = \\frac{5040}{2} = 2520$.",
     "common_mistake": "Neglecting to divide by 2, yielding $7! = 5040$.",
     "concept_slugs": [
       "pnc-circular-permutations"
@@ -486,8 +486,8 @@
     "is_numerical": true,
     "question_format": "numerical",
     "notes": "Arrange the men first in a circle, then place the women in the gaps.",
-    "solution_text": "To seat men and women alternatingly:\n1) Arrange the 4 men in a circle: $(4-1)! = 3! = 6$ ways.\n2) This creates 4 distinct gaps.\n3) Arrange the 4 women in these 4 gaps: $4! = 24$ ways.\n4) Total ways $= 6 \\\\times 24 = 144$.",
-    "common_mistake": "Calculating $3! \\\\times 3! = 36$ by making both arrangements circular.",
+    "solution_text": "To seat men and women alternatingly:\n1) Arrange the 4 men in a circle: $(4-1)! = 3! = 6$ ways.\n2) This creates 4 distinct gaps.\n3) Arrange the 4 women in these 4 gaps: $4! = 24$ ways.\n4) Total ways $= 6 \\times 24 = 144$.",
+    "common_mistake": "Calculating $3! \\times 3! = 36$ by making both arrangements circular.",
     "concept_slugs": [
       "pnc-circular-permutations"
     ]
@@ -507,7 +507,7 @@
       "D": "96"
     },
     "notes": "Bundle the 2 specific persons together. Arrange the resulting 5 items in a circle, and multiply by 2 for the internal bundle order.",
-    "solution_text": "Let's apply the bundling method:\n1) Bundle the 2 adjacent persons together: (PP).\n2) Now we have 4 remaining persons + 1 bundle $= 5$ objects to arrange in a circle.\n3) Circular arrangements of 5 objects: $(5-1)! = 4! = 24$ ways.\n4) The 2 persons inside the bundle can be arranged in $2! = 2$ ways.\n5) Total arrangements $= 24 \\\\times 2 = 48$.\nOption B is correct.",
+    "solution_text": "Let's apply the bundling method:\n1) Bundle the 2 adjacent persons together: (PP).\n2) Now we have 4 remaining persons + 1 bundle $= 5$ objects to arrange in a circle.\n3) Circular arrangements of 5 objects: $(5-1)! = 4! = 24$ ways.\n4) The 2 persons inside the bundle can be arranged in $2! = 2$ ways.\n5) Total arrangements $= 24 \\times 2 = 48$.\nOption B is correct.",
     "common_mistake": "Neglecting the internal arrangement of the bundle ($2!$), yielding 24 (Option A).",
     "concept_slugs": [
       "pnc-circular-permutations"
@@ -543,8 +543,8 @@
     "correct_answer": "16",
     "is_numerical": true,
     "question_format": "numerical",
-    "notes": "Use the circular selection formula: $\\\\frac{n}{n-k} \\\\cdot ^{n-k}C_k$ where $n=8$ and $k=3$.",
-    "solution_text": "We want to choose $k = 3$ non-adjacent people from $n = 8$ seated in a circle:\n1) The formula for selecting $k$ non-adjacent objects from $n$ in a circle is:\n   $N = \\\\frac{n}{n-k} \\\\cdot ^{n-k}C_k$\n2) Substitute the values:\n   $N = \\\\frac{8}{8-3} \\\\cdot ^{8-3}C_3 = \\\\frac{8}{5} \\\\cdot ^5C_3 = \\\\frac{8}{5} \\\\times 10 = 16$.\nThus, the number of ways is 16.",
+    "notes": "Use the circular selection formula: $\\frac{n}{n-k} \\cdot ^{n-k}C_k$ where $n=8$ and $k=3$.",
+    "solution_text": "We want to choose $k = 3$ non-adjacent people from $n = 8$ seated in a circle:\n1) The formula for selecting $k$ non-adjacent objects from $n$ in a circle is:\n   $N = \\frac{n}{n-k} \\cdot ^{n-k}C_k$\n2) Substitute the values:\n   $N = \\frac{8}{8-3} \\cdot ^{8-3}C_3 = \\frac{8}{5} \\cdot ^5C_3 = \\frac{8}{5} \\times 10 = 16$.\nThus, the number of ways is 16.",
     "common_mistake": "Using the linear selection formula $^{n-k+1}C_k = ^6C_3 = 20$, which fails to account for the circle boundary condition (the 1st and nth elements being adjacent).",
     "concept_slugs": [
       "pnc-circular-permutations"
@@ -565,7 +565,7 @@
       "D": "70"
     },
     "notes": "Apply the circular non-adjacent selection formula for $n=10$ and $k=3$.",
-    "solution_text": "We select $k = 3$ non-adjacent people from $n = 10$ in a circle:\n1) Apply the formula:\n   $N = \\\\frac{n}{n-k} \\\\cdot ^{n-k}C_k$\n   $N = \\\\frac{10}{7} \\\\cdot ^7C_3 = \\\\frac{10}{7} \\\\times \\\\frac{7 \\\\times 6 \\\\times 5}{6} = \\\\frac{10}{7} \\\\times 35 = 50$.\nOption B is correct.",
+    "solution_text": "We select $k = 3$ non-adjacent people from $n = 10$ in a circle:\n1) Apply the formula:\n   $N = \\frac{n}{n-k} \\cdot ^{n-k}C_k$\n   $N = \\frac{10}{7} \\cdot ^7C_3 = \\frac{10}{7} \\times \\frac{7 \\times 6 \\times 5}{6} = \\frac{10}{7} \\times 35 = 50$.\nOption B is correct.",
     "common_mistake": "Applying the linear selection formula which gives $^8C_3 = 56$ (Option C).",
     "concept_slugs": [
       "pnc-circular-permutations"
@@ -580,13 +580,13 @@
     "is_numerical": false,
     "question_format": "mcq",
     "options": {
-      "A": "\\\\frac{12!}{(4!)^3 \\\\times 3!}",
-      "B": "\\\\frac{12!}{4! \\\\times 3!}",
-      "C": "\\\\frac{12!}{(4!)^3}",
-      "D": "\\\\frac{12!}{4!}"
+      "A": "\\frac{12!}{(4!)^3 \\times 3!}",
+      "B": "\\frac{12!}{4! \\times 3!}",
+      "C": "\\frac{12!}{(4!)^3}",
+      "D": "\\frac{12!}{4!}"
     },
     "notes": "Since the books are distributed among 3 distinct students, the order of groups matters. Multiply the group partition by $3!$.",
-    "solution_text": "Let's find the number of ways:\n1) Number of ways to divide 12 books into 3 groups of 4 each (without assignment to students):\n   $\\\\text{Groupings} = \\\\frac{12!}{(4!)^3 \\\\times 3!}$\n2) Since the groups are assigned to 3 distinct students, we multiply by $3!$:\n   $\\\\text{Ways} = \\\\frac{12!}{(4!)^3 \\\\times 3!} \\\\times 3! = \\\\frac{12!}{(4!)^3}$.\nOption C is correct.",
+    "solution_text": "Let's find the number of ways:\n1) Number of ways to divide 12 books into 3 groups of 4 each (without assignment to students):\n   $\\text{Groupings} = \\frac{12!}{(4!)^3 \\times 3!}$\n2) Since the groups are assigned to 3 distinct students, we multiply by $3!$:\n   $\\text{Ways} = \\frac{12!}{(4!)^3 \\times 3!} \\times 3! = \\frac{12!}{(4!)^3}$.\nOption C is correct.",
     "common_mistake": "Dividing by $3!$ (Option A), which represents partitioning into 3 unlabelled groups of equal size, rather than distributing to labeled students.",
     "concept_slugs": [
       "pnc-division-distribution"
@@ -602,7 +602,7 @@
     "is_numerical": true,
     "question_format": "numerical",
     "notes": "Use the positive integer solutions stars-and-bars formula: $^{n-1}C_{r-1}$ where $n=10$ and $r=3$.",
-    "solution_text": "We distribute $n = 10$ identical objects to $r = 3$ children, requiring each child to receive $\\\\ge 1$ object:\n1) This corresponds to finding the number of positive integer solutions to $x_1 + x_2 + x_3 = 10$ with $x_i \\\\ge 1$.\n2) The formula is:\n   $N = ^{n-1}C_{r-1} = ^{10-1}C_{3-1} = ^9C_2 = \\\\frac{9 \\\\times 8}{2} = 36$.",
+    "solution_text": "We distribute $n = 10$ identical objects to $r = 3$ children, requiring each child to receive $\\ge 1$ object:\n1) This corresponds to finding the number of positive integer solutions to $x_1 + x_2 + x_3 = 10$ with $x_i \\ge 1$.\n2) The formula is:\n   $N = ^{n-1}C_{r-1} = ^{10-1}C_{3-1} = ^9C_2 = \\frac{9 \\times 8}{2} = 36$.",
     "common_mistake": "Applying the non-negative integer formula $^{n+r-1}C_{r-1} = ^{12}C_2 = 66$, which allows children to receive zero mangoes.",
     "concept_slugs": [
       "pnc-division-distribution"
@@ -618,7 +618,7 @@
     "is_numerical": true,
     "question_format": "numerical",
     "notes": "Use the non-negative integer solutions stars-and-bars formula: $^{n+r-1}C_{r-1}$ where $n=10$ and $r=3$.",
-    "solution_text": "We want to solve $x + y + z = 10$ with $x, y, z \\\\ge 0$:\n1) Apply the non-negative integer solutions formula:\n   $N = ^{n+r-1}C_{r-1}$\n2) Here $n = 10$ and $r = 3$:\n   $N = ^{10+3-1}C_{3-1} = ^{12}C_2 = \\\\frac{12 \\\\times 11}{2} = 66$.",
+    "solution_text": "We want to solve $x + y + z = 10$ with $x, y, z \\ge 0$:\n1) Apply the non-negative integer solutions formula:\n   $N = ^{n+r-1}C_{r-1}$\n2) Here $n = 10$ and $r = 3$:\n   $N = ^{10+3-1}C_{3-1} = ^{12}C_2 = \\frac{12 \\times 11}{2} = 66$.",
     "common_mistake": "Using $^{n-1}C_{r-1} = ^9C_2 = 36$ which is the positive integer solution count.",
     "concept_slugs": [
       "pnc-division-distribution"
@@ -632,7 +632,7 @@
     "is_numerical": true,
     "question_format": "numerical",
     "notes": "Since coins can go to anyone, we use the non-negative integer solutions formula for $n=8$ and $r=3$.",
-    "solution_text": "This is equivalent to finding the non-negative integer solutions to $x_1 + x_2 + x_3 = 8$:\n1) Formula: $^{n+r-1}C_{r-1}$\n2) Substitute $n = 8$, $r = 3$:\n   $N = ^{8+3-1}C_{3-1} = ^{10}C_2 = \\\\frac{10 \\\\times 9}{2} = 45$.",
+    "solution_text": "This is equivalent to finding the non-negative integer solutions to $x_1 + x_2 + x_3 = 8$:\n1) Formula: $^{n+r-1}C_{r-1}$\n2) Substitute $n = 8$, $r = 3$:\n   $N = ^{8+3-1}C_{3-1} = ^{10}C_2 = \\frac{10 \\times 9}{2} = 45$.",
     "common_mistake": "Treating the coins as distinct, which would yield $3^8 = 6561$.",
     "concept_slugs": [
       "pnc-division-distribution"
@@ -647,13 +647,13 @@
     "is_numerical": false,
     "question_format": "mcq",
     "options": {
-      "A": "\\\\frac{12!}{2! \\\\times 4! \\\\times 6! \\\\times 3!}",
-      "B": "\\\\frac{12!}{(2!)^3}",
-      "C": "\\\\frac{12!}{2! \\\\times 4! \\\\times 6! \\\\times 2!}",
-      "D": "\\\\frac{12!}{2! \\\\times 4! \\\\times 6!}"
+      "A": "\\frac{12!}{2! \\times 4! \\times 6! \\times 3!}",
+      "B": "\\frac{12!}{(2!)^3}",
+      "C": "\\frac{12!}{2! \\times 4! \\times 6! \\times 2!}",
+      "D": "\\frac{12!}{2! \\times 4! \\times 6!}"
     },
     "notes": "Since the group sizes are unequal, no division by a group permutation factorial is needed.",
-    "solution_text": "We divide 12 distinct objects into groups of size 2, 4, and 6:\n1) Select 2 objects for the first group: $^{12}C_2$.\n2) Select 4 objects for the second group from the remaining 10: $^{10}C_4$.\n3) Select 6 objects for the third group from the remaining 6: $^6C_6$.\n4) Total ways:\n   $^{12}C_2 \\\\times ^{10}C_4 \\\\times ^6C_6 = \\\\frac{12!}{2! \\\\times 10!} \\\\times \\\\frac{10!}{4! \\\\times 6!} \\\\times 1 = \\\\frac{12!}{2! \\\\times 4! \\\\times 6!}$.\nOption D is correct.",
+    "solution_text": "We divide 12 distinct objects into groups of size 2, 4, and 6:\n1) Select 2 objects for the first group: $^{12}C_2$.\n2) Select 4 objects for the second group from the remaining 10: $^{10}C_4$.\n3) Select 6 objects for the third group from the remaining 6: $^6C_6$.\n4) Total ways:\n   $^{12}C_2 \\times ^{10}C_4 \\times ^6C_6 = \\frac{12!}{2! \\times 10!} \\times \\frac{10!}{4! \\times 6!} \\times 1 = \\frac{12!}{2! \\times 4! \\times 6!}$.\nOption D is correct.",
     "common_mistake": "Dividing by $3!$ (Option A), which is only done when the group sizes are equal and the groups are unlabelled.",
     "concept_slugs": [
       "pnc-division-distribution"
@@ -667,7 +667,7 @@
     "is_numerical": true,
     "question_format": "numerical",
     "notes": "Use the positive integer solution formula $^{n-1}C_{r-1}$ with $n=12$ and $r=4$.",
-    "solution_text": "We want to solve $x + y + z + w = 12$ with $x, y, z, w \\\\ge 1$:\n1) Formula: $^{n-1}C_{r-1}$\n2) Substitute $n = 12$, $r = 4$:\n   $N = ^{12-1}C_{4-1} = ^{11}C_3 = \\\\frac{11 \\\\times 10 \\\\times 9}{6} = 165$.",
+    "solution_text": "We want to solve $x + y + z + w = 12$ with $x, y, z, w \\ge 1$:\n1) Formula: $^{n-1}C_{r-1}$\n2) Substitute $n = 12$, $r = 4$:\n   $N = ^{12-1}C_{4-1} = ^{11}C_3 = \\frac{11 \\times 10 \\times 9}{6} = 165$.",
     "common_mistake": "Using the non-negative formula which gives $^{15}C_3 = 455$.",
     "concept_slugs": [
       "pnc-division-distribution"
@@ -675,15 +675,15 @@
   },
   {
     "pattern_group": "pnc-division-distribution",
-    "title": "The number of non-negative integer solutions to the inequality $x + y + z \\\\le 8$ is ________.",
+    "title": "The number of non-negative integer solutions to the inequality $x + y + z \\le 8$ is ________.",
     "difficulty": "hard",
     "type": "pyq",
     "source": "JEE Main 2022",
     "correct_answer": "165",
     "is_numerical": true,
     "question_format": "numerical",
-    "notes": "Introduce a slack variable $w \\\\ge 0$ to convert the inequality into the equation $x+y+z+w=8$.",
-    "solution_text": "Let's introduce a non-negative slack variable $w \\\\ge 0$:\n1) The inequality $x + y + z \\\\le 8$ is equivalent to:\n   $x + y + z + w = 8$\n   where $x, y, z, w \\\\ge 0$.\n2) Apply the non-negative integer solutions formula with $n = 8$ and $r = 4$:\n   $N = ^{n+r-1}C_{r-1} = ^{8+4-1}C_{4-1} = ^{11}C_3 = \\\\frac{11 \\\\times 10 \\\\times 9}{6} = 165$.",
+    "notes": "Introduce a slack variable $w \\ge 0$ to convert the inequality into the equation $x+y+z+w=8$.",
+    "solution_text": "Let's introduce a non-negative slack variable $w \\ge 0$:\n1) The inequality $x + y + z \\le 8$ is equivalent to:\n   $x + y + z + w = 8$\n   where $x, y, z, w \\ge 0$.\n2) Apply the non-negative integer solutions formula with $n = 8$ and $r = 4$:\n   $N = ^{n+r-1}C_{r-1} = ^{8+4-1}C_{4-1} = ^{11}C_3 = \\frac{11 \\times 10 \\times 9}{6} = 165$.",
     "common_mistake": "Summing separate counts for equations equal to 0, 1, ..., 8 which is correct but much slower and prone to arithmetic slip-ups.",
     "concept_slugs": [
       "pnc-division-distribution"
@@ -698,7 +698,7 @@
     "is_numerical": true,
     "question_format": "numerical",
     "notes": "This is equivalent to finding the number of onto functions from a set of size 5 to a set of size 3.",
-    "solution_text": "We distribute 5 distinct balls to 3 distinct boxes with no empty box. Let's use the formula for onto distributions (Stirling numbers of the second kind multiplied by $3!$):\n1) The possible partition structures of 5 into 3 groups are:\n   - $3, 1, 1$: ways $= \\\\frac{5!}{3! \\\\times 1! \\\\times 1! \\\\times 2!} \\\\times 3! = 10 \\\\times 6 = 60$\n   - $2, 2, 1$: ways $= \\\\frac{5!}{2! \\\\times 2! \\\\times 1! \\\\times 2!} \\\\times 3! = 15 \\\\times 6 = 90$\n2) Total ways $= 60 + 90 = 150$.\n3) Alternatively, use Principle of Inclusion-Exclusion:\n   Total distributions $= 3^5 = 243$.\n   Subtract boxes empty:\n   - 1 box empty: $^3C_1 \\\\times 2^5 = 3 \\\\times 32 = 96$\n   - 2 boxes empty: $^3C_2 \\\\times 1^5 = 3 \\\\times 1 = 3$\n   $N = 243 - 96 + 3 = 150$.",
+    "solution_text": "We distribute 5 distinct balls to 3 distinct boxes with no empty box. Let's use the formula for onto distributions (Stirling numbers of the second kind multiplied by $3!$):\n1) The possible partition structures of 5 into 3 groups are:\n   - $3, 1, 1$: ways $= \\frac{5!}{3! \\times 1! \\times 1! \\times 2!} \\times 3! = 10 \\times 6 = 60$\n   - $2, 2, 1$: ways $= \\frac{5!}{2! \\times 2! \\times 1! \\times 2!} \\times 3! = 15 \\times 6 = 90$\n2) Total ways $= 60 + 90 = 150$.\n3) Alternatively, use Principle of Inclusion-Exclusion:\n   Total distributions $= 3^5 = 243$.\n   Subtract boxes empty:\n   - 1 box empty: $^3C_1 \\times 2^5 = 3 \\times 32 = 96$\n   - 2 boxes empty: $^3C_2 \\times 1^5 = 3 \\times 1 = 3$\n   $N = 243 - 96 + 3 = 150$.",
     "common_mistake": "Assuming balls are identical, using the stars and bars formula to get $^4C_2 = 6$.",
     "concept_slugs": [
       "pnc-division-distribution"
@@ -718,8 +718,8 @@
       "C": "3",
       "D": "0"
     },
-    "notes": "Apply the derangement formula $D_n = n! \\\\sum_{k=0}^{n} \\\\frac{(-1)^k}{k!}$ for $n=3$.",
-    "solution_text": "We want to find the number of derangements of 3 objects ($D_3$):\n1) Apply the formula:\n   $D_3 = 3! \\\\left( 1 - 1 + \\\\frac{1}{2!} - \\\\frac{1}{3!} \\\\right)$\n   $D_3 = 6 \\\\left( \\\\frac{1}{2} - \\\\frac{1}{6} \\\\right) = 6 \\\\left( \\\\frac{2}{6} \\\\right) = 2$.\nOption B is correct.",
+    "notes": "Apply the derangement formula $D_n = n! \\sum_{k=0}^{n} \\frac{(-1)^k}{k!}$ for $n=3$.",
+    "solution_text": "We want to find the number of derangements of 3 objects ($D_3$):\n1) Apply the formula:\n   $D_3 = 3! \\left( 1 - 1 + \\frac{1}{2!} - \\frac{1}{3!} \\right)$\n   $D_3 = 6 \\left( \\frac{1}{2} - \\frac{1}{6} \\right) = 6 \\left( \\frac{2}{6} \\right) = 2$.\nOption B is correct.",
     "common_mistake": "Assuming the answer is 1 or 3.",
     "concept_slugs": [
       "pnc-derangements-inclusion-exclusion"
@@ -735,7 +735,7 @@
     "is_numerical": true,
     "question_format": "numerical",
     "notes": "Subtract the number of complete derangements of 4 objects ($D_4$) from the total arrangements.",
-    "solution_text": "Let's apply the complement method:\n1) Total ways to place 4 letters in 4 envelopes: $4! = 24$.\n2) Number of ways in which all 4 letters go into wrong envelopes (derangement $D_4$):\n   $D_4 = 4! \\\\left( 1 - 1 + \\\\frac{1}{2!} - \\\\frac{1}{3!} + \\\\frac{1}{4!} \\\\right) = 24 \\\\left( \\\\frac{1}{2} - \\\\frac{1}{6} + \\\\frac{1}{24} \\\\right) = 12 - 4 + 1 = 9$.\n3) Number of ways where at least one letter goes to its correct envelope:\n   $T = 24 - 9 = 15$.",
+    "solution_text": "Let's apply the complement method:\n1) Total ways to place 4 letters in 4 envelopes: $4! = 24$.\n2) Number of ways in which all 4 letters go into wrong envelopes (derangement $D_4$):\n   $D_4 = 4! \\left( 1 - 1 + \\frac{1}{2!} - \\frac{1}{3!} + \\frac{1}{4!} \\right) = 24 \\left( \\frac{1}{2} - \\frac{1}{6} + \\frac{1}{24} \\right) = 12 - 4 + 1 = 9$.\n3) Number of ways where at least one letter goes to its correct envelope:\n   $T = 24 - 9 = 15$.",
     "common_mistake": "Claiming $D_4 = 8$ due to summation errors, leading to an incorrect result of 16.",
     "concept_slugs": [
       "pnc-derangements-inclusion-exclusion"
@@ -770,7 +770,7 @@
     "is_numerical": true,
     "question_format": "numerical",
     "notes": "Evaluate the derangement formula for $n = 4$.",
-    "solution_text": "Using the derangement formula for $n = 4$:\n1) $D_4 = 4! \\\\left( 1 - 1 + \\\\frac{1}{2!} - \\\\frac{1}{3!} + \\\\frac{1}{4!} \\\\right)$\n2) $D_4 = 24 \\\\left( \\\\frac{1}{2} - \\\\frac{1}{6} + \\\\frac{1}{24} \\\\right) = 12 - 4 + 1 = 9$.",
+    "solution_text": "Using the derangement formula for $n = 4$:\n1) $D_4 = 4! \\left( 1 - 1 + \\frac{1}{2!} - \\frac{1}{3!} + \\frac{1}{4!} \\right)$\n2) $D_4 = 24 \\left( \\frac{1}{2} - \\frac{1}{6} + \\frac{1}{24} \\right) = 12 - 4 + 1 = 9$.",
     "common_mistake": "Writing 8 or 10 due to arithmetic slips.",
     "concept_slugs": [
       "pnc-derangements-inclusion-exclusion"
@@ -786,7 +786,7 @@
     "is_numerical": true,
     "question_format": "numerical",
     "notes": "Choose the 2 correct letters ($^5C_2$) and derange the remaining 3 letters ($D_3$).",
-    "solution_text": "We want exactly 2 letters to go into correct envelopes:\n1) Choose 2 letters out of 5 to be placed in correct envelopes:\n   $^5C_2 = 10$ ways.\n2) The remaining 3 letters must go into wrong envelopes (derangement of 3 objects $D_3$):\n   $D_3 = 2$ ways.\n3) Total ways $= 10 \\\\times 2 = 20$.",
+    "solution_text": "We want exactly 2 letters to go into correct envelopes:\n1) Choose 2 letters out of 5 to be placed in correct envelopes:\n   $^5C_2 = 10$ ways.\n2) The remaining 3 letters must go into wrong envelopes (derangement of 3 objects $D_3$):\n   $D_3 = 2$ ways.\n3) Total ways $= 10 \\times 2 = 20$.",
     "common_mistake": "Assuming the remaining 3 letters can be arranged in any way, neglecting that they must go into wrong envelopes to avoid increasing the 'correct letters' count.",
     "concept_slugs": [
       "pnc-derangements-inclusion-exclusion"
@@ -800,7 +800,7 @@
     "is_numerical": true,
     "question_format": "numerical",
     "notes": "Choose 3 correct envelopes ($^6C_3$) and derange the remaining 3 ($D_3$).",
-    "solution_text": "We want exactly 3 letters to go into correct envelopes:\n1) Select the 3 correct letters: $^6C_3 = \\\\frac{6 \\\\times 5 \\\\times 4}{6} = 20$ ways.\n2) Derange the remaining 3 letters: $D_3 = 2$ ways.\n3) Total ways $= 20 \\\\times 2 = 40$.",
+    "solution_text": "We want exactly 3 letters to go into correct envelopes:\n1) Select the 3 correct letters: $^6C_3 = \\frac{6 \\times 5 \\times 4}{6} = 20$ ways.\n2) Derange the remaining 3 letters: $D_3 = 2$ ways.\n3) Total ways $= 20 \\times 2 = 40$.",
     "common_mistake": "Only calculating $^6C_3 = 20$, neglecting the derangement of the other 3 envelopes.",
     "concept_slugs": [
       "pnc-derangements-inclusion-exclusion"
@@ -813,8 +813,8 @@
     "type": "practice",
     "is_numerical": true,
     "question_format": "numerical",
-    "notes": "Apply the three-set inclusion-exclusion formula: $n(P \\\\cup C \\\\cup M)$.",
-    "solution_text": "Let $P, C, M$ be the sets of students studying Physics, Chemistry, and Math respectively:\n1) $n(P) = 50$, $n(C) = 40$, $n(M) = 30$.\n2) $n(P \\\\cap C) = 15$, $n(P \\\\cap M) = 10$, $n(C \\\\cap M) = 8$.\n3) $n(P \\\\cap C \\\\cap M) = 5$.\n4) The number of students studying at least one subject is:\n   $n(P \\\\cup C \\\\cup M) = (50 + 40 + 30) - (15 + 10 + 8) + 5$\n   $n(P \\\\cup C \\\\cup M) = 120 - 33 + 5 = 92$.",
+    "notes": "Apply the three-set inclusion-exclusion formula: $n(P \\cup C \\cup M)$.",
+    "solution_text": "Let $P, C, M$ be the sets of students studying Physics, Chemistry, and Math respectively:\n1) $n(P) = 50$, $n(C) = 40$, $n(M) = 30$.\n2) $n(P \\cap C) = 15$, $n(P \\cap M) = 10$, $n(C \\cap M) = 8$.\n3) $n(P \\cap C \\cap M) = 5$.\n4) The number of students studying at least one subject is:\n   $n(P \\cup C \\cup M) = (50 + 40 + 30) - (15 + 10 + 8) + 5$\n   $n(P \\cup C \\cup M) = 120 - 33 + 5 = 92$.",
     "common_mistake": "Neglecting to add the triple intersection ($+5$) at the end, leading to an incorrect count of 87.",
     "concept_slugs": [
       "pnc-derangements-inclusion-exclusion"
@@ -828,7 +828,7 @@
     "is_numerical": true,
     "question_format": "numerical",
     "notes": "Evaluate the derangement formula for $n = 5$ or use the recurrence relation $D_5 = 4(D_4 + D_3)$.",
-    "solution_text": "Let's find $D_5$:\n1) Method 1: Using the formula:\n   $D_5 = 5! \\\\left( 1 - 1 + \\\\frac{1}{2!} - \\\\frac{1}{3!} + \\\\frac{1}{4!} - \\\\frac{1}{5!} \\\\right)$\n   $D_5 = 120 \\\\left( \\\\frac{1}{2} - \\\\frac{1}{6} + \\\\frac{1}{24} - \\\\frac{1}{120} \\\\right) = 60 - 20 + 5 - 1 = 44$.\n2) Method 2: Recurrence relation:\n   $D_5 = 4(D_4 + D_3) = 4(9 + 2) = 4(11) = 44$.\nThus, the number of derangements is 44.",
+    "solution_text": "Let's find $D_5$:\n1) Method 1: Using the formula:\n   $D_5 = 5! \\left( 1 - 1 + \\frac{1}{2!} - \\frac{1}{3!} + \\frac{1}{4!} - \\frac{1}{5!} \\right)$\n   $D_5 = 120 \\left( \\frac{1}{2} - \\frac{1}{6} + \\frac{1}{24} - \\frac{1}{120} \\right) = 60 - 20 + 5 - 1 = 44$.\n2) Method 2: Recurrence relation:\n   $D_5 = 4(D_4 + D_3) = 4(9 + 2) = 4(11) = 44$.\nThus, the number of derangements is 44.",
     "common_mistake": "Writing 45 or 40 due to quick calculation errors.",
     "concept_slugs": [
       "pnc-derangements-inclusion-exclusion"

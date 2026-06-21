@@ -1,7 +1,7 @@
 [
   {
     "pattern_group": "limits-algebraic-trig",
-    "title": "Evaluate the algebraic limit: $L = \\\\lim_{x \\\\to 2} \\\\frac{x^2 - 4}{x - 2}$. The value of $L$ is:",
+    "title": "Evaluate the algebraic limit: $L = \\lim_{x \\to 2} \\frac{x^2 - 4}{x - 2}$. The value of $L$ is:",
     "difficulty": "easy",
     "type": "concept",
     "correct_answer": "A",
@@ -14,15 +14,15 @@
       "D": "Does not exist"
     },
     "notes": "Factor the numerator using the difference of squares and cancel the common term (x - 2).",
-    "solution_text": "Let's evaluate the limit by factoring:\\n1) The given expression is $\\\\frac{x^2 - 4}{x - 2}$.\\n2) Factor the numerator: $x^2 - 4 = (x - 2)(x + 2)$.\\n3) Substitute into the limit: $\\\\lim_{x \\\\to 2} \\\\frac{(x - 2)(x + 2)}{x - 2}$.\\n4) Since $x \\\\to 2$, we have $x \\\\neq 2$, so we can cancel $x - 2$:\\n   $\\\\lim_{x \\\\to 2} (x + 2) = 2 + 2 = 4$.\\nOption A is correct.",
-    "common_mistake": "Directly substituting $x = 2$ and getting the indeterminate form $\\\\frac{0}{0}$ without factoring.",
+    "solution_text": "Let's evaluate the limit by factoring:\\n1) The given expression is $\\frac{x^2 - 4}{x - 2}$.\\n2) Factor the numerator: $x^2 - 4 = (x - 2)(x + 2)$.\\n3) Substitute into the limit: $\\lim_{x \\to 2} \\frac{(x - 2)(x + 2)}{x - 2}$.\\n4) Since $x \\to 2$, we have $x \\neq 2$, so we can cancel $x - 2$:\\n   $\\lim_{x \\to 2} (x + 2) = 2 + 2 = 4$.\\nOption A is correct.",
+    "common_mistake": "Directly substituting $x = 2$ and getting the indeterminate form $\\frac{0}{0}$ without factoring.",
     "concept_slugs": [
       "limits-algebraic-trig"
     ]
   },
   {
     "pattern_group": "limits-algebraic-trig",
-    "title": "Evaluate the trigonometric limit: $L = \\\\lim_{x \\\\to 0} \\\\frac{\\\\sin 5x}{3x}$. The value of $L$ is:",
+    "title": "Evaluate the trigonometric limit: $L = \\lim_{x \\to 0} \\frac{\\sin 5x}{3x}$. The value of $L$ is:",
     "difficulty": "easy",
     "type": "practice",
     "correct_answer": "B",
@@ -30,12 +30,12 @@
     "question_format": "mcq",
     "options": {
       "A": "$1$",
-      "B": "$\\\\frac{5}{3}$",
-      "C": "$\\\\frac{3}{5}$",
+      "B": "$\\frac{5}{3}$",
+      "C": "$\\frac{3}{5}$",
       "D": "$0$"
     },
-    "notes": "Use the standard limit identity $\\\\lim_{u \\\\to 0} \\\\frac{\\\\sin u}{u} = 1$ by adjusting the denominator.",
-    "solution_text": "Let's compute the limit using the standard identity:\\n1) We know that $\\\\lim_{u \\\\to 0} \\\\frac{\\\\sin u}{u} = 1$.\\n2) Rewrite the expression to match this form: $\\\\frac{\\\\sin 5x}{3x} = \\\\frac{5}{3} \\\\times \\\\frac{\\\\sin 5x}{5x}$.\\n3) Apply the limit as $x \\\\to 0$ (which implies $5x \\\\to 0$):\\n   $\\\\lim_{x \\\\to 0} \\\\frac{\\\\sin 5x}{3x} = \\\\frac{5}{3} \\\\times \\\\lim_{5x \\\\to 0} \\\\frac{\\\\sin 5x}{5x} = \\\\frac{5}{3} \\\\times 1 = \\\\frac{5}{3}$.\\nOption B is correct.",
+    "notes": "Use the standard limit identity $\\lim_{u \\to 0} \\frac{\\sin u}{u} = 1$ by adjusting the denominator.",
+    "solution_text": "Let's compute the limit using the standard identity:\\n1) We know that $\\lim_{u \\to 0} \\frac{\\sin u}{u} = 1$.\\n2) Rewrite the expression to match this form: $\\frac{\\sin 5x}{3x} = \\frac{5}{3} \\times \\frac{\\sin 5x}{5x}$.\\n3) Apply the limit as $x \\to 0$ (which implies $5x \\to 0$):\\n   $\\lim_{x \\to 0} \\frac{\\sin 5x}{3x} = \\frac{5}{3} \\times \\lim_{5x \\to 0} \\frac{\\sin 5x}{5x} = \\frac{5}{3} \\times 1 = \\frac{5}{3}$.\\nOption B is correct.",
     "common_mistake": "Assuming the limit is 1 by simply ignoring the coefficients 5 and 3.",
     "concept_slugs": [
       "limits-algebraic-trig"
@@ -43,7 +43,7 @@
   },
   {
     "pattern_group": "limits-algebraic-trig",
-    "title": "Evaluate the limit: $L = \\\\lim_{x \\\\to 0} \\\\frac{1 - \\\\cos 4x}{x^2}$. The value of $L$ is:",
+    "title": "Evaluate the limit: $L = \\lim_{x \\to 0} \\frac{1 - \\cos 4x}{x^2}$. The value of $L$ is:",
     "difficulty": "medium",
     "type": "pyq",
     "source": "JEE Main 2021",
@@ -56,29 +56,29 @@
       "C": "2",
       "D": "1"
     },
-    "notes": "Apply the trigonometric double angle identity $1 - \\\\cos 2u = 2\\\\sin^2 u$, or use L'Hôpital's rule.",
-    "solution_text": "Let's solve this using trigonometric identities:\\n1) Recall the identity $1 - \\\\cos 4x = 2\\\\sin^2 2x$.\\n2) Substitute this into the limit:\\n   $L = \\\\lim_{x \\\\to 0} \\\\frac{2\\\\sin^2 2x}{x^2}$.\\n3) Adjust the denominator to group with the sine term:\\n   $L = 2 \\\\lim_{x \\\\to 0} \\\\left(\\\\frac{\\\\sin 2x}{x}\\\\right)^2 = 2 \\\\lim_{x \\\\to 0} \\\\left(2 \\\\times \\\\frac{\\\\sin 2x}{2x}\\\\right)^2$.\\n4) Since $\\\\lim_{2x \\\\to 0} \\\\frac{\\\\sin 2x}{2x} = 1$, we get:\\n   $L = 2 \\\\times (2 \\\\times 1)^2 = 2 \\\\times 4 = 8$.\\nOption A is correct.",
-    "common_mistake": "Omitting the squaring factor and calculating $2 \\\\times 2 = 4$ instead of $2 \\\\times 2^2 = 8$.",
+    "notes": "Apply the trigonometric double angle identity $1 - \\cos 2u = 2\\sin^2 u$, or use L'Hôpital's rule.",
+    "solution_text": "Let's solve this using trigonometric identities:\\n1) Recall the identity $1 - \\cos 4x = 2\\sin^2 2x$.\\n2) Substitute this into the limit:\\n   $L = \\lim_{x \\to 0} \\frac{2\\sin^2 2x}{x^2}$.\\n3) Adjust the denominator to group with the sine term:\\n   $L = 2 \\lim_{x \\to 0} \\left(\\frac{\\sin 2x}{x}\\right)^2 = 2 \\lim_{x \\to 0} \\left(2 \\times \\frac{\\sin 2x}{2x}\\right)^2$.\\n4) Since $\\lim_{2x \\to 0} \\frac{\\sin 2x}{2x} = 1$, we get:\\n   $L = 2 \\times (2 \\times 1)^2 = 2 \\times 4 = 8$.\\nOption A is correct.",
+    "common_mistake": "Omitting the squaring factor and calculating $2 \\times 2 = 4$ instead of $2 \\times 2^2 = 8$.",
     "concept_slugs": [
       "limits-algebraic-trig"
     ]
   },
   {
     "pattern_group": "limits-algebraic-trig",
-    "title": "Find the limit: $L = \\\\lim_{x \\\\to 3} \\\\frac{\\\\sqrt{x+6} - 3}{x - 3}$. The value of $L$ is:",
+    "title": "Find the limit: $L = \\lim_{x \\to 3} \\frac{\\sqrt{x+6} - 3}{x - 3}$. The value of $L$ is:",
     "difficulty": "medium",
     "type": "practice",
     "correct_answer": "A",
     "is_numerical": false,
     "question_format": "mcq",
     "options": {
-      "A": "$\\\\frac{1}{6}$",
-      "B": "$\\\\frac{1}{3}$",
-      "C": "$\\\\frac{1}{2}$",
+      "A": "$\\frac{1}{6}$",
+      "B": "$\\frac{1}{3}$",
+      "C": "$\\frac{1}{2}$",
       "D": "$1$"
     },
-    "notes": "Rationalize the numerator by multiplying the numerator and denominator by the conjugate $\\\\sqrt{x+6} + 3$.",
-    "solution_text": "Let's evaluate the limit by rationalizing the numerator:\\n1) Multiply the numerator and denominator by $\\\\sqrt{x+6} + 3$:\\n   $\\\\frac{\\\\sqrt{x+6} - 3}{x - 3} \\\\times \\\\frac{\\\\sqrt{x+6} + 3}{\\\\sqrt{x+6} + 3} = \\\\frac{(x+6) - 9}{(x - 3)(\\\\sqrt{x+6} + 3)} = \\\\frac{x - 3}{(x - 3)(\\\\sqrt{x+6} + 3)}$.\\n2) Cancel the common term $x - 3$ (valid since $x \\\\neq 3$):\\n   $\\\\lim_{x \\\\to 3} \\\\frac{1}{\\\\sqrt{x+6} + 3}$.\\n3) Substitute $x = 3$:\\n   $L = \\\\frac{1}{\\\\sqrt{3+6} + 3} = \\\\frac{1}{3 + 3} = \\\\frac{1}{6}$.\\nOption A is correct.",
+    "notes": "Rationalize the numerator by multiplying the numerator and denominator by the conjugate $\\sqrt{x+6} + 3$.",
+    "solution_text": "Let's evaluate the limit by rationalizing the numerator:\\n1) Multiply the numerator and denominator by $\\sqrt{x+6} + 3$:\\n   $\\frac{\\sqrt{x+6} - 3}{x - 3} \\times \\frac{\\sqrt{x+6} + 3}{\\sqrt{x+6} + 3} = \\frac{(x+6) - 9}{(x - 3)(\\sqrt{x+6} + 3)} = \\frac{x - 3}{(x - 3)(\\sqrt{x+6} + 3)}$.\\n2) Cancel the common term $x - 3$ (valid since $x \\neq 3$):\\n   $\\lim_{x \\to 3} \\frac{1}{\\sqrt{x+6} + 3}$.\\n3) Substitute $x = 3$:\\n   $L = \\frac{1}{\\sqrt{3+6} + 3} = \\frac{1}{3 + 3} = \\frac{1}{6}$.\\nOption A is correct.",
     "common_mistake": "Arithmetic errors during rationalization or in computing the square root.",
     "concept_slugs": [
       "limits-algebraic-trig"
@@ -86,7 +86,7 @@
   },
   {
     "pattern_group": "limits-algebraic-trig",
-    "title": "Evaluate the limit: $L = \\\\lim_{x \\\\to 0} \\\\frac{\\\\cos(\\\\sin x) - 1}{x^2}$. The value of $L$ is:",
+    "title": "Evaluate the limit: $L = \\lim_{x \\to 0} \\frac{\\cos(\\sin x) - 1}{x^2}$. The value of $L$ is:",
     "difficulty": "hard",
     "type": "pyq",
     "source": "JEE Advanced 2020",
@@ -94,28 +94,28 @@
     "is_numerical": false,
     "question_format": "mcq",
     "options": {
-      "A": "$\\\\frac{1}{2}$",
+      "A": "$\\frac{1}{2}$",
       "B": "$0$",
-      "C": "$-\\\\frac{1}{2}$",
+      "C": "$-\\frac{1}{2}$",
       "D": "$-1$"
     },
-    "notes": "Rewrite the expression as $\\\\frac{\\\\cos(\\\\sin x) - 1}{\\\\sin^2 x} \\\\times \\\\frac{\\\\sin^2 x}{x^2}$ to split the limit.",
-    "solution_text": "Let's split the limit by introducing $\\\\sin^2 x$ in the denominator and numerator:\\n1) Rewrite the limit expression:\\n   $L = \\\\lim_{x \\\\to 0} \\\\left( \\\\frac{\\\\cos(\\\\sin x) - 1}{\\\\sin^2 x} \\\\times \\\\frac{\\\\sin^2 x}{x^2} \\\\right)$.\\n2) Let $u = \\\\sin x$. As $x \\\\to 0$, $u \\\\to 0$.\\n   The first part becomes: $\\\\lim_{u \\\\to 0} \\\\frac{\\\\cos u - 1}{u^2} = -\\\\lim_{u \\\\to 0} \\\\frac{1 - \\\\cos u}{u^2} = -\\\\frac{1}{2}$.\\n3) The second part is a standard limit: $\\\\lim_{x \\\\to 0} \\\\left(\\\\frac{\\\\sin x}{x}\\\\right)^2 = 1^2 = 1$.\\n4) Multiply the two limits together:\\n   $L = -\\\\frac{1}{2} \\\\times 1 = -\\\\frac{1}{2}$.\\nOption C is correct.",
-    "common_mistake": "Neglecting the minus sign in the identity $\\\\lim_{u \\\\to 0} \\\\frac{\\\\cos u - 1}{u^2} = -1/2$, resulting in Option A.",
+    "notes": "Rewrite the expression as $\\frac{\\cos(\\sin x) - 1}{\\sin^2 x} \\times \\frac{\\sin^2 x}{x^2}$ to split the limit.",
+    "solution_text": "Let's split the limit by introducing $\\sin^2 x$ in the denominator and numerator:\\n1) Rewrite the limit expression:\\n   $L = \\lim_{x \\to 0} \\left( \\frac{\\cos(\\sin x) - 1}{\\sin^2 x} \\times \\frac{\\sin^2 x}{x^2} \\right)$.\\n2) Let $u = \\sin x$. As $x \\to 0$, $u \\to 0$.\\n   The first part becomes: $\\lim_{u \\to 0} \\frac{\\cos u - 1}{u^2} = -\\lim_{u \\to 0} \\frac{1 - \\cos u}{u^2} = -\\frac{1}{2}$.\\n3) The second part is a standard limit: $\\lim_{x \\to 0} \\left(\\frac{\\sin x}{x}\\right)^2 = 1^2 = 1$.\\n4) Multiply the two limits together:\\n   $L = -\\frac{1}{2} \\times 1 = -\\frac{1}{2}$.\\nOption C is correct.",
+    "common_mistake": "Neglecting the minus sign in the identity $\\lim_{u \\to 0} \\frac{\\cos u - 1}{u^2} = -1/2$, resulting in Option A.",
     "concept_slugs": [
       "limits-algebraic-trig"
     ]
   },
   {
     "pattern_group": "limits-algebraic-trig",
-    "title": "Evaluate the limit: $L = \\\\lim_{x \\\\to 1} \\\\frac{x^3 - 1}{x - 1}$. The value of $L$ is ________.",
+    "title": "Evaluate the limit: $L = \\lim_{x \\to 1} \\frac{x^3 - 1}{x - 1}$. The value of $L$ is ________.",
     "difficulty": "easy",
     "type": "practice",
     "correct_answer": "3",
     "is_numerical": true,
     "question_format": "numerical",
     "notes": "Use the formula for difference of cubes: a^3 - b^3 = (a-b)(a^2 + ab + b^2).",
-    "solution_text": "Let's factor the numerator:\\n1) We have $x^3 - 1 = (x - 1)(x^2 + x + 1)$.\\n2) Substitute into the limit: $\\\\lim_{x \\\\to 1} \\\\frac{(x - 1)(x^2 + x + 1)}{x - 1}$.\\n3) Cancel $x - 1$:\\n   $\\\\lim_{x \\\\to 1} (x^2 + x + 1) = 1^2 + 1 + 1 = 3$.\\nThe value of the limit is 3.",
+    "solution_text": "Let's factor the numerator:\\n1) We have $x^3 - 1 = (x - 1)(x^2 + x + 1)$.\\n2) Substitute into the limit: $\\lim_{x \\to 1} \\frac{(x - 1)(x^2 + x + 1)}{x - 1}$.\\n3) Cancel $x - 1$:\\n   $\\lim_{x \\to 1} (x^2 + x + 1) = 1^2 + 1 + 1 = 3$.\\nThe value of the limit is 3.",
     "common_mistake": "Dividing incorrectly or getting stuck in the 0/0 form.",
     "concept_slugs": [
       "limits-algebraic-trig"
@@ -123,7 +123,7 @@
   },
   {
     "pattern_group": "limits-algebraic-trig",
-    "title": "If the limit is represented by $L = \\\\lim_{x \\\\to 0} \\\\frac{\\\\tan x - \\\\sin x}{x^3}$, then the value of $2L$ is ________.",
+    "title": "If the limit is represented by $L = \\lim_{x \\to 0} \\frac{\\tan x - \\sin x}{x^3}$, then the value of $2L$ is ________.",
     "difficulty": "medium",
     "type": "pyq",
     "source": "JEE Main 2022",
@@ -131,7 +131,7 @@
     "is_numerical": true,
     "question_format": "numerical",
     "notes": "Express tan x as sin x / cos x, factor out sin x, and apply standard trigonometric limits.",
-    "solution_text": "Let's simplify the expression:\\n1) Write $\\\\tan x = \\\\frac{\\\\sin x}{\\\\cos x}$:\\n   $\\\\frac{\\\\tan x - \\\\sin x}{x^3} = \\\\frac{\\\\frac{\\\\sin x}{\\\\cos x} - \\\\sin x}{x^3} = \\\\frac{\\\\sin x (1 - \\\\cos x)}{x^3 \\\\cos x}$.\\n2) Group the terms:\\n   $\\\\left( \\\\frac{\\\\sin x}{x} \\\\right) \\\\times \\\\left( \\\\frac{1 - \\\\cos x}{x^2} \\\\right) \\\\times \\\\left( \\\\frac{1}{\\\\cos x} \\\\right)$.\\n3) Apply the limits as $x \\\\to 0$:\\n   - $\\\\lim_{x \\\\to 0} \\\\frac{\\\\sin x}{x} = 1$\\n   - $\\\\lim_{x \\\\to 0} \\\\frac{1 - \\\\cos x}{x^2} = \\\\frac{1}{2}$\\n   - $\\\\lim_{x \\\\to 0} \\\\frac{1}{\\\\cos x} = 1$\\n4) Multiply the limits:\\n   $L = 1 \\\\times \\\\frac{1}{2} \\\\times 1 = \\\\frac{1}{2}$.\\n5) Calculate $2L = 2 \\\\times \\\\frac{1}{2} = 1$.\\nThe answer is 1.",
+    "solution_text": "Let's simplify the expression:\\n1) Write $\\tan x = \\frac{\\sin x}{\\cos x}$:\\n   $\\frac{\\tan x - \\sin x}{x^3} = \\frac{\\frac{\\sin x}{\\cos x} - \\sin x}{x^3} = \\frac{\\sin x (1 - \\cos x)}{x^3 \\cos x}$.\\n2) Group the terms:\\n   $\\left( \\frac{\\sin x}{x} \\right) \\times \\left( \\frac{1 - \\cos x}{x^2} \\right) \\times \\left( \\frac{1}{\\cos x} \\right)$.\\n3) Apply the limits as $x \\to 0$:\\n   - $\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$\\n   - $\\lim_{x \\to 0} \\frac{1 - \\cos x}{x^2} = \\frac{1}{2}$\\n   - $\\lim_{x \\to 0} \\frac{1}{\\cos x} = 1$\\n4) Multiply the limits:\\n   $L = 1 \\times \\frac{1}{2} \\times 1 = \\frac{1}{2}$.\\n5) Calculate $2L = 2 \\times \\frac{1}{2} = 1$.\\nThe answer is 1.",
     "common_mistake": "Forgetting to multiply by 2 at the end and writing 0.5 or 1/2.",
     "concept_slugs": [
       "limits-algebraic-trig"
@@ -139,22 +139,22 @@
   },
   {
     "pattern_group": "limits-algebraic-trig",
-    "title": "If the limit is represented by $L = \\\\lim_{x \\\\to 0} \\\\frac{\\\\sin(2x) + 3\\\\sin x}{x}$, then the value of the integer $L$ is ________.",
+    "title": "If the limit is represented by $L = \\lim_{x \\to 0} \\frac{\\sin(2x) + 3\\sin x}{x}$, then the value of the integer $L$ is ________.",
     "difficulty": "hard",
     "type": "practice",
     "correct_answer": "5",
     "is_numerical": true,
     "question_format": "numerical",
     "notes": "Split the limit into two separate terms, and use the identity lim (sin kx)/x = k.",
-    "solution_text": "Let's split the limit expression into two parts:\\n1) $L = \\\\lim_{x \\\\to 0} \\\\frac{\\\\sin 2x}{x} + \\\\lim_{x \\\\to 0} \\\\frac{3\\\\sin x}{x}$.\\n2) Evaluate each part:\\n   - First part: $\\\\lim_{x \\\\to 0} \\\\frac{\\\\sin 2x}{x} = 2 \\\\times \\\\lim_{2x \\\\to 0} \\\\frac{\\\\sin 2x}{2x} = 2 \\\\times 1 = 2$.\\n   - Second part: $\\\\lim_{x \\\\to 0} \\\\frac{3\\\\sin x}{x} = 3 \\\\times 1 = 3$.\\n3) Add the results: $L = 2 + 3 = 5$.\\nThe answer is 5.",
-    "common_mistake": "Adding the angles directly and writing $\\\\sin(5x)/x$ which would yield a limit of 5 by chance, but is algebraically incorrect.",
+    "solution_text": "Let's split the limit expression into two parts:\\n1) $L = \\lim_{x \\to 0} \\frac{\\sin 2x}{x} + \\lim_{x \\to 0} \\frac{3\\sin x}{x}$.\\n2) Evaluate each part:\\n   - First part: $\\lim_{x \\to 0} \\frac{\\sin 2x}{x} = 2 \\times \\lim_{2x \\to 0} \\frac{\\sin 2x}{2x} = 2 \\times 1 = 2$.\\n   - Second part: $\\lim_{x \\to 0} \\frac{3\\sin x}{x} = 3 \\times 1 = 3$.\\n3) Add the results: $L = 2 + 3 = 5$.\\nThe answer is 5.",
+    "common_mistake": "Adding the angles directly and writing $\\sin(5x)/x$ which would yield a limit of 5 by chance, but is algebraically incorrect.",
     "concept_slugs": [
       "limits-algebraic-trig"
     ]
   },
   {
     "pattern_group": "limits-exponential-log-series",
-    "title": "Evaluate the exponential limit: $L = \\\\lim_{x \\\\to 0} \\\\frac{e^{3x} - 1}{x}$. The value of $L$ is:",
+    "title": "Evaluate the exponential limit: $L = \\lim_{x \\to 0} \\frac{e^{3x} - 1}{x}$. The value of $L$ is:",
     "difficulty": "easy",
     "type": "concept",
     "correct_answer": "A",
@@ -166,8 +166,8 @@
       "C": "0",
       "D": "$e^3$"
     },
-    "notes": "Use the standard exponential limit $\\\\lim_{u \\\\to 0} \\\\frac{e^u - 1}{u} = 1$ by adjusting the denominator.",
-    "solution_text": "Let's find the limit using the standard identity:\\n1) We know that $\\\\lim_{u \\\\to 0} \\\\frac{e^u - 1}{u} = 1$.\\n2) Multiply and divide the expression by 3:\\n   $\\\\frac{e^{3x} - 1}{x} = 3 \\\\times \\\\frac{e^{3x} - 1}{3x}$.\\n3) Taking the limit as $x \\\\to 0$ (meaning $3x \\\\to 0$):\\n   $L = 3 \\\\times \\\\lim_{3x \\\\to 0} \\\\frac{e^{3x} - 1}{3x} = 3 \\\\times 1 = 3$.\\nOption A is correct.",
+    "notes": "Use the standard exponential limit $\\lim_{u \\to 0} \\frac{e^u - 1}{u} = 1$ by adjusting the denominator.",
+    "solution_text": "Let's find the limit using the standard identity:\\n1) We know that $\\lim_{u \\to 0} \\frac{e^u - 1}{u} = 1$.\\n2) Multiply and divide the expression by 3:\\n   $\\frac{e^{3x} - 1}{x} = 3 \\times \\frac{e^{3x} - 1}{3x}$.\\n3) Taking the limit as $x \\to 0$ (meaning $3x \\to 0$):\\n   $L = 3 \\times \\lim_{3x \\to 0} \\frac{e^{3x} - 1}{3x} = 3 \\times 1 = 3$.\\nOption A is correct.",
     "common_mistake": "Assuming the limit is 1, neglecting the factor of 3 in the exponent.",
     "concept_slugs": [
       "limits-exponential-log-series"
@@ -175,7 +175,7 @@
   },
   {
     "pattern_group": "limits-exponential-log-series",
-    "title": "Evaluate the logarithmic limit: $L = \\\\lim_{x \\\\to 0} \\\\frac{\\\\ln(1 + 2x)}{x}$. The value of $L$ is:",
+    "title": "Evaluate the logarithmic limit: $L = \\lim_{x \\to 0} \\frac{\\ln(1 + 2x)}{x}$. The value of $L$ is:",
     "difficulty": "easy",
     "type": "practice",
     "correct_answer": "A",
@@ -184,11 +184,11 @@
     "options": {
       "A": "2",
       "B": "1",
-      "C": "$\\\\frac{1}{2}$",
+      "C": "$\\frac{1}{2}$",
       "D": "0"
     },
-    "notes": "Adjust the denominator to match the logarithmic argument increment (2x) and use $\\\\lim_{u \\\\to 0} \\\\frac{\\\\ln(1+u)}{u} = 1$.",
-    "solution_text": "Let's use the standard logarithmic limit identity:\\n1) Recall that $\\\\lim_{u \\\\to 0} \\\\frac{\\\\ln(1+u)}{u} = 1$.\\n2) Rewrite the expression to create $2x$ in the denominator:\\n   $\\\\frac{\\\\ln(1+2x)}{x} = 2 \\\\times \\\\frac{\\\\ln(1+2x)}{2x}$.\\n3) Apply the limit as $x \\\\to 0$ (so $2x \\\\to 0$):\\n   $L = 2 \\\\times 1 = 2$.\\nOption A is correct.",
+    "notes": "Adjust the denominator to match the logarithmic argument increment (2x) and use $\\lim_{u \\to 0} \\frac{\\ln(1+u)}{u} = 1$.",
+    "solution_text": "Let's use the standard logarithmic limit identity:\\n1) Recall that $\\lim_{u \\to 0} \\frac{\\ln(1+u)}{u} = 1$.\\n2) Rewrite the expression to create $2x$ in the denominator:\\n   $\\frac{\\ln(1+2x)}{x} = 2 \\times \\frac{\\ln(1+2x)}{2x}$.\\n3) Apply the limit as $x \\to 0$ (so $2x \\to 0$):\\n   $L = 2 \\times 1 = 2$.\\nOption A is correct.",
     "common_mistake": "Thinking the limit is 1 by equating the log expression directly to the standard form.",
     "concept_slugs": [
       "limits-exponential-log-series"
@@ -196,7 +196,7 @@
   },
   {
     "pattern_group": "limits-exponential-log-series",
-    "title": "Evaluate the limit: $L = \\\\lim_{x \\\\to 0} \\\\frac{e^{\\\\sin x} - 1}{x}$. The value of $L$ is:",
+    "title": "Evaluate the limit: $L = \\lim_{x \\to 0} \\frac{e^{\\sin x} - 1}{x}$. The value of $L$ is:",
     "difficulty": "medium",
     "type": "pyq",
     "source": "JEE Main 2021",
@@ -209,8 +209,8 @@
       "C": "$e$",
       "D": "Does not exist"
     },
-    "notes": "Rewrite the expression as $\\\\frac{e^{\\\\sin x} - 1}{\\\\sin x} \\\\times \\\\frac{\\\\sin x}{x}$ to split the limit.",
-    "solution_text": "Let's evaluate by splitting into two parts:\\n1) Rewrite the expression:\\n   $\\\\frac{e^{\\\\sin x} - 1}{x} = \\\\frac{e^{\\\\sin x} - 1}{\\\\sin x} \\\\times \\\\frac{\\\\sin x}{x}$.\\n2) Let $u = \\\\sin x$. Since $x \\\\to 0$, we have $u \\\\to 0$.\\n   Thus, $\\\\lim_{x \\\\to 0} \\\\frac{e^{\\\\sin x} - 1}{\\\\sin x} = \\\\lim_{u \\\\to 0} \\\\frac{e^u - 1}{u} = 1$.\\n3) The second factor is $\\\\lim_{x \\\\to 0} \\\\frac{\\\\sin x}{x} = 1$.\\n4) Multiply both parts: $L = 1 \\\\times 1 = 1$.\\nOption A is correct.",
+    "notes": "Rewrite the expression as $\\frac{e^{\\sin x} - 1}{\\sin x} \\times \\frac{\\sin x}{x}$ to split the limit.",
+    "solution_text": "Let's evaluate by splitting into two parts:\\n1) Rewrite the expression:\\n   $\\frac{e^{\\sin x} - 1}{x} = \\frac{e^{\\sin x} - 1}{\\sin x} \\times \\frac{\\sin x}{x}$.\\n2) Let $u = \\sin x$. Since $x \\to 0$, we have $u \\to 0$.\\n   Thus, $\\lim_{x \\to 0} \\frac{e^{\\sin x} - 1}{\\sin x} = \\lim_{u \\to 0} \\frac{e^u - 1}{u} = 1$.\\n3) The second factor is $\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$.\\n4) Multiply both parts: $L = 1 \\times 1 = 1$.\\nOption A is correct.",
     "common_mistake": "Attempting complicated L'Hôpital's derivatives when splitting is much cleaner.",
     "concept_slugs": [
       "limits-exponential-log-series"
@@ -218,20 +218,20 @@
   },
   {
     "pattern_group": "limits-exponential-log-series",
-    "title": "Evaluate the limit: $L = \\\\lim_{x \\\\to 0} \\\\frac{\\\\ln(1 + x) - x}{x^2}$. The value of $L$ is:",
+    "title": "Evaluate the limit: $L = \\lim_{x \\to 0} \\frac{\\ln(1 + x) - x}{x^2}$. The value of $L$ is:",
     "difficulty": "medium",
     "type": "practice",
     "correct_answer": "B",
     "is_numerical": false,
     "question_format": "mcq",
     "options": {
-      "A": "$\\\\frac{1}{2}$",
-      "B": "$-\\\\frac{1}{2}$",
+      "A": "$\\frac{1}{2}$",
+      "B": "$-\\frac{1}{2}$",
       "C": "1",
       "D": "0"
     },
-    "notes": "Use the Taylor series expansion for the natural logarithm: $\\\\ln(1+x) = x - \\\\frac{x^2}{2} + \\\\frac{x^3}{3} - \\\\dots$.",
-    "solution_text": "Let's solve using the Taylor series expansion of $\\\\ln(1+x)$:\\n1) Recall $\\\\ln(1+x) = x - \\\\frac{x^2}{2} + \\\\frac{x^3}{3} - \\\\dots$ for $|x| < 1$.\\n2) Substitute this series into the numerator:\\n   $\\\\ln(1+x) - x = \\\\left(x - \\\\frac{x^2}{2} + \\\\frac{x^3}{3} - \\\\dots\\\\right) - x = -\\\\frac{x^2}{2} + \\\\frac{x^3}{3} - \\\\dots$.\\n3) Substitute into the limit expression:\\n   $L = \\\\lim_{x \\\\to 0} \\\\frac{-\\\\frac{x^2}{2} + \\\\frac{x^3}{3} - \\\\dots}{x^2} = \\\\lim_{x \\\\to 0} \\\\left( -\\\\frac{1}{2} + \\\\frac{x}{3} - \\\\dots \\\\right)$.\\n4) Substitute $x = 0$:\\n   $L = -\\\\frac{1}{2}$.\\nOption B is correct.",
+    "notes": "Use the Taylor series expansion for the natural logarithm: $\\ln(1+x) = x - \\frac{x^2}{2} + \\frac{x^3}{3} - \\dots$.",
+    "solution_text": "Let's solve using the Taylor series expansion of $\\ln(1+x)$:\\n1) Recall $\\ln(1+x) = x - \\frac{x^2}{2} + \\frac{x^3}{3} - \\dots$ for $|x| < 1$.\\n2) Substitute this series into the numerator:\\n   $\\ln(1+x) - x = \\left(x - \\frac{x^2}{2} + \\frac{x^3}{3} - \\dots\\right) - x = -\\frac{x^2}{2} + \\frac{x^3}{3} - \\dots$.\\n3) Substitute into the limit expression:\\n   $L = \\lim_{x \\to 0} \\frac{-\\frac{x^2}{2} + \\frac{x^3}{3} - \\dots}{x^2} = \\lim_{x \\to 0} \\left( -\\frac{1}{2} + \\frac{x}{3} - \\dots \\right)$.\\n4) Substitute $x = 0$:\\n   $L = -\\frac{1}{2}$.\\nOption B is correct.",
     "common_mistake": "Neglecting the negative sign in the expansion and obtaining $1/2$ (Option A).",
     "concept_slugs": [
       "limits-exponential-log-series"
@@ -239,7 +239,7 @@
   },
   {
     "pattern_group": "limits-exponential-log-series",
-    "title": "Evaluate the limit: $L = \\\\lim_{x \\\\to 0} \\\\frac{e^{x^2} - \\\\cos x}{x^2}$. The value of $L$ is:",
+    "title": "Evaluate the limit: $L = \\lim_{x \\to 0} \\frac{e^{x^2} - \\cos x}{x^2}$. The value of $L$ is:",
     "difficulty": "hard",
     "type": "pyq",
     "source": "JEE Advanced 2021",
@@ -247,13 +247,13 @@
     "is_numerical": false,
     "question_format": "mcq",
     "options": {
-      "A": "$\\\\frac{3}{2}$",
-      "B": "$\\\\frac{1}{2}$",
+      "A": "$\\frac{3}{2}$",
+      "B": "$\\frac{1}{2}$",
       "C": "1",
       "D": "2"
     },
-    "notes": "Use the Taylor series expansions: $e^u = 1 + u + \\\\dots$ and $\\\\cos x = 1 - \\\\frac{x^2}{2} + \\\\dots$.",
-    "solution_text": "Let's apply series expansions for the terms in the numerator:\\n1) Expansions around $x = 0$ up to $x^2$ terms:\\n   - $e^{x^2} = 1 + x^2 + \\\\mathcal{O}(x^4)$\\n   - $\\\\cos x = 1 - \\\\frac{x^2}{2} + \\\\mathcal{O}(x^4)$\\n2) Substitute into the numerator:\\n   $e^{x^2} - \\\\cos x = (1 + x^2) - \\\\left(1 - \\\\frac{x^2}{2}\\\\right) + \\\\mathcal{O}(x^4) = x^2 + \\\\frac{x^2}{2} + \\\\mathcal{O}(x^4) = \\\\frac{3}{2}x^2 + \\\\mathcal{O}(x^4)$.\\n3) Substitute into the limit:\\n   $L = \\\\lim_{x \\\\to 0} \\\\frac{\\\\frac{3}{2}x^2 + \\\\mathcal{O}(x^4)}{x^2} = \\\\frac{3}{2}$.\\nOption A is correct.",
+    "notes": "Use the Taylor series expansions: $e^u = 1 + u + \\dots$ and $\\cos x = 1 - \\frac{x^2}{2} + \\dots$.",
+    "solution_text": "Let's apply series expansions for the terms in the numerator:\\n1) Expansions around $x = 0$ up to $x^2$ terms:\\n   - $e^{x^2} = 1 + x^2 + \\mathcal{O}(x^4)$\\n   - $\\cos x = 1 - \\frac{x^2}{2} + \\mathcal{O}(x^4)$\\n2) Substitute into the numerator:\\n   $e^{x^2} - \\cos x = (1 + x^2) - \\left(1 - \\frac{x^2}{2}\\right) + \\mathcal{O}(x^4) = x^2 + \\frac{x^2}{2} + \\mathcal{O}(x^4) = \\frac{3}{2}x^2 + \\mathcal{O}(x^4)$.\\n3) Substitute into the limit:\\n   $L = \\lim_{x \\to 0} \\frac{\\frac{3}{2}x^2 + \\mathcal{O}(x^4)}{x^2} = \\frac{3}{2}$.\\nOption A is correct.",
     "common_mistake": "Adding instead of subtracting coefficients, or writing $1 - 1/2 = 1/2$ (Option B).",
     "concept_slugs": [
       "limits-exponential-log-series"
@@ -261,14 +261,14 @@
   },
   {
     "pattern_group": "limits-exponential-log-series",
-    "title": "If the limit is represented by $L = \\\\lim_{x \\\\to 0} \\\\frac{e^{5x} - e^{2x}}{x}$, then the value of $L$ is ________.",
+    "title": "If the limit is represented by $L = \\lim_{x \\to 0} \\frac{e^{5x} - e^{2x}}{x}$, then the value of $L$ is ________.",
     "difficulty": "easy",
     "type": "practice",
     "correct_answer": "3",
     "is_numerical": true,
     "question_format": "numerical",
     "notes": "Add and subtract 1 in the numerator to split the limit into two standard exponential forms.",
-    "solution_text": "Let's rewrite the numerator:\\n1) Subtract and add 1:\\n   $e^{5x} - e^{2x} = (e^{5x} - 1) - (e^{2x} - 1)$.\\n2) Split the limit:\\n   $L = \\\\lim_{x \\\\to 0} \\\\frac{e^{5x} - 1}{x} - \\\\lim_{x \\\\to 0} \\\\frac{e^{2x} - 1}{x}$.\\n3) Evaluate both limits using the identity $\\\\lim_{u \\\\to 0} \\\\frac{e^u - 1}{u} = 1$:\\n   - $\\\\lim_{x \\\\to 0} \\\\frac{e^{5x} - 1}{x} = 5 \\\\times \\\\lim_{5x \\\\to 0} \\\\frac{e^{5x} - 1}{5x} = 5$\\n   - $\\\\lim_{x \\\\to 0} \\\\frac{e^{2x} - 1}{x} = 2 \\\\times \\\\lim_{2x \\\\to 0} \\\\frac{e^{2x} - 1}{2x} = 2$\\n4) Compute $L = 5 - 2 = 3$.\\nThe answer is 3.",
+    "solution_text": "Let's rewrite the numerator:\\n1) Subtract and add 1:\\n   $e^{5x} - e^{2x} = (e^{5x} - 1) - (e^{2x} - 1)$.\\n2) Split the limit:\\n   $L = \\lim_{x \\to 0} \\frac{e^{5x} - 1}{x} - \\lim_{x \\to 0} \\frac{e^{2x} - 1}{x}$.\\n3) Evaluate both limits using the identity $\\lim_{u \\to 0} \\frac{e^u - 1}{u} = 1$:\\n   - $\\lim_{x \\to 0} \\frac{e^{5x} - 1}{x} = 5 \\times \\lim_{5x \\to 0} \\frac{e^{5x} - 1}{5x} = 5$\\n   - $\\lim_{x \\to 0} \\frac{e^{2x} - 1}{x} = 2 \\times \\lim_{2x \\to 0} \\frac{e^{2x} - 1}{2x} = 2$\\n4) Compute $L = 5 - 2 = 3$.\\nThe answer is 3.",
     "common_mistake": "Evaluating the difference as $5/2$ or similar by dividing the coefficients.",
     "concept_slugs": [
       "limits-exponential-log-series"
@@ -276,7 +276,7 @@
   },
   {
     "pattern_group": "limits-exponential-log-series",
-    "title": "If the limit is represented by $L = \\\\lim_{x \\\\to 0} \\\\frac{e^x - 1 - x - x^2/2}{x^3}$, then the value of $6L$ is ________.",
+    "title": "If the limit is represented by $L = \\lim_{x \\to 0} \\frac{e^x - 1 - x - x^2/2}{x^3}$, then the value of $6L$ is ________.",
     "difficulty": "medium",
     "type": "pyq",
     "source": "JEE Main 2022",
@@ -284,7 +284,7 @@
     "is_numerical": true,
     "question_format": "numerical",
     "notes": "Substitute the Taylor series expansion of e^x up to the x^3 term.",
-    "solution_text": "Let's use the Taylor expansion of $e^x$:\\n1) $e^x = 1 + x + \\\\frac{x^2}{2} + \\\\frac{x^3}{6} + \\\\mathcal{O}(x^4)$.\\n2) Substitute this into the numerator:\\n   $e^x - 1 - x - \\\\frac{x^2}{2} = \\\\left(1 + x + \\\\frac{x^2}{2} + \\\\frac{x^3}{6} + \\\\mathcal{O}(x^4)\\\\right) - 1 - x - \\\\frac{x^2}{2} = \\\\frac{x^3}{6} + \\\\mathcal{O}(x^4)$.\\n3) Substitute into the limit:\\n   $L = \\\\lim_{x \\\\to 0} \\\\frac{\\\\frac{x^3}{6} + \\\\mathcal{O}(x^4)}{x^3} = \\\\frac{1}{6}$.\\n4) Multiply by 6:\\n   $6L = 6 \\\\times \\\\frac{1}{6} = 1$.\\nThe answer is 1.",
+    "solution_text": "Let's use the Taylor expansion of $e^x$:\\n1) $e^x = 1 + x + \\frac{x^2}{2} + \\frac{x^3}{6} + \\mathcal{O}(x^4)$.\\n2) Substitute this into the numerator:\\n   $e^x - 1 - x - \\frac{x^2}{2} = \\left(1 + x + \\frac{x^2}{2} + \\frac{x^3}{6} + \\mathcal{O}(x^4)\\right) - 1 - x - \\frac{x^2}{2} = \\frac{x^3}{6} + \\mathcal{O}(x^4)$.\\n3) Substitute into the limit:\\n   $L = \\lim_{x \\to 0} \\frac{\\frac{x^3}{6} + \\mathcal{O}(x^4)}{x^3} = \\frac{1}{6}$.\\n4) Multiply by 6:\\n   $6L = 6 \\times \\frac{1}{6} = 1$.\\nThe answer is 1.",
     "common_mistake": "Stopping at $x^2$ terms in the expansion, which would yield a zero limit or incorrect fraction.",
     "concept_slugs": [
       "limits-exponential-log-series"
@@ -292,22 +292,22 @@
   },
   {
     "pattern_group": "limits-exponential-log-series",
-    "title": "If the limit is represented by $L = \\\\lim_{x \\\\to 0} \\\\frac{\\\\cos x - e^{-x^2/2}}{x^4}$, then the value of the expression $-12L$ is ________.",
+    "title": "If the limit is represented by $L = \\lim_{x \\to 0} \\frac{\\cos x - e^{-x^2/2}}{x^4}$, then the value of the expression $-12L$ is ________.",
     "difficulty": "hard",
     "type": "practice",
     "correct_answer": "1",
     "is_numerical": true,
     "question_format": "numerical",
     "notes": "Use series expansions: cos x = 1 - x^2/2 + x^4/24 - ... and e^u = 1 + u + u^2/2 + ... with u = -x^2/2.",
-    "solution_text": "Let's solve using series expansions up to the $x^4$ term:\\n1) Series for $\\\\cos x$:\\n   $\\\\cos x = 1 - \\\\frac{x^2}{2} + \\\\frac{x^4}{24} - \\\\mathcal{O}(x^6)$.\\n2) Series for $e^{-x^2/2}$ (substitute $u = -x^2/2$ into $e^u = 1 + u + u^2/2$):\\n   $e^{-x^2/2} = 1 + \\\\left(-\\\\frac{x^2}{2}\\\\right) + \\\\frac{1}{2}\\\\left(-\\\\frac{x^2}{2}\\\\right)^2 = 1 - \\\\frac{x^2}{2} + \\\\frac{x^4}{8} - \\\\mathcal{O}(x^6)$.\\n3) Substitute these into the numerator:\\n   $\\\\cos x - e^{-x^2/2} = \\\\left(1 - \\\\frac{x^2}{2} + \\\\frac{x^4}{24}\\\\right) - \\\\left(1 - \\\\frac{x^2}{2} + \\\\frac{x^4}{8}\\\\right) + \\\\mathcal{O}(x^6)$\\n   $= \\\\left( \\\\frac{1}{24} - \\\\frac{1}{8} \\\\right) x^4 + \\\\mathcal{O}(x^6) = \\\\left( \\\\frac{1}{24} - \\\\frac{3}{24} \\\\right) x^4 = -\\\\frac{2}{24} x^4 = -\\\\frac{1}{12} x^4$.\\n4) Calculate the limit $L$:\\n   $L = \\\\lim_{x \\\\to 0} \\\\frac{-\\\\frac{1}{12} x^4}{x^4} = -\\\\frac{1}{12}$.\\n5) Calculate the required expression value:\\n   $-12L = -12 \\\\times \\\\left(-\\\\frac{1}{12}\\\\right) = 1$.\\nThe answer is 1.",
-    "common_mistake": "Errors in fraction subtraction: $\\\\frac{1}{24} - \\\\frac{1}{8} = -\\\\frac{1}{12}$, or forgetting the minus sign when multiplying.",
+    "solution_text": "Let's solve using series expansions up to the $x^4$ term:\\n1) Series for $\\cos x$:\\n   $\\cos x = 1 - \\frac{x^2}{2} + \\frac{x^4}{24} - \\mathcal{O}(x^6)$.\\n2) Series for $e^{-x^2/2}$ (substitute $u = -x^2/2$ into $e^u = 1 + u + u^2/2$):\\n   $e^{-x^2/2} = 1 + \\left(-\\frac{x^2}{2}\\right) + \\frac{1}{2}\\left(-\\frac{x^2}{2}\\right)^2 = 1 - \\frac{x^2}{2} + \\frac{x^4}{8} - \\mathcal{O}(x^6)$.\\n3) Substitute these into the numerator:\\n   $\\cos x - e^{-x^2/2} = \\left(1 - \\frac{x^2}{2} + \\frac{x^4}{24}\\right) - \\left(1 - \\frac{x^2}{2} + \\frac{x^4}{8}\\right) + \\mathcal{O}(x^6)$\\n   $= \\left( \\frac{1}{24} - \\frac{1}{8} \\right) x^4 + \\mathcal{O}(x^6) = \\left( \\frac{1}{24} - \\frac{3}{24} \\right) x^4 = -\\frac{2}{24} x^4 = -\\frac{1}{12} x^4$.\\n4) Calculate the limit $L$:\\n   $L = \\lim_{x \\to 0} \\frac{-\\frac{1}{12} x^4}{x^4} = -\\frac{1}{12}$.\\n5) Calculate the required expression value:\\n   $-12L = -12 \\times \\left(-\\frac{1}{12}\\right) = 1$.\\nThe answer is 1.",
+    "common_mistake": "Errors in fraction subtraction: $\\frac{1}{24} - \\frac{1}{8} = -\\frac{1}{12}$, or forgetting the minus sign when multiplying.",
     "concept_slugs": [
       "limits-exponential-log-series"
     ]
   },
   {
     "pattern_group": "limits-indeterminate-lhopital",
-    "title": "Evaluate the exponential indeterminate form: $L = \\\\lim_{x \\\\to 0} (1 + x)^{1/x}$. The value of $L$ is:",
+    "title": "Evaluate the exponential indeterminate form: $L = \\lim_{x \\to 0} (1 + x)^{1/x}$. The value of $L$ is:",
     "difficulty": "easy",
     "type": "concept",
     "correct_answer": "A",
@@ -320,15 +320,15 @@
       "D": "$e^2$"
     },
     "notes": "This is a standard 1^infinity limit. Take the natural logarithm of both sides to convert to 0/0 form.",
-    "solution_text": "Let's find the limit of $y = (1+x)^{1/x}$ as $x \\\\to 0$:\\n1) Take the natural log of both sides: $\\\\ln y = \\\\frac{\\\\ln(1+x)}{x}$.\\n2) Take the limit as $x \\\\to 0$:\\n   $\\\\lim_{x \\\\to 0} \\\\ln y = \\\\lim_{x \\\\to 0} \\\\frac{\\\\ln(1+x)}{x} = 1$ (by standard log limit identity).\\n3) Exponentiate to retrieve the limit of $y$:\\n   $L = \\\\lim_{x \\\\to 0} y = e^1 = e$.\\nOption A is correct.",
-    "common_mistake": "Claiming the limit is 1 because $1^{\\\\infty} = 1$, which is invalid as $1^\\\\infty$ is an indeterminate form.",
+    "solution_text": "Let's find the limit of $y = (1+x)^{1/x}$ as $x \\to 0$:\\n1) Take the natural log of both sides: $\\ln y = \\frac{\\ln(1+x)}{x}$.\\n2) Take the limit as $x \\to 0$:\\n   $\\lim_{x \\to 0} \\ln y = \\lim_{x \\to 0} \\frac{\\ln(1+x)}{x} = 1$ (by standard log limit identity).\\n3) Exponentiate to retrieve the limit of $y$:\\n   $L = \\lim_{x \\to 0} y = e^1 = e$.\\nOption A is correct.",
+    "common_mistake": "Claiming the limit is 1 because $1^{\\infty} = 1$, which is invalid as $1^\\infty$ is an indeterminate form.",
     "concept_slugs": [
       "limits-indeterminate-lhopital"
     ]
   },
   {
     "pattern_group": "limits-indeterminate-lhopital",
-    "title": "Evaluate the limit: $L = \\\\lim_{x \\\\to \\\\infty} \\\\left(1 + \\\\frac{2}{x}\\\\right)^x$. The value of $L$ is:",
+    "title": "Evaluate the limit: $L = \\lim_{x \\to \\infty} \\left(1 + \\frac{2}{x}\\right)^x$. The value of $L$ is:",
     "difficulty": "easy",
     "type": "practice",
     "correct_answer": "A",
@@ -340,8 +340,8 @@
       "C": "$e^4$",
       "D": "$1$"
     },
-    "notes": "Use the formula for 1^infinity forms: $\\\\lim_{x \\\\to a} f(x)^{g(x)} = e^{\\\\lim_{x \\\\to a} (f(x)-1)g(x)}$.",
-    "solution_text": "Let's apply the $1^\\\\infty$ limit formula:\\n1) Here $f(x) = 1 + \\\\frac{2}{x}$ and $g(x) = x$.\\n2) Since $\\\\lim_{x \\\\to \\\\infty} f(x) = 1$ and $\\\\lim_{x \\\\to \\\\infty} g(x) = \\\\infty$, this is a $1^\\\\infty$ form.\\n3) The formula gives $L = e^{k}$, where:\\n   $k = \\\\lim_{x \\\\to \\\\infty} (f(x) - 1)g(x) = \\\\lim_{x \\\\to \\\\infty} \\\\left(1 + \\\\frac{2}{x} - 1\\\\right)x = \\\\lim_{x \\\\to \\\\infty} \\\\frac{2}{x} \\\\times x = 2$.\\n4) Therefore, $L = e^2$.\\nOption A is correct.",
+    "notes": "Use the formula for 1^infinity forms: $\\lim_{x \\to a} f(x)^{g(x)} = e^{\\lim_{x \\to a} (f(x)-1)g(x)}$.",
+    "solution_text": "Let's apply the $1^\\infty$ limit formula:\\n1) Here $f(x) = 1 + \\frac{2}{x}$ and $g(x) = x$.\\n2) Since $\\lim_{x \\to \\infty} f(x) = 1$ and $\\lim_{x \\to \\infty} g(x) = \\infty$, this is a $1^\\infty$ form.\\n3) The formula gives $L = e^{k}$, where:\\n   $k = \\lim_{x \\to \\infty} (f(x) - 1)g(x) = \\lim_{x \\to \\infty} \\left(1 + \\frac{2}{x} - 1\\right)x = \\lim_{x \\to \\infty} \\frac{2}{x} \\times x = 2$.\\n4) Therefore, $L = e^2$.\\nOption A is correct.",
     "common_mistake": "Writing $e$ instead of $e^2$ by overlooking the coefficient 2.",
     "concept_slugs": [
       "limits-indeterminate-lhopital"
@@ -349,7 +349,7 @@
   },
   {
     "pattern_group": "limits-indeterminate-lhopital",
-    "title": "Evaluate the limit: $L = \\\\lim_{x \\\\to 0} \\\\left(\\\\frac{1+x}{1-x}\\\\right)^{1/x}$. The value of $L$ is:",
+    "title": "Evaluate the limit: $L = \\lim_{x \\to 0} \\left(\\frac{1+x}{1-x}\\right)^{1/x}$. The value of $L$ is:",
     "difficulty": "medium",
     "type": "pyq",
     "source": "JEE Main 2021",
@@ -363,7 +363,7 @@
       "D": "$e^{-2}$"
     },
     "notes": "Separate the numerator and denominator powers, or use the 1^infinity formula on the entire base.",
-    "solution_text": "Let's use the $1^\\\\infty$ formula on the base function:\\n1) Let $f(x) = \\\\frac{1+x}{1-x}$ and $g(x) = \\\\frac{1}{x}$.\\n   As $x \\\\to 0$, $f(x) \\\\to 1$ and $g(x) \\\\to \\\\infty$, which is a $1^\\\\infty$ form.\\n2) Apply formula: $L = e^k$ where:\\n   $k = \\\\lim_{x \\\\to 0} (f(x) - 1)g(x) = \\\\lim_{x \\\\to 0} \\\\left( \\\\frac{1+x}{1-x} - 1 \\\\right) \\\\frac{1}{x}$.\\n3) Simplify the expression inside the limit:\\n   $\\\\frac{1+x - (1-x)}{1-x} \\\\times \\\\frac{1}{x} = \\\\frac{2x}{1-x} \\\\times \\\\frac{1}{x} = \\\\frac{2}{1-x}$.\\n4) Take the limit as $x \\\\to 0$:\\n   $k = \\\\lim_{x \\\\to 0} \\\\frac{2}{1-x} = \\\\frac{2}{1} = 2$.\\n5) Thus, $L = e^2$.\\nOption C is correct.",
+    "solution_text": "Let's use the $1^\\infty$ formula on the base function:\\n1) Let $f(x) = \\frac{1+x}{1-x}$ and $g(x) = \\frac{1}{x}$.\\n   As $x \\to 0$, $f(x) \\to 1$ and $g(x) \\to \\infty$, which is a $1^\\infty$ form.\\n2) Apply formula: $L = e^k$ where:\\n   $k = \\lim_{x \\to 0} (f(x) - 1)g(x) = \\lim_{x \\to 0} \\left( \\frac{1+x}{1-x} - 1 \\right) \\frac{1}{x}$.\\n3) Simplify the expression inside the limit:\\n   $\\frac{1+x - (1-x)}{1-x} \\times \\frac{1}{x} = \\frac{2x}{1-x} \\times \\frac{1}{x} = \\frac{2}{1-x}$.\\n4) Take the limit as $x \\to 0$:\\n   $k = \\lim_{x \\to 0} \\frac{2}{1-x} = \\frac{2}{1} = 2$.\\n5) Thus, $L = e^2$.\\nOption C is correct.",
     "common_mistake": "Incorrect fraction arithmetic yielding $k = 0$ or $k = 1$, leading to wrong options.",
     "concept_slugs": [
       "limits-indeterminate-lhopital"
@@ -371,7 +371,7 @@
   },
   {
     "pattern_group": "limits-indeterminate-lhopital",
-    "title": "Evaluate the limit: $L = \\\\lim_{x \\\\to 0} \\\\frac{x^2 + \\\\sin x - x}{x^2 + \\\\ln(1-x) + x}$. The value of $L$ is:",
+    "title": "Evaluate the limit: $L = \\lim_{x \\to 0} \\frac{x^2 + \\sin x - x}{x^2 + \\ln(1-x) + x}$. The value of $L$ is:",
     "difficulty": "medium",
     "type": "practice",
     "correct_answer": "A",
@@ -381,18 +381,18 @@
       "A": "2",
       "B": "1",
       "C": "0",
-      "D": "$\\\\frac{1}{2}$"
+      "D": "$\\frac{1}{2}$"
     },
     "notes": "Use series expansions or apply L'Hôpital's rule twice as it is a 0/0 form.",
-    "solution_text": "Let's solve by applying L'Hôpital's rule since it's a $\\\\frac{0}{0}$ form:\\n1) Differentiate numerator and denominator with respect to $x$:\\n   - Numerator derivative: $2x + \\\\cos x - 1$.\\n   - Denominator derivative: $2x - \\\\frac{1}{1-x} + 1$.\\n   As $x \\\\to 0$, the ratio is $\\\\frac{2(0) + 1 - 1}{2(0) - 1 + 1} = \\\\frac{0}{0}$. (Still indeterminate).\\n2) Apply L'Hôpital's rule a second time:\\n   - Numerator second derivative: $2 - \\\\sin x$.\\n   - Denominator second derivative: $2 - \\\\frac{1}{(1-x)^2}$.\\n3) Evaluate the limit as $x \\\\to 0$:\\n   $\\\\lim_{x \\\\to 0} \\\\frac{2 - \\\\sin x}{2 - \\\\frac{1}{(1-x)^2}} = \\\\frac{2 - 0}{2 - 1} = \\\\frac{2}{1} = 2$.\\nOption A is correct.",
-    "common_mistake": "Stopping after the first differentiation, or incorrect differentiation of $\\\\ln(1-x)$ (forgetting the chain rule minus sign).",
+    "solution_text": "Let's solve by applying L'Hôpital's rule since it's a $\\frac{0}{0}$ form:\\n1) Differentiate numerator and denominator with respect to $x$:\\n   - Numerator derivative: $2x + \\cos x - 1$.\\n   - Denominator derivative: $2x - \\frac{1}{1-x} + 1$.\\n   As $x \\to 0$, the ratio is $\\frac{2(0) + 1 - 1}{2(0) - 1 + 1} = \\frac{0}{0}$. (Still indeterminate).\\n2) Apply L'Hôpital's rule a second time:\\n   - Numerator second derivative: $2 - \\sin x$.\\n   - Denominator second derivative: $2 - \\frac{1}{(1-x)^2}$.\\n3) Evaluate the limit as $x \\to 0$:\\n   $\\lim_{x \\to 0} \\frac{2 - \\sin x}{2 - \\frac{1}{(1-x)^2}} = \\frac{2 - 0}{2 - 1} = \\frac{2}{1} = 2$.\\nOption A is correct.",
+    "common_mistake": "Stopping after the first differentiation, or incorrect differentiation of $\\ln(1-x)$ (forgetting the chain rule minus sign).",
     "concept_slugs": [
       "limits-indeterminate-lhopital"
     ]
   },
   {
     "pattern_group": "limits-indeterminate-lhopital",
-    "title": "Evaluate the limit: $L = \\\\lim_{x \\\\to 0} (\\\\cos x)^{1/x^2}$. The value of $L$ is:",
+    "title": "Evaluate the limit: $L = \\lim_{x \\to 0} (\\cos x)^{1/x^2}$. The value of $L$ is:",
     "difficulty": "hard",
     "type": "pyq",
     "source": "JEE Advanced 2022",
@@ -405,23 +405,23 @@
       "C": "$e$",
       "D": "$1$"
     },
-    "notes": "This is a 1^infinity form. Apply the formula $e^{\\\\lim_{x \\\\to 0} (\\\\cos x - 1)/x^2}$.",
-    "solution_text": "Let's apply the $1^\\\\infty$ limit formula:\\n1) Base function is $f(x) = \\\\cos x$ (tends to 1) and exponent is $g(x) = \\\\frac{1}{x^2}$ (tends to $\\\\infty$).\\n2) The formula gives $L = e^k$ where:\\n   $k = \\\\lim_{x \\\\to 0} (\\\\cos x - 1) \\\\frac{1}{x^2} = -\\\\lim_{x \\\\to 0} \\\\frac{1 - \\\\cos x}{x^2}$.\\n3) Since $\\\\lim_{x \\\\to 0} \\\\frac{1 - \\\\cos x}{x^2} = \\\\frac{1}{2}$, we have:\\n   $k = -\\\\frac{1}{2}$.\\n4) Thus, $L = e^{-1/2}$.\\nOption B is correct.",
-    "common_mistake": "Neglecting the negative sign in the limit of $(\\\\cos x - 1)/x^2$, yielding $e^{1/2}$ or $e^1$.",
+    "notes": "This is a 1^infinity form. Apply the formula $e^{\\lim_{x \\to 0} (\\cos x - 1)/x^2}$.",
+    "solution_text": "Let's apply the $1^\\infty$ limit formula:\\n1) Base function is $f(x) = \\cos x$ (tends to 1) and exponent is $g(x) = \\frac{1}{x^2}$ (tends to $\\infty$).\\n2) The formula gives $L = e^k$ where:\\n   $k = \\lim_{x \\to 0} (\\cos x - 1) \\frac{1}{x^2} = -\\lim_{x \\to 0} \\frac{1 - \\cos x}{x^2}$.\\n3) Since $\\lim_{x \\to 0} \\frac{1 - \\cos x}{x^2} = \\frac{1}{2}$, we have:\\n   $k = -\\frac{1}{2}$.\\n4) Thus, $L = e^{-1/2}$.\\nOption B is correct.",
+    "common_mistake": "Neglecting the negative sign in the limit of $(\\cos x - 1)/x^2$, yielding $e^{1/2}$ or $e^1$.",
     "concept_slugs": [
       "limits-indeterminate-lhopital"
     ]
   },
   {
     "pattern_group": "limits-indeterminate-lhopital",
-    "title": "If the limit is represented by $L = \\\\lim_{x \\\\to 0} \\\\frac{e^x - e^{-x} - 2x}{x^3}$, then the value of $3L$ is ________.",
+    "title": "If the limit is represented by $L = \\lim_{x \\to 0} \\frac{e^x - e^{-x} - 2x}{x^3}$, then the value of $3L$ is ________.",
     "difficulty": "easy",
     "type": "practice",
     "correct_answer": "1",
     "is_numerical": true,
     "question_format": "numerical",
     "notes": "Apply L'Hôpital's rule repeatedly or use series expansions for exponential functions.",
-    "solution_text": "Let's use series expansions for $e^x$ and $e^{-x}$:\\n1) $e^x = 1 + x + \\\\frac{x^2}{2} + \\\\frac{x^3}{6} + \\\\mathcal{O}(x^4)$\\n2) $e^{-x} = 1 - x + \\\\frac{x^2}{2} - \\\\frac{x^3}{6} + \\\\mathcal{O}(x^4)$\\n3) Subtracting the two gives:\\n   $e^x - e^{-x} = 2x + \\\\frac{2x^3}{6} + \\\\mathcal{O}(x^5) = 2x + \\\\frac{x^3}{3} + \\\\mathcal{O}(x^5)$.\\n4) Substitute this into the numerator:\\n   $e^x - e^{-x} - 2x = \\\\frac{x^3}{3} + \\\\mathcal{O}(x^5)$.\\n5) Divide by $x^3$ and take the limit:\\n   $L = \\\\lim_{x \\\\to 0} \\\\frac{\\\\frac{x^3}{3}}{x^3} = \\\\frac{1}{3}$.\\n6) Calculate $3L = 3 \\\\times \\\\frac{1}{3} = 1$.\\nThe answer is 1.",
+    "solution_text": "Let's use series expansions for $e^x$ and $e^{-x}$:\\n1) $e^x = 1 + x + \\frac{x^2}{2} + \\frac{x^3}{6} + \\mathcal{O}(x^4)$\\n2) $e^{-x} = 1 - x + \\frac{x^2}{2} - \\frac{x^3}{6} + \\mathcal{O}(x^4)$\\n3) Subtracting the two gives:\\n   $e^x - e^{-x} = 2x + \\frac{2x^3}{6} + \\mathcal{O}(x^5) = 2x + \\frac{x^3}{3} + \\mathcal{O}(x^5)$.\\n4) Substitute this into the numerator:\\n   $e^x - e^{-x} - 2x = \\frac{x^3}{3} + \\mathcal{O}(x^5)$.\\n5) Divide by $x^3$ and take the limit:\\n   $L = \\lim_{x \\to 0} \\frac{\\frac{x^3}{3}}{x^3} = \\frac{1}{3}$.\\n6) Calculate $3L = 3 \\times \\frac{1}{3} = 1$.\\nThe answer is 1.",
     "common_mistake": "Incorrect expansion of $e^{-x}$ (e.g. keeping all positive signs), which would lead to incorrect limit values.",
     "concept_slugs": [
       "limits-indeterminate-lhopital"
@@ -429,7 +429,7 @@
   },
   {
     "pattern_group": "limits-indeterminate-lhopital",
-    "title": "If $L = \\\\lim_{x \\\\to 0} \\\\left( \\\\frac{\\\\sin x}{x} \\\\right)^{1/x^2}$, then the value of $\\\\ln(L)$ is represented as $-1/k$. The value of the integer $k$ is ________.",
+    "title": "If $L = \\lim_{x \\to 0} \\left( \\frac{\\sin x}{x} \\right)^{1/x^2}$, then the value of $\\ln(L)$ is represented as $-1/k$. The value of the integer $k$ is ________.",
     "difficulty": "medium",
     "type": "pyq",
     "source": "JEE Main 2022",
@@ -437,22 +437,22 @@
     "is_numerical": true,
     "question_format": "numerical",
     "notes": "Use the 1^infinity limit formula: L = exp(lim_{x->0} (sin(x)/x - 1)/x^2), then use expansions.",
-    "solution_text": "Let's evaluate using the $1^\\\\infty$ formula:\\n1) $L = e^p$, where $p = \\\\lim_{x \\\\to 0} \\\\left( \\\\frac{\\\\sin x}{x} - 1 \\\\right) \\\\frac{1}{x^2} = \\\\lim_{x \\\\to 0} \\\\frac{\\\\sin x - x}{x^3}$.\\n2) Substitute the series expansion $\\\\sin x = x - \\\\frac{x^3}{6} + \\\\mathcal{O}(x^5)$:\\n   $p = \\\\lim_{x \\\\to 0} \\\\frac{\\\\left(x - \\\\frac{x^3}{6}\\\\right) - x}{x^3} = \\\\lim_{x \\\\to 0} \\\\frac{-\\\\frac{x^3}{6}}{x^3} = -\\\\frac{1}{6}$.\\n3) Since $L = e^{-1/6}$, we have $\\\\ln(L) = -\\\\frac{1}{6}$.\\n4) Comparing with $-1/k$ gives $k = 6$.\\nThe answer is 6.",
-    "common_mistake": "Incorrectly evaluation of $(\\\\sin x - x)/x^3$ limit as positive $1/6$, leading to $k = -6$ which is incorrect.",
+    "solution_text": "Let's evaluate using the $1^\\infty$ formula:\\n1) $L = e^p$, where $p = \\lim_{x \\to 0} \\left( \\frac{\\sin x}{x} - 1 \\right) \\frac{1}{x^2} = \\lim_{x \\to 0} \\frac{\\sin x - x}{x^3}$.\\n2) Substitute the series expansion $\\sin x = x - \\frac{x^3}{6} + \\mathcal{O}(x^5)$:\\n   $p = \\lim_{x \\to 0} \\frac{\\left(x - \\frac{x^3}{6}\\right) - x}{x^3} = \\lim_{x \\to 0} \\frac{-\\frac{x^3}{6}}{x^3} = -\\frac{1}{6}$.\\n3) Since $L = e^{-1/6}$, we have $\\ln(L) = -\\frac{1}{6}$.\\n4) Comparing with $-1/k$ gives $k = 6$.\\nThe answer is 6.",
+    "common_mistake": "Incorrectly evaluation of $(\\sin x - x)/x^3$ limit as positive $1/6$, leading to $k = -6$ which is incorrect.",
     "concept_slugs": [
       "limits-indeterminate-lhopital"
     ]
   },
   {
     "pattern_group": "limits-indeterminate-lhopital",
-    "title": "If the limit is represented by $L = \\\\lim_{x \\\\to 0} \\\\left( \\\\tan\\\\left(\\\\frac{\\\\pi}{4} + x\\\\right) \\\\right)^{1/x}$, then the value of the integer $\\\\ln(L)$ is ________.",
+    "title": "If the limit is represented by $L = \\lim_{x \\to 0} \\left( \\tan\\left(\\frac{\\pi}{4} + x\\right) \\right)^{1/x}$, then the value of the integer $\\ln(L)$ is ________.",
     "difficulty": "hard",
     "type": "practice",
     "correct_answer": "2",
     "is_numerical": true,
     "question_format": "numerical",
     "notes": "Use the identity tan(pi/4 + x) = (1 + tan x) / (1 - tan x) and evaluate the 1^infinity form.",
-    "solution_text": "Let's rewrite the base function:\\n1) Base function: $\\\\tan\\\\left(\\\\frac{\\\\pi}{4} + x\\\\right) = \\\\frac{1 + \\\\tan x}{1 - \\\\tan x}$.\\n2) Since $\\\\lim_{x \\\\to 0} \\\\frac{1 + \\\\tan x}{1 - \\\\tan x} = 1$ and $\\\\lim_{x \\\\to 0} \\\\frac{1}{x} = \\\\infty$, this is a $1^\\\\infty$ form.\\n3) Apply the limit formula $L = e^p$, where:\\n   $p = \\\\lim_{x \\\\to 0} \\\\left( \\\\frac{1 + \\\\tan x}{1 - \\\\tan x} - 1 \\\\right) \\\\frac{1}{x} = \\\\lim_{x \\\\to 0} \\\\left( \\\\frac{2\\\\tan x}{1 - \\\\tan x} \\\\right) \\\\frac{1}{x}$.\\n4) Group standard limits:\\n   $p = \\\\lim_{x \\\\to 0} \\\\left( 2 \\\\times \\\\frac{\\\\tan x}{x} \\\\times \\\\frac{1}{1 - \\\\tan x} \\\\right) = 2 \\\\times 1 \\\\times 1 = 2$.\\n5) Thus, $L = e^2 \\\\implies \\\\ln(L) = 2$.\\nThe answer is 2.",
+    "solution_text": "Let's rewrite the base function:\\n1) Base function: $\\tan\\left(\\frac{\\pi}{4} + x\\right) = \\frac{1 + \\tan x}{1 - \\tan x}$.\\n2) Since $\\lim_{x \\to 0} \\frac{1 + \\tan x}{1 - \\tan x} = 1$ and $\\lim_{x \\to 0} \\frac{1}{x} = \\infty$, this is a $1^\\infty$ form.\\n3) Apply the limit formula $L = e^p$, where:\\n   $p = \\lim_{x \\to 0} \\left( \\frac{1 + \\tan x}{1 - \\tan x} - 1 \\right) \\frac{1}{x} = \\lim_{x \\to 0} \\left( \\frac{2\\tan x}{1 - \\tan x} \\right) \\frac{1}{x}$.\\n4) Group standard limits:\\n   $p = \\lim_{x \\to 0} \\left( 2 \\times \\frac{\\tan x}{x} \\times \\frac{1}{1 - \\tan x} \\right) = 2 \\times 1 \\times 1 = 2$.\\n5) Thus, $L = e^2 \\implies \\ln(L) = 2$.\\nThe answer is 2.",
     "common_mistake": "Evaluating the limit of $(f(x)-1)g(x)$ as 1 by forgetting the factor of 2 in the numerator.",
     "concept_slugs": [
       "limits-indeterminate-lhopital"
@@ -460,7 +460,7 @@
   },
   {
     "pattern_group": "limits-sandwich-infinite-sums",
-    "title": "Evaluate the limit using bounds: $L = \\\\lim_{x \\\\to \\\\infty} \\\\frac{\\\\sin x}{x}$. The value of $L$ is:",
+    "title": "Evaluate the limit using bounds: $L = \\lim_{x \\to \\infty} \\frac{\\sin x}{x}$. The value of $L$ is:",
     "difficulty": "easy",
     "type": "concept",
     "correct_answer": "A",
@@ -470,31 +470,31 @@
       "A": "0",
       "B": "1",
       "C": "Does not exist",
-      "D": "$\\\\infty$"
+      "D": "$\\infty$"
     },
-    "notes": "Apply the squeeze theorem using the standard bounds of the sine function: $-1 \\\\le \\\\sin x \\\\le 1$.",
-    "solution_text": "Let's apply the Sandwich (Squeeze) Theorem:\\n1) We know that for all real $x$, $-1 \\\\le \\\\sin x \\\\le 1$.\\n2) Divide by $x$ (for $x > 0$):\\n   $-\\\\frac{1}{x} \\\\le \\\\frac{\\\\sin x}{x} \\\\le \\\\frac{1}{x}$.\\n3) Take limits as $x \\\\to \\\\infty$:\\n   $\\\\lim_{x \\\\to \\\\infty} \\\\left(-\\\\frac{1}{x}\\\\right) = 0$ and $\\\\lim_{x \\\\to \\\\infty} \\\\left(\\\\frac{1}{x}\\\\right) = 0$.\\n4) Since both bounding functions approach 0, by the Squeeze Theorem, the middle term must also approach 0:\\n   $\\\\lim_{x \\\\to \\\\infty} \\\\frac{\\\\sin x}{x} = 0$.\\nOption A is correct.",
-    "common_mistake": "Confusing this with the limit as $x \\\\to 0$, which would yield 1.",
+    "notes": "Apply the squeeze theorem using the standard bounds of the sine function: $-1 \\le \\sin x \\le 1$.",
+    "solution_text": "Let's apply the Sandwich (Squeeze) Theorem:\\n1) We know that for all real $x$, $-1 \\le \\sin x \\le 1$.\\n2) Divide by $x$ (for $x > 0$):\\n   $-\\frac{1}{x} \\le \\frac{\\sin x}{x} \\le \\frac{1}{x}$.\\n3) Take limits as $x \\to \\infty$:\\n   $\\lim_{x \\to \\infty} \\left(-\\frac{1}{x}\\right) = 0$ and $\\lim_{x \\to \\infty} \\left(\\frac{1}{x}\\right) = 0$.\\n4) Since both bounding functions approach 0, by the Squeeze Theorem, the middle term must also approach 0:\\n   $\\lim_{x \\to \\infty} \\frac{\\sin x}{x} = 0$.\\nOption A is correct.",
+    "common_mistake": "Confusing this with the limit as $x \\to 0$, which would yield 1.",
     "concept_slugs": [
       "limits-sandwich-infinite-sums"
     ]
   },
   {
     "pattern_group": "limits-sandwich-infinite-sums",
-    "title": "Evaluate the limit at infinity: $L = \\\\lim_{x \\\\to \\\\infty} \\\\frac{3x^2 + 5x - 2}{4x^2 - 1}$. The value of $L$ is:",
+    "title": "Evaluate the limit at infinity: $L = \\lim_{x \\to \\infty} \\frac{3x^2 + 5x - 2}{4x^2 - 1}$. The value of $L$ is:",
     "difficulty": "easy",
     "type": "practice",
     "correct_answer": "A",
     "is_numerical": false,
     "question_format": "mcq",
     "options": {
-      "A": "$\\\\frac{3}{4}$",
+      "A": "$\\frac{3}{4}$",
       "B": "0",
-      "C": "$\\\\infty$",
+      "C": "$\\infty$",
       "D": "-2"
     },
     "notes": "Divide numerator and denominator by the highest power of x (which is x^2).",
-    "solution_text": "Let's evaluate the limit by dividing by the leading power $x^2$:\\n1) Divide both numerator and denominator by $x^2$:\\n   $\\\\frac{3x^2 + 5x - 2}{4x^2 - 1} = \\\\frac{3 + \\\\frac{5}{x} - \\\\frac{2}{x^2}}{4 - \\\\frac{1}{x^2}}$.\\n2) Apply the limit as $x \\\\to \\\\infty$ (noting that $\\\\frac{1}{x} \\\\to 0$ and $\\\\frac{1}{x^2} \\\\to 0$):\\n   $L = \\\\frac{3 + 0 - 0}{4 - 0} = \\\\frac{3}{4}$.\\nOption A is correct.",
+    "solution_text": "Let's evaluate the limit by dividing by the leading power $x^2$:\\n1) Divide both numerator and denominator by $x^2$:\\n   $\\frac{3x^2 + 5x - 2}{4x^2 - 1} = \\frac{3 + \\frac{5}{x} - \\frac{2}{x^2}}{4 - \\frac{1}{x^2}}$.\\n2) Apply the limit as $x \\to \\infty$ (noting that $\\frac{1}{x} \\to 0$ and $\\frac{1}{x^2} \\to 0$):\\n   $L = \\frac{3 + 0 - 0}{4 - 0} = \\frac{3}{4}$.\\nOption A is correct.",
     "common_mistake": "Assuming the limit is infinity because the individual polynomial terms grow to infinity.",
     "concept_slugs": [
       "limits-sandwich-infinite-sums"
@@ -502,7 +502,7 @@
   },
   {
     "pattern_group": "limits-sandwich-infinite-sums",
-    "title": "Evaluate the limit: $L = \\\\lim_{n \\\\to \\\\infty} \\\\left( \\\\frac{1}{n^2+1} + \\\\frac{2}{n^2+2} + \\\\dots + \\\\frac{n}{n^2+n} \\\\right)$. The value of $L$ is:",
+    "title": "Evaluate the limit: $L = \\lim_{n \\to \\infty} \\left( \\frac{1}{n^2+1} + \\frac{2}{n^2+2} + \\dots + \\frac{n}{n^2+n} \\right)$. The value of $L$ is:",
     "difficulty": "medium",
     "type": "pyq",
     "source": "JEE Main 2020",
@@ -511,12 +511,12 @@
     "question_format": "mcq",
     "options": {
       "A": "1",
-      "B": "$\\\\frac{1}{2}$",
+      "B": "$\\frac{1}{2}$",
       "C": "0",
       "D": "2"
     },
     "notes": "Establish upper and lower bounds for the sum by replacing all denominators with the smallest and largest ones, and apply Squeeze Theorem.",
-    "solution_text": "Let's apply the Squeeze Theorem to the sum $S_n$:\\n1) The given sum is $S_n = \\\\sum_{r=1}^n \\\\frac{r}{n^2+r}$.\\n2) Since $1 \\\\le r \\\\le n$, we can bound the denominators:\\n   $n^2 + 1 \\\\le n^2 + r \\\\le n^2 + n$.\\n3) Taking reciprocals (reverses inequality):\\n   $\\\\frac{1}{n^2+n} \\\\le \\\\frac{1}{n^2+r} \\\\le \\\\frac{1}{n^2+1}$.\\n4) Multiply each term by $r$ and sum from $r=1$ to $n$:\\n   $\\\\frac{\\\\sum_{r=1}^n r}{n^2+n} \\\\le S_n \\\\le \\\\frac{\\\\sum_{r=1}^n r}{n^2+1}$.\\n5) Since $\\\\sum_{r=1}^n r = \\\\frac{n(n+1)}{2}$, we get:\\n   $\\\\frac{n(n+1)}{2(n^2+n)} \\\\le S_n \\\\le \\\\frac{n(n+1)}{2(n^2+1)} \\\\implies \\\\frac{1}{2} \\\\le S_n \\\\le \\\\frac{n^2+n}{2(n^2+1)}$.\\n6) Taking limits as $n \\\\to \\\\infty$:\\n   - Lower bound limit: $\\\\frac{1}{2}$.\\n   - Upper bound limit: $\\\\lim_{n \\\\to \\\\infty} \\\\frac{n^2+n}{2n^2+2} = \\\\frac{1}{2}$.\\n7) By Squeeze Theorem, $L = \\\\frac{1}{2}$.\\nOption B is correct.",
+    "solution_text": "Let's apply the Squeeze Theorem to the sum $S_n$:\\n1) The given sum is $S_n = \\sum_{r=1}^n \\frac{r}{n^2+r}$.\\n2) Since $1 \\le r \\le n$, we can bound the denominators:\\n   $n^2 + 1 \\le n^2 + r \\le n^2 + n$.\\n3) Taking reciprocals (reverses inequality):\\n   $\\frac{1}{n^2+n} \\le \\frac{1}{n^2+r} \\le \\frac{1}{n^2+1}$.\\n4) Multiply each term by $r$ and sum from $r=1$ to $n$:\\n   $\\frac{\\sum_{r=1}^n r}{n^2+n} \\le S_n \\le \\frac{\\sum_{r=1}^n r}{n^2+1}$.\\n5) Since $\\sum_{r=1}^n r = \\frac{n(n+1)}{2}$, we get:\\n   $\\frac{n(n+1)}{2(n^2+n)} \\le S_n \\le \\frac{n(n+1)}{2(n^2+1)} \\implies \\frac{1}{2} \\le S_n \\le \\frac{n^2+n}{2(n^2+1)}$.\\n6) Taking limits as $n \\to \\infty$:\\n   - Lower bound limit: $\\frac{1}{2}$.\\n   - Upper bound limit: $\\lim_{n \\to \\infty} \\frac{n^2+n}{2n^2+2} = \\frac{1}{2}$.\\n7) By Squeeze Theorem, $L = \\frac{1}{2}$.\\nOption B is correct.",
     "common_mistake": "Claiming the limit is 0 because each individual term approaches 0 as n goes to infinity (neglecting that the number of terms is growing with n).",
     "concept_slugs": [
       "limits-sandwich-infinite-sums"
@@ -524,28 +524,28 @@
   },
   {
     "pattern_group": "limits-sandwich-infinite-sums",
-    "title": "Evaluate the limit: $L = \\\\lim_{x \\\\to \\\\infty} x \\\\left( \\\\sqrt{x^2 + 1} - x \\\\right)$. The value of $L$ is:",
+    "title": "Evaluate the limit: $L = \\lim_{x \\to \\infty} x \\left( \\sqrt{x^2 + 1} - x \\right)$. The value of $L$ is:",
     "difficulty": "medium",
     "type": "practice",
     "correct_answer": "A",
     "is_numerical": false,
     "question_format": "mcq",
     "options": {
-      "A": "$\\\\frac{1}{2}$",
+      "A": "$\\frac{1}{2}$",
       "B": "1",
       "C": "0",
-      "D": "$\\\\infty$"
+      "D": "$\\infty$"
     },
-    "notes": "Rationalize the expression inside the parentheses by multiplying and dividing by the conjugate $\\\\sqrt{x^2+1} + x$.",
-    "solution_text": "Let's rationalise the expression inside the limit:\\n1) Multiply and divide by $\\\\sqrt{x^2+1} + x$:\\n   $x \\\\left( \\\\sqrt{x^2 + 1} - x \\\\right) = x \\\\frac{(x^2 + 1) - x^2}{\\\\sqrt{x^2+1} + x} = \\\\frac{x}{\\\\sqrt{x^2+1} + x}$.\\n2) Now divide the numerator and denominator by $x$ (for $x > 0$, $\\\\sqrt{x^2+1}/x = \\\\sqrt{1 + 1/x^2}$):\\n   $\\\\frac{1}{\\\\sqrt{1 + \\\\frac{1}{x^2}} + 1}$.\\n3) Take the limit as $x \\\\to \\\\infty$:\\n   $L = \\\\frac{1}{\\\\sqrt{1 + 0} + 1} = \\\\frac{1}{1 + 1} = \\\\frac{1}{2}$.\\nOption A is correct.",
-    "common_mistake": "Assuming the limit is 0 by claiming $\\\\sqrt{x^2+1} \\\\approx x$ too early.",
+    "notes": "Rationalize the expression inside the parentheses by multiplying and dividing by the conjugate $\\sqrt{x^2+1} + x$.",
+    "solution_text": "Let's rationalise the expression inside the limit:\\n1) Multiply and divide by $\\sqrt{x^2+1} + x$:\\n   $x \\left( \\sqrt{x^2 + 1} - x \\right) = x \\frac{(x^2 + 1) - x^2}{\\sqrt{x^2+1} + x} = \\frac{x}{\\sqrt{x^2+1} + x}$.\\n2) Now divide the numerator and denominator by $x$ (for $x > 0$, $\\sqrt{x^2+1}/x = \\sqrt{1 + 1/x^2}$):\\n   $\\frac{1}{\\sqrt{1 + \\frac{1}{x^2}} + 1}$.\\n3) Take the limit as $x \\to \\infty$:\\n   $L = \\frac{1}{\\sqrt{1 + 0} + 1} = \\frac{1}{1 + 1} = \\frac{1}{2}$.\\nOption A is correct.",
+    "common_mistake": "Assuming the limit is 0 by claiming $\\sqrt{x^2+1} \\approx x$ too early.",
     "concept_slugs": [
       "limits-sandwich-infinite-sums"
     ]
   },
   {
     "pattern_group": "limits-sandwich-infinite-sums",
-    "title": "Evaluate the limit of the infinite sum: $L = \\\\lim_{n \\\\to \\\\infty} \\\\sum_{r=1}^n \\\\frac{r}{n^2 + r^2}$. The value of $L$ is:",
+    "title": "Evaluate the limit of the infinite sum: $L = \\lim_{n \\to \\infty} \\sum_{r=1}^n \\frac{r}{n^2 + r^2}$. The value of $L$ is:",
     "difficulty": "hard",
     "type": "pyq",
     "source": "JEE Advanced 2021",
@@ -553,13 +553,13 @@
     "is_numerical": false,
     "question_format": "mcq",
     "options": {
-      "A": "$\\\\ln 2$",
-      "B": "$\\\\frac{\\\\ln 2}{2}$",
-      "C": "$2\\\\ln 2$",
+      "A": "$\\ln 2$",
+      "B": "$\\frac{\\ln 2}{2}$",
+      "C": "$2\\ln 2$",
       "D": "$1$"
     },
     "notes": "Express the sum in the form 1/n * f(r/n) and convert it to a definite Riemann integral from 0 to 1.",
-    "solution_text": "Let's convert the limit of sum to a definite integral:\\n1) Rewrite the term:\\n   $\\\\frac{r}{n^2 + r^2} = \\\\frac{r}{n^2 (1 + (r/n)^2)} = \\\\frac{1}{n} \\\\times \\\\frac{r/n}{1 + (r/n)^2}$.\\n2) Thus, the limit of sum is:\\n   $L = \\\\lim_{n \\\\to \\\\infty} \\\\frac{1}{n} \\\\sum_{r=1}^n \\\\frac{r/n}{1 + (r/n)^2}$.\\n3) By Riemann sum definition, this converts to the integral:\\n   $L = \\\\int_0^1 \\\\frac{x}{1 + x^2} dx$.\\n4) Solve the integral by substitution ($u = 1 + x^2 \\\\implies du = 2x dx$):\\n   $L = \\\\frac{1}{2} \\\\int_1^2 \\\\frac{1}{u} du = \\\\frac{1}{2} [\\\\ln u]_1^2 = \\\\frac{1}{2} (\\\\ln 2 - \\\\ln 1) = \\\\frac{\\\\ln 2}{2}$.\\nOption B is correct.",
+    "solution_text": "Let's convert the limit of sum to a definite integral:\\n1) Rewrite the term:\\n   $\\frac{r}{n^2 + r^2} = \\frac{r}{n^2 (1 + (r/n)^2)} = \\frac{1}{n} \\times \\frac{r/n}{1 + (r/n)^2}$.\\n2) Thus, the limit of sum is:\\n   $L = \\lim_{n \\to \\infty} \\frac{1}{n} \\sum_{r=1}^n \\frac{r/n}{1 + (r/n)^2}$.\\n3) By Riemann sum definition, this converts to the integral:\\n   $L = \\int_0^1 \\frac{x}{1 + x^2} dx$.\\n4) Solve the integral by substitution ($u = 1 + x^2 \\implies du = 2x dx$):\\n   $L = \\frac{1}{2} \\int_1^2 \\frac{1}{u} du = \\frac{1}{2} [\\ln u]_1^2 = \\frac{1}{2} (\\ln 2 - \\ln 1) = \\frac{\\ln 2}{2}$.\\nOption B is correct.",
     "common_mistake": "Neglecting the $1/2$ factor during substitution integration, leading to Option A.",
     "concept_slugs": [
       "limits-sandwich-infinite-sums"
@@ -567,14 +567,14 @@
   },
   {
     "pattern_group": "limits-sandwich-infinite-sums",
-    "title": "The value of the limit $L = \\\\lim_{x \\\\to \\\\infty} \\\\frac{[x]}{x}$ (where $[x]$ represents the greatest integer function of $x$) is ________.",
+    "title": "The value of the limit $L = \\lim_{x \\to \\infty} \\frac{[x]}{x}$ (where $[x]$ represents the greatest integer function of $x$) is ________.",
     "difficulty": "easy",
     "type": "practice",
     "correct_answer": "1",
     "is_numerical": true,
     "question_format": "numerical",
     "notes": "Use the property of greatest integer function: x - 1 < [x] <= x, and apply Squeeze Theorem.",
-    "solution_text": "Let's set up the bounds for $[x]$:\\n1) By definition, $x - 1 < [x] \\\\le x$.\\n2) Divide by $x$ (since $x \\\\to \\\\infty$, $x > 0$):\\n   $\\\\frac{x-1}{x} < \\\\frac{[x]}{x} \\\\le \\\\frac{x}{x} \\\\implies 1 - \\\\frac{1}{x} < \\\\frac{[x]}{x} \\\\le 1$.\\n3) Take limits as $x \\\\to \\\\infty$:\\n   $\\\\lim_{x \\\\to \\\\infty} \\\\left(1 - \\\\frac{1}{x}\\\\right) = 1$ and $\\\\lim_{x \\\\to \\\\infty} (1) = 1$.\\n4) By Squeeze Theorem, the limit is 1.\\nThe answer is 1.",
+    "solution_text": "Let's set up the bounds for $[x]$:\\n1) By definition, $x - 1 < [x] \\le x$.\\n2) Divide by $x$ (since $x \\to \\infty$, $x > 0$):\\n   $\\frac{x-1}{x} < \\frac{[x]}{x} \\le \\frac{x}{x} \\implies 1 - \\frac{1}{x} < \\frac{[x]}{x} \\le 1$.\\n3) Take limits as $x \\to \\infty$:\\n   $\\lim_{x \\to \\infty} \\left(1 - \\frac{1}{x}\\right) = 1$ and $\\lim_{x \\to \\infty} (1) = 1$.\\n4) By Squeeze Theorem, the limit is 1.\\nThe answer is 1.",
     "common_mistake": "Claiming the limit is 0 by treating $[x]$ as constant or ignoring that it increases with $x$.",
     "concept_slugs": [
       "limits-sandwich-infinite-sums"
@@ -582,7 +582,7 @@
   },
   {
     "pattern_group": "limits-sandwich-infinite-sums",
-    "title": "If the limit is represented by $L = \\\\lim_{n \\\\to \\\\infty} \\\\frac{1}{n} \\\\sum_{i=1}^n \\\\frac{i^2}{n^2}$, then the value of the integer expression $3L$ is ________.",
+    "title": "If the limit is represented by $L = \\lim_{n \\to \\infty} \\frac{1}{n} \\sum_{i=1}^n \\frac{i^2}{n^2}$, then the value of the integer expression $3L$ is ________.",
     "difficulty": "medium",
     "type": "pyq",
     "source": "JEE Main 2021",
@@ -590,22 +590,22 @@
     "is_numerical": true,
     "question_format": "numerical",
     "notes": "Convert the limit of sum to a definite integral of x^2 from 0 to 1.",
-    "solution_text": "Let's convert the Riemann sum to a definite integral:\\n1) The term is $L = \\\\lim_{n \\\\to \\\\infty} \\\\frac{1}{n} \\\\sum_{i=1}^n \\\\left(\\\\frac{i}{n}\\\\right)^2$.\\n2) This converts to the integral:\\n   $L = \\\\int_0^1 x^2 dx$.\\n3) Evaluate the integral:\\n   $L = \\\\left[ \\\\frac{x^3}{3} \\\\right]_0^1 = \\\\frac{1}{3} - 0 = \\\\frac{1}{3}$.\\n4) Compute $3L = 3 \\\\times \\\\frac{1}{3} = 1$.\\nThe answer is 1.",
-    "common_mistake": "Evaluating the integral as $x^3$ without dividing by 3, yielding $L=1 \\\\implies 3L=3$.",
+    "solution_text": "Let's convert the Riemann sum to a definite integral:\\n1) The term is $L = \\lim_{n \\to \\infty} \\frac{1}{n} \\sum_{i=1}^n \\left(\\frac{i}{n}\\right)^2$.\\n2) This converts to the integral:\\n   $L = \\int_0^1 x^2 dx$.\\n3) Evaluate the integral:\\n   $L = \\left[ \\frac{x^3}{3} \\right]_0^1 = \\frac{1}{3} - 0 = \\frac{1}{3}$.\\n4) Compute $3L = 3 \\times \\frac{1}{3} = 1$.\\nThe answer is 1.",
+    "common_mistake": "Evaluating the integral as $x^3$ without dividing by 3, yielding $L=1 \\implies 3L=3$.",
     "concept_slugs": [
       "limits-sandwich-infinite-sums"
     ]
   },
   {
     "pattern_group": "limits-sandwich-infinite-sums",
-    "title": "If the limit of product is represented by $L = \\\\lim_{n \\\\to \\\\infty} \\\\left( \\\\frac{n!}{n^n} \\\\right)^{1/n}$, then $L$ can be written in the form $1/e^k$. The value of the integer $k$ is ________.",
+    "title": "If the limit of product is represented by $L = \\lim_{n \\to \\infty} \\left( \\frac{n!}{n^n} \\right)^{1/n}$, then $L$ can be written in the form $1/e^k$. The value of the integer $k$ is ________.",
     "difficulty": "hard",
     "type": "practice",
     "correct_answer": "1",
     "is_numerical": true,
     "question_format": "numerical",
     "notes": "Take log on both sides to express the product as a Riemann sum: 1/n * sum ln(r/n) from r=1 to n.",
-    "solution_text": "Let's evaluate the limit $L$ by taking the natural logarithm:\\n1) Let $L = \\\\lim_{n \\\\to \\\\infty} P_n$ where $P_n = \\\\left( \\\\frac{n!}{n^n} \\\\right)^{1/n} = \\\\left( \\\\frac{1 \\\\times 2 \\\\times \\\\dots \\\\times n}{n \\\\times n \\\\times \\\\dots \\\\times n} \\\\right)^{1/n} = \\\\left( \\\\prod_{r=1}^n \\\\frac{r}{n} \\\\right)^{1/n}$.\\n2) Take log:\\n   $\\\\ln L = \\\\lim_{n \\\\to \\\\infty} \\\\ln \\\\left( \\\\prod_{r=1}^n \\\\frac{r}{n} \\\\right)^{1/n} = \\\\lim_{n \\\\to \\\\infty} \\\\frac{1}{n} \\\\sum_{r=1}^n \\\\ln\\\\left(\\\\frac{r}{n}\\\\right)$.\\n3) Express as a Riemann integral:\\n   $\\\\ln L = \\\\int_0^1 \\\\ln x dx$.\\n4) Integrate by parts ($\\\\int \\\\ln x dx = x\\\\ln x - x$):\\n   $\\\\ln L = [x\\\\ln x - x]_0^1 = (1\\\\ln 1 - 1) - \\\\lim_{x \\\\to 0^+} (x\\\\ln x - x) = -1 - 0 = -1$.\\n5) Retrieve $L$:\\n   $L = e^{-1} = \\\\frac{1}{e^1}$.\\n6) Comparing with $\\\\frac{1}{e^k}$ gives $k = 1$.\\nThe answer is 1.",
+    "solution_text": "Let's evaluate the limit $L$ by taking the natural logarithm:\\n1) Let $L = \\lim_{n \\to \\infty} P_n$ where $P_n = \\left( \\frac{n!}{n^n} \\right)^{1/n} = \\left( \\frac{1 \\times 2 \\times \\dots \\times n}{n \\times n \\times \\dots \\times n} \\right)^{1/n} = \\left( \\prod_{r=1}^n \\frac{r}{n} \\right)^{1/n}$.\\n2) Take log:\\n   $\\ln L = \\lim_{n \\to \\infty} \\ln \\left( \\prod_{r=1}^n \\frac{r}{n} \\right)^{1/n} = \\lim_{n \\to \\infty} \\frac{1}{n} \\sum_{r=1}^n \\ln\\left(\\frac{r}{n}\\right)$.\\n3) Express as a Riemann integral:\\n   $\\ln L = \\int_0^1 \\ln x dx$.\\n4) Integrate by parts ($\\int \\ln x dx = x\\ln x - x$):\\n   $\\ln L = [x\\ln x - x]_0^1 = (1\\ln 1 - 1) - \\lim_{x \\to 0^+} (x\\ln x - x) = -1 - 0 = -1$.\\n5) Retrieve $L$:\\n   $L = e^{-1} = \\frac{1}{e^1}$.\\n6) Comparing with $\\frac{1}{e^k}$ gives $k = 1$.\\nThe answer is 1.",
     "common_mistake": "Calculating integration incorrectly or making errors in the limits of integration.",
     "concept_slugs": [
       "limits-sandwich-infinite-sums"
@@ -613,7 +613,7 @@
   },
   {
     "pattern_group": "continuity-piecewise-discontinuities",
-    "title": "A function $f(x) = \\\\frac{x^2 - 1}{x - 1}$ is discontinuous at $x = 1$. The classification of this discontinuity is:",
+    "title": "A function $f(x) = \\frac{x^2 - 1}{x - 1}$ is discontinuous at $x = 1$. The classification of this discontinuity is:",
     "difficulty": "easy",
     "type": "concept",
     "correct_answer": "A",
@@ -626,7 +626,7 @@
       "D": "Infinite discontinuity"
     },
     "notes": "Check if the limit of the function exists at x = 1, even though the function itself is undefined.",
-    "solution_text": "Let's evaluate the continuity status at $x=1$:\\n1) The function is undefined at $x=1$ because it yields $0/0$.\\n2) Let's find the limit at $x=1$:\\n   $\\\\lim_{x \\\\to 1} f(x) = \\\\lim_{x \\\\to 1} \\\\frac{(x-1)(x+1)}{x-1} = \\\\lim_{x \\\\to 1} (x+1) = 2$.\\n3) Since the limit exists and is finite (equals 2), but the function is not defined, we can define $f(1) = 2$ to make it continuous.\\n4) Therefore, the discontinuity is removable.\\nOption A is correct.",
+    "solution_text": "Let's evaluate the continuity status at $x=1$:\\n1) The function is undefined at $x=1$ because it yields $0/0$.\\n2) Let's find the limit at $x=1$:\\n   $\\lim_{x \\to 1} f(x) = \\lim_{x \\to 1} \\frac{(x-1)(x+1)}{x-1} = \\lim_{x \\to 1} (x+1) = 2$.\\n3) Since the limit exists and is finite (equals 2), but the function is not defined, we can define $f(1) = 2$ to make it continuous.\\n4) Therefore, the discontinuity is removable.\\nOption A is correct.",
     "common_mistake": "Calling it non-removable because the denominator has $(x-1)$ which goes to 0.",
     "concept_slugs": [
       "continuity-piecewise-discontinuities"
@@ -634,7 +634,7 @@
   },
   {
     "pattern_group": "continuity-piecewise-discontinuities",
-    "title": "Let the piecewise function be defined as $f(x) = \\\\begin{cases} kx + 1 & x \\\\le 2 \\\\ 3x - 1 & x > 2 \\\\end{cases}$. If $f(x)$ is continuous at $x = 2$, then the value of $k$ is:",
+    "title": "Let the piecewise function be defined as $f(x) = \\begin{cases} kx + 1 & x \\le 2 \\ 3x - 1 & x > 2 \\end{cases}$. If $f(x)$ is continuous at $x = 2$, then the value of $k$ is:",
     "difficulty": "easy",
     "type": "practice",
     "correct_answer": "A",
@@ -647,7 +647,7 @@
       "D": "0"
     },
     "notes": "For continuity at x = 2, we need the Left-Hand Limit (LHL), Right-Hand Limit (RHL), and f(2) to be equal.",
-    "solution_text": "Let's set up the continuity equation at $x=2$:\\n1) Find $f(2)$ and LHL (from $x \\\\le 2$):\\n   $\\\\lim_{x \\\\to 2^-} f(x) = f(2) = k(2) + 1 = 2k + 1$.\\n2) Find RHL (from $x > 2$):\\n   $\\\\lim_{x \\\\to 2^+} f(x) = 3(2) - 1 = 5$.\\n3) Equate LHL and RHL for continuity:\\n   $2k + 1 = 5 \\\\implies 2k = 4 \\\\implies k = 2$.\\nOption A is correct.",
+    "solution_text": "Let's set up the continuity equation at $x=2$:\\n1) Find $f(2)$ and LHL (from $x \\le 2$):\\n   $\\lim_{x \\to 2^-} f(x) = f(2) = k(2) + 1 = 2k + 1$.\\n2) Find RHL (from $x > 2$):\\n   $\\lim_{x \\to 2^+} f(x) = 3(2) - 1 = 5$.\\n3) Equate LHL and RHL for continuity:\\n   $2k + 1 = 5 \\implies 2k = 4 \\implies k = 2$.\\nOption A is correct.",
     "common_mistake": "Solving the equation as $2k - 1 = 5$ due to a sign error.",
     "concept_slugs": [
       "continuity-piecewise-discontinuities"
@@ -655,7 +655,7 @@
   },
   {
     "pattern_group": "continuity-piecewise-discontinuities",
-    "title": "Let the function $f(x)$ be defined as $f(x) = \\\\begin{cases} \\\\frac{1 - \\\\cos 4x}{x^2} & x < 0 \\\\ a & x = 0 \\\\ \\\\frac{\\\\sqrt{x}}{\\\\sqrt{16+\\\\sqrt{x}} - 4} & x > 0 \\\\end{cases}$. If $f(x)$ is continuous at $x = 0$, then the value of the constant $a$ is:",
+    "title": "Let the function $f(x)$ be defined as $f(x) = \\begin{cases} \\frac{1 - \\cos 4x}{x^2} & x < 0 \\ a & x = 0 \\ \\frac{\\sqrt{x}}{\\sqrt{16+\\sqrt{x}} - 4} & x > 0 \\end{cases}$. If $f(x)$ is continuous at $x = 0$, then the value of the constant $a$ is:",
     "difficulty": "medium",
     "type": "pyq",
     "source": "JEE Main 2021",
@@ -669,7 +669,7 @@
       "D": "2"
     },
     "notes": "Evaluate the Left-Hand Limit (LHL) and Right-Hand Limit (RHL) separately at x = 0 and equate them to f(0) = a.",
-    "solution_text": "Let's calculate the limits at $x = 0$:\\n1) Left-Hand Limit (LHL):\\n   $\\\\lim_{x \\\\to 0^-} f(x) = \\\\lim_{x \\\\to 0^-} \\\\frac{1 - \\\\cos 4x}{x^2}$.\\n   Recall $\\\\lim_{u \\\\to 0} \\\\frac{1 - \\\\cos u}{u^2} = \\\\frac{1}{2}$. Here $u = 4x \\\\implies u^2 = 16x^2$.\\n   So $\\\\lim_{x \\\\to 0} \\\\frac{1 - \\\\cos 4x}{x^2} = 16 \\\\times \\\\frac{1}{2} = 8$.\\n2) Right-Hand Limit (RHL):\\n   $\\\\lim_{x \\\\to 0^+} f(x) = \\\\lim_{x \\\\to 0^+} \\\\frac{\\\\sqrt{x}}{\\\\sqrt{16+\\\\sqrt{x}} - 4}$.\\n   Rationalize the denominator by multiplying by $\\\\sqrt{16+\\\\sqrt{x}} + 4$:\\n   $\\\\frac{\\\\sqrt{x}(\\\\sqrt{16+\\\\sqrt{x}} + 4)}{(16+\\\\sqrt{x}) - 16} = \\\\frac{\\\\sqrt{x}(\\\\sqrt{16+\\\\sqrt{x}} + 4)}{\\\\sqrt{x}} = \\\\sqrt{16+\\\\sqrt{x}} + 4$.\\n   Now take limit as $x \\\\to 0^+$:\\n   $\\\\lim_{x \\\\to 0^+} (\\\\sqrt{16+\\\\sqrt{x}} + 4) = \\\\sqrt{16+0} + 4 = 4 + 4 = 8$.\\n3) For continuity, we need LHL = RHL = $f(0) \\\\implies 8 = 8 = a$.\\n   Thus, $a = 8$.\\nOption B is correct.",
+    "solution_text": "Let's calculate the limits at $x = 0$:\\n1) Left-Hand Limit (LHL):\\n   $\\lim_{x \\to 0^-} f(x) = \\lim_{x \\to 0^-} \\frac{1 - \\cos 4x}{x^2}$.\\n   Recall $\\lim_{u \\to 0} \\frac{1 - \\cos u}{u^2} = \\frac{1}{2}$. Here $u = 4x \\implies u^2 = 16x^2$.\\n   So $\\lim_{x \\to 0} \\frac{1 - \\cos 4x}{x^2} = 16 \\times \\frac{1}{2} = 8$.\\n2) Right-Hand Limit (RHL):\\n   $\\lim_{x \\to 0^+} f(x) = \\lim_{x \\to 0^+} \\frac{\\sqrt{x}}{\\sqrt{16+\\sqrt{x}} - 4}$.\\n   Rationalize the denominator by multiplying by $\\sqrt{16+\\sqrt{x}} + 4$:\\n   $\\frac{\\sqrt{x}(\\sqrt{16+\\sqrt{x}} + 4)}{(16+\\sqrt{x}) - 16} = \\frac{\\sqrt{x}(\\sqrt{16+\\sqrt{x}} + 4)}{\\sqrt{x}} = \\sqrt{16+\\sqrt{x}} + 4$.\\n   Now take limit as $x \\to 0^+$:\\n   $\\lim_{x \\to 0^+} (\\sqrt{16+\\sqrt{x}} + 4) = \\sqrt{16+0} + 4 = 4 + 4 = 8$.\\n3) For continuity, we need LHL = RHL = $f(0) \\implies 8 = 8 = a$.\\n   Thus, $a = 8$.\\nOption B is correct.",
     "common_mistake": "Incorrect rationalization in the RHL step leading to $a=4$ or $a=16$.",
     "concept_slugs": [
       "continuity-piecewise-discontinuities"
@@ -690,7 +690,7 @@
       "D": "0"
     },
     "notes": "Recall that [x] is discontinuous at all integer values. Check the interval endpoints carefully.",
-    "solution_text": "Let's check the integers in the interval $[1, 3]$:\\n1) The greatest integer function $f(x) = [x]$ is discontinuous at all integers because the LHL and RHL differ by 1.\\n2) Within the interval $[1, 3]$, the integers are $1, 2, 3$.\\n   - At $x=1$: the function is defined on $[1, 3]$, so we check right-continuity. $\\\\lim_{x \\\\to 1^+} [x] = 1 = f(1)$. So it is continuous at $x=1$ from the right.\\n   - At $x=2$: both sides are in the domain. LHL = 1, RHL = 2. Discontinuous.\\n   - At $x=3$: we check left-continuity. LHL = 2, $f(3) = 3$. Discontinuous.\\n3) Thus, the points of discontinuity on the interval $[1, 3]$ are $x = 2$ and $x = 3$.\\n4) There are exactly 2 points of discontinuity.\\nOption B is correct.",
+    "solution_text": "Let's check the integers in the interval $[1, 3]$:\\n1) The greatest integer function $f(x) = [x]$ is discontinuous at all integers because the LHL and RHL differ by 1.\\n2) Within the interval $[1, 3]$, the integers are $1, 2, 3$.\\n   - At $x=1$: the function is defined on $[1, 3]$, so we check right-continuity. $\\lim_{x \\to 1^+} [x] = 1 = f(1)$. So it is continuous at $x=1$ from the right.\\n   - At $x=2$: both sides are in the domain. LHL = 1, RHL = 2. Discontinuous.\\n   - At $x=3$: we check left-continuity. LHL = 2, $f(3) = 3$. Discontinuous.\\n3) Thus, the points of discontinuity on the interval $[1, 3]$ are $x = 2$ and $x = 3$.\\n4) There are exactly 2 points of discontinuity.\\nOption B is correct.",
     "common_mistake": "Including $x = 1$ as a point of discontinuity, forgetting that for closed intervals we only check one-sided continuity at the boundaries.",
     "concept_slugs": [
       "continuity-piecewise-discontinuities"
@@ -698,7 +698,7 @@
   },
   {
     "pattern_group": "continuity-piecewise-discontinuities",
-    "title": "Let the function $f(x)$ be defined as $f(x) = \\\\frac{1}{1 - e^{1/x}}$ for all $x \\\\neq 0$, and $f(0) = 0$. At $x = 0$, the function $f(x)$ has:",
+    "title": "Let the function $f(x)$ be defined as $f(x) = \\frac{1}{1 - e^{1/x}}$ for all $x \\neq 0$, and $f(0) = 0$. At $x = 0$, the function $f(x)$ has:",
     "difficulty": "hard",
     "type": "pyq",
     "source": "JEE Advanced 2020",
@@ -712,22 +712,22 @@
       "D": "Is continuous"
     },
     "notes": "Find the Left-Hand Limit (LHL) and Right-Hand Limit (RHL) as x approaches 0 by considering the behavior of 1/x.",
-    "solution_text": "Let's analyze the behavior of $e^{1/x}$ as $x \\\\to 0$ from both sides:\\n1) Left-Hand Limit (LHL): as $x \\\\to 0^-$, $\\\\frac{1}{x} \\\\to -\\\\infty$.\\n   Thus, $e^{1/x} \\\\to e^{-\\\\infty} = 0$.\\n   LHL $= \\\\lim_{x \\\\to 0^-} \\\\frac{1}{1 - e^{1/x}} = \\\\frac{1}{1 - 0} = 1$.\\n2) Right-Hand Limit (RHL): as $x \\\\to 0^+$, $\\\\frac{1}{x} \\\\to \\\\infty$.\\n   Thus, $e^{1/x} \\\\to \\\\infty$.\\n   RHL $= \\\\lim_{x \\\\to 0^+} \\\\frac{1}{1 - e^{1/x}} = \\\\frac{1}{1 - \\\\infty} = 0$.\\n3) Since LHL and RHL are both finite but unequal (LHL = 1, RHL = 0), the function has a jump discontinuity at $x=0$.\\nOption B is correct.",
-    "common_mistake": "Assuming $e^{1/x} \\\\to \\\\infty$ from both sides, which would lead to a limit of 0 and mistakenly concluding that the function is continuous.",
+    "solution_text": "Let's analyze the behavior of $e^{1/x}$ as $x \\to 0$ from both sides:\\n1) Left-Hand Limit (LHL): as $x \\to 0^-$, $\\frac{1}{x} \\to -\\infty$.\\n   Thus, $e^{1/x} \\to e^{-\\infty} = 0$.\\n   LHL $= \\lim_{x \\to 0^-} \\frac{1}{1 - e^{1/x}} = \\frac{1}{1 - 0} = 1$.\\n2) Right-Hand Limit (RHL): as $x \\to 0^+$, $\\frac{1}{x} \\to \\infty$.\\n   Thus, $e^{1/x} \\to \\infty$.\\n   RHL $= \\lim_{x \\to 0^+} \\frac{1}{1 - e^{1/x}} = \\frac{1}{1 - \\infty} = 0$.\\n3) Since LHL and RHL are both finite but unequal (LHL = 1, RHL = 0), the function has a jump discontinuity at $x=0$.\\nOption B is correct.",
+    "common_mistake": "Assuming $e^{1/x} \\to \\infty$ from both sides, which would lead to a limit of 0 and mistakenly concluding that the function is continuous.",
     "concept_slugs": [
       "continuity-piecewise-discontinuities"
     ]
   },
   {
     "pattern_group": "continuity-piecewise-discontinuities",
-    "title": "If the function $f(x) = \\\\begin{cases} a x + 1 & x \\\\le 3 \\\\ 2x + 4 & x > 3 \\\\end{cases}$ is continuous at $x = 3$, then the value of $3a$ is ________.",
+    "title": "If the function $f(x) = \\begin{cases} a x + 1 & x \\le 3 \\ 2x + 4 & x > 3 \\end{cases}$ is continuous at $x = 3$, then the value of $3a$ is ________.",
     "difficulty": "easy",
     "type": "practice",
     "correct_answer": "9",
     "is_numerical": true,
     "question_format": "numerical",
     "notes": "Equate the Left-Hand Limit a(3) + 1 to the Right-Hand Limit 2(3) + 4.",
-    "solution_text": "Let's apply the continuity condition at $x=3$:\\n1) Left-Hand Limit (LHL) and $f(3)$:\\n   $\\\\lim_{x \\\\to 3^-} f(x) = f(3) = a(3) + 1 = 3a + 1$.\\n2) Right-Hand Limit (RHL):\\n   $\\\\lim_{x \\\\to 3^+} f(x) = 2(3) + 4 = 6 + 4 = 10$.\\n3) For continuity: $\\\\text{LHL} = \\\\text{RHL} \\\\implies 3a + 1 = 10$.\\n4) Solve for $3a$:\\n   $3a = 9$.\\nThe value of $3a$ is 9.",
+    "solution_text": "Let's apply the continuity condition at $x=3$:\\n1) Left-Hand Limit (LHL) and $f(3)$:\\n   $\\lim_{x \\to 3^-} f(x) = f(3) = a(3) + 1 = 3a + 1$.\\n2) Right-Hand Limit (RHL):\\n   $\\lim_{x \\to 3^+} f(x) = 2(3) + 4 = 6 + 4 = 10$.\\n3) For continuity: $\\text{LHL} = \\text{RHL} \\implies 3a + 1 = 10$.\\n4) Solve for $3a$:\\n   $3a = 9$.\\nThe value of $3a$ is 9.",
     "common_mistake": "Solving for $a = 3$ instead of the requested expression $3a$.",
     "concept_slugs": [
       "continuity-piecewise-discontinuities"
@@ -743,7 +743,7 @@
     "is_numerical": true,
     "question_format": "numerical",
     "notes": "Analyze the range of x^2 - 1 for x in [-1, 1]. Identify when the expression takes integer values.",
-    "solution_text": "Let's trace $u(x) = x^2 - 1$ on the domain $x \\\\in [-1, 1]$:\\n1) Range of $x^2$: since $-1 \\\\le x \\\\le 1$, we have $0 \\\\le x^2 \\\\le 1$.\\n2) Range of $x^2 - 1$: subtract 1 to get $-1 \\\\le x^2 - 1 \\\\le 0$.\\n3) Now let's evaluate $f(x) = [x^2 - 1]$:\\n   - If $x^2 - 1 = 0 \\\\implies x^2 = 1 \\\\implies x = \\\\pm 1$. Here $f(1) = 0$ and $f(-1) = 0$.\\n   - If $-1 < x^2 - 1 < 0 \\\\implies 0 < x^2 < 1 \\\\implies x \\\\in (-1, 0) \\\\cup (0, 1)$. Here $f(x) = [x^2-1] = -1$.\\n   - If $x^2 - 1 = -1 \\\\implies x^2 = 0 \\\\implies x = 0$. Here $f(0) = [-1] = -1$.\\n4) Therefore, $f(x)$ is equal to $-1$ for all $x \\\\in (-1, 1)$, and equal to $0$ at the endpoints $x = \\\\pm 1$.\\n5) Limits at the boundaries:\\n   - At $x = 1$: right-hand side is out of domain, left-hand limit is $\\\\lim_{x \\\\to 1^-} f(x) = -1 \\\\neq f(1) = 0$. Discontinuous.\\n   - At $x = -1$: left-hand side is out of domain, right-hand limit is $\\\\lim_{x \\\\to -1^+} f(x) = -1 \\\\neq f(-1) = 0$. Discontinuous.\\n   - At $x = 0$: $\\\\lim_{x \\\\to 0} f(x) = -1 = f(0)$. Continuous.\\n6) The points of discontinuity on $[-1, 1]$ are $x = 1$ and $x = -1$.\\n   The number of points of discontinuity is 2.",
+    "solution_text": "Let's trace $u(x) = x^2 - 1$ on the domain $x \\in [-1, 1]$:\\n1) Range of $x^2$: since $-1 \\le x \\le 1$, we have $0 \\le x^2 \\le 1$.\\n2) Range of $x^2 - 1$: subtract 1 to get $-1 \\le x^2 - 1 \\le 0$.\\n3) Now let's evaluate $f(x) = [x^2 - 1]$:\\n   - If $x^2 - 1 = 0 \\implies x^2 = 1 \\implies x = \\pm 1$. Here $f(1) = 0$ and $f(-1) = 0$.\\n   - If $-1 < x^2 - 1 < 0 \\implies 0 < x^2 < 1 \\implies x \\in (-1, 0) \\cup (0, 1)$. Here $f(x) = [x^2-1] = -1$.\\n   - If $x^2 - 1 = -1 \\implies x^2 = 0 \\implies x = 0$. Here $f(0) = [-1] = -1$.\\n4) Therefore, $f(x)$ is equal to $-1$ for all $x \\in (-1, 1)$, and equal to $0$ at the endpoints $x = \\pm 1$.\\n5) Limits at the boundaries:\\n   - At $x = 1$: right-hand side is out of domain, left-hand limit is $\\lim_{x \\to 1^-} f(x) = -1 \\neq f(1) = 0$. Discontinuous.\\n   - At $x = -1$: left-hand side is out of domain, right-hand limit is $\\lim_{x \\to -1^+} f(x) = -1 \\neq f(-1) = 0$. Discontinuous.\\n   - At $x = 0$: $\\lim_{x \\to 0} f(x) = -1 = f(0)$. Continuous.\\n6) The points of discontinuity on $[-1, 1]$ are $x = 1$ and $x = -1$.\\n   The number of points of discontinuity is 2.",
     "common_mistake": "Claiming that $x=0$ is a point of discontinuity because $x^2 - 1$ reaches the integer $-1$, but neglecting that the greatest integer value remains $-1$ in its neighborhood.",
     "concept_slugs": [
       "continuity-piecewise-discontinuities"
@@ -751,14 +751,14 @@
   },
   {
     "pattern_group": "continuity-piecewise-discontinuities",
-    "title": "The function $f(x) = \\\\frac{1}{x - [x]}$ is defined for all non-integer real values of $x$. The number of points of discontinuity of $f(x)$ on the open interval $(0, 5)$ is ________.",
+    "title": "The function $f(x) = \\frac{1}{x - [x]}$ is defined for all non-integer real values of $x$. The number of points of discontinuity of $f(x)$ on the open interval $(0, 5)$ is ________.",
     "difficulty": "hard",
     "type": "practice",
     "correct_answer": "4",
     "is_numerical": true,
     "question_format": "numerical",
     "notes": "Identify values where the denominator x - [x] (fractional part of x) becomes zero.",
-    "solution_text": "Let's check where $f(x) = \\\\frac{1}{\\\\{x\\\\}}$ is discontinuous or undefined:\\n1) The fractional part function $\\\\{x\\\\} = x - [x]$ is equal to 0 for all integer values of $x$.\\n2) When $\\\\{x\\\\} = 0$, the denominator is 0, making the function undefined. Thus, the function is discontinuous at all integer values of $x$.\\n3) The open interval is $(0, 5)$. The integers in this interval are $1, 2, 3, 4$.\\n4) Therefore, $f(x)$ is discontinuous at exactly 4 points in the interval $(0, 5)$.\\nThe answer is 4.",
+    "solution_text": "Let's check where $f(x) = \\frac{1}{\\{x\\}}$ is discontinuous or undefined:\\n1) The fractional part function $\\{x\\} = x - [x]$ is equal to 0 for all integer values of $x$.\\n2) When $\\{x\\} = 0$, the denominator is 0, making the function undefined. Thus, the function is discontinuous at all integer values of $x$.\\n3) The open interval is $(0, 5)$. The integers in this interval are $1, 2, 3, 4$.\\n4) Therefore, $f(x)$ is discontinuous at exactly 4 points in the interval $(0, 5)$.\\nThe answer is 4.",
     "common_mistake": "Including the endpoints 0 and 5, which are not in the open interval $(0, 5)$.",
     "concept_slugs": [
       "continuity-piecewise-discontinuities"
@@ -779,7 +779,7 @@
       "D": "There is no general relationship between continuity and differentiability."
     },
     "notes": "Recall classic counterexamples of continuous functions that are not differentiable (e.g. absolute value function at x=0).",
-    "solution_text": "Let's review the fundamental calculus theorem:\\n1) Theorem: Differentiability implies continuity. If $f'(c)$ exists, then $\\\\lim_{x \\\\to c} f(x) = f(c)$.\\n2) Converse: Continuity does not imply differentiability. The function $f(x) = |x|$ is continuous at $x = 0$, but is not differentiable there because LHD ($-1$) and RHD ($+1$) differ.\\nOption A is correct.",
+    "solution_text": "Let's review the fundamental calculus theorem:\\n1) Theorem: Differentiability implies continuity. If $f'(c)$ exists, then $\\lim_{x \\to c} f(x) = f(c)$.\\n2) Converse: Continuity does not imply differentiability. The function $f(x) = |x|$ is continuous at $x = 0$, but is not differentiable there because LHD ($-1$) and RHD ($+1$) differ.\\nOption A is correct.",
     "common_mistake": "Claiming that continuity implies differentiability (Option B), ignoring sharp turns on graphs.",
     "concept_slugs": [
       "differentiability-piecewise"
@@ -800,7 +800,7 @@
       "D": "Neither continuous nor differentiable"
     },
     "notes": "Evaluate the Left-Hand Derivative (LHD) and Right-Hand Derivative (RHD) using the limit definitions.",
-    "solution_text": "Let's check the properties of $f(x) = |x|$ at $x = 0$:\\n1) Continuity: $\\\\lim_{x \\\\to 0} |x| = 0 = f(0)$. Thus, it is continuous.\\n2) Differentiability: check LHD and RHD at $x=0$:\\n   - LHD: $\\\\lim_{h \\\\to 0^-} \\\\frac{|0+h| - |0|}{h} = \\\\lim_{h \\\\to 0^-} \\\\frac{-h}{h} = -1$.\\n   - RHD: $\\\\lim_{h \\\\to 0^+} \\\\frac{|0+h| - |0|}{h} = \\\\lim_{h \\\\to 0^+} \\\\frac{h}{h} = 1$.\\n3) Since LHD $\\\\neq$ RHD ($-1 \\\\neq 1$), the derivative does not exist at $x = 0$.\\n4) Therefore, $f(x)$ is continuous but not differentiable at $x = 0$.\\nOption B is correct.",
+    "solution_text": "Let's check the properties of $f(x) = |x|$ at $x = 0$:\\n1) Continuity: $\\lim_{x \\to 0} |x| = 0 = f(0)$. Thus, it is continuous.\\n2) Differentiability: check LHD and RHD at $x=0$:\\n   - LHD: $\\lim_{h \\to 0^-} \\frac{|0+h| - |0|}{h} = \\lim_{h \\to 0^-} \\frac{-h}{h} = -1$.\\n   - RHD: $\\lim_{h \\to 0^+} \\frac{|0+h| - |0|}{h} = \\lim_{h \\to 0^+} \\frac{h}{h} = 1$.\\n3) Since LHD $\\neq$ RHD ($-1 \\neq 1$), the derivative does not exist at $x = 0$.\\n4) Therefore, $f(x)$ is continuous but not differentiable at $x = 0$.\\nOption B is correct.",
     "common_mistake": "Assuming that because the limit of $f(x)$ is 0, the derivative must also exist.",
     "concept_slugs": [
       "differentiability-piecewise"
@@ -808,7 +808,7 @@
   },
   {
     "pattern_group": "differentiability-piecewise",
-    "title": "Let the function $f(x)$ be defined as $f(x) = \\\\begin{cases} x^2 \\\\sin\\\\left(\\\\frac{1}{x}\\\\right) & x \\\\neq 0 \\\\ 0 & x = 0 \\\\end{cases}$. At $x = 0$, the function $f(x)$ is:",
+    "title": "Let the function $f(x)$ be defined as $f(x) = \\begin{cases} x^2 \\sin\\left(\\frac{1}{x}\\right) & x \\neq 0 \\ 0 & x = 0 \\end{cases}$. At $x = 0$, the function $f(x)$ is:",
     "difficulty": "medium",
     "type": "pyq",
     "source": "JEE Main 2021",
@@ -822,15 +822,15 @@
       "D": "Neither continuous nor differentiable"
     },
     "notes": "Use the limit definition of derivative (first principles) to evaluate f'(0).",
-    "solution_text": "Let's analyze $f(x)$ at $x=0$:\\n1) Continuity: $\\\\lim_{x \\\\to 0} x^2 \\\\sin(1/x)$. Since $-1 \\\\le \\\\sin(1/x) \\\\le 1$, we have:\\n   $-x^2 \\\\le x^2 \\\\sin(1/x) \\\\le x^2$.\\n   By Squeeze Theorem, $\\\\lim_{x \\\\to 0} f(x) = 0 = f(0)$, so it is continuous.\\n2) Differentiability: apply the first principles limit for $f'(0)$:\\n   $f'(0) = \\\\lim_{h \\\\to 0} \\\\frac{f(h) - f(0)}{h} = \\\\lim_{h \\\\to 0} \\\\frac{h^2 \\\\sin(1/h) - 0}{h} = \\\\lim_{h \\\\to 0} h \\\\sin\\\\left(\\\\frac{1}{h}\\\\right)$.\\n3) Since $-h \\\\le h \\\\sin(1/h) \\\\le h$ (for $h > 0$), by Squeeze Theorem:\\n   \\\\lim_{h \\\\to 0} h \\\\sin(1/h) = 0$.\\n4) Since the limit exists and equals 0, $f(x)$ is differentiable at $x = 0$, and $f'(0) = 0$.\\n5) Thus, the function is both continuous and differentiable.\\nOption A is correct.",
-    "common_mistake": "Attempting to differentiate using the product rule: $f'(x) = 2x\\\\sin(1/x) - \\\\cos(1/x)$, and claiming it is not differentiable because $\\\\lim_{x \\\\to 0} f'(x)$ does not exist. (Recall that $f'(x)$ being continuous is not required for $f'(0)$ to exist).",
+    "solution_text": "Let's analyze $f(x)$ at $x=0$:\\n1) Continuity: $\\lim_{x \\to 0} x^2 \\sin(1/x)$. Since $-1 \\le \\sin(1/x) \\le 1$, we have:\\n   $-x^2 \\le x^2 \\sin(1/x) \\le x^2$.\\n   By Squeeze Theorem, $\\lim_{x \\to 0} f(x) = 0 = f(0)$, so it is continuous.\\n2) Differentiability: apply the first principles limit for $f'(0)$:\\n   $f'(0) = \\lim_{h \\to 0} \\frac{f(h) - f(0)}{h} = \\lim_{h \\to 0} \\frac{h^2 \\sin(1/h) - 0}{h} = \\lim_{h \\to 0} h \\sin\\left(\\frac{1}{h}\\right)$.\\n3) Since $-h \\le h \\sin(1/h) \\le h$ (for $h > 0$), by Squeeze Theorem:\\n   \\lim_{h \\to 0} h \\sin(1/h) = 0$.\\n4) Since the limit exists and equals 0, $f(x)$ is differentiable at $x = 0$, and $f'(0) = 0$.\\n5) Thus, the function is both continuous and differentiable.\\nOption A is correct.",
+    "common_mistake": "Attempting to differentiate using the product rule: $f'(x) = 2x\\sin(1/x) - \\cos(1/x)$, and claiming it is not differentiable because $\\lim_{x \\to 0} f'(x)$ does not exist. (Recall that $f'(x)$ being continuous is not required for $f'(0)$ to exist).",
     "concept_slugs": [
       "differentiability-piecewise"
     ]
   },
   {
     "pattern_group": "differentiability-piecewise",
-    "title": "Let $f(x) = \\\\begin{cases} ax + b & x < 1 \\\\ x^2 & x \\\\ge 1 \\\\end{cases}$. If the function is differentiable at $x = 1$, then the values of the constants $a$ and $b$ are:",
+    "title": "Let $f(x) = \\begin{cases} ax + b & x < 1 \\ x^2 & x \\ge 1 \\end{cases}$. If the function is differentiable at $x = 1$, then the values of the constants $a$ and $b$ are:",
     "difficulty": "medium",
     "type": "practice",
     "correct_answer": "A",
@@ -843,7 +843,7 @@
       "D": "$a = 0, b = 1$"
     },
     "notes": "Equate the function values at x=1 for continuity, and equate the derivatives at x=1 for differentiability.",
-    "solution_text": "Let's apply the conditions for continuity and differentiability at $x = 1$:\\n1) Continuity: LHL must equal RHL at $x = 1$.\\n   $\\\\lim_{x \\\\to 1^-} f(x) = a(1) + b = a + b$.\\n   $\\\\lim_{x \\\\to 1^+} f(x) = f(1) = 1^2 = 1$.\\n   Thus, $a + b = 1$. (Equation 1)\\n2) Differentiability: Left-Hand Derivative (LHD) must equal Right-Hand Derivative (RHD) at $x = 1$.\\n   - LHD: $\\\\frac{d}{dx}(ax+b) = a$.\\n   - RHD: $\\\\frac{d}{dx}(x^2) = 2x \\\\implies$ at $x=1$ is 2.\\n   Thus, $a = 2$.\\n3) Substitute $a = 2$ into Equation 1:\\n   $2 + b = 1 \\\\implies b = -1$.\\n4) So the constants are $a = 2, b = -1$.\\nOption A is correct.",
+    "solution_text": "Let's apply the conditions for continuity and differentiability at $x = 1$:\\n1) Continuity: LHL must equal RHL at $x = 1$.\\n   $\\lim_{x \\to 1^-} f(x) = a(1) + b = a + b$.\\n   $\\lim_{x \\to 1^+} f(x) = f(1) = 1^2 = 1$.\\n   Thus, $a + b = 1$. (Equation 1)\\n2) Differentiability: Left-Hand Derivative (LHD) must equal Right-Hand Derivative (RHD) at $x = 1$.\\n   - LHD: $\\frac{d}{dx}(ax+b) = a$.\\n   - RHD: $\\frac{d}{dx}(x^2) = 2x \\implies$ at $x=1$ is 2.\\n   Thus, $a = 2$.\\n3) Substitute $a = 2$ into Equation 1:\\n   $2 + b = 1 \\implies b = -1$.\\n4) So the constants are $a = 2, b = -1$.\\nOption A is correct.",
     "common_mistake": "Applying the derivative condition $a = 2x$ without checking continuity first, or solving for $b$ incorrectly.",
     "concept_slugs": [
       "differentiability-piecewise"
@@ -851,7 +851,7 @@
   },
   {
     "pattern_group": "differentiability-piecewise",
-    "title": "Let the function be $f(x) = |x-1| + |x-2|$ defined on $\\\\mathbb{R}$. The total number of points where $f(x)$ is not differentiable is:",
+    "title": "Let the function be $f(x) = |x-1| + |x-2|$ defined on $\\mathbb{R}$. The total number of points where $f(x)$ is not differentiable is:",
     "difficulty": "hard",
     "type": "pyq",
     "source": "JEE Advanced 2021",
@@ -865,7 +865,7 @@
       "D": "0"
     },
     "notes": "The points where the terms inside absolute value change signs are candidates for non-differentiability.",
-    "solution_text": "Let's analyze $f(x) = |x-1| + |x-2|$:\\n1) The critical points of the absolute values are $x = 1$ and $x = 2$.\\n2) Let's express the function without absolute values by splitting the domain:\\n   - For $x < 1$: $f(x) = -(x-1) - (x-2) = -2x + 3$.\\n   - For $1 \\\\le x < 2$: $f(x) = (x-1) - (x-2) = 1$.\\n   - For $x \\\\ge 2$: $f(x) = (x-1) + (x-2) = 2x - 3$.\\n3) Differentiability at $x = 1$:\\n   - LHD: derivative of $-2x + 3$ is $-2$.\\n   - RHD: derivative of $1$ is $0$.\\n   Since LHD $\\\\neq$ RHD, $f(x)$ is not differentiable at $x=1$.\\n4) Differentiability at $x = 2$:\\n   - LHD: derivative of $1$ is $0$.\\n   - RHD: derivative of $2x - 3$ is $2$.\\n   Since LHD $\\\\neq$ RHD, $f(x)$ is not differentiable at $x=2$.\\n5) Thus, the function is not differentiable at exactly 2 points ($x=1$ and $x=2$).\\nOption B is correct.",
+    "solution_text": "Let's analyze $f(x) = |x-1| + |x-2|$:\\n1) The critical points of the absolute values are $x = 1$ and $x = 2$.\\n2) Let's express the function without absolute values by splitting the domain:\\n   - For $x < 1$: $f(x) = -(x-1) - (x-2) = -2x + 3$.\\n   - For $1 \\le x < 2$: $f(x) = (x-1) - (x-2) = 1$.\\n   - For $x \\ge 2$: $f(x) = (x-1) + (x-2) = 2x - 3$.\\n3) Differentiability at $x = 1$:\\n   - LHD: derivative of $-2x + 3$ is $-2$.\\n   - RHD: derivative of $1$ is $0$.\\n   Since LHD $\\neq$ RHD, $f(x)$ is not differentiable at $x=1$.\\n4) Differentiability at $x = 2$:\\n   - LHD: derivative of $1$ is $0$.\\n   - RHD: derivative of $2x - 3$ is $2$.\\n   Since LHD $\\neq$ RHD, $f(x)$ is not differentiable at $x=2$.\\n5) Thus, the function is not differentiable at exactly 2 points ($x=1$ and $x=2$).\\nOption B is correct.",
     "common_mistake": "Thinking the points of non-differentiability cancel each other out or that there are more critical points.",
     "concept_slugs": [
       "differentiability-piecewise"
@@ -880,7 +880,7 @@
     "is_numerical": true,
     "question_format": "numerical",
     "notes": "Find the point where the expression inside the absolute value brackets changes sign.",
-    "solution_text": "Let's analyze the differentiability of $f(x) = |x - 3|$:\\n1) For $x > 3$: $f(x) = x - 3 \\\\implies f'(x) = 1$.\\n2) For $x < 3$: $f(x) = -(x - 3) = -x + 3 \\\\implies f'(x) = -1$.\\n3) At $x = 3$:\\n   - Left-Hand Derivative (LHD) $= -1$.\\n   - Right-Hand Derivative (RHD) $= 1$.\\n   Since LHD $\\\\neq$ RHD, the function is not differentiable at $x = 3$.\\nThe value of $x$ is 3.",
+    "solution_text": "Let's analyze the differentiability of $f(x) = |x - 3|$:\\n1) For $x > 3$: $f(x) = x - 3 \\implies f'(x) = 1$.\\n2) For $x < 3$: $f(x) = -(x - 3) = -x + 3 \\implies f'(x) = -1$.\\n3) At $x = 3$:\\n   - Left-Hand Derivative (LHD) $= -1$.\\n   - Right-Hand Derivative (RHD) $= 1$.\\n   Since LHD $\\neq$ RHD, the function is not differentiable at $x = 3$.\\nThe value of $x$ is 3.",
     "common_mistake": "Claiming the function is differentiable everywhere since it is continuous.",
     "concept_slugs": [
       "differentiability-piecewise"
@@ -888,7 +888,7 @@
   },
   {
     "pattern_group": "differentiability-piecewise",
-    "title": "If the function $f(x) = \\\\begin{cases} p x^2 + q & x \\\\le 1 \\\\ 4x & x > 1 \\\\end{cases}$ is differentiable at $x = 1$, then the value of the expression $p + 2q$ is ________.",
+    "title": "If the function $f(x) = \\begin{cases} p x^2 + q & x \\le 1 \\ 4x & x > 1 \\end{cases}$ is differentiable at $x = 1$, then the value of the expression $p + 2q$ is ________.",
     "difficulty": "medium",
     "type": "pyq",
     "source": "JEE Main 2022",
@@ -896,7 +896,7 @@
     "is_numerical": true,
     "question_format": "numerical",
     "notes": "Apply continuity (p + q = 4) and differentiability (2p = 4) at x = 1.",
-    "solution_text": "Let's apply conditions at $x = 1$:\\n1) Continuity: the values from both branches must match at $x=1$:\\n   $p(1)^2 + q = 4(1) \\\\implies p + q = 4$. (Equation 1)\\n2) Differentiability: the derivatives must match at $x=1$:\\n   - LHD: $\\\\frac{d}{dx}(px^2+q) = 2px \\\\implies 2p(1) = 2p$.\\n   - RHD: $\\\\frac{d}{dx}(4x) = 4$.\\n   Equate LHD and RHD: $2p = 4 \\\\implies p = 2$.\\n3) Substitute $p = 2$ into Equation 1:\\n   $2 + q = 4 \\\\implies q = 2$.\\n4) Compute the value of the expression $p + 2q$:\\n   $p + 2q = 2 + 2(2) = 2 + 4 = 6$.\\nThe answer is 6.",
+    "solution_text": "Let's apply conditions at $x = 1$:\\n1) Continuity: the values from both branches must match at $x=1$:\\n   $p(1)^2 + q = 4(1) \\implies p + q = 4$. (Equation 1)\\n2) Differentiability: the derivatives must match at $x=1$:\\n   - LHD: $\\frac{d}{dx}(px^2+q) = 2px \\implies 2p(1) = 2p$.\\n   - RHD: $\\frac{d}{dx}(4x) = 4$.\\n   Equate LHD and RHD: $2p = 4 \\implies p = 2$.\\n3) Substitute $p = 2$ into Equation 1:\\n   $2 + q = 4 \\implies q = 2$.\\n4) Compute the value of the expression $p + 2q$:\\n   $p + 2q = 2 + 2(2) = 2 + 4 = 6$.\\nThe answer is 6.",
     "common_mistake": "Forgetting the continuity condition and only obtaining p=2, leaving q undetermined.",
     "concept_slugs": [
       "differentiability-piecewise"
@@ -904,14 +904,14 @@
   },
   {
     "pattern_group": "differentiability-piecewise",
-    "title": "Let the function be defined as $f(x) = \\\\max\\\\{x, x^3\\\\}$ for all real $x$. The number of points where $f(x)$ is not differentiable on $\\\\mathbb{R}$ is ________.",
+    "title": "Let the function be defined as $f(x) = \\max\\{x, x^3\\}$ for all real $x$. The number of points where $f(x)$ is not differentiable on $\\mathbb{R}$ is ________.",
     "difficulty": "hard",
     "type": "practice",
     "correct_answer": "3",
     "is_numerical": true,
     "question_format": "numerical",
     "notes": "Find the intersection points of y = x and y = x^3, and check differentiability at x = -1, 0, and 1.",
-    "solution_text": "Let's find the definition of $f(x) = \\\\max\\\\{x, x^3\\\\}$ by comparing $x$ and $x^3$:\\n1) Solve $x^3 = x \\\\implies x(x^2 - 1) = 0 \\\\implies x = -1, 0, 1$.\\n2) Compare values in intervals:\\n   - For $x > 1$: $x^3 > x \\\\implies f(x) = x^3$.\\n   - For $0 < x \\\\le 1$: $x > x^3 \\\\implies f(x) = x$.\\n   - For $-1 < x \\\\le 0$: $x^3 > x \\\\implies f(x) = x^3$.\\n   - For $x \\\\le -1$: $x > x^3 \\\\implies f(x) = x$.\\n3) Differentiability check at intersection points:\\n   - At $x = 1$:\\n     - LHD: derivative of $x$ is 1.\\n     - RHD: derivative of $x^3$ is $3x^2 \\\\implies$ at $x=1$ is 3.\\n     LHD $\\\\neq$ RHD (1 $\\\\neq$ 3). Not differentiable.\\n   - At $x = 0$:\\n     - LHD: derivative of $x^3$ is $3x^2 \\\\implies$ at $x=0$ is 0.\\n     - RHD: derivative of $x$ is 1.\\n     LHD $\\\\neq$ RHD (0 $\\\\neq$ 1). Not differentiable.\\n   - At $x = -1$:\\n     - LHD: derivative of $x$ is 1.\\n     - RHD: derivative of $x^3$ is $3x^2 \\\\implies$ at $x=-1$ is 3.\\n     LHD $\\\\neq$ RHD (1 $\\\\neq$ 3). Not differentiable.\\n4) Thus, $f(x)$ is not differentiable at exactly 3 points ($x = -1, 0, 1$).\\nThe answer is 3.",
+    "solution_text": "Let's find the definition of $f(x) = \\max\\{x, x^3\\}$ by comparing $x$ and $x^3$:\\n1) Solve $x^3 = x \\implies x(x^2 - 1) = 0 \\implies x = -1, 0, 1$.\\n2) Compare values in intervals:\\n   - For $x > 1$: $x^3 > x \\implies f(x) = x^3$.\\n   - For $0 < x \\le 1$: $x > x^3 \\implies f(x) = x$.\\n   - For $-1 < x \\le 0$: $x^3 > x \\implies f(x) = x^3$.\\n   - For $x \\le -1$: $x > x^3 \\implies f(x) = x$.\\n3) Differentiability check at intersection points:\\n   - At $x = 1$:\\n     - LHD: derivative of $x$ is 1.\\n     - RHD: derivative of $x^3$ is $3x^2 \\implies$ at $x=1$ is 3.\\n     LHD $\\neq$ RHD (1 $\\neq$ 3). Not differentiable.\\n   - At $x = 0$:\\n     - LHD: derivative of $x^3$ is $3x^2 \\implies$ at $x=0$ is 0.\\n     - RHD: derivative of $x$ is 1.\\n     LHD $\\neq$ RHD (0 $\\neq$ 1). Not differentiable.\\n   - At $x = -1$:\\n     - LHD: derivative of $x$ is 1.\\n     - RHD: derivative of $x^3$ is $3x^2 \\implies$ at $x=-1$ is 3.\\n     LHD $\\neq$ RHD (1 $\\neq$ 3). Not differentiable.\\n4) Thus, $f(x)$ is not differentiable at exactly 3 points ($x = -1, 0, 1$).\\nThe answer is 3.",
     "common_mistake": "Incorrect inequality analysis on negative intervals, leading to an incorrect number of points (e.g. only checking positive critical points).",
     "concept_slugs": [
       "differentiability-piecewise"

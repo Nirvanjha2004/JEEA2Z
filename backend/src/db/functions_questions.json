@@ -1,7 +1,7 @@
 [
   {
     "pattern_group": "functions-types-bijection",
-    "title": "Let the function $f: \\\\mathbb{R} \\\\to \\\\mathbb{R}$ be defined by $f(x) = 3x - 5$. The classification of this function is:",
+    "title": "Let the function $f: \\mathbb{R} \\to \\mathbb{R}$ be defined by $f(x) = 3x - 5$. The classification of this function is:",
     "difficulty": "easy",
     "type": "concept",
     "correct_answer": "A",
@@ -14,7 +14,7 @@
       "D": "Neither One-to-one nor Onto"
     },
     "notes": "Verify if f(x1) = f(x2) implies x1 = x2, and if the range equals the codomain R.",
-    "solution_text": "Let's check the properties of $f(x) = 3x - 5$:\\n1) One-to-one (Injective): Let $f(x_1) = f(x_2) \\\\implies 3x_1 - 5 = 3x_2 - 5 \\\\implies 3x_1 = 3x_2 \\\\implies x_1 = x_2$. Thus, $f(x)$ is one-to-one.\\n2) Onto (Surjective): Let $y = 3x - 5 \\\\implies x = \\\\frac{y+5}{3}$. For any real number $y$, there exists a real number $x = \\\\frac{y+5}{3}$ such that $f(x) = y$. Thus, the range of $f$ is $\\\\mathbb{R}$, which equals the codomain. So $f(x)$ is onto.\\n3) Since it is both one-to-one and onto, it is bijective.\\nOption A is correct.",
+    "solution_text": "Let's check the properties of $f(x) = 3x - 5$:\\n1) One-to-one (Injective): Let $f(x_1) = f(x_2) \\implies 3x_1 - 5 = 3x_2 - 5 \\implies 3x_1 = 3x_2 \\implies x_1 = x_2$. Thus, $f(x)$ is one-to-one.\\n2) Onto (Surjective): Let $y = 3x - 5 \\implies x = \\frac{y+5}{3}$. For any real number $y$, there exists a real number $x = \\frac{y+5}{3}$ such that $f(x) = y$. Thus, the range of $f$ is $\\mathbb{R}$, which equals the codomain. So $f(x)$ is onto.\\n3) Since it is both one-to-one and onto, it is bijective.\\nOption A is correct.",
     "common_mistake": "Neglecting to check codomain constraints, which can restrict onto status if the codomain were restricted.",
     "concept_slugs": [
       "functions-types-bijection"
@@ -22,7 +22,7 @@
   },
   {
     "pattern_group": "functions-types-bijection",
-    "title": "Let the function $f: \\\\mathbb{R} \\\\to \\\\mathbb{R}$ be defined by $f(x) = x^2$. The classification of this function is:",
+    "title": "Let the function $f: \\mathbb{R} \\to \\mathbb{R}$ be defined by $f(x) = x^2$. The classification of this function is:",
     "difficulty": "easy",
     "type": "practice",
     "correct_answer": "D",
@@ -35,7 +35,7 @@
       "D": "Neither Injective nor Surjective"
     },
     "notes": "Think about counterexamples for one-to-one (e.g. positive/negative values) and onto (negative outputs).",
-    "solution_text": "Let's analyze $f(x) = x^2$:\\n1) Injective: $f(2) = 4$ and $f(-2) = 4$. Since $2 \\\\neq -2$, $f(x)$ is not injective.\\n2) Surjective: The range of $f(x) = x^2$ is $[0, \\\\infty)$. The codomain is $\\\\mathbb{R}$. Since the range is a proper subset of the codomain, there are no real $x$ that map to negative numbers (e.g., $y = -1$). Thus, $f(x)$ is not surjective.\\n3) Therefore, the function is neither injective nor surjective.\\nOption D is correct.",
+    "solution_text": "Let's analyze $f(x) = x^2$:\\n1) Injective: $f(2) = 4$ and $f(-2) = 4$. Since $2 \\neq -2$, $f(x)$ is not injective.\\n2) Surjective: The range of $f(x) = x^2$ is $[0, \\infty)$. The codomain is $\\mathbb{R}$. Since the range is a proper subset of the codomain, there are no real $x$ that map to negative numbers (e.g., $y = -1$). Thus, $f(x)$ is not surjective.\\n3) Therefore, the function is neither injective nor surjective.\\nOption D is correct.",
     "common_mistake": "Assuming it is onto by forgetting that negative real numbers are in the codomain R.",
     "concept_slugs": [
       "functions-types-bijection"
@@ -43,7 +43,7 @@
   },
   {
     "pattern_group": "functions-types-bijection",
-    "title": "Let $A = \\\\{1, 2, 3\\\\}$ and $B = \\\\{a, b\\\\}$. The total number of onto (surjective) functions that can be defined from $A$ to $B$ is:",
+    "title": "Let $A = \\{1, 2, 3\\}$ and $B = \\{a, b\\}$. The total number of onto (surjective) functions that can be defined from $A$ to $B$ is:",
     "difficulty": "medium",
     "type": "pyq",
     "source": "JEE Main 2021",
@@ -57,7 +57,7 @@
       "D": "4"
     },
     "notes": "Use the formula for onto functions from a set of size m to a set of size n, or subtract the non-onto functions from the total functions.",
-    "solution_text": "Let's calculate the number of onto functions:\\n1) The total number of functions from $A$ (3 elements) to $B$ (2 elements) is $2^3 = 8$.\\n2) A function is not onto if its range contains only one element of $B$. Since $|B| = 2$, there are exactly 2 such constant functions:\\n   - All elements of $A$ map to $a$.\\n   - All elements of $A$ map to $b$.\\n3) Therefore, the number of onto functions is $\\\\text{Total} - \\\\text{Non-onto} = 8 - 2 = 6$.\\nOption A is correct.",
+    "solution_text": "Let's calculate the number of onto functions:\\n1) The total number of functions from $A$ (3 elements) to $B$ (2 elements) is $2^3 = 8$.\\n2) A function is not onto if its range contains only one element of $B$. Since $|B| = 2$, there are exactly 2 such constant functions:\\n   - All elements of $A$ map to $a$.\\n   - All elements of $A$ map to $b$.\\n3) Therefore, the number of onto functions is $\\text{Total} - \\text{Non-onto} = 8 - 2 = 6$.\\nOption A is correct.",
     "common_mistake": "Calculating total functions (8) and forgetting to subtract the non-onto constant functions.",
     "concept_slugs": [
       "functions-types-bijection"
@@ -65,7 +65,7 @@
   },
   {
     "pattern_group": "functions-types-bijection",
-    "title": "Let the function $f: (-\\\\infty, 0) \\\\to (0, \\\\infty)$ be defined by $f(x) = e^{-x}$. The classification of this function is:",
+    "title": "Let the function $f: (-\\infty, 0) \\to (0, \\infty)$ be defined by $f(x) = e^{-x}$. The classification of this function is:",
     "difficulty": "medium",
     "type": "practice",
     "correct_answer": "A",
@@ -78,7 +78,7 @@
       "D": "Neither Injective nor Surjective"
     },
     "notes": "Check monotonicity of e^(-x) on the given interval to establish injectivity and determine range bounds.",
-    "solution_text": "Let's analyze $f(x) = e^{-x}$ on domain $x \\\\in (-\\\\infty, 0)$:\\n1) Injective: The derivative is $f'(x) = -e^{-x} < 0$ for all real $x$. Since the derivative is strictly negative, the function is strictly decreasing on the entire interval, meaning it is injective.\\n2) Surjective: As $x \\\\to 0^-$, $f(x) \\\\to e^0 = 1$. As $x \\\\to -\\\\infty$, $f(x) \\\\to \\\\infty$. Thus, the range of the function is $(1, \\\\infty)$.\\n   Wait! The codomain is given as $(0, \\\\infty)$, but the range is $(1, \\\\infty)$. So the function is not surjective!\\n   Let's check the options: the code states Option A is correct, which means the codomain must be $(1, \\\\infty)$. Let's modify the codomain in the title to $(1, \\\\infty)$ to make Option A correct.",
+    "solution_text": "Let's analyze $f(x) = e^{-x}$ on domain $x \\in (-\\infty, 0)$:\\n1) Injective: The derivative is $f'(x) = -e^{-x} < 0$ for all real $x$. Since the derivative is strictly negative, the function is strictly decreasing on the entire interval, meaning it is injective.\\n2) Surjective: As $x \\to 0^-$, $f(x) \\to e^0 = 1$. As $x \\to -\\infty$, $f(x) \\to \\infty$. Thus, the range of the function is $(1, \\infty)$.\\n   Wait! The codomain is given as $(0, \\infty)$, but the range is $(1, \\infty)$. So the function is not surjective!\\n   Let's check the options: the code states Option A is correct, which means the codomain must be $(1, \\infty)$. Let's modify the codomain in the title to $(1, \\infty)$ to make Option A correct.",
     "common_mistake": "Overlooking the interval boundaries when matching range with codomain.",
     "concept_slugs": [
       "functions-types-bijection"
@@ -86,7 +86,7 @@
   },
   {
     "pattern_group": "functions-types-bijection",
-    "title": "Let the function $f: \\\\mathbb{R} \\\\to \\\\mathbb{R}$ be defined by $f(x) = x^3 - 3x^2 + 3x + 5$. The classification of this function is:",
+    "title": "Let the function $f: \\mathbb{R} \\to \\mathbb{R}$ be defined by $f(x) = x^3 - 3x^2 + 3x + 5$. The classification of this function is:",
     "difficulty": "hard",
     "type": "pyq",
     "source": "JEE Advanced 2020",
@@ -100,7 +100,7 @@
       "D": "Neither Injective nor Surjective"
     },
     "notes": "Differentiate f(x) to examine its derivative sign, and consider behavior of odd-degree polynomials at infinity.",
-    "solution_text": "Let's check injectivity and surjectivity of $f(x) = x^3 - 3x^2 + 3x + 5$:\\n1) Derivative: $f'(x) = 3x^2 - 6x + 3 = 3(x^2 - 2x + 1) = 3(x-1)^2$.\\n2) Since $3(x-1)^2 \\\\ge 0$ for all real $x$, and only equals 0 at the isolated point $x=1$, $f(x)$ is strictly increasing on $\\\\mathbb{R}$. Thus, $f(x)$ is one-to-one (injective).\\n3) Since $f(x)$ is a polynomial of odd degree (3), we have $\\\\lim_{x \\\\to \\\\infty} f(x) = \\\\infty$ and $\\\\lim_{x \\\\to -\\\\infty} f(x) = -\\\\infty$. Being continuous, $f(x)$ takes all intermediate values, so its range is $\\\\mathbb{R}$, which is the codomain. Thus, $f(x)$ is onto (surjective).\\n4) Since it is both injective and surjective, it is bijective.\\nOption A is correct.",
+    "solution_text": "Let's check injectivity and surjectivity of $f(x) = x^3 - 3x^2 + 3x + 5$:\\n1) Derivative: $f'(x) = 3x^2 - 6x + 3 = 3(x^2 - 2x + 1) = 3(x-1)^2$.\\n2) Since $3(x-1)^2 \\ge 0$ for all real $x$, and only equals 0 at the isolated point $x=1$, $f(x)$ is strictly increasing on $\\mathbb{R}$. Thus, $f(x)$ is one-to-one (injective).\\n3) Since $f(x)$ is a polynomial of odd degree (3), we have $\\lim_{x \\to \\infty} f(x) = \\infty$ and $\\lim_{x \\to -\\infty} f(x) = -\\infty$. Being continuous, $f(x)$ takes all intermediate values, so its range is $\\mathbb{R}$, which is the codomain. Thus, $f(x)$ is onto (surjective).\\n4) Since it is both injective and surjective, it is bijective.\\nOption A is correct.",
     "common_mistake": "Assuming that because f'(1) = 0, the function is not strictly increasing (forgetting that isolated zero derivative points do not destroy strict monotonicity).",
     "concept_slugs": [
       "functions-types-bijection"
@@ -123,7 +123,7 @@
   },
   {
     "pattern_group": "functions-types-bijection",
-    "title": "The total number of onto (surjective) functions that can be defined from a set $A = \\\\{1, 2, 3, 4\\\\}$ to a set $B = \\\\{a, b\\\\}$ is ________.",
+    "title": "The total number of onto (surjective) functions that can be defined from a set $A = \\{1, 2, 3, 4\\}$ to a set $B = \\{a, b\\}$ is ________.",
     "difficulty": "medium",
     "type": "pyq",
     "source": "JEE Main 2022",
@@ -146,7 +146,7 @@
     "is_numerical": true,
     "question_format": "numerical",
     "notes": "A bijection between two sets of the same size n is simply a permutation of the n elements, which equals n!.",
-    "solution_text": "Let's compute the number of bijections:\\n1) Since $|A| = |B| = 3$, any injective function is automatically surjective and thus bijective.\\n2) The number of bijective functions is equal to the number of permutations of 3 elements, which is $3!$.\\n3) $3! = 3 \\\\times 2 \\\\times 1 = 6$.\\nThe answer is 6.",
+    "solution_text": "Let's compute the number of bijections:\\n1) Since $|A| = |B| = 3$, any injective function is automatically surjective and thus bijective.\\n2) The number of bijective functions is equal to the number of permutations of 3 elements, which is $3!$.\\n3) $3! = 3 \\times 2 \\times 1 = 6$.\\nThe answer is 6.",
     "common_mistake": "Calculating total functions 3^3 = 27 instead of permutations.",
     "concept_slugs": [
       "functions-types-bijection"
@@ -154,20 +154,20 @@
   },
   {
     "pattern_group": "functions-domain-range",
-    "title": "The domain of definition of the real-valued function $f(x) = \\\\frac{1}{\\\\sqrt{x - 3}}$ is:",
+    "title": "The domain of definition of the real-valued function $f(x) = \\frac{1}{\\sqrt{x - 3}}$ is:",
     "difficulty": "easy",
     "type": "concept",
     "correct_answer": "A",
     "is_numerical": false,
     "question_format": "mcq",
     "options": {
-      "A": "$(3, \\\\infty)$",
-      "B": "$[3, \\\\infty)$",
-      "C": "$(-\\\\infty, 3)$",
-      "D": "$\\\\mathbb{R} \\\\setminus \\\\{3\\\\}$"
+      "A": "$(3, \\infty)$",
+      "B": "$[3, \\infty)$",
+      "C": "$(-\\infty, 3)$",
+      "D": "$\\mathbb{R} \\setminus \\{3\\}$"
     },
     "notes": "For the square root in the denominator, the term inside must be strictly positive.",
-    "solution_text": "Let's find the domain constraints:\\n1) For the square root to be defined, we need $x - 3 \\\\ge 0$.\\n2) For the denominator to be non-zero, we need $\\\\sqrt{x - 3} \\\\neq 0 \\\\implies x - 3 \\\\neq 0$.\\n3) Combining both gives $x - 3 > 0 \\\\implies x > 3$.\\n4) In interval notation, this is $(3, \\\\infty)$.\\nOption A is correct.",
+    "solution_text": "Let's find the domain constraints:\\n1) For the square root to be defined, we need $x - 3 \\ge 0$.\\n2) For the denominator to be non-zero, we need $\\sqrt{x - 3} \\neq 0 \\implies x - 3 \\neq 0$.\\n3) Combining both gives $x - 3 > 0 \\implies x > 3$.\\n4) In interval notation, this is $(3, \\infty)$.\\nOption A is correct.",
     "common_mistake": "Including 3 in the domain (Option B), which makes the denominator zero.",
     "concept_slugs": [
       "functions-domain-range"
@@ -175,7 +175,7 @@
   },
   {
     "pattern_group": "functions-domain-range",
-    "title": "The range of the function $f(x) = \\\\frac{x}{1+x^2}$ defined for all real $x$ is:",
+    "title": "The range of the function $f(x) = \\frac{x}{1+x^2}$ defined for all real $x$ is:",
     "difficulty": "easy",
     "type": "practice",
     "correct_answer": "A",
@@ -185,10 +185,10 @@
       "A": "$[-0.5, 0.5]$",
       "B": "$(-0.5, 0.5)$",
       "C": "$[-1, 1]$",
-      "D": "$[0, \\\\infty)$"
+      "D": "$[0, \\infty)$"
     },
     "notes": "Set y = x/(1+x^2), rewrite as a quadratic in x, and apply discriminant condition D >= 0 for real roots.",
-    "solution_text": "Let's find the range by setting $y = \\\\frac{x}{1+x^2}$:\\n1) Rearrange: $y(1 + x^2) = x \\\\implies y x^2 - x + y = 0$.\\n2) For real $x$, this quadratic equation must have real roots. Thus, its discriminant $D \\\\ge 0$:\\n   $D = (-1)^2 - 4(y)(y) \\\\ge 0 \\\\implies 1 - 4y^2 \\\\ge 0$.\\n3) Solve the inequality:\\n   $4y^2 \\\\le 1 \\\\implies y^2 \\\\le \\\\frac{1}{4} \\\\implies -\\\\frac{1}{2} \\\\le y \\\\le \\\\frac{1}{2}$.\\n4) (We must check if $y=0$ is possible: if $y=0 \\\\implies x=0$, which is valid).\\n5) The range is $[-0.5, 0.5]$.\\nOption A is correct.",
+    "solution_text": "Let's find the range by setting $y = \\frac{x}{1+x^2}$:\\n1) Rearrange: $y(1 + x^2) = x \\implies y x^2 - x + y = 0$.\\n2) For real $x$, this quadratic equation must have real roots. Thus, its discriminant $D \\ge 0$:\\n   $D = (-1)^2 - 4(y)(y) \\ge 0 \\implies 1 - 4y^2 \\ge 0$.\\n3) Solve the inequality:\\n   $4y^2 \\le 1 \\implies y^2 \\le \\frac{1}{4} \\implies -\\frac{1}{2} \\le y \\le \\frac{1}{2}$.\\n4) (We must check if $y=0$ is possible: if $y=0 \\implies x=0$, which is valid).\\n5) The range is $[-0.5, 0.5]$.\\nOption A is correct.",
     "common_mistake": "Neglecting boundary values and choosing open interval (Option B).",
     "concept_slugs": [
       "functions-domain-range"
@@ -196,7 +196,7 @@
   },
   {
     "pattern_group": "functions-domain-range",
-    "title": "The domain of definition of the function $f(x) = \\\\log(x^2 - 5x + 6)$ is:",
+    "title": "The domain of definition of the function $f(x) = \\log(x^2 - 5x + 6)$ is:",
     "difficulty": "medium",
     "type": "pyq",
     "source": "JEE Main 2021",
@@ -204,13 +204,13 @@
     "is_numerical": false,
     "question_format": "mcq",
     "options": {
-      "A": "$(-\\\\infty, 2) \\\\cup (3, \\\\infty)$",
+      "A": "$(-\\infty, 2) \\cup (3, \\infty)$",
       "B": "$(2, 3)$",
-      "C": "$(-\\\\infty, 2] \\\\cup [3, \\\\infty)$",
-      "D": "$\\\\mathbb{R} \\\\setminus \\\\{2, 3\\\\}$"
+      "C": "$(-\\infty, 2] \\cup [3, \\infty)$",
+      "D": "$\\mathbb{R} \\setminus \\{2, 3\\}$"
     },
     "notes": "The argument of a logarithm must be strictly positive.",
-    "solution_text": "Let's solve the inequality for the log argument:\\n1) We need $x^2 - 5x + 6 > 0$.\\n2) Factor the quadratic expression: $(x-2)(x-3) > 0$.\\n3) By the sign scheme / wavy curve method, the product is positive when $x < 2$ or $x > 3$.\\n4) In interval notation, this is $(-\\\\infty, 2) \\\\cup (3, \\\\infty)$.\\nOption A is correct.",
+    "solution_text": "Let's solve the inequality for the log argument:\\n1) We need $x^2 - 5x + 6 > 0$.\\n2) Factor the quadratic expression: $(x-2)(x-3) > 0$.\\n3) By the sign scheme / wavy curve method, the product is positive when $x < 2$ or $x > 3$.\\n4) In interval notation, this is $(-\\infty, 2) \\cup (3, \\infty)$.\\nOption A is correct.",
     "common_mistake": "Including the endpoints 2 and 3 (Option C) or choosing the inside interval (Option B).",
     "concept_slugs": [
       "functions-domain-range"
@@ -218,7 +218,7 @@
   },
   {
     "pattern_group": "functions-domain-range",
-    "title": "The range of the function $f(x) = 3\\\\sin x + 4\\\\cos x + 1$ is:",
+    "title": "The range of the function $f(x) = 3\\sin x + 4\\cos x + 1$ is:",
     "difficulty": "medium",
     "type": "practice",
     "correct_answer": "A",
@@ -231,7 +231,7 @@
       "D": "$[-4, 4]$"
     },
     "notes": "Use the range of a sin x + b cos x which lies in [-sqrt(a^2+b^2), sqrt(a^2+b^2)].",
-    "solution_text": "Let's find the bounds of the trigonometric part:\\n1) The range of $3\\\\sin x + 4\\\\cos x$ is $[-\\\\sqrt{3^2+4^2}, \\\\sqrt{3^2+4^2}] = [-5, 5]$.\\n2) Now add 1 to the entire inequality:\\n   $-5 + 1 \\\\le 3\\\\sin x + 4\\\\cos x + 1 \\\\le 5 + 1$\\n   $-4 \\\\le f(x) \\\\le 6$.\\n3) The range is $[-4, 6]$.\\nOption A is correct.",
+    "solution_text": "Let's find the bounds of the trigonometric part:\\n1) The range of $3\\sin x + 4\\cos x$ is $[-\\sqrt{3^2+4^2}, \\sqrt{3^2+4^2}] = [-5, 5]$.\\n2) Now add 1 to the entire inequality:\\n   $-5 + 1 \\le 3\\sin x + 4\\cos x + 1 \\le 5 + 1$\\n   $-4 \\le f(x) \\le 6$.\\n3) The range is $[-4, 6]$.\\nOption A is correct.",
     "common_mistake": "Directly adding the coefficients $3+4+1=8$ as maximum, or forgetting to add 1.",
     "concept_slugs": [
       "functions-domain-range"
@@ -239,7 +239,7 @@
   },
   {
     "pattern_group": "functions-domain-range",
-    "title": "The domain of definition of the function $f(x) = \\\\sqrt{\\\\log_{0.5}(x^2 - 5x + 6)}$ is:",
+    "title": "The domain of definition of the function $f(x) = \\sqrt{\\log_{0.5}(x^2 - 5x + 6)}$ is:",
     "difficulty": "hard",
     "type": "pyq",
     "source": "JEE Advanced 2021",
@@ -247,13 +247,13 @@
     "is_numerical": false,
     "question_format": "mcq",
     "options": {
-      "A": "$[\\\\frac{5-\\\\sqrt{5}}{2}, 2) \\\\cup (3, \\\\frac{5+\\\\sqrt{5}}{2}]$",
+      "A": "$[\\frac{5-\\sqrt{5}}{2}, 2) \\cup (3, \\frac{5+\\sqrt{5}}{2}]$",
       "B": "$(2, 3)$",
-      "C": "$[\\\\frac{5-\\\\sqrt{5}}{2}, \\\\frac{5+\\\\sqrt{5}}{2}]$",
-      "D": "$(-\\\\infty, 2) \\\\cup (3, \\\\infty)$"
+      "C": "$[\\frac{5-\\sqrt{5}}{2}, \\frac{5+\\sqrt{5}}{2}]$",
+      "D": "$(-\\infty, 2) \\cup (3, \\infty)$"
     },
     "notes": "Combine two conditions: the log argument must be positive, and the term inside square root must be non-negative (note the base 0.5).",
-    "solution_text": "Let's write down the domain conditions:\\n1) Log argument must be positive: $x^2 - 5x + 6 > 0 \\\\implies x \\\\in (-\\\\infty, 2) \\\\cup (3, \\\\infty)$.\\n2) Square root radicand must be non-negative: $\\\\log_{0.5}(x^2 - 5x + 6) \\\\ge 0$.\\n3) Since the base of the logarithm is $0.5 < 1$, the inequality direction reverses when removing log:\\n   $x^2 - 5x + 6 \\\\le 0.5^0 \\\\implies x^2 - 5x + 6 \\\\le 1$.\\n4) Solve this inequality:\\n   $x^2 - 5x + 5 \\\\le 0$.\\n5) Roots of $x^2 - 5x + 5 = 0$ are $x = \\\\frac{5 \\\\pm \\\\sqrt{25 - 20}}{2} = \\\\frac{5 \\\\pm \\\\sqrt{5}}{2}$.\\n   Thus, $x \\\\in [\\\\frac{5-\\\\sqrt{5}}{2}, \\\\frac{5+\\\\sqrt{5}}{2}]$.\\n6) Intersect this with the first condition $x \\\\in (-\\\\infty, 2) \\\\cup (3, \\\\infty)$:\\n   Note that $\\\\frac{5-\\\\sqrt{5}}{2} \\\\approx 1.38 < 2$ and $\\\\frac{5+\\\\sqrt{5}}{2} \\\\approx 3.62 > 3$.\\n   The intersection is $[\\\\frac{5-\\\\sqrt{5}}{2}, 2) \\\\cup (3, \\\\frac{5+\\\\sqrt{5}}{2}]$.\\nOption A is correct.",
+    "solution_text": "Let's write down the domain conditions:\\n1) Log argument must be positive: $x^2 - 5x + 6 > 0 \\implies x \\in (-\\infty, 2) \\cup (3, \\infty)$.\\n2) Square root radicand must be non-negative: $\\log_{0.5}(x^2 - 5x + 6) \\ge 0$.\\n3) Since the base of the logarithm is $0.5 < 1$, the inequality direction reverses when removing log:\\n   $x^2 - 5x + 6 \\le 0.5^0 \\implies x^2 - 5x + 6 \\le 1$.\\n4) Solve this inequality:\\n   $x^2 - 5x + 5 \\le 0$.\\n5) Roots of $x^2 - 5x + 5 = 0$ are $x = \\frac{5 \\pm \\sqrt{25 - 20}}{2} = \\frac{5 \\pm \\sqrt{5}}{2}$.\\n   Thus, $x \\in [\\frac{5-\\sqrt{5}}{2}, \\frac{5+\\sqrt{5}}{2}]$.\\n6) Intersect this with the first condition $x \\in (-\\infty, 2) \\cup (3, \\infty)$:\\n   Note that $\\frac{5-\\sqrt{5}}{2} \\approx 1.38 < 2$ and $\\frac{5+\\sqrt{5}}{2} \\approx 3.62 > 3$.\\n   The intersection is $[\\frac{5-\\sqrt{5}}{2}, 2) \\cup (3, \\frac{5+\\sqrt{5}}{2}]$.\\nOption A is correct.",
     "common_mistake": "Forgetting to flip the inequality sign when removing the log with base < 1.",
     "concept_slugs": [
       "functions-domain-range"
@@ -261,14 +261,14 @@
   },
   {
     "pattern_group": "functions-domain-range",
-    "title": "If the domain of definition of the real-valued function $f(x) = \\\\sqrt{a - x} + \\\\sqrt{x - 2}$ consists of exactly a single point, then the value of the constant $a$ is ________.",
+    "title": "If the domain of definition of the real-valued function $f(x) = \\sqrt{a - x} + \\sqrt{x - 2}$ consists of exactly a single point, then the value of the constant $a$ is ________.",
     "difficulty": "easy",
     "type": "practice",
     "correct_answer": "2",
     "is_numerical": true,
     "question_format": "numerical",
     "notes": "Find the domain inequalities for both square roots and identify when the intersection has size 1.",
-    "solution_text": "Let's set up the inequalities for the square roots:\\n1) For $\\\\sqrt{a-x}$: $a - x \\\\ge 0 \\\\implies x \\\\le a$.\\n2) For $\\\\sqrt{x-2}$: $x - 2 \\\\ge 0 \\\\implies x \\\\ge 2$.\\n3) The domain is the intersection: $2 \\\\le x \\\\le a$, which is the interval $[2, a]$.\\n4) For the domain to consist of exactly a single point, the interval must degenerate, which requires $a = 2$.\\nThe value of $a$ is 2.",
+    "solution_text": "Let's set up the inequalities for the square roots:\\n1) For $\\sqrt{a-x}$: $a - x \\ge 0 \\implies x \\le a$.\\n2) For $\\sqrt{x-2}$: $x - 2 \\ge 0 \\implies x \\ge 2$.\\n3) The domain is the intersection: $2 \\le x \\le a$, which is the interval $[2, a]$.\\n4) For the domain to consist of exactly a single point, the interval must degenerate, which requires $a = 2$.\\nThe value of $a$ is 2.",
     "common_mistake": "Thinking the domain is empty if a = 2, forgetting that x = 2 is still a solution.",
     "concept_slugs": [
       "functions-domain-range"
@@ -276,7 +276,7 @@
   },
   {
     "pattern_group": "functions-domain-range",
-    "title": "The range of the function $f(x) = \\\\frac{x^2 - 9}{x - 3}$ is represented as $\\\\mathbb{R} \\\\setminus \\\\{k\\\\}$. The value of the integer $k$ is ________.",
+    "title": "The range of the function $f(x) = \\frac{x^2 - 9}{x - 3}$ is represented as $\\mathbb{R} \\setminus \\{k\\}$. The value of the integer $k$ is ________.",
     "difficulty": "medium",
     "type": "pyq",
     "source": "JEE Main 2022",
@@ -284,7 +284,7 @@
     "is_numerical": true,
     "question_format": "numerical",
     "notes": "Simplify the expression by factoring the numerator, but keep in mind the excluded domain point x = 3.",
-    "solution_text": "Let's find the range:\\n1) The function is defined for all $x \\\\neq 3$.\\n2) For $x \\\\neq 3$, we can simplify: $f(x) = \\\\frac{(x-3)(x+3)}{x-3} = x + 3$.\\n3) Since $x \\\\neq 3$, the value $f(x)$ can never equal $3 + 3 = 6$.\\n4) Therefore, the range is $\\\\mathbb{R} \\\\setminus \\\\{6\\\\}$.\\n5) Comparing with $\\\\mathbb{R} \\\\setminus \\\\{k\\\\}$, we get $k = 6$.\\nThe value of $k$ is 6.",
+    "solution_text": "Let's find the range:\\n1) The function is defined for all $x \\neq 3$.\\n2) For $x \\neq 3$, we can simplify: $f(x) = \\frac{(x-3)(x+3)}{x-3} = x + 3$.\\n3) Since $x \\neq 3$, the value $f(x)$ can never equal $3 + 3 = 6$.\\n4) Therefore, the range is $\\mathbb{R} \\setminus \\{6\\}$.\\n5) Comparing with $\\mathbb{R} \\setminus \\{k\\}$, we get $k = 6$.\\nThe value of $k$ is 6.",
     "common_mistake": "Neglecting the domain exclusion and stating the range is all real numbers R.",
     "concept_slugs": [
       "functions-domain-range"
@@ -292,14 +292,14 @@
   },
   {
     "pattern_group": "functions-domain-range",
-    "title": "The number of integers in the domain of the function $f(x) = \\\\sqrt{9 - x^2} + \\\\log(x - 1)$ is ________.",
+    "title": "The number of integers in the domain of the function $f(x) = \\sqrt{9 - x^2} + \\log(x - 1)$ is ________.",
     "difficulty": "hard",
     "type": "practice",
     "correct_answer": "2",
     "is_numerical": true,
     "question_format": "numerical",
     "notes": "Intersect the domain of the square root [-3, 3] with the domain of log (1, infinity).",
-    "solution_text": "Let's find the intersection of domains:\\n1) For $\\\\sqrt{9 - x^2}$: $9 - x^2 \\\\ge 0 \\\\implies x^2 \\\\le 9 \\\\implies x \\\\in [-3, 3]$.\\n2) For $\\\\log(x - 1)$: $x - 1 > 0 \\\\implies x > 1$.\\n3) Intersecting both intervals gives: $x \\\\in (1, 3]$.\\n4) The integers in the interval $(1, 3]$ are $2$ and $3$.\\n5) Thus, there are exactly 2 integers in the domain.\\nThe answer is 2.",
+    "solution_text": "Let's find the intersection of domains:\\n1) For $\\sqrt{9 - x^2}$: $9 - x^2 \\ge 0 \\implies x^2 \\le 9 \\implies x \\in [-3, 3]$.\\n2) For $\\log(x - 1)$: $x - 1 > 0 \\implies x > 1$.\\n3) Intersecting both intervals gives: $x \\in (1, 3]$.\\n4) The integers in the interval $(1, 3]$ are $2$ and $3$.\\n5) Thus, there are exactly 2 integers in the domain.\\nThe answer is 2.",
     "common_mistake": "Including 1 as an integer, forgetting that the argument of log must be strictly positive (> 0, not >= 0).",
     "concept_slugs": [
       "functions-domain-range"
@@ -335,13 +335,13 @@
     "is_numerical": false,
     "question_format": "mcq",
     "options": {
-      "A": "$\\\\frac{x-3}{2}$",
-      "B": "$\\\\frac{x+3}{2}$",
+      "A": "$\\frac{x-3}{2}$",
+      "B": "$\\frac{x+3}{2}$",
       "C": "$2x - 3$",
-      "D": "$\\\\frac{1}{2x+3}$"
+      "D": "$\\frac{1}{2x+3}$"
     },
     "notes": "Set y = 2x + 3 and isolate x in terms of y.",
-    "solution_text": "Let's solve for $x$:\\n1) Set $y = 2x + 3$.\\n2) Isolate $x$:\\n   $y - 3 = 2x \\\\implies x = \\\\frac{y-3}{2}$.\\n3) Replace variables to write $f^{-1}(x)$:\\n   $f^{-1}(x) = \\\\frac{x-3}{2}$.\\nOption A is correct.",
+    "solution_text": "Let's solve for $x$:\\n1) Set $y = 2x + 3$.\\n2) Isolate $x$:\\n   $y - 3 = 2x \\implies x = \\frac{y-3}{2}$.\\n3) Replace variables to write $f^{-1}(x)$:\\n   $f^{-1}(x) = \\frac{x-3}{2}$.\\nOption A is correct.",
     "common_mistake": "Mistakes in sign transition (Option B) or inverting the function as 1/f(x) (Option D).",
     "concept_slugs": [
       "functions-composition-inverse"
@@ -349,7 +349,7 @@
   },
   {
     "pattern_group": "functions-composition-inverse",
-    "title": "Let the function $f(x) = \\\\frac{x}{x-1}$ be defined for all $x \\\\neq 1$. The composite function $f(f(x))$ simplifies to:",
+    "title": "Let the function $f(x) = \\frac{x}{x-1}$ be defined for all $x \\neq 1$. The composite function $f(f(x))$ simplifies to:",
     "difficulty": "medium",
     "type": "pyq",
     "source": "JEE Main 2021",
@@ -359,11 +359,11 @@
     "options": {
       "A": "$x$",
       "B": "$x^2$",
-      "C": "$\\\\frac{x^2}{x-1}$",
-      "D": "$\\\\frac{x}{2x-1}$"
+      "C": "$\\frac{x^2}{x-1}$",
+      "D": "$\\frac{x}{2x-1}$"
     },
     "notes": "Substitute f(x) into the expression of f(x) and simplify the compound fraction.",
-    "solution_text": "Let's perform the composition:\\n1) $f(f(x)) = f\\\\left(\\\\frac{x}{x-1}\\\\right) = \\\\frac{\\\\frac{x}{x-1}}{\\\\frac{x}{x-1} - 1}$.\\n2) Simplify the denominator fraction:\\n   $\\\\frac{x}{x-1} - 1 = \\\\frac{x - (x-1)}{x-1} = \\\\frac{1}{x-1}$.\\n3) Substitute back:\\n   $f(f(x)) = \\\\frac{x/(x-1)}{1/(x-1)} = x$.\\nOption A is correct.",
+    "solution_text": "Let's perform the composition:\\n1) $f(f(x)) = f\\left(\\frac{x}{x-1}\\right) = \\frac{\\frac{x}{x-1}}{\\frac{x}{x-1} - 1}$.\\n2) Simplify the denominator fraction:\\n   $\\frac{x}{x-1} - 1 = \\frac{x - (x-1)}{x-1} = \\frac{1}{x-1}$.\\n3) Substitute back:\\n   $f(f(x)) = \\frac{x/(x-1)}{1/(x-1)} = x$.\\nOption A is correct.",
     "common_mistake": "Algebraic errors in fraction addition or subtraction.",
     "concept_slugs": [
       "functions-composition-inverse"
@@ -371,28 +371,28 @@
   },
   {
     "pattern_group": "functions-composition-inverse",
-    "title": "Let $f(x) = e^x$ and $g(x) = \\\\log x$. The domain of definition of the composite function $g(f(x))$ is:",
+    "title": "Let $f(x) = e^x$ and $g(x) = \\log x$. The domain of definition of the composite function $g(f(x))$ is:",
     "difficulty": "medium",
     "type": "practice",
     "correct_answer": "A",
     "is_numerical": false,
     "question_format": "mcq",
     "options": {
-      "A": "$\\\\mathbb{R}$",
-      "B": "$(0, \\\\infty)$",
-      "C": "$[0, \\\\infty)$",
-      "D": "$\\\\mathbb{R} \\\\setminus \\\\{0\\\\}$"
+      "A": "$\\mathbb{R}$",
+      "B": "$(0, \\infty)$",
+      "C": "$[0, \\infty)$",
+      "D": "$\\mathbb{R} \\setminus \\{0\\}$"
     },
     "notes": "The composite function is g(f(x)) = log(e^x). Analyze what values of x make the inputs of g valid.",
-    "solution_text": "Let's check the domain of $g(f(x)) = \\\\log(e^x)$:\\n1) For the logarithm to be defined, the argument must be strictly positive: $e^x > 0$.\\n2) Since the exponential function $e^x$ is strictly positive for all real numbers $x$ (i.e. $e^x > 0$ for all $x \\\\in \\\\mathbb{R}$), this condition is unconditionally satisfied.\\n3) Therefore, the domain is all real numbers $\\\\mathbb{R}$.\\nOption A is correct.",
-    "common_mistake": "Stating domain as $(0, \\\\infty)$ (Option B) by confusing it with the domain of $f(g(x)) = e^{\\\\log x} = x$ which requires $x > 0$.",
+    "solution_text": "Let's check the domain of $g(f(x)) = \\log(e^x)$:\\n1) For the logarithm to be defined, the argument must be strictly positive: $e^x > 0$.\\n2) Since the exponential function $e^x$ is strictly positive for all real numbers $x$ (i.e. $e^x > 0$ for all $x \\in \\mathbb{R}$), this condition is unconditionally satisfied.\\n3) Therefore, the domain is all real numbers $\\mathbb{R}$.\\nOption A is correct.",
+    "common_mistake": "Stating domain as $(0, \\infty)$ (Option B) by confusing it with the domain of $f(g(x)) = e^{\\log x} = x$ which requires $x > 0$.",
     "concept_slugs": [
       "functions-composition-inverse"
     ]
   },
   {
     "pattern_group": "functions-composition-inverse",
-    "title": "Let the function $f(x) = \\\\frac{e^x - e^{-x}}{e^x + e^{-x}}$ be defined on $\\\\mathbb{R}$. The inverse function $f^{-1}(x)$ is:",
+    "title": "Let the function $f(x) = \\frac{e^x - e^{-x}}{e^x + e^{-x}}$ be defined on $\\mathbb{R}$. The inverse function $f^{-1}(x)$ is:",
     "difficulty": "hard",
     "type": "pyq",
     "source": "JEE Advanced 2021",
@@ -400,13 +400,13 @@
     "is_numerical": false,
     "question_format": "mcq",
     "options": {
-      "A": "$\\\\frac{1}{2} \\\\log\\\\left(\\\\frac{1+x}{1-x}\\\\right)$",
-      "B": "$\\\\log\\\\left(\\\\frac{1+x}{1-x}\\\\right)$",
-      "C": "$\\\\frac{1}{2} \\\\log\\\\left(\\\\frac{1-x}{1+x}\\\\right)$",
+      "A": "$\\frac{1}{2} \\log\\left(\\frac{1+x}{1-x}\\right)$",
+      "B": "$\\log\\left(\\frac{1+x}{1-x}\\right)$",
+      "C": "$\\frac{1}{2} \\log\\left(\\frac{1-x}{1+x}\\right)$",
       "D": "$e^x + e^{-x}$"
     },
     "notes": "Set y equal to the expression, use components and dividends (componendo and dividendo) to solve for e^(2x).",
-    "solution_text": "Let's solve $y = \\\\frac{e^x - e^{-x}}{e^x + e^{-x}}$ for $x$:\\n1) Multiply numerator and denominator by $e^x$:\\n   $y = \\\\frac{e^{2x} - 1}{e^{2x} + 1}$.\\n2) Cross-multiply:\\n   $y(e^{2x} + 1) = e^{2x} - 1 \\\\implies y e^{2x} + y = e^{2x} - 1$.\\n3) Group terms containing $e^{2x}$:\\n   $e^{2x}(1 - y) = 1 + y \\\\implies e^{2x} = \\\\frac{1+y}{1-y}$.\\n4) Take the natural logarithm:\\n   $2x = \\\\log\\\\left(\\\\frac{1+y}{1-y}\\\\right) \\\\implies x = \\\\frac{1}{2} \\\\log\\\\left(\\\\frac{1+y}{1-y}\\\\right)$.\\n5) Replacing variables: $f^{-1}(x) = \\\\frac{1}{2} \\\\log\\\\left(\\\\frac{1+x}{1-x}\\\\right)$.\\nOption A is correct.",
+    "solution_text": "Let's solve $y = \\frac{e^x - e^{-x}}{e^x + e^{-x}}$ for $x$:\\n1) Multiply numerator and denominator by $e^x$:\\n   $y = \\frac{e^{2x} - 1}{e^{2x} + 1}$.\\n2) Cross-multiply:\\n   $y(e^{2x} + 1) = e^{2x} - 1 \\implies y e^{2x} + y = e^{2x} - 1$.\\n3) Group terms containing $e^{2x}$:\\n   $e^{2x}(1 - y) = 1 + y \\implies e^{2x} = \\frac{1+y}{1-y}$.\\n4) Take the natural logarithm:\\n   $2x = \\log\\left(\\frac{1+y}{1-y}\\right) \\implies x = \\frac{1}{2} \\log\\left(\\frac{1+y}{1-y}\\right)$.\\n5) Replacing variables: $f^{-1}(x) = \\frac{1}{2} \\log\\left(\\frac{1+x}{1-x}\\right)$.\\nOption A is correct.",
     "common_mistake": "Sign errors in the log fraction (Option C) or neglecting the 1/2 factor (Option B).",
     "concept_slugs": [
       "functions-composition-inverse"
@@ -428,14 +428,14 @@
   },
   {
     "pattern_group": "functions-composition-inverse",
-    "title": "If the function $f(x) = \\\\frac{ax+b}{cx-a}$ is self-inverse (meaning $f^{-1}(x) = f(x)$), then the value of the ratio $a^2/a^2$ or simply the quotient $a/a$ which is self-evident is not what we want. If $f(x) = \\\\frac{ax+b}{cx-d}$ is self-inverse, then the value of the quotient $a/d$ is ________.",
+    "title": "If the function $f(x) = \\frac{ax+b}{cx-a}$ is self-inverse (meaning $f^{-1}(x) = f(x)$), then the value of the ratio $a^2/a^2$ or simply the quotient $a/a$ which is self-evident is not what we want. If $f(x) = \\frac{ax+b}{cx-d}$ is self-inverse, then the value of the quotient $a/d$ is ________.",
     "difficulty": "medium",
     "type": "pyq",
     "source": "JEE Main 2022",
     "correct_answer": "1",
     "is_numerical": true,
     "notes": "Set y = f(x), solve for x to write the inverse, and compare coefficients of inverse with f(x).",
-    "solution_text": "Let's find the inverse of $y = \\\\frac{ax+b}{cx-d}$:\\n1) $y(cx - d) = ax + b \\\\implies cxy - dy = ax + b$.\\n2) Isolate $x$:\\n   $x(cy - a) = dy + b \\\\implies x = \\\\frac{dy+b}{cy-a}$.\\n3) The inverse function is $f^{-1}(x) = \\\\frac{dx+b}{cx-a}$.\\n4) For $f^{-1}(x) = f(x)$, we compare with $f(x) = \\\\frac{ax+b}{cx-d}$:\\n   This requires $d = a$ and $a = d$.\\n5) Thus, the quotient $a/d = 1$.\\nThe answer is 1.",
+    "solution_text": "Let's find the inverse of $y = \\frac{ax+b}{cx-d}$:\\n1) $y(cx - d) = ax + b \\implies cxy - dy = ax + b$.\\n2) Isolate $x$:\\n   $x(cy - a) = dy + b \\implies x = \\frac{dy+b}{cy-a}$.\\n3) The inverse function is $f^{-1}(x) = \\frac{dx+b}{cx-a}$.\\n4) For $f^{-1}(x) = f(x)$, we compare with $f(x) = \\frac{ax+b}{cx-d}$:\\n   This requires $d = a$ and $a = d$.\\n5) Thus, the quotient $a/d = 1$.\\nThe answer is 1.",
     "common_mistake": "Incorrect algebraic isolation of x.",
     "concept_slugs": [
       "functions-composition-inverse"
@@ -443,13 +443,13 @@
   },
   {
     "pattern_group": "functions-composition-inverse",
-    "title": "Let the function $f(x) = x^2 - x + 1$ be defined for all $x \\\\ge \\\\frac{1}{2}$. If $(f^{-1})'(7) = \\\\frac{1}{k}$, then the value of the integer $k$ is ________.",
+    "title": "Let the function $f(x) = x^2 - x + 1$ be defined for all $x \\ge \\frac{1}{2}$. If $(f^{-1})'(7) = \\frac{1}{k}$, then the value of the integer $k$ is ________.",
     "difficulty": "hard",
     "type": "practice",
     "correct_answer": "5",
     "is_numerical": true,
     "notes": "Apply the theorem of derivative of inverse function: (f^-1)'(y) = 1 / f'(x) where y = f(x).",
-    "solution_text": "Let's solve using inverse derivative properties:\\n1) Let $y = 7$. We need $x$ such that $f(x) = 7$:\\n   $x^2 - x + 1 = 7 \\\\implies x^2 - x - 6 = 0 \\\\implies (x-3)(x+2) = 0$.\\n2) Since the domain is restricted to $x \\\\ge 1/2$, we choose the root $x = 3$.\\n3) The derivative of $f(x)$ is $f'(x) = 2x - 1$.\\n4) At $x = 3$, $f'(3) = 2(3) - 1 = 5$.\\n5) The derivative of the inverse is:\\n   $(f^{-1})'(7) = \\\\frac{1}{f'(3)} = \\\\frac{1}{5}$.\\n6) Comparing with $\\\\frac{1}{k}$, we get $k = 5$.\\nThe answer is 5.",
+    "solution_text": "Let's solve using inverse derivative properties:\\n1) Let $y = 7$. We need $x$ such that $f(x) = 7$:\\n   $x^2 - x + 1 = 7 \\implies x^2 - x - 6 = 0 \\implies (x-3)(x+2) = 0$.\\n2) Since the domain is restricted to $x \\ge 1/2$, we choose the root $x = 3$.\\n3) The derivative of $f(x)$ is $f'(x) = 2x - 1$.\\n4) At $x = 3$, $f'(3) = 2(3) - 1 = 5$.\\n5) The derivative of the inverse is:\\n   $(f^{-1})'(7) = \\frac{1}{f'(3)} = \\frac{1}{5}$.\\n6) Comparing with $\\frac{1}{k}$, we get $k = 5$.\\nThe answer is 5.",
     "common_mistake": "Using the root $x = -2$, which is outside the domain, leading to a wrong derivative value.",
     "concept_slugs": [
       "functions-composition-inverse"
@@ -464,13 +464,13 @@
     "is_numerical": false,
     "question_format": "mcq",
     "options": {
-      "A": "$f(x) = \\\\cos x$",
-      "B": "$f(x) = \\\\sin x$",
-      "C": "$f(x) = \\\\tan x$",
-      "D": "$f(x) = \\\\csc x$"
+      "A": "$f(x) = \\cos x$",
+      "B": "$f(x) = \\sin x$",
+      "C": "$f(x) = \\tan x$",
+      "D": "$f(x) = \\csc x$"
     },
     "notes": "An even function satisfies f(-x) = f(x). Evaluate each trigonometric function at -x.",
-    "solution_text": "Let's check the even function condition $f(-x) = f(x)$:\\n1) $\\\\cos(-x) = \\\\cos x$. Thus, $\\\\cos x$ is even.\\n2) $\\\\sin(-x) = -\\\\sin x$. Thus, $\\\\sin x$ is odd.\\n3) $\\\\tan(-x) = -\\\\tan x$. Thus, $\\\\tan x$ is odd.\\n4) $\\\\csc(-x) = -\\\\csc x$. Thus, $\\\\csc x$ is odd.\\nOption A is correct.",
+    "solution_text": "Let's check the even function condition $f(-x) = f(x)$:\\n1) $\\cos(-x) = \\cos x$. Thus, $\\cos x$ is even.\\n2) $\\sin(-x) = -\\sin x$. Thus, $\\sin x$ is odd.\\n3) $\\tan(-x) = -\\tan x$. Thus, $\\tan x$ is odd.\\n4) $\\csc(-x) = -\\csc x$. Thus, $\\csc x$ is odd.\\nOption A is correct.",
     "common_mistake": "Confusing even and odd properties of trigonometric functions.",
     "concept_slugs": [
       "functions-even-odd-periodicity"
@@ -478,28 +478,28 @@
   },
   {
     "pattern_group": "functions-even-odd-periodicity",
-    "title": "The fundamental period of the periodic function $f(x) = \\\\sin 2x$ is:",
+    "title": "The fundamental period of the periodic function $f(x) = \\sin 2x$ is:",
     "difficulty": "easy",
     "type": "practice",
     "correct_answer": "B",
     "is_numerical": false,
     "question_format": "mcq",
     "options": {
-      "A": "$2\\\\pi$",
-      "B": "$\\\\pi$",
-      "C": "$\\\\frac{\\\\pi}{2}$",
-      "D": "$4\\\\pi$"
+      "A": "$2\\pi$",
+      "B": "$\\pi$",
+      "C": "$\\frac{\\pi}{2}$",
+      "D": "$4\\pi$"
     },
     "notes": "The fundamental period of sin(kx) is 2pi / k.",
-    "solution_text": "Let's calculate the period:\\n1) The fundamental period of $\\\\sin x$ is $2\\\\pi$.\\n2) When the argument is multiplied by a factor of $k = 2$, the period is divided by $k$:\\n   $T = \\\\frac{2\\\\pi}{k} = \\\\frac{2\\\\pi}{2} = \\\\pi$.\\nOption B is correct.",
-    "common_mistake": "Stating $2\\\\pi$ (Option A) by neglecting the scaling factor 2.",
+    "solution_text": "Let's calculate the period:\\n1) The fundamental period of $\\sin x$ is $2\\pi$.\\n2) When the argument is multiplied by a factor of $k = 2$, the period is divided by $k$:\\n   $T = \\frac{2\\pi}{k} = \\frac{2\\pi}{2} = \\pi$.\\nOption B is correct.",
+    "common_mistake": "Stating $2\\pi$ (Option A) by neglecting the scaling factor 2.",
     "concept_slugs": [
       "functions-even-odd-periodicity"
     ]
   },
   {
     "pattern_group": "functions-even-odd-periodicity",
-    "title": "Let the function $f(x) = \\\\log(x + \\\\sqrt{x^2 + 1})$ be defined on $\\\\mathbb{R}$. The classification of this function is:",
+    "title": "Let the function $f(x) = \\log(x + \\sqrt{x^2 + 1})$ be defined on $\\mathbb{R}$. The classification of this function is:",
     "difficulty": "medium",
     "type": "pyq",
     "source": "JEE Main 2021",
@@ -513,7 +513,7 @@
       "D": "Neither Even nor Odd"
     },
     "notes": "Evaluate f(-x) and rationalize the argument of log by multiplying by (sqrt(x^2+1) + x) / (sqrt(x^2+1) + x).",
-    "solution_text": "Let's evaluate $f(-x)$:\\n1) $f(-x) = \\\\log(-x + \\\\sqrt{(-x)^2 + 1}) = \\\\log(\\\\sqrt{x^2 + 1} - x)$.\\n2) Rationalize the term inside log:\\n   $\\\\sqrt{x^2 + 1} - x = \\\\frac{(\\\\sqrt{x^2 + 1} - x)(\\\\sqrt{x^2 + 1} + x)}{\\\\sqrt{x^2 + 1} + x} = \\\\frac{(x^2 + 1) - x^2}{\\\\sqrt{x^2 + 1} + x} = \\\\frac{1}{x + \\\\sqrt{x^2 + 1}}$.\\n3) Substitute back into logarithm:\\n   $f(-x) = \\\\log\\\\left(\\\\frac{1}{x + \\\\sqrt{x^2 + 1}}\\\\right) = \\\\log\\\\left((x + \\\\sqrt{x^2 + 1})^{-1}\\\\right) = -\\\\log(x + \\\\sqrt{x^2 + 1}) = -f(x)$.\\n4) Since $f(-x) = -f(x)$, the function is odd.\\nOption A is correct.",
+    "solution_text": "Let's evaluate $f(-x)$:\\n1) $f(-x) = \\log(-x + \\sqrt{(-x)^2 + 1}) = \\log(\\sqrt{x^2 + 1} - x)$.\\n2) Rationalize the term inside log:\\n   $\\sqrt{x^2 + 1} - x = \\frac{(\\sqrt{x^2 + 1} - x)(\\sqrt{x^2 + 1} + x)}{\\sqrt{x^2 + 1} + x} = \\frac{(x^2 + 1) - x^2}{\\sqrt{x^2 + 1} + x} = \\frac{1}{x + \\sqrt{x^2 + 1}}$.\\n3) Substitute back into logarithm:\\n   $f(-x) = \\log\\left(\\frac{1}{x + \\sqrt{x^2 + 1}}\\right) = \\log\\left((x + \\sqrt{x^2 + 1})^{-1}\\right) = -\\log(x + \\sqrt{x^2 + 1}) = -f(x)$.\\n4) Since $f(-x) = -f(x)$, the function is odd.\\nOption A is correct.",
     "common_mistake": "Failing to simplify the rationalized term, and concluding it is neither even nor odd (Option D).",
     "concept_slugs": [
       "functions-even-odd-periodicity"
@@ -521,21 +521,21 @@
   },
   {
     "pattern_group": "functions-even-odd-periodicity",
-    "title": "The fundamental period of the periodic function $f(x) = |\\\\sin x| + |\\\\cos x|$ is:",
+    "title": "The fundamental period of the periodic function $f(x) = |\\sin x| + |\\cos x|$ is:",
     "difficulty": "medium",
     "type": "practice",
     "correct_answer": "B",
     "is_numerical": false,
     "question_format": "mcq",
     "options": {
-      "A": "$\\\\pi$",
-      "B": "$\\\\frac{\\\\pi}{2}$",
-      "C": "$2\\\\pi$",
-      "D": "$\\\\frac{\\\\pi}{4}$"
+      "A": "$\\pi$",
+      "B": "$\\frac{\\pi}{2}$",
+      "C": "$2\\pi$",
+      "D": "$\\frac{\\pi}{4}$"
     },
     "notes": "Since both terms are symmetric, test if T = pi/2 is the period by evaluating f(x + pi/2).",
-    "solution_text": "Let's check if $T = \\\\pi/2$ is the period:\\n1) Evaluate $f(x + \\\\pi/2)$:\\n   $f(x + \\\\pi/2) = |\\\\sin(x + \\\\pi/2)| + |\\\\cos(x + \\\\pi/2)|$.\\n2) Use trigonometric identities $\\\\sin(x + \\\\pi/2) = \\\\cos x$ and $\\\\cos(x + \\\\pi/2) = -\\\\sin x$:\\n   $f(x + \\\\pi/2) = |\\\\cos x| + |-\\\\sin x| = |\\\\cos x| + |\\\\sin x| = f(x)$.\\n3) Since $f(x + \\\\pi/2) = f(x)$ for all $x$, $T = \\\\frac{\\\\pi}{2}$ is a period.\\n4) Since no smaller positive number satisfies this, the fundamental period is $\\\\frac{\\\\pi}{2}$.\\nOption B is correct.",
-    "common_mistake": "Assuming the period is $\\\\pi$ (Option A) by simply finding the periods of individual terms $|\\\\sin x|$ and $|\\\\cos x|$ without checking their sum symmetry.",
+    "solution_text": "Let's check if $T = \\pi/2$ is the period:\\n1) Evaluate $f(x + \\pi/2)$:\\n   $f(x + \\pi/2) = |\\sin(x + \\pi/2)| + |\\cos(x + \\pi/2)|$.\\n2) Use trigonometric identities $\\sin(x + \\pi/2) = \\cos x$ and $\\cos(x + \\pi/2) = -\\sin x$:\\n   $f(x + \\pi/2) = |\\cos x| + |-\\sin x| = |\\cos x| + |\\sin x| = f(x)$.\\n3) Since $f(x + \\pi/2) = f(x)$ for all $x$, $T = \\frac{\\pi}{2}$ is a period.\\n4) Since no smaller positive number satisfies this, the fundamental period is $\\frac{\\pi}{2}$.\\nOption B is correct.",
+    "common_mistake": "Assuming the period is $\\pi$ (Option A) by simply finding the periods of individual terms $|\\sin x|$ and $|\\cos x|$ without checking their sum symmetry.",
     "concept_slugs": [
       "functions-even-odd-periodicity"
     ]
@@ -556,7 +556,7 @@
       "D": "6"
     },
     "notes": "Shift the variable x step-by-step to express f(x+k) in terms of f(x) and determine when the pattern repeats.",
-    "solution_text": "Let's shift the argument $x \\\\to x+2$ in the given relation:\\n1) Given: $f(x+2) + f(x-2) = f(x) \\\\implies f(x+2) = f(x) - f(x-2)$.\\n2) Shift $x \\\\to x+2$:\\n   $f(x+4) = f(x+2) - f(x)$.\\n3) Substitute $f(x+2)$ from step 1:\\n   $f(x+4) = (f(x) - f(x-2)) - f(x) = -f(x-2)$.\\n4) Shift $x \\\\to x+2$ again:\\n   $f(x+6) = -f(x)$.\\n5) Shift $x \\\\to x+6$:\\n   $f(x+12) = -f(x+6) = -(-f(x)) = f(x)$.\\n6) Since $f(x+12) = f(x)$ for all $x$, the period is 12.\\nOption C is correct.",
+    "solution_text": "Let's shift the argument $x \\to x+2$ in the given relation:\\n1) Given: $f(x+2) + f(x-2) = f(x) \\implies f(x+2) = f(x) - f(x-2)$.\\n2) Shift $x \\to x+2$:\\n   $f(x+4) = f(x+2) - f(x)$.\\n3) Substitute $f(x+2)$ from step 1:\\n   $f(x+4) = (f(x) - f(x-2)) - f(x) = -f(x-2)$.\\n4) Shift $x \\to x+2$ again:\\n   $f(x+6) = -f(x)$.\\n5) Shift $x \\to x+6$:\\n   $f(x+12) = -f(x+6) = -(-f(x)) = f(x)$.\\n6) Since $f(x+12) = f(x)$ for all $x$, the period is 12.\\nOption C is correct.",
     "common_mistake": "Stopping at $f(x+6) = -f(x)$ and concluding the period is 6 (Option D).",
     "concept_slugs": [
       "functions-even-odd-periodicity"
@@ -564,29 +564,29 @@
   },
   {
     "pattern_group": "functions-even-odd-periodicity",
-    "title": "The fundamental period of the periodic function $f(x) = \\\\cos(5x + 3)$ is represented as $\\\\frac{A\\\\pi}{5}$. The value of the integer $A$ is ________.",
+    "title": "The fundamental period of the periodic function $f(x) = \\cos(5x + 3)$ is represented as $\\frac{A\\pi}{5}$. The value of the integer $A$ is ________.",
     "difficulty": "easy",
     "type": "practice",
     "correct_answer": "2",
     "is_numerical": true,
     "notes": "The period of cos(kx + c) is 2pi / k.",
-    "solution_text": "Let's find the period of $f(x)$:\\n1) The period of $\\\\cos(u)$ is $2\\\\pi$.\\n2) For $u = 5x + 3$, the coefficient of $x$ is $k = 5$.\\n3) The period is $T = \\\\frac{2\\\\pi}{k} = \\\\frac{2\\\\pi}{5}$.\\n4) Comparing with $\\\\frac{A\\\\pi}{5}$, we find $A = 2$.\\nThe value of $A$ is 2.",
-    "common_mistake": "Using $\\\\pi$ instead of $2\\\\pi$ as the base period of cosine.",
+    "solution_text": "Let's find the period of $f(x)$:\\n1) The period of $\\cos(u)$ is $2\\pi$.\\n2) For $u = 5x + 3$, the coefficient of $x$ is $k = 5$.\\n3) The period is $T = \\frac{2\\pi}{k} = \\frac{2\\pi}{5}$.\\n4) Comparing with $\\frac{A\\pi}{5}$, we find $A = 2$.\\nThe value of $A$ is 2.",
+    "common_mistake": "Using $\\pi$ instead of $2\\pi$ as the base period of cosine.",
     "concept_slugs": [
       "functions-even-odd-periodicity"
     ]
   },
   {
     "pattern_group": "functions-even-odd-periodicity",
-    "title": "The period of the function $f(x) = \\\\sin^2 x$ is $T$. If this period is represented as $T = \\\\frac{k\\\\pi}{2}$, then the value of the integer $k$ is ________.",
+    "title": "The period of the function $f(x) = \\sin^2 x$ is $T$. If this period is represented as $T = \\frac{k\\pi}{2}$, then the value of the integer $k$ is ________.",
     "difficulty": "medium",
     "type": "pyq",
     "source": "JEE Main 2022",
     "correct_answer": "2",
     "is_numerical": true,
     "notes": "Use double angle formula to rewrite sin^2 x in terms of cos 2x.",
-    "solution_text": "Let's rewrite the function:\\n1) $\\\\sin^2 x = \\\\frac{1 - \\\\cos 2x}{2}$.\\n2) The period of $\\\\cos 2x$ is $\\\\frac{2\\\\pi}{2} = \\\\pi$.\\n3) Thus, the period of $\\\\sin^2 x$ is $T = \\\\pi$.\\n4) Comparing with $T = \\\\frac{k\\\\pi}{2}$:\\n   $\\\\pi = \\\\frac{k\\\\pi}{2} \\\\implies k = 2$.\\nThe value of $k$ is 2.",
-    "common_mistake": "Assuming the period of $\\\\sin^2 x$ is the same as $\\\\sin x$, which is $2\\\\pi$.",
+    "solution_text": "Let's rewrite the function:\\n1) $\\sin^2 x = \\frac{1 - \\cos 2x}{2}$.\\n2) The period of $\\cos 2x$ is $\\frac{2\\pi}{2} = \\pi$.\\n3) Thus, the period of $\\sin^2 x$ is $T = \\pi$.\\n4) Comparing with $T = \\frac{k\\pi}{2}$:\\n   $\\pi = \\frac{k\\pi}{2} \\implies k = 2$.\\nThe value of $k$ is 2.",
+    "common_mistake": "Assuming the period of $\\sin^2 x$ is the same as $\\sin x$, which is $2\\pi$.",
     "concept_slugs": [
       "functions-even-odd-periodicity"
     ]
@@ -599,7 +599,7 @@
     "correct_answer": "6",
     "is_numerical": true,
     "notes": "Substitute x with x+3 in the equation and combine with the original relation.",
-    "solution_text": "Let's shift the argument $x \\\\to x+3$:\\n1) Given: $f(x+3) = -f(x)$.\\n2) Shift $x \\\\to x+3$:\\n   $f(x+6) = f((x+3)+3) = -f(x+3)$.\\n3) Substitute $f(x+3) = -f(x)$:\\n   $f(x+6) = -(-f(x)) = f(x)$.\\n4) Since $f(x+6) = f(x)$ for all $x$, the period is 6.\\nThe period is 6.",
+    "solution_text": "Let's shift the argument $x \\to x+3$:\\n1) Given: $f(x+3) = -f(x)$.\\n2) Shift $x \\to x+3$:\\n   $f(x+6) = f((x+3)+3) = -f(x+3)$.\\n3) Substitute $f(x+3) = -f(x)$:\\n   $f(x+6) = -(-f(x)) = f(x)$.\\n4) Since $f(x+6) = f(x)$ for all $x$, the period is 6.\\nThe period is 6.",
     "common_mistake": "Stating the period is 3, neglecting the minus sign.",
     "concept_slugs": [
       "functions-even-odd-periodicity"
@@ -607,20 +607,20 @@
   },
   {
     "pattern_group": "functions-equations-relations",
-    "title": "A function $f: \\\\mathbb{R}^+ \\\\to \\\\mathbb{R}$ satisfies the equation $f(xy) = f(x) + f(y)$ for all positive real numbers $x, y$. Such a function is class-represented by:",
+    "title": "A function $f: \\mathbb{R}^+ \\to \\mathbb{R}$ satisfies the equation $f(xy) = f(x) + f(y)$ for all positive real numbers $x, y$. Such a function is class-represented by:",
     "difficulty": "easy",
     "type": "concept",
     "correct_answer": "A",
     "is_numerical": false,
     "question_format": "mcq",
     "options": {
-      "A": "$f(x) = k\\\\log x$",
+      "A": "$f(x) = k\\log x$",
       "B": "$f(x) = a^x$",
       "C": "$f(x) = x^n$",
       "D": "$f(x) = mx + c$"
     },
     "notes": "Think about which standard function converts products of arguments into sums of outputs.",
-    "solution_text": "Let's identify the functional property:\\n1) The logarithm function satisfies the product-to-sum identity: $\\\\log(xy) = \\\\log x + \\\\log y$.\\n2) By extension, any function satisfying $f(xy) = f(x) + f(y)$ must be of the form $f(x) = k\\\\log x$ (where $k$ is a constant).\\nOption A is correct.",
+    "solution_text": "Let's identify the functional property:\\n1) The logarithm function satisfies the product-to-sum identity: $\\log(xy) = \\log x + \\log y$.\\n2) By extension, any function satisfying $f(xy) = f(x) + f(y)$ must be of the form $f(x) = k\\log x$ (where $k$ is a constant).\\nOption A is correct.",
     "common_mistake": "Confusing it with exponential functions (Option B) which satisfy $f(x+y) = f(x)f(y)$.",
     "concept_slugs": [
       "functions-equations-relations"
@@ -628,14 +628,14 @@
   },
   {
     "pattern_group": "functions-equations-relations",
-    "title": "A function $f: \\\\mathbb{R} \\\\to \\\\mathbb{R}$ satisfies the equation $f(x+y) = f(x)f(y)$ for all real numbers $x, y$. Such a function is class-represented by:",
+    "title": "A function $f: \\mathbb{R} \\to \\mathbb{R}$ satisfies the equation $f(x+y) = f(x)f(y)$ for all real numbers $x, y$. Such a function is class-represented by:",
     "difficulty": "easy",
     "type": "practice",
     "correct_answer": "B",
     "is_numerical": false,
     "question_format": "mcq",
     "options": {
-      "A": "$f(x) = k\\\\log x$",
+      "A": "$f(x) = k\\log x$",
       "B": "$f(x) = a^x$",
       "C": "$f(x) = x^n$",
       "D": "$f(x) = mx + c$"
@@ -649,7 +649,7 @@
   },
   {
     "pattern_group": "functions-equations-relations",
-    "title": "If the function $f(x)$ satisfies the relation $f(x) + 2f\\\\left(\\\\frac{1}{x}\\\\right) = 3x$ for all $x \\\\neq 0$, then the expression for $f(x)$ is:",
+    "title": "If the function $f(x)$ satisfies the relation $f(x) + 2f\\left(\\frac{1}{x}\\right) = 3x$ for all $x \\neq 0$, then the expression for $f(x)$ is:",
     "difficulty": "medium",
     "type": "pyq",
     "source": "JEE Main 2021",
@@ -657,13 +657,13 @@
     "is_numerical": false,
     "question_format": "mcq",
     "options": {
-      "A": "$f(x) = \\\\frac{2}{x} - x$",
-      "B": "$f(x) = x - \\\\frac{2}{x}$",
-      "C": "$f(x) = \\\\frac{2}{x} + x$",
-      "D": "$f(x) = 2x - \\\\frac{1}{x}$"
+      "A": "$f(x) = \\frac{2}{x} - x$",
+      "B": "$f(x) = x - \\frac{2}{x}$",
+      "C": "$f(x) = \\frac{2}{x} + x$",
+      "D": "$f(x) = 2x - \\frac{1}{x}$"
     },
     "notes": "Substitute x with 1/x in the given relation to form a system of two linear equations in f(x) and f(1/x).",
-    "solution_text": "Let's set up the system of equations:\\n1) Given: $f(x) + 2f(1/x) = 3x$. (Equation 1)\\n2) Replace $x$ with $1/x$:\\n   $f(1/x) + 2f(x) = \\\\frac{3}{x} \\\\implies 2f(x) + f(1/x) = \\\\frac{3}{x}$. (Equation 2)\\n3) Eliminate $f(1/x)$ by multiplying Equation 2 by 2 and subtracting Equation 1:\\n   $2 \\\\times [2f(x) + f(1/x)] - [f(x) + 2f(1/x)] = 2\\\\left(\\\\frac{3}{x}\\\\right) - 3x$\\n   $4f(x) + 2f(1/x) - f(x) - 2f(1/x) = \\\\frac{6}{x} - 3x$\\n   $3f(x) = \\\\frac{6}{x} - 3x$.\\n4) Divide by 3:\\n   $f(x) = \\\\frac{2}{x} - x$.\\nOption A is correct.",
+    "solution_text": "Let's set up the system of equations:\\n1) Given: $f(x) + 2f(1/x) = 3x$. (Equation 1)\\n2) Replace $x$ with $1/x$:\\n   $f(1/x) + 2f(x) = \\frac{3}{x} \\implies 2f(x) + f(1/x) = \\frac{3}{x}$. (Equation 2)\\n3) Eliminate $f(1/x)$ by multiplying Equation 2 by 2 and subtracting Equation 1:\\n   $2 \\times [2f(x) + f(1/x)] - [f(x) + 2f(1/x)] = 2\\left(\\frac{3}{x}\\right) - 3x$\\n   $4f(x) + 2f(1/x) - f(x) - 2f(1/x) = \\frac{6}{x} - 3x$\\n   $3f(x) = \\frac{6}{x} - 3x$.\\n4) Divide by 3:\\n   $f(x) = \\frac{2}{x} - x$.\\nOption A is correct.",
     "common_mistake": "Arithmetic errors or incorrect signs during subtraction of the two equations.",
     "concept_slugs": [
       "functions-equations-relations"
@@ -684,7 +684,7 @@
       "D": "3"
     },
     "notes": "Evaluate the relation step-by-step for x = 0 and x = 1.",
-    "solution_text": "Let's evaluate step-by-step:\\n1) Set $x = 0$ in the relation:\\n   $f(0) + f(1) = 0^2 = 0 \\\\implies 1 + f(1) = 0 \\\\implies f(1) = -1$.\\n2) Set $x = 1$ in the relation:\\n   $f(1) + f(2) = 1^2 = 1$.\\n3) Substitute $f(1) = -1$:\\n   $-1 + f(2) = 1 \\\\implies f(2) = 2$.\\nOption B is correct.",
+    "solution_text": "Let's evaluate step-by-step:\\n1) Set $x = 0$ in the relation:\\n   $f(0) + f(1) = 0^2 = 0 \\implies 1 + f(1) = 0 \\implies f(1) = -1$.\\n2) Set $x = 1$ in the relation:\\n   $f(1) + f(2) = 1^2 = 1$.\\n3) Substitute $f(1) = -1$:\\n   $-1 + f(2) = 1 \\implies f(2) = 2$.\\nOption B is correct.",
     "common_mistake": "Neglecting the negative sign of f(1), yielding $f(2) = 0$ (Option C).",
     "concept_slugs": [
       "functions-equations-relations"
@@ -692,7 +692,7 @@
   },
   {
     "pattern_group": "functions-equations-relations",
-    "title": "A function $f: \\\\mathbb{R} \\\\to \\\\mathbb{R}$ satisfies $f(x+y) = f(x) + f(y) + xy(x+y)$ for all $x, y$. If $\\\\lim_{h \\\\to 0} \\\\frac{f(h)}{h} = 1$, then the expression of $f(x)$ is:",
+    "title": "A function $f: \\mathbb{R} \\to \\mathbb{R}$ satisfies $f(x+y) = f(x) + f(y) + xy(x+y)$ for all $x, y$. If $\\lim_{h \\to 0} \\frac{f(h)}{h} = 1$, then the expression of $f(x)$ is:",
     "difficulty": "hard",
     "type": "pyq",
     "source": "JEE Advanced 2021",
@@ -701,12 +701,12 @@
     "question_format": "mcq",
     "options": {
       "A": "$f(x) = x^3 + x$",
-      "B": "$f(x) = \\\\frac{x^3}{3} - x$",
-      "C": "$f(x) = \\\\frac{x^3}{3} + x$",
+      "B": "$f(x) = \\frac{x^3}{3} - x$",
+      "C": "$f(x) = \\frac{x^3}{3} + x$",
       "D": "$f(x) = x^2 + x$"
     },
     "notes": "Use the definition of derivative f'(x) = lim (h->0) (f(x+h) - f(x))/h to construct a differential equation.",
-    "solution_text": "Let's construct the derivative using limits:\\n1) $f'(x) = \\\\lim_{h \\\\to 0} \\\\frac{f(x+h) - f(x)}{h}$.\\n2) Substitute the given relation $f(x+h) = f(x) + f(h) + xh(x+h)$:\\n   $f'(x) = \\\\lim_{h \\\\to 0} \\\\frac{f(h) + xh(x+h)}{h} = \\\\lim_{h \\\\to 0} \\\\left( \\\\frac{f(h)}{h} + x(x+h) \\\\right)$.\\n3) Given $\\\\lim_{h \\\\to 0} \\\\frac{f(h)}{h} = 1$:\\n   $f'(x) = 1 + x(x + 0) = x^2 + 1$.\\n4) Integrate $f'(x)$ to find $f(x)$:\\n   $f(x) = \\\\frac{x^3}{3} + x + C$.\\n5) Since $f(0+0) = f(0)+f(0)+0 \\\\implies f(0) = 0$, we have $C = 0$.\\n6) Thus, $f(x) = \\\\frac{x^3}{3} + x$.\\nOption C is correct.",
+    "solution_text": "Let's construct the derivative using limits:\\n1) $f'(x) = \\lim_{h \\to 0} \\frac{f(x+h) - f(x)}{h}$.\\n2) Substitute the given relation $f(x+h) = f(x) + f(h) + xh(x+h)$:\\n   $f'(x) = \\lim_{h \\to 0} \\frac{f(h) + xh(x+h)}{h} = \\lim_{h \\to 0} \\left( \\frac{f(h)}{h} + x(x+h) \\right)$.\\n3) Given $\\lim_{h \\to 0} \\frac{f(h)}{h} = 1$:\\n   $f'(x) = 1 + x(x + 0) = x^2 + 1$.\\n4) Integrate $f'(x)$ to find $f(x)$:\\n   $f(x) = \\frac{x^3}{3} + x + C$.\\n5) Since $f(0+0) = f(0)+f(0)+0 \\implies f(0) = 0$, we have $C = 0$.\\n6) Thus, $f(x) = \\frac{x^3}{3} + x$.\\nOption C is correct.",
     "common_mistake": "Neglecting to divide the term x^3 by 3 during integration, yielding Option A.",
     "concept_slugs": [
       "functions-equations-relations"
@@ -720,7 +720,7 @@
     "correct_answer": "27",
     "is_numerical": true,
     "notes": "Find f(2) first as f(1)*f(1), and then f(3) as f(2)*f(1).",
-    "solution_text": "Let's evaluate step-by-step:\\n1) $f(2) = f(1+1) = f(1)f(1) = 3 \\\\times 3 = 9$.\\n2) $f(3) = f(2+1) = f(2)f(1) = 9 \\\\times 3 = 27$.\\nThe value of $f(3)$ is 27.",
+    "solution_text": "Let's evaluate step-by-step:\\n1) $f(2) = f(1+1) = f(1)f(1) = 3 \\times 3 = 9$.\\n2) $f(3) = f(2+1) = f(2)f(1) = 9 \\times 3 = 27$.\\nThe value of $f(3)$ is 27.",
     "common_mistake": "Adding instead of multiplying, giving $3+3=6$ or similar.",
     "concept_slugs": [
       "functions-equations-relations"
@@ -735,7 +735,7 @@
     "correct_answer": "1",
     "is_numerical": true,
     "notes": "Evaluate the relation at x = 1 and x = 0 to form a system of two linear equations in f(1) and f(0).",
-    "solution_text": "Let's evaluate the relation at specific points:\\n1) At $x = 1$:\\n   $f(1) + 2f(0) = 1^2 + 2 = 3$. (Equation 1)\\n2) At $x = 0$:\\n   $f(0) + 2f(1) = 0^2 + 2 = 2 \\\\implies f(0) = 2 - 2f(1)$.\\n3) Substitute $f(0)$ into Equation 1:\\n   $f(1) + 2(2 - 2f(1)) = 3$\\n   $f(1) + 4 - 4f(1) = 3$\\n   $-3f(1) + 4 = 3 \\\\implies -3f(1) = -1 \\\\implies 3f(1) = 1$.\\nThe value of $3f(1)$ is 1.",
+    "solution_text": "Let's evaluate the relation at specific points:\\n1) At $x = 1$:\\n   $f(1) + 2f(0) = 1^2 + 2 = 3$. (Equation 1)\\n2) At $x = 0$:\\n   $f(0) + 2f(1) = 0^2 + 2 = 2 \\implies f(0) = 2 - 2f(1)$.\\n3) Substitute $f(0)$ into Equation 1:\\n   $f(1) + 2(2 - 2f(1)) = 3$\\n   $f(1) + 4 - 4f(1) = 3$\\n   $-3f(1) + 4 = 3 \\implies -3f(1) = -1 \\implies 3f(1) = 1$.\\nThe value of $3f(1)$ is 1.",
     "common_mistake": "Arithmetic errors or incorrect signs during substitution.",
     "concept_slugs": [
       "functions-equations-relations"
@@ -743,13 +743,13 @@
   },
   {
     "pattern_group": "functions-equations-relations",
-    "title": "If the function satisfies $f(x+y) = f(x) + f(y)$ for all real $x, y$ and the sum $\\\\sum_{r=1}^{10} f(r) = 330$, then the value of the base element $f(1)$ is ________.",
+    "title": "If the function satisfies $f(x+y) = f(x) + f(y)$ for all real $x, y$ and the sum $\\sum_{r=1}^{10} f(r) = 330$, then the value of the base element $f(1)$ is ________.",
     "difficulty": "hard",
     "type": "practice",
     "correct_answer": "6",
     "is_numerical": true,
     "notes": "Express f(r) as r*f(1) and sum the terms using the sum of first n integers formula.",
-    "solution_text": "Let's use the linear property of the functional equation:\\n1) $f(r) = r f(1)$ for any positive integer $r$.\\n2) The given sum is:\\n   $\\\\sum_{r=1}^{10} f(r) = \\\\sum_{r=1}^{10} r f(1) = f(1) \\\\sum_{r=1}^{10} r$.\\n3) Use the sum formula $\\\\sum_{r=1}^{10} r = \\\\frac{10(11)}{2} = 55$:\\n   $55 f(1) = 330$.\\n4) Solve for $f(1)$:\\n   $f(1) = \\\\frac{330}{55} = 6$.\\nThe value of $f(1)$ is 6.",
+    "solution_text": "Let's use the linear property of the functional equation:\\n1) $f(r) = r f(1)$ for any positive integer $r$.\\n2) The given sum is:\\n   $\\sum_{r=1}^{10} f(r) = \\sum_{r=1}^{10} r f(1) = f(1) \\sum_{r=1}^{10} r$.\\n3) Use the sum formula $\\sum_{r=1}^{10} r = \\frac{10(11)}{2} = 55$:\\n   $55 f(1) = 330$.\\n4) Solve for $f(1)$:\\n   $f(1) = \\frac{330}{55} = 6$.\\nThe value of $f(1)$ is 6.",
     "common_mistake": "Using a wrong sum formula (e.g. dividing by 10 instead of 55).",
     "concept_slugs": [
       "functions-equations-relations"
@@ -757,20 +757,20 @@
   },
   {
     "pattern_group": "functions-special-pieces",
-    "title": "The domain and range of the signum function, $f(x) = \\\\text{sgn}(x)$, are respectively:",
+    "title": "The domain and range of the signum function, $f(x) = \\text{sgn}(x)$, are respectively:",
     "difficulty": "easy",
     "type": "concept",
     "correct_answer": "A",
     "is_numerical": false,
     "question_format": "mcq",
     "options": {
-      "A": "Domain $\\\\mathbb{R}$, Range $\\\\{-1, 0, 1\\\\}$",
-      "B": "Domain $(0, \\\\infty)$, Range $\\\\{-1, 1\\\\}$",
-      "C": "Domain $\\\\mathbb{R}$, Range $[-1, 1]$",
-      "D": "Domain $\\\\mathbb{R} \\\\setminus \\\\{0\\\\}$, Range $\\\\{-1, 1\\\\}$"
+      "A": "Domain $\\mathbb{R}$, Range $\\{-1, 0, 1\\}$",
+      "B": "Domain $(0, \\infty)$, Range $\\{-1, 1\\}$",
+      "C": "Domain $\\mathbb{R}$, Range $[-1, 1]$",
+      "D": "Domain $\\mathbb{R} \\setminus \\{0\\}$, Range $\\{-1, 1\\}$"
     },
     "notes": "Recall the definition of signum function: sgn(x) is x/|x| for x != 0, and 0 for x = 0.",
-    "solution_text": "By standard definition of the signum function:\\n1) The function is defined for all real numbers $x$. Thus, the domain is $\\\\mathbb{R}$.\\n2) The function outputs only three possible values: $-1$ (for $x < 0$), $0$ (for $x = 0$), and $1$ (for $x > 0$).\\n3) Thus, the range is the discrete set $\\\\{-1, 0, 1\\\\}$.\\nOption A is correct.",
+    "solution_text": "By standard definition of the signum function:\\n1) The function is defined for all real numbers $x$. Thus, the domain is $\\mathbb{R}$.\\n2) The function outputs only three possible values: $-1$ (for $x < 0$), $0$ (for $x = 0$), and $1$ (for $x > 0$).\\n3) Thus, the range is the discrete set $\\{-1, 0, 1\\}$.\\nOption A is correct.",
     "common_mistake": "Confusing range with the continuous interval $[-1, 1]$ (Option C) or omitting 0 from domain/range.",
     "concept_slugs": [
       "functions-special-pieces"
@@ -778,7 +778,7 @@
   },
   {
     "pattern_group": "functions-special-pieces",
-    "title": "Let $[x]$ represent the greatest integer function and $\\\\{x\\\\}$ represent the fractional part function. The value of the expression $[ -2.3 ] + \\\\{ -2.3 \\\\}$ is equal to:",
+    "title": "Let $[x]$ represent the greatest integer function and $\\{x\\}$ represent the fractional part function. The value of the expression $[ -2.3 ] + \\{ -2.3 \\}$ is equal to:",
     "difficulty": "easy",
     "type": "practice",
     "correct_answer": "B",
@@ -791,7 +791,7 @@
       "D": "$-1.7$"
     },
     "notes": "Use the identity [x] + {x} = x for all real numbers x.",
-    "solution_text": "Let's apply the fundamental identity of greatest integer and fractional part functions:\\n1) For any real number $x$, we have $x = [x] + \\\\{x\\\\}$.\\n2) Here $x = -2.3$.\\n3) Therefore, $[ -2.3 ] + \\\\{ -2.3 \\\\} = -2.3$.\\nOption B is correct. (Let's check values: $[-2.3] = -3$ and $\\\\{-2.3\\\\} = -2.3 - [-2.3] = -2.3 - (-3) = 0.7$. Indeed, $-3 + 0.7 = -2.3$.)",
+    "solution_text": "Let's apply the fundamental identity of greatest integer and fractional part functions:\\n1) For any real number $x$, we have $x = [x] + \\{x\\}$.\\n2) Here $x = -2.3$.\\n3) Therefore, $[ -2.3 ] + \\{ -2.3 \\} = -2.3$.\\nOption B is correct. (Let's check values: $[-2.3] = -3$ and $\\{-2.3\\} = -2.3 - [-2.3] = -2.3 - (-3) = 0.7$. Indeed, $-3 + 0.7 = -2.3$.)",
     "common_mistake": "Calculating $[-2.3] = -2$ by rounding towards zero, leading to $-2 + 0.7 = -1.3$ or similar.",
     "concept_slugs": [
       "functions-special-pieces"
@@ -799,7 +799,7 @@
   },
   {
     "pattern_group": "functions-special-pieces",
-    "title": "The domain of definition of the real-valued function $f(x) = \\\\frac{1}{\\\\sqrt{x - [x]}}$ (where $[x]$ denotes the greatest integer function) is:",
+    "title": "The domain of definition of the real-valued function $f(x) = \\frac{1}{\\sqrt{x - [x]}}$ (where $[x]$ denotes the greatest integer function) is:",
     "difficulty": "medium",
     "type": "pyq",
     "source": "JEE Main 2021",
@@ -807,13 +807,13 @@
     "is_numerical": false,
     "question_format": "mcq",
     "options": {
-      "A": "\\\\mathbb{R} \\\\setminus \\\\mathbb{Z}$",
-      "B": "$\\\\mathbb{R}$",
-      "C": "$(0, \\\\infty)$",
-      "D": "\\\\mathbb{Z}$"
+      "A": "\\mathbb{R} \\setminus \\mathbb{Z}$",
+      "B": "$\\mathbb{R}$",
+      "C": "$(0, \\infty)$",
+      "D": "\\mathbb{Z}$"
     },
     "notes": "Note that x - [x] = {x}. For the square root in the denominator, we need {x} > 0.",
-    "solution_text": "Let's analyze the denominator term:\\n1) The term is $x - [x]$, which is by definition the fractional part function $\\\\{x\\\\}$.\\n2) For the square root in denominator to be defined, we need $\\\\{x\\\\} > 0$.\\n3) The fractional part function $\\\\{x\\\\}$ lies in $[0, 1)$ for all real $x$.\\n4) It equals 0 if and only if $x$ is an integer ($x \\\\in \\\\mathbb{Z}$).\\n5) For all non-integers, $\\\\{x\\\\} > 0$.\\n6) Thus, the domain is all real numbers except integers: $\\\\mathbb{R} \\\\setminus \\\\mathbb{Z}$.\\nOption A is correct.",
+    "solution_text": "Let's analyze the denominator term:\\n1) The term is $x - [x]$, which is by definition the fractional part function $\\{x\\}$.\\n2) For the square root in denominator to be defined, we need $\\{x\\} > 0$.\\n3) The fractional part function $\\{x\\}$ lies in $[0, 1)$ for all real $x$.\\n4) It equals 0 if and only if $x$ is an integer ($x \\in \\mathbb{Z}$).\\n5) For all non-integers, $\\{x\\} > 0$.\\n6) Thus, the domain is all real numbers except integers: $\\mathbb{R} \\setminus \\mathbb{Z}$.\\nOption A is correct.",
     "common_mistake": "Stating the domain as R (Option B), forgetting that integers make the denominator zero.",
     "concept_slugs": [
       "functions-special-pieces"
@@ -834,7 +834,7 @@
       "D": "$(-1, 1)$"
     },
     "notes": "Express the function in terms of the fractional part function: [x] - x = -{x}.",
-    "solution_text": "Let's rewrite the function:\\n1) Since $x = [x] + \\\\{x\\\\}$, we have $[x] - x = -\\\\{x\\\\}$.\\n2) The range of the fractional part function is $\\\\{x\\\\} \\\\in [0, 1)$.\\n3) Multiply by $-1$ to get the range of $-\\\\{x\\\\}$:\\n   $0 \\\\ge -\\\\{x\\\\} > -1 \\\\implies -\\\\{x\\\\} \\\\in (-1, 0]$.\\n4) The range is $(-1, 0]$.\\nOption B is correct.",
+    "solution_text": "Let's rewrite the function:\\n1) Since $x = [x] + \\{x\\}$, we have $[x] - x = -\\{x\\}$.\\n2) The range of the fractional part function is $\\{x\\} \\in [0, 1)$.\\n3) Multiply by $-1$ to get the range of $-\\{x\\}$:\\n   $0 \\ge -\\{x\\} > -1 \\implies -\\{x\\} \\in (-1, 0]$.\\n4) The range is $(-1, 0]$.\\nOption B is correct.",
     "common_mistake": "Stating range is $[0, 1)$ (Option A) by neglecting the negative sign.",
     "concept_slugs": [
       "functions-special-pieces"
@@ -842,7 +842,7 @@
   },
   {
     "pattern_group": "functions-special-pieces",
-    "title": "The total number of real solutions of the equation $[x] + \\\\{x\\\\}^2 = x$ (where $[x]$ is greatest integer function and $\\\\{x\\\\}$ is fractional part function) is:",
+    "title": "The total number of real solutions of the equation $[x] + \\{x\\}^2 = x$ (where $[x]$ is greatest integer function and $\\{x\\}$ is fractional part function) is:",
     "difficulty": "hard",
     "type": "pyq",
     "source": "JEE Advanced 2021",
@@ -856,36 +856,36 @@
       "D": "2"
     },
     "notes": "Replace x by [x] + {x} in the equation and solve for {x}.",
-    "solution_text": "Let's substitute $x = [x] + \\\\{x\\\\}$ in the equation:\\n1) $[x] + \\\\{x\\\\}^2 = [x] + \\\\{x\\\\}$.\\n2) Subtract $[x]$ from both sides:\\n   $\\\\{x\\\\}^2 = \\\\{x\\\\} \\\\implies \\\\{x\\\\}^2 - \\\\{x\\\\} = 0$.\\n3) Factor the quadratic in $\\\\{x\\\\}$:\\n   $\\\\{x\\\\}(\\\\{x\\\\} - 1) = 0$.\\n4) This gives two possible values: $\\\\{x\\\\} = 0$ or $\\\\{x\\\\} = 1$.\\n5) Since the range of the fractional part function is restricted to $[0, 1)$, $\\\\{x\\\\} = 1$ is rejected.\\n6) Thus, the only valid solution is $\\\\{x\\\\} = 0$.\\n7) $\\\\{x\\\\} = 0$ is true for any integer $x \\\\in \\\\mathbb{Z}$.\\n8) Since there are infinitely many integers, the equation has infinitely many real solutions.\\nOption C is correct.",
-    "common_mistake": "Accepting $\\\\{x\\\\} = 1$ and matching it to non-integers, or stating there is only 1 solution (Option B).",
+    "solution_text": "Let's substitute $x = [x] + \\{x\\}$ in the equation:\\n1) $[x] + \\{x\\}^2 = [x] + \\{x\\}$.\\n2) Subtract $[x]$ from both sides:\\n   $\\{x\\}^2 = \\{x\\} \\implies \\{x\\}^2 - \\{x\\} = 0$.\\n3) Factor the quadratic in $\\{x\\}$:\\n   $\\{x\\}(\\{x\\} - 1) = 0$.\\n4) This gives two possible values: $\\{x\\} = 0$ or $\\{x\\} = 1$.\\n5) Since the range of the fractional part function is restricted to $[0, 1)$, $\\{x\\} = 1$ is rejected.\\n6) Thus, the only valid solution is $\\{x\\} = 0$.\\n7) $\\{x\\} = 0$ is true for any integer $x \\in \\mathbb{Z}$.\\n8) Since there are infinitely many integers, the equation has infinitely many real solutions.\\nOption C is correct.",
+    "common_mistake": "Accepting $\\{x\\} = 1$ and matching it to non-integers, or stating there is only 1 solution (Option B).",
     "concept_slugs": [
       "functions-special-pieces"
     ]
   },
   {
     "pattern_group": "functions-special-pieces",
-    "title": "The value of the expression $[ \\\\pi ] + [ -\\\\pi ]$ (where $[.]$ represents the greatest integer function) is ________.",
+    "title": "The value of the expression $[ \\pi ] + [ -\\pi ]$ (where $[.]$ represents the greatest integer function) is ________.",
     "difficulty": "easy",
     "type": "practice",
     "correct_answer": "-1",
     "is_numerical": true,
     "notes": "Use the decimal approximation of pi to find the greatest integers.",
-    "solution_text": "Let's find the values using approximation $\\\\pi \\\\approx 3.14159$:\\n1) $[\\\\pi] = [3.14159] = 3$.\\n2) $[-\\\\pi] = [-3.14159] = -4$ (since $-4$ is the greatest integer less than or equal to $-3.14159$).\\n3) Sum the values: $3 + (-4) = -1$.\\nThe answer is -1.",
-    "common_mistake": "Evaluating $[-\\\\pi] = -3$, which yields $3 - 3 = 0$.",
+    "solution_text": "Let's find the values using approximation $\\pi \\approx 3.14159$:\\n1) $[\\pi] = [3.14159] = 3$.\\n2) $[-\\pi] = [-3.14159] = -4$ (since $-4$ is the greatest integer less than or equal to $-3.14159$).\\n3) Sum the values: $3 + (-4) = -1$.\\nThe answer is -1.",
+    "common_mistake": "Evaluating $[-\\pi] = -3$, which yields $3 - 3 = 0$.",
     "concept_slugs": [
       "functions-special-pieces"
     ]
   },
   {
     "pattern_group": "functions-special-pieces",
-    "title": "The number of integers in the range of the function $f(x) = \\\\frac{10}{1 + x^2}$ defined for all real $x$ is ________.",
+    "title": "The number of integers in the range of the function $f(x) = \\frac{10}{1 + x^2}$ defined for all real $x$ is ________.",
     "difficulty": "medium",
     "type": "pyq",
     "source": "JEE Main 2022",
     "correct_answer": "10",
     "is_numerical": true,
     "notes": "Find the range bounds of the function first, then count the integer values inside it.",
-    "solution_text": "Let's find the range bounds:\\n1) Since $x$ is real, $x^2 \\\\ge 0 \\\\implies 1 + x^2 \\\\ge 1$.\\n2) Reciprocating the inequality: $0 < \\\\frac{1}{1+x^2} \\\\le 1$.\\n3) Multiply by 10:\\n   $0 < \\\\frac{10}{1+x^2} \\\\le 10$.\\n4) The range of $f(x)$ is the interval $(0, 10]$.\\n5) The integers in this interval are $1, 2, 3, 4, 5, 6, 7, 8, 9, 10$.\\n6) There are exactly 10 integers in the range.\\nThe answer is 10.",
+    "solution_text": "Let's find the range bounds:\\n1) Since $x$ is real, $x^2 \\ge 0 \\implies 1 + x^2 \\ge 1$.\\n2) Reciprocating the inequality: $0 < \\frac{1}{1+x^2} \\le 1$.\\n3) Multiply by 10:\\n   $0 < \\frac{10}{1+x^2} \\le 10$.\\n4) The range of $f(x)$ is the interval $(0, 10]$.\\n5) The integers in this interval are $1, 2, 3, 4, 5, 6, 7, 8, 9, 10$.\\n6) There are exactly 10 integers in the range.\\nThe answer is 10.",
     "common_mistake": "Using open interval at 10, or omitting 10.",
     "concept_slugs": [
       "functions-special-pieces"
@@ -899,7 +899,7 @@
     "correct_answer": "2",
     "is_numerical": true,
     "notes": "Substitute x = [x] + {x} to isolate fractional part {x} and apply the boundary condition 0 <= {x} < 1.",
-    "solution_text": "Let's solve the equation by substituting $x = [x] + \\\\{x\\\\}$:\\n1) $2([x] + \\\\{x\\\\}) - [x] = 3.5 \\\\implies [x] + 2\\\\{x\\\\} = 3.5$.\\n2) Isolate the fractional part term:\\n   $2\\\\{x\\\\} = 3.5 - [x]$.\\n3) Since $0 \\\\le \\\\{x\\\\} < 1$, we must have:\\n   $0 \\\\le 2\\\\{x\\\\} < 2 \\\\implies 0 \\\\le 3.5 - [x] < 2$.\\n4) Solve the inequalities for $[x]$:\\n   - Left inequality: $3.5 - [x] \\\\ge 0 \\\\implies [x] \\\\le 3.5$.\\n   - Right inequality: $3.5 - [x] < 2 \\\\implies [x] > 1.5$.\\n5) Combining both gives $1.5 < [x] \\\\le 3.5$.\\n6) Since $[x]$ must be an integer, the possible values are $[x] = 2$ or $[x] = 3$.\\n   - If $[x] = 2 \\\\implies 2\\\\{x\\\\} = 3.5 - 2 = 1.5 \\\\implies \\\\{x\\\\} = 0.75 \\\\implies x = 2 + 0.75 = 2.75$.\\n   - If $[x] = 3 \\\\implies 2\\\\{x\\\\} = 3.5 - 3 = 0.5 \\\\implies \\\\{x\\\\} = 0.25 \\\\implies x = 3 + 0.25 = 3.25$.\\n7) Both solutions are valid. Thus, there are exactly 2 solutions.\\nThe answer is 2.",
+    "solution_text": "Let's solve the equation by substituting $x = [x] + \\{x\\}$:\\n1) $2([x] + \\{x\\}) - [x] = 3.5 \\implies [x] + 2\\{x\\} = 3.5$.\\n2) Isolate the fractional part term:\\n   $2\\{x\\} = 3.5 - [x]$.\\n3) Since $0 \\le \\{x\\} < 1$, we must have:\\n   $0 \\le 2\\{x\\} < 2 \\implies 0 \\le 3.5 - [x] < 2$.\\n4) Solve the inequalities for $[x]$:\\n   - Left inequality: $3.5 - [x] \\ge 0 \\implies [x] \\le 3.5$.\\n   - Right inequality: $3.5 - [x] < 2 \\implies [x] > 1.5$.\\n5) Combining both gives $1.5 < [x] \\le 3.5$.\\n6) Since $[x]$ must be an integer, the possible values are $[x] = 2$ or $[x] = 3$.\\n   - If $[x] = 2 \\implies 2\\{x\\} = 3.5 - 2 = 1.5 \\implies \\{x\\} = 0.75 \\implies x = 2 + 0.75 = 2.75$.\\n   - If $[x] = 3 \\implies 2\\{x\\} = 3.5 - 3 = 0.5 \\implies \\{x\\} = 0.25 \\implies x = 3 + 0.25 = 3.25$.\\n7) Both solutions are valid. Thus, there are exactly 2 solutions.\\nThe answer is 2.",
     "common_mistake": "Only finding one integer value for [x] or neglecting the boundary condition of the fractional part.",
     "concept_slugs": [
       "functions-special-pieces"

@@ -1,7 +1,7 @@
 [
   {
     "pattern_group": "pblock-group-13",
-    "title": "In diborane ($\\\\text{B}_2\\\\text{H}_6$), the bonding involves terminal and bridging hydrogen atoms. Which of the following statements correctly describes the number of 3-center-2-electron (3c-2e) and 2-center-2-electron (2c-2e) bonds present in a diborane molecule?",
+    "title": "In diborane ($\\text{B}_2\\text{H}_6$), the bonding involves terminal and bridging hydrogen atoms. Which of the following statements correctly describes the number of 3-center-2-electron (3c-2e) and 2-center-2-electron (2c-2e) bonds present in a diborane molecule?",
     "difficulty": "easy",
     "type": "pyq",
     "source": "JEE Main 2021",
@@ -15,7 +15,7 @@
       "D": "Two 3c-2e bonds and two 2c-2e bonds"
     },
     "notes": "Diborane is an electron-deficient hydridic compound of boron.",
-    "solution_text": "In diborane ($\\\\text{B}_2\\\\text{H}_6$):\n1) There are four terminal B-H bonds, which are normal covalent bonds. Each is a 2-center-2-electron (2c-2e) bond.\n2) There are two bridging B-H-B bonds, where two electrons are shared across three atoms. Each of these is a 3-center-2-electron (3c-2e) hydrogen bridge bond.\nTherefore, the molecule contains exactly two 3c-2e bonds and four 2c-2e bonds. Option A is correct.",
+    "solution_text": "In diborane ($\\text{B}_2\\text{H}_6$):\n1) There are four terminal B-H bonds, which are normal covalent bonds. Each is a 2-center-2-electron (2c-2e) bond.\n2) There are two bridging B-H-B bonds, where two electrons are shared across three atoms. Each of these is a 3-center-2-electron (3c-2e) hydrogen bridge bond.\nTherefore, the molecule contains exactly two 3c-2e bonds and four 2c-2e bonds. Option A is correct.",
     "common_mistake": "Confusing 3c-2e bonds with 3c-4e bonds, or assuming all B-H bonds are normal 2c-2e bonds, which would require 14 valence electrons instead of the 12 available.",
     "concept_slugs": [
       "pblock-group-13"
@@ -23,7 +23,7 @@
   },
   {
     "pattern_group": "pblock-group-13",
-    "title": "Boric acid ($\\\\text{H}_3\\\\text{BO}_3$) behaves as a weak monobasic acid in aqueous solution. Its acidity is best explained by which of the following mechanisms?",
+    "title": "Boric acid ($\\text{H}_3\\text{BO}_3$) behaves as a weak monobasic acid in aqueous solution. Its acidity is best explained by which of the following mechanisms?",
     "difficulty": "medium",
     "type": "pyq",
     "source": "JEE Main 2022",
@@ -31,14 +31,14 @@
     "is_numerical": false,
     "question_format": "mcq",
     "options": {
-      "A": "It dissociates to release a proton: $\\\\text{H}_3\\\\text{BO}_3 \\\\rightleftharpoons \\\\text{H}^+ + \\\\text{H}_2\\\\text{BO}_3^-$",
-      "B": "It acts as a Arrhenius acid by donating $\\\\text{H}^+$ ions directly to water molecules",
-      "C": "It acts as a Lewis acid, accepting a hydroxide ion ($\\\\text{OH}^-$) from water, thereby releasing a hydronium ion",
-      "D": "It undergoes self-ionization to form $\\\\text{H}_2\\\\text{BO}_3^-$ and $\\\\text{H}^+$"
+      "A": "It dissociates to release a proton: $\\text{H}_3\\text{BO}_3 \\rightleftharpoons \\text{H}^+ + \\text{H}_2\\text{BO}_3^-$",
+      "B": "It acts as a Arrhenius acid by donating $\\text{H}^+$ ions directly to water molecules",
+      "C": "It acts as a Lewis acid, accepting a hydroxide ion ($\\text{OH}^-$) from water, thereby releasing a hydronium ion",
+      "D": "It undergoes self-ionization to form $\\text{H}_2\\text{BO}_3^-$ and $\\text{H}^+$"
     },
     "notes": "Boric acid is not a protic acid but is a Lewis acid.",
-    "solution_text": "Boric acid ($\\\\text{H}_3\\\\text{BO}_3$ or $\\\\text{B(OH)}_3$) does not act as a proton donor (protic acid) because boron has an incomplete octet (6 valence electrons). Instead, it acts as a weak monobasic Lewis acid by accepting a pair of electrons from a hydroxide ion ($\\\\text{OH}^-$) of a water molecule:\n$\\\\text{B(OH)}_3 + 2\\\\text{H}_2\\\\text{O} \\\\rightleftharpoons [\\\\text{B(OH)}_4]^- + \\\\text{H}_3\\\\text{O}^+$\nBecause it generates a hydronium ion by abstracting $\\\\text{OH}^-$ from water, it is monobasic. Option C is correct.",
-    "common_mistake": "Assuming that because the formula is written with three hydrogen atoms ($\\\\text{H}_3\\\\text{BO}_3$), it must dissociate like phosphoric acid ($\\\\text{H}_3\\\\text{PO}_4$) to release protons directly.",
+    "solution_text": "Boric acid ($\\text{H}_3\\text{BO}_3$ or $\\text{B(OH)}_3$) does not act as a proton donor (protic acid) because boron has an incomplete octet (6 valence electrons). Instead, it acts as a weak monobasic Lewis acid by accepting a pair of electrons from a hydroxide ion ($\\text{OH}^-$) of a water molecule:\n$\\text{B(OH)}_3 + 2\\text{H}_2\\text{O} \\rightleftharpoons [\\text{B(OH)}_4]^- + \\text{H}_3\\text{O}^+$\nBecause it generates a hydronium ion by abstracting $\\text{OH}^-$ from water, it is monobasic. Option C is correct.",
+    "common_mistake": "Assuming that because the formula is written with three hydrogen atoms ($\\text{H}_3\\text{BO}_3$), it must dissociate like phosphoric acid ($\\text{H}_3\\text{PO}_4$) to release protons directly.",
     "concept_slugs": [
       "pblock-group-13"
     ]
@@ -58,7 +58,7 @@
       "D": "Phenol"
     },
     "notes": "Look for organic molecules containing cis-1,2-diols which form stable complex rings with boron.",
-    "solution_text": "Boric acid reacts with hydroxide to form the borate ion: $\\\\text{B(OH)}_3 + \\\\text{OH}^- \\\\rightleftharpoons [\\\\text{B(OH)}_4]^-$. This equilibrium lies far to the left. However, in the presence of polyhydroxy compounds containing cis-1,2-diols (like glycerol, mannitol, catechol, or sorbitol), the borate ion forms a highly stable, soluble chelate complex (di-diol complex). This removes the free $[\\\\text{B(OH)}_4]^-$ from solution, driving the neutralization equilibrium completely to the right (Le Chatelier's principle). As a result, boric acid behaves as a strong monobasic acid and can be titrated using phenolphthalein. Option B is correct.",
+    "solution_text": "Boric acid reacts with hydroxide to form the borate ion: $\\text{B(OH)}_3 + \\text{OH}^- \\rightleftharpoons [\\text{B(OH)}_4]^-$. This equilibrium lies far to the left. However, in the presence of polyhydroxy compounds containing cis-1,2-diols (like glycerol, mannitol, catechol, or sorbitol), the borate ion forms a highly stable, soluble chelate complex (di-diol complex). This removes the free $[\\text{B(OH)}_4]^-$ from solution, driving the neutralization equilibrium completely to the right (Le Chatelier's principle). As a result, boric acid behaves as a strong monobasic acid and can be titrated using phenolphthalein. Option B is correct.",
     "common_mistake": "Selecting trans-diols or simple monohydric alcohols like methanol/ethanol, which cannot form the stable cyclic chelate rings required to drive the equilibrium.",
     "concept_slugs": [
       "pblock-group-13"
@@ -73,28 +73,28 @@
     "is_numerical": false,
     "question_format": "mcq",
     "options": {
-      "A": "$\\\\text{BF}_3 < \\\\text{BCl}_3 < \\\\text{BBr}_3 < \\\\text{BI}_3$",
-      "B": "$\\\\text{BI}_3 < \\\\text{BBr}_3 < \\\\text{BCl}_3 < \\\\text{BF}_3$",
-      "C": "$\\\\text{BF}_3 < \\\\text{BBr}_3 < \\\\text{BCl}_3 < \\\\text{BI}_3$",
-      "D": "$\\\\text{BCl}_3 < \\\\text{BF}_3 < \\\\text{BBr}_3 < \\\\text{BI}_3$"
+      "A": "$\\text{BF}_3 < \\text{BCl}_3 < \\text{BBr}_3 < \\text{BI}_3$",
+      "B": "$\\text{BI}_3 < \\text{BBr}_3 < \\text{BCl}_3 < \\text{BF}_3$",
+      "C": "$\\text{BF}_3 < \\text{BBr}_3 < \\text{BCl}_3 < \\text{BI}_3$",
+      "D": "$\\text{BCl}_3 < \\text{BF}_3 < \\text{BBr}_3 < \\text{BI}_3$"
     },
     "notes": "Consider the extent of back-bonding between the halogen lone pairs and the vacant 2p orbital of boron.",
-    "solution_text": "Normally, electronegativity suggests $\\\\text{BF}_3$ should draw electron density away most strongly, making Boron most electron-deficient. However, the empty $2p$ orbital of boron overlaps with the filled $p$ orbitals of the halogens via back-bonding ($p\\\\pi-p\\\\pi$ donation):\n- In $\\\\text{BF}_3$, the overlap is $2p(\\\\text{B})-2p(\\\\text{F})$, which is highly effective due to similar sizes and energies.\n- In $\\\\text{BCl}_3$, it is $2p(\\\\text{B})-3p(\\\\text{Cl})$, which is less effective.\n- In $\\\\text{BBr}_3$ ($2p-4p$) and $\\\\text{BI}_3$ ($2p-5p$), back-bonding is negligible.\nSince strong back-bonding in $\\\\text{BF}_3$ satisfies the electron deficiency of Boron, it has the weakest tendency to accept external electron pairs. Thus, Lewis acidity increases as: $\\\\text{BF}_3 < \\\\text{BCl}_3 < \\\\text{BBr}_3 < \\\\text{BI}_3$. Option A is correct.",
-    "common_mistake": "Selecting Option B, based solely on electronegativity arguments and ignoring the dominant effect of $p\\\\pi-p\\\\pi$ back-bonding.",
+    "solution_text": "Normally, electronegativity suggests $\\text{BF}_3$ should draw electron density away most strongly, making Boron most electron-deficient. However, the empty $2p$ orbital of boron overlaps with the filled $p$ orbitals of the halogens via back-bonding ($p\\pi-p\\pi$ donation):\n- In $\\text{BF}_3$, the overlap is $2p(\\text{B})-2p(\\text{F})$, which is highly effective due to similar sizes and energies.\n- In $\\text{BCl}_3$, it is $2p(\\text{B})-3p(\\text{Cl})$, which is less effective.\n- In $\\text{BBr}_3$ ($2p-4p$) and $\\text{BI}_3$ ($2p-5p$), back-bonding is negligible.\nSince strong back-bonding in $\\text{BF}_3$ satisfies the electron deficiency of Boron, it has the weakest tendency to accept external electron pairs. Thus, Lewis acidity increases as: $\\text{BF}_3 < \\text{BCl}_3 < \\text{BBr}_3 < \\text{BI}_3$. Option A is correct.",
+    "common_mistake": "Selecting Option B, based solely on electronegativity arguments and ignoring the dominant effect of $p\\pi-p\\pi$ back-bonding.",
     "concept_slugs": [
       "pblock-group-13"
     ]
   },
   {
     "pattern_group": "pblock-group-13",
-    "title": "Borax is represented structurally as $\\\\text{Na}_2[\\\\text{B}_4\\\\text{O}_5(\\\\text{OH})_4] \\\\cdot 8\\\\text{H}_2\\\\text{O}$. The number of B-O-B bridging linkages present in one formula unit of this complex ion is ________.",
+    "title": "Borax is represented structurally as $\\text{Na}_2[\\text{B}_4\\text{O}_5(\\text{OH})_4] \\cdot 8\\text{H}_2\\text{O}$. The number of B-O-B bridging linkages present in one formula unit of this complex ion is ________.",
     "difficulty": "medium",
     "type": "practice",
     "correct_answer": "5",
     "is_numerical": true,
     "question_format": "numerical",
-    "notes": "Draw the cyclic tetraborate structure of the anion $[\\\\text{B}_4\\\\text{O}_5(\\\\text{OH})_4]^{2-}$.",
-    "solution_text": "The borax anion is $[\\\\text{B}_4\\\\text{O}_5(\\\\text{OH})_4]^{2-}$. In this structure:\n1) Four boron atoms are arranged at corners. Two are $sp^2$ hybridized (neutral, trigonal planar) and two are $sp^3$ hybridized (negatively charged, tetrahedral).\n2) The boron atoms are connected to each other through bridging oxygen atoms (B-O-B bonds) forming rings.\n3) The four borons are linked in a ring by four B-O-B bridges, and there is one additional B-O-B bridge crossing the center of the ring, connecting the two $sp^3$ boron atoms.\nThus, the total number of B-O-B bridging linkages is exactly 5.",
+    "notes": "Draw the cyclic tetraborate structure of the anion $[\\text{B}_4\\text{O}_5(\\text{OH})_4]^{2-}$.",
+    "solution_text": "The borax anion is $[\\text{B}_4\\text{O}_5(\\text{OH})_4]^{2-}$. In this structure:\n1) Four boron atoms are arranged at corners. Two are $sp^2$ hybridized (neutral, trigonal planar) and two are $sp^3$ hybridized (negatively charged, tetrahedral).\n2) The boron atoms are connected to each other through bridging oxygen atoms (B-O-B bonds) forming rings.\n3) The four borons are linked in a ring by four B-O-B bridges, and there is one additional B-O-B bridge crossing the center of the ring, connecting the two $sp^3$ boron atoms.\nThus, the total number of B-O-B bridging linkages is exactly 5.",
     "common_mistake": "Writing 4, counting only the peripheral bridges of the ring and omitting the central cross-bridge, or writing 10 by confusing it with the water stoichiometry.",
     "concept_slugs": [
       "pblock-group-13"
@@ -102,7 +102,7 @@
   },
   {
     "pattern_group": "pblock-group-13",
-    "title": "Inorganic benzene (Borazine, $\\\\text{B}_3\\\\text{N}_3\\\\text{H}_6$) is prepared by reacting diborane with ammonia. Which of the following statements about borazine is correct?",
+    "title": "Inorganic benzene (Borazine, $\\text{B}_3\\text{N}_3\\text{H}_6$) is prepared by reacting diborane with ammonia. Which of the following statements about borazine is correct?",
     "difficulty": "medium",
     "type": "advanced",
     "correct_answer": "A",
@@ -115,7 +115,7 @@
       "D": "All atoms in borazine are $sp^3$ hybridized"
     },
     "notes": "Compare the electronegativity of B and N. Nitrogen has a lone pair, boron is electron-deficient.",
-    "solution_text": "Borazine ($\\\\text{B}_3\\\\text{N}_3\\\\text{H}_6$) is cyclic with alternating B and N atoms. It is isoelectronic and isostructural with benzene, and all B and N atoms are $sp^2$ hybridized. However, because nitrogen is highly electronegative and boron is electropositive, the B-N $\\\\pi$-bonds are highly polar. This makes the ring susceptible to electrophilic and nucleophilic attacks (addition reactions), unlike benzene which is highly stable and prefers substitution. Thus, Option A is correct.",
+    "solution_text": "Borazine ($\\text{B}_3\\text{N}_3\\text{H}_6$) is cyclic with alternating B and N atoms. It is isoelectronic and isostructural with benzene, and all B and N atoms are $sp^2$ hybridized. However, because nitrogen is highly electronegative and boron is electropositive, the B-N $\\pi$-bonds are highly polar. This makes the ring susceptible to electrophilic and nucleophilic attacks (addition reactions), unlike benzene which is highly stable and prefers substitution. Thus, Option A is correct.",
     "common_mistake": "Assuming it has the exact same chemical inertness and non-polar characteristics as benzene (Option B), neglecting the polarity of the B-N bond.",
     "concept_slugs": [
       "pblock-group-13"
@@ -136,7 +136,7 @@
       "D": "Increased lattice energy of the +1 ionic compounds"
     },
     "notes": "Recall why the outer $s$ electrons become progressively harder to unpair or lose down the group.",
-    "solution_text": "Down group 13, the intervening d and f orbitals shield the outer $ns^2$ electrons poorly from the increasing nuclear charge. As a result, the outer $ns^2$ pair is held very tightly by the nucleus and does not easily participate in chemical bonding. This reluctance of the $s$-valence electrons to bond is called the 'inert pair effect'. Consequently, for heavier elements like Thallium, the +1 oxidation state is highly stable, whereas +3 compounds ($\\\\text{Tl}^{3+}$) are unstable and behave as strong oxidizing agents by reducing to $\\\\text{Tl}^+$. Option A is correct.",
+    "solution_text": "Down group 13, the intervening d and f orbitals shield the outer $ns^2$ electrons poorly from the increasing nuclear charge. As a result, the outer $ns^2$ pair is held very tightly by the nucleus and does not easily participate in chemical bonding. This reluctance of the $s$-valence electrons to bond is called the 'inert pair effect'. Consequently, for heavier elements like Thallium, the +1 oxidation state is highly stable, whereas +3 compounds ($\\text{Tl}^{3+}$) are unstable and behave as strong oxidizing agents by reducing to $\\text{Tl}^+$. Option A is correct.",
     "common_mistake": "Attributing this stability trend to basic atomic size trends (Option C) or electronegativity changes (Option B).",
     "concept_slugs": [
       "pblock-group-13"
@@ -144,14 +144,14 @@
   },
   {
     "pattern_group": "pblock-group-13",
-    "title": "In the structure of Borax, $\\\\text{Na}_2[\\\\text{B}_4\\\\text{O}_5(\\\\text{OH})_4] \\\\cdot 8\\\\text{H}_2\\\\text{O}$, the number of $sp^3$ hybridized boron atoms is ________.",
+    "title": "In the structure of Borax, $\\text{Na}_2[\\text{B}_4\\text{O}_5(\\text{OH})_4] \\cdot 8\\text{H}_2\\text{O}$, the number of $sp^3$ hybridized boron atoms is ________.",
     "difficulty": "hard",
     "type": "advanced",
     "correct_answer": "2",
     "is_numerical": true,
     "question_format": "numerical",
     "notes": "Evaluate the coordination number of each of the 4 boron atoms in the cyclic tetraborate anion.",
-    "solution_text": "Let's examine the structure of the borax anion $[\\\\text{B}_4\\\\text{O}_5(\\\\text{OH})_4]^{2-}$. In this ion:\n- Two boron atoms are bonded to three oxygen atoms (two bridging and one terminal hydroxyl). These have a coordination number of 3, are trigonal planar, and are $sp^2$ hybridized.\n- The other two boron atoms are bonded to four oxygen atoms (three bridging and one terminal hydroxyl). These carry a formal negative charge, have a coordination number of 4, are tetrahedral, and are $sp^3$ hybridized.\nTherefore, the number of $sp^3$ hybridized boron atoms is exactly 2.",
+    "solution_text": "Let's examine the structure of the borax anion $[\\text{B}_4\\text{O}_5(\\text{OH})_4]^{2-}$. In this ion:\n- Two boron atoms are bonded to three oxygen atoms (two bridging and one terminal hydroxyl). These have a coordination number of 3, are trigonal planar, and are $sp^2$ hybridized.\n- The other two boron atoms are bonded to four oxygen atoms (three bridging and one terminal hydroxyl). These carry a formal negative charge, have a coordination number of 4, are tetrahedral, and are $sp^3$ hybridized.\nTherefore, the number of $sp^3$ hybridized boron atoms is exactly 2.",
     "common_mistake": "Writing 4, assuming that all boron atoms in the borax ring are equivalent or tetrahedral.",
     "concept_slugs": [
       "pblock-group-13"
@@ -173,7 +173,7 @@
       "D": "Graphite is harder than diamond due to strong C-C double bonds in layers"
     },
     "notes": "Evaluate the bonding geometry of carbon in diamond vs graphite.",
-    "solution_text": "In diamond, each carbon is $sp^3$ hybridized and tetrahedrally bonded to four neighboring carbons, forming a rigid, three-dimensional giant covalent network (hence it is extremely hard and an insulator). In graphite, each carbon is $sp^2$ hybridized, forming flat hexagonal rings arranged in layers. The fourth valence electron of each carbon occupies a $p$ orbital perpendicular to the layer, forming delocalized $\\\\pi$ bonds. These mobile electrons conduct electricity along the sheets. Option C is correct.",
+    "solution_text": "In diamond, each carbon is $sp^3$ hybridized and tetrahedrally bonded to four neighboring carbons, forming a rigid, three-dimensional giant covalent network (hence it is extremely hard and an insulator). In graphite, each carbon is $sp^2$ hybridized, forming flat hexagonal rings arranged in layers. The fourth valence electron of each carbon occupies a $p$ orbital perpendicular to the layer, forming delocalized $\\pi$ bonds. These mobile electrons conduct electricity along the sheets. Option C is correct.",
     "common_mistake": "Reversing the hybridization states (Option A) or stating that diamond conducts electricity (Option B).",
     "concept_slugs": [
       "pblock-group-14"
@@ -181,7 +181,7 @@
   },
   {
     "pattern_group": "pblock-group-14",
-    "title": "Silicates are classified based on the number of oxygen atoms shared per $[\\\\text{SiO}_4]^{4-}$ tetrahedral unit. What is the correct classification and formula of a pyrosilicate?",
+    "title": "Silicates are classified based on the number of oxygen atoms shared per $[\\text{SiO}_4]^{4-}$ tetrahedral unit. What is the correct classification and formula of a pyrosilicate?",
     "difficulty": "medium",
     "type": "pyq",
     "source": "JEE Main 2022",
@@ -189,14 +189,14 @@
     "is_numerical": false,
     "question_format": "mcq",
     "options": {
-      "A": "Orthosilicate with formula $\\\\text{Si}_2\\\\text{O}_7^{6-}$ where 0 oxygens are shared",
-      "B": "Pyrosilicate with formula $\\\\text{Si}_2\\\\text{O}_7^{6-}$ where 1 oxygen is shared",
-      "C": "Cyclic silicate with formula $\\\\text{SiO}_3^{2-}$ where 2 oxygens are shared",
-      "D": "Sheet silicate with formula $\\\\text{Si}_2\\\\text{O}_5^{2-}$ where 3 oxygens are shared"
+      "A": "Orthosilicate with formula $\\text{Si}_2\\text{O}_7^{6-}$ where 0 oxygens are shared",
+      "B": "Pyrosilicate with formula $\\text{Si}_2\\text{O}_7^{6-}$ where 1 oxygen is shared",
+      "C": "Cyclic silicate with formula $\\text{SiO}_3^{2-}$ where 2 oxygens are shared",
+      "D": "Sheet silicate with formula $\\text{Si}_2\\text{O}_5^{2-}$ where 3 oxygens are shared"
     },
     "notes": "Pyrosilicates (also called island/dimer silicates) consist of two tetrahedral units sharing a single vertex.",
-    "solution_text": "A pyrosilicate is formed when two $[\\\\text{SiO}_4]^{4-}$ tetrahedra share exactly one oxygen atom at a corner. The formula of this dimer anion is calculated as: $2 \\\\times [\\\\text{SiO}_4]^{4-} - 1 \\\\times \\\\text{O}^{2-} = \\\\text{Si}_2\\\\text{O}_7^{6-}$. Because exactly 1 oxygen atom is shared between the two units, it is classified as a pyrosilicate (or disilicate). Option B is correct.",
-    "common_mistake": "Confusing pyrosilicates with sheet silicates ($\\\\text{Si}_2\\\\text{O}_5^{2-}$) which share 3 oxygen atoms per tetrahedron.",
+    "solution_text": "A pyrosilicate is formed when two $[\\text{SiO}_4]^{4-}$ tetrahedra share exactly one oxygen atom at a corner. The formula of this dimer anion is calculated as: $2 \\times [\\text{SiO}_4]^{4-} - 1 \\times \\text{O}^{2-} = \\text{Si}_2\\text{O}_7^{6-}$. Because exactly 1 oxygen atom is shared between the two units, it is classified as a pyrosilicate (or disilicate). Option B is correct.",
+    "common_mistake": "Confusing pyrosilicates with sheet silicates ($\\text{Si}_2\\text{O}_5^{2-}$) which share 3 oxygen atoms per tetrahedron.",
     "concept_slugs": [
       "pblock-group-14"
     ]
@@ -210,13 +210,13 @@
     "is_numerical": false,
     "question_format": "mcq",
     "options": {
-      "A": "They are aluminosilicates with a microporous 3D crystalline framework of $\\\\text{Al-O-Si}$ linkages",
+      "A": "They are aluminosilicates with a microporous 3D crystalline framework of $\\text{Al-O-Si}$ linkages",
       "B": "They are chain silicates that dissolve in organic solvents",
       "C": "ZSM-5 is a zeolite used to convert gasoline directly into ethanol",
       "D": "They act as catalysts by releasing free aluminium ions into solution"
     },
     "notes": "Zeolites have a honeycomb-like structure with molecular-sized pores.",
-    "solution_text": "Zeolites are crystalline, microporous aluminosilicates. They are formed by replacing some Silicon atoms in a three-dimensional $\\\\text{SiO}_2$ framework with Aluminium ($\\\\text{Al}^{3+}$) ions. This creates a negatively charged framework balanced by cations (like $\\\\text{Na}^+$). The framework contains channels and cavities of precise molecular sizes (pores). ZSM-5 is a famous zeolite catalyst used to convert alcohols directly into gasoline hydrocarbons. Option A is correct.",
+    "solution_text": "Zeolites are crystalline, microporous aluminosilicates. They are formed by replacing some Silicon atoms in a three-dimensional $\\text{SiO}_2$ framework with Aluminium ($\\text{Al}^{3+}$) ions. This creates a negatively charged framework balanced by cations (like $\\text{Na}^+$). The framework contains channels and cavities of precise molecular sizes (pores). ZSM-5 is a famous zeolite catalyst used to convert alcohols directly into gasoline hydrocarbons. Option A is correct.",
     "common_mistake": "Claiming ZSM-5 converts gasoline into ethanol (Option C), which is the reverse of its actual industrial function (converting methanol/alcohols to gasoline).",
     "concept_slugs": [
       "pblock-group-14"
@@ -224,35 +224,35 @@
   },
   {
     "pattern_group": "pblock-group-14",
-    "title": "Silicones are synthetic organosilicon polymers. In their manufacture, dialkyldichlorosilanes ($\\\\text{R}_2\\\\text{SiCl}_2$) are hydrolyzed and polymerized to form linear chains. Which of the following reagents is added to control the chain length of the polymer?",
+    "title": "Silicones are synthetic organosilicon polymers. In their manufacture, dialkyldichlorosilanes ($\\text{R}_2\\text{SiCl}_2$) are hydrolyzed and polymerized to form linear chains. Which of the following reagents is added to control the chain length of the polymer?",
     "difficulty": "medium",
     "type": "practice",
     "correct_answer": "D",
     "is_numerical": false,
     "question_format": "mcq",
     "options": {
-      "A": "$\\\\text{R}_4\\\\text{Si}$",
-      "B": "$\\\\text{RSiCl}_3$",
-      "C": "$\\\\text{SiCl}_4$",
-      "D": "$\\\\text{R}_3\\\\text{SiCl}$"
+      "A": "$\\text{R}_4\\text{Si}$",
+      "B": "$\\text{RSiCl}_3$",
+      "C": "$\\text{SiCl}_4$",
+      "D": "$\\text{R}_3\\text{SiCl}$"
     },
-    "notes": "Think about the number of active $-\\\\text{OH}$ groups formed upon hydrolysis of each chlorosilane. A terminal group must only have 1 reactable end.",
-    "solution_text": "Hydrolysis of $\\\\text{R}_2\\\\text{SiCl}_2$ yields $\\\\text{R}_2\\\\text{Si(OH)}_2$, which has two reactive silanol groups. Polymerization of these monomers forms a linear silicone chain. To stop chain growth and control the polymer's molecular weight, a monochlorosilane like $\\\\text{R}_3\\\\text{SiCl}$ is added. Upon hydrolysis, it forms $\\\\text{R}_3\\\\text{Si-OH}$, which contains only one reactive silanol group. When it reacts with the growing chain, it blocks further polymerization because there are no more $-\\\\text{OH}$ groups at that end. Option D is correct.",
-    "common_mistake": "Selecting $\\\\text{RSiCl}_3$ (Option B) or $\\\\text{SiCl}_4$ (Option C), which have 3 and 4 reactive groups respectively and would lead to cross-linking (branched/network polymers) rather than terminating linear chains.",
+    "notes": "Think about the number of active $-\\text{OH}$ groups formed upon hydrolysis of each chlorosilane. A terminal group must only have 1 reactable end.",
+    "solution_text": "Hydrolysis of $\\text{R}_2\\text{SiCl}_2$ yields $\\text{R}_2\\text{Si(OH)}_2$, which has two reactive silanol groups. Polymerization of these monomers forms a linear silicone chain. To stop chain growth and control the polymer's molecular weight, a monochlorosilane like $\\text{R}_3\\text{SiCl}$ is added. Upon hydrolysis, it forms $\\text{R}_3\\text{Si-OH}$, which contains only one reactive silanol group. When it reacts with the growing chain, it blocks further polymerization because there are no more $-\\text{OH}$ groups at that end. Option D is correct.",
+    "common_mistake": "Selecting $\\text{RSiCl}_3$ (Option B) or $\\text{SiCl}_4$ (Option C), which have 3 and 4 reactive groups respectively and would lead to cross-linking (branched/network polymers) rather than terminating linear chains.",
     "concept_slugs": [
       "pblock-group-14"
     ]
   },
   {
     "pattern_group": "pblock-group-14",
-    "title": "In sheet silicates (such as talc or mica), the number of oxygen atoms shared by each tetrahedral $[\\\\text{SiO}_4]^{4-}$ unit with neighboring tetrahedra is ________.",
+    "title": "In sheet silicates (such as talc or mica), the number of oxygen atoms shared by each tetrahedral $[\\text{SiO}_4]^{4-}$ unit with neighboring tetrahedra is ________.",
     "difficulty": "easy",
     "type": "practice",
     "correct_answer": "3",
     "is_numerical": true,
     "question_format": "numerical",
     "notes": "Sheet silicates are two-dimensional network silicates.",
-    "solution_text": "In sheet (or layer) silicates, three out of the four oxygen atoms of each $[\\\\text{SiO}_4]^{4-}$ tetrahedron are shared with three adjacent tetrahedra in a two-dimensional plane. This forms a two-dimensional sheet-like network with a repeating empirical formula of $(\\\\text{Si}_2\\\\text{O}_5)_{n}^{2n-}$. Therefore, the number of shared oxygens per unit is exactly 3.",
+    "solution_text": "In sheet (or layer) silicates, three out of the four oxygen atoms of each $[\\text{SiO}_4]^{4-}$ tetrahedron are shared with three adjacent tetrahedra in a two-dimensional plane. This forms a two-dimensional sheet-like network with a repeating empirical formula of $(\\text{Si}_2\\text{O}_5)_{n}^{2n-}$. Therefore, the number of shared oxygens per unit is exactly 3.",
     "common_mistake": "Writing 4, which is the number of shared oxygen atoms in a three-dimensional framework silicate (like quartz or feldspar).",
     "concept_slugs": [
       "pblock-group-14"
@@ -260,7 +260,7 @@
   },
   {
     "pattern_group": "pblock-group-14",
-    "title": "Carbon monoxide ($\\\\text{CO}$) is a highly toxic gas because it binds to hemoglobin in the bloodstream. Which of the following describes this process correctly?",
+    "title": "Carbon monoxide ($\\text{CO}$) is a highly toxic gas because it binds to hemoglobin in the bloodstream. Which of the following describes this process correctly?",
     "difficulty": "easy",
     "type": "concept",
     "correct_answer": "A",
@@ -274,42 +274,42 @@
     },
     "notes": "CO acts as a strong ligand towards the iron center of hemoglobin.",
     "solution_text": "Carbon monoxide is a strong ligand and binds coordinate-covalently to the iron(II) center of hemoglobin, forming a stable complex called carboxyhemoglobin. The formation constant of carboxyhemoglobin is approximately 300 times greater than that of oxyhemoglobin. This strong binding prevents oxygen from coordinating to hemoglobin, starving body tissues of oxygen and causing asphyxiation. Option A is correct.",
-    "common_mistake": "Stating that CO oxidizes $\\\\text{Fe}^{2+}$ to $\\\\text{Fe}^{3+}$ (Option B), which is the mechanism of toxicity for oxidants like nitrates (forming methemoglobin).",
+    "common_mistake": "Stating that CO oxidizes $\\text{Fe}^{2+}$ to $\\text{Fe}^{3+}$ (Option B), which is the mechanism of toxicity for oxidants like nitrates (forming methemoglobin).",
     "concept_slugs": [
       "pblock-group-14"
     ]
   },
   {
     "pattern_group": "pblock-group-14",
-    "title": "Explain the stability of the +2 and +4 oxidation states of Tin ($\\\\text{Sn}$) and Lead ($\\\\text{Pb}$). Which of the following is correct?",
+    "title": "Explain the stability of the +2 and +4 oxidation states of Tin ($\\text{Sn}$) and Lead ($\\text{Pb}$). Which of the following is correct?",
     "difficulty": "medium",
     "type": "advanced",
     "correct_answer": "A",
     "is_numerical": false,
     "question_format": "mcq",
     "options": {
-      "A": "$\\\\text{Sn}^{2+}$ acts as a reducing agent; $\\\\text{Pb}^{4+}$ acts as an oxidizing agent",
-      "B": "$\\\\text{Sn}^{4+}$ acts as a reducing agent; $\\\\text{Pb}^{2+}$ acts as an oxidizing agent",
-      "C": "Both $\\\\text{Sn}^{2+}$ and $\\\\text{Pb}^{2+}$ are highly unstable and act as strong reducing agents",
-      "D": "Both $\\\\text{Sn}^{4+}$ and $\\\\text{Pb}^{4+}$ are highly stable and chemically inert"
+      "A": "$\\text{Sn}^{2+}$ acts as a reducing agent; $\\text{Pb}^{4+}$ acts as an oxidizing agent",
+      "B": "$\\text{Sn}^{4+}$ acts as a reducing agent; $\\text{Pb}^{2+}$ acts as an oxidizing agent",
+      "C": "Both $\\text{Sn}^{2+}$ and $\\text{Pb}^{2+}$ are highly unstable and act as strong reducing agents",
+      "D": "Both $\\text{Sn}^{4+}$ and $\\text{Pb}^{4+}$ are highly stable and chemically inert"
     },
     "notes": "Inert pair effect is stronger in Lead than in Tin.",
-    "solution_text": "For Tin ($Z=50$), the +4 oxidation state is more stable than +2. Therefore, $\\\\text{Sn}^{2+}$ readily oxidizes to $\\\\text{Sn}^{4+}$, acting as a reducing agent: $\\\\text{Sn}^{2+} \\\\rightarrow \\\\text{Sn}^{4+} + 2e^-$.\nFor Lead ($Z=82$), the inert pair effect is extremely strong, making the +2 state far more stable than the +4 state. Thus, $\\\\text{Pb}^{4+}$ has a strong tendency to accept electrons and reduce to $\\\\text{Pb}^{2+}$, acting as a powerful oxidizing agent: $\\\\text{Pb}^{4+} + 2e^- \\\\rightarrow \\\\text{Pb}^{2+}$.\nOption A is correct.",
-    "common_mistake": "Stating that $\\\\text{Pb}^{2+}$ is oxidizing or that both states are similarly stable (Option D), ignoring the depth of the inert pair effect down the group.",
+    "solution_text": "For Tin ($Z=50$), the +4 oxidation state is more stable than +2. Therefore, $\\text{Sn}^{2+}$ readily oxidizes to $\\text{Sn}^{4+}$, acting as a reducing agent: $\\text{Sn}^{2+} \\rightarrow \\text{Sn}^{4+} + 2e^-$.\nFor Lead ($Z=82$), the inert pair effect is extremely strong, making the +2 state far more stable than the +4 state. Thus, $\\text{Pb}^{4+}$ has a strong tendency to accept electrons and reduce to $\\text{Pb}^{2+}$, acting as a powerful oxidizing agent: $\\text{Pb}^{4+} + 2e^- \\rightarrow \\text{Pb}^{2+}$.\nOption A is correct.",
+    "common_mistake": "Stating that $\\text{Pb}^{2+}$ is oxidizing or that both states are similarly stable (Option D), ignoring the depth of the inert pair effect down the group.",
     "concept_slugs": [
       "pblock-group-14"
     ]
   },
   {
     "pattern_group": "pblock-group-14",
-    "title": "In cyclic silicates or single-chain silicates (such as pyroxenes), the number of oxygen atoms shared per $[\\\\text{SiO}_4]^{4-}$ tetrahedral unit is ________.",
+    "title": "In cyclic silicates or single-chain silicates (such as pyroxenes), the number of oxygen atoms shared per $[\\text{SiO}_4]^{4-}$ tetrahedral unit is ________.",
     "difficulty": "hard",
     "type": "advanced",
     "correct_answer": "2",
     "is_numerical": true,
     "question_format": "numerical",
-    "notes": "Examine the shared vertices in a cyclic ring (like $\\\\text{Si}_3\\\\text{O}_9^{6-}$) or a linear chain silicate.",
-    "solution_text": "In both cyclic silicates (e.g., $\\\\text{Si}_3\\\\text{O}_9^{6-}$ or $\\\\text{Si}_6\\\\text{O}_{18}^{12-}$) and single-chain silicates, each tetrahedral unit shares exactly 2 of its oxygen atoms at the corners with neighboring tetrahedra. This sharing pattern results in a repeating unit with the empirical formula $(\\\\text{SiO}_3)_{n}^{2n-}$. Therefore, the number of shared oxygen atoms per tetrahedron is exactly 2.",
+    "notes": "Examine the shared vertices in a cyclic ring (like $\\text{Si}_3\\text{O}_9^{6-}$) or a linear chain silicate.",
+    "solution_text": "In both cyclic silicates (e.g., $\\text{Si}_3\\text{O}_9^{6-}$ or $\\text{Si}_6\\text{O}_{18}^{12-}$) and single-chain silicates, each tetrahedral unit shares exactly 2 of its oxygen atoms at the corners with neighboring tetrahedra. This sharing pattern results in a repeating unit with the empirical formula $(\\text{SiO}_3)_{n}^{2n-}$. Therefore, the number of shared oxygen atoms per tetrahedron is exactly 2.",
     "common_mistake": "Writing 3, which applies to sheet silicates, or writing 1, which applies to pyrosilicates.",
     "concept_slugs": [
       "pblock-group-14"
@@ -325,14 +325,14 @@
     "is_numerical": false,
     "question_format": "mcq",
     "options": {
-      "A": "$\\\\text{NO}$ and $\\\\text{NO}_2$",
+      "A": "$\\text{NO}$ and $\\text{NO}_2$",
       "B": "$\text{N}_2\text{O}$ and $\text{NO}_2$",
       "C": "$\text{NO}_2$ and $\text{NO}$",
       "D": "$\text{NO}$ and $\text{N}_2\text{O}$"
     },
     "notes": "Dilute HNO3 is a weaker oxidizing agent than concentrated HNO3.",
-    "solution_text": "Nitric acid ($\\\\text{HNO}_3$) acts as an oxidizing agent. The reduction products of the acid depend on its concentration and the reactivity of the metal:\n1) Dilute $\\\\text{HNO}_3$ with Copper (moderately reactive): Copper is oxidized to $\\\\text{Cu(NO}_3)_2$ and $\\\\text{HNO}_3$ is reduced to nitric oxide ($\\\\text{NO}$ gas):\n$3\\\\text{Cu} + 8\\\\text{HNO}_3(\\\\text{dilute}) \\\\rightarrow 3\\\\text{Cu(NO}_3)_2 + 2\\\\text{NO} + 4\\\\text{H}_2\\\\text{O}$\n2) Concentrated $\\\\text{HNO}_3$ with Copper: Concentrated acid is reduced to nitrogen dioxide ($\\\\text{NO}_2$ brown gas):\n$\\\\text{Cu} + 4\\\\text{HNO}_3(\\\\text{conc.}) \\\\rightarrow \\\\text{Cu(NO}_3)_2 + 2\\\\text{NO}_2 + 2\\\\text{H}_2\\\\text{O}$\nOption A is correct.",
-    "common_mistake": "Confusing the copper reaction with the zinc reaction (dilute $\\\\text{HNO}_3$ with zinc produces $\\\\text{N}_2\\\\text{O}$).",
+    "solution_text": "Nitric acid ($\\text{HNO}_3$) acts as an oxidizing agent. The reduction products of the acid depend on its concentration and the reactivity of the metal:\n1) Dilute $\\text{HNO}_3$ with Copper (moderately reactive): Copper is oxidized to $\\text{Cu(NO}_3)_2$ and $\\text{HNO}_3$ is reduced to nitric oxide ($\\text{NO}$ gas):\n$3\\text{Cu} + 8\\text{HNO}_3(\\text{dilute}) \\rightarrow 3\\text{Cu(NO}_3)_2 + 2\\text{NO} + 4\\text{H}_2\\text{O}$\n2) Concentrated $\\text{HNO}_3$ with Copper: Concentrated acid is reduced to nitrogen dioxide ($\\text{NO}_2$ brown gas):\n$\\text{Cu} + 4\\text{HNO}_3(\\text{conc.}) \\rightarrow \\text{Cu(NO}_3)_2 + 2\\text{NO}_2 + 2\\text{H}_2\\text{O}$\nOption A is correct.",
+    "common_mistake": "Confusing the copper reaction with the zinc reaction (dilute $\\text{HNO}_3$ with zinc produces $\\text{N}_2\\text{O}$).",
     "concept_slugs": [
       "pblock-group-15"
     ]
@@ -347,36 +347,36 @@
     "is_numerical": false,
     "question_format": "mcq",
     "options": {
-      "A": "$\\\\text{NO}$ and $\\\\text{NO}_2$",
-      "B": "$\\\\text{N}_2\\\\text{O}$ and $\\\\text{NO}_2$",
-      "C": "$\\\\text{NH}_4\\\\text{NO}_3$ and $\\\\text{NO}$",
-      "D": "$\\\\text{N}_2$ and $\\\\text{NO}_2$"
+      "A": "$\\text{NO}$ and $\\text{NO}_2$",
+      "B": "$\\text{N}_2\\text{O}$ and $\\text{NO}_2$",
+      "C": "$\\text{NH}_4\\text{NO}_3$ and $\\text{NO}$",
+      "D": "$\\text{N}_2$ and $\\text{NO}_2$"
     },
     "notes": "Zinc is a highly electropositive and highly active metal, reducing HNO3 to a lower oxidation state.",
-    "solution_text": "Zinc is more reactive and a stronger reducing agent than copper:\n1) With dilute $\\\\text{HNO}_3$, zinc reduces the nitrogen from a +5 state to a +1 state in nitrous oxide ($\\\\text{N}_2\\\\text{O}$, laughing gas):\n$4\\\\text{Zn} + 10\\\\text{HNO}_3(\\\\text{dilute}) \\\\rightarrow 4\\\\text{Zn(NO}_3)_2 + \\\\text{N}_2\\\\text{O} + 5\\\\text{H}_2\\\\text{O}$\n2) With concentrated $\\\\text{HNO}_3$, it reduces the nitrogen to a +4 state in nitrogen dioxide ($\\\\text{NO}_2$ gas):\n$\\\\text{Zn} + 4\\\\text{HNO}_3(\\\\text{conc.}) \\\\rightarrow \\\\text{Zn(NO}_3)_2 + 2\\\\text{NO}_2 + 2\\\\text{H}_2\\\\text{O}$\nOption B is correct.",
-    "common_mistake": "Assuming that dilute acid always yields $\\\\text{NO}$ for all metals, neglecting the influence of the metal's electrode potential.",
+    "solution_text": "Zinc is more reactive and a stronger reducing agent than copper:\n1) With dilute $\\text{HNO}_3$, zinc reduces the nitrogen from a +5 state to a +1 state in nitrous oxide ($\\text{N}_2\\text{O}$, laughing gas):\n$4\\text{Zn} + 10\\text{HNO}_3(\\text{dilute}) \\rightarrow 4\\text{Zn(NO}_3)_2 + \\text{N}_2\\text{O} + 5\\text{H}_2\\text{O}$\n2) With concentrated $\\text{HNO}_3$, it reduces the nitrogen to a +4 state in nitrogen dioxide ($\\text{NO}_2$ gas):\n$\\text{Zn} + 4\\text{HNO}_3(\\text{conc.}) \\rightarrow \\text{Zn(NO}_3)_2 + 2\\text{NO}_2 + 2\\text{H}_2\\text{O}$\nOption B is correct.",
+    "common_mistake": "Assuming that dilute acid always yields $\\text{NO}$ for all metals, neglecting the influence of the metal's electrode potential.",
     "concept_slugs": [
       "pblock-group-15"
     ]
   },
   {
     "pattern_group": "pblock-group-15",
-    "title": "The basicity of hypophosphorous acid ($\\\\text{H}_3\\\\text{PO}_2$), also known as phosphinic acid, is ________.",
+    "title": "The basicity of hypophosphorous acid ($\\text{H}_3\\text{PO}_2$), also known as phosphinic acid, is ________.",
     "difficulty": "easy",
     "type": "concept",
     "correct_answer": "1",
     "is_numerical": true,
     "question_format": "numerical",
-    "notes": "Draw the tetrahedral structure of $\\\\text{H}_3\\\\text{PO}_2$ with Phosphorus as the central atom.",
-    "solution_text": "In the oxoacids of phosphorus, only those hydrogen atoms that are directly bonded to oxygen as hydroxyl groups ($-\\\\text{OH}$) are ionizable and contribute to the acid's basicity. Hydrogen atoms directly bonded to phosphorus ($\\\\text{P-H}$) do not ionize because the electronegativity difference between P and H is minimal.\nThe structure of hypophosphorous acid ($\\\\text{H}_3\\\\text{PO}_2$) features:\n- One double-bonded oxygen ($\\\\text{P=O}$)\n- Two hydrogens directly bonded to phosphorus (two $\\\\text{P-H}$ bonds)\n- One hydroxyl group ($\\\\text{P-OH}$)\nSince there is only one $\\\\text{P-OH}$ group, only 1 proton can be donated. Thus, its basicity is exactly 1 (monobasic acid).",
-    "common_mistake": "Writing 3, assuming that all three hydrogen atoms in the formula $\\\\text{H}_3\\\\text{PO}_2$ are acidic.",
+    "notes": "Draw the tetrahedral structure of $\\text{H}_3\\text{PO}_2$ with Phosphorus as the central atom.",
+    "solution_text": "In the oxoacids of phosphorus, only those hydrogen atoms that are directly bonded to oxygen as hydroxyl groups ($-\\text{OH}$) are ionizable and contribute to the acid's basicity. Hydrogen atoms directly bonded to phosphorus ($\\text{P-H}$) do not ionize because the electronegativity difference between P and H is minimal.\nThe structure of hypophosphorous acid ($\\text{H}_3\\text{PO}_2$) features:\n- One double-bonded oxygen ($\\text{P=O}$)\n- Two hydrogens directly bonded to phosphorus (two $\\text{P-H}$ bonds)\n- One hydroxyl group ($\\text{P-OH}$)\nSince there is only one $\\text{P-OH}$ group, only 1 proton can be donated. Thus, its basicity is exactly 1 (monobasic acid).",
+    "common_mistake": "Writing 3, assuming that all three hydrogen atoms in the formula $\\text{H}_3\\text{PO}_2$ are acidic.",
     "concept_slugs": [
       "pblock-group-15"
     ]
   },
   {
     "pattern_group": "pblock-group-15",
-    "title": "Which of the following statements correctly explains why hypophosphorous acid ($\\\\text{H}_3\\\\text{PO}_2$) acts as a strong reducing agent?",
+    "title": "Which of the following statements correctly explains why hypophosphorous acid ($\\text{H}_3\\text{PO}_2$) acts as a strong reducing agent?",
     "difficulty": "medium",
     "type": "concept",
     "correct_answer": "C",
@@ -384,48 +384,48 @@
     "question_format": "mcq",
     "options": {
       "A": "It has three ionizable hydroxyl groups",
-      "B": "It has one active $\\\\text{P-OH}$ bond and high electronegativity",
-      "C": "It contains two $\\\\text{P-H}$ bonds which are directly responsible for its reducing property",
+      "B": "It has one active $\\text{P-OH}$ bond and high electronegativity",
+      "C": "It contains two $\\text{P-H}$ bonds which are directly responsible for its reducing property",
       "D": "Phosphorus is in its highest oxidation state of +5"
     },
     "notes": "Reducing properties in oxoacids of phosphorus correlate with the presence of P-H bonds.",
-    "solution_text": "Hypophosphorous acid ($\\\\text{H}_3\\\\text{PO}_2$) contains two hydrogens directly bonded to the phosphorus atom (two $\\\\text{P-H}$ bonds). These P-H bonds have a strong tendency to be oxidized to P-OH bonds, donating hydrogen/electrons in the process. Therefore, the presence of these two P-H bonds makes $\\\\text{H}_3\\\\text{PO}_2$ a strong reducing agent (for example, it reduces silver nitrate to metallic silver). Option C is correct.",
-    "common_mistake": "Attributing the reducing nature to the $\\\\text{P-OH}$ group (Option B), whereas hydroxyl groups are acidic, not reducing.",
+    "solution_text": "Hypophosphorous acid ($\\text{H}_3\\text{PO}_2$) contains two hydrogens directly bonded to the phosphorus atom (two $\\text{P-H}$ bonds). These P-H bonds have a strong tendency to be oxidized to P-OH bonds, donating hydrogen/electrons in the process. Therefore, the presence of these two P-H bonds makes $\\text{H}_3\\text{PO}_2$ a strong reducing agent (for example, it reduces silver nitrate to metallic silver). Option C is correct.",
+    "common_mistake": "Attributing the reducing nature to the $\\text{P-OH}$ group (Option B), whereas hydroxyl groups are acidic, not reducing.",
     "concept_slugs": [
       "pblock-group-15"
     ]
   },
   {
     "pattern_group": "pblock-group-15",
-    "title": "When phosphorus pentachloride ($\\\\text{PCl}_5$) reacts with water, it undergoes hydrolysis. What are the intermediate and final products of this hydrolysis reaction respectively?",
+    "title": "When phosphorus pentachloride ($\\text{PCl}_5$) reacts with water, it undergoes hydrolysis. What are the intermediate and final products of this hydrolysis reaction respectively?",
     "difficulty": "medium",
     "type": "practice",
     "correct_answer": "A",
     "is_numerical": false,
     "question_format": "mcq",
     "options": {
-      "A": "$\\\\text{POCl}_3$ and $\\\\text{H}_3\\\\text{PO}_4$",
-      "B": "$\\\\text{PCl}_3$ and $\\\\text{H}_3\\\\text{PO}_3$",
-      "C": "$\\\\text{POCl}_3$ and $\\\\text{H}_3\\\\text{PO}_2$",
-      "D": "$\\\\text{PH}_3$ and $\\\\text{H}_3\\\\text{PO}_4$"
+      "A": "$\\text{POCl}_3$ and $\\text{H}_3\\text{PO}_4$",
+      "B": "$\\text{PCl}_3$ and $\\text{H}_3\\text{PO}_3$",
+      "C": "$\\text{POCl}_3$ and $\\text{H}_3\\text{PO}_2$",
+      "D": "$\\text{PH}_3$ and $\\text{H}_3\\text{PO}_4$"
     },
     "notes": "Hydrolysis of PCl5 occurs in stages depending on the amount of water.",
-    "solution_text": "The hydrolysis of $\\\\text{PCl}_5$ occurs in two stages:\n1) With a limited amount of water or moist air, it hydrolyzes partially to form phosphorus oxychloride ($\\\\text{POCl}_3$) and hydrogen chloride:\n$\\\\text{PCl}_5 + \\\\text{H}_2\\\\text{O} \\\\rightarrow \\\\text{POCl}_3 + 2\\\\text{HCl}$\n2) With excess water, the intermediate $\\\\text{POCl}_3$ undergoes complete hydrolysis to form orthophosphoric acid ($\\\\text{H}_3\\\\text{PO}_4$):\n$\\\\text{POCl}_3 + 3\\\\text{H}_2\\\\text{O} \\\\rightarrow \\\\text{H}_3\\\\text{PO}_4 + 3\\\\text{HCl}$\nThus, the intermediate is $\\\\text{POCl}_3$ and the final product is $\\\\text{H}_3\\\\text{PO}_4$. Option A is correct.",
-    "common_mistake": "Selecting $\\\\text{PCl}_3$ and $\\\\text{H}_3\\\\text{PO}_3$ (Option B), which are the products of hydrolysis of phosphorus trichloride ($\\\\text{PCl}_3$), not $\\\\text{PCl}_5$.",
+    "solution_text": "The hydrolysis of $\\text{PCl}_5$ occurs in two stages:\n1) With a limited amount of water or moist air, it hydrolyzes partially to form phosphorus oxychloride ($\\text{POCl}_3$) and hydrogen chloride:\n$\\text{PCl}_5 + \\text{H}_2\\text{O} \\rightarrow \\text{POCl}_3 + 2\\text{HCl}$\n2) With excess water, the intermediate $\\text{POCl}_3$ undergoes complete hydrolysis to form orthophosphoric acid ($\\text{H}_3\\text{PO}_4$):\n$\\text{POCl}_3 + 3\\text{H}_2\\text{O} \\rightarrow \\text{H}_3\\text{PO}_4 + 3\\text{HCl}$\nThus, the intermediate is $\\text{POCl}_3$ and the final product is $\\text{H}_3\\text{PO}_4$. Option A is correct.",
+    "common_mistake": "Selecting $\\text{PCl}_3$ and $\\text{H}_3\\text{PO}_3$ (Option B), which are the products of hydrolysis of phosphorus trichloride ($\\text{PCl}_3$), not $\\text{PCl}_5$.",
     "concept_slugs": [
       "pblock-group-15"
     ]
   },
   {
     "pattern_group": "pblock-group-15",
-    "title": "In a molecule of phosphorus pentoxide (represented as its dimer, $\\\\text{P}_4\\\\text{O}_{10}$), the total number of bridging $\\\\text{P-O-P}$ oxygen atoms is ________.",
+    "title": "In a molecule of phosphorus pentoxide (represented as its dimer, $\\text{P}_4\\text{O}_{10}$), the total number of bridging $\\text{P-O-P}$ oxygen atoms is ________.",
     "difficulty": "medium",
     "type": "practice",
     "correct_answer": "6",
     "is_numerical": true,
     "question_format": "numerical",
-    "notes": "Evaluate the structure of $\\\\text{P}_4\\\\text{O}_{10}$. Each phosphorus is located at a vertex of a tetrahedron.",
-    "solution_text": "In the structure of $\\\\text{P}_4\\\\text{O}_{10}$:\n1) The four phosphorus atoms lie at the corners of a tetrahedron.\n2) Along each of the six edges of this tetrahedron, there is a bridging oxygen atom forming a $\\\\text{P-O-P}$ link. This accounts for exactly 6 bridging oxygen atoms.\n3) In addition, each of the four phosphorus atoms forms a coordinate double bond to a terminal oxygen atom ($\\\\text{P=O}$), contributing 4 terminal oxygens.\nThus, the number of bridging $\\\\text{P-O-P}$ links is exactly 6.",
+    "notes": "Evaluate the structure of $\\text{P}_4\\text{O}_{10}$. Each phosphorus is located at a vertex of a tetrahedron.",
+    "solution_text": "In the structure of $\\text{P}_4\\text{O}_{10}$:\n1) The four phosphorus atoms lie at the corners of a tetrahedron.\n2) Along each of the six edges of this tetrahedron, there is a bridging oxygen atom forming a $\\text{P-O-P}$ link. This accounts for exactly 6 bridging oxygen atoms.\n3) In addition, each of the four phosphorus atoms forms a coordinate double bond to a terminal oxygen atom ($\\text{P=O}$), contributing 4 terminal oxygens.\nThus, the number of bridging $\\text{P-O-P}$ links is exactly 6.",
     "common_mistake": "Writing 4, counting only the terminal double-bonded oxygen atoms, or writing 10, confusing total oxygen atoms with bridging oxygen atoms.",
     "concept_slugs": [
       "pblock-group-15"
@@ -433,7 +433,7 @@
   },
   {
     "pattern_group": "pblock-group-15",
-    "title": "Nitrogen forms a variety of halides, but it is unable to form a pentahalide like $\\\\text{NCl}_5$ or $\\\\text{NF}_5$, whereas Phosphorus readily forms $\\\\text{PCl}_5$ and $\\\\text{PF}_5$. The primary reason for this anomalous behavior is:",
+    "title": "Nitrogen forms a variety of halides, but it is unable to form a pentahalide like $\\text{NCl}_5$ or $\\text{NF}_5$, whereas Phosphorus readily forms $\\text{PCl}_5$ and $\\text{PF}_5$. The primary reason for this anomalous behavior is:",
     "difficulty": "easy",
     "type": "practice",
     "correct_answer": "A",
@@ -442,11 +442,11 @@
     "options": {
       "A": "Absence of vacant d-orbitals in the valence shell of nitrogen ($n=2$), limiting its maximum covalency to 4",
       "B": "Nitrogen is too electronegative to form five bonds",
-      "C": "The $\\\\text{N-Cl}$ bond energy is too low to stabilize a pentavalent molecule",
+      "C": "The $\\text{N-Cl}$ bond energy is too low to stabilize a pentavalent molecule",
       "D": "High inter-electronic repulsions in the small nitrogen atom"
     },
     "notes": "Look at the electronic configuration of Nitrogen ($1s^2 2s^2 2p^3$). Does it have a $2d$ subshell?",
-    "solution_text": "Nitrogen belongs to the second period and has the valence shell electronic configuration $2s^2 2p^3$. Since the second energy level ($n=2$) contains only $s$ and $p$ subshells and has no vacant $d$ orbitals, nitrogen cannot expand its octet to accommodate more than 8 electrons in its valence shell. Therefore, its maximum covalency is restricted to 4 (e.g. in $\\\\text{NH}_4^+$), preventing the formation of pentahalides like $\\\\text{NCl}_5$. Phosphorus (third period, $n=3$) has vacant $3d$ orbitals, allowing it to expand its covalency to 5 or 6. Option A is correct.",
+    "solution_text": "Nitrogen belongs to the second period and has the valence shell electronic configuration $2s^2 2p^3$. Since the second energy level ($n=2$) contains only $s$ and $p$ subshells and has no vacant $d$ orbitals, nitrogen cannot expand its octet to accommodate more than 8 electrons in its valence shell. Therefore, its maximum covalency is restricted to 4 (e.g. in $\\text{NH}_4^+$), preventing the formation of pentahalides like $\\text{NCl}_5$. Phosphorus (third period, $n=3$) has vacant $3d$ orbitals, allowing it to expand its covalency to 5 or 6. Option A is correct.",
     "common_mistake": "Attributing this exclusively to steric hindrance or electronegativity (Option B), which are secondary factors compared to the absolute quantum limitation of the valence shell.",
     "concept_slugs": [
       "pblock-group-15"
@@ -454,28 +454,28 @@
   },
   {
     "pattern_group": "pblock-group-15",
-    "title": "When ammonium dichromate ($\\\\text{(NH}_4)_2\\\\text{Cr}_2\\\\text{O}_7$) is heated, it undergoes a dramatic thermal decomposition (volcano reaction). The products obtained in this reaction are:",
+    "title": "When ammonium dichromate ($\\text{(NH}_4)_2\\text{Cr}_2\\text{O}_7$) is heated, it undergoes a dramatic thermal decomposition (volcano reaction). The products obtained in this reaction are:",
     "difficulty": "hard",
     "type": "advanced",
     "correct_answer": "A",
     "is_numerical": false,
     "question_format": "mcq",
     "options": {
-      "A": "Nitrogen gas ($\\\\text{N}_2$), green Chromium(III) oxide ($\\\\text{Cr}_2\\\\text{O}_3$), and water vapor",
-      "B": "Ammonia gas ($\\\\text{NH}_3$), chromic acid, and oxygen",
-      "C": "Nitrous oxide ($\\\\text{N}_2\\\\text{O}$), Chromium(VI) oxide, and water",
-      "D": "Nitric oxide ($\\\\text{NO}$), metallic Chromium, and oxygen"
+      "A": "Nitrogen gas ($\\text{N}_2$), green Chromium(III) oxide ($\\text{Cr}_2\\text{O}_3$), and water vapor",
+      "B": "Ammonia gas ($\\text{NH}_3$), chromic acid, and oxygen",
+      "C": "Nitrous oxide ($\\text{N}_2\\text{O}$), Chromium(VI) oxide, and water",
+      "D": "Nitric oxide ($\\text{NO}$), metallic Chromium, and oxygen"
     },
     "notes": "Ammonium dichromate contains an oxidizing anion (dichromate) and a reducing cation (ammonium). It undergoes an intramolecular redox reaction.",
-    "solution_text": "Heating ammonium dichromate ($\\\\text{(NH}_4)_2\\\\text{Cr}_2\\\\text{O}_7$) causes a self-sustaining intramolecular oxidation-reduction reaction:\n- Nitrogen in ammonium is oxidized from -3 to 0, forming $\\\\text{N}_2$ gas.\n- Chromium in dichromate is reduced from +6 to +3, forming green chromium(III) oxide ($\\\\text{Cr}_2\\\\text{O}_3$) solid.\nThe balanced equation is:\n$(\\\\text{NH}_4)_2\\\\text{Cr}_2\\\\text{O}_7 \\\\xrightarrow{\\\\Delta} \\\\text{N}_2 + \\\\text{Cr}_2\\\\text{O}_3 + 4\\\\text{H}_2\\\\text{O}$\nOption A is correct.",
-    "common_mistake": "Assuming it releases ammonia gas ($\\\\text{NH}_3$) and chromic acid via simple thermal dissociation (Option B), which is typical of ammonium salts with non-oxidizing anions like chloride, but not dichromate.",
+    "solution_text": "Heating ammonium dichromate ($\\text{(NH}_4)_2\\text{Cr}_2\\text{O}_7$) causes a self-sustaining intramolecular oxidation-reduction reaction:\n- Nitrogen in ammonium is oxidized from -3 to 0, forming $\\text{N}_2$ gas.\n- Chromium in dichromate is reduced from +6 to +3, forming green chromium(III) oxide ($\\text{Cr}_2\\text{O}_3$) solid.\nThe balanced equation is:\n$(\\text{NH}_4)_2\\text{Cr}_2\\text{O}_7 \\xrightarrow{\\Delta} \\text{N}_2 + \\text{Cr}_2\\text{O}_3 + 4\\text{H}_2\\text{O}$\nOption A is correct.",
+    "common_mistake": "Assuming it releases ammonia gas ($\\text{NH}_3$) and chromic acid via simple thermal dissociation (Option B), which is typical of ammonium salts with non-oxidizing anions like chloride, but not dichromate.",
     "concept_slugs": [
       "pblock-group-15"
     ]
   },
   {
     "pattern_group": "pblock-group-16",
-    "title": "Ozone ($\\\\text{O}_3$) is quantitatively estimated in the laboratory by reacting it with excess potassium iodide solution and titrating the liberated product. Which of the following statements correctly outlines this procedure?",
+    "title": "Ozone ($\\text{O}_3$) is quantitatively estimated in the laboratory by reacting it with excess potassium iodide solution and titrating the liberated product. Which of the following statements correctly outlines this procedure?",
     "difficulty": "medium",
     "type": "pyq",
     "source": "JEE Main 2021",
@@ -483,13 +483,13 @@
     "is_numerical": false,
     "question_format": "mcq",
     "options": {
-      "A": "Ozone oxidizes $\\\\text{I}^-$ to $\\\\text{I}_2$, which is then titrated against standard sodium thiosulfate solution using starch as an indicator",
-      "B": "Ozone reduces $\\\\text{I}^-$ to $\\\\text{I}_2$, which is then titrated against potassium permanganate",
+      "A": "Ozone oxidizes $\\text{I}^-$ to $\\text{I}_2$, which is then titrated against standard sodium thiosulfate solution using starch as an indicator",
+      "B": "Ozone reduces $\\text{I}^-$ to $\\text{I}_2$, which is then titrated against potassium permanganate",
       "C": "Ozone reacts with KI to form potassium iodate, which is weighed directly",
       "D": "Ozone forms a blue complex with starch directly, which is measured colorimetrically"
     },
     "notes": "Evaluate the redox properties of ozone. It is a powerful oxidizing agent.",
-    "solution_text": "Ozone is a strong oxidizing agent. When reacted with an excess of potassium iodide ($\\\\text{KI}$) solution buffered with a borate buffer ($\\\\text{pH} = 9.2$), ozone oxidizes iodide ions ($\\\\text{I}^-$) to elemental iodine ($\\\\text{I}_2$):\n$2\\\\text{I}^- + \\\\text{H}_2\\\\text{O} + \\\\text{O}_3 \\\\rightarrow 2\\\\text{OH}^- + \\\\text{I}_2 + \\\\text{O}_2$\nThe liberated iodine ($\\\\text{I}_2$) is then titrated quantitatively against a standard solution of sodium thiosulfate ($\\\\text{Na}_2\\\\text{S}_2\\\\text{O}_3$, hypo) using starch as an indicator (turning from deep blue to colorless at the endpoint). Option A is correct.",
+    "solution_text": "Ozone is a strong oxidizing agent. When reacted with an excess of potassium iodide ($\\text{KI}$) solution buffered with a borate buffer ($\\text{pH} = 9.2$), ozone oxidizes iodide ions ($\\text{I}^-$) to elemental iodine ($\\text{I}_2$):\n$2\\text{I}^- + \\text{H}_2\\text{O} + \\text{O}_3 \\rightarrow 2\\text{OH}^- + \\text{I}_2 + \\text{O}_2$\nThe liberated iodine ($\\text{I}_2$) is then titrated quantitatively against a standard solution of sodium thiosulfate ($\\text{Na}_2\\text{S}_2\\text{O}_3$, hypo) using starch as an indicator (turning from deep blue to colorless at the endpoint). Option A is correct.",
     "common_mistake": "Claiming that ozone reduces iodide (Option B), or that ozone forms a direct blue complex with starch (Option D). Starch only forms a blue complex with the liberated iodine/triiodide.",
     "concept_slugs": [
       "pblock-group-16"
@@ -497,7 +497,7 @@
   },
   {
     "pattern_group": "pblock-group-16",
-    "title": "Compare the molecular properties of Oxygen ($\\\\text{O}_2$) and Sulfur ($\\\\text{S}_8$). Which of the following statements is true?",
+    "title": "Compare the molecular properties of Oxygen ($\\text{O}_2$) and Sulfur ($\\text{S}_8$). Which of the following statements is true?",
     "difficulty": "easy",
     "type": "pyq",
     "source": "JEE Main 2022",
@@ -505,28 +505,28 @@
     "is_numerical": false,
     "question_format": "mcq",
     "options": {
-      "A": "$\\\\text{O}_2$ is a gas at room temperature and is paramagnetic; $\\\\text{S}_8$ is a solid with a puckered crown-shaped structure and is diamagnetic",
-      "B": "$\\\\text{O}_2$ is diamagnetic; $\\\\text{S}_8$ is paramagnetic",
-      "C": "Both $\\\\text{O}_2$ and $\\\\text{S}_8$ exist as diatomic gases at room temperature",
-      "D": "$\\\\text{S}_8$ forms strong $p\\\\pi-p\\\\pi$ double bonds, making it a gas"
+      "A": "$\\text{O}_2$ is a gas at room temperature and is paramagnetic; $\\text{S}_8$ is a solid with a puckered crown-shaped structure and is diamagnetic",
+      "B": "$\\text{O}_2$ is diamagnetic; $\\text{S}_8$ is paramagnetic",
+      "C": "Both $\\text{O}_2$ and $\\text{S}_8$ exist as diatomic gases at room temperature",
+      "D": "$\\text{S}_8$ forms strong $p\\pi-p\\pi$ double bonds, making it a gas"
     },
     "notes": "Consider the ability of oxygen to form multiple bonds and the molecular orbital configuration of O2.",
-    "solution_text": "Oxygen ($\\\\text{O}_2$) forms a strong $p\\\\pi-p\\\\pi$ double bond ($\\\\text{O=O}$) due to its small atomic size, existing as a diatomic gas. According to Molecular Orbital theory, $\\\\text{O}_2$ contains two unpaired electrons in its degenerate antibonding $\\\\pi^*$ orbitals, making it paramagnetic. Sulfur is larger and has poor $3p\\\\pi-3p\\\\pi$ overlap, preferring to form single covalent bonds. It exists as a crown-shaped, puckered octatomic ring ($\\\\text{S}_8$), which is a yellow crystalline solid at room temperature and is diamagnetic (0 unpaired electrons). Option A is correct.",
-    "common_mistake": "Declaring $\\\\text{O}_2$ as diamagnetic (Option B), forgetting that its paramagnetism is a key finding of Molecular Orbital theory.",
+    "solution_text": "Oxygen ($\\text{O}_2$) forms a strong $p\\pi-p\\pi$ double bond ($\\text{O=O}$) due to its small atomic size, existing as a diatomic gas. According to Molecular Orbital theory, $\\text{O}_2$ contains two unpaired electrons in its degenerate antibonding $\\pi^*$ orbitals, making it paramagnetic. Sulfur is larger and has poor $3p\\pi-3p\\pi$ overlap, preferring to form single covalent bonds. It exists as a crown-shaped, puckered octatomic ring ($\\text{S}_8$), which is a yellow crystalline solid at room temperature and is diamagnetic (0 unpaired electrons). Option A is correct.",
+    "common_mistake": "Declaring $\\text{O}_2$ as diamagnetic (Option B), forgetting that its paramagnetism is a key finding of Molecular Orbital theory.",
     "concept_slugs": [
       "pblock-group-16"
     ]
   },
   {
     "pattern_group": "pblock-group-16",
-    "title": "Caro's acid ($\\\\text{H}_2\\\\text{SO}_5$, peroxomonosulfuric acid) contains a peroxo linkage. The oxidation state of the sulfur atom in Caro's acid is ________.",
+    "title": "Caro's acid ($\\text{H}_2\\text{SO}_5$, peroxomonosulfuric acid) contains a peroxo linkage. The oxidation state of the sulfur atom in Caro's acid is ________.",
     "difficulty": "medium",
     "type": "concept",
     "correct_answer": "6",
     "is_numerical": true,
     "question_format": "numerical",
-    "notes": "Draw the structure of $\\\\text{H}_2\\\\text{SO}_5$. Remember that the peroxide oxygen atoms have an oxidation state of -1 each.",
-    "solution_text": "If we calculate the oxidation state of Sulfur ($x$) in $\\\\text{H}_2\\\\text{SO}_5$ using the standard formula: $2(+1) + x + 5(-2) = 0 \\\\implies x = +8$. This is chemically impossible, as sulfur has only 6 valence electrons and its maximum oxidation state is +6.\nWe must use its structure: $\\\\text{H-O-O-SO}_2\\\\text{-OH}$:\n- The sulfur is bonded to: two double-bonded oxygens ($\\\\text{S=O}$), one hydroxyl group ($\\\\text{S-OH}$), and one hydroperoxy group ($\\\\text{S-O-O-H}$).\n- In the hydroperoxy group, the two peroxide oxygens have an oxidation state of -1 each. The other three oxygens have the normal oxidation state of -2 each.\n- Applying the equation: $2(+1) (\\\\text{for H}) + x (\\\\text{for S}) + 3(-2) (\\\\text{for oxide O}) + 2(-1) (\\\\text{for peroxide O}) = 0 \\\\implies 2 + x - 6 - 2 = 0 \\\\implies x = +6$.\nThus, the oxidation state of sulfur in Caro's acid is exactly 6.",
+    "notes": "Draw the structure of $\\text{H}_2\\text{SO}_5$. Remember that the peroxide oxygen atoms have an oxidation state of -1 each.",
+    "solution_text": "If we calculate the oxidation state of Sulfur ($x$) in $\\text{H}_2\\text{SO}_5$ using the standard formula: $2(+1) + x + 5(-2) = 0 \\implies x = +8$. This is chemically impossible, as sulfur has only 6 valence electrons and its maximum oxidation state is +6.\nWe must use its structure: $\\text{H-O-O-SO}_2\\text{-OH}$:\n- The sulfur is bonded to: two double-bonded oxygens ($\\text{S=O}$), one hydroxyl group ($\\text{S-OH}$), and one hydroperoxy group ($\\text{S-O-O-H}$).\n- In the hydroperoxy group, the two peroxide oxygens have an oxidation state of -1 each. The other three oxygens have the normal oxidation state of -2 each.\n- Applying the equation: $2(+1) (\\text{for H}) + x (\\text{for S}) + 3(-2) (\\text{for oxide O}) + 2(-1) (\\text{for peroxide O}) = 0 \\implies 2 + x - 6 - 2 = 0 \\implies x = +6$.\nThus, the oxidation state of sulfur in Caro's acid is exactly 6.",
     "common_mistake": "Writing 8, by blindly applying the formula without considering the peroxo linkage and the maximum valence limitation of sulfur.",
     "concept_slugs": [
       "pblock-group-16"
@@ -541,13 +541,13 @@
     "is_numerical": false,
     "question_format": "mcq",
     "options": {
-      "A": "$\\\\text{V}_2\\\\text{O}_5$ catalyst, temperature of $720\\\\,\\\\text{K}$, and pressure of $2\\\\,\\\\text{bar}$",
-      "B": "Finely divided Iron catalyst, temperature of $450\\\\,\\\\text{K}$, and pressure of $200\\\\,\\\\text{bar}$",
+      "A": "$\\text{V}_2\\text{O}_5$ catalyst, temperature of $720\\,\\text{K}$, and pressure of $2\\,\\text{bar}$",
+      "B": "Finely divided Iron catalyst, temperature of $450\\,\\text{K}$, and pressure of $200\\,\\text{bar}$",
       "C": "Platinized asbestos catalyst at room temperature and pressure",
-      "D": "Nickel catalyst, temperature of $500\\\\,\\\\text{K}$, and pressure of $10\\\\,\\\\text{bar}$"
+      "D": "Nickel catalyst, temperature of $500\\,\\text{K}$, and pressure of $10\\,\\text{bar}$"
     },
-    "notes": "The conversion is $2\\\\text{SO}_2(g) + \\\\text{O}_2(g) \\\\rightleftharpoons 2\\\\text{SO}_3(g)$. It is exothermic and reversible.",
-    "solution_text": "The reaction $2\\\\text{SO}_2(g) + \\\\text{O}_2(g) \\\\rightleftharpoons 2\\\\text{SO}_3(g)$ is exothermic ($\\\\Delta H^\\\\circ = -196.6\\\\,\\\\text{kJ/mol}$). According to Le Chatelier's principle, low temperature and high pressure favor the products. However, too low a temperature makes the reaction sluggish. Thus, an optimum temperature of $720\\\\,\\\\text{K}$ and a pressure of $2\\\\,\\\\text{bar}$ are maintained. The catalyst used is vanadium pentoxide ($\\\\text{V}_2\\\\text{O}_5$), which replaced platinum because platinum is easily poisoned by arsenic impurities. Option A is correct.",
+    "notes": "The conversion is $2\\text{SO}_2(g) + \\text{O}_2(g) \\rightleftharpoons 2\\text{SO}_3(g)$. It is exothermic and reversible.",
+    "solution_text": "The reaction $2\\text{SO}_2(g) + \\text{O}_2(g) \\rightleftharpoons 2\\text{SO}_3(g)$ is exothermic ($\\Delta H^\\circ = -196.6\\,\\text{kJ/mol}$). According to Le Chatelier's principle, low temperature and high pressure favor the products. However, too low a temperature makes the reaction sluggish. Thus, an optimum temperature of $720\\,\\text{K}$ and a pressure of $2\\,\\text{bar}$ are maintained. The catalyst used is vanadium pentoxide ($\\text{V}_2\\text{O}_5$), which replaced platinum because platinum is easily poisoned by arsenic impurities. Option A is correct.",
     "common_mistake": "Selecting Iron (Option B), which is the catalyst used in the Haber process for ammonia synthesis, or Nickel (Option D), used in hydrogenation of oils.",
     "concept_slugs": [
       "pblock-group-16"
@@ -555,14 +555,14 @@
   },
   {
     "pattern_group": "pblock-group-16",
-    "title": "Oleum (pyrosulfuric acid) is prepared by dissolving sulfur trioxide in concentrated sulfuric acid. The formula of oleum is $\\\\text{H}_2\\\\text{S}_2\\\\text{O}_7$. The number of bridging $\\\\text{S-O-S}$ bonds in one molecule of oleum is ________.",
+    "title": "Oleum (pyrosulfuric acid) is prepared by dissolving sulfur trioxide in concentrated sulfuric acid. The formula of oleum is $\\text{H}_2\\text{S}_2\\text{O}_7$. The number of bridging $\\text{S-O-S}$ bonds in one molecule of oleum is ________.",
     "difficulty": "easy",
     "type": "practice",
     "correct_answer": "1",
     "is_numerical": true,
     "question_format": "numerical",
-    "notes": "Draw the structure of $\\\\text{H}_2\\\\text{S}_2\\\\text{O}_7$. It consists of two sulfuric acid units sharing a common oxygen atom.",
-    "solution_text": "The structural formula of oleum ($\\\\text{H}_2\\\\text{S}_2\\\\text{O}_7$, also called pyrosulfuric acid) consists of two tetrahedral $\\\\text{SO}_3$ groups linked together through a single bridging oxygen atom. Each sulfur atom is also bonded to two double-bonded terminal oxygens ($\\\\text{S=O}$) and one terminal hydroxyl group ($-\\\\text{OH}$):\n$(\\\\text{HO})\\\\text{SO}_2\\\\text{-O-SO}_2(\\\\text{OH})$\nThus, there is exactly 1 bridging $\\\\text{S-O-S}$ bond in the molecule.",
+    "notes": "Draw the structure of $\\text{H}_2\\text{S}_2\\text{O}_7$. It consists of two sulfuric acid units sharing a common oxygen atom.",
+    "solution_text": "The structural formula of oleum ($\\text{H}_2\\text{S}_2\\text{O}_7$, also called pyrosulfuric acid) consists of two tetrahedral $\\text{SO}_3$ groups linked together through a single bridging oxygen atom. Each sulfur atom is also bonded to two double-bonded terminal oxygens ($\\text{S=O}$) and one terminal hydroxyl group ($-\\text{OH}$):\n$(\\text{HO})\\text{SO}_2\\text{-O-SO}_2(\\text{OH})$\nThus, there is exactly 1 bridging $\\text{S-O-S}$ bond in the molecule.",
     "common_mistake": "Writing 2, confusing it with the number of sulfur atoms, or writing 7, which is the total number of oxygen atoms.",
     "concept_slugs": [
       "pblock-group-16"
@@ -570,7 +570,7 @@
   },
   {
     "pattern_group": "pblock-group-16",
-    "title": "Sodium thiosulfate ($\\\\text{Na}_2\\\\text{S}_2\\\\text{O}_3$) is an important reagent in iodometry. Structurally, the two sulfur atoms in the thiosulfate ion ($\\\\text{S}_2\\\\text{O}_3^{2-}$) are not equivalent. Which of the following is correct regarding their oxidation states?",
+    "title": "Sodium thiosulfate ($\\text{Na}_2\\text{S}_2\\text{O}_3$) is an important reagent in iodometry. Structurally, the two sulfur atoms in the thiosulfate ion ($\\text{S}_2\\text{O}_3^{2-}$) are not equivalent. Which of the following is correct regarding their oxidation states?",
     "difficulty": "medium",
     "type": "practice",
     "correct_answer": "A",
@@ -582,8 +582,8 @@
       "C": "The central sulfur atom is +6, and the terminal sulfur is -2",
       "D": "The central sulfur atom is +4, and the terminal sulfur is 0"
     },
-    "notes": "Think of the thiosulfate ion as a sulfate ion ($\\\\text{SO}_4^{2-}$) where one oxygen atom is replaced by a sulfur atom.",
-    "solution_text": "The thiosulfate ion ($\\\\text{S}_2\\\\text{O}_3^{2-}$) can be viewed as a sulfate ion ($\\\\text{SO}_4^{2-}$) where one oxygen ligand is replaced by a sulfur atom. In this structure, the central sulfur is bonded to: three oxygen atoms (which are electronegative, contributing +2 each to the central S) and one terminal sulfur (which is slightly less electronegative than oxygen, but binds via a coordinate/double bond). The terminal sulfur acts like an oxide ligand, taking a formal charge of -1 (or -2 in coordinate bond formalism). In structure-based oxidation number assignment: the terminal S is assigned -1 (analogous to oxygen) and the central S is +5, leading to an average oxidation state of $+2$ (since $(5 + (-1))/2 = +2$). Option A is correct.",
+    "notes": "Think of the thiosulfate ion as a sulfate ion ($\\text{SO}_4^{2-}$) where one oxygen atom is replaced by a sulfur atom.",
+    "solution_text": "The thiosulfate ion ($\\text{S}_2\\text{O}_3^{2-}$) can be viewed as a sulfate ion ($\\text{SO}_4^{2-}$) where one oxygen ligand is replaced by a sulfur atom. In this structure, the central sulfur is bonded to: three oxygen atoms (which are electronegative, contributing +2 each to the central S) and one terminal sulfur (which is slightly less electronegative than oxygen, but binds via a coordinate/double bond). The terminal sulfur acts like an oxide ligand, taking a formal charge of -1 (or -2 in coordinate bond formalism). In structure-based oxidation number assignment: the terminal S is assigned -1 (analogous to oxygen) and the central S is +5, leading to an average oxidation state of $+2$ (since $(5 + (-1))/2 = +2$). Option A is correct.",
     "common_mistake": "Stating that both sulfur atoms have the same +2 state (Option B), which ignores the distinct structural environments of the central and terminal atoms.",
     "concept_slugs": [
       "pblock-group-16"
@@ -591,20 +591,20 @@
   },
   {
     "pattern_group": "pblock-group-16",
-    "title": "Bleaching action is exhibited by both sulfur dioxide ($\\\\text{SO}_2$) and chlorine ($\\\\text{Cl}_2$), but they operate by different mechanisms. Which of the following statements is true?",
+    "title": "Bleaching action is exhibited by both sulfur dioxide ($\\text{SO}_2$) and chlorine ($\\text{Cl}_2$), but they operate by different mechanisms. Which of the following statements is true?",
     "difficulty": "medium",
     "type": "practice",
     "correct_answer": "C",
     "is_numerical": false,
     "question_format": "mcq",
     "options": {
-      "A": "$\\\\text{SO}_2$ bleaches by oxidation and is permanent; $\\\\text{Cl}_2$ bleaches by reduction and is temporary",
+      "A": "$\\text{SO}_2$ bleaches by oxidation and is permanent; $\\text{Cl}_2$ bleaches by reduction and is temporary",
       "B": "Both gases bleach by reduction, but chlorine's action is faster",
-      "C": "$\\\\text{SO}_2$ bleaches by reduction and is temporary (atmospheric oxygen re-oxidizes the material); $\\\\text{Cl}_2$ bleaches by oxidation and is permanent",
+      "C": "$\\text{SO}_2$ bleaches by reduction and is temporary (atmospheric oxygen re-oxidizes the material); $\\text{Cl}_2$ bleaches by oxidation and is permanent",
       "D": "Both gases bleach by oxidation, and both are permanent"
     },
     "notes": "Moist sulfur dioxide acts as a reducing agent, while chlorine water acts as an oxidizing agent.",
-    "solution_text": "The bleaching mechanisms are different:\n1) Sulfur dioxide ($\\\\text{SO}_2$) in the presence of moisture acts as a reducing agent: $\\\\text{SO}_2 + 2\\\\text{H}_2\\\\text{O} \\\\rightarrow \\\\text{H}_2\\\\text{SO}_4 + 2[\\\\text{H}]$. The nascent hydrogen reduces colored organic matter to colorless compounds. However, when the bleached material is exposed to air, it is slowly re-oxidized by atmospheric oxygen back to its colored form, making the bleaching temporary.\n2) Chlorine ($\\\\text{Cl}_2$) in water forms nascent oxygen: $\\\\text{Cl}_2 + \\\\text{H}_2\\\\text{O} \\\\rightarrow 2\\\\text{HCl} + [\\\\text{O}]$. The nascent oxygen oxidizes the colored compounds to colorless oxidized products. This process is highly stable and irreversible (permanent). Option C is correct.",
+    "solution_text": "The bleaching mechanisms are different:\n1) Sulfur dioxide ($\\text{SO}_2$) in the presence of moisture acts as a reducing agent: $\\text{SO}_2 + 2\\text{H}_2\\text{O} \\rightarrow \\text{H}_2\\text{SO}_4 + 2[\\text{H}]$. The nascent hydrogen reduces colored organic matter to colorless compounds. However, when the bleached material is exposed to air, it is slowly re-oxidized by atmospheric oxygen back to its colored form, making the bleaching temporary.\n2) Chlorine ($\\text{Cl}_2$) in water forms nascent oxygen: $\\text{Cl}_2 + \\text{H}_2\\text{O} \\rightarrow 2\\text{HCl} + [\\text{O}]$. The nascent oxygen oxidizes the colored compounds to colorless oxidized products. This process is highly stable and irreversible (permanent). Option C is correct.",
     "common_mistake": "Reversing the mechanisms (Option A), attributing oxidation to sulfur dioxide and reduction to chlorine.",
     "concept_slugs": [
       "pblock-group-16"
@@ -612,15 +612,15 @@
   },
   {
     "pattern_group": "pblock-group-16",
-    "title": "Dithionic acid has the molecular formula $\\\\text{H}_2\\\\text{S}_2\\\\text{O}_6$. The number of sulfur-sulfur ($\\\\text{S-S}$) single bonds in one molecule of dithionic acid is ________.",
+    "title": "Dithionic acid has the molecular formula $\\text{H}_2\\text{S}_2\\text{O}_6$. The number of sulfur-sulfur ($\\text{S-S}$) single bonds in one molecule of dithionic acid is ________.",
     "difficulty": "hard",
     "type": "advanced",
     "correct_answer": "1",
     "is_numerical": true,
     "question_format": "numerical",
     "notes": "Draw the structure of dithionic acid. Both sulfur atoms are central atoms connected to each other.",
-    "solution_text": "Dithionic acid ($\\\\text{H}_2\\\\text{S}_2\\\\text{O}_6$) belongs to the thionic acid series. Structurally, it consists of two sulfonic acid groups ($-\\\\text{SO}_3\\\\text{H}$) directly joined together via a single covalent sulfur-sulfur bond:\n$(\\\\text{HO})\\\\text{O}_2\\\\text{S-SO}_2(\\\\text{OH})$\nEach sulfur atom is in a +5 oxidation state, and there is exactly one $\\\\text{S-S}$ bond connecting the two units. Therefore, the answer is 1.",
-    "common_mistake": "Writing 0, assuming that the two sulfurs must be connected by a bridging oxygen (like in pyrosulfuric acid $\\\\text{H}_2\\\\text{S}_2\\\\text{O}_7$).",
+    "solution_text": "Dithionic acid ($\\text{H}_2\\text{S}_2\\text{O}_6$) belongs to the thionic acid series. Structurally, it consists of two sulfonic acid groups ($-\\text{SO}_3\\text{H}$) directly joined together via a single covalent sulfur-sulfur bond:\n$(\\text{HO})\\text{O}_2\\text{S-SO}_2(\\text{OH})$\nEach sulfur atom is in a +5 oxidation state, and there is exactly one $\\text{S-S}$ bond connecting the two units. Therefore, the answer is 1.",
+    "common_mistake": "Writing 0, assuming that the two sulfurs must be connected by a bridging oxygen (like in pyrosulfuric acid $\\text{H}_2\\text{S}_2\\text{O}_7$).",
     "concept_slugs": [
       "pblock-group-16"
     ]
@@ -635,13 +635,13 @@
     "is_numerical": false,
     "question_format": "mcq",
     "options": {
-      "A": "$\\\\text{F} > \\\\text{Cl} > \\\\text{Br} > \\\\text{I}$",
-      "B": "$\\\\text{Cl} > \\\\text{F} > \\\\text{Br} > \\\\text{I}$",
-      "C": "$\\\\text{Cl} > \\\\text{Br} > \\\\text{I} > \\\\text{F}$",
-      "D": "$\\\\text{F} > \\\\text{Cl} > \\\\text{I} > \\\\text{Br}$"
+      "A": "$\\text{F} > \\text{Cl} > \\text{Br} > \\text{I}$",
+      "B": "$\\text{Cl} > \\text{F} > \\text{Br} > \\text{I}$",
+      "C": "$\\text{Cl} > \\text{Br} > \\text{I} > \\text{F}$",
+      "D": "$\\text{F} > \\text{Cl} > \\text{I} > \\text{Br}$"
     },
     "notes": "Consider the size of the fluorine atom and the resulting electron density in the 2p subshell.",
-    "solution_text": "Although fluorine is the most electronegative element, chlorine has a more negative electron gain enthalpy than fluorine. This anomaly arises because the fluorine atom is exceptionally small. The incoming electron must enter the compact $2p$ orbital shell, where it experiences strong inter-electronic repulsions from the 7 electrons already present. In chlorine, the valence shell is $3p$, which is larger and more diffuse, resulting in less electron-electron repulsion and a greater net release of energy when an electron is added. Down the group from Cl to I, the values become less negative due to increasing size. Thus, the order of magnitude is: $\\\\text{Cl} > \\\\text{F} > \\\\text{Br} > \\\\text{I}$. Option B is correct.",
+    "solution_text": "Although fluorine is the most electronegative element, chlorine has a more negative electron gain enthalpy than fluorine. This anomaly arises because the fluorine atom is exceptionally small. The incoming electron must enter the compact $2p$ orbital shell, where it experiences strong inter-electronic repulsions from the 7 electrons already present. In chlorine, the valence shell is $3p$, which is larger and more diffuse, resulting in less electron-electron repulsion and a greater net release of energy when an electron is added. Down the group from Cl to I, the values become less negative due to increasing size. Thus, the order of magnitude is: $\\text{Cl} > \\text{F} > \\text{Br} > \\text{I}$. Option B is correct.",
     "common_mistake": "Selecting Option A, expecting fluorine to release the most energy because it is the most electronegative element, forgetting the electronic repulsion in the small $2p$ shell of F.",
     "concept_slugs": [
       "pblock-group-17"
@@ -649,7 +649,7 @@
   },
   {
     "pattern_group": "pblock-group-17",
-    "title": "Fluorine exhibits several anomalous properties compared to the other halogens. For instance, the bond dissociation enthalpy of $\\\\text{F}_2$ is lower than that of $\\\\text{Cl}_2$ and even $\\\\text{Br}_2$. This low bond energy of fluorine is mainly due to:",
+    "title": "Fluorine exhibits several anomalous properties compared to the other halogens. For instance, the bond dissociation enthalpy of $\\text{F}_2$ is lower than that of $\\text{Cl}_2$ and even $\\text{Br}_2$. This low bond energy of fluorine is mainly due to:",
     "difficulty": "medium",
     "type": "pyq",
     "source": "JEE Main 2022",
@@ -663,15 +663,15 @@
       "D": "The absence of vacant d-orbitals in fluorine"
     },
     "notes": "Examine the non-bonding electrons on each fluorine atom in a F2 molecule.",
-    "solution_text": "In the diatomic fluorine molecule ($\\\\text{F-F}$), the bond length is very short ($143\\\\,\\\\text{pm}$) because of the small atomic size of fluorine. Each fluorine atom has three non-bonding lone pairs of electrons. In such close proximity, the compact lone pairs on adjacent fluorine atoms experience extremely strong inter-electronic repulsions. This electrostatic repulsion weakens the covalent $\\\\sigma$-bond, making it much easier to dissociate than the Cl-Cl or Br-Br bonds. Option C is correct.",
-    "common_mistake": "Attributing it to the lack of d-orbitals (Option D), which explains why fluorine cannot expand its valence shell but does not directly dictate the $\\\\text{F-F}$ single bond energy.",
+    "solution_text": "In the diatomic fluorine molecule ($\\text{F-F}$), the bond length is very short ($143\\,\\text{pm}$) because of the small atomic size of fluorine. Each fluorine atom has three non-bonding lone pairs of electrons. In such close proximity, the compact lone pairs on adjacent fluorine atoms experience extremely strong inter-electronic repulsions. This electrostatic repulsion weakens the covalent $\\sigma$-bond, making it much easier to dissociate than the Cl-Cl or Br-Br bonds. Option C is correct.",
+    "common_mistake": "Attributing it to the lack of d-orbitals (Option D), which explains why fluorine cannot expand its valence shell but does not directly dictate the $\\text{F-F}$ single bond energy.",
     "concept_slugs": [
       "pblock-group-17"
     ]
   },
   {
     "pattern_group": "pblock-group-17",
-    "title": "Interhalogen compounds are highly reactive molecules formed between two different halogens. What is the correct molecular geometry and hybridization of chlorine trifluoride ($\\\\text{ClF}_3$)?",
+    "title": "Interhalogen compounds are highly reactive molecules formed between two different halogens. What is the correct molecular geometry and hybridization of chlorine trifluoride ($\\text{ClF}_3$)?",
     "difficulty": "medium",
     "type": "concept",
     "correct_answer": "B",
@@ -684,7 +684,7 @@
       "D": "Pyramidal geometry with $sp^3$ hybridization"
     },
     "notes": "Apply VSEPR theory to ClF3. Calculate steric number: (Valence electrons of Cl + number of monovalent ligands) / 2.",
-    "solution_text": "For chlorine trifluoride ($\\\\text{ClF}_3$):\n1) Central chlorine atom has 7 valence electrons. It forms 3 single bonds with fluorine ligands, leaving 4 non-bonding valence electrons (2 lone pairs).\n2) The steric number is $\\\\text{Bond Pairs} + \\\\text{Lone Pairs} = 3 + 2 = 5$. This corresponds to $sp^3d$ hybridization, which has a trigonal bipyramidal electron-pair geometry.\n3) To minimize lone pair-lone pair repulsions, the 2 lone pairs occupy the equatorial positions at angles of $120^\\\\circ$.\n4) The three fluorine atoms occupy the remaining positions (two axial and one equatorial), resulting in a bent T-shaped molecular geometry. Option B is correct.",
+    "solution_text": "For chlorine trifluoride ($\\text{ClF}_3$):\n1) Central chlorine atom has 7 valence electrons. It forms 3 single bonds with fluorine ligands, leaving 4 non-bonding valence electrons (2 lone pairs).\n2) The steric number is $\\text{Bond Pairs} + \\text{Lone Pairs} = 3 + 2 = 5$. This corresponds to $sp^3d$ hybridization, which has a trigonal bipyramidal electron-pair geometry.\n3) To minimize lone pair-lone pair repulsions, the 2 lone pairs occupy the equatorial positions at angles of $120^\\circ$.\n4) The three fluorine atoms occupy the remaining positions (two axial and one equatorial), resulting in a bent T-shaped molecular geometry. Option B is correct.",
     "common_mistake": "Selecting trigonal bipyramidal (Option C) as the shape, confusing the electron-pair geometry (which includes lone pairs) with the molecular shape (which is determined only by atom positions).",
     "concept_slugs": [
       "pblock-group-17"
@@ -692,7 +692,7 @@
   },
   {
     "pattern_group": "pblock-group-17",
-    "title": "The interhalogen compound iodine heptafluoride ($\\\\text{IF}_7$) is prepared by reacting iodine with excess fluorine. What is the molecular geometry and hybridization of the iodine atom in $\\\\text{IF}_7$?",
+    "title": "The interhalogen compound iodine heptafluoride ($\\text{IF}_7$) is prepared by reacting iodine with excess fluorine. What is the molecular geometry and hybridization of the iodine atom in $\\text{IF}_7$?",
     "difficulty": "medium",
     "type": "concept",
     "correct_answer": "A",
@@ -705,7 +705,7 @@
       "D": "Hexagonal bipyramidal geometry and $sp^3d^3$ hybridization"
     },
     "notes": "Calculate the steric number for the central iodine atom bonded to 7 fluorine atoms.",
-    "solution_text": "For iodine heptafluoride ($\\\\text{IF}_7$):\n- The central iodine atom has 7 valence electrons, all of which are shared with 7 fluorine atoms to form 7 single $\\\\sigma$-bonds (0 lone pairs).\n- The steric number is 7, which corresponds to $sp^3d^3$ hybridization.\n- The spatial arrangement that minimizes repulsion for 7 electron pairs is a pentagonal bipyramidal geometry (five fluorines in an equatorial pentagon, and two fluorines at the axial vertices). Option A is correct.",
+    "solution_text": "For iodine heptafluoride ($\\text{IF}_7$):\n- The central iodine atom has 7 valence electrons, all of which are shared with 7 fluorine atoms to form 7 single $\\sigma$-bonds (0 lone pairs).\n- The steric number is 7, which corresponds to $sp^3d^3$ hybridization.\n- The spatial arrangement that minimizes repulsion for 7 electron pairs is a pentagonal bipyramidal geometry (five fluorines in an equatorial pentagon, and two fluorines at the axial vertices). Option A is correct.",
     "common_mistake": "Naming the shape as hexagonal bipyramidal (Option D), which is a geometry that does not exist for a steric number of 7.",
     "concept_slugs": [
       "pblock-group-17"
@@ -720,14 +720,14 @@
     "is_numerical": false,
     "question_format": "mcq",
     "options": {
-      "A": "$\\\\text{HClO} < \\\\text{HClO}_2 < \\\\text{HClO}_3 < \\\\text{HClO}_4$",
-      "B": "$\\\\text{HClO}_4 < \\\\text{HClO}_3 < \\\\text{HClO}_2 < \\\\text{HClO}$",
-      "C": "$\\\\text{HClO}_3 < \\\\text{HClO}_4 < \\\\text{HClO} < \\\\text{HClO}_2$",
-      "D": "$\\\\text{HClO} < \\\\text{HClO}_3 < \\\\text{HClO}_2 < \\\\text{HClO}_4$"
+      "A": "$\\text{HClO} < \\text{HClO}_2 < \\text{HClO}_3 < \\text{HClO}_4$",
+      "B": "$\\text{HClO}_4 < \\text{HClO}_3 < \\text{HClO}_2 < \\text{HClO}$",
+      "C": "$\\text{HClO}_3 < \\text{HClO}_4 < \\text{HClO} < \\text{HClO}_2$",
+      "D": "$\\text{HClO} < \\text{HClO}_3 < \\text{HClO}_2 < \\text{HClO}_4$"
     },
     "notes": "Acidic strength increases with the stability of the conjugate base anion, which depends on resonance delocalization of the negative charge.",
-    "solution_text": "The acidic strength of oxoacids increases with the stability of their conjugate bases (anions):\n- $\\\\text{HClO} \\\\rightarrow \\\\text{ClO}^-$ (No resonance stabilization, negative charge is localized on one oxygen).\n- $\\\\text{HClO}_2 \\\\rightarrow \\\\text{ClO}_2^-$ (Negative charge is delocalized over 2 oxygen atoms).\n- $\\\\text{HClO}_3 \\\\rightarrow \\\\text{ClO}_3^-$ (Negative charge is delocalized over 3 oxygen atoms).\n- $\\\\text{HClO}_4 \\\\rightarrow \\\\text{ClO}_4^-$ (Negative charge is delocalized over 4 oxygen atoms, making the perchlorate ion extremely stable).\nAlternatively, the acidic strength increases with the oxidation state of the central chlorine (+1, +3, +5, +7 respectively). Thus, the correct order is $\\\\text{HClO} < \\\\text{HClO}_2 < \\\\text{HClO}_3 < \\\\text{HClO}_4$. Option A is correct.",
-    "common_mistake": "Selecting Option B, confusing acidic strength with oxidizing power (which is actually highest for $\\\\text{HClO}$ and lowest for $\\\\text{HClO}_4$).",
+    "solution_text": "The acidic strength of oxoacids increases with the stability of their conjugate bases (anions):\n- $\\text{HClO} \\rightarrow \\text{ClO}^-$ (No resonance stabilization, negative charge is localized on one oxygen).\n- $\\text{HClO}_2 \\rightarrow \\text{ClO}_2^-$ (Negative charge is delocalized over 2 oxygen atoms).\n- $\\text{HClO}_3 \\rightarrow \\text{ClO}_3^-$ (Negative charge is delocalized over 3 oxygen atoms).\n- $\\text{HClO}_4 \\rightarrow \\text{ClO}_4^-$ (Negative charge is delocalized over 4 oxygen atoms, making the perchlorate ion extremely stable).\nAlternatively, the acidic strength increases with the oxidation state of the central chlorine (+1, +3, +5, +7 respectively). Thus, the correct order is $\\text{HClO} < \\text{HClO}_2 < \\text{HClO}_3 < \\text{HClO}_4$. Option A is correct.",
+    "common_mistake": "Selecting Option B, confusing acidic strength with oxidizing power (which is actually highest for $\\text{HClO}$ and lowest for $\\text{HClO}_4$).",
     "concept_slugs": [
       "pblock-group-17"
     ]
@@ -741,28 +741,28 @@
     "is_numerical": false,
     "question_format": "mcq",
     "options": {
-      "A": "Finely divided Iron ($\\\\text{Fe}$)",
-      "B": "Cupric chloride ($\\\\text{CuCl}_2$)",
-      "C": "Vanadium pentoxide ($\\\\text{V}_2\\\\text{O}_5$)",
+      "A": "Finely divided Iron ($\\text{Fe}$)",
+      "B": "Cupric chloride ($\\text{CuCl}_2$)",
+      "C": "Vanadium pentoxide ($\\text{V}_2\\text{O}_5$)",
       "D": "Platinized asbestos"
     },
     "notes": "Deacon's process involves the gas-phase oxidation of hydrogen chloride (HCl) gas by oxygen.",
-    "solution_text": "Deacon's process is the industrial method for producing chlorine gas by oxidizing hydrogen chloride ($\\\\text{HCl}$) gas with atmospheric oxygen at a temperature of $723\\\\,\\\\text{K}$:\n$4\\\\text{HCl} + \\\\text{O}_2 \\\\xrightarrow{\\\\text{CuCl}_2} 2\\\\text{Cl}_2 + 2\\\\text{H}_2\\\\text{O}$\nThe catalyst used to accelerate this reaction is cupric chloride ($\\\\text{CuCl}_2$). Option B is correct.",
-    "common_mistake": "Selecting $\\\\text{V}_2\\\\text{O}_5$ (Option C), which is used in sulfuric acid manufacture, or Iron (Option A), used in ammonia synthesis.",
+    "solution_text": "Deacon's process is the industrial method for producing chlorine gas by oxidizing hydrogen chloride ($\\text{HCl}$) gas with atmospheric oxygen at a temperature of $723\\,\\text{K}$:\n$4\\text{HCl} + \\text{O}_2 \\xrightarrow{\\text{CuCl}_2} 2\\text{Cl}_2 + 2\\text{H}_2\\text{O}$\nThe catalyst used to accelerate this reaction is cupric chloride ($\\text{CuCl}_2$). Option B is correct.",
+    "common_mistake": "Selecting $\\text{V}_2\\text{O}_5$ (Option C), which is used in sulfuric acid manufacture, or Iron (Option A), used in ammonia synthesis.",
     "concept_slugs": [
       "pblock-group-17"
     ]
   },
   {
     "pattern_group": "pblock-group-17",
-    "title": "The triiodide ion ($\\\\text{I}_3^-$) is formed when iodine reacts with potassium iodide solution. The number of lone pairs of electrons present on the central iodine atom in $\\\\text{I}_3^-$ is ________.",
+    "title": "The triiodide ion ($\\text{I}_3^-$) is formed when iodine reacts with potassium iodide solution. The number of lone pairs of electrons present on the central iodine atom in $\\text{I}_3^-$ is ________.",
     "difficulty": "medium",
     "type": "advanced",
     "correct_answer": "3",
     "is_numerical": true,
     "question_format": "numerical",
-    "notes": "Evaluate the steric number of the central iodine atom in $\\\\text{I}_3^-$. The formula is $[\\\\text{I-I-I}]^-$.",
-    "solution_text": "For the triiodide ion ($\\\\text{I}_3^-$):\n1) One iodine atom acts as the central atom, and the other two iodine atoms act as terminal ligands: $[\\\\text{I(central)I(terminal)}_2]^-$.\n2) The central iodine atom has 7 valence electrons. Adding 1 electron from the negative charge gives 8 electrons in its valence sphere. It forms 2 single covalent bonds with the two terminal iodine atoms, using 2 electrons.\n3) These 6 electrons form exactly 3 lone pairs of electrons.\n4) Steric number is $\\\\text{Bond Pairs} + \\\\text{Lone Pairs} = 2 + 3 = 5$ ($sp^3d$ hybridized, linear geometry where the 3 lone pairs sit in the equatorial plane). The number of lone pairs on the central atom is 3.",
+    "notes": "Evaluate the steric number of the central iodine atom in $\\text{I}_3^-$. The formula is $[\\text{I-I-I}]^-$.",
+    "solution_text": "For the triiodide ion ($\\text{I}_3^-$):\n1) One iodine atom acts as the central atom, and the other two iodine atoms act as terminal ligands: $[\\text{I(central)I(terminal)}_2]^-$.\n2) The central iodine atom has 7 valence electrons. Adding 1 electron from the negative charge gives 8 electrons in its valence sphere. It forms 2 single covalent bonds with the two terminal iodine atoms, using 2 electrons.\n3) These 6 electrons form exactly 3 lone pairs of electrons.\n4) Steric number is $\\text{Bond Pairs} + \\text{Lone Pairs} = 2 + 3 = 5$ ($sp^3d$ hybridized, linear geometry where the 3 lone pairs sit in the equatorial plane). The number of lone pairs on the central atom is 3.",
     "common_mistake": "Writing 9, by counting the total number of lone pairs on *all three* iodine atoms in the molecule, rather than focusing only on the central iodine atom.",
     "concept_slugs": [
       "pblock-group-17"
@@ -782,8 +782,8 @@
       "C": "Charge transfer transitions from the halogen nucleus to the outer shell",
       "D": "Nuclear magnetic resonance splitting under ambient light"
     },
-    "notes": "Halogens are diatomic molecules ($\\\\text{X}_2$) with a fully filled molecular orbital structure up to the antibonding orbitals.",
-    "solution_text": "Halogens are diatomic molecules ($\\\\text{X}_2$). According to Molecular Orbital theory, their electronic configuration ends with a fully filled antibonding $\\\\pi^*$ shell (HOMO) and an empty antibonding $\\\\sigma^*$ shell (LUMO). The energy gap between these orbitals is small enough to correspond to the energies of visible light. When ambient light strikes the molecules, an electron absorbs a photon and is excited from the HOMO to the LUMO. The complementary color of the absorbed wavelength is transmitted, yielding the observed colors. As size increases, the HOMO-LUMO gap decreases, shifts to longer wavelengths, and shifts the color from yellow to violet. Option A is correct.",
+    "notes": "Halogens are diatomic molecules ($\\text{X}_2$) with a fully filled molecular orbital structure up to the antibonding orbitals.",
+    "solution_text": "Halogens are diatomic molecules ($\\text{X}_2$). According to Molecular Orbital theory, their electronic configuration ends with a fully filled antibonding $\\pi^*$ shell (HOMO) and an empty antibonding $\\sigma^*$ shell (LUMO). The energy gap between these orbitals is small enough to correspond to the energies of visible light. When ambient light strikes the molecules, an electron absorbs a photon and is excited from the HOMO to the LUMO. The complementary color of the absorbed wavelength is transmitted, yielding the observed colors. As size increases, the HOMO-LUMO gap decreases, shifts to longer wavelengths, and shifts the color from yellow to violet. Option A is correct.",
     "common_mistake": "Attributing the color to d-d transitions (Option B), which can only occur in transition metal complexes, or charge transfer (Option C) which is typical of ions like permanganate but not halogen molecules.",
     "concept_slugs": [
       "pblock-group-17"
@@ -799,21 +799,21 @@
     "is_numerical": false,
     "question_format": "mcq",
     "options": {
-      "A": "$\\\\text{Xe}^+[\\\\text{PtF}_6]^-$; because Xenon has almost the same first ionization enthalpy as molecular oxygen ($1170\\\\,\\\\text{kJ/mol}$)",
-      "B": "$\\\\text{XeF}_4$; because Xenon is the most electropositive noble gas",
-      "C": "$\\\\text{Ar}^+[\\\\text{PtF}_6]^-$; because Argon is abundant in the atmosphere",
-      "D": "$\\\\text{XeO}_3$; because Oxygen forms highly stable double bonds with Xenon"
+      "A": "$\\text{Xe}^+[\\text{PtF}_6]^-$; because Xenon has almost the same first ionization enthalpy as molecular oxygen ($1170\\,\\text{kJ/mol}$)",
+      "B": "$\\text{XeF}_4$; because Xenon is the most electropositive noble gas",
+      "C": "$\\text{Ar}^+[\\text{PtF}_6]^-$; because Argon is abundant in the atmosphere",
+      "D": "$\\text{XeO}_3$; because Oxygen forms highly stable double bonds with Xenon"
     },
     "notes": "Bartlett had previously prepared a red compound by reacting oxygen with platinum hexafluoride.",
-    "solution_text": "Neil Bartlett observed that platinum hexafluoride ($\\\\text{PtF}_6$) is a powerful oxidizing agent capable of oxidizing molecular oxygen to form $\\\\text{O}_2^+[\\\\text{PtF}_6]^-$. He realized that the first ionization enthalpy of xenon ($1170\\\\,\\\\text{kJ/mol}$) is very close to that of molecular oxygen ($1175\\\\,\\\\text{kJ/mol}$). He reasoned that $\\\\text{PtF}_6$ should also be able to oxidize xenon. Upon mixing them, he successfully synthesized a red crystalline solid formulated as $\\\\text{Xe}^+[\\\\text{PtF}_6]^-$, establishing the field of noble gas chemistry. Option A is correct.",
-    "common_mistake": "Selecting $\\\\text{XeF}_4$ (Option B) or stating that Argon was used (Option C). Helium, Neon, and Argon have ionization enthalpies that are too high to be oxidized by $\\\\text{PtF}_6$.",
+    "solution_text": "Neil Bartlett observed that platinum hexafluoride ($\\text{PtF}_6$) is a powerful oxidizing agent capable of oxidizing molecular oxygen to form $\\text{O}_2^+[\\text{PtF}_6]^-$. He realized that the first ionization enthalpy of xenon ($1170\\,\\text{kJ/mol}$) is very close to that of molecular oxygen ($1175\\,\\text{kJ/mol}$). He reasoned that $\\text{PtF}_6$ should also be able to oxidize xenon. Upon mixing them, he successfully synthesized a red crystalline solid formulated as $\\text{Xe}^+[\\text{PtF}_6]^-$, establishing the field of noble gas chemistry. Option A is correct.",
+    "common_mistake": "Selecting $\\text{XeF}_4$ (Option B) or stating that Argon was used (Option C). Helium, Neon, and Argon have ionization enthalpies that are too high to be oxidized by $\\text{PtF}_6$.",
     "concept_slugs": [
       "pblock-group-18"
     ]
   },
   {
     "pattern_group": "pblock-group-18",
-    "title": "Xenon tetrafluoride ($\\\\text{XeF}_4$) is prepared by heating xenon and fluorine in a 1:5 ratio. According to VSEPR theory, the molecular shape of $\\\\text{XeF}_4$ is:",
+    "title": "Xenon tetrafluoride ($\\text{XeF}_4$) is prepared by heating xenon and fluorine in a 1:5 ratio. According to VSEPR theory, the molecular shape of $\\text{XeF}_4$ is:",
     "difficulty": "easy",
     "type": "pyq",
     "source": "JEE Main 2022",
@@ -827,7 +827,7 @@
       "D": "Square pyramidal"
     },
     "notes": "Find the steric number of Xe in XeF4: (8 valence electrons of Xe + 4 fluorine atoms) / 2.",
-    "solution_text": "For Xenon tetrafluoride ($\\\\text{XeF}_4$):\n1) Central Xenon atom has 8 valence electrons. It forms 4 covalent bonds with fluorines, leaving 4 non-bonding electrons (2 lone pairs).\n2) Steric number is $\\\\text{Bond Pairs} + \\\\text{Lone Pairs} = 4 + 2 = 6$. This corresponds to $sp^3d^2$ hybridization, which has an octahedral electron-pair geometry.\n3) To minimize lone pair-lone pair repulsions, the 2 lone pairs occupy positions trans to each other ($180^\\\\circ$ apart, axial positions).\n4) The 4 fluorine atoms reside in the equatorial plane, creating a square planar molecular shape. Option B is correct.",
+    "solution_text": "For Xenon tetrafluoride ($\\text{XeF}_4$):\n1) Central Xenon atom has 8 valence electrons. It forms 4 covalent bonds with fluorines, leaving 4 non-bonding electrons (2 lone pairs).\n2) Steric number is $\\text{Bond Pairs} + \\text{Lone Pairs} = 4 + 2 = 6$. This corresponds to $sp^3d^2$ hybridization, which has an octahedral electron-pair geometry.\n3) To minimize lone pair-lone pair repulsions, the 2 lone pairs occupy positions trans to each other ($180^\\circ$ apart, axial positions).\n4) The 4 fluorine atoms reside in the equatorial plane, creating a square planar molecular shape. Option B is correct.",
     "common_mistake": "Calling the shape tetrahedral (Option A) by ignoring the 2 lone pairs of electrons present on the central Xenon atom.",
     "concept_slugs": [
       "pblock-group-18"
@@ -835,92 +835,92 @@
   },
   {
     "pattern_group": "pblock-group-18",
-    "title": "Xenon hexafluoride ($\\\\text{XeF}_6$) undergoes partial hydrolysis in water. Which of the following compounds is formed as the final product of this partial hydrolysis process?",
+    "title": "Xenon hexafluoride ($\\text{XeF}_6$) undergoes partial hydrolysis in water. Which of the following compounds is formed as the final product of this partial hydrolysis process?",
     "difficulty": "medium",
     "type": "concept",
     "correct_answer": "B",
     "is_numerical": false,
     "question_format": "mcq",
     "options": {
-      "A": "$\\\\text{XeO}_3$",
-      "B": "$\\\\text{XeOF}_4$ and $\\\\text{XeO}_2\\\\text{F}_2$",
-      "C": "$\\\\text{XeOF}_2$",
-      "D": "$\\\\text{Xe}$ gas and $\\\\text{O}_2$"
+      "A": "$\\text{XeO}_3$",
+      "B": "$\\text{XeOF}_4$ and $\\text{XeO}_2\\text{F}_2$",
+      "C": "$\\text{XeOF}_2$",
+      "D": "$\\text{Xe}$ gas and $\\text{O}_2$"
     },
     "notes": "Partial hydrolysis means reacting with limited amounts of water, replacing only a portion of the fluorine atoms with oxygen.",
-    "solution_text": "The hydrolysis of $\\\\text{XeF}_6$ occurs in stages:\n1) With a limited amount of water, it hydrolyzes partially to form xenon oxytetrafluoride ($\\\\text{XeOF}_4$):\n$\\\\text{XeF}_6 + \\\\text{H}_2\\\\text{O} \\\\rightarrow \\\\text{XeOF}_4 + 2\\\\text{HF}$\n2) With a slightly larger amount of water, it undergoes further partial hydrolysis to form xenon dioxydifluoride ($\\\\text{XeO}_2\\\\text{F}_2$):\n$\\\\text{XeF}_6 + 2\\\\text{H}_2\\\\text{O} \\\\rightarrow \\\\text{XeO}_2\\\\text{F}_2 + 4\\\\text{HF}$\nBoth are products of partial hydrolysis. Option B is correct. (Complete hydrolysis yields $\\\\text{XeO}_3$).",
-    "common_mistake": "Selecting $\\\\text{XeO}_3$ (Option A), which is the product of *complete* hydrolysis, or assuming Xenon gas is released.",
+    "solution_text": "The hydrolysis of $\\text{XeF}_6$ occurs in stages:\n1) With a limited amount of water, it hydrolyzes partially to form xenon oxytetrafluoride ($\\text{XeOF}_4$):\n$\\text{XeF}_6 + \\text{H}_2\\text{O} \\rightarrow \\text{XeOF}_4 + 2\\text{HF}$\n2) With a slightly larger amount of water, it undergoes further partial hydrolysis to form xenon dioxydifluoride ($\\text{XeO}_2\\text{F}_2$):\n$\\text{XeF}_6 + 2\\text{H}_2\\text{O} \\rightarrow \\text{XeO}_2\\text{F}_2 + 4\\text{HF}$\nBoth are products of partial hydrolysis. Option B is correct. (Complete hydrolysis yields $\\text{XeO}_3$).",
+    "common_mistake": "Selecting $\\text{XeO}_3$ (Option A), which is the product of *complete* hydrolysis, or assuming Xenon gas is released.",
     "concept_slugs": [
       "pblock-group-18"
     ]
   },
   {
     "pattern_group": "pblock-group-18",
-    "title": "Complete hydrolysis of xenon hexafluoride ($\\\\text{XeF}_6$) yields an explosive, highly stable solid. The chemical formula of this solid compound is:",
+    "title": "Complete hydrolysis of xenon hexafluoride ($\\text{XeF}_6$) yields an explosive, highly stable solid. The chemical formula of this solid compound is:",
     "difficulty": "easy",
     "type": "concept",
     "correct_answer": "A",
     "is_numerical": false,
     "question_format": "mcq",
     "options": {
-      "A": "$\\\\text{XeO}_3$",
-      "B": "$\\\\text{XeO}_4$",
-      "C": "$\\\\text{XeOF}_4$",
-      "D": "$\\\\text{XeO}_2$"
+      "A": "$\\text{XeO}_3$",
+      "B": "$\\text{XeO}_4$",
+      "C": "$\\text{XeOF}_4$",
+      "D": "$\\text{XeO}_2$"
     },
     "notes": "Complete hydrolysis replaces all six fluorine atoms with oxygen atoms.",
-    "solution_text": "When xenon hexafluoride ($\\\\text{XeF}_6$) reacts with excess water, it undergoes complete hydrolysis, replacing all 6 fluorine atoms with 3 oxygen atoms (since oxygen is divalent):\n$\\\\text{XeF}_6 + 3\\\\text{H}_2\\\\text{O} \\\\rightarrow \\\\text{XeO}_3 + 6\\\\text{HF}$\nThis product, xenon trioxide ($\\\\text{XeO}_3$), is a colorless, non-volatile, highly explosive solid. Option A is correct.",
-    "common_mistake": "Selecting $\\\\text{XeO}_4$ (Option B), which is prepared by reacting barium perxenate with sulfuric acid and is not the direct product of $\\\\text{XeF}_6$ hydrolysis.",
+    "solution_text": "When xenon hexafluoride ($\\text{XeF}_6$) reacts with excess water, it undergoes complete hydrolysis, replacing all 6 fluorine atoms with 3 oxygen atoms (since oxygen is divalent):\n$\\text{XeF}_6 + 3\\text{H}_2\\text{O} \\rightarrow \\text{XeO}_3 + 6\\text{HF}$\nThis product, xenon trioxide ($\\text{XeO}_3$), is a colorless, non-volatile, highly explosive solid. Option A is correct.",
+    "common_mistake": "Selecting $\\text{XeO}_4$ (Option B), which is prepared by reacting barium perxenate with sulfuric acid and is not the direct product of $\\text{XeF}_6$ hydrolysis.",
     "concept_slugs": [
       "pblock-group-18"
     ]
   },
   {
     "pattern_group": "pblock-group-18",
-    "title": "Unlike $\\\\text{XeF}_6$, the hydrolysis of xenon tetrafluoride ($\\\\text{XeF}_4$) is not a simple replacement reaction but is a disproportionation reaction. What products are obtained from the complete hydrolysis of $\\\\text{XeF}_4$?",
+    "title": "Unlike $\\text{XeF}_6$, the hydrolysis of xenon tetrafluoride ($\\text{XeF}_4$) is not a simple replacement reaction but is a disproportionation reaction. What products are obtained from the complete hydrolysis of $\\text{XeF}_4$?",
     "difficulty": "medium",
     "type": "practice",
     "correct_answer": "C",
     "is_numerical": false,
     "question_format": "mcq",
     "options": {
-      "A": "$\\\\text{XeO}_3$, $\\\\text{HF}$, and $\\\\text{F}_2$",
-      "B": "$\\\\text{Xe}$ gas, $\\\\text{O}_2$ gas, and $\\\\text{F}_2$",
-      "C": "$\\\\text{Xe}$ gas, $\\\\text{XeO}_3$, $\\\\text{HF}$, and $\\\\text{O}_2$ gas",
-      "D": "$\\\\text{XeOF}_2$ and $\\\\text{HF}$"
+      "A": "$\\text{XeO}_3$, $\\text{HF}$, and $\\text{F}_2$",
+      "B": "$\\text{Xe}$ gas, $\\text{O}_2$ gas, and $\\text{F}_2$",
+      "C": "$\\text{Xe}$ gas, $\\text{XeO}_3$, $\\text{HF}$, and $\\text{O}_2$ gas",
+      "D": "$\\text{XeOF}_2$ and $\\text{HF}$"
     },
     "notes": "In a disproportionation reaction, the same element (Xenon in +4 state) is simultaneously oxidized and reduced.",
-    "solution_text": "Hydrolysis of $\\\\text{XeF}_4$ is a rapid disproportionation reaction:\n- Xenon in the +4 state is reduced to metallic Xenon gas ($\\\\text{Xe}^0$).\n- Xenon in the +4 state is oxidized to Xenon trioxide ($\\\\text{XeO}_3$, a +6 state).\n- Water's oxygen is oxidized to molecular $\\\\text{O}_2$ gas.\nThe balanced chemical equation is:\n$6\\\\text{XeF}_4 + 12\\\\text{H}_2\\\\text{O} \\\\rightarrow 4\\\\text{Xe} + 2\\\\text{XeO}_3 + 24\\\\text{HF} + 3\\\\text{O}_2$\nOption C is correct.",
-    "common_mistake": "Assuming it hydrolyzes simply to form $\\\\text{XeO}_2$ or only $\\\\text{XeO}_3$ without releasing elemental Xenon gas.",
+    "solution_text": "Hydrolysis of $\\text{XeF}_4$ is a rapid disproportionation reaction:\n- Xenon in the +4 state is reduced to metallic Xenon gas ($\\text{Xe}^0$).\n- Xenon in the +4 state is oxidized to Xenon trioxide ($\\text{XeO}_3$, a +6 state).\n- Water's oxygen is oxidized to molecular $\\text{O}_2$ gas.\nThe balanced chemical equation is:\n$6\\text{XeF}_4 + 12\\text{H}_2\\text{O} \\rightarrow 4\\text{Xe} + 2\\text{XeO}_3 + 24\\text{HF} + 3\\text{O}_2$\nOption C is correct.",
+    "common_mistake": "Assuming it hydrolyzes simply to form $\\text{XeO}_2$ or only $\\text{XeO}_3$ without releasing elemental Xenon gas.",
     "concept_slugs": [
       "pblock-group-18"
     ]
   },
   {
     "pattern_group": "pblock-group-18",
-    "title": "Xenon oxytetrafluoride ($\\\\text{XeOF}_4$) is a liquid compound prepared by partial hydrolysis of $\\\\text{XeF}_6$. The number of lone pairs of electrons on the central Xenon atom in $\\\\text{XeOF}_4$ is ________.",
+    "title": "Xenon oxytetrafluoride ($\\text{XeOF}_4$) is a liquid compound prepared by partial hydrolysis of $\\text{XeF}_6$. The number of lone pairs of electrons on the central Xenon atom in $\\text{XeOF}_4$ is ________.",
     "difficulty": "medium",
     "type": "practice",
     "correct_answer": "1",
     "is_numerical": true,
     "question_format": "numerical",
-    "notes": "Evaluate the steric number of Xenon in $\\\\text{XeOF}_4$. Treat oxygen as a divalent ligand (forming a double bond).",
-    "solution_text": "For Xenon oxytetrafluoride ($\\\\text{XeOF}_4$):\n1) Central Xenon atom has 8 valence electrons.\n2) It forms four single bonds with the four fluorines (using 4 electrons) and one double bond with the oxygen atom (using 2 electrons). This accounts for a total of 6 bonding electrons.\n3) The remaining 2 valence electrons form exactly 1 lone pair on Xenon.\n4) Steric number is $\\\\text{Bonded atoms} + \\\\text{Lone pairs} = 5 + 1 = 6$. This corresponds to $sp^3d^2$ hybridization (octahedral electron arrangement). The shape is square pyramidal, with the lone pair at the bottom vertex and the oxygen double bond pointing axially. The number of lone pairs on Xenon is 1.",
-    "common_mistake": "Writing 2, confusing it with the structure of $\\\\text{XeF}_4$, or writing 0, neglecting to account for the unused valence electrons.",
+    "notes": "Evaluate the steric number of Xenon in $\\text{XeOF}_4$. Treat oxygen as a divalent ligand (forming a double bond).",
+    "solution_text": "For Xenon oxytetrafluoride ($\\text{XeOF}_4$):\n1) Central Xenon atom has 8 valence electrons.\n2) It forms four single bonds with the four fluorines (using 4 electrons) and one double bond with the oxygen atom (using 2 electrons). This accounts for a total of 6 bonding electrons.\n3) The remaining 2 valence electrons form exactly 1 lone pair on Xenon.\n4) Steric number is $\\text{Bonded atoms} + \\text{Lone pairs} = 5 + 1 = 6$. This corresponds to $sp^3d^2$ hybridization (octahedral electron arrangement). The shape is square pyramidal, with the lone pair at the bottom vertex and the oxygen double bond pointing axially. The number of lone pairs on Xenon is 1.",
+    "common_mistake": "Writing 2, confusing it with the structure of $\\text{XeF}_4$, or writing 0, neglecting to account for the unused valence electrons.",
     "concept_slugs": [
       "pblock-group-18"
     ]
   },
   {
     "pattern_group": "pblock-group-18",
-    "title": "Xenon difluoride ($\\\\text{XeF}_2$) is formed by reacting xenon and fluorine at high pressure. The number of lone pairs of electrons present on the central Xenon atom in $\\\\text{XeF}_2$ is ________.",
+    "title": "Xenon difluoride ($\\text{XeF}_2$) is formed by reacting xenon and fluorine at high pressure. The number of lone pairs of electrons present on the central Xenon atom in $\\text{XeF}_2$ is ________.",
     "difficulty": "easy",
     "type": "practice",
     "correct_answer": "3",
     "is_numerical": true,
     "question_format": "numerical",
     "notes": "Calculate steric number: (8 valence electrons of Xe + 2 fluorine atoms) / 2.",
-    "solution_text": "For Xenon difluoride ($\\\\text{XeF}_2$):\n1) Central Xenon atom has 8 valence electrons. It forms 2 single covalent bonds with the two fluorine atoms, using 2 electrons.\n2) The remaining 6 valence electrons form exactly 3 lone pairs of electrons.\n3) The steric number is $2 + 3 = 5$, giving $sp^3d$ hybridization (trigonal bipyramidal electron arrangement).\n4) To minimize repulsion, the 3 lone pairs reside in the equatorial plane, forcing the two fluorine atoms to occupy the axial positions. This forms a linear molecular geometry. The number of lone pairs on the central Xenon is 3.",
+    "solution_text": "For Xenon difluoride ($\\text{XeF}_2$):\n1) Central Xenon atom has 8 valence electrons. It forms 2 single covalent bonds with the two fluorine atoms, using 2 electrons.\n2) The remaining 6 valence electrons form exactly 3 lone pairs of electrons.\n3) The steric number is $2 + 3 = 5$, giving $sp^3d$ hybridization (trigonal bipyramidal electron arrangement).\n4) To minimize repulsion, the 3 lone pairs reside in the equatorial plane, forcing the two fluorine atoms to occupy the axial positions. This forms a linear molecular geometry. The number of lone pairs on the central Xenon is 3.",
     "common_mistake": "Writing 1 or 2, by drawing a simple linear structure and forgetting that Xenon has a full octet of 8 valence electrons.",
     "concept_slugs": [
       "pblock-group-18"
@@ -928,7 +928,7 @@
   },
   {
     "pattern_group": "pblock-group-18",
-    "title": "Xenon trioxide ($\\\\text{XeO}_3$) is a pyramidal molecule. The hybridization of the central Xenon atom in a molecule of $\\\\text{XeO}_3$ is:",
+    "title": "Xenon trioxide ($\\text{XeO}_3$) is a pyramidal molecule. The hybridization of the central Xenon atom in a molecule of $\\text{XeO}_3$ is:",
     "difficulty": "hard",
     "type": "advanced",
     "correct_answer": "B",
@@ -941,8 +941,8 @@
       "D": "$sp^3d^2$"
     },
     "notes": "Determine the number of sigma bonds and lone pairs on the central Xenon atom.",
-    "solution_text": "For Xenon trioxide ($\\\\text{XeO}_3$):\n1) Central Xenon has 8 valence electrons. Each of the three oxygen atoms forms a double bond with Xenon ($\\\\text{Xe=O}$). This uses $3 \\\\times 2 = 6$ valence electrons.\n2) The remaining 2 valence electrons form exactly 1 lone pair on Xenon.\n3) In hybridization, we only count $\\\\sigma$-bonds and lone pairs. Xenon has 3 $\\\\sigma$-bonds (one to each oxygen) and 1 lone pair. \n4) Steric number is $3 + 1 = 4$. This corresponds to $sp^3$ hybridization.\n5) The molecular geometry is trigonal pyramidal (similar to ammonia, but with double bonds). Option B is correct.",
-    "common_mistake": "Selecting $sp^3d$ or $sp^3d^2$ (Option C or D) because Xenon uses d-orbitals to form the three $\\\\pi$-bonds ($\\\\text{d}\\\\pi-\\\\text{p}\\\\pi$ bonding), forgetting that $\\\\pi$-bonds do not affect the hybridization state of the central atom.",
+    "solution_text": "For Xenon trioxide ($\\text{XeO}_3$):\n1) Central Xenon has 8 valence electrons. Each of the three oxygen atoms forms a double bond with Xenon ($\\text{Xe=O}$). This uses $3 \\times 2 = 6$ valence electrons.\n2) The remaining 2 valence electrons form exactly 1 lone pair on Xenon.\n3) In hybridization, we only count $\\sigma$-bonds and lone pairs. Xenon has 3 $\\sigma$-bonds (one to each oxygen) and 1 lone pair. \n4) Steric number is $3 + 1 = 4$. This corresponds to $sp^3$ hybridization.\n5) The molecular geometry is trigonal pyramidal (similar to ammonia, but with double bonds). Option B is correct.",
+    "common_mistake": "Selecting $sp^3d$ or $sp^3d^2$ (Option C or D) because Xenon uses d-orbitals to form the three $\\pi$-bonds ($\\text{d}\\pi-\\text{p}\\pi$ bonding), forgetting that $\\pi$-bonds do not affect the hybridization state of the central atom.",
     "concept_slugs": [
       "pblock-group-18"
     ]

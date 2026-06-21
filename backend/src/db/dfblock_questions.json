@@ -1,7 +1,7 @@
 [
   {
     "pattern_group": "df-electronic-trends",
-    "title": "The electronic configuration of Chromium ($Z=24$) in its ground state is $[\\\\text{Ar}] 3d^5 4s^1$ instead of $[\\\\text{Ar}] 3d^4 4s^2$. This anomalous configuration is primarily explained by:",
+    "title": "The electronic configuration of Chromium ($Z=24$) in its ground state is $[\\text{Ar}] 3d^5 4s^1$ instead of $[\\text{Ar}] 3d^4 4s^2$. This anomalous configuration is primarily explained by:",
     "difficulty": "easy",
     "type": "pyq",
     "source": "JEE Main 2021",
@@ -15,7 +15,7 @@
       "D": "Strong spin-orbit coupling in the 3d shell of Chromium"
     },
     "notes": "Half-filled and fully-filled subshells have exceptional stability.",
-    "solution_text": "Chromium has $Z=24$. Its expected configuration is $[\\\\text{Ar}] 3d^4 4s^2$. However, the actual ground-state configuration is $[\\\\text{Ar}] 3d^5 4s^1$. This is because a half-filled $3d^5$ subshell is highly symmetrical and allows for the maximum number of electron exchanges, releasing significant exchange energy. This exchange stabilization energy outweighs the small energy cost of promoting an electron from $4s$ to $3d$. Option A is correct.",
+    "solution_text": "Chromium has $Z=24$. Its expected configuration is $[\\text{Ar}] 3d^4 4s^2$. However, the actual ground-state configuration is $[\\text{Ar}] 3d^5 4s^1$. This is because a half-filled $3d^5$ subshell is highly symmetrical and allows for the maximum number of electron exchanges, releasing significant exchange energy. This exchange stabilization energy outweighs the small energy cost of promoting an electron from $4s$ to $3d$. Option A is correct.",
     "common_mistake": "Claiming that the $4s$ orbital is always higher in energy than $3d$ (Option B), whereas for transition metal atoms, the order of subshells can shift depending on occupancy.",
     "concept_slugs": [
       "df-electronic-trends"
@@ -23,7 +23,7 @@
   },
   {
     "pattern_group": "df-electronic-trends",
-    "title": "Similarly to Chromium, Copper ($Z=29$) shows an anomalous configuration of $[\\\\text{Ar}] 3d^{10} 4s^1$ instead of $[\\\\text{Ar}] 3d^9 4s^2$. This is attributed to:",
+    "title": "Similarly to Chromium, Copper ($Z=29$) shows an anomalous configuration of $[\\text{Ar}] 3d^{10} 4s^1$ instead of $[\\text{Ar}] 3d^9 4s^2$. This is attributed to:",
     "difficulty": "easy",
     "type": "pyq",
     "source": "JEE Main 2022",
@@ -37,7 +37,7 @@
       "D": "Strong relativistic effects in the 4s orbital of lighter transition metals"
     },
     "notes": "A fully-filled d-subshell is highly stable.",
-    "solution_text": "Copper ($Z=29$) has an actual configuration of $[\\\\text{Ar}] 3d^{10} 4s^1$ because the fully-filled $3d^{10}$ subshell is highly symmetrical and offers maximum exchange stabilization. The energy gained by completely filling the $3d$ subshell is greater than the pairing energy cost of placing a second electron in $3d$ instead of $4s$. Option B is correct.",
+    "solution_text": "Copper ($Z=29$) has an actual configuration of $[\\text{Ar}] 3d^{10} 4s^1$ because the fully-filled $3d^{10}$ subshell is highly symmetrical and offers maximum exchange stabilization. The energy gained by completely filling the $3d$ subshell is greater than the pairing energy cost of placing a second electron in $3d$ instead of $4s$. Option B is correct.",
     "common_mistake": "Conflating this with half-filled stability (Option A), whereas copper represents fully-filled stability.",
     "concept_slugs": [
       "df-electronic-trends"
@@ -58,7 +58,7 @@
       "D": "Cobalt (Co)"
     },
     "notes": "The maximum oxidation state in the first row is exhibited by the element with the maximum number of valence electrons (unpaired 3d + 4s).",
-    "solution_text": "In the 3d transition series, Manganese ($Z=25$, configuration $[\\\\text{Ar}] 3d^5 4s^2$) has 5 unpaired electrons in the $3d$ subshell and 2 electrons in the $4s$ shell. It can utilize all 7 valence electrons in chemical bonding, exhibiting oxidation states from +2 to +7 (for example, +7 in $\\\\text{KMnO}_4$). This is the highest oxidation state in the 3d series. Option C is correct.",
+    "solution_text": "In the 3d transition series, Manganese ($Z=25$, configuration $[\\text{Ar}] 3d^5 4s^2$) has 5 unpaired electrons in the $3d$ subshell and 2 electrons in the $4s$ shell. It can utilize all 7 valence electrons in chemical bonding, exhibiting oxidation states from +2 to +7 (for example, +7 in $\\text{KMnO}_4$). This is the highest oxidation state in the 3d series. Option C is correct.",
     "common_mistake": "Selecting Iron (Option A), which has 8 valence electrons but rarely exceeds a +6 oxidation state, or Chromium (Option B) which reaches +6.",
     "concept_slugs": [
       "df-electronic-trends"
@@ -79,22 +79,22 @@
       "D": "Scandium (Sc)"
     },
     "notes": "Look for the element that achieves a stable noble gas configuration by losing three electrons.",
-    "solution_text": "Scandium ($Z=21$, configuration $[\\\\text{Ar}] 3d^1 4s^2$) has only three valence electrons. Upon losing these three electrons, it forms $\\\\text{Sc}^{3+}$, which has the highly stable electronic configuration of the noble gas Argon ($[\\\\text{Ar}] 3d^0$). Consequently, Scandium does not exhibit variable oxidation states and forms compounds exclusively in the +3 state. Option D is correct.",
-    "common_mistake": "Selecting Zinc (Option A), which forms stable compounds only in the +2 oxidation state ($\\\\text{Zn}^{2+}$, $[\\\\text{Ar}] 3d^{10}$).",
+    "solution_text": "Scandium ($Z=21$, configuration $[\\text{Ar}] 3d^1 4s^2$) has only three valence electrons. Upon losing these three electrons, it forms $\\text{Sc}^{3+}$, which has the highly stable electronic configuration of the noble gas Argon ($[\\text{Ar}] 3d^0$). Consequently, Scandium does not exhibit variable oxidation states and forms compounds exclusively in the +3 state. Option D is correct.",
+    "common_mistake": "Selecting Zinc (Option A), which forms stable compounds only in the +2 oxidation state ($\\text{Zn}^{2+}$, $[\\text{Ar}] 3d^{10}$).",
     "concept_slugs": [
       "df-electronic-trends"
     ]
   },
   {
     "pattern_group": "df-electronic-trends",
-    "title": "The number of unpaired electrons in a divalent cobalt ion ($\\\\text{Co}^{2+}$, atomic number $= 27$) in its ground state is ________.",
+    "title": "The number of unpaired electrons in a divalent cobalt ion ($\\text{Co}^{2+}$, atomic number $= 27$) in its ground state is ________.",
     "difficulty": "medium",
     "type": "practice",
     "correct_answer": "3",
     "is_numerical": true,
     "question_format": "numerical",
     "notes": "Write the electronic configuration of Co first, then remove two electrons (from the 4s shell first) to find the configuration of Co2+.",
-    "solution_text": "Let's find the configuration of $\\\\text{Co}^{2+}$:\n1) Cobalt ($Z=27$) has the configuration $[\\\\text{Ar}] 3d^7 4s^2$.\n2) When it forms a divalent cation ($\\\\text{Co}^{2+}$), the two electrons in the outermost $4s$ shell are lost first: $\\\\text{Co}^{2+} = [\\\\text{Ar}] 3d^7 4s^0$.\n3) Placing 7 electrons in the five $3d$ orbitals according to Hund's rule: two orbitals are doubly occupied (containing pairs) and three orbitals are singly occupied (containing unpaired electrons).\nThus, the number of unpaired electrons is exactly 3.",
+    "solution_text": "Let's find the configuration of $\\text{Co}^{2+}$:\n1) Cobalt ($Z=27$) has the configuration $[\\text{Ar}] 3d^7 4s^2$.\n2) When it forms a divalent cation ($\\text{Co}^{2+}$), the two electrons in the outermost $4s$ shell are lost first: $\\text{Co}^{2+} = [\\text{Ar}] 3d^7 4s^0$.\n3) Placing 7 electrons in the five $3d$ orbitals according to Hund's rule: two orbitals are doubly occupied (containing pairs) and three orbitals are singly occupied (containing unpaired electrons).\nThus, the number of unpaired electrons is exactly 3.",
     "common_mistake": "Writing 1, by assuming that the 7 electrons pair up completely leaving only 1 unpaired, or removing electrons from $3d$ before $4s$.",
     "concept_slugs": [
       "df-electronic-trends"
@@ -115,7 +115,7 @@
       "D": "Zinc (Zn)"
     },
     "notes": "Enthalpy of atomization depends on the number of unpaired d-electrons available for metallic bonding.",
-    "solution_text": "The strength of metallic bonding in transition metals depends on the number of unpaired d-electrons that can participate in delocalized covalent bonding. Zinc ($Z=30$) has a fully-filled $3d^{10} 4s^2$ configuration with zero unpaired d-electrons. Its d-electrons are held tightly within the shell and do not participate in metallic bonding. Consequently, the interatomic bonding is weak, and Zinc has a very low melting point and the lowest enthalpy of atomization ($126\\\\,\\\\text{kJ/mol}$) in the 3d series. Option D is correct.",
+    "solution_text": "The strength of metallic bonding in transition metals depends on the number of unpaired d-electrons that can participate in delocalized covalent bonding. Zinc ($Z=30$) has a fully-filled $3d^{10} 4s^2$ configuration with zero unpaired d-electrons. Its d-electrons are held tightly within the shell and do not participate in metallic bonding. Consequently, the interatomic bonding is weak, and Zinc has a very low melting point and the lowest enthalpy of atomization ($126\\,\\text{kJ/mol}$) in the 3d series. Option D is correct.",
     "common_mistake": "Selecting Manganese (Option B), which also has a relatively low melting point/enthalpy of atomization due to stable half-filled symmetry, but it is still significantly higher than that of Zinc.",
     "concept_slugs": [
       "df-electronic-trends"
@@ -130,13 +130,13 @@
     "is_numerical": false,
     "question_format": "mcq",
     "options": {
-      "A": "The second electron in Copper must be removed from a highly stable, fully-filled $3d^{10}$ subshell of the $\\\\text{Cu}^+$ ion",
+      "A": "The second electron in Copper must be removed from a highly stable, fully-filled $3d^{10}$ subshell of the $\\text{Cu}^+$ ion",
       "B": "Copper has a larger nuclear charge than Zinc",
       "C": "Zinc forms a stable +2 ion more easily than copper",
       "D": "Relativistic contraction of the 3d orbitals in copper"
     },
     "notes": "Compare the electronic configuration of Cu+ and Zn+.",
-    "solution_text": "Let's analyze the configurations:\n- $\\\\text{Cu}$ is $[\\\\text{Ar}] 3d^{10} 4s^1$. The first ionization yields $\\\\text{Cu}^+$ with the stable, fully-filled configuration $[\\\\text{Ar}] 3d^{10}$. Removing a second electron to form $\\\\text{Cu}^{2+}$ requires breaking this highly stable $3d^{10}$ shell, resulting in an exceptionally high second ionization enthalpy.\n- $\\\\text{Zn}$ is $[\\\\text{Ar}] 3d^{10} 4s^2$. The first ionization yields $\\\\text{Zn}^+$ ($[\\\\text{Ar}] 3d^{10} 4s^1$). Removing the second electron simply requires emptying the remaining $4s^1$ electron, which is much easier.\nOption A is correct.",
+    "solution_text": "Let's analyze the configurations:\n- $\\text{Cu}$ is $[\\text{Ar}] 3d^{10} 4s^1$. The first ionization yields $\\text{Cu}^+$ with the stable, fully-filled configuration $[\\text{Ar}] 3d^{10}$. Removing a second electron to form $\\text{Cu}^{2+}$ requires breaking this highly stable $3d^{10}$ shell, resulting in an exceptionally high second ionization enthalpy.\n- $\\text{Zn}$ is $[\\text{Ar}] 3d^{10} 4s^2$. The first ionization yields $\\text{Zn}^+$ ($[\\text{Ar}] 3d^{10} 4s^1$). Removing the second electron simply requires emptying the remaining $4s^1$ electron, which is much easier.\nOption A is correct.",
     "common_mistake": "Stating that nuclear charge of copper is larger than zinc (Option B, which is false since Zinc has $Z=30$ and Copper has $Z=29$).",
     "concept_slugs": [
       "df-electronic-trends"
@@ -144,14 +144,14 @@
   },
   {
     "pattern_group": "df-electronic-trends",
-    "title": "The number of unpaired electrons in a trivalent iron ion ($\\\\text{Fe}^{3+}$, atomic number $= 26$) in its ground state is ________.",
+    "title": "The number of unpaired electrons in a trivalent iron ion ($\\text{Fe}^{3+}$, atomic number $= 26$) in its ground state is ________.",
     "difficulty": "hard",
     "type": "advanced",
     "correct_answer": "5",
     "is_numerical": true,
     "question_format": "numerical",
     "notes": "Write the electronic configuration of Fe, then remove three electrons to find the configuration of Fe3+.",
-    "solution_text": "Let's find the configuration of $\\\\text{Fe}^{3+}$:\n1) Iron ($Z=26$) has the configuration $[\\\\text{Ar}] 3d^6 4s^2$.\n2) When it forms a trivalent cation ($\\\\text{Fe}^{3+}$), three electrons are removed: the two $4s$ electrons are removed first, and then one $3d$ electron is removed: $\\\\text{Fe}^{3+} = [\\\\text{Ar}] 3d^5 4s^0$.\n3) The $3d^5$ subshell consists of 5 degenerate orbitals. According to Hund's rule, the 5 electrons occupy the five orbitals singly.\n4) Therefore, the number of unpaired electrons is exactly 5 (highly stable half-filled d-subshell).",
+    "solution_text": "Let's find the configuration of $\\text{Fe}^{3+}$:\n1) Iron ($Z=26$) has the configuration $[\\text{Ar}] 3d^6 4s^2$.\n2) When it forms a trivalent cation ($\\text{Fe}^{3+}$), three electrons are removed: the two $4s$ electrons are removed first, and then one $3d$ electron is removed: $\\text{Fe}^{3+} = [\\text{Ar}] 3d^5 4s^0$.\n3) The $3d^5$ subshell consists of 5 degenerate orbitals. According to Hund's rule, the 5 electrons occupy the five orbitals singly.\n4) Therefore, the number of unpaired electrons is exactly 5 (highly stable half-filled d-subshell).",
     "common_mistake": "Writing 4, by removing all three electrons from the $3d$ subshell or writing 3, assuming a wrong sequence of ionization.",
     "concept_slugs": [
       "df-electronic-trends"
@@ -159,7 +159,7 @@
   },
   {
     "pattern_group": "df-magnetic-properties",
-    "title": "The spin-only magnetic moment of a divalent iron ion ($\\\\text{Fe}^{2+}$, atomic number $= 26$) in Bohr Magnetons (BM) is approximately:",
+    "title": "The spin-only magnetic moment of a divalent iron ion ($\\text{Fe}^{2+}$, atomic number $= 26$) in Bohr Magnetons (BM) is approximately:",
     "difficulty": "easy",
     "type": "pyq",
     "source": "JEE Main 2021",
@@ -173,15 +173,15 @@
       "D": "5.92 BM"
     },
     "notes": "Find the number of unpaired electrons in Fe2+ and apply the spin-only formula.",
-    "solution_text": "Let's calculate the magnetic moment of $\\\\text{Fe}^{2+}$:\n1) Iron ($Z=26$) has configuration $[\\\\text{Ar}] 3d^6 4s^2$. The divalent cation $\\\\text{Fe}^{2+}$ has configuration $[\\\\text{Ar}] 3d^6$.\n2) Placing 6 electrons in five $3d$ orbitals: one orbital is filled with a pair, and four orbitals have single electrons. Thus, the number of unpaired electrons $n = 4$.\n3) Applying the spin-only magnetic moment formula:\n$\\\\mu = \\\\sqrt{n(n+2)} = \\\\sqrt{4(4+2)} = \\\\sqrt{24} \\\\approx 4.90\\\\,\\\\text{BM}$.\nOption C is correct.",
-    "common_mistake": "Selecting Option D ($5.92\\\\,\\\\text{BM}$), which is the value for $\\\\text{Fe}^{3+}$ ($n=5$) or $\\\\text{Mn}^{2+}$ ($n=5$).",
+    "solution_text": "Let's calculate the magnetic moment of $\\text{Fe}^{2+}$:\n1) Iron ($Z=26$) has configuration $[\\text{Ar}] 3d^6 4s^2$. The divalent cation $\\text{Fe}^{2+}$ has configuration $[\\text{Ar}] 3d^6$.\n2) Placing 6 electrons in five $3d$ orbitals: one orbital is filled with a pair, and four orbitals have single electrons. Thus, the number of unpaired electrons $n = 4$.\n3) Applying the spin-only magnetic moment formula:\n$\\mu = \\sqrt{n(n+2)} = \\sqrt{4(4+2)} = \\sqrt{24} \\approx 4.90\\,\\text{BM}$.\nOption C is correct.",
+    "common_mistake": "Selecting Option D ($5.92\\,\\text{BM}$), which is the value for $\\text{Fe}^{3+}$ ($n=5$) or $\\text{Mn}^{2+}$ ($n=5$).",
     "concept_slugs": [
       "df-magnetic-properties"
     ]
   },
   {
     "pattern_group": "df-magnetic-properties",
-    "title": "The spin-only magnetic moment of a trivalent chromium ion ($\\\\text{Cr}^{3+}$, atomic number $= 24$) in Bohr Magnetons (BM) is approximately:",
+    "title": "The spin-only magnetic moment of a trivalent chromium ion ($\\text{Cr}^{3+}$, atomic number $= 24$) in Bohr Magnetons (BM) is approximately:",
     "difficulty": "easy",
     "type": "pyq",
     "source": "JEE Main 2022",
@@ -195,8 +195,8 @@
       "D": "4.90 BM"
     },
     "notes": "Find the configuration of Cr3+ and apply the formula.",
-    "solution_text": "Let's calculate the magnetic moment of $\\\\text{Cr}^{3+}$:\n1) Chromium ($Z=24$) has configuration $[\\\\text{Ar}] 3d^5 4s^1$. The trivalent cation $\\\\text{Cr}^{3+}$ has configuration $[\\\\text{Ar}] 3d^3$.\n2) The 3 d-electrons occupy three separate $3d$ orbitals singly, so the number of unpaired electrons $n = 3$.\n3) Applying the spin-only formula:\n$\\\\mu = \\\\sqrt{n(n+2)} = \\\\sqrt{3(3+2)} = \\\\sqrt{15} \\\\approx 3.87\\\\,\\\\text{BM}$.\nOption B is correct.",
-    "common_mistake": "Selecting $2.83\\\\,\\\\text{BM}$ (Option C), which is the value for $n=2$, or getting configuration of $\\\\text{Cr}^{3+}$ wrong as $3d^4 4s^{-1}$.",
+    "solution_text": "Let's calculate the magnetic moment of $\\text{Cr}^{3+}$:\n1) Chromium ($Z=24$) has configuration $[\\text{Ar}] 3d^5 4s^1$. The trivalent cation $\\text{Cr}^{3+}$ has configuration $[\\text{Ar}] 3d^3$.\n2) The 3 d-electrons occupy three separate $3d$ orbitals singly, so the number of unpaired electrons $n = 3$.\n3) Applying the spin-only formula:\n$\\mu = \\sqrt{n(n+2)} = \\sqrt{3(3+2)} = \\sqrt{15} \\approx 3.87\\,\\text{BM}$.\nOption B is correct.",
+    "common_mistake": "Selecting $2.83\\,\\text{BM}$ (Option C), which is the value for $n=2$, or getting configuration of $\\text{Cr}^{3+}$ wrong as $3d^4 4s^{-1}$.",
     "concept_slugs": [
       "df-magnetic-properties"
     ]
@@ -210,14 +210,14 @@
     "is_numerical": false,
     "question_format": "mcq",
     "options": {
-      "A": "$\\\\text{Sc}^{3+}, \\\\text{Ti}^{4+}, \\\\text{Zn}^{2+}$",
-      "B": "$\\\\text{Cu}^{2+}, \\\\text{Fe}^{3+}, \\\\text{Mn}^{2+}$",
-      "C": "$\\\\text{Ti}^{3+}, \\\\text{V}^{3+}, \\\\text{Co}^{2+}$",
-      "D": "$\\\\text{Ni}^{2+}, \\\\text{Cr}^{3+}, \\\\text{Fe}^{2+}$"
+      "A": "$\\text{Sc}^{3+}, \\text{Ti}^{4+}, \\text{Zn}^{2+}$",
+      "B": "$\\text{Cu}^{2+}, \\text{Fe}^{3+}, \\text{Mn}^{2+}$",
+      "C": "$\\text{Ti}^{3+}, \\text{V}^{3+}, \\text{Co}^{2+}$",
+      "D": "$\\text{Ni}^{2+}, \\text{Cr}^{3+}, \\text{Fe}^{2+}$"
     },
     "notes": "Color in transition metal ions arises from d-d transitions. Check which ions have d0 or d10 configurations.",
-    "solution_text": "Color in transition metal complexes is due to the excitation of an electron from a lower energy d-orbital to a higher energy d-orbital (d-d transition). If an ion has an empty d-subshell ($d^0$) or a completely filled d-subshell ($d^{10}$), d-d transitions are impossible:\n- $\\\\text{Sc}^{3+}$ is $3d^0$ (colorless)\n- $\\\\text{Ti}^{4+}$ is $3d^0$ (colorless)\n- $\\\\text{Zn}^{2+}$ is $3d^{10}$ (colorless)\nThus, this set is entirely colorless. Option A is correct.",
-    "common_mistake": "Selecting Option B, since $\\\\text{Mn}^{2+}$ ($3d^5$) is faintly pink and $\\\\text{Cu}^{2+}$ ($3d^9$) is blue.",
+    "solution_text": "Color in transition metal complexes is due to the excitation of an electron from a lower energy d-orbital to a higher energy d-orbital (d-d transition). If an ion has an empty d-subshell ($d^0$) or a completely filled d-subshell ($d^{10}$), d-d transitions are impossible:\n- $\\text{Sc}^{3+}$ is $3d^0$ (colorless)\n- $\\text{Ti}^{4+}$ is $3d^0$ (colorless)\n- $\\text{Zn}^{2+}$ is $3d^{10}$ (colorless)\nThus, this set is entirely colorless. Option A is correct.",
+    "common_mistake": "Selecting Option B, since $\\text{Mn}^{2+}$ ($3d^5$) is faintly pink and $\\text{Cu}^{2+}$ ($3d^9$) is blue.",
     "concept_slugs": [
       "df-magnetic-properties"
     ]
@@ -245,7 +245,7 @@
   },
   {
     "pattern_group": "df-magnetic-properties",
-    "title": "Transition metals form a large number of non-stoichiometric interstitial compounds (such as $\\\\text{TiC}, \\\\text{Mn}_4\\\\text{N}, \\\\text{FeH}_{0.56}$). Which of the following is correct regarding the properties of these interstitial compounds?",
+    "title": "Transition metals form a large number of non-stoichiometric interstitial compounds (such as $\\text{TiC}, \\text{Mn}_4\\text{N}, \\text{FeH}_{0.56}$). Which of the following is correct regarding the properties of these interstitial compounds?",
     "difficulty": "medium",
     "type": "practice",
     "correct_answer": "A",
@@ -287,14 +287,14 @@
   },
   {
     "pattern_group": "df-magnetic-properties",
-    "title": "Calculate the spin-only magnetic moment (in Bohr Magnetons, BM) of a divalent zinc ion ($\\\\text{Zn}^{2+}$, atomic number $= 30$) in its ground state.",
+    "title": "Calculate the spin-only magnetic moment (in Bohr Magnetons, BM) of a divalent zinc ion ($\\text{Zn}^{2+}$, atomic number $= 30$) in its ground state.",
     "difficulty": "medium",
     "type": "advanced",
     "correct_answer": "0",
     "is_numerical": true,
     "question_format": "numerical",
     "notes": "Determine the number of unpaired electrons in the 3d shell of Zn2+.",
-    "solution_text": "Let's find the configuration of $\\\\text{Zn}^{2+}$:\n1) Zinc ($Z=30$) has configuration $[\\\\text{Ar}] 3d^{10} 4s^2$.\n2) The divalent cation $\\\\text{Zn}^{2+}$ is formed by losing the two $4s$ electrons, yielding the configuration $[\\\\text{Ar}] 3d^{10}$.\n3) In a $3d^{10}$ subshell, all five orbitals are completely filled with pairs of electrons. There are zero unpaired electrons ($n=0$).\n4) Therefore, the spin-only magnetic moment is: $\\\\mu = \\\\sqrt{0(0+2)} = 0\\\\,\\\\text{BM}$.",
+    "solution_text": "Let's find the configuration of $\\text{Zn}^{2+}$:\n1) Zinc ($Z=30$) has configuration $[\\text{Ar}] 3d^{10} 4s^2$.\n2) The divalent cation $\\text{Zn}^{2+}$ is formed by losing the two $4s$ electrons, yielding the configuration $[\\text{Ar}] 3d^{10}$.\n3) In a $3d^{10}$ subshell, all five orbitals are completely filled with pairs of electrons. There are zero unpaired electrons ($n=0$).\n4) Therefore, the spin-only magnetic moment is: $\\mu = \\sqrt{0(0+2)} = 0\\,\\text{BM}$.",
     "common_mistake": "Writing 1 or 2, by miscalculating the electronic configuration or subtracting electrons incorrectly.",
     "concept_slugs": [
       "df-magnetic-properties"
@@ -302,14 +302,14 @@
   },
   {
     "pattern_group": "df-magnetic-properties",
-    "title": "Calculate the spin-only magnetic moment of a divalent nickel ion ($\\\\text{Ni}^{2+}$, atomic number $= 28$) in Bohr Magnetons (BM). (Round to two decimal places).",
+    "title": "Calculate the spin-only magnetic moment of a divalent nickel ion ($\\text{Ni}^{2+}$, atomic number $= 28$) in Bohr Magnetons (BM). (Round to two decimal places).",
     "difficulty": "hard",
     "type": "advanced",
     "correct_answer": "2.83",
     "is_numerical": true,
     "question_format": "numerical",
     "notes": "Find the number of unpaired electrons in Ni2+ and apply the formula.",
-    "solution_text": "Let's find the configuration of $\\\\text{Ni}^{2+}$:\n1) Nickel ($Z=28$) has configuration $[\\\\text{Ar}] 3d^8 4s^2$. \n2) The divalent ion $\\\\text{Ni}^{2+}$ has configuration $[\\\\text{Ar}] 3d^8 4s^0$.\n3) Placing 8 electrons in the five $3d$ orbitals: three orbitals are filled with pairs, and two orbitals contain single electrons. Thus, the number of unpaired electrons $n = 2$.\n4) Applying the spin-only formula:\n$\\\\mu = \\\\sqrt{n(n+2)} = \\\\sqrt{2(2+2)} = \\\\sqrt{8} \\\\approx 2.83\\\\,\\\\text{BM}$.\nTherefore, the answer is 2.83.",
+    "solution_text": "Let's find the configuration of $\\text{Ni}^{2+}$:\n1) Nickel ($Z=28$) has configuration $[\\text{Ar}] 3d^8 4s^2$. \n2) The divalent ion $\\text{Ni}^{2+}$ has configuration $[\\text{Ar}] 3d^8 4s^0$.\n3) Placing 8 electrons in the five $3d$ orbitals: three orbitals are filled with pairs, and two orbitals contain single electrons. Thus, the number of unpaired electrons $n = 2$.\n4) Applying the spin-only formula:\n$\\mu = \\sqrt{n(n+2)} = \\sqrt{2(2+2)} = \\sqrt{8} \\approx 2.83\\,\\text{BM}$.\nTherefore, the answer is 2.83.",
     "common_mistake": "Writing 2.8, neglecting the rounding requirement to two decimal places, or writing 1.73 by assuming $n=1$.",
     "concept_slugs": [
       "df-magnetic-properties"
@@ -339,7 +339,7 @@
   },
   {
     "pattern_group": "df-alloys-reactivity",
-    "title": "The standard reduction potential ($E^\\\\circ$) values for the $M^{3+}/M^{2+}$ couple in the first transition series show a highly positive value for Manganese (+1.57 V) compared to Chromium (-0.41 V) and Iron (+0.77 V). This is explained by:",
+    "title": "The standard reduction potential ($E^\\circ$) values for the $M^{3+}/M^{2+}$ couple in the first transition series show a highly positive value for Manganese (+1.57 V) compared to Chromium (-0.41 V) and Iron (+0.77 V). This is explained by:",
     "difficulty": "medium",
     "type": "pyq",
     "source": "JEE Main 2023",
@@ -347,13 +347,13 @@
     "is_numerical": false,
     "question_format": "mcq",
     "options": {
-      "A": "The exceptional stability of the half-filled $3d^5$ configuration of $\\\\text{Mn}^{2+}$ compared to the $3d^4$ configuration of $\\\\text{Mn}^{3+}$",
+      "A": "The exceptional stability of the half-filled $3d^5$ configuration of $\\text{Mn}^{2+}$ compared to the $3d^4$ configuration of $\\text{Mn}^{3+}$",
       "B": "Manganese has a smaller atomic size than Iron",
-      "C": "The higher hydration enthalpy of the $\\\\text{Mn}^{3+}$ ion",
+      "C": "The higher hydration enthalpy of the $\\text{Mn}^{3+}$ ion",
       "D": "The low second ionization enthalpy of Manganese"
     },
     "notes": "Evaluate the configurations of Mn3+ and Mn2+.",
-    "solution_text": "The $\\\\text{Mn}^{2+}$ ion has a $3d^5$ electronic configuration, which is half-filled and highly stable. The $\\\\text{Mn}^{3+}$ ion has a $3d^4$ configuration. Because of this, $\\\\text{Mn}^{3+}$ has a very strong tendency to accept an electron and reduce to the highly stable $\\\\text{Mn}^{2+}$: $\\\\text{Mn}^{3+} + e^- \\\\rightarrow \\\\text{Mn}^{2+}$ ($E^\\\\circ = +1.57\\\\,\\\\text{V}$). This positive potential makes $\\\\text{Mn}^{3+}$ a powerful oxidizing agent. On the other hand, reducing $\\\\text{Cr}^{3+}$ ($3d^3$, stable $t_{2g}^3$ configuration) to $\\\\text{Cr}^{2+}$ is unfavorable, giving a negative potential ($E^\\\\circ = -0.41\\\\,\\\\text{V}$). Option A is correct.",
+    "solution_text": "The $\\text{Mn}^{2+}$ ion has a $3d^5$ electronic configuration, which is half-filled and highly stable. The $\\text{Mn}^{3+}$ ion has a $3d^4$ configuration. Because of this, $\\text{Mn}^{3+}$ has a very strong tendency to accept an electron and reduce to the highly stable $\\text{Mn}^{2+}$: $\\text{Mn}^{3+} + e^- \\rightarrow \\text{Mn}^{2+}$ ($E^\\circ = +1.57\\,\\text{V}$). This positive potential makes $\\text{Mn}^{3+}$ a powerful oxidizing agent. On the other hand, reducing $\\text{Cr}^{3+}$ ($3d^3$, stable $t_{2g}^3$ configuration) to $\\text{Cr}^{2+}$ is unfavorable, giving a negative potential ($E^\\circ = -0.41\\,\\text{V}$). Option A is correct.",
     "common_mistake": "Attributing this to ionization enthalpy of Mn (Option D) or hydration enthalpy (Option C), which do not dominate over the subshell symmetry in this case.",
     "concept_slugs": [
       "df-alloys-reactivity"
@@ -361,7 +361,7 @@
   },
   {
     "pattern_group": "df-alloys-reactivity",
-    "title": "A solution of chromium(II) is a powerful reducing agent, and it is oxidized to chromium(III) in aqueous medium. The stability of $\\\\text{Cr}^{3+}$ relative to $\\\\text{Cr}^{2+}$ is best explained by:",
+    "title": "A solution of chromium(II) is a powerful reducing agent, and it is oxidized to chromium(III) in aqueous medium. The stability of $\\text{Cr}^{3+}$ relative to $\\text{Cr}^{2+}$ is best explained by:",
     "difficulty": "medium",
     "type": "concept",
     "correct_answer": "B",
@@ -369,13 +369,13 @@
     "question_format": "mcq",
     "options": {
       "A": "The stable half-filled $3d^5$ subshell configuration of Chromium",
-      "B": "The stable half-filled $t_{2g}^3$ crystal field configuration of $\\\\text{Cr}^{3+}$ in octahedral coordination",
+      "B": "The stable half-filled $t_{2g}^3$ crystal field configuration of $\\text{Cr}^{3+}$ in octahedral coordination",
       "C": "The low third ionization enthalpy of Chromium",
       "D": "The high hydration enthalpy of the divalent cation"
     },
     "notes": "Consider crystal field splitting of d-orbitals in an octahedral aqueous environment.",
-    "solution_text": "In aqueous solution, the chromium ion coordinates with six water molecules in an octahedral geometry. The d-orbitals split into lower $t_{2g}$ and higher $e_g$ levels. The $\\\\text{Cr}^{3+}$ ion has a $3d^3$ configuration, meaning it has exactly 3 electrons which occupy the three $t_{2g}$ orbitals individually: $(t_{2g})^3(e_g)^0$. This represents a half-filled $t_{2g}$ set, which has extra stability in crystal field theory. Thus, $\\\\text{Cr}^{2+}$ ($3d^4$) readily acts as a reducing agent by releasing an electron to achieve the highly stable $\\\\text{Cr}^{3+}$ state. Option B is correct.",
-    "common_mistake": "Claiming that it is due to half-filled $3d^5$ (Option A), which is the configuration of chromium atom or $\\\\text{Mn}^{2+}$, but not $\\\\text{Cr}^{3+}$.",
+    "solution_text": "In aqueous solution, the chromium ion coordinates with six water molecules in an octahedral geometry. The d-orbitals split into lower $t_{2g}$ and higher $e_g$ levels. The $\\text{Cr}^{3+}$ ion has a $3d^3$ configuration, meaning it has exactly 3 electrons which occupy the three $t_{2g}$ orbitals individually: $(t_{2g})^3(e_g)^0$. This represents a half-filled $t_{2g}$ set, which has extra stability in crystal field theory. Thus, $\\text{Cr}^{2+}$ ($3d^4$) readily acts as a reducing agent by releasing an electron to achieve the highly stable $\\text{Cr}^{3+}$ state. Option B is correct.",
+    "common_mistake": "Claiming that it is due to half-filled $3d^5$ (Option A), which is the configuration of chromium atom or $\\text{Mn}^{2+}$, but not $\\text{Cr}^{3+}$.",
     "concept_slugs": [
       "df-alloys-reactivity"
     ]
@@ -389,13 +389,13 @@
     "is_numerical": false,
     "question_format": "mcq",
     "options": {
-      "A": "Oxygen is superior because of its ability to form multiple covalent bonds ($\\\\pi$-bonds) with transition metals, stabilizing high states like Mn(+7) in $\\\\text{Mn}_2\\\\text{O}_7$",
+      "A": "Oxygen is superior because of its ability to form multiple covalent bonds ($\\pi$-bonds) with transition metals, stabilizing high states like Mn(+7) in $\\text{Mn}_2\\text{O}_7$",
       "B": "Fluorine is superior because it is the most electronegative element",
       "C": "Oxygen stabilizes high states by forming ionic peroxides only",
       "D": "Fluorine stabilizes high states by providing d-orbitals for backbonding"
     },
     "notes": "Compare the highest fluoride of manganese (MnF4) with its highest oxide (Mn2O7).",
-    "solution_text": "Oxygen has a unique ability to form double/multiple bonds ($\\\\pi$-bonds) with transition metals using its $2p$ electrons. This covalent multiple bonding stabilizes high oxidation states. For instance, the highest fluoride of Manganese is only $\\\\text{MnF}_4$ (+4 state), but its highest oxide is $\\\\text{Mn}_2\\\\text{O}_7$ (+7 state), where each Mn is tetrahedrally coordinated to four oxygens. Thus, oxygen's ability to form multiple bonds makes it superior to fluorine in stabilizing high oxidation states. Option A is correct.",
+    "solution_text": "Oxygen has a unique ability to form double/multiple bonds ($\\pi$-bonds) with transition metals using its $2p$ electrons. This covalent multiple bonding stabilizes high oxidation states. For instance, the highest fluoride of Manganese is only $\\text{MnF}_4$ (+4 state), but its highest oxide is $\\text{Mn}_2\\text{O}_7$ (+7 state), where each Mn is tetrahedrally coordinated to four oxygens. Thus, oxygen's ability to form multiple bonds makes it superior to fluorine in stabilizing high oxidation states. Option A is correct.",
     "common_mistake": "Selecting Option B, assuming that fluorine's high electronegativity always dictates high-state stability, neglecting its monodentate nature which limits bonding sites.",
     "concept_slugs": [
       "df-alloys-reactivity"
@@ -403,7 +403,7 @@
   },
   {
     "pattern_group": "df-alloys-reactivity",
-    "title": "All elements of the 3d transition series (except Copper) react with dilute mineral acids (like $\\\\text{HCl}$) to liberate hydrogen gas. The positive standard reduction potential of Copper ($E^\\\\circ(\\\\text{Cu}^{2+}/\\\\text{Cu}) = +0.34$ V) is primarily due to:",
+    "title": "All elements of the 3d transition series (except Copper) react with dilute mineral acids (like $\\text{HCl}$) to liberate hydrogen gas. The positive standard reduction potential of Copper ($E^\\circ(\\text{Cu}^{2+}/\\text{Cu}) = +0.34$ V) is primarily due to:",
     "difficulty": "medium",
     "type": "practice",
     "correct_answer": "D",
@@ -416,7 +416,7 @@
       "D": "The high enthalpy of atomization and high ionization enthalpies of copper, which are not compensated by its hydration enthalpy"
     },
     "notes": "Electrode potential is a thermodynamic property determined by a Born-Haber cycle (sublimation, ionization, hydration).",
-    "solution_text": "The standard reduction potential $E^\\\\circ(\\\\text{M}^{2+}/\\\\text{M})$ is determined by the net energy change of three steps:\n1) Atomization/Sublimation of the metal: $\\\\text{M}(s) \\\\rightarrow \\\\text{M}(g)$ (requires energy)\n2) Ionization of the gaseous metal atom: $\\\\text{M}(g) \\\\rightarrow \\\\text{M}^{2+}(g) + 2e^-$ (requires energy)\n3) Hydration of the gaseous ion: $\\\\text{M}^{2+}(g) + \\\\text{aq} \\\\rightarrow \\\\text{M}^{2+}(aq)$ (releases energy)\nFor Copper, both the enthalpy of atomization and the sum of the first and second ionization enthalpies are exceptionally high. The hydration enthalpy released by $\\\\text{Cu}^{2+}$ is not large enough to compensate for these high energy requirements, resulting in a net endothermic process and a positive $E^\\\\circ$ value. Thus, copper is inert to dilute non-oxidizing acids. Option D is correct.",
+    "solution_text": "The standard reduction potential $E^\\circ(\\text{M}^{2+}/\\text{M})$ is determined by the net energy change of three steps:\n1) Atomization/Sublimation of the metal: $\\text{M}(s) \\rightarrow \\text{M}(g)$ (requires energy)\n2) Ionization of the gaseous metal atom: $\\text{M}(g) \\rightarrow \\text{M}^{2+}(g) + 2e^-$ (requires energy)\n3) Hydration of the gaseous ion: $\\text{M}^{2+}(g) + \\text{aq} \\rightarrow \\text{M}^{2+}(aq)$ (releases energy)\nFor Copper, both the enthalpy of atomization and the sum of the first and second ionization enthalpies are exceptionally high. The hydration enthalpy released by $\\text{Cu}^{2+}$ is not large enough to compensate for these high energy requirements, resulting in a net endothermic process and a positive $E^\\circ$ value. Thus, copper is inert to dilute non-oxidizing acids. Option D is correct.",
     "common_mistake": "Claiming that copper has a high hydration enthalpy that stabilizes the metal (Option A) — while its hydration enthalpy is high, it is not high *enough* to offset the ionization costs.",
     "concept_slugs": [
       "df-alloys-reactivity"
@@ -424,14 +424,14 @@
   },
   {
     "pattern_group": "df-alloys-reactivity",
-    "title": "In acidic medium, the dichromate ion ($\\\\text{Cr}_2\\\\text{O}_7^{2-}$) acts as a strong oxidizing agent and is reduced to chromium(III) ($\\\\text{Cr}^{3+}$). The number of moles of electrons required to reduce exactly one mole of dichromate ions is ________.",
+    "title": "In acidic medium, the dichromate ion ($\\text{Cr}_2\\text{O}_7^{2-}$) acts as a strong oxidizing agent and is reduced to chromium(III) ($\\text{Cr}^{3+}$). The number of moles of electrons required to reduce exactly one mole of dichromate ions is ________.",
     "difficulty": "easy",
     "type": "practice",
     "correct_answer": "6",
     "is_numerical": true,
     "question_format": "numerical",
     "notes": "Write the balanced half-reaction for the reduction of dichromate in acidic medium.",
-    "solution_text": "The balanced ionic half-reaction for the reduction of dichromate in acidic medium is:\n$\\\\text{Cr}_2\\\\text{O}_7^{2-} + 14\\\\text{H}^+ + 6e^- \\\\rightarrow 2\\\\text{Cr}^{3+} + 7\\\\text{H}_2\\\\text{O}$\n- The oxidation state of chromium in $\\\\text{Cr}_2\\\\text{O}_7^{2-}$ is calculated as: $2x + 7(-2) = -2 \\\\implies 2x = 12 \\\\implies x = +6$.\n- Each chromium atom is reduced from a +6 state to a +3 state, accepting 3 electrons.\n- Since there are 2 chromium atoms in one mole of dichromate ($\\\\text{Cr}_2\\\\text{O}_7^{2-}$), the total number of moles of electrons absorbed is $2 \\\\times 3 = 6$. Therefore, the answer is 6.",
+    "solution_text": "The balanced ionic half-reaction for the reduction of dichromate in acidic medium is:\n$\\text{Cr}_2\\text{O}_7^{2-} + 14\\text{H}^+ + 6e^- \\rightarrow 2\\text{Cr}^{3+} + 7\\text{H}_2\\text{O}$\n- The oxidation state of chromium in $\\text{Cr}_2\\text{O}_7^{2-}$ is calculated as: $2x + 7(-2) = -2 \\implies 2x = 12 \\implies x = +6$.\n- Each chromium atom is reduced from a +6 state to a +3 state, accepting 3 electrons.\n- Since there are 2 chromium atoms in one mole of dichromate ($\\text{Cr}_2\\text{O}_7^{2-}$), the total number of moles of electrons absorbed is $2 \\times 3 = 6$. Therefore, the answer is 6.",
     "common_mistake": "Writing 3, counting only the electrons per chromium atom and forgetting that the formula unit contains two chromium atoms.",
     "concept_slugs": [
       "df-alloys-reactivity"
@@ -439,7 +439,7 @@
   },
   {
     "pattern_group": "df-alloys-reactivity",
-    "title": "Which of the following transition elements of the 3d series exhibits the highest value for the $E^\\\\circ(\\\\text{M}^{3+}/\\\\text{M}^{2+})$ standard reduction potential (making the trivalent state extremely unstable and highly oxidizing)?",
+    "title": "Which of the following transition elements of the 3d series exhibits the highest value for the $E^\\circ(\\text{M}^{3+}/\\text{M}^{2+})$ standard reduction potential (making the trivalent state extremely unstable and highly oxidizing)?",
     "difficulty": "hard",
     "type": "advanced",
     "correct_answer": "C",
@@ -452,7 +452,7 @@
       "D": "Manganese (Mn)"
     },
     "notes": "Evaluate the electronic configuration changes for Co3+ -> Co2+. Co3+ is a very strong oxidizing agent in aqueous solution.",
-    "solution_text": "Let's check the reduction potentials of the $M^{3+}/M^{2+}$ couples:\n- $\\\\text{Cr}^{3+}/\\\\text{Cr}^{2+}$: $-0.41\\\\,\\\\text{V}$ (reduces poorly)\n- $\\\\text{Fe}^{3+}/\\\\text{Fe}^{2+}$: $+0.77\\\\,\\\\text{V}$ (moderately oxidizing)\n- $\\\\text{Mn}^{3+}/\\\\text{Mn}^{2+}$: $+1.57\\\\,\\\\text{V}$ (strongly oxidizing due to $3d^5$ stability)\n- $\\\\text{Co}^{3+}/\\\\text{Co}^{2+}$: $+1.97\\\\,\\\\text{V}$ (extremely oxidizing)\nThe high value for Cobalt is because $\\\\text{Co}^{3+}$ has a $3d^6$ configuration. In aqueous solution, it has a very high charge density and hydration energy drive to reduce to $\\\\text{Co}^{2+}$ ($3d^7$). In fact, $\\\\text{Co}^{3+}$ is so oxidizing that it can oxidize water itself to liberate oxygen gas. Option C is correct.",
+    "solution_text": "Let's check the reduction potentials of the $M^{3+}/M^{2+}$ couples:\n- $\\text{Cr}^{3+}/\\text{Cr}^{2+}$: $-0.41\\,\\text{V}$ (reduces poorly)\n- $\\text{Fe}^{3+}/\\text{Fe}^{2+}$: $+0.77\\,\\text{V}$ (moderately oxidizing)\n- $\\text{Mn}^{3+}/\\text{Mn}^{2+}$: $+1.57\\,\\text{V}$ (strongly oxidizing due to $3d^5$ stability)\n- $\\text{Co}^{3+}/\\text{Co}^{2+}$: $+1.97\\,\\text{V}$ (extremely oxidizing)\nThe high value for Cobalt is because $\\text{Co}^{3+}$ has a $3d^6$ configuration. In aqueous solution, it has a very high charge density and hydration energy drive to reduce to $\\text{Co}^{2+}$ ($3d^7$). In fact, $\\text{Co}^{3+}$ is so oxidizing that it can oxidize water itself to liberate oxygen gas. Option C is correct.",
     "common_mistake": "Selecting Manganese (Option D), which is a common strong oxidizing agent, but is actually surpassed in potential by Cobalt (+1.97 V vs +1.57 V).",
     "concept_slugs": [
       "df-alloys-reactivity"
@@ -460,22 +460,22 @@
   },
   {
     "pattern_group": "df-alloys-reactivity",
-    "title": "In acidic medium, the permanganate ion ($\\\\text{MnO}_4^-$) is reduced to manganese(II) ($\\\\text{Mn}^{2+}$). The number of moles of electrons accepted by exactly one mole of permanganate ion in this reaction is ________.",
+    "title": "In acidic medium, the permanganate ion ($\\text{MnO}_4^-$) is reduced to manganese(II) ($\\text{Mn}^{2+}$). The number of moles of electrons accepted by exactly one mole of permanganate ion in this reaction is ________.",
     "difficulty": "easy",
     "type": "advanced",
     "correct_answer": "5",
     "is_numerical": true,
     "question_format": "numerical",
     "notes": "Write the balanced half-reaction for the reduction of permanganate in acidic medium.",
-    "solution_text": "The balanced ionic half-reaction for the reduction of permanganate in acidic medium is:\n$\\\\text{MnO}_4^- + 8\\\\text{H}^+ + 5e^- \\\\rightarrow \\\\text{Mn}^{2+} + 4\\\\text{H}_2\\\\text{O}$\n- The oxidation state of manganese in $\\\\text{MnO}_4^-$ is +7.\n- The oxidation state of manganese in the product is +2.\n- The change in oxidation state is: $+7 \\\\rightarrow +2$, which corresponds to the absorption of exactly 5 electrons.\nTherefore, the number of moles of electrons accepted per mole of permanganate is 5.",
-    "common_mistake": "Writing 3, which is the number of electrons accepted by permanganate in neutral or faintly alkaline medium (where it is reduced to $\\\\text{MnO}_2$).",
+    "solution_text": "The balanced ionic half-reaction for the reduction of permanganate in acidic medium is:\n$\\text{MnO}_4^- + 8\\text{H}^+ + 5e^- \\rightarrow \\text{Mn}^{2+} + 4\\text{H}_2\\text{O}$\n- The oxidation state of manganese in $\\text{MnO}_4^-$ is +7.\n- The oxidation state of manganese in the product is +2.\n- The change in oxidation state is: $+7 \\rightarrow +2$, which corresponds to the absorption of exactly 5 electrons.\nTherefore, the number of moles of electrons accepted per mole of permanganate is 5.",
+    "common_mistake": "Writing 3, which is the number of electrons accepted by permanganate in neutral or faintly alkaline medium (where it is reduced to $\\text{MnO}_2$).",
     "concept_slugs": [
       "df-alloys-reactivity"
     ]
   },
   {
     "pattern_group": "df-potassium-permanganate",
-    "title": "Potassium permanganate ($\\\\text{KMnO}_4$) is prepared industrially from pyrolusite ore ($\\\\text{MnO}_2$). Which of the following correctly describes the steps involved in this synthesis?",
+    "title": "Potassium permanganate ($\\text{KMnO}_4$) is prepared industrially from pyrolusite ore ($\\text{MnO}_2$). Which of the following correctly describes the steps involved in this synthesis?",
     "difficulty": "easy",
     "type": "pyq",
     "source": "JEE Main 2021",
@@ -483,13 +483,13 @@
     "is_numerical": false,
     "question_format": "mcq",
     "options": {
-      "A": "$\\\\text{MnO}_2$ is reduced with carbon to metallic Mn, which is then reacted with concentrated nitric acid",
-      "B": "$\\\\text{MnO}_2$ is reacted directly with chlorine gas at high temperatures to yield permanganate",
-      "C": "$\\\\text{MnO}_2$ is fused with KOH in the presence of air or an oxidizing agent to form green $\\\\text{K}_2\\\\text{MnO}_4$, which is then oxidized electrolytically in alkaline solution",
-      "D": "$\\\\text{MnO}_2$ is dissolved in sulfuric acid to form $\\\\text{MnSO}_4$, which is then crystallized with potassium sulfate"
+      "A": "$\\text{MnO}_2$ is reduced with carbon to metallic Mn, which is then reacted with concentrated nitric acid",
+      "B": "$\\text{MnO}_2$ is reacted directly with chlorine gas at high temperatures to yield permanganate",
+      "C": "$\\text{MnO}_2$ is fused with KOH in the presence of air or an oxidizing agent to form green $\\text{K}_2\\text{MnO}_4$, which is then oxidized electrolytically in alkaline solution",
+      "D": "$\\text{MnO}_2$ is dissolved in sulfuric acid to form $\\text{MnSO}_4$, which is then crystallized with potassium sulfate"
     },
     "notes": "The preparation involves two main stages: alkaline fusion followed by oxidation.",
-    "solution_text": "The industrial preparation of $\\\\text{KMnO}_4$ from pyrolusite ore ($\\\\text{MnO}_2$) proceeds as follows:\n1) Alkaline Fusion: $\\\\text{MnO}_2$ is fused with potassium hydroxide ($\\\\text{KOH}$) in the presence of atmospheric oxygen or an oxidizing agent like potassium nitrate ($\\\\text{KNO}_3$) to form potassium manganate (green compound):\n$2\\\\text{MnO}_2 + 4\\\\text{KOH} + \\\\text{O}_2 \\\\rightarrow 2\\\\text{K}_2\\\\text{MnO}_4 + 2\\\\text{H}_2\\\\text{O}$\n2) Oxidation: The green potassium manganate ($\\\\text{K}_2\\\\text{MnO}_4$) is then oxidized to potassium permanganate (purple) either chemically using ozone/chlorine or electrolytically in alkaline solution:\n$\\\\text{MnO}_4^{2-} \\\\rightarrow \\\\text{MnO}_4^- + e^-$\nOption C is correct.",
+    "solution_text": "The industrial preparation of $\\text{KMnO}_4$ from pyrolusite ore ($\\text{MnO}_2$) proceeds as follows:\n1) Alkaline Fusion: $\\text{MnO}_2$ is fused with potassium hydroxide ($\\text{KOH}$) in the presence of atmospheric oxygen or an oxidizing agent like potassium nitrate ($\\text{KNO}_3$) to form potassium manganate (green compound):\n$2\\text{MnO}_2 + 4\\text{KOH} + \\text{O}_2 \\rightarrow 2\\text{K}_2\\text{MnO}_4 + 2\\text{H}_2\\text{O}$\n2) Oxidation: The green potassium manganate ($\\text{K}_2\\text{MnO}_4$) is then oxidized to potassium permanganate (purple) either chemically using ozone/chlorine or electrolytically in alkaline solution:\n$\\text{MnO}_4^{2-} \\rightarrow \\text{MnO}_4^- + e^-$\nOption C is correct.",
     "common_mistake": "Claiming that it is a single-step reaction (Option B) or that it involves metallic manganese intermediate (Option A).",
     "concept_slugs": [
       "df-potassium-permanganate"
@@ -497,7 +497,7 @@
   },
   {
     "pattern_group": "df-potassium-permanganate",
-    "title": "Compare the molecular properties of potassium manganate ($\\\\text{K}_2\\\\text{MnO}_4$) and potassium permanganate ($\\\\text{KMnO}_4$). Which of the following statements is true?",
+    "title": "Compare the molecular properties of potassium manganate ($\\text{K}_2\\text{MnO}_4$) and potassium permanganate ($\\text{KMnO}_4$). Which of the following statements is true?",
     "difficulty": "medium",
     "type": "pyq",
     "source": "JEE Main 2022",
@@ -511,7 +511,7 @@
       "D": "Both are purple and diamagnetic"
     },
     "notes": "Write the oxidation state of Mn in both complexes and check their d-orbital occupancy.",
-    "solution_text": "Let's check the properties of both ions:\n1) Manganate ($\\\\text{MnO}_4^{2-}$): Manganese is in a +6 oxidation state ($3d^1$ configuration). Because it has 1 unpaired electron, it is paramagnetic. Structurally, it is tetrahedral and has a green color.\n2) Permanganate ($\\\\text{MnO}_4^-$): Manganese is in a +7 oxidation state ($3d^0$ configuration). Since it has 0 unpaired electrons, it is diamagnetic. Structurally, it is tetrahedral and has an intense purple/dark violet color. Option A is correct.",
+    "solution_text": "Let's check the properties of both ions:\n1) Manganate ($\\text{MnO}_4^{2-}$): Manganese is in a +6 oxidation state ($3d^1$ configuration). Because it has 1 unpaired electron, it is paramagnetic. Structurally, it is tetrahedral and has a green color.\n2) Permanganate ($\\text{MnO}_4^-$): Manganese is in a +7 oxidation state ($3d^0$ configuration). Since it has 0 unpaired electrons, it is diamagnetic. Structurally, it is tetrahedral and has an intense purple/dark violet color. Option A is correct.",
     "common_mistake": "Reversing the properties (Option B), or assuming that because they have similar formulas they must have the same magnetic behavior (Option D).",
     "concept_slugs": [
       "df-potassium-permanganate"
@@ -519,7 +519,7 @@
   },
   {
     "pattern_group": "df-potassium-permanganate",
-    "title": "Although the manganese atom in the permanganate ion ($\\\\text{MnO}_4^-$) is in a $+7$ oxidation state with a $3d^0$ configuration (no d-electrons), it exhibits an exceptionally intense purple-black color. This color is caused by:",
+    "title": "Although the manganese atom in the permanganate ion ($\\text{MnO}_4^-$) is in a $+7$ oxidation state with a $3d^0$ configuration (no d-electrons), it exhibits an exceptionally intense purple-black color. This color is caused by:",
     "difficulty": "medium",
     "type": "concept",
     "correct_answer": "B",
@@ -532,28 +532,28 @@
       "D": "S-d transitions between the outermost s-shell and inner d-shell of manganese"
     },
     "notes": "d-d transitions require at least one electron in the d-orbitals.",
-    "solution_text": "Since $\\\\text{Mn}^{7+}$ has a $3d^0$ configuration, d-d transitions are impossible. The deep purple color of $\\\\text{MnO}_4^-$ is caused by a Ligand-to-Metal Charge Transfer (LMCT) transition. When light is absorbed, an electron is promoted from a non-bonding $p$-orbital of an oxygen ligand ($\\\\text{O}^{2-}$) to a vacant, low-lying $3d$ orbital of the highly positive manganese center ($\\\\text{Mn}^{7+}$). This transition occurs in the visible range and is highly allowed, resulting in an extremely intense absorption band. Option B is correct.",
-    "common_mistake": "Explaining the color as a d-d transition (Option A), neglecting the fact that $\\\\text{Mn}^{7+}$ has no d-electrons.",
+    "solution_text": "Since $\\text{Mn}^{7+}$ has a $3d^0$ configuration, d-d transitions are impossible. The deep purple color of $\\text{MnO}_4^-$ is caused by a Ligand-to-Metal Charge Transfer (LMCT) transition. When light is absorbed, an electron is promoted from a non-bonding $p$-orbital of an oxygen ligand ($\\text{O}^{2-}$) to a vacant, low-lying $3d$ orbital of the highly positive manganese center ($\\text{Mn}^{7+}$). This transition occurs in the visible range and is highly allowed, resulting in an extremely intense absorption band. Option B is correct.",
+    "common_mistake": "Explaining the color as a d-d transition (Option A), neglecting the fact that $\\text{Mn}^{7+}$ has no d-electrons.",
     "concept_slugs": [
       "df-potassium-permanganate"
     ]
   },
   {
     "pattern_group": "df-potassium-permanganate",
-    "title": "In acidic medium, potassium permanganate ($\\\\text{KMnO}_4$) acts as a strong oxidizing agent. Which of the following reactions correctly represents the oxidizing action of $\\\\text{KMnO}_4$ in acidic solution?",
+    "title": "In acidic medium, potassium permanganate ($\\text{KMnO}_4$) acts as a strong oxidizing agent. Which of the following reactions correctly represents the oxidizing action of $\\text{KMnO}_4$ in acidic solution?",
     "difficulty": "medium",
     "type": "concept",
     "correct_answer": "A",
     "is_numerical": false,
     "question_format": "mcq",
     "options": {
-      "A": "It oxidizes iodide ($\\\\text{I}^-$) to iodine ($\\\\text{I}_2$)",
-      "B": "It oxidizes iodide ($\\\\text{I}^-$) to iodate ($\\\\text{IO}_3^-$)",
-      "C": "It oxidizes sulfate ($\\\\text{SO}_4^{2-}$) to peroxodisulfate",
-      "D": "It oxidizes chloride ($\\\\text{Cl}^-$) to perchlorate ($\\\\text{ClO}_4^-$)"
+      "A": "It oxidizes iodide ($\\text{I}^-$) to iodine ($\\text{I}_2$)",
+      "B": "It oxidizes iodide ($\\text{I}^-$) to iodate ($\\text{IO}_3^-$)",
+      "C": "It oxidizes sulfate ($\\text{SO}_4^{2-}$) to peroxodisulfate",
+      "D": "It oxidizes chloride ($\\text{Cl}^-$) to perchlorate ($\\text{ClO}_4^-$)"
     },
     "notes": "Compare the oxidation of iodide by permanganate in acidic vs neutral media.",
-    "solution_text": "In an acidic medium, $\\\\text{KMnO}_4$ is reduced to $\\\\text{Mn}^{2+}$. It is a powerful oxidant and oxidizes iodide ($\\\\text{I}^-$) to free elemental iodine ($\\\\text{I}_2$):\n$2\\\\text{MnO}_4^- + 10\\\\text{I}^- + 16\\\\text{H}^+ \\\\rightarrow 2\\\\text{Mn}^{2+} + 5\\\\text{I}_2 + 8\\\\text{H}_2\\\\text{O}$\nOption A is correct. (In neutral or faintly alkaline medium, it oxidizes iodide to iodate, $\\\\text{IO}_3^-$).",
+    "solution_text": "In an acidic medium, $\\text{KMnO}_4$ is reduced to $\\text{Mn}^{2+}$. It is a powerful oxidant and oxidizes iodide ($\\text{I}^-$) to free elemental iodine ($\\text{I}_2$):\n$2\\text{MnO}_4^- + 10\\text{I}^- + 16\\text{H}^+ \\rightarrow 2\\text{Mn}^{2+} + 5\\text{I}_2 + 8\\text{H}_2\\text{O}$\nOption A is correct. (In neutral or faintly alkaline medium, it oxidizes iodide to iodate, $\\text{IO}_3^-$).",
     "common_mistake": "Selecting Option B, which is the reaction in neutral or faintly alkaline media, or assuming it can oxidize sulfate (Option C) which is already in its highest oxidation state.",
     "concept_slugs": [
       "df-potassium-permanganate"
@@ -568,13 +568,13 @@
     "is_numerical": false,
     "question_format": "mcq",
     "options": {
-      "A": "Iodine gas ($\\\\text{I}_2$)",
-      "B": "Iodate ion ($\\\\text{IO}_3^-$)",
-      "C": "Hypoiodite ion ($\\\\text{IO}^-$)",
-      "D": "Periodate ion ($\\\\text{IO}_4^-$)"
+      "A": "Iodine gas ($\\text{I}_2$)",
+      "B": "Iodate ion ($\\text{IO}_3^-$)",
+      "C": "Hypoiodite ion ($\\text{IO}^-$)",
+      "D": "Periodate ion ($\\text{IO}_4^-$)"
     },
     "notes": "In neutral/alkaline media, KMnO4 is reduced to MnO2 (+4 state). The oxidation potential is slightly lower.",
-    "solution_text": "In a neutral or faintly alkaline medium, the reduction of permanganate proceeds only to the +4 state ($\\\\text{MnO}_2$). Under these conditions, it oxidizes iodide ($\\\\text{I}^-$) to the iodate ion ($\\\\text{IO}_3^-$):\n$2\\\\text{MnO}_4^- + \\\\text{I}^- + \\\\text{H}_2\\\\text{O} \\\\rightarrow 2\\\\text{MnO}_2 + \\\\text{IO}_3^- + 2\\\\text{OH}^-$\nThus, the product is iodate ($\\\\text{IO}_3^-$). Option B is correct.",
+    "solution_text": "In a neutral or faintly alkaline medium, the reduction of permanganate proceeds only to the +4 state ($\\text{MnO}_2$). Under these conditions, it oxidizes iodide ($\\text{I}^-$) to the iodate ion ($\\text{IO}_3^-$):\n$2\\text{MnO}_4^- + \\text{I}^- + \\text{H}_2\\text{O} \\rightarrow 2\\text{MnO}_2 + \\text{IO}_3^- + 2\\text{OH}^-$\nThus, the product is iodate ($\\text{IO}_3^-$). Option B is correct.",
     "common_mistake": "Selecting iodine gas (Option A), which is the oxidation product in acidic medium, or periodate (Option D) which is too highly oxidized.",
     "concept_slugs": [
       "df-potassium-permanganate"
@@ -582,20 +582,20 @@
   },
   {
     "pattern_group": "df-potassium-permanganate",
-    "title": "In acidic medium, potassium permanganate oxidizes oxalic acid or oxalate ions ($\\\\text{C}_2\\\\text{O}_4^{2-}$). The products of this redox reaction are $\\\\text{Mn}^{2+}$ and:",
+    "title": "In acidic medium, potassium permanganate oxidizes oxalic acid or oxalate ions ($\\text{C}_2\\text{O}_4^{2-}$). The products of this redox reaction are $\\text{Mn}^{2+}$ and:",
     "difficulty": "easy",
     "type": "practice",
     "correct_answer": "B",
     "is_numerical": false,
     "question_format": "mcq",
     "options": {
-      "A": "Carbon monoxide ($\\\\text{CO}$)",
-      "B": "Carbon dioxide ($\\\\text{CO}_2$)",
+      "A": "Carbon monoxide ($\\text{CO}$)",
+      "B": "Carbon dioxide ($\\text{CO}_2$)",
       "C": "Formic acid",
       "D": "Carbonic acid"
     },
     "notes": "Oxalate contains carbon in a +3 oxidation state. It is oxidized to its most stable gaseous oxide.",
-    "solution_text": "In acidic solution, permanganate oxidizes the carbon in oxalate ($\\\\text{C}_2\\\\text{O}_4^{2-}$, oxidation state +3) to carbon dioxide ($\\\\text{CO}_2$, oxidation state +4):\n$2\\\\text{MnO}_4^- + 5\\\\text{C}_2\\\\text{O}_4^{2-} + 16\\\\text{H}^+ \\\\rightarrow 2\\\\text{Mn}^{2+} + 10\\\\text{CO}_2 + 8\\\\text{H}_2\\\\text{O}$\nThis reaction is slow at room temperature but accelerates upon heating to $60^\\\\circ\\\\text{C}$ and is self-catalyzed by the $\\\\text{Mn}^{2+}$ ions formed (autocatalysis). Option B is correct.",
+    "solution_text": "In acidic solution, permanganate oxidizes the carbon in oxalate ($\\text{C}_2\\text{O}_4^{2-}$, oxidation state +3) to carbon dioxide ($\\text{CO}_2$, oxidation state +4):\n$2\\text{MnO}_4^- + 5\\text{C}_2\\text{O}_4^{2-} + 16\\text{H}^+ \\rightarrow 2\\text{Mn}^{2+} + 10\\text{CO}_2 + 8\\text{H}_2\\text{O}$\nThis reaction is slow at room temperature but accelerates upon heating to $60^\\circ\\text{C}$ and is self-catalyzed by the $\\text{Mn}^{2+}$ ions formed (autocatalysis). Option B is correct.",
     "common_mistake": "Selecting carbon monoxide (Option A), which is toxic and is not formed under these strongly oxidizing conditions.",
     "concept_slugs": [
       "df-potassium-permanganate"
@@ -603,37 +603,37 @@
   },
   {
     "pattern_group": "df-potassium-permanganate",
-    "title": "When potassium permanganate ($\\\\text{KMnO}_4$) acts as an oxidizing agent in neutral or faintly alkaline medium (such as in Baeyer's reagent), it is reduced to a brown precipitate. The oxidation state of manganese in this product is ________.",
+    "title": "When potassium permanganate ($\\text{KMnO}_4$) acts as an oxidizing agent in neutral or faintly alkaline medium (such as in Baeyer's reagent), it is reduced to a brown precipitate. The oxidation state of manganese in this product is ________.",
     "difficulty": "easy",
     "type": "advanced",
     "correct_answer": "4",
     "is_numerical": true,
     "question_format": "numerical",
     "notes": "Identify the chemical formula of the insoluble brown precipitate of manganese formed.",
-    "solution_text": "In a neutral or alkaline solution, the permanganate ion ($\\\\text{MnO}_4^-$, where Mn is +7) undergoes reduction to form manganese dioxide ($\\\\text{MnO}_2$), which deposits as an insoluble dark brown precipitate:\n$\\\\text{MnO}_4^- + 2\\\\text{H}_2\\\\text{O} + 3e^- \\\\rightarrow \\\\text{MnO}_2 + 4\\\\text{OH}^-$\nIn $\\\\text{MnO}_2$, the oxidation state of Manganese ($x$) is: $x + 2(-2) = 0 \\\\implies x = +4$. Therefore, the oxidation state of manganese in the product is 4.",
-    "common_mistake": "Writing 2, confusing the neutral/alkaline product with the acidic product ($\\\\text{Mn}^{2+}$).",
+    "solution_text": "In a neutral or alkaline solution, the permanganate ion ($\\text{MnO}_4^-$, where Mn is +7) undergoes reduction to form manganese dioxide ($\\text{MnO}_2$), which deposits as an insoluble dark brown precipitate:\n$\\text{MnO}_4^- + 2\\text{H}_2\\text{O} + 3e^- \\rightarrow \\text{MnO}_2 + 4\\text{OH}^-$\nIn $\\text{MnO}_2$, the oxidation state of Manganese ($x$) is: $x + 2(-2) = 0 \\implies x = +4$. Therefore, the oxidation state of manganese in the product is 4.",
+    "common_mistake": "Writing 2, confusing the neutral/alkaline product with the acidic product ($\\text{Mn}^{2+}$).",
     "concept_slugs": [
       "df-potassium-permanganate"
     ]
   },
   {
     "pattern_group": "df-potassium-permanganate",
-    "title": "The number of d-electrons in the central Manganese atom of the permanganate ion ($\\\\text{MnO}_4^-$) is ________.",
+    "title": "The number of d-electrons in the central Manganese atom of the permanganate ion ($\\text{MnO}_4^-$) is ________.",
     "difficulty": "hard",
     "type": "advanced",
     "correct_answer": "0",
     "is_numerical": true,
     "question_format": "numerical",
     "notes": "Determine the oxidation state of Mn in permanganate and find its d-orbital occupancy.",
-    "solution_text": "Let's analyze the manganese atom in $\\\\text{MnO}_4^-$:\n1) The oxidation state of Mn in $\\\\text{MnO}_4^-$ is +7.\n2) Neutral Manganese ($Z=25$) has the electronic configuration $[\\\\text{Ar}] 3d^5 4s^2$.\n3) To achieve the +7 oxidation state, it loses all 7 valence electrons (both $4s$ and $3d$ electrons), resulting in the configuration of the noble gas Argon: $\\\\text{Mn}^{7+} = [\\\\text{Ar}] 3d^0 4s^0$.\n4) Therefore, the number of d-electrons in the manganese atom of permanganate is exactly 0.",
-    "common_mistake": "Writing 5, thinking of the d-electrons in the neutral Manganese atom, or writing 1, confusing it with the manganate ion ($\\\\text{MnO}_4^{2-}$).",
+    "solution_text": "Let's analyze the manganese atom in $\\text{MnO}_4^-$:\n1) The oxidation state of Mn in $\\text{MnO}_4^-$ is +7.\n2) Neutral Manganese ($Z=25$) has the electronic configuration $[\\text{Ar}] 3d^5 4s^2$.\n3) To achieve the +7 oxidation state, it loses all 7 valence electrons (both $4s$ and $3d$ electrons), resulting in the configuration of the noble gas Argon: $\\text{Mn}^{7+} = [\\text{Ar}] 3d^0 4s^0$.\n4) Therefore, the number of d-electrons in the manganese atom of permanganate is exactly 0.",
+    "common_mistake": "Writing 5, thinking of the d-electrons in the neutral Manganese atom, or writing 1, confusing it with the manganate ion ($\\text{MnO}_4^{2-}$).",
     "concept_slugs": [
       "df-potassium-permanganate"
     ]
   },
   {
     "pattern_group": "df-potassium-dichromate",
-    "title": "Potassium dichromate ($\\\\text{K}_2\\\\text{Cr}_2\\\\text{O}_7$) is prepared from chromite ore ($\\\\text{FeCr}_2\\\\text{O}_4$). Which of the following lists the correct sequence of intermediates formed in this preparation?",
+    "title": "Potassium dichromate ($\\text{K}_2\\text{Cr}_2\\text{O}_7$) is prepared from chromite ore ($\\text{FeCr}_2\\text{O}_4$). Which of the following lists the correct sequence of intermediates formed in this preparation?",
     "difficulty": "medium",
     "type": "pyq",
     "source": "JEE Main 2021",
@@ -641,13 +641,13 @@
     "is_numerical": false,
     "question_format": "mcq",
     "options": {
-      "A": "Yellow sodium chromate ($\\\\text{Na}_2\\\\text{CrO}_4$), then orange sodium dichromate ($\\\\text{Na}_2\\\\text{Cr}_2\\\\text{O}_7$)",
+      "A": "Yellow sodium chromate ($\\text{Na}_2\\text{CrO}_4$), then orange sodium dichromate ($\\text{Na}_2\\text{Cr}_2\\text{O}_7$)",
       "B": "Green chromium sulfate, then orange sodium chromate",
-      "C": "Chromium trioxide ($\\\\text{CrO}_3$), then yellow potassium chromate",
+      "C": "Chromium trioxide ($\\text{CrO}_3$), then yellow potassium chromate",
       "D": "Sodium chromyl chloride, then sodium dichromate"
     },
     "notes": "The ore is fused with sodium carbonate in the presence of air to form a soluble chromate.",
-    "solution_text": "The steps for preparing $\\\\text{K}_2\\\\text{Cr}_2\\\\text{O}_7$ from chromite ore are:\n1) Fusion: Chromite ore ($\\\\text{FeCr}_2\\\\text{O}_4$) is fused with sodium carbonate ($\\\\text{Na}_2\\\\text{CO}_3$) in the presence of air to form yellow, soluble sodium chromate:\n$4\\\\text{FeCr}_2\\\\text{O}_4 + 8\\\\text{Na}_2\\\\text{CO}_3 + 7\\\\text{O}_2 \\\\rightarrow 8\\\\text{Na}_2\\\\text{CrO}_4 + 2\\\\text{Fe}_2\\\\text{O}_3 + 8\\\\text{CO}_2$\n2) Acidification: The yellow sodium chromate solution is filtered and acidified with sulfuric acid to form orange, highly soluble sodium dichromate:\n$2\\\\text{Na}_2\\\\text{CrO}_4 + \\\\text{H}_2\\\\text{SO}_4 \\\\rightarrow \\\\text{Na}_2\\\\text{Cr}_2\\\\text{O}_7 + \\\\text{Na}_2\\\\text{SO}_4 + \\\\text{H}_2\\\\text{O}$\n3) Crystallization: Sodium dichromate is treated with potassium chloride ($\\\\text{KCl}$) to precipitate the less soluble potassium dichromate as orange crystals:\n$\\\\text{Na}_2\\\\text{Cr}_2\\\\text{O}_7 + 2\\\\text{KCl} \\\\rightarrow \\\\text{K}_2\\\\text{Cr}_2\\\\text{O}_7 + 2\\\\text{NaCl}$\nThus, the correct sequence is yellow sodium chromate, then orange sodium dichromate. Option A is correct.",
+    "solution_text": "The steps for preparing $\\text{K}_2\\text{Cr}_2\\text{O}_7$ from chromite ore are:\n1) Fusion: Chromite ore ($\\text{FeCr}_2\\text{O}_4$) is fused with sodium carbonate ($\\text{Na}_2\\text{CO}_3$) in the presence of air to form yellow, soluble sodium chromate:\n$4\\text{FeCr}_2\\text{O}_4 + 8\\text{Na}_2\\text{CO}_3 + 7\\text{O}_2 \\rightarrow 8\\text{Na}_2\\text{CrO}_4 + 2\\text{Fe}_2\\text{O}_3 + 8\\text{CO}_2$\n2) Acidification: The yellow sodium chromate solution is filtered and acidified with sulfuric acid to form orange, highly soluble sodium dichromate:\n$2\\text{Na}_2\\text{CrO}_4 + \\text{H}_2\\text{SO}_4 \\rightarrow \\text{Na}_2\\text{Cr}_2\\text{O}_7 + \\text{Na}_2\\text{SO}_4 + \\text{H}_2\\text{O}$\n3) Crystallization: Sodium dichromate is treated with potassium chloride ($\\text{KCl}$) to precipitate the less soluble potassium dichromate as orange crystals:\n$\\text{Na}_2\\text{Cr}_2\\text{O}_7 + 2\\text{KCl} \\rightarrow \\text{K}_2\\text{Cr}_2\\text{O}_7 + 2\\text{NaCl}$\nThus, the correct sequence is yellow sodium chromate, then orange sodium dichromate. Option A is correct.",
     "common_mistake": "Thinking potassium chromate is formed directly (Option C), whereas sodium salts are used first because of their higher solubility in water.",
     "concept_slugs": [
       "df-potassium-dichromate"
@@ -655,7 +655,7 @@
   },
   {
     "pattern_group": "df-potassium-dichromate",
-    "title": "The chromate ($\\\\text{CrO}_4^{2-}$) and dichromate ($\\\\text{Cr}_2\\\\text{O}_7^{2-}$) ions exist in a pH-dependent equilibrium in aqueous solution. Which of the following statements correctly describes this behavior?",
+    "title": "The chromate ($\\text{CrO}_4^{2-}$) and dichromate ($\\text{Cr}_2\\text{O}_7^{2-}$) ions exist in a pH-dependent equilibrium in aqueous solution. Which of the following statements correctly describes this behavior?",
     "difficulty": "medium",
     "type": "pyq",
     "source": "JEE Main 2022",
@@ -665,11 +665,11 @@
     "options": {
       "A": "Acidic pH favors yellow chromate; alkaline pH favors orange dichromate",
       "B": "Acidic pH favors orange dichromate; alkaline pH favors yellow chromate",
-      "C": "Acidic pH causes reduction to green $\\\\text{Cr}^{3+}$; alkaline pH has no effect",
+      "C": "Acidic pH causes reduction to green $\\text{Cr}^{3+}$; alkaline pH has no effect",
       "D": "Both ions are stable and do not interconvert at any pH"
     },
     "notes": "Write the equilibrium equation: $2\\text{CrO}_4^{2-} + 2\\text{H}^+ \\rightleftharpoons \\text{Cr}_2\\text{O}_7^{2-} + \\text{H}_2\\text{O}$.",
-    "solution_text": "The chromate and dichromate ions interconvert depending on the concentration of hydrogen ions ($\\\\text{pH}$):\n$2\\\\text{CrO}_4^{2-} (\\\\text{yellow}) + 2\\\\text{H}^+ \\\\rightleftharpoons \\\\text{Cr}_2\\\\text{O}_7^{2-} (\\\\text{orange}) + \\\\text{H}_2\\\\text{O}$\n- Adding acid (increasing $\\\\text{H}^+$, decreasing pH) shifts the equilibrium to the right, favoring the orange dichromate ion.\n- Adding base (reducing $\\\\text{H}^+$, increasing pH) shifts the equilibrium to the left, favoring the yellow chromate ion.\nOption B is correct.",
+    "solution_text": "The chromate and dichromate ions interconvert depending on the concentration of hydrogen ions ($\\text{pH}$):\n$2\\text{CrO}_4^{2-} (\\text{yellow}) + 2\\text{H}^+ \\rightleftharpoons \\text{Cr}_2\\text{O}_7^{2-} (\\text{orange}) + \\text{H}_2\\text{O}$\n- Adding acid (increasing $\\text{H}^+$, decreasing pH) shifts the equilibrium to the right, favoring the orange dichromate ion.\n- Adding base (reducing $\\text{H}^+$, increasing pH) shifts the equilibrium to the left, favoring the yellow chromate ion.\nOption B is correct.",
     "common_mistake": "Reversing the color-pH dependency (Option A), stating that acid favors yellow chromate.",
     "concept_slugs": [
       "df-potassium-dichromate"
@@ -677,20 +677,20 @@
   },
   {
     "pattern_group": "df-potassium-dichromate",
-    "title": "In the structure of the dichromate ion ($\\\\text{Cr}_2\\\\text{O}_7^{2-}$), two tetrahedral $\\\\text{CrO}_4$ units are joined. Which of the following describes the bridging linkage in this ion?",
+    "title": "In the structure of the dichromate ion ($\\text{Cr}_2\\text{O}_7^{2-}$), two tetrahedral $\\text{CrO}_4$ units are joined. Which of the following describes the bridging linkage in this ion?",
     "difficulty": "medium",
     "type": "concept",
     "correct_answer": "A",
     "is_numerical": false,
     "question_format": "mcq",
     "options": {
-      "A": "They share one oxygen corner with a $\\\\text{Cr-O-Cr}$ bond angle of $126^\\\\circ$",
+      "A": "They share one oxygen corner with a $\\text{Cr-O-Cr}$ bond angle of $126^\\circ$",
       "B": "They share an edge containing two oxygen atoms",
-      "C": "They are joined directly by a covalent $\\\\text{Cr-Cr}$ bond",
+      "C": "They are joined directly by a covalent $\\text{Cr-Cr}$ bond",
       "D": "They share a face containing three oxygen atoms"
     },
     "notes": "Dichromate is a dimeric anion. Consider how the two tetrahedra share oxygen.",
-    "solution_text": "The dichromate ion ($\\\\text{Cr}_2\\\\text{O}_7^{2-}$) consists of two tetrahedral chromate ($\\\\text{CrO}_4$) units sharing a single oxygen atom at one of their corners (bridging oxygen). The structure features six terminal $\\\\text{Cr-O}$ bonds (which are shorter due to $\\\\pi$-bonding, $163\\\\,\\\\text{pm}$) and two longer bridging $\\\\text{Cr-O}$ bonds ($179\\\\,\\\\text{pm}$). The $\\\\text{Cr-O-Cr}$ bond angle at the bridging oxygen is $126^\\\\circ$. Option A is correct.",
+    "solution_text": "The dichromate ion ($\\text{Cr}_2\\text{O}_7^{2-}$) consists of two tetrahedral chromate ($\\text{CrO}_4$) units sharing a single oxygen atom at one of their corners (bridging oxygen). The structure features six terminal $\\text{Cr-O}$ bonds (which are shorter due to $\\pi$-bonding, $163\\,\\text{pm}$) and two longer bridging $\\text{Cr-O}$ bonds ($179\\,\\text{pm}$). The $\\text{Cr-O-Cr}$ bond angle at the bridging oxygen is $126^\\circ$. Option A is correct.",
     "common_mistake": "Assuming they share an edge (Option B) or are connected directly (Option C), which would cause extreme steric strain.",
     "concept_slugs": [
       "df-potassium-dichromate"
@@ -705,34 +705,34 @@
     "is_numerical": false,
     "question_format": "mcq",
     "options": {
-      "A": "$\\\\text{Cr}^{3+}$ and metallic Iron",
-      "B": "$\\\\text{Cr}^{3+}$ and $\\\\text{Fe}^{3+}$",
-      "C": "$\\\\text{CrO}_4^{2-}$ and $\\\\text{Fe}^{3+}$",
-      "D": "$\\\\text{Cr}^{2+}$ and $\\\\text{Fe}^{3+}$"
+      "A": "$\\text{Cr}^{3+}$ and metallic Iron",
+      "B": "$\\text{Cr}^{3+}$ and $\\text{Fe}^{3+}$",
+      "C": "$\\text{CrO}_4^{2-}$ and $\\text{Fe}^{3+}$",
+      "D": "$\\text{Cr}^{2+}$ and $\\text{Fe}^{3+}$"
     },
     "notes": "Dichromate is reduced to Cr3+ in acidic medium, while Fe2+ is oxidized to Fe3+.",
-    "solution_text": "In acidic medium, dichromate ($\\\\text{Cr}_2\\\\text{O}_7^{2-}$) is reduced to green chromium(III) ($\\\\text{Cr}^{3+}$). It oxidizes ferrous ions ($\\\\text{Fe}^{2+}$) to ferric ions ($\\\\text{Fe}^{3+}$):\n$\\\\text{Cr}_2\\\\text{O}_7^{2-} + 6\\\\text{Fe}^{2+} + 14\\\\text{H}^+ \\\\rightarrow 2\\\\text{Cr}^{3+} + 6\\\\text{Fe}^{3+} + 7\\\\text{H}_2\\\\text{O}$\nOption B is correct.",
-    "common_mistake": "Selecting Option D, stating that dichromate reduces only to $\\\\text{Cr}^{2+}$, which is unstable in water under these acidic oxidizing conditions.",
+    "solution_text": "In acidic medium, dichromate ($\\text{Cr}_2\\text{O}_7^{2-}$) is reduced to green chromium(III) ($\\text{Cr}^{3+}$). It oxidizes ferrous ions ($\\text{Fe}^{2+}$) to ferric ions ($\\text{Fe}^{3+}$):\n$\\text{Cr}_2\\text{O}_7^{2-} + 6\\text{Fe}^{2+} + 14\\text{H}^+ \\rightarrow 2\\text{Cr}^{3+} + 6\\text{Fe}^{3+} + 7\\text{H}_2\\text{O}$\nOption B is correct.",
+    "common_mistake": "Selecting Option D, stating that dichromate reduces only to $\\text{Cr}^{2+}$, which is unstable in water under these acidic oxidizing conditions.",
     "concept_slugs": [
       "df-potassium-dichromate"
     ]
   },
   {
     "pattern_group": "df-potassium-dichromate",
-    "title": "In acidic medium, potassium dichromate oxidizes stannous ($\\\\text{Sn}^{2+}$) ions. What is the oxidized product of tin in this reaction?",
+    "title": "In acidic medium, potassium dichromate oxidizes stannous ($\\text{Sn}^{2+}$) ions. What is the oxidized product of tin in this reaction?",
     "difficulty": "easy",
     "type": "practice",
     "correct_answer": "B",
     "is_numerical": false,
     "question_format": "mcq",
     "options": {
-      "A": "Metallic Tin ($\\\\text{Sn}$)",
-      "B": "Stannic ion ($\\\\text{Sn}^{4+}$)",
-      "C": "Stannite ion ($\\\\text{SnO}_2^{2-}$)",
-      "D": "Stannate ion ($\\\\text{SnO}_3^{2-}$)"
+      "A": "Metallic Tin ($\\text{Sn}$)",
+      "B": "Stannic ion ($\\text{Sn}^{4+}$)",
+      "C": "Stannite ion ($\\text{SnO}_2^{2-}$)",
+      "D": "Stannate ion ($\\text{SnO}_3^{2-}$)"
     },
     "notes": "Dichromate oxidizes divalent tin to its higher stable tetravalent ionic state.",
-    "solution_text": "In acidic solution, dichromate oxidizes stannous ions ($\\\\text{Sn}^{2+}$, +2 oxidation state) to stannic ions ($\\\\text{Sn}^{4+}$, +4 oxidation state):\n$\\\\text{Cr}_2\\\\text{O}_7^{2-} + 3\\\\text{Sn}^{2+} + 14\\\\text{H}^+ \\\\rightarrow 2\\\\text{Cr}^{3+} + 3\\\\text{Sn}^{4+} + 7\\\\text{H}_2\\\\text{O}$\nThus, the product is $\\\\text{Sn}^{4+}$. Option B is correct.",
+    "solution_text": "In acidic solution, dichromate oxidizes stannous ions ($\\text{Sn}^{2+}$, +2 oxidation state) to stannic ions ($\\text{Sn}^{4+}$, +4 oxidation state):\n$\\text{Cr}_2\\text{O}_7^{2-} + 3\\text{Sn}^{2+} + 14\\text{H}^+ \\rightarrow 2\\text{Cr}^{3+} + 3\\text{Sn}^{4+} + 7\\text{H}_2\\text{O}$\nThus, the product is $\\text{Sn}^{4+}$. Option B is correct.",
     "common_mistake": "Selecting metallic tin (Option A), which would be a reduction product, or oxide anions (Option C or D) which do not form in acidic solution.",
     "concept_slugs": [
       "df-potassium-dichromate"
@@ -749,26 +749,26 @@
     "options": {
       "A": "Green vapors of chlorine gas",
       "B": "Yellow precipitate of lead chromate directly",
-      "C": "Deep red/orange-red vapors of chromyl chloride ($\\\\text{CrO}_2\\\\text{Cl}_2$)",
+      "C": "Deep red/orange-red vapors of chromyl chloride ($\\text{CrO}_2\\text{Cl}_2$)",
       "D": "Colorless, choking hydrogen chloride gas"
     },
     "notes": "The reaction produces a volatile, covalent transition metal oxohalide.",
-    "solution_text": "When a solid chloride salt (like $\\\\text{NaCl}$) is heated with solid potassium dichromate ($\\\\text{K}_2\\\\text{Cr}_2\\\\text{O}_7$) and concentrated sulfuric acid ($\\\\text{H}_2\\\\text{SO}_4$), they react to form chromyl chloride ($\\\\text{CrO}_2\\\\text{Cl}_2$), which is a volatile, deep red/orange-red liquid that vaporizes:\n$\\\\text{K}_2\\\\text{Cr}_2\\\\text{O}_7 + 4\\\\text{NaCl} + 6\\\\text{H}_2\\\\text{SO}_4 \\\\rightarrow 2\\\\text{CrO}_2\\\\text{Cl}_2 \\\\uparrow + 2\\\\text{KHSO}_4 + 4\\\\text{NaHSO}_4 + 3\\\\text{H}_2\\\\text{O}$\nThese red vapors, when passed into $\\\\text{NaOH}$ solution, form yellow sodium chromate, which can be confirmed by adding lead acetate to precipitate yellow lead chromate. Option C is correct.",
-    "common_mistake": "Stating that it forms chlorine gas (Option A). Bromide and iodide salts, under the same conditions, release $\\\\text{Br}_2$ and $\\\\text{I}_2$ gases instead of chromyl halides because their chromyl compounds are unstable.",
+    "solution_text": "When a solid chloride salt (like $\\text{NaCl}$) is heated with solid potassium dichromate ($\\text{K}_2\\text{Cr}_2\\text{O}_7$) and concentrated sulfuric acid ($\\text{H}_2\\text{SO}_4$), they react to form chromyl chloride ($\\text{CrO}_2\\text{Cl}_2$), which is a volatile, deep red/orange-red liquid that vaporizes:\n$\\text{K}_2\\text{Cr}_2\\text{O}_7 + 4\\text{NaCl} + 6\\text{H}_2\\text{SO}_4 \\rightarrow 2\\text{CrO}_2\\text{Cl}_2 \\uparrow + 2\\text{KHSO}_4 + 4\\text{NaHSO}_4 + 3\\text{H}_2\\text{O}$\nThese red vapors, when passed into $\\text{NaOH}$ solution, form yellow sodium chromate, which can be confirmed by adding lead acetate to precipitate yellow lead chromate. Option C is correct.",
+    "common_mistake": "Stating that it forms chlorine gas (Option A). Bromide and iodide salts, under the same conditions, release $\\text{Br}_2$ and $\\text{I}_2$ gases instead of chromyl halides because their chromyl compounds are unstable.",
     "concept_slugs": [
       "df-potassium-dichromate"
     ]
   },
   {
     "pattern_group": "df-potassium-dichromate",
-    "title": "In the tetrahedral chromate ion ($\\\\text{CrO}_4^{2-}$), all four $\\\\text{Cr-O}$ bonds are equivalent due to resonance. The number of $\\\\text{Cr-O}$ single covalent bonds in a single chromate ion is ________.",
+    "title": "In the tetrahedral chromate ion ($\\text{CrO}_4^{2-}$), all four $\\text{Cr-O}$ bonds are equivalent due to resonance. The number of $\\text{Cr-O}$ single covalent bonds in a single chromate ion is ________.",
     "difficulty": "easy",
     "type": "advanced",
     "correct_answer": "4",
     "is_numerical": true,
     "question_format": "numerical",
     "notes": "Evaluate the coordination number of chromium in the chromate ion.",
-    "solution_text": "The chromate ion ($\\\\text{CrO}_4^{2-}$) has a tetrahedral geometry with the chromium atom at the center coordinated to 4 oxygen atoms. In its Lewis structure, there are two double bonds ($\\\\text{Cr=O}$) and two single bonds ($\\\\text{Cr-O}^-$). However, because of resonance, the negative charge and the double-bond character are delocalized equally over all 4 oxygens. Each of the 4 bonds is structurally equivalent and forms a single covalent coordination link (bond order of 1.5). Thus, the number of $\\\\text{Cr-O}$ covalent bonds in the tetrahedron is exactly 4.",
+    "solution_text": "The chromate ion ($\\text{CrO}_4^{2-}$) has a tetrahedral geometry with the chromium atom at the center coordinated to 4 oxygen atoms. In its Lewis structure, there are two double bonds ($\\text{Cr=O}$) and two single bonds ($\\text{Cr-O}^-$). However, because of resonance, the negative charge and the double-bond character are delocalized equally over all 4 oxygens. Each of the 4 bonds is structurally equivalent and forms a single covalent coordination link (bond order of 1.5). Thus, the number of $\\text{Cr-O}$ covalent bonds in the tetrahedron is exactly 4.",
     "common_mistake": "Writing 2, counting only the formal single bonds in one resonance structure, or writing 6, confusing it with the oxidation state of chromium.",
     "concept_slugs": [
       "df-potassium-dichromate"
@@ -776,14 +776,14 @@
   },
   {
     "pattern_group": "df-potassium-dichromate",
-    "title": "In one molecule of potassium dichromate ($\\\\text{K}_2\\\\text{Cr}_2\\\\text{O}_7$), the number of bridging $\\\\text{Cr-O-Cr}$ oxygen atoms is ________.",
+    "title": "In one molecule of potassium dichromate ($\\text{K}_2\\text{Cr}_2\\text{O}_7$), the number of bridging $\\text{Cr-O-Cr}$ oxygen atoms is ________.",
     "difficulty": "medium",
     "type": "advanced",
     "correct_answer": "1",
     "is_numerical": true,
     "question_format": "numerical",
     "notes": "Recall the structural formula of the dichromate ion, which consists of two linked tetrahedra.",
-    "solution_text": "The dichromate ion ($\\\\text{Cr}_2\\\\text{O}_7^{2-}$) consists of two tetrahedral $\\\\text{CrO}_4$ units sharing exactly one corner. This shared corner contains a single bridging oxygen atom, which forms the $\\\\text{Cr-O-Cr}$ bridge. The other 6 oxygen atoms are terminal. Thus, the number of bridging oxygens in the formula unit is exactly 1.",
+    "solution_text": "The dichromate ion ($\\text{Cr}_2\\text{O}_7^{2-}$) consists of two tetrahedral $\\text{CrO}_4$ units sharing exactly one corner. This shared corner contains a single bridging oxygen atom, which forms the $\\text{Cr-O-Cr}$ bridge. The other 6 oxygen atoms are terminal. Thus, the number of bridging oxygens in the formula unit is exactly 1.",
     "common_mistake": "Writing 2, confusing the number of chromium atoms with the number of bridging oxygen atoms, or writing 7, which is the total number of oxygen atoms.",
     "concept_slugs": [
       "df-potassium-dichromate"
@@ -805,7 +805,7 @@
       "D": "The progressive filling of outer 6s orbitals instead of inner shells"
     },
     "notes": "Evaluate the shape and shielding ability of f-orbitals.",
-    "solution_text": "As we move across the lanthanoid series from Lanthanum ($Z=57$) to Lutetium ($Z=71$), the nuclear charge increases by +1 at each step, and an electron is added to the inner $4f$ subshell. The $4f$ orbitals are large, highly diffuse, and have a complicated shape. Because of this, $4f$ electrons shield each other and the outer shell electrons very poorly from the positive nucleus. The outer electrons experience a steadily increasing effective nuclear charge ($Z_{\\\\text{eff}}$), drawing the entire electron cloud closer to the nucleus. This results in the Lanthanoid Contraction. Option B is correct.",
+    "solution_text": "As we move across the lanthanoid series from Lanthanum ($Z=57$) to Lutetium ($Z=71$), the nuclear charge increases by +1 at each step, and an electron is added to the inner $4f$ subshell. The $4f$ orbitals are large, highly diffuse, and have a complicated shape. Because of this, $4f$ electrons shield each other and the outer shell electrons very poorly from the positive nucleus. The outer electrons experience a steadily increasing effective nuclear charge ($Z_{\\text{eff}}$), drawing the entire electron cloud closer to the nucleus. This results in the Lanthanoid Contraction. Option B is correct.",
     "common_mistake": "Attributing the contraction to strong shielding of 4f electrons (Option A), whereas f-electrons are actually the poorest shielders among all subshells.",
     "concept_slugs": [
       "df-lanthanoids-actinoids"
@@ -827,7 +827,7 @@
       "D": "Iron (Fe) and Nickel (Ni)"
     },
     "notes": "Look for Group 4 elements where one is in the 4d series (second row) and one is in the 5d series (third row).",
-    "solution_text": "Normally, atomic radius increases down a group from the 4d series to the 5d series (e.g. Zr to Hf) due to the addition of a new shell. However, the 14 lanthanoid elements ($Z=58$ to $71$) intervene between Zirconium ($Z=40$, 4d series) and Hafnium ($Z=72$, 5d series). The cumulative size decrease of the Lanthanoid Contraction offsets the expected size increase from adding a shell. As a result, Zirconium ($160\\\\,\\\\text{pm}$) and Hafnium ($159\\\\,\\\\text{pm}$) have almost identical atomic and ionic radii, causing them to exhibit nearly identical chemical properties. Option A is correct.",
+    "solution_text": "Normally, atomic radius increases down a group from the 4d series to the 5d series (e.g. Zr to Hf) due to the addition of a new shell. However, the 14 lanthanoid elements ($Z=58$ to $71$) intervene between Zirconium ($Z=40$, 4d series) and Hafnium ($Z=72$, 5d series). The cumulative size decrease of the Lanthanoid Contraction offsets the expected size increase from adding a shell. As a result, Zirconium ($160\\,\\text{pm}$) and Hafnium ($159\\,\\text{pm}$) have almost identical atomic and ionic radii, causing them to exhibit nearly identical chemical properties. Option A is correct.",
     "common_mistake": "Selecting Titanium and Zirconium (Option B), which show the normal size increase down the group because no f-block elements intervene between them.",
     "concept_slugs": [
       "df-lanthanoids-actinoids"
@@ -835,20 +835,20 @@
   },
   {
     "pattern_group": "df-lanthanoids-actinoids",
-    "title": "How does the Lanthanoid Contraction affect the basic strength of the lanthanoid hydroxides, $\\\\text{Ln(OH)}_3$, from Lanthanum to Lutetium?",
+    "title": "How does the Lanthanoid Contraction affect the basic strength of the lanthanoid hydroxides, $\\text{Ln(OH)}_3$, from Lanthanum to Lutetium?",
     "difficulty": "medium",
     "type": "concept",
     "correct_answer": "B",
     "is_numerical": false,
     "question_format": "mcq",
     "options": {
-      "A": "Basic strength increases because the ionic size of $\\\\text{Ln}^{3+}$ increases",
-      "B": "Basic strength decreases because the decreasing size of $\\\\text{Ln}^{3+}$ increases the covalent character of the $\\\\text{Ln-OH}$ bond (Fajan's rules)",
+      "A": "Basic strength increases because the ionic size of $\\text{Ln}^{3+}$ increases",
+      "B": "Basic strength decreases because the decreasing size of $\\text{Ln}^{3+}$ increases the covalent character of the $\\text{Ln-OH}$ bond (Fajan's rules)",
       "C": "Basic strength remains constant because all lanthanoids show a +3 state",
       "D": "The hydroxides become acidic and act as strong proton donors"
     },
     "notes": "Applying Fajan's rules: smaller cation size increases covalent character.",
-    "solution_text": "According to Fajan's rules, as the size of a cation decreases, its polarizing power increases, which increases the covalent character of its bonds. Because of the Lanthanoid Contraction, the ionic size of the trivalent lanthanoid ions ($\\\\text{Ln}^{3+}$) decreases steadily from $\\\\text{La}^{3+}$ to $\\\\text{Lu}^{3+}$. As a result, the covalent character of the $\\\\text{Ln-OH}$ bond increases from Lanthanum to Lutetium, making it harder to release hydroxide ($\\\\text{OH}^-$) ions. Thus, basic strength decreases across the series: $\\\\text{La(OH)}_3$ is the most basic, and $\\\\text{Lu(OH)}_3$ is the least basic. Option B is correct.",
+    "solution_text": "According to Fajan's rules, as the size of a cation decreases, its polarizing power increases, which increases the covalent character of its bonds. Because of the Lanthanoid Contraction, the ionic size of the trivalent lanthanoid ions ($\\text{Ln}^{3+}$) decreases steadily from $\\text{La}^{3+}$ to $\\text{Lu}^{3+}$. As a result, the covalent character of the $\\text{Ln-OH}$ bond increases from Lanthanum to Lutetium, making it harder to release hydroxide ($\\text{OH}^-$) ions. Thus, basic strength decreases across the series: $\\text{La(OH)}_3$ is the most basic, and $\\text{Lu(OH)}_3$ is the least basic. Option B is correct.",
     "common_mistake": "Stating that basic strength increases (Option A), or assuming no change (Option C) since all have the same +3 charge.",
     "concept_slugs": [
       "df-lanthanoids-actinoids"
@@ -869,7 +869,7 @@
       "D": "Cerium being a transition metal and Europium being a noble gas"
     },
     "notes": "Write the electronic configuration of Cerium and Europium in their respective ionic states.",
-    "solution_text": "Let's check the configurations:\n- Cerium ($Z=58$) has ground state configuration $[\\\\text{Xe}] 4f^1 5d^1 6s^2$. In the +4 state ($\\\\text{Ce}^{4+}$), it loses all 4 valence electrons, achieving a stable empty $4f^0$ (noble gas Xenon) configuration. (It is a strong oxidizing agent as it tends to reduce to $\\\\text{Ce}^{3+}$).\n- Europium ($Z=63$) has ground state $[\\\\text{Xe}] 4f^7 6s^2$. In the +2 state ($\\\\text{Eu}^{2+}$), it loses two $6s$ electrons, leaving a stable half-filled $4f^7$ configuration. (It acts as a reducing agent by oxidizing to $\\\\text{Eu}^{3+}$).\nOption C is correct.",
+    "solution_text": "Let's check the configurations:\n- Cerium ($Z=58$) has ground state configuration $[\\text{Xe}] 4f^1 5d^1 6s^2$. In the +4 state ($\\text{Ce}^{4+}$), it loses all 4 valence electrons, achieving a stable empty $4f^0$ (noble gas Xenon) configuration. (It is a strong oxidizing agent as it tends to reduce to $\\text{Ce}^{3+}$).\n- Europium ($Z=63$) has ground state $[\\text{Xe}] 4f^7 6s^2$. In the +2 state ($\\text{Eu}^{2+}$), it loses two $6s$ electrons, leaving a stable half-filled $4f^7$ configuration. (It acts as a reducing agent by oxidizing to $\\text{Eu}^{3+}$).\nOption C is correct.",
     "common_mistake": "Claiming both have empty or fully filled configurations (Option A or B), neglecting the half-filled nature of Europium.",
     "concept_slugs": [
       "df-lanthanoids-actinoids"
@@ -927,28 +927,28 @@
     "question_format": "numerical",
     "notes": "Identify the primary oxidation state that characterizes the chemistry of the f-block lanthanoids.",
     "solution_text": "The electronic configurations of the lanthanoids show that they possess an outer $6s^2$ shell, with $5d$ and $4f$ electrons. Although variable oxidation states like +2 and +4 are exhibited by some elements (e.g. Ce, Eu, Yb), the +3 oxidation state is the most common, stable, and dominant state shown by all members of the series. Therefore, the answer is 3.",
-    "common_mistake": "Writing 4, confusing the general stable state with the specific state of Cerium ($\\\\text{Ce}^{4+}$).",
+    "common_mistake": "Writing 4, confusing the general stable state with the specific state of Cerium ($\\text{Ce}^{4+}$).",
     "concept_slugs": [
       "df-lanthanoids-actinoids"
     ]
   },
   {
     "pattern_group": "df-lanthanoids-actinoids",
-    "title": "Europium(II) ($\\\\text{Eu}^{2+}$) is a stable divalent ion that acts as a strong reducing agent. It is oxidized to the +3 state in water. Which of the following statements explains this behavior?",
+    "title": "Europium(II) ($\\text{Eu}^{2+}$) is a stable divalent ion that acts as a strong reducing agent. It is oxidized to the +3 state in water. Which of the following statements explains this behavior?",
     "difficulty": "hard",
     "type": "advanced",
     "correct_answer": "A",
     "is_numerical": false,
     "question_format": "mcq",
     "options": {
-      "A": "The $+3$ state is the most thermodynamically stable oxidation state for all lanthanoids in aqueous solution, driving the oxidation of $\\\\text{Eu}^{2+}$",
+      "A": "The $+3$ state is the most thermodynamically stable oxidation state for all lanthanoids in aqueous solution, driving the oxidation of $\\text{Eu}^{2+}$",
       "B": "Europium(II) has an unstable $4f^6$ configuration",
       "C": "Europium(III) has a stable fully-filled $4f^{14}$ configuration",
       "D": "Water acts as a strong oxidizing agent for all lanthanoid elements"
     },
     "notes": "Although Eu2+ has a half-filled 4f7 subshell, it still oxidizes to Eu3+ in water.",
-    "solution_text": "The $\\\\text{Eu}^{2+}$ ion has a half-filled $4f^7$ configuration, which gives it temporary stability in the +2 state. However, the +3 state is the overall thermodynamically favored and most stable state for all lanthanoids in aqueous solutions due to its high hydration and lattice energies. As a result, $\\\\text{Eu}^{2+}$ readily oxidizes to $\\\\text{Eu}^{3+}$ ($4f^6$), acting as a strong reducing agent: $\\\\text{Eu}^{2+} \\\\rightarrow \\\\text{Eu}^{3+} + e^-$. Option A is correct.",
-    "common_mistake": "Stating that $\\\\text{Eu}^{2+}$ has an unstable configuration (Option B); actually, $4f^7$ is quite stable, but the thermodynamics of the +3 aqueous ion still overcome this subshell symmetry stability.",
+    "solution_text": "The $\\text{Eu}^{2+}$ ion has a half-filled $4f^7$ configuration, which gives it temporary stability in the +2 state. However, the +3 state is the overall thermodynamically favored and most stable state for all lanthanoids in aqueous solutions due to its high hydration and lattice energies. As a result, $\\text{Eu}^{2+}$ readily oxidizes to $\\text{Eu}^{3+}$ ($4f^6$), acting as a strong reducing agent: $\\text{Eu}^{2+} \\rightarrow \\text{Eu}^{3+} + e^-$. Option A is correct.",
+    "common_mistake": "Stating that $\\text{Eu}^{2+}$ has an unstable configuration (Option B); actually, $4f^7$ is quite stable, but the thermodynamics of the +3 aqueous ion still overcome this subshell symmetry stability.",
     "concept_slugs": [
       "df-lanthanoids-actinoids"
     ]
