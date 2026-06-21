@@ -1,0 +1,980 @@
+[
+  {
+    "pattern_group": "carbonyl-preparation",
+    "title": "The catalyst used in the Rosenmund reduction of benzoyl chloride to benzaldehyde is:",
+    "difficulty": "easy",
+    "type": "pyq",
+    "source": "JEE Main 2021",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\text{Pd}$ on $\\text{BaSO}_4$ poisoned with sulfur or quinoline",
+      "B": "$\\text{Na}$ in liquid $\\text{NH}_3$",
+      "C": "$\\text{LiAlH}_4$ in ether",
+      "D": "$\\text{Zn-Hg}$ and concentrated $\\text{HCl}$"
+    },
+    "notes": "Identify the select reduction reagent for converting acid chlorides directly to aldehydes without further reduction to alcohol.",
+    "solution_text": "Rosenmund reduction involves the catalytic hydrogenation of acyl chlorides to aldehydes. The catalyst used is palladium ($\\text{Pd}$) supported on barium sulfate ($\\text{BaSO}_4$), which is poisoned/deactivated with sulfur or quinoline. The poison reduces the catalytic activity of palladium, preventing the further reduction of the newly formed aldehyde to a primary alcohol. Option A is correct.",
+    "common_mistake": "Selecting $\\text{LiAlH}_4$ (Option C) which is a strong reducing agent and would reduce benzoyl chloride completely to benzyl alcohol.",
+    "concept_slugs": [
+      "carbonyl-preparation"
+    ]
+  },
+  {
+    "pattern_group": "carbonyl-preparation",
+    "title": "In the Etard reaction, toluene is oxidized to benzaldehyde using chromyl chloride ($\\text{CrO}_2\\text{Cl}_2$) in $\\text{CS}_2$. The brown chromium complex formed as an intermediate has the structure:",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2022",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\text{C}_6\\text{H}_5\\text{CH}(\\text{OCrCl}_2\\text{OH})_2$",
+      "B": "$\\text{C}_6\\text{H}_5\\text{CH}_2\\text{OCrO}_2\\text{Cl}$",
+      "C": "$\\text{C}_6\\text{H}_5\\text{COOCrO}_2\\text{Cl}$",
+      "D": "$\\text{C}_6\\text{H}_5\\text{CH}(\\text{OCrOCl}_2)_2$"
+    },
+    "notes": "Recall the intermediate structure of the Etard reaction before acidic hydrolysis.",
+    "solution_text": "In the Etard reaction, chromyl chloride ($\\text{CrO}_2\\text{Cl}_2$) oxidizes the methyl group of toluene in carbon disulfide ($\\text{CS}_2$) solvent. It forms a brown-colored insoluble chromium complex intermediate. The structure of this di-adduct complex is $\\text{C}_6\\text{H}_5\\text{CH}(\\text{OCrCl}_2\\text{OH})_2$. On subsequent mild acidic hydrolysis, this complex breaks down to yield benzaldehyde. Option A is correct.",
+    "common_mistake": "Selecting Option D or B, which do not show the correct oxidation state or stoichiometry of the chromium-oxygen bonds in the Etard intermediate.",
+    "concept_slugs": [
+      "carbonyl-preparation"
+    ]
+  },
+  {
+    "pattern_group": "carbonyl-preparation",
+    "title": "The Stephen reaction converts alkyl nitriles ($\\text{R-CN}$) to aldehydes ($\\text{R-CHO}$) using which of the following reagent systems?",
+    "difficulty": "easy",
+    "type": "concept",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\text{SnCl}_2 + \\text{HCl}$ followed by hydrolysis",
+      "B": "$\\text{LiAlH}_4$ followed by hydrolysis",
+      "C": "$\\text{DIBAL-H}$ followed by dry ice",
+      "D": "$\\text{Zn} + \\text{HCl}$ followed by steam distillation"
+    },
+    "notes": "Stephen reaction involves reduction of nitrile to an aldimine salt, which is subsequently hydrolyzed to an aldehyde.",
+    "solution_text": "The Stephen reduction converts nitriles to aldehydes by treating them with gaseous $\\text{HCl}$ and tin(II) chloride ($\\text{SnCl}_2$) in ether. This reduces the nitrile to an aldimine hydrochloride salt ($[\\text{R-CH}=\\text{NH}_2]^+ \\text{Cl}^-$). Subsequent hydrolysis of this imine salt with warm water yields the corresponding aldehyde. Option A is correct.",
+    "common_mistake": "Selecting $\\text{LiAlH}_4$ (Option B), which reduces nitriles to primary amines ($_2$), not aldehydes.",
+    "concept_slugs": [
+      "carbonyl-preparation"
+    ]
+  },
+  {
+    "pattern_group": "carbonyl-preparation",
+    "title": "Which of the following starting materials on reaction with $\\text{DIBAL-H}$ at $-78^\\circ\\text{C}$ followed by low-temperature hydrolysis yields an aldehyde as the major product?",
+    "difficulty": "medium",
+    "type": "concept",
+    "correct_answer": "D",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Ethyl acetate (ester)",
+      "B": "Acetonitrile (nitrile)",
+      "C": "Acetyl chloride (acid chloride)",
+      "D": "All of the above"
+    },
+    "notes": "DIBAL-H is diisobutylaluminium hydride, a bulky and selective reducing agent. Low temperature prevents over-reduction.",
+    "solution_text": "Diisobutylaluminium hydride ($\\text{DIBAL-H}$) is a highly selective, electrophilic reducing agent. At very low temperatures ($-78^\\circ\\text{C}$), it reduces esters (like ethyl acetate), nitriles (like acetonitrile), and acid chlorides (like acetyl chloride) to stable hemiacetal or imine intermediates. Upon aqueous workup, these intermediates hydrolyze cleanly to give the corresponding aldehydes. Since all listed compounds can be reduced to aldehydes by $\\text{DIBAL-H}$, Option D is correct.",
+    "common_mistake": "Believing $\\text{DIBAL-H}$ can only reduce esters to aldehydes, forgetting that it is also highly effective for nitriles and acid chlorides under similar conditions.",
+    "concept_slugs": [
+      "carbonyl-preparation"
+    ]
+  },
+  {
+    "pattern_group": "carbonyl-preparation",
+    "title": "Formylation of benzene to benzaldehyde by the Gattermann-Koch reaction requires passing which gaseous mixture through benzene in the presence of catalysts?",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\text{CO} + \\text{HCl}$ in the presence of anhydrous $\\text{AlCl}_3/\\text{CuCl}$",
+      "B": "$\\text{HCN} + \\text{HCl}$ in the presence of $\\text{AlCl}_3$",
+      "C": "$\\text{CHCl}_3 + \\text{NaOH}$",
+      "D": "$\\text{HCHO} + \\text{HCl}$"
+    },
+    "notes": "Distinguish between Gattermann-Koch reaction (using carbon monoxide) and Gattermann aldehyde synthesis (using hydrogen cyanide).",
+    "solution_text": "The Gattermann-Koch reaction is an electrophilic aromatic substitution used to formylate benzene to benzaldehyde. It requires passing a stream of carbon monoxide ($\\text{CO}$) and hydrogen chloride ($\\text{HCl}$) gas through benzene in the presence of anhydrous aluminium chloride ($\\text{AlCl}_3$) and copper(I) chloride ($\\text{CuCl}$) as catalysts. Option A is correct.",
+    "common_mistake": "Selecting Option B, which is the Gattermann aldehyde synthesis that uses $\\text{HCN} + \\text{HCl}$ (commonly used for activated phenols/ethers, whereas Gattermann-Koch is used for benzene/alkylbenzenes).",
+    "concept_slugs": [
+      "carbonyl-preparation"
+    ]
+  },
+  {
+    "pattern_group": "carbonyl-preparation",
+    "title": "Dry distillation of a mixture of calcium acetate and calcium formate yields which of the following as the major organic product?",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Acetaldehyde",
+      "B": "Acetone",
+      "C": "Formaldehyde",
+      "D": "Ethyl acetate"
+    },
+    "notes": "Identify the cross-distillation product formed when two different calcium carboxylate salts are heated together.",
+    "solution_text": "Dry distillation of calcium salts of carboxylic acids:\n- Heating calcium acetate alone yields acetone: $(\\text{CH}_3\\text{COO})_2\\text{Ca} \\rightarrow \\text{CH}_3\\text{COCH}_3 + \\text{CaCO}_3$.\n- Heating calcium formate alone yields formaldehyde: $(\\text{HCOO})_2\\text{Ca} \\rightarrow \\text{HCHO} + \\text{CaCO}_3$.\nWhen a mixture of calcium acetate and calcium formate is dry-distilled, a cross-reaction occurs between the acetate and formate fragments: $(\\text{CH}_3\\text{COO})_2\\text{Ca} + (\\text{HCOO})_2\\text{Ca} \\rightarrow 2\\text{CH}_3\\text{CHO} + 2\\text{CaCO}_3$. This cross-distillation yields acetaldehyde as the major product. Option A is correct.",
+    "common_mistake": "Assuming only acetone (Option B) and formaldehyde (Option C) are formed as separate products, neglecting the cross-reaction which is kinetically favored.",
+    "concept_slugs": [
+      "carbonyl-preparation"
+    ]
+  },
+  {
+    "pattern_group": "carbonyl-preparation",
+    "title": "The industrial oxidation of ethene to acetaldehyde using palladium chloride ($\\text{PdCl}_2$) and copper(II) chloride ($\\text{CuCl}_2$) catalysts in water is known as the:",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Wacker process",
+      "B": "Oxo process",
+      "C": "Hydroformylation",
+      "D": "Fischer-Tropsch process"
+    },
+    "notes": "Recall the transition metal catalyzed industrial oxidation of ethylene.",
+    "solution_text": "The Wacker process is an industrial method for producing acetaldehyde from ethylene (ethene). Ethene is oxidized by aqueous palladium(II) chloride ($\\text{PdCl}_2$) to form acetaldehyde. The palladium is reduced to metallic $\\text{Pd}^0$, which is then re-oxidized back to $\\text{Pd}^{2+}$ by copper(II) chloride ($\\text{CuCl}_2$) in the presence of air/oxygen. Option A is correct.",
+    "common_mistake": "Selecting Hydroformylation/Oxo process (Option C), which converts alkenes to aldehydes by adding carbon monoxide and hydrogen ($\\text{CO} + \\text{H}_2$).",
+    "concept_slugs": [
+      "carbonyl-preparation"
+    ]
+  },
+  {
+    "pattern_group": "carbonyl-preparation",
+    "title": "A hydrocarbon with molecular formula $\\text{C}_8\\text{H}_{12}$ on reductive ozonolysis yields exactly 2 moles of formaldehyde ($\\text{HCHO}$) and 1 mole of hexanedial ($\\text{OHC-(CH}_2)_4-\\text{CHO}$). The number of double bonds present in this hydrocarbon is ________.",
+    "difficulty": "medium",
+    "type": "advanced",
+    "correct_answer": "2",
+    "is_numerical": true,
+    "notes": "Analyze the number of carbonyl groups formed. Each double bond cleaved yields 2 carbonyl groups.",
+    "solution_text": "Reductive ozonolysis of double bonds:\n- The products are 2 moles of formaldehyde ($\\text{HCHO}$) containing 2 carbonyl groups total.\n- 1 mole of hexanedial ($\\text{OHC-(CH}_2)_4-\\text{CHO}$) containing 2 carbonyl groups total.\n- Total carbonyl groups in products $= 2 + 2 = 4$.\nSince each carbon-carbon double bond ($\\text{C}=\\text{C}$) on cleavage yields exactly 2 carbonyl groups ($=\\text{O}$), the starting hydrocarbon must contain $4 / 2 = 2$ double bonds. (The structure is octa-1,7-diene, $\\text{CH}_2=\\text{CH-(CH}_2)_4-\\text{CH}=\\text{CH}_2$, which has 2 double bonds).",
+    "common_mistake": "Writing 3 or 4, confusing the number of moles of products with the number of double bonds in the reactant.",
+    "concept_slugs": [
+      "carbonyl-preparation"
+    ]
+  },
+  {
+    "pattern_group": "nucleophilic-addition",
+    "title": "The correct decreasing order of reactivity of the following carbonyl compounds towards nucleophilic addition reactions is:\n1) $\\text{HCHO}$\n2) $\\text{CH}_3\\text{CHO}$\n3) $\\text{CH}_3\\text{COCH}_3$\n4) $\\text{PhCOCH}_3$",
+    "difficulty": "easy",
+    "type": "pyq",
+    "source": "JEE Main 2021",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "1 > 2 > 3 > 4",
+      "B": "4 > 3 > 2 > 1",
+      "C": "1 > 3 > 2 > 4",
+      "D": "2 > 1 > 3 > 4"
+    },
+    "notes": "Evaluate reactivity based on steric hindrance around the carbonyl carbon and the electronic inductive (+I) and resonance effects of substituents.",
+    "solution_text": "Reactivity of carbonyls towards nucleophilic addition depends on:\n1) Steric factors: Bulky groups block the incoming nucleophile. Reactivity: Aldehydes > Ketones.\n2) Electronic factors: Electron-donating groups reduce the electrophilic character (partial positive charge, $\\text{C}^{\\delta+}$) of the carbonyl carbon.\n- Formaldehyde (1): No alkyl groups (Least steric hindrance, most electrophilic).\n- Acetaldehyde (2): One methyl group (+I, minor hindrance).\n- Acetone (3): Two methyl groups (+I, moderate hindrance).\n- Acetophenone (4): A phenyl group (resonance electron donation to the carbonyl makes it much less electrophilic, plus significant steric hindrance).\nThus, the reactivity order is: 1 > 2 > 3 > 4. Option A is correct.",
+    "common_mistake": "Putting acetone (3) as more reactive than acetaldehyde (2) or vice versa, or forgetting that resonance stabilization of aromatic ketones highly deactivates them.",
+    "concept_slugs": [
+      "nucleophilic-addition"
+    ]
+  },
+  {
+    "pattern_group": "nucleophilic-addition",
+    "title": "The addition of $\\text{HCN}$ to benzaldehyde is catalyzed by a base. The role of the base is to:",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2022",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Protonate the carbonyl oxygen atom to activate the carbonyl carbon",
+      "B": "Generate the highly nucleophilic cyanide ion ($\\text{CN}^-$) from the weak acid $\\text{HCN}$",
+      "C": "Stabilize the cyanohydrin product through hydrogen bonding",
+      "D": "Dehydrate the intermediate tetrahedral adduct"
+    },
+    "notes": "HCN is a weak acid (pKa ~ 9.2) and a poor nucleophile on its own. Addition requires a strong nucleophile.",
+    "solution_text": "Hydrocyanic acid ($\\text{HCN}$) is a weak acid and exists predominantly in molecular form in solution. Because it is neutral, it is a weak nucleophile and reacts very slowly with carbonyl compounds. Adding a base (such as $\\text{OH}^-$) deprotonates $\\text{HCN}$ to generate the cyanide ion ($\\text{CN}^-$), which is a strong, charged nucleophile. The cyanide ion then rapidly attacks the carbonyl carbon to initiate the addition. Option B is correct.",
+    "common_mistake": "Selecting Option A, which is the role of an acid catalyst (protonating oxygen to increase carbon's electrophilicity), not a base.",
+    "concept_slugs": [
+      "nucleophilic-addition"
+    ]
+  },
+  {
+    "pattern_group": "nucleophilic-addition",
+    "title": "Reaction of methylmagnesium bromide (Grignard reagent) with formaldehyde followed by acid hydrolysis yields which of the following alcohols?",
+    "difficulty": "easy",
+    "type": "concept",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Ethanol",
+      "B": "Propan-2-ol",
+      "C": "Propan-1-ol",
+      "D": "Methanol"
+    },
+    "notes": "Evaluate the product class formed when Grignard reagents react with different classes of aldehydes: formaldehyde vs other aldehydes.",
+    "solution_text": "Grignard reagent reaction rules:\n- Formaldehyde ($\\text{HCHO}$) + Grignard reagent $\\rightarrow$ Primary ($1^circ$) alcohol.\n- Other aldehydes ($\\text{RCHO}$) + Grignard reagent $\\rightarrow$ Secondary ($2^circ$) alcohol.\n- Ketones ($\\text{R}_2\\text{CO}$) + Grignard reagent $\\rightarrow$ Tertiary ($3^circ$) alcohol.\nReacting methylmagnesium bromide ($\\text{CH}_3\\text{MgBr}$) with formaldehyde ($\\text{HCHO}$) adds a methyl group to the carbonyl carbon: $\\text{CH}_3-\\text{CH}_2-\\text{OMgBr}$. Acid hydrolysis yields ethanol ($\\text{CH}_3\\text{CH}_2\\text{OH}$), a primary alcohol. Option A is correct.",
+    "common_mistake": "Choosing propan-2-ol (Option B) which would be formed from acetaldehyde, or methanol (Option D).",
+    "concept_slugs": [
+      "nucleophilic-addition"
+    ]
+  },
+  {
+    "pattern_group": "nucleophilic-addition",
+    "title": "Which of the following cyclic structures is formed when D-glucose undergoes intramolecular hemiacetal formation between the C5-hydroxyl group and the C1-aldehyde group?",
+    "difficulty": "medium",
+    "type": "concept",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "A 5-membered furanose ring",
+      "B": "A 6-membered pyranose ring",
+      "C": "A 4-membered oxetane ring",
+      "D": "A 7-membered oxepane ring"
+    },
+    "notes": "Count the number of atoms involved in the cyclic ring, including the carbonyl carbon C1, C2, C3, C4, C5, and the C5 oxygen.",
+    "solution_text": "When D-glucose forms a cyclic structure, the hydroxyl group at C5 acts as an intramolecular nucleophile and attacks the aldehyde carbonyl carbon at C1. The ring is formed by the carbon atoms C1, C2, C3, C4, and C5, and the oxygen atom from the C5 hydroxyl group. This ring consists of 5 carbons and 1 oxygen, totaling 6 atoms. A six-membered cyclic hemiacetal is called a pyranose ring. Option B is correct.",
+    "common_mistake": "Selecting furanose ring (Option A), which is a 5-membered ring (formed in fructose cyclic structures, or when glucose reacts at C4-hydroxyl).",
+    "concept_slugs": [
+      "nucleophilic-addition"
+    ]
+  },
+  {
+    "pattern_group": "nucleophilic-addition",
+    "title": "Aldehydes and methyl ketones react with saturated sodium bisulfite ($\\text{NaHSO}_3$) solution to form crystalline white adducts. This reaction is widely used for:",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Reduction of carbonyl groups to hydrocarbons",
+      "B": "Purification and separation of aldehydes and methyl ketones from non-carbonyl mixtures",
+      "C": "Oxidation of methyl groups to carboxylic acids",
+      "D": "Ring opening of cyclic ketones to form sulfonic acids"
+    },
+    "notes": "Consider the solubility of these adducts and the reversibility of the bisulfite addition reaction.",
+    "solution_text": "Aldehydes and methyl ketones react with saturated aqueous $\\text{NaHSO}_3$ to form water-soluble, crystalline bisulfite addition compounds. Since this addition is highly reversible, the crystalline adducts can be filtered off to separate them from non-carbonyl compounds (such as esters or alcohols) and then treated with dilute acid or base to regenerate the pure aldehyde or ketone in high yield. Thus, it is used for purification and separation. Option B is correct.",
+    "common_mistake": "Assuming it is a reduction method (Option A) due to the presence of sulfur, rather than a simple reversible addition process.",
+    "concept_slugs": [
+      "nucleophilic-addition"
+    ]
+  },
+  {
+    "pattern_group": "nucleophilic-addition",
+    "title": "Reaction of cyclopentanone with excess methylmagnesium iodide followed by acid hydrolysis yields a tertiary alcohol. The number of methyl groups attached to the hydroxyl-bearing carbon in the product is ________.",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "1",
+    "is_numerical": true,
+    "notes": "Evaluate the structure of the cyclic ketone and trace how many alkyl groups are added to the carbonyl carbon.",
+    "solution_text": "Cyclopentanone is a cyclic ketone. Its carbonyl carbon (C1) is already bonded to two other carbons of the cyclopentane ring (making it a ketone). When methylmagnesium iodide ($\\text{CH}_3\\text{MgI}$) attacks the carbonyl carbon, it adds exactly 1 methyl group to C1. Subsequent protonation yields 1-methylcyclopentanol, where the hydroxyl-bearing carbon (C1) is attached to the ring carbons (2 bonds) and exactly 1 methyl group (1 bond). Thus, the number of methyl groups attached to the hydroxyl-bearing carbon is 1.",
+    "common_mistake": "Writing 2, confusing acyclic ketones (like acetone which already has methyls) with cyclic ketones where the methyl is the only newly added group.",
+    "concept_slugs": [
+      "nucleophilic-addition"
+    ]
+  },
+  {
+    "pattern_group": "nucleophilic-addition",
+    "title": "Acetals are stable in which of the following media, but hydrolyze back to aldehydes and alcohols in the other?",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Stable in acidic medium, hydrolyze in basic medium",
+      "B": "Stable in basic medium, hydrolyze in acidic medium",
+      "C": "Stable in both media",
+      "D": "Hydrolyze in both media"
+    },
+    "notes": "Think about the mechanism of acetal hydrolysis. It requires protonation of an alkoxy oxygen, which cannot occur in basic conditions.",
+    "solution_text": "Acetals ($\\text{R-CH(OR')}_2$) are diether derivatives. Ethers and acetals are highly stable in basic media because basic nucleophiles (like $\\text{OH}^-$) cannot attack or displace the alkoxy groups. However, in acidic media, the oxygen of one alkoxy group is protonated to form a good leaving group ($-\\text{HO}^+-\\text{R}'$), which leaves to form a highly stabilized oxocarbocation intermediate. Water then attacks this intermediate to hydrolyze it back to the aldehyde and alcohols. Thus, acetals are stable in base but hydrolyze in acid. Option B is correct.",
+    "common_mistake": "Selecting Option A, reversing the properties of acetals which are commonly used as protecting groups for carbonyls in basic reactions.",
+    "concept_slugs": [
+      "nucleophilic-addition"
+    ]
+  },
+  {
+    "pattern_group": "nucleophilic-addition",
+    "title": "Nucleophilic addition of a nucleophile to a chiral aldehyde (having an asymmetric center adjacent to the carbonyl group) yields unequal amounts of diastereomers. This stereochemical preference is predicted by:",
+    "difficulty": "hard",
+    "type": "advanced",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Cram's rule",
+      "B": "Markovnikov's rule",
+      "C": "Hofmann's rule",
+      "D": "Saytzeff's rule"
+    },
+    "notes": "Identify the rule that models nucleophilic attack on aldehydes with an adjacent chiral carbon using conformations.",
+    "solution_text": "Cram's rule is a stereochemical model that predicts the diastereoselective outcome of nucleophilic additions to carbonyl carbons adjacent to an asymmetric/chiral carbon. It assumes that the carbonyl oxygen aligns anti to the largest substituent on the chiral carbon to minimize steric clashes, and the nucleophile attacks from the side of the smallest substituent. Option A is correct.",
+    "common_mistake": "Selecting Markovnikov's or Saytzeff's rules, which govern additions to double bonds and orientations in eliminations, not diastereoselectivity of carbonyl additions.",
+    "concept_slugs": [
+      "nucleophilic-addition"
+    ]
+  },
+  {
+    "pattern_group": "ammonia-derivatives-addition",
+    "title": "Brady's reagent is used for the qualitative identification of aldehydes and ketones. It consists of:",
+    "difficulty": "easy",
+    "type": "pyq",
+    "source": "JEE Main 2021",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "2,4-Dinitrophenylhydrazine in acidic solution",
+      "B": "Ammoniacal silver nitrate solution",
+      "C": "Alkaline copper sulfate and sodium potassium tartrate",
+      "D": "Hydroxylamine hydrochloride in basic solution"
+    },
+    "notes": "Brady's reagent reacts with carbonyl groups to form bright yellow, orange, or red crystalline precipitates.",
+    "solution_text": "Brady's reagent is a solution of 2,4-dinitrophenylhydrazine (2,4-DNP) in methanol and concentrated sulfuric acid. It reacts with the carbonyl group of aldehydes and ketones through nucleophilic addition-elimination to form 2,4-dinitrophenylhydrazones, which are crystalline solids with distinctive melting points and bright yellow, orange, or red colors. Option A is correct.",
+    "common_mistake": "Selecting Tollens' reagent (Option B) or Fehling's solution (Option C), which are oxidants that selectively identify aldehydes but do not react with ketones.",
+    "concept_slugs": [
+      "ammonia-derivatives-addition"
+    ]
+  },
+  {
+    "pattern_group": "ammonia-derivatives-addition",
+    "title": "Semicarbazide ($\\text{NH}_2\\text{NHCONH}_2$) reacts with benzaldehyde to form semicarbazone. Which nitrogen atom of semicarbazide is nucleophilic and participates in the condensation reaction?",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2022",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "The nitrogen of the amide group ($-\\text{CONH}_2$)",
+      "B": "The terminal hydrazine nitrogen ($-\\text{NH}_2$ adjacent to $-\\text{NH}-$)",
+      "C": "The internal $-\\text{NH}-$ nitrogen",
+      "D": "All three nitrogen atoms are equally nucleophilic"
+    },
+    "notes": "Analyze lone-pair resonance delocalization in semicarbazide. The most nucleophilic nitrogen is the one whose lone pair cannot undergo resonance with the carbonyl.",
+    "solution_text": "Semicarbazide, $\\text{H}_2\\text{N}^1-\\text{N}^2\\text{H}-\\text{CO}-\\text{N}^3\\text{H}_2$, has three nitrogen atoms:\n1) The amide nitrogen ($\\text{N}^3$) has its lone pair highly delocalized into the carbonyl group via resonance: $-\\ddot{\\text{N}}\\text{H}_2\\leftrightarrow -\\text{N}^+=\\text{C}-\\text{O}^-$.\n2) The internal nitrogen ($\\text{N}^2$) also has its lone pair delocalized into the carbonyl.\n3) The terminal hydrazine nitrogen ($\\text{N}^1$) is too far from the carbonyl group to participate in resonance with it. Its lone pair remains localized and highly nucleophilic.\nThus, only the terminal $-\\text{NH}_2$ adjacent to the $-\\text{NH}-$ group attacks the carbonyl carbon to form the semicarbazone. Option B is correct.",
+    "common_mistake": "Assuming the amide nitrogen (Option A) participates because it is terminal, forgetting that amide resonance heavily reduces its nucleophilicity.",
+    "concept_slugs": [
+      "ammonia-derivatives-addition"
+    ]
+  },
+  {
+    "pattern_group": "ammonia-derivatives-addition",
+    "title": "The reaction of acetaldehyde with hydroxylamine ($\\text{NH}_2\\text{OH}$) in weakly acidic medium yields an oxime which can exhibit:",
+    "difficulty": "easy",
+    "type": "concept",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Geometrical isomerism (syn/anti)",
+      "B": "Optical isomerism",
+      "C": "Tautomerism",
+      "D": "Conformational isomerism"
+    },
+    "notes": "Evaluate the structure of the imine-like double bond ($\\text{C}=\\text{N}$) in the oxime.",
+    "solution_text": "Acetaldehyde ($\\text{CH}_3\\text{CHO}$) reacts with hydroxylamine ($\\text{NH}_2\\text{OH}$) to form acetaldehyde oxime: $\\text{CH}_3\\text{CH}=\\text{N-OH}$. The nitrogen atom has a lone pair and a hydroxyl group, while the carbon is bonded to a hydrogen and a methyl group. Since both carbon and nitrogen are bonded to two different groups, the $\\text{C}=\\text{N}$ double bond displays restricted rotation and gives rise to geometrical isomers: syn (H and OH on the same side) and anti (H and OH on opposite sides). Option A is correct.",
+    "common_mistake": "Selecting optical isomerism (Option B), but the molecule has no chiral carbon center.",
+    "concept_slugs": [
+      "ammonia-derivatives-addition"
+    ]
+  },
+  {
+    "pattern_group": "ammonia-derivatives-addition",
+    "title": "In the reaction of carbonyl compounds with amine nucleophiles like hydroxylamine, why is the reaction rate maximum at an optimum pH ($\\approx 3.5-4.5$), dropping at both highly acidic and basic pH?",
+    "difficulty": "medium",
+    "type": "concept",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "At low pH, the amine is protonated and deactivated; at high pH, the carbonyl is not protonated and activated",
+      "B": "The amine nucleophile decomposes in basic solution",
+      "C": "The carbonyl undergoes rapid hydration at neutral pH",
+      "D": "Water molecules act as inhibitors at extreme pH levels"
+    },
+    "notes": "Consider the balance between activating the electrophile (carbonyl) and preserving the nucleophile (amine).",
+    "solution_text": "The addition-elimination mechanism requires protonation of the carbonyl oxygen to make it more electrophilic. However, the nucleophile is a weak amine base ($\\text{NH}_2\\text{OH}$):\n- At highly acidic pH (< 3), the amine is completely protonated to $[\\text{NH}_3\\text{OH}]^+$, which has no lone pair and cannot act as a nucleophile.\n- At basic pH (> 6), there is insufficient acid to protonate the carbonyl oxygen, slowing down the dehydration step.\nTherefore, the rate is maximized at an intermediate, weakly acidic pH ($\\approx 3.5-4.5$) where there is enough acid to catalyze the reaction but not enough to completely protonate the amine. Option A is correct.",
+    "common_mistake": "Thinking the amine is destroyed in basic solution (Option B), rather than understanding the equilibrium of amine protonation.",
+    "concept_slugs": [
+      "ammonia-derivatives-addition"
+    ]
+  },
+  {
+    "pattern_group": "ammonia-derivatives-addition",
+    "title": "Reaction of acetone with hydrazine ($\\text{NH}_2\\text{NH}_2$) yields an intermediate hydrazone, which upon heating with potassium hydroxide ($\\text{KOH}$) in ethylene glycol solvent yields:",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Propane",
+      "B": "Propan-2-ol",
+      "C": "Propanal",
+      "D": "Isopropylamine"
+    },
+    "notes": "Identify the Wolff-Kishner reduction reagent combination and the class of organic products formed.",
+    "solution_text": "The treatment of a carbonyl compound with hydrazine ($\\text{NH}_2\\text{NH}_2$) followed by heating with a strong base ($\\text{KOH}$) in a high-boiling solvent like ethylene glycol is the Wolff-Kishner reduction. This reaction reduces the $\\text{C}=\\text{O}$ group to a $-\\text{CH}_2-$ group. For acetone ($\\text{CH}_3\\text{COCH}_3$), the carbonyl carbon is reduced to methylene, yielding propane ($\\text{CH}_3\\text{CH}_2\\text{CH}_3$). Option A is correct.",
+    "common_mistake": "Selecting propan-2-ol (Option B), which is formed by simple metal hydride reductions (like $\\text{NaBH}_4$), not Wolff-Kishner reduction.",
+    "concept_slugs": [
+      "ammonia-derivatives-addition"
+    ]
+  },
+  {
+    "pattern_group": "ammonia-derivatives-addition",
+    "title": "Condensation of primary amines with aldehydes or ketones yields imines, commonly known as Schiff's bases. The general functional group structure of a Schiff's base is:",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\text{R}_2\\text{C}=\\text{N-R}'$",
+      "B": "$\\text{R-CO-NH-R}'$",
+      "C": "$\\text{R-NH-NH}_2$",
+      "D": "$\\text{R-CH}=\\text{N-OH}$"
+    },
+    "notes": "Imine group is characterized by a carbon-nitrogen double bond ($\\text{C}=\\text{N}$).",
+    "solution_text": "Schiff's bases are imines formed by the condensation of primary amines ($\\text{R}'-\\text{NH}_2$) with aldehydes or ketones ($\\text{R}_2\\text{CO}$) under loss of water. They feature a carbon-nitrogen double bond where the nitrogen is attached to an alkyl or aryl group: $\\text{R}_2\\text{C}=\\text{N-R}'$. Option A is correct.",
+    "common_mistake": "Selecting Option B, which is an amide, or Option D, which is an oxime.",
+    "concept_slugs": [
+      "ammonia-derivatives-addition"
+    ]
+  },
+  {
+    "pattern_group": "ammonia-derivatives-addition",
+    "title": "The acid-catalyzed Beckmann rearrangement of cyclohexanone oxime yields caprolactam. The ring size (number of atoms in the cyclic ring) of this caprolactam molecule is ________.",
+    "difficulty": "hard",
+    "type": "practice",
+    "correct_answer": "7",
+    "is_numerical": true,
+    "notes": "Beckmann rearrangement of cyclic oximes involves ring expansion by inserting a nitrogen atom into the ring.",
+    "solution_text": "Cyclohexanone oxime is a 6-membered ring compound. Under acidic conditions, the oxime group undergoes a Beckmann rearrangement where the carbon-carbon bond anti to the leaving $-\\text{OH}$ group migrates to the nitrogen atom. This inserts the nitrogen atom directly into the ring structure, expanding the 6-membered ring into a 7-membered cyclic amide (caprolactam containing 6 carbons and 1 nitrogen). Therefore, the ring size is 7.",
+    "common_mistake": "Writing 6, assuming that the ring size does not change during the rearrangement of a cyclohexyl ring.",
+    "concept_slugs": [
+      "ammonia-derivatives-addition"
+    ]
+  },
+  {
+    "pattern_group": "ammonia-derivatives-addition",
+    "title": "Which of the following ketones reacts with hydroxylamine to yield an oxime that exists as a pair of stable, resolvable geometrical isomers (syn and anti)?",
+    "difficulty": "hard",
+    "type": "advanced",
+    "correct_answer": "C",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Acetone",
+      "B": "Benzophenone",
+      "C": "Acetophenone",
+      "D": "Cyclohexanone"
+    },
+    "notes": "For geometrical isomers to exist around the $\\text{C}=\\text{N}$ bond of an oxime, the two groups on the carbonyl carbon must be different.",
+    "solution_text": "An oxime has the general formula $\\text{R}^1\\text{R}^2\\text{C}=\\text{N-OH}$. The nitrogen atom is always bonded to $-\\text{OH}$ and has a lone pair (two different groups). For the carbon to also have two different groups (and thus display geometrical isomerism), $\\text{R}^1$ must not be equal to $\\text{R}^2$:\n- Acetone: $\\text{R}^1 = \\text{R}^2 = -\\text{CH}_3$ (symmetrical, no isomers).\n- Benzophenone: $\\text{R}^1 = \\text{R}^2 = -\\text{C}_6\\text{H}_5$ (symmetrical, no isomers).\n- Cyclohexanone: symmetrical ring (no isomers).\n- Acetophenone: $\\text{R}^1 = -\\text{CH}_3$ and $\\text{R}^2 = -\\text{C}_6\\text{H}_5$ (unsymmetrical, yields syn and anti oxime isomers). Option C is correct.",
+    "common_mistake": "Selecting benzophenone (Option B) because of its bulk, forgetting that it is symmetrical and therefore cannot yield distinct geometrical isomers.",
+    "concept_slugs": [
+      "ammonia-derivatives-addition"
+    ]
+  },
+  {
+    "pattern_group": "aldol-cannizzaro",
+    "title": "When acetaldehyde is treated with dilute $\\text{NaOH}$ followed by heating, the major product is:",
+    "difficulty": "easy",
+    "type": "pyq",
+    "source": "JEE Main 2021",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Crotonaldehyde (but-2-enal)",
+      "B": "3-hydroxybutanal",
+      "C": "Ethyl acetate",
+      "D": "Butan-1-ol"
+    },
+    "notes": "Acetaldehyde has alpha-hydrogens. Dilute base initiates aldol addition, and subsequent heating causes dehydration of the beta-hydroxy aldehyde.",
+    "solution_text": "Acetaldehyde ($\\text{CH}_3\\text{CHO}$) undergoes aldol condensation in the presence of dilute base:\n1) Deprotonation forms the enolate: $^-\\text{CH}_2\\text{CHO}$.\n2) Nucleophilic attack on a second acetaldehyde molecule yields a $\\beta$-hydroxy aldehyde: $\\text{CH}_3-\\text{CH(OH)}-\\text{CH}_2-\\text{CHO}$ (aldol product).\n3) Upon heating, dehydration occurs readily due to the acidic alpha-hydrogen and the formation of a conjugated system, yielding crotonaldehyde (but-2-enal, $\\text{CH}_3-\\text{CH}=\\text{CH}-\\text{CHO}$). Option A is correct.",
+    "common_mistake": "Selecting 3-hydroxybutanal (Option B) by forgetting that the reaction specifies heating, which forces the dehydration of the initial aldol addition product.",
+    "concept_slugs": [
+      "aldol-cannizzaro"
+    ]
+  },
+  {
+    "pattern_group": "aldol-cannizzaro",
+    "title": "In the crossed Cannizzaro reaction between benzaldehyde and formaldehyde in the presence of concentrated $\\text{NaOH}$, the oxidation and reduction products are respectively:",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2023",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Sodium formate and benzyl alcohol",
+      "B": "Sodium benzoate and methyl alcohol",
+      "C": "Sodium benzoate and sodium formate",
+      "D": "Benzyl alcohol and methyl alcohol"
+    },
+    "notes": "Compare the electrophilic reactivity of the two aldehydes towards hydroxide attack. The more reactive aldehyde is oxidized.",
+    "solution_text": "In a crossed Cannizzaro reaction, the aldehyde that is more reactive towards nucleophilic attack will be attacked by the hydroxide ion first to form the tetrahedral intermediate which acts as the hydride donor (and is oxidized):\n- Formaldehyde ($\\text{HCHO}$) has no electron-donating alkyl groups and is sterically completely open. It is much more electrophilic than benzaldehyde ($\\text{C}_6\\text{H}_5\\text{CHO}$).\n- Hydroxide attacks formaldehyde, which then transfers a hydride ion to benzaldehyde.\n- Formaldehyde is oxidized to sodium formate, and benzaldehyde is reduced to benzyl alcohol. Option A is correct.",
+    "common_mistake": "Selecting sodium benzoate and methyl alcohol (Option B), reversing the oxidation and reduction partners.",
+    "concept_slugs": [
+      "aldol-cannizzaro"
+    ]
+  },
+  {
+    "pattern_group": "aldol-cannizzaro",
+    "title": "Which of the following compounds does not undergo the Cannizzaro reaction upon heating with concentrated alkali?",
+    "difficulty": "easy",
+    "type": "concept",
+    "correct_answer": "C",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Benzaldehyde",
+      "B": "Formaldehyde",
+      "C": "Acetaldehyde",
+      "D": "Trimethylacetaldehyde (2,2-dimethylpropanal)"
+    },
+    "notes": "Cannizzaro reaction is only undergone by aldehydes that lack alpha-hydrogens.",
+    "solution_text": "The Cannizzaro reaction is a base-catalyzed disproportionation of aldehydes lacking $\\alpha$-hydrogens. If an aldehyde has $\\alpha$-hydrogens (like acetaldehyde, $\\text{CH}_3\\text{CHO}$), treatment with base results in rapid deprotonation to form an enolate, leading to Aldol condensation instead. Benzaldehyde, formaldehyde, and trimethylacetaldehyde all lack $\\alpha$-hydrogens and undergo Cannizzaro reaction. Thus, acetaldehyde does not. Option C is correct.",
+    "common_mistake": "Selecting trimethylacetaldehyde (Option D), assuming that because it has methyl groups it must have alpha-hydrogens, whereas those methyls are attached to the beta-carbon, leaving C2 (alpha-carbon) quaternary and hydrogen-free.",
+    "concept_slugs": [
+      "aldol-cannizzaro"
+    ]
+  },
+  {
+    "pattern_group": "aldol-cannizzaro",
+    "title": "Intramolecular aldol condensation of hexane-2,5-dione in the presence of base followed by heating yields a cyclic ketone. The number of carbon atoms in the ring of this cyclic product is ________.",
+    "difficulty": "medium",
+    "type": "concept",
+    "correct_answer": "5",
+    "is_numerical": true,
+    "notes": "Trace the two possible enolate attacks: C1 enolate attacking C5 carbonyl vs C3 enolate attacking C5 carbonyl.",
+    "solution_text": "Hexane-2,5-dione is $\\text{CH}_3-\\text{CO}-\\text{CH}_2-\\text{CH}_2-\\text{CO}-\\text{CH}_3$. Deprotonation can occur at two positions:\n1) Deprotonation at C3 (internal methylenes) forms an enolate that attacks the C5 carbonyl. This would form a strained 3-membered ring (thermodynamically unfavored).\n2) Deprotonation at C1 (terminal methyls) forms an enolate: $\\text{CH}_2^--\\text{CO}-\\text{CH}_2-\\text{CH}_2-\\text{CO}-\\text{CH}_3$. This attacks the C5 carbonyl carbon. The atoms involved in the new ring are C1, C2, C3, C4, and C5 (5 atoms total).\nThis yields a 5-membered cyclic ketone (3-methylcyclopent-2-enone) which is highly stable and kinetically favored. Thus, the ring size is 5.",
+    "common_mistake": "Writing 7, by assuming the enolate at C6 attacks the C2 carbonyl, which is thermodynamically less favored than forming a 5-membered ring.",
+    "concept_slugs": [
+      "aldol-cannizzaro"
+    ]
+  },
+  {
+    "pattern_group": "aldol-cannizzaro",
+    "title": "Benzaldehyde undergoes self-condensation when heated with aqueous ethanolic potassium cyanide ($\\text{KCN}$) to yield benzoin. The specific role of the cyanide ion ($\\text{CN}^-$) in this reaction is to act as:",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Both a nucleophile and a leaving group, while increasing the acidity of the formyl hydrogen via electron withdrawal",
+      "B": "A strong oxidizing agent that converts aldehyde to ketone",
+      "C": "A sterically hindered base that abstracts the ring protons",
+      "D": "A protecting group that prevents oxidation"
+    },
+    "notes": "Think about the mechanism of the Benzoin condensation. Cyanide acts in multiple stages of the reaction.",
+    "solution_text": "In the Benzoin condensation, the cyanide ion ($\\text{CN}^-$) is a unique catalyst because:\n1) It is a good nucleophile and attacks the carbonyl carbon of benzaldehyde.\n2) Its electron-withdrawing nature increases the acidity of the formyl hydrogen, allowing deprotonation to form a nucleophilic carbanion (polarity reversal / umpolung).\n3) After the carbanion attacks a second benzaldehyde molecule, the cyanide ion acts as a good leaving group to form the product, benzoin.\nThus, Option A is correct.",
+    "common_mistake": "Selecting Option B, since cyanide does not oxidize or reduce the molecule but acts as a catalyst.",
+    "concept_slugs": [
+      "aldol-cannizzaro"
+    ]
+  },
+  {
+    "pattern_group": "aldol-cannizzaro",
+    "title": "The reaction between benzaldehyde and acetone in the presence of dilute alkali to yield benzalacetone is an example of:",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Claisen-Schmidt condensation (crossed aldol)",
+      "B": "Cannizzaro reaction",
+      "C": "Perkin reaction",
+      "D": "Reformatsky reaction"
+    },
+    "notes": "Identify the type of condensation between an aromatic aldehyde (without alpha H) and an aliphatic ketone (with alpha H).",
+    "solution_text": "The condensation of an aromatic aldehyde lacking $\\alpha$-hydrogens (like benzaldehyde) with an aliphatic aldehyde or ketone containing $\\alpha$-hydrogens (like acetone) in the presence of dilute base is called the Claisen-Schmidt condensation. It is a subclass of crossed aldol condensation. The product formed is benzalacetone ($\\text{C}_6\\text{H}_5\\text{CH}=\\text{CH-CO-CH}_3$). Option A is correct.",
+    "common_mistake": "Calling it a Perkin reaction (Option C) which requires acetic anhydride and sodium acetate, not simple acetone and dilute alkali.",
+    "concept_slugs": [
+      "aldol-cannizzaro"
+    ]
+  },
+  {
+    "pattern_group": "aldol-cannizzaro",
+    "title": "Treatment of glyoxal ($\\text{OHC-CHO}$) with concentrated aqueous sodium hydroxide yields which of the following as the main product?",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Sodium glycolate ($\\text{HO-CH}_2-\\text{COONa}$)",
+      "B": "Ethylene glycol",
+      "C": "Sodium oxalate",
+      "D": "Glycolic acid"
+    },
+    "notes": "Glyoxal contains two adjacent aldehyde groups with no alpha-hydrogens, making it a substrate for intramolecular disproportionation.",
+    "solution_text": "Glyoxal ($\\text{OHC-CHO}$) undergoes an intramolecular Cannizzaro reaction in the presence of concentrated base:\n1) Hydroxide attacks one of the aldehyde carbons.\n2) Hydride is transferred intramolecularly to the adjacent carbonyl carbon.\n3) This simultaneous oxidation and reduction of the two carbonyl centers in the same molecule yields glycolic acid, which is neutralized by the base to form sodium glycolate ($\\text{HO-CH}_2-\\text{COONa}$). Option A is correct.",
+    "common_mistake": "Selecting sodium oxalate (Option C) which is the oxidation product of both carbonyls, forgetting that Cannizzaro is a redox disproportionation.",
+    "concept_slugs": [
+      "aldol-cannizzaro"
+    ]
+  },
+  {
+    "pattern_group": "aldol-cannizzaro",
+    "title": "In the mechanism of the Cannizzaro reaction, which of the following steps is the rate-determining step?",
+    "difficulty": "hard",
+    "type": "advanced",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Nucleophilic attack of hydroxide ion on the carbonyl carbon",
+      "B": "Transfer of hydride ion from the tetrahedral intermediate to the second carbonyl molecule",
+      "C": "Proton transfer between the carboxylic acid and the alkoxide ion",
+      "D": "Deprotonation of the aldehyde to form a dianion"
+    },
+    "notes": "Evaluate the energy barriers of the steps. Hydride transfer involves breaking a carbon-hydrogen bond.",
+    "solution_text": "The mechanism of the Cannizzaro reaction proceeds through:\n1) Reversible attack of hydroxide ion on the carbonyl carbon (fast).\n2) Hydride ($:\\text{H}^-$) transfer from this anionic tetrahedral intermediate to the carbonyl carbon of a second aldehyde molecule. This step involves breaking a strong $\\text{C}-\\text{H}$ bond and transferring a high-energy hydride species, which has a high activation barrier and is the rate-determining step.\n3) Proton transfer to form carboxylate and alcohol (extremely fast).\nThus, Option B is correct.",
+    "common_mistake": "Selecting nucleophilic attack (Option A) which is rapid and reversible.",
+    "concept_slugs": [
+      "aldol-cannizzaro"
+    ]
+  },
+  {
+    "pattern_group": "oxidation-reduction-tests",
+    "title": "Tollens' reagent is reduced by aldehydes to form a silver mirror. Tollens' reagent is chemically:",
+    "difficulty": "easy",
+    "type": "pyq",
+    "source": "JEE Main 2021",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Ammoniacal silver nitrate solution ($[\\text{Ag}(\\text{NH}_3)_2]^+$)",
+      "B": "Alkaline copper sulfate solution containing sodium potassium tartrate",
+      "C": "Acidic silver sulfate solution",
+      "D": "Silver oxide suspended in aqueous nitric acid"
+    },
+    "notes": "Recall the composition and complex ion of the standard laboratory test for aldehydes.",
+    "solution_text": "Tollens' reagent is a solution containing the diamminesilver(I) complex ion, $[\\text{Ag}(\\text{NH}_3)_2]^+$, prepared by reacting silver nitrate solution with ammonium hydroxide. It is a mild oxidizing agent that oxidizes aldehydes to carboxylate ions while being reduced to metallic silver ($\\text{Ag}^0$), which deposits as a mirror on the glass. Option A is correct.",
+    "common_mistake": "Selecting Fehling's solution (Option B), which is copper-based, or thinking Tollens' is acidic.",
+    "concept_slugs": [
+      "oxidation-reduction-tests"
+    ]
+  },
+  {
+    "pattern_group": "oxidation-reduction-tests",
+    "title": "Which of the following compounds will not give a yellow precipitate of iodoform when treated with iodine ($\\text{I}_2$) and sodium hydroxide ($\\text{NaOH}$)?",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2022",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Pentan-2-one",
+      "B": "Pentan-3-one",
+      "C": "Ethanol",
+      "D": "Acetophenone"
+    },
+    "notes": "Iodoform test requires a methyl ketone group ($-\\text{COCH}_3$) or a methyl carbinol group ($-\\text{CH(OH)CH}_3$) that can be oxidized to one.",
+    "solution_text": "The iodoform test is specific for compounds containing:\n1) A methyl ketone group ($-\\text{CO-CH}_3$).\n2) A secondary alcohol with methyl on the carbinol carbon ($-\\text{CH(OH)-CH}_3$), which is oxidized to a methyl ketone by the reagent.\n- Pentan-2-one ($\\text{CH}_3\\text{COCH}_2\\text{CH}_2\\text{CH}_3$): has $-\\text{COCH}_3$ (positive).\n- Acetophenone ($\\text{C}_6\\text{H}_5\\text{CO-CH}_3$): has $-\\text{COCH}_3$ (positive).\n- Ethanol ($\\text{CH}_3\\text{CH}_2\\text{OH}$): has $-\\text{CH(OH)-CH}_3$ structure (positive).\n- Pentan-3-one ($\\text{CH}_3\\text{CH}_2\\text{CO-CH}_2\\text{CH}_3$): is an ethyl ketone, lacking the $-\\text{CH}_3$ adjacent to carbonyl (negative). Thus, it does not give iodoform. Option B is correct.",
+    "common_mistake": "Selecting ethanol (Option C) thinking alcohols cannot give a positive iodoform test, forgetting that halogens oxidize secondary ethyl/methyl alcohols to ketones/aldehydes first.",
+    "concept_slugs": [
+      "oxidation-reduction-tests"
+    ]
+  },
+  {
+    "pattern_group": "oxidation-reduction-tests",
+    "title": "Clemmensen reduction reduces the carbonyl group of aldehydes and ketones to a methylene group ($-\\text{CH}_2-$). The reagent used is:",
+    "difficulty": "easy",
+    "type": "concept",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Zinc amalgam ($\\text{Zn-Hg}$) and concentrated hydrochloric acid ($\\text{HCl}$)",
+      "B": "Hydrazine ($\\text{NH}_2\\text{NH}_2$) and potassium hydroxide ($\\text{KOH}$)",
+      "C": "Lithium aluminium hydride ($\\text{LiAlH}_4$)",
+      "D": "Hydrogen gas in the presence of platinum catalyst"
+    },
+    "notes": "Distinguish between acidic and basic reduction systems for converting carbonyls to alkanes.",
+    "solution_text": "Clemmensen reduction converts aldehydes and ketones into alkanes under highly acidic conditions. The reagent mixture is zinc amalgam ($\\text{Zn-Hg}$) and concentrated hydrochloric acid ($\\text{HCl}$). (In contrast, Wolff-Kishner reduction uses basic conditions). Option A is correct.",
+    "common_mistake": "Selecting hydrazine (Option B), which is the Wolff-Kishner reduction reagent.",
+    "concept_slugs": [
+      "oxidation-reduction-tests"
+    ]
+  },
+  {
+    "pattern_group": "oxidation-reduction-tests",
+    "title": "Fehling's solution is used to distinguish between aldehydes and ketones. The red precipitate formed in a positive Fehling's test is:",
+    "difficulty": "easy",
+    "type": "concept",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Copper(II) oxide ($\\text{CuO}$)",
+      "B": "Copper(I) oxide ($\\text{Cu}_2\\text{O}$)",
+      "C": "Metallic copper",
+      "D": "Copper hydroxide"
+    },
+    "notes": "In a positive Fehling's test, $\\text{Cu}^{2+}$ ions are reduced to copper in a $+1$ oxidation state.",
+    "solution_text": "Fehling's solution contains soluble $\\text{Cu}^{2+}$ ions complexed with tartrate ligands. Aldehydes (but not ketones) reduce the blue $\\text{Cu}^{2+}$ complex in alkaline solution to a red precipitate of copper(I) oxide ($\\text{Cu}_2\\text{O}$), where copper has been reduced from $+2$ to $+1$. Option B is correct.",
+    "common_mistake": "Selecting copper(II) oxide (Option A), which is black in color and represents copper in its unreduced $+2$ state.",
+    "concept_slugs": [
+      "oxidation-reduction-tests"
+    ]
+  },
+  {
+    "pattern_group": "oxidation-reduction-tests",
+    "title": "Which of the following reducing agents is highly selective and can reduce the carbonyl group of an aldehyde/ketone without reducing a carbon-carbon double bond present in the same molecule?",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Sodium borohydride ($\\text{NaBH}_4$)",
+      "B": "$\\text{H}_2$ in the presence of $\\text{Ni}$ catalyst",
+      "C": "$\\text{Na}$ in liquid $\\text{NH}_3$",
+      "D": "$\\text{Zn/HCl}$"
+    },
+    "notes": "Look for a polar hydride donor that only attacks the polar carbonyl group.",
+    "solution_text": "Sodium borohydride ($\\text{NaBH}_4$) is a nucleophilic hydride donor. It selectively attacks the electrophilic carbonyl carbon of aldehydes and ketones, reducing them to alcohols. Because carbon-carbon double bonds ($\\text{C}=\\text{C}$) are electron-rich and non-polar, they are not attacked by nucleophilic hydrides. (Catalytic hydrogenation using $\\text{H}_2/\\text{Ni}$ would reduce both the double bond and the carbonyl). Option A is correct.",
+    "common_mistake": "Selecting $\\text{H}_2/\\text{Ni}$ (Option B), which is non-selective and reduces both functional groups.",
+    "concept_slugs": [
+      "oxidation-reduction-tests"
+    ]
+  },
+  {
+    "pattern_group": "oxidation-reduction-tests",
+    "title": "The reduction of ketones to secondary alcohols using aluminium isopropoxide in isopropyl alcohol is called the:",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Meerwein-Ponndorf-Verley (MPV) reduction",
+      "B": "Oppenauer oxidation",
+      "C": "Clemmensen reduction",
+      "D": "Birch reduction"
+    },
+    "notes": "This is a highly selective name reaction for the reduction of ketones under equilibrium control.",
+    "solution_text": "The Meerwein-Ponndorf-Verley (MPV) reduction is the reduction of ketones to secondary alcohols by treatment with aluminium isopropoxide, $\\text{Al(O-i-Pr)}_3$, in isopropyl alcohol. The reaction is completely reversible; its reverse process (oxidation of alcohols to ketones using aluminium t-butoxide) is the Oppenauer oxidation. Option A is correct.",
+    "common_mistake": "Selecting Oppenauer oxidation (Option B), which is the reverse oxidation reaction.",
+    "concept_slugs": [
+      "oxidation-reduction-tests"
+    ]
+  },
+  {
+    "pattern_group": "oxidation-reduction-tests",
+    "title": "Reaction of cyclohexanone with meta-chloroperbenzoic acid (mCPBA) yields a cyclic ester (lactone) via Baeyer-Villiger oxidation. The number of oxygen atoms in the ring of this lactone is ________.",
+    "difficulty": "hard",
+    "type": "practice",
+    "correct_answer": "1",
+    "is_numerical": true,
+    "notes": "Baeyer-Villiger oxidation inserts an oxygen atom adjacent to the carbonyl group.",
+    "solution_text": "Baeyer-Villiger oxidation of cyclohexanone with a peroxy acid like mCPBA inserts an oxygen atom directly between the carbonyl carbon and one of the adjacent ring carbons. This ring expansion converts cyclohexanone (a 6-membered cyclic ketone) into a 7-membered cyclic ester (lactone, caprolactone). TheCaprolactone ring consists of 6 carbon atoms and exactly 1 oxygen atom. Thus, the number of oxygen atoms in the ring is 1.",
+    "common_mistake": "Writing 2, by counting both the carbonyl oxygen (which is exocyclic, not in the ring) and the lactone ring oxygen.",
+    "concept_slugs": [
+      "oxidation-reduction-tests"
+    ]
+  },
+  {
+    "pattern_group": "oxidation-reduction-tests",
+    "title": "Although fructose is a ketose (fructose has a ketone group at C2), it reduces Tollens' reagent and Fehling's solution. This is because in the presence of alkaline reagents, fructose undergoes:",
+    "difficulty": "hard",
+    "type": "advanced",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Tautomerization via an enediol intermediate to isomerize into glucose and mannose",
+      "B": "Oxidation to carboxylic acids directly",
+      "C": "Retro-aldol cleavage into aldehydes",
+      "D": "Dehydration to form furfural"
+    },
+    "notes": "Tollens' and Fehling's tests are carried out under strongly basic conditions, which promote keto-aldose isomerization.",
+    "solution_text": "Tollens' reagent and Fehling's solution are alkaline reagents. Under these basic conditions, fructose (a ketose) undergoes keto-enol tautomerism via a transit enediol intermediate. This reaction, known as the Lobry de Bruyn-Alberda van Ekenstein transformation, isomerizes fructose into D-glucose and D-mannose (aldoses). These aldoses have free aldehyde groups that readily reduce Tollens' and Fehling's reagents. Option A is correct.",
+    "common_mistake": "Believing that ketones can generally reduce Tollens' reagent, whereas only $\\alpha$-hydroxy ketones can do so under basic isomerization.",
+    "concept_slugs": [
+      "oxidation-reduction-tests"
+    ]
+  },
+  {
+    "pattern_group": "carbonyl-advanced-reactions",
+    "title": "Nitration of benzaldehyde with concentrated nitric acid and sulfuric acid yields:",
+    "difficulty": "easy",
+    "type": "pyq",
+    "source": "JEE Main 2021",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "m-Nitrobenzaldehyde",
+      "B": "o-Nitrobenzaldehyde",
+      "C": "p-Nitrobenzaldehyde",
+      "D": "A mixture of o- and p-nitrobenzaldehyde"
+    },
+    "notes": "Evaluate the directive influence of the formyl group ($-\\text{CHO}$) on the benzene ring.",
+    "solution_text": "The formyl group ($-\\text{CHO}$) has a strong electron-withdrawing mesomeric ($-M$) and inductive ($-I$) effect. It deactivates the benzene ring towards electrophilic substitution. The deactivation is most pronounced at the ortho and para positions, leaving the meta position relatively more electron-rich. Therefore, $-\\text{CHO}$ is a meta-director, and nitration yields m-nitrobenzaldehyde. Option A is correct.",
+    "common_mistake": "Selecting Option D, confusing it with ortho/para directing groups like $-\\text{CH}_3$ or $-\\text{OCH}_3$.",
+    "concept_slugs": [
+      "carbonyl-advanced-reactions"
+    ]
+  },
+  {
+    "pattern_group": "carbonyl-advanced-reactions",
+    "title": "The Wittig reaction converts a carbonyl compound into an alkene using a phosphorus ylide (Wittig reagent). The phosphorus-containing by-product of this reaction is:",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2022",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Triphenylphosphine oxide ($(\\text{C}_6\\text{H}_5)_3\\text{P}=\\text{O}$)",
+      "B": "Triphenylphosphine",
+      "C": "Trimethylphosphate",
+      "D": "Phosphoric acid"
+    },
+    "notes": "Recall the driving force of the Wittig reaction: the formation of a very strong phosphorus-oxygen double bond.",
+    "solution_text": "The Wittig reaction involves the reaction of a phosphorus ylide ($\\text{Ph}_3\\text{P}=\\text{CHR}$) with an aldehyde or ketone. It proceeds through a four-membered cyclic transition state (oxaphosphetane). The high thermodynamic driving force of the reaction is the formation of the exceptionally strong phosphorus-oxygen double bond in triphenylphosphine oxide ($(\\text{C}_6\\text{H}_5)_3\\text{P}=\\text{O}$), which is eliminated as a stable by-product, leaving the alkene. Option A is correct.",
+    "common_mistake": "Choosing triphenylphosphine (Option B), which is the starting material used to prepare the ylide, not the direct byproduct of the coupling.",
+    "concept_slugs": [
+      "carbonyl-advanced-reactions"
+    ]
+  },
+  {
+    "pattern_group": "carbonyl-advanced-reactions",
+    "title": "Usually, carbonyl hydrates (gem-diols) are unstable and lose water to reform the carbonyl compound. However, chloral hydrate ($\\text{CCl}_3\\text{CH(OH)}_2$) is exceptionally stable due to:",
+    "difficulty": "easy",
+    "type": "concept",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "High electronegativity of chlorine causing strong steric hindrance",
+      "B": "Intramolecular hydrogen bonding between the chlorine atoms and the hydroxyl hydrogens",
+      "C": "High hydration energy of the trichloromethyl group",
+      "D": "Resonance stabilization of the diol"
+    },
+    "notes": "Look for a structure-stabilizing hydrogen bonding effect that overcomes the unfavorable thermodynamics of gem-diols.",
+    "solution_text": "In chloral hydrate, $\\text{CCl}_3-\\text{CH(OH)}_2$, the three highly electronegative chlorine atoms on the adjacent carbon withdraw electron density, making the carbon very electrophilic and favoring hydrate formation. Furthermore, the two hydroxyl oxygen-hydrogen bonds ($-\\text{O-H}$) form strong intramolecular hydrogen bonds with the adjacent chlorine atoms, creating stable five-membered rings. This hydrogen bonding stabilizes the hydrate and prevents dehydration. Option B is correct.",
+    "common_mistake": "Attributing stability purely to steric hindrance (Option A), which would actually destabilize the crowded gem-diol.",
+    "concept_slugs": [
+      "carbonyl-advanced-reactions"
+    ]
+  },
+  {
+    "pattern_group": "carbonyl-advanced-reactions",
+    "title": "The Reformatsky reaction involves the reaction of an aldehyde or ketone with an alpha-halo ester in the presence of which metal?",
+    "difficulty": "medium",
+    "type": "concept",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Zinc ($\\text{Zn}$)",
+      "B": "Magnesium ($\\text{Mg}$)",
+      "C": "Sodium ($\\text{Na}$)",
+      "D": "Copper ($\\text{Cu}$)"
+    },
+    "notes": "The Reformatsky reaction uses a metal that is less reactive than magnesium to prevent addition to the ester group itself.",
+    "solution_text": "The Reformatsky reaction utilizes zinc metal ($\\text{Zn}$) to react with an $\\alpha$-halo ester (like ethyl bromoacetate) to form an organozinc intermediate (zinc enolate). Since organozinc compounds are less reactive than Grignard reagents (organomagnesium), they do not attack the ester group of their own molecule, but they are nucleophilic enough to attack the more reactive carbonyl of an added aldehyde or ketone to yield a $\\beta$-hydroxy ester. Option A is correct.",
+    "common_mistake": "Selecting magnesium (Option B), which is used in Grignard reactions and would react with the ester group, causing unwanted self-condensation.",
+    "concept_slugs": [
+      "carbonyl-advanced-reactions"
+    ]
+  },
+  {
+    "pattern_group": "carbonyl-advanced-reactions",
+    "title": "Acid-catalyzed halogenation of acetone stops at mono-halogenation, whereas base-catalyzed halogenation goes all the way to poly-halogenation (and haloform cleavage). This difference is because:",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Halogen introduction decreases enolization rate under acid catalysis but increases enolate formation rate under base catalysis",
+      "B": "Acid decomposes the polyhalogenated product",
+      "C": "Base deactivates the halogen electrophile",
+      "D": "The acid catalyst is consumed by mono-halogenation"
+    },
+    "notes": "Evaluate the electronic effect of the electronegative halogen atom on the rate-determining enol/enolate formation step.",
+    "solution_text": "Halogenation rate is determined by the rate of enol (acid) or enolate (base) formation:\n- Under basic conditions, the electron-withdrawing halogen atom makes the remaining $\\alpha$-hydrogens on the same carbon more acidic, which accelerates the rate of subsequent deprotonation and enolate formation. Thus, base-catalyzed halogenation goes rapidly to completion (forming trihaloacetone followed by haloform cleavage).\n- Under acidic conditions, the rate-determining step is protonation of the carbonyl oxygen. The electron-withdrawing halogen decreases the basicity of the carbonyl oxygen, making protonation and enolization much slower than in unsubstituted acetone. Thus, the reaction stops at mono-halogenation. Option A is correct.",
+    "common_mistake": "Assuming the halogen directly deactivates the nucleophile or that the acid catalyst is consumed.",
+    "concept_slugs": [
+      "carbonyl-advanced-reactions"
+    ]
+  },
+  {
+    "pattern_group": "carbonyl-advanced-reactions",
+    "title": "The condensation of an aldehyde or ketone with an alpha-halo ester in the presence of a strong base to form an alpha,beta-epoxy ester (glycidic ester) is known as the:",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Darzens reaction",
+      "B": "Reformatsky reaction",
+      "C": "Wittig reaction",
+      "D": "Knoevenagel condensation"
+    },
+    "notes": "Identify the name reaction that forms an epoxide ring from an alpha-halo ester.",
+    "solution_text": "The Darzens reaction (also called the Darzens glycidic ester condensation) is the condensation of an aldehyde or ketone with an $\\alpha$-halo ester in the presence of a base (like sodium ethoxide) to form an $\\alpha,\\beta$-epoxy ester (glycidic ester). The base deprotonates the halo ester, which attacks the carbonyl, followed by intramolecular nucleophilic displacement of the halide ($\\text{S}_N2$) by the alkoxide oxygen. Option A is correct.",
+    "common_mistake": "Selecting Reformatsky reaction (Option B) which yields a $\\beta$-hydroxy ester using zinc metal, not an epoxide.",
+    "concept_slugs": [
+      "carbonyl-advanced-reactions"
+    ]
+  },
+  {
+    "pattern_group": "carbonyl-advanced-reactions",
+    "title": "The reaction of benzaldehyde with acetic anhydride in the presence of sodium acetate at high temperature ($180^\\circ\\text{C}$) yields cinnamic acid. This reaction is known as the:",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Perkin reaction",
+      "B": "Knoevenagel condensation",
+      "C": "Stobbe condensation",
+      "D": "Claisen condensation"
+    },
+    "notes": "Identify the condensation of an aromatic aldehyde with an anhydride in the presence of the conjugate base of the acid.",
+    "solution_text": "The Perkin reaction is an organic reaction used to prepare cinnamic acids ($\\alpha,\\beta$-unsaturated aromatic acids). It involves heating an aromatic aldehyde (like benzaldehyde) with an acid anhydride (like acetic anhydride) in the presence of the sodium salt of the corresponding carboxylic acid (sodium acetate) which acts as a base. Option A is correct.",
+    "common_mistake": "Calling it Knoevenagel condensation (Option B), which uses active methylene compounds (like malonic acid/esters) with amine bases.",
+    "concept_slugs": [
+      "carbonyl-advanced-reactions"
+    ]
+  },
+  {
+    "pattern_group": "carbonyl-advanced-reactions",
+    "title": "The active methylene compound diethyl malonate undergoes Knoevenagel condensation with benzaldehyde followed by hydrolysis and decarboxylation to yield cinnamic acid. The number of carbon atoms in cinnamic acid ($\\text{C}_6\\text{H}_5\\text{CH}=\\text{CHCOOH}$) is ________.",
+    "difficulty": "medium",
+    "type": "advanced",
+    "correct_answer": "9",
+    "is_numerical": true,
+    "notes": "Count all carbons in the structure, including the benzene ring carbons and the side-chain carboxylic acid carbons.",
+    "solution_text": "Cinnamic acid has the chemical formula $\\text{C}_6\\text{H}_5\\text{CH}=\\text{CHCOOH}$:\n1) The phenyl ring ($\\text{C}_6\\text{H}_5-$) contains exactly 6 carbon atoms.\n2) The side chain ($-\\text{CH}=\\text{CHCOOH}$) contains 3 carbon atoms (the beta carbon $-\\text{CH}=$, the alpha carbon $=\\text{CH}-$, and the carboxyl carbon $-\\text{COOH}$).\n3) Total carbon atoms $= 6 + 3 = 9$.",
+    "common_mistake": "Writing 3, counting only the side chain carbon atoms and forgetting to include the benzene ring carbons.",
+    "concept_slugs": [
+      "carbonyl-advanced-reactions"
+    ]
+  }
+]
