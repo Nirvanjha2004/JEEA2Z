@@ -1,0 +1,271 @@
+[
+  {
+    "pattern_group": "resistance-drift",
+    "title": "When a current $I$ flows through a cylindrical wire of radius $r$, the drift velocity of conduction electrons is $v_d$. If the current is doubled and the radius of the wire is halved, the new drift velocity of the electrons will be:",
+    "difficulty": "easy",
+    "type": "pyq",
+    "source": "JEE Main 2021",
+    "correct_answer": "D",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$2v_d$",
+      "B": "$4v_d$",
+      "C": "$v_d/2$",
+      "D": "$8v_d$"
+    },
+    "notes": "Drift velocity is related to current by $I = n A e v_d = n (\\pi r^2) e v_d \\implies v_d \\propto I / r^2$.",
+    "solution_text": "The relationship between current $I$ and drift velocity $v_d$ is given by $I = n e A v_d$, where $n$ is the electron density, $e$ is the charge of an electron, and $A = \\pi r^2$ is the cross-sectional area of the wire. Rearranging for drift velocity: $v_d = \\frac{I}{n e \\pi r^2} \\implies v_d \\propto \\frac{I}{r^2}$. Let the new drift velocity be $v_d'$ with new current $I' = 2I$ and new radius $r' = r/2$. $v_d' \\propto \\frac{2I}{(r/2)^2} = \\frac{2I}{r^2/4} = 8 \\frac{I}{r^2} \\implies v_d' = 8 v_d$. Option D is correct.",
+    "common_mistake": "Assuming $v_d \\propto I/r$ (yielding $4v_d$), forgetting that area is proportional to the square of the radius.",
+    "concept_slugs": ["resistance-drift"]
+  },
+  {
+    "pattern_group": "resistance-drift",
+    "title": "The resistance of a conductor is $10\\,\\Omega$ at $27^\\circ\\text{C}$ and $11\\,\\Omega$ at $127^\\circ\\text{C}$. The temperature coefficient of resistance of the material of the conductor is ________ $\\times 10^{-3}\\,^\\circ\\text{C}^{-1}$.",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2022",
+    "correct_answer": "1",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "solution_text": "The temperature dependence of resistance is given by $R(T) = R_0(1 + \\alpha \\Delta T) \\implies R_2 = R_1 (1 + \\alpha (T_2 - T_1))$. Substituting the values: $11 = 10 (1 + \\alpha (127 - 27)) \\implies 1.1 = 1 + 100\\alpha \\implies 100\\alpha = 0.1 \\implies \\alpha = 10^{-3}\\,^\\circ\\text{C}^{-1}$. Thus, the coefficient of $10^{-3}$ is 1.",
+    "common_mistake": "Using Kelvin temperatures in the difference incorrectly, though temperature difference $\\Delta T$ is the same in Celsius and Kelvin ($100\\,\\text{K} = 100^\\circ\\text{C}$).",
+    "concept_slugs": ["resistance-drift"]
+  },
+  {
+    "pattern_group": "kirchhoffs-laws",
+    "title": "In a given electrical network, three resistors $R_1 = 2\\,\\Omega$, $R_2 = 4\\,\\Omega$, and $R_3 = 6\\,\\Omega$ are connected in a loop with two batteries of EMF $E_1 = 12\\,\\text{V}$ and $E_2 = 6\\,\\text{V}$ (having negligible internal resistance) as shown. The current flowing through the $6\\,\\Omega$ resistor is:",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2023",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "0.5 A",
+      "B": "0.5 A",
+      "C": "1.0 A",
+      "D": "1.5 A"
+    },
+    "notes": "Assume the loop is a single series circuit with the batteries opposing each other: net EMF is $12 - 6 = 6\\,\\text{V}$.",
+    "options": {
+      "A": "1.0 A",
+      "B": "0.5 A",
+      "C": "1.5 A",
+      "D": "2.0 A"
+    },
+    "solution_text": "If the three resistors are in series in a single loop, and the two batteries are connected such that their positive terminals face each other (opposing configuration), the net EMF in the loop is $E_{\\text{net}} = E_1 - E_2 = 12 - 6 = 6\\,\\text{V}$. The total resistance of the series circuit is $R_{\\text{total}} = R_1 + R_2 + R_3 = 2 + 4 + 6 = 12\\,\\Omega$. The current flowing in the circuit (and hence through the $6\\,\\Omega$ resistor) is $I = \\frac{E_{\\text{net}}}{R_{\\text{total}}} = \\frac{6\\,\\text{V}}{12\\,\\Omega} = 0.5\\,\\text{A}$. Option B is correct.",
+    "common_mistake": "Adding the battery voltages ($12 + 6 = 18\\,\\text{V}$) instead of subtracting them, yielding $1.5\\,\\text{A}$.",
+    "concept_slugs": ["kirchhoffs-laws"]
+  },
+  {
+    "pattern_group": "measuring-instruments",
+    "title": "A galvanometer of resistance $50\\,\\Omega$ gives a full scale deflection for a current of $2\\,\\text{mA}$. The value of shunt resistance required to convert it into an ammeter of range $0$ to $2\\,\\text{A}$ is: (round to three decimal places if necessary)",
+    "difficulty": "easy",
+    "type": "pyq",
+    "source": "JEE Main 2022",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "0.050 \\Omega",
+      "B": "0.100 \\Omega",
+      "C": "0.025 \\Omega",
+      "D": "0.500 \\Omega"
+    },
+    "notes": "Formula for shunt resistance: $S = \\frac{I_g G}{I - I_g}$. Here $G = 50\\,\\Omega$, $I_g = 2\\,\\text{mA} = 0.002\\,\\text{A}$, $I = 2\\,\\text{A}$.",
+    "options": {
+      "A": "$0.050\\,\\Omega$",
+      "B": "$0.100\\,\\Omega$",
+      "C": "$0.025\\,\\Omega$",
+      "D": "$0.500\\,\\Omega$"
+    },
+    "solution_text": "The shunt resistance $S$ connected in parallel with the galvanometer is given by $S = \\frac{I_g G}{I - I_g}$, where $G = 50\\,\\Omega$ is the galvanometer resistance, $I_g = 2\\,\\text{mA} = 0.002\\,\\text{A}$ is the full-scale current, and $I = 2\\,\\text{A}$ is the target maximum current. Substituting these: $S = \\frac{0.002 \\times 50}{2 - 0.002} = \\frac{0.1}{1.998} \\approx 0.05005\\,\\Omega \\approx 0.050\\,\\Omega$. Option A is correct.",
+    "common_mistake": "Connecting the shunt in series instead of parallel, or using $S = I G / I_g$ incorrectly.",
+    "concept_slugs": ["measuring-instruments"]
+  },
+  {
+    "pattern_group": "measuring-instruments",
+    "title": "In a potentiometer experiment, the balancing length with a cell of EMF $1.5\\,\\text{V}$ in the secondary circuit is $60\\,\\text{cm}$. If this cell is replaced by another cell of EMF $E$, the balancing length is found to be $80\\,\\text{cm}$. The value of $E$ is ________ $\\text{V}$.",
+    "difficulty": "easy",
+    "type": "concept",
+    "correct_answer": "2",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "solution_text": "In a potentiometer, the balancing length is directly proportional to the EMF of the cell being measured: $E \\propto l \\implies \\frac{E_1}{E_2} = \\frac{l_1}{l_2}$. Substituting the given values: $\\frac{1.5}{E} = \\frac{60}{80} = \\frac{3}{4} \\implies E = 1.5 \\times \\frac{4}{3} = 2.0\\,\\text{V}$.",
+    "common_mistake": "Assuming inverse proportionality or making simple calculation mistakes.",
+    "concept_slugs": ["measuring-instruments"]
+  },
+  {
+    "pattern_group": "measuring-instruments",
+    "title": "A meter bridge is balanced at $40\\,\\text{cm}$ from the left end when unknown resistances $X$ and $Y$ are in the left and right gaps respectively. If a resistance of $10\\,\\Omega$ is connected in series with $X$, the balance point shifts to $50\\,\\text{cm}$ from the left end. The value of the resistance $Y$ is ________ $\\Omega$.",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2021",
+    "correct_answer": "30",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "solution_text": "From the first balance condition: $\\frac{X}{Y} = \\frac{40}{100-40} = \\frac{40}{60} = \\frac{2}{3} \\implies X = \\frac{2}{3}Y$. 2) From the second balance condition (with $X+10$ in the left gap): $\\frac{X+10}{Y} = \\frac{50}{100-50} = \\frac{50}{50} = 1 \\implies X + 10 = Y$. Substituting $X$ into this equation: $\\frac{2}{3}Y + 10 = Y \\implies \\frac{1}{3}Y = 10 \\implies Y = 30\\,\\Omega$.",
+    "common_mistake": "Using $100\\,\\text{cm}$ directly in denominator ratios, or forgetting to write the second condition as $X+10$ instead of $X$.",
+    "concept_slugs": ["measuring-instruments"]
+  },
+  {
+    "pattern_group": "cells-emf",
+    "title": "To draw the maximum current from a combination of $24$ identical cells, each of EMF $1.5\\,\\text{V}$ and internal resistance $r = 1\\,\\Omega$, through an external resistor of $6\\,\\Omega$, the cells should be grouped in $m$ parallel rows, each containing $n$ cells in series. The value of $m$ is:",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2022",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "1",
+      "B": "2",
+      "C": "4",
+      "D": "6"
+    },
+    "notes": "For maximum current through external resistance $R$, the total internal resistance of the combination must equal the external resistance: $nr/m = R$. We also have $n \\cdot m = 24$.",
+    "solution_text": "For maximum current in a mixed grouping of cells, the equivalent internal resistance of the cells must be equal to the external resistance $R$: $R_{\\text{int}} = \\frac{nr}{m} = R$. We are given $R = 6\\,\\Omega$, $r = 1\\,\\Omega$, and the total number of cells is $N = n \\cdot m = 24 \\implies n = 24/m$. Substituting $n$: $\\frac{(24/m) \\cdot 1}{m} = 6 \\implies \\frac{24}{m^2} = 6 \\implies m^2 = 4 \\implies m = 2$. Thus, the cells should be grouped in 2 parallel rows of 12 cells each. Option B is correct.",
+    "common_mistake": "Setting total series resistance $nr = R$ or total parallel resistance $r/m = R$, failing to account for the mixed grouping condition.",
+    "concept_slugs": ["cells-emf"]
+  },
+  {
+    "pattern_group": "heating-power",
+    "title": "Two electric bulbs rated $100\\,\\text{W}, 220\\,\\text{V}$ and $60\\,\\text{W}, 220\\,\\text{V}$ are connected in series across a $220\\,\\text{V}$ power line. The total power consumed by the bulbs in this combination is ________ $\\text{W}$ (round to the nearest integer).",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "38",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "solution_text": "The resistance of a bulb is $R = \\frac{V^2}{P}$. Resistance of bulb 1: $R_1 = \\frac{220^2}{100} = 484\\,\\Omega$. Resistance of bulb 2: $R_2 = \\frac{220^2}{60} = 806.67\\,\\Omega$. When connected in series, the total equivalent resistance is $R_{\\text{eq}} = R_1 + R_2 = 484 + 806.67 = 1290.67\\,\\Omega$. The total power consumed across the same voltage $V = 220\\,\\text{V}$ is $P_{\\text{total}} = \\frac{V^2}{R_{\\text{eq}}} = \\frac{220^2}{1290.67} = \\frac{48400}{1290.67} \\approx 37.5\\,\\text{W}$. Alternatively, in series, the equivalent power is given by $\\frac{1}{P_{\\text{total}}} = \\frac{1}{P_1} + \\frac{1}{P_2} = \\frac{1}{100} + \\frac{1}{60} = \\frac{3+5}{300} = \\frac{8}{300} \\implies P_{\\text{total}} = \\frac{300}{8} = 37.5\\,\\text{W}$. Rounding to the nearest integer gives 38.",
+    "common_mistake": "Adding the powers directly ($100 + 60 = 160\\,\\text{W}$), which only holds if they are connected in parallel.",
+    "concept_slugs": ["heating-power"]
+  },
+  {
+    "pattern_group": "rc-circuits",
+    "title": "A capacitor of capacitance $C$ is connected in series with a resistor of resistance $R$ and a battery of EMF $V_0$. The charging process begins at $t=0$. The charge on the capacitor at time $t = 2\\tau$ (where $\\tau = RC$ is the time constant) is approximately ________ $\\%$. (Take $e^{-2} \\approx 0.135$)",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Advanced 2022",
+    "correct_answer": "86.5",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "solution_text": "The charging of a capacitor is described by the equation $q(t) = q_0(1 - e^{-t/RC})$, where $q_0 = C V_0$ is the maximum charge. At time $t = 2\\tau = 2RC$: $q(2RC) = q_0(1 - e^{-2})$. Given $e^{-2} \\approx 0.135$, we have $q = q_0(1 - 0.135) = 0.865 q_0 = 86.5\\%\\,q_0$. Thus, the percentage is 86.5.",
+    "common_mistake": "Using the discharging formula $q(t) = q_0 e^{-t/RC}$ (yielding 13.5%), or mixing up the exponent factor.",
+    "concept_slugs": ["rc-circuits"]
+  },
+  {
+    "pattern_group": "cells-emf",
+    "title": "A cell of EMF $E$ and internal resistance $r$ is connected across a variable external resistor $R$. According to the maximum power transfer theorem, the power dissipated in the external resistor is maximum when $R = r$. The maximum power dissipated is:",
+    "difficulty": "easy",
+    "type": "concept",
+    "correct_answer": "C",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\frac{E^2}{r}$",
+      "B": "$\\frac{E^2}{2r}$",
+      "C": "$\\frac{E^2}{4r}$",
+      "D": "$\\frac{2E^2}{r}$"
+    },
+    "notes": "Power dissipated is $P = I^2 R = \\left(\\frac{E}{R+r}\\right)^2 R$. Substitute $R = r$.",
+    "solution_text": "The current in the circuit is $I = \\frac{E}{R+r}$. The power dissipated in the external resistor $R$ is $P = I^2 R = \\left(\\frac{E}{R+r}\\right)^2 R$. For maximum power transfer, $R = r$. Substituting $R = r$ into the power equation: $P_{\\text{max}} = \\left(\\frac{E}{r+r}\\right)^2 r = \\left(\\frac{E}{2r}\\right)^2 r = \\frac{E^2}{4r^2} \\cdot r = \\frac{E^2}{4r}$. Option C is correct.",
+    "common_mistake": "Using $P = E^2 / r$ which neglects the potential drop across the internal resistance.",
+    "concept_slugs": ["cells-emf"]
+  },
+  {
+    "pattern_group": "resistance-drift",
+    "title": "The vector form of Ohm's law is given by $\\vec{J} = \\sigma \\vec{E}$, where $\\vec{J}$ is the current density, $\\vec{E}$ is the electric field, and $\\sigma$ is the conductivity. This relation shows that:",
+    "difficulty": "easy",
+    "type": "concept",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Current density is parallel to the electric field",
+      "B": "Current density is perpendicular to the electric field",
+      "C": "Current density is independent of the electric field",
+      "D": "Current density is inversely proportional to the electric field"
+    },
+    "notes": "Since conductivity $\\sigma$ is a positive scalar constant for an isotropic material, $\\vec{J}$ and $\\vec{E}$ are in the same direction.",
+    "solution_text": "The equation $\\vec{J} = \\sigma \\vec{E}$ relates the current density vector $\\vec{J}$ and the electric field vector $\\vec{E}$. Since the conductivity $\\sigma$ is a positive scalar quantity for isotropic materials, the vector $\\vec{J}$ is in the same direction as $\\vec{E}$. Therefore, the current density is parallel to the electric field. Option A is correct.",
+    "common_mistake": "Thinking current density is a scalar or that it is perpendicular to the electric field lines.",
+    "concept_slugs": ["resistance-drift"]
+  },
+  {
+    "pattern_group": "measuring-instruments",
+    "title": "In a potentiometer, the balance point with a cell in the open circuit is obtained at length $75\\,\\text{cm}$. When the cell is shunted by an external resistance of $10\\,\\Omega$, the balance point shifts to $60\\,\\text{cm}$. The internal resistance of the cell is ________ $\\Omega$.",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2023",
+    "correct_answer": "2.5",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "solution_text": "The internal resistance $r$ of a cell measured using a potentiometer is given by the formula: $r = R \\left(\\frac{l_1}{l_2} - 1\\right)$, where $l_1$ is the open-circuit balance length ($75\\,\\text{cm}$), $l_2$ is the closed-circuit balance length ($60\\,\\text{cm}$), and $R$ is the shunt resistance ($10\\,\\Omega$). Substituting these: $r = 10 \\left(\\frac{75}{60} - 1\\right) = 10 \\left(\\frac{5}{4} - 1\\right) = 10 \\times \\frac{1}{4} = 2.5\\,\\Omega$.",
+    "common_mistake": "Inverting the ratio of lengths as $60/75$ (yielding negative resistance), or forgetting to subtract 1.",
+    "concept_slugs": ["measuring-instruments"]
+  },
+  {
+    "pattern_group": "resistance-drift",
+    "title": "A carbon resistor has color bands: Yellow, Violet, Brown, Gold. The resistance of the resistor is:",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "(47 \\pm 10\\%) \\Omega",
+      "B": "(470 \\pm 5\\%) \\Omega",
+      "C": "(470 \\pm 10\\%) \\Omega",
+      "D": "(4700 \\pm 5\\%) \\Omega"
+    },
+    "notes": "Color codes: Black=0, Brown=1, Red=2, Orange=3, Yellow=4, Green=5, Blue=6, Violet=7, Grey=8, White=9. Gold=5% tolerance.",
+    "options": {
+      "A": "$(47 \\pm 10\\%)\\,\\Omega$",
+      "B": "$(470 \\pm 5\\%)\\,\\Omega$",
+      "C": "$(470 \\pm 10\\%)\\,\\Omega$",
+      "D": "$(4700 \\pm 5\\%)\\,\\Omega$"
+    },
+    "solution_text": "Using the carbon resistor color code: 1) First band (Yellow) = 4. 2) Second band (Violet) = 7. 3) Third band (Brown) is the multiplier $= 10^1 = 10$. 4) Fourth band (Gold) is the tolerance $= \\pm 5\\%$. Combining these, the resistance is $47 \\times 10^1 \\pm 5\\% = (470 \\pm 5\\%)\\,\\Omega$. Option B is correct.",
+    "common_mistake": "Interpreting the Brown band multiplier as $10^2$ instead of $10^1$, or using the wrong tolerance for Gold (Gold is 5%, Silver is 10%).",
+    "concept_slugs": ["resistance-drift"]
+  },
+  {
+    "pattern_group": "resistance-drift",
+    "title": "Twelve identical resistors, each of resistance $R$, are connected to form a skeleton cube. The equivalent resistance of the cube between two diagonally opposite corners of the body is:",
+    "difficulty": "hard",
+    "type": "pyq",
+    "source": "JEE Advanced 2023",
+    "correct_answer": "C",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$3/4 R$",
+      "B": "$7/12 R$",
+      "C": "$5/6 R$",
+      "D": "$1/2 R$"
+    },
+    "notes": "Apply symmetry: send current $6I$ into one corner, which splits into $2I$ in three branches, then splits further. Sum potential drops along any path to find $V = I_{\\text{total}} R_{\\text{eq}}$.",
+    "options": {
+      "A": "$\\frac{3}{4} R$",
+      "B": "$\\frac{7}{12} R$",
+      "C": "$\\frac{5}{6} R$",
+      "D": "$\\frac{1}{2} R$"
+    },
+    "solution_text": "Let a total current $6I$ enter at corner A and leave at the diagonally opposite corner G. 1) At entry corner A, the current splits equally into 3 branches meeting at A: $I_{AB} = I_{AD} = I_{AE} = 2I$. 2) At each of these junctions (B, D, E), the current splits equally into 2 branches: $I_{BC} = I_{BF} = I$, etc. 3) At junctions (C, F, H) leading to the exit corner G, the currents merge back: $I_{CG} = I_{FG} = I_{HG} = 2I$. 4) The potential difference between A and G along any path (e.g. A -> B -> C -> G) is $V_{AG} = V_{AB} + V_{BC} + V_{CG} = (2I)R + (I)R + (2I)R = 5IR$. Since the total current entering is $I_{\\text{total}} = 6I$, the equivalent resistance is $R_{\\text{eq}} = \\frac{V_{AG}}{I_{\\text{total}}} = \\frac{5IR}{6I} = \\frac{5}{6}R$. Option C is correct.",
+    "common_mistake": "Confusing the body diagonal equivalent resistance ($5/6 R$) with the face diagonal ($3/4 R$) or edge diagonal ($7/12 R$) equivalent resistance.",
+    "concept_slugs": ["resistance-drift"]
+  },
+  {
+    "pattern_group": "rc-circuits",
+    "title": "In a circuit consisting of a battery of EMF $E = 12\\,\\text{V}$, a resistor $R = 4\\,\\Omega$, and a capacitor $C = 2\\,\\mu\\text{F}$ connected in series, the charge on the capacitor in the steady state is ________ $\\mu\\text{C}$.",
+    "difficulty": "easy",
+    "type": "concept",
+    "correct_answer": "24",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "solution_text": "In the steady state (after a long time $t \\to \\infty$), a capacitor in a DC circuit acts as an open circuit (infinite resistance). The current in the series circuit becomes zero ($I = 0$). Since there is no current flowing through the resistor $R$, the potential drop across it is zero ($V_R = I \\cdot R = 0$). The entire potential difference of the battery is applied across the capacitor: $V_C = E = 12\\,\\text{V}$. The charge stored on the capacitor in the steady state is $Q = C V_C = (2\\,\\mu\\text{F}) \\times (12\\,\\text{V}) = 24\\,\\mu\\text{C}$.",
+    "common_mistake": "Calculating transient state values instead of steady state, or subtracting a potential drop across the resistor as if current was still flowing.",
+    "concept_slugs": ["rc-circuits"]
+  }
+]

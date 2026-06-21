@@ -1,0 +1,266 @@
+[
+  {
+    "pattern_group": "wave-equation",
+    "title": "A progressive wave is represented by the equation $y = 0.2\\sin\\left(2\\pi\\left(10t - 0.1x\\right)\\right)$, where $x$ and $y$ are in meters and $t$ is in seconds. The wave velocity is ________ $\\text{m/s}$.",
+    "difficulty": "easy",
+    "type": "pyq",
+    "source": "JEE Main 2021",
+    "correct_answer": "100",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "solution_text": "The standard wave equation is $y = A\\sin(\\omega t - kx)$. Comparing this with the given equation: $\\omega = 2\\pi \\times 10 = 20\\pi\\,\\text{rad/s}$, and $k = 2\\pi \\times 0.1 = 0.2\\pi\\,\\text{rad/m}$. The wave velocity is $v = \\frac{\\omega}{k} = \\frac{20\\pi}{0.2\\pi} = 100\\,\\text{m/s}$.",
+    "common_mistake": "Using wave speed $v = \\omega \\cdot k$ or forgetting to multiply by the $2\\pi$ factor outside the parentheses.",
+    "concept_slugs": ["wave-equation"]
+  },
+  {
+    "pattern_group": "wave-speed",
+    "title": "The tension in a stretched string is increased by $21\\%$. The percentage change in the speed of the transverse wave in the string is:",
+    "difficulty": "easy",
+    "type": "pyq",
+    "source": "JEE Main 2022",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "10%",
+      "B": "21%",
+      "C": "44%",
+      "D": "5%"
+    },
+    "notes": "Wave speed $v = \\sqrt{T/\\mu}$. Write the ratio of new speed to old speed.",
+    "solution_text": "The velocity of a transverse wave in a string is given by $v = \\sqrt{\\frac{T}{\\mu}}$, where $T$ is the tension and $\\mu$ is the mass per unit length. If the tension is increased by $21\\%$, the new tension is $T' = 1.21 T$. The new velocity is $v' = \\sqrt{\\frac{1.21 T}{\\mu}} = 1.1 \\sqrt{\\frac{T}{\\mu}} = 1.1 v$. The percentage change in speed is $\\frac{v' - v}{v} \\times 100 = \\frac{1.1v - v}{v} \\times 100 = 10\\%$. Option A is correct.",
+    "common_mistake": "Using linear approximation $\\Delta v / v = \\frac{1}{2} \\Delta T / T = 10.5\\%$. The linear approximation is only valid for very small percentage changes (like $1\\%-2\\%$) and fails for $21\\%$.",
+    "concept_slugs": ["wave-speed"]
+  },
+  {
+    "pattern_group": "wave-interference",
+    "title": "Two coherent sound sources of intensities $I_1$ and $I_2$ interfere to produce a maximum intensity $I_{\\text{max}}$ and a minimum intensity $I_{\\text{min}}$. If $I_1 / I_2 = 9$, then the ratio $I_{\\text{max}} / I_{\\text{min}}$ is:",
+    "difficulty": "easy",
+    "type": "pyq",
+    "source": "JEE Main 2023",
+    "correct_answer": "C",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "9:1",
+      "B": "3:1",
+      "C": "4:1",
+      "D": "16:1"
+    },
+    "notes": "Intensity ratio is related to amplitude ratio: $I_{\\text{max}}/I_{\\text{min}} = \\left(\\frac{\\sqrt{I_1} + \\sqrt{I_2}}{\\sqrt{I_1} - \\sqrt{I_2}}\\right)^2$.",
+    "solution_text": "Given $I_1 / I_2 = 9 \\implies \\sqrt{I_1/I_2} = 3$. The ratio of maximum to minimum intensity is $I_{\\text{max}}/I_{\\text{min}} = \\left(\\frac{\\sqrt{I_1} + \\sqrt{I_2}}{\\sqrt{I_1} - \\sqrt{I_2}}\\right)^2 = \\left(\\frac{\\sqrt{I_1/I_2} + 1}{\\sqrt{I_1/I_2} - 1}\\right)^2 = \\left(\\frac{3+1}{3-1}\\right)^2 = \\left(\\frac{4}{2}\\right)^2 = 4$. Thus, the ratio is $4:1$. Option C is correct.",
+    "common_mistake": "Assuming $I_{\\text{max}}/I_{\\text{min}} = I_1 / I_2 = 9$, forgetting that intensities add as amplitudes square during coherent interference.",
+    "concept_slugs": ["wave-interference"]
+  },
+  {
+    "pattern_group": "standing-waves-string",
+    "title": "A string of length $1.2\\,\\text{m}$ fixed at both ends vibrates in its third harmonic. The distance between two adjacent nodes in this vibration is ________ $\\text{cm}$.",
+    "difficulty": "easy",
+    "type": "pyq",
+    "source": "JEE Main 2022",
+    "correct_answer": "40",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "solution_text": "For a string fixed at both ends, the condition for standing waves is $L = n\\frac{\\lambda}{2}$. In the third harmonic ($n=3$): $L = 3\\frac{\\lambda}{2} \\implies \\lambda = \\frac{2L}{3} = \\frac{2 \\times 1.2}{3} = 0.8\\,\\text{m} = 80\\,\\text{cm}$. The distance between two adjacent nodes is $\\frac{\\lambda}{2} = \\frac{80\\,\\text{cm}}{2} = 40\\,\\text{cm}$.",
+    "common_mistake": "Reporting the wavelength $\\lambda = 80\\,\\text{cm}$ as the node spacing, or using $n=4$ for the third harmonic.",
+    "concept_slugs": ["standing-waves-string"]
+  },
+  {
+    "pattern_group": "wave-speed",
+    "title": "The ratio of the speed of sound in Hydrogen gas ($H_2$, molar mass $2\\,\\text{g/mol}$) to that in Helium gas ($He$, molar mass $4\\,\\text{g/mol}$) at the same temperature is:",
+    "difficulty": "medium",
+    "type": "concept",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\sqrt{\\frac{42}{25}}$",
+      "B": "$\\sqrt{\\frac{5}{3}}$",
+      "C": "$\\sqrt{2}$",
+      "D": "$\\sqrt{\\frac{21}{20}}$"
+    },
+    "notes": "The speed of sound in a gas is $v = \\sqrt{\\frac{\\gamma RT}{M}}$. Note that $H_2$ is diatomic ($\\gamma = 7/5 = 1.4$) and $He$ is monatomic ($\\gamma = 5/3 \\approx 1.67$).",
+    "solution_text": "The speed of sound in a gas is $v = \\sqrt{\\frac{\\gamma RT}{M}}$. At the same temperature: $\\frac{v_{H_2}}{v_{He}} = \\sqrt{\\frac{\\gamma_{H_2}}{M_{H_2}} \\frac{M_{He}}{\\gamma_{He}}}$. For Hydrogen ($H_2$, diatomic): $\\gamma_{H_2} = 7/5$, $M_{H_2} = 2$. For Helium ($He$, monatomic): $\\gamma_{He} = 5/3$, $M_{He} = 4$. Substituting: $\\frac{v_{H_2}}{v_{He}} = \\sqrt{\\frac{7/5}{2} \\times \\frac{4}{5/3}} = \\sqrt{\\frac{7}{10} \\times \\frac{12}{5}} = \\sqrt{\\frac{84}{50}} = \\sqrt{\\frac{42}{25}}$. Option A is correct.",
+    "common_mistake": "Neglecting the difference in $\\gamma$ (assuming speed only depends on molar mass $M$, which yields $\\sqrt{2}$).",
+    "concept_slugs": ["wave-speed"]
+  },
+  {
+    "pattern_group": "organ-pipes",
+    "title": "An open organ pipe of length $L_o$ and a closed organ pipe of length $L_c$ have the same fundamental frequency. The ratio of their lengths $L_o / L_c$ is:",
+    "difficulty": "easy",
+    "type": "pyq",
+    "source": "JEE Main 2021",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "1",
+      "B": "2",
+      "C": "0.5",
+      "D": "4"
+    },
+    "notes": "Fundamental frequency of open pipe is $f_o = v/(2L_o)$. For closed pipe, $f_c = v/(4L_c)$.",
+    "solution_text": "Fundamental frequency of an open organ pipe: $f_o = \\frac{v}{2L_o}$. Fundamental frequency of a closed organ pipe: $f_c = \\frac{v}{4L_c}$. Given $f_o = f_c \\implies \\frac{v}{2L_o} = \\frac{v}{4L_c} \\implies 2L_o = 4L_c \\implies L_o / L_c = 2$. Option B is correct.",
+    "common_mistake": "Assuming they have the same length ratio of $1:1$, or using the wrong denominator factors (mixing 2 and 4).",
+    "concept_slugs": ["organ-pipes"]
+  },
+  {
+    "pattern_group": "beats-doppler",
+    "title": "Two tuning forks A and B produce 5 beats per second. When B is slightly loaded with wax, the beat frequency becomes 3 beats per second. If the frequency of A is $340\\,\\text{Hz}$, the frequency of B is ________ $\\text{Hz}$.",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2022",
+    "correct_answer": "345",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "solution_text": "Since A and B produce 5 beats/s: $f_B = f_A \\pm 5 = 340 \\pm 5 \\implies f_B = 345\\,\\text{Hz}$ or $335\\,\\text{Hz}$. Loading B with wax decreases its frequency ($f_B' < f_B$). If $f_B = 345\\,\\text{Hz}$, then loading it with wax reduces it, say to $343\\,\\text{Hz}$, so the new beat frequency with A ($340\\,\\text{Hz}$) is $343 - 340 = 3$ beats/s. This matches the problem statement. If $f_B$ was $335\\,\\text{Hz}$, loading it with wax would reduce it to say $333\\,\\text{Hz}$, so the beat frequency would become $340 - 333 = 7$ beats/s (which is an increase). Hence, the original frequency of B must be $345\\,\\text{Hz}$.",
+    "common_mistake": "Reporting $335\\,\\text{Hz}$ because they didn't test the loading effect carefully, or adding wax increases frequency.",
+    "concept_slugs": ["beats-doppler"]
+  },
+  {
+    "pattern_group": "beats-doppler",
+    "title": "A car sounding a horn of frequency $400\\,\\text{Hz}$ moves with speed $20\\,\\text{m/s}$ towards a stationary vertical wall. If the speed of sound in air is $320\\,\\text{m/s}$, the frequency of the echo heard by the driver of the car is ________ $\\text{Hz}$.",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "453",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "solution_text": "1) The wall acts as a stationary observer receiving frequency $f_w = f_0 \\left(\\frac{v}{v - v_s}\\right) = 400 \\left(\\frac{320}{320 - 20}\\right) = 400 \\left(\\frac{320}{300}\\right) = \\frac{1280}{3}\\,\\text{Hz}$. 2) The wall then reflects this frequency, acting as a stationary source. The moving driver acts as an observer moving towards the wall with speed $v_o = 20\\,\\text{m/s}$. The frequency heard by the driver is $f' = f_w \\left(\\frac{v + v_o}{v}\\right) = \\left(\\frac{1280}{3}\\right) \\left(\\frac{320 + 20}{320}\\right) = \\left(\\frac{1280}{3}\\right) \\left(\\frac{340}{320}\\right) = 4 \\times \\frac{340}{3} = \\frac{1360}{3} \\approx 453.33\\,\\text{Hz}$. Rounding to the nearest integer gives 453.",
+    "common_mistake": "Using a single-stage Doppler formula, or subtracting $v_o$ in the numerator, yielding $400\\,\\text{Hz}$.",
+    "concept_slugs": ["beats-doppler"]
+  },
+  {
+    "pattern_group": "standing-waves-string",
+    "title": "A standing wave in a stretched string fixed at both ends is represented by $y = 5\\sin(kx)\\cos(100\\pi t)\\,\\text{mm}$, where $x$ is in meters and $t$ is in seconds. If the distance between two successive nodes is $10\\,\\text{cm}$, the maximum speed of a particle at $x = 2.5\\,\\text{cm}$ is:",
+    "difficulty": "hard",
+    "type": "pyq",
+    "source": "JEE Advanced 2022",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "0.25^\\circ\\text{m/s} (no)",
+      "B": "$0.25\\sqrt{2}\\pi\\,\\text{m/s}$",
+      "C": "$0.5\\pi\\,\\text{m/s}$",
+      "D": "$0.25\\pi\\,\\text{m/s}$"
+    },
+    "notes": "Distance between successive nodes is $\\lambda/2 = 10\\,\\text{cm} = 0.1\\,\\text{m} \\implies \\lambda = 0.2\\,\\text{m} \\implies k = 2\\pi/\\lambda = 10\\pi\\,\\text{rad/m}$. Velocity of particle is $v_y = \\frac{\\partial y}{\\partial t}$.",
+    "options": {
+      "A": "$0.5\\sqrt{2}\\pi\\,\\text{m/s}$",
+      "B": "$0.25\\sqrt{2}\\pi\\,\\text{m/s}$",
+      "C": "$0.25\\pi\\,\\text{m/s}$",
+      "D": "$0.5\\pi\\,\\text{m/s}$"
+    },
+    "solution_text": "Successive node distance $\\lambda/2 = 10\\,\\text{cm} = 0.1\\,\\text{m} \\implies \\lambda = 0.2\\,\\text{m}$. Wave number $k = \\frac{2\\pi}{\\lambda} = 10\\pi\\,\\text{rad/m}$. Particle velocity $v_y = \\frac{\\partial y}{\\partial t} = -5\\sin(10\\pi x) \\cdot 100\\pi\\sin(100\\pi t)\\,\\text{mm/s}$. The maximum particle speed is $v_{\\text{max}} = 500\\pi \\sin(10\\pi x)\\,\\text{mm/s}$. At $x = 2.5\\,\\text{cm} = 0.025\\,\\text{m}$: $10\\pi x = 0.25\\pi = \\pi/4$. Thus, $v_{\\text{max}} = 500\\pi \\sin(\\pi/4) = \\frac{500\\pi}{\\sqrt{2}} = 250\\sqrt{2}\\pi\\,\\text{mm/s} = 0.25\\sqrt{2}\\pi\\,\\text{m/s}$. Option B is correct.",
+    "common_mistake": "Confusing wave velocity ($v = \\omega/k$) with particle velocity ($v_y = \\partial y/\\partial t$).",
+    "concept_slugs": ["standing-waves-string", "wave-equation"]
+  },
+  {
+    "pattern_group": "organ-pipes",
+    "title": "In a resonance column experiment, the first resonance is obtained at length $18\\,\\text{cm}$ and the second resonance is obtained at length $56\\,\\text{cm}$ using a tuning fork of frequency $500\\,\\text{Hz}$. The speed of sound in air calculated from this data is ________ $\\text{m/s}$.",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "380",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "solution_text": "For a resonance column (closed at one end): $l_1 + e = \\frac{\\lambda}{4}$ and $l_2 + e = \\frac{3\\lambda}{4}$. Subtracting these two equations: $l_2 - l_1 = \\frac{\\lambda}{2} \\implies \\lambda = 2(l_2 - l_1) = 2(56 - 18) = 2(38) = 76\\,\\text{cm} = 0.76\\,\\text{m}$. The speed of sound is $v = f \\lambda = 500 \\times 0.76 = 380\\,\\text{m/s}$.",
+    "common_mistake": "Calculating wavelength as $\\lambda = 4 l_1 = 72\\,\\text{cm}$, neglecting the end correction $e$. Use subtraction to eliminate $e$.",
+    "concept_slugs": ["organ-pipes"]
+  },
+  {
+    "pattern_group": "wave-equation",
+    "title": "The intensity of a sound wave is directly proportional to the square of its:",
+    "difficulty": "easy",
+    "type": "concept",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Wavelength",
+      "B": "Amplitude",
+      "C": "Wave velocity",
+      "D": "Period"
+    },
+    "notes": "Intensity of a wave is $I = 2\\pi^2 \\rho v f^2 A^2$. So $I \\propto A^2$ and $I \\propto f^2$.",
+    "solution_text": "The intensity $I$ of a wave is the average energy transmitted per unit area per unit time. The formula for intensity is $I = 2\\pi^2 \\rho v f^2 A^2$, where $\\rho$ is the density of the medium, $v$ is the wave velocity, $f$ is the frequency, and $A$ is the amplitude of the wave. Thus, the intensity is directly proportional to the square of the amplitude ($A^2$) and the square of the frequency ($f^2$). Option B is correct.",
+    "common_mistake": "Thinking intensity is proportional to amplitude rather than amplitude squared.",
+    "concept_slugs": ["wave-equation"]
+  },
+  {
+    "pattern_group": "wave-speed",
+    "title": "A uniform heavy rope of mass $M$ and length $L$ hangs vertically from a rigid support. A transverse wave pulse is produced at the lower end. The time taken by the pulse to travel to the top support is:",
+    "difficulty": "hard",
+    "type": "pyq",
+    "source": "JEE Main 2023",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\pi\\sqrt{\\frac{L}{g}}$",
+      "B": "$2\\sqrt{\\frac{L}{g}}$",
+      "C": "$\\sqrt{\\frac{2L}{g}}$",
+      "D": "$\\sqrt{\\frac{L}{g}}$"
+    },
+    "notes": "Tension at distance $x$ from the bottom is $T(x) = (M/L)xg$. Wave speed is $v(x) = \\sqrt{T/\\mu} = \\sqrt{xg}$. Write $dt = dx / v(x)$ and integrate from $0$ to $L$.",
+    "solution_text": "Let $x$ be the distance from the bottom free end. The tension at this point is due to the weight of the rope below it: $T(x) = \\mu x g$, where $\\mu = M/L$ is the linear mass density. The speed of the wave pulse at position $x$ is $v(x) = \\sqrt{\\frac{T(x)}{\\mu}} = \\sqrt{\\frac{\\mu x g}{\\mu}} = \\sqrt{xg}$. We know $v = \\frac{dx}{dt} \\implies dt = \\frac{dx}{\\sqrt{xg}}$. Integrating from $t=0$ to $t=t_0$ and $x=0$ to $x=L$: $t_0 = \\int_0^L \\frac{dx}{\\sqrt{g}x^{1/2}} = \\frac{1}{\\sqrt{g}} [2x^{1/2}]_0^L = 2\\sqrt{\\frac{L}{g}}$. Option B is correct.",
+    "common_mistake": "Using a constant acceleration model without integration, or using $v = \\sqrt{Lg}$ as constant speed (yielding time $t = \\sqrt{L/g}$).",
+    "concept_slugs": ["wave-speed"]
+  },
+  {
+    "pattern_group": "organ-pipes",
+    "title": "An open organ pipe of length $L$ is in resonance with its second harmonic. If one end of the pipe is closed, the pipe is found to be in resonance with its $n^{\\text{th}}$ harmonic with the same frequency. The value of $n$ is:",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "3",
+      "B": "no such harmonic exists",
+      "C": "5",
+      "D": "1"
+    },
+    "notes": "Frequency of open pipe 2nd harmonic: $f_o = 2 \\left(\\frac{v}{2L}\\right) = \\frac{v}{L}$. Frequency of closed pipe $n^{\\text{th}}$ harmonic: $f_c = n \\left(\\frac{v}{4L}\\right)$ where $n$ must be an odd integer.",
+    "options": {
+      "A": "3",
+      "B": "5",
+      "C": "No such harmonic exists",
+      "D": "1"
+    },
+    "solution_text": "For the open pipe, the frequency of the second harmonic is $f_{\\text{open}} = 2 \\left(\\frac{v}{2L}\\right) = \\frac{v}{L}$. When one end of the pipe is closed, it becomes a closed organ pipe of the same length $L$. The resonance frequencies of a closed pipe are $f_{\\text{closed}} = n \\left(\\frac{v}{4L}\\right)$, where $n$ must be an odd integer ($n = 1, 3, 5, \\dots$). For the frequencies to be the same: $f_{\\text{open}} = f_{\\text{closed}} \\implies \\frac{v}{L} = n\\frac{v}{4L} \\implies n = 4$. Since $n = 4$ is an even integer, and a closed organ pipe only supports odd harmonics, no such harmonic exists. Option C is correct.",
+    "common_mistake": "Simply setting $n=4$ without checking if even harmonics are supported in a closed organ pipe.",
+    "concept_slugs": ["organ-pipes"]
+  },
+  {
+    "pattern_group": "beats-doppler",
+    "title": "A stationary observer receives a sound of frequency $f_0$ from a source moving away with constant speed $v_s$. If a wind is blowing from the source to the observer with speed $w$, the observed frequency will be:",
+    "difficulty": "hard",
+    "type": "pyq",
+    "source": "JEE Advanced 2023",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$f_0 \\left(\\frac{v + w}{v + w + v_s}\\right)$",
+      "B": "$f_0 \\left(\\frac{v}{v + v_s}\\right)$",
+      "C": "$f_0 \\left(\\frac{v - w}{v - w + v_s}\\right)$",
+      "D": "$f_0 \\left(\\frac{v + w}{v + v_s}\\right)$"
+    },
+    "notes": "When wind blows, the speed of sound relative to the ground becomes $v + w$ in the direction of wind.",
+    "solution_text": "Since the wind is blowing from the source to the observer, the effective speed of sound in this direction is $v' = v + w$. The source is moving away from the observer (who is stationary) with speed $v_s$. By the Doppler formula: $f' = f_0 \\left(\\frac{v'}{v' + v_s}\\right) = f_0 \\left(\\frac{v + w}{v + w + v_s}\\right)$. Option A is correct.",
+    "common_mistake": "Neglecting the wind velocity term in the numerator or denominator, or subtracting wind velocity.",
+    "concept_slugs": ["beats-doppler"]
+  },
+  {
+    "pattern_group": "organ-pipes",
+    "title": "An open organ pipe of length $L = 30\\,\\text{cm}$ and inner radius $r = 3\\,\\text{cm}$ vibrates in its fundamental mode. The wavelength of the sound wave emitted is ________ $\\text{cm}$ (include end correction $e = 0.6r$ at each open end).",
+    "difficulty": "medium",
+    "type": "concept",
+    "correct_answer": "67.2",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "solution_text": "An open organ pipe has two open ends, so end correction is applied at both ends: $L_{\\text{eff}} = L + 2e = L + 2(0.6r) = L + 1.2r$. Given $L = 30\\,\\text{cm}$ and $r = 3\\,\\text{cm}$: $L_{\\text{eff}} = 30 + 1.2(3) = 30 + 3.6 = 33.6\\,\\text{cm}$. For the fundamental mode of an open pipe: $L_{\\text{eff}} = \\frac{\\lambda}{2} \\implies \\lambda = 2 L_{\\text{eff}} = 2 \\times 33.6 = 67.2\\,\\text{cm}$.",
+    "common_mistake": "Using only one end correction factor (like a closed pipe), or forgetting to double $L_{\\text{eff}}$ to find the wavelength.",
+    "concept_slugs": ["organ-pipes"]
+  }
+]

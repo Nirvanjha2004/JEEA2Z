@@ -1,0 +1,279 @@
+[
+  {
+    "pattern_group": "coulombs-law",
+    "title": "Two point charges $+q$ and $+4q$ are separated by a distance $r$. A third charge $Q$ is placed on the line joining them such that the net force on all three charges is zero. The position and magnitude of the charge $Q$ are:",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2021",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "at distance $r/3$ from $+q$, magnitude $-4q/9$",
+      "B": "at distance $r/3$ from $+q$, magnitude $-4q/9$",
+      "C": "at distance $2r/3$ from $+q$, magnitude $-4q/9$",
+      "D": "at distance $r/3$ from $+q$, magnitude $-2q/3$"
+    },
+    "notes": "First find the position of zero electric field to place $Q$ for its own equilibrium. Then equate forces on $+q$ to zero to find the magnitude and sign of $Q$.",
+    "options": {
+      "A": "at distance $2r/3$ from $+q$, magnitude $-4q/9$",
+      "B": "at distance $r/3$ from $+q$, magnitude $-4q/9$",
+      "C": "at distance $r/3$ from $+q$, magnitude $-2q/3$",
+      "D": "at distance $2r/3$ from $+q$, magnitude $-2q/3$"
+    },
+    "solution_text": "Let $Q$ be placed at distance $x$ from $+q$. For $Q$ to be in equilibrium: $\\frac{k q Q}{x^2} = \\frac{k (4q) Q}{(r-x)^2} \\implies \\frac{1}{x^2} = \\frac{4}{(r-x)^2} \\implies \\frac{1}{x} = \\frac{2}{r-x} \\implies r-x = 2x \\implies x = r/3$. For $+q$ to be in equilibrium, the net force on it must be zero: $\\frac{k q (4q)}{r^2} + \\frac{k q Q}{x^2} = 0 \\implies \\frac{4q}{r^2} + \\frac{Q}{(r/3)^2} = 0 \\implies \\frac{4q}{r^2} + \\frac{9Q}{r^2} = 0 \\implies Q = -4q/9$. Hence, $Q$ must be at distance $r/3$ from $+q$, and its magnitude is $-4q/9$. Option B is correct.",
+    "common_mistake": "Finding only the position and assuming $Q$ must be positive, or failing to check equilibrium of the outer charges.",
+    "concept_slugs": ["coulombs-law"]
+  },
+  {
+    "pattern_group": "electric-field-potential",
+    "title": "A circular ring of radius $R$ carries a charge $Q$ uniformly distributed over its length. The distance from the center of the ring along its axis where the electric field strength is maximum is:",
+    "difficulty": "easy",
+    "type": "pyq",
+    "source": "JEE Main 2022",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$R$",
+      "B": "$R/\\sqrt{2}$",
+      "C": "$\\sqrt{2}R$",
+      "D": "$R/2$"
+    },
+    "notes": "Electric field on the axis: $E(x) = \\frac{kQx}{(x^2+R^2)^{3/2}}$. Maximize $E(x)$ by setting $dE/dx = 0$.",
+    "solution_text": "The electric field on the axis of a uniformly charged ring of radius $R$ at distance $x$ from the center is $E = \\frac{kQx}{(x^2+R^2)^{3/2}}$. To find the point of maximum field, we differentiate $E$ with respect to $x$ and set it to zero: $\\frac{dE}{dx} = kQ \\frac{(x^2+R^2)^{3/2} - x \\cdot \\frac{3}{2}(x^2+R^2)^{1/2}(2x)}{(x^2+R^2)^3} = 0 \\implies (x^2+R^2) - 3x^2 = 0 \\implies R^2 = 2x^2 \\implies x = \\pm R/\\sqrt{2}$. Option B is correct.",
+    "common_mistake": "Assuming the maximum field is at the center ($x=0$, where $E=0$) or at infinity.",
+    "concept_slugs": ["electric-field-potential"]
+  },
+  {
+    "pattern_group": "electric-field-potential",
+    "title": "Two concentric conducting spherical shells of radii $R$ and $2R$ carry charges $Q$ and $2Q$ respectively. The electric potential at a distance of $1.5R$ from their common center is:",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2023",
+    "correct_answer": "C",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\frac{kQ}{R}$",
+      "B": "$\\frac{5kQ}{3R}$",
+      "C": "$\\frac{5kQ}{3R}$",
+      "D": "$\\frac{2kQ}{R}$"
+    },
+    "notes": "At $r=1.5R$, the point lies outside the inner shell (potential $= kQ/r$) and inside the outer shell (potential $= k(2Q)/(2R)$). Potential is the sum of these two.",
+    "options": {
+      "A": "$\\frac{kQ}{R}$",
+      "B": "$\\frac{4kQ}{3R}$",
+      "C": "$\\frac{5kQ}{3R}$",
+      "D": "$\\frac{2kQ}{3R}$"
+    },
+    "solution_text": "Let $r = 1.5R$. The potential at distance $r$ is the sum of potentials due to the inner shell and the outer shell. 1) Due to inner shell (radius $R$, charge $Q$): since $r > R$, the potential is $V_1 = \\frac{kQ}{r} = \\frac{kQ}{1.5R} = \\frac{2kQ}{3R}$. 2) Due to outer shell (radius $2R$, charge $2Q$): since $r < 2R$, the potential is uniform inside and equal to the surface potential, $V_2 = \\frac{k(2Q)}{2R} = \\frac{kQ}{R}$. Total potential $V = V_1 + V_2 = \\frac{2kQ}{3R} + \\frac{kQ}{R} = \\frac{5kQ}{3R}$. Option C is correct.",
+    "common_mistake": "Using $V = \\frac{k(Q+2Q)}{1.5R} = \\frac{2kQ}{R}$ (treating both as point charges at the center, which only works if the point lies outside both shells).",
+    "concept_slugs": ["electric-field-potential"]
+  },
+  {
+    "pattern_group": "gausss-law",
+    "title": "A point charge $q$ is placed at the center of a cube of side $a$. The electric flux through any one face of the cube is:",
+    "difficulty": "easy",
+    "type": "pyq",
+    "source": "JEE Main 2022",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\frac{q}{\\epsilon_0}$",
+      "B": "$\\frac{q}{6\\epsilon_0}$",
+      "C": "$\\frac{q}{24\\epsilon_0}$",
+      "D": "$\\frac{q}{8\\epsilon_0}$"
+    },
+    "notes": "Apply Gauss's Law: total flux through the closed cube is $\\Phi = q/\\epsilon_0$. By symmetry, the flux is equally divided among the 6 faces.",
+    "solution_text": "According to Gauss's Law, the total electric flux $\\Phi_{\\text{total}}$ through a closed surface enclosing a charge $q$ is $\\Phi_{\\text{total}} = \\frac{q}{\\epsilon_0}$. A cube is a symmetric closed surface with 6 identical faces. Since the charge $q$ is at the center, the flux is distributed equally through all 6 faces. Therefore, the flux through any one face is $\\Phi = \\frac{\\Phi_{\\text{total}}}{6} = \\frac{q}{6\\epsilon_0}$. Option B is correct.",
+    "common_mistake": "Confusing a charge placed at a vertex (where flux through one face is $q/(24\\epsilon_0)$) with a charge placed at the center.",
+    "concept_slugs": ["gausss-law"]
+  },
+  {
+    "pattern_group": "potential-energy",
+    "title": "Three point charges $+q$, $+q$, and $-q$ are placed at the vertices of an equilateral triangle of side $a$. The electrostatic potential energy of the system is:",
+    "difficulty": "easy",
+    "type": "concept",
+    "correct_answer": "C",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\frac{kq^2}{a}$",
+      "B": "$-\\frac{3kq^2}{a}$",
+      "C": "$-\\frac{kq^2}{a}$",
+      "D": "$0$"
+    },
+    "notes": "Potential energy of a system of three charges is $U = U_{12} + U_{23} + U_{13}$. Keep the signs of the charges.",
+    "solution_text": "The potential energy of the three-charge system is the sum of potential energies of all three pairs: $U = \\frac{k q_1 q_2}{r_{12}} + \\frac{k q_2 q_3}{r_{23}} + \\frac{k q_1 q_3}{r_{13}}$. Here, the pairs are: 1) $+q$ and $+q$: $U_{12} = \\frac{kq^2}{a}$. 2) $+q$ and $-q$: $U_{23} = -\\frac{kq^2}{a}$. 3) $+q$ and $-q$: $U_{13} = -\\frac{kq^2}{a}$. Summing them up: $U = \\frac{kq^2}{a} - \\frac{kq^2}{a} - \\frac{kq^2}{a} = -\\frac{kq^2}{a}$. Option C is correct.",
+    "common_mistake": "Neglecting the negative signs of the charges and summing magnitudes, or forgetting one of the three pairs.",
+    "concept_slugs": ["potential-energy"]
+  },
+  {
+    "pattern_group": "electric-dipoles",
+    "title": "An electric dipole of dipole moment $p = 4 \\times 10^{-9}\\,\\text{C}\\cdot\\text{m}$ is placed in a uniform electric field of $5 \\times 10^4\\,\\text{N/C}$ making an angle of $30^\\circ$ with the field. The magnitude of the torque acting on the dipole is ________ $\\times 10^{-4}\\,\\text{N}\\cdot\\text{m}$.",
+    "difficulty": "easy",
+    "type": "pyq",
+    "source": "JEE Main 2021",
+    "correct_answer": "1",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "solution_text": "The torque acting on an electric dipole in a uniform electric field is $\\tau = p E \\sin\\theta$. Given: $p = 4 \\times 10^{-9}\\,\\text{C}\\cdot\\text{m}$, $E = 5 \\times 10^4\\,\\text{N/C}$, and $\\theta = 30^\\circ \\implies \\sin 30^\\circ = 0.5$. Substituting: $\\tau = (4 \\times 10^{-9}) \\times (5 \\times 10^4) \\times 0.5 = 20 \\times 10^{-5} \\times 0.5 = 10 \\times 10^{-5}\\,\\text{N}\\cdot\\text{m} = 1.0 \\times 10^{-4}\\,\\text{N}\\cdot\\text{m}$. Hence, the value is 1.",
+    "common_mistake": "Using $\\cos 30^\\circ$ instead of $\\sin 30^\\circ$, or wrong calculation of exponent powers.",
+    "concept_slugs": ["electric-dipoles"]
+  },
+  {
+    "pattern_group": "conductors-capacitors",
+    "title": "A parallel plate capacitor of area $A$, plate separation $d$ and capacitance $C$ is filled with a dielectric slab of dielectric constant $K = 4$ in half the region (parallel to the plates) as shown. The new capacitance is:",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2022",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "2 C",
+      "B": "1.6 C",
+      "C": "2.5 C",
+      "D": "0.625 C"
+    },
+    "notes": "Dividing parallel to plates means two capacitors in series: one of thickness $d/2$ with air, and one of thickness $d/2$ with dielectric $K$.",
+    "options": {
+      "A": "2.0 C",
+      "B": "1.6 C",
+      "C": "2.5 C",
+      "D": "1.25 C"
+    },
+    "solution_text": "The dielectric slab fills half the separation parallel to the plates, so we have two capacitors connected in series: 1) $C_1$ with air of thickness $d/2$: $C_1 = \\frac{\\epsilon_0 A}{d/2} = 2C$. 2) $C_2$ with dielectric $K=4$ of thickness $d/2$: $C_2 = \\frac{K \\epsilon_0 A}{d/2} = 2KC = 2(4)C = 8C$. The equivalent capacitance $C_{\\text{eq}}$ of the series combination is: $\\frac{1}{C_{\\text{eq}}} = \\frac{1}{C_1} + \\frac{1}{C_2} = \\frac{1}{2C} + \\frac{1}{8C} = \\frac{4+1}{8C} = \\frac{5}{8C} \\implies C_{\\text{eq}} = \\frac{8}{5}C = 1.6C$. Option B is correct.",
+    "common_mistake": "Treating them as parallel capacitors (which would happen if the dielectric was split perpendicular to the plates, yielding $2.5C$).",
+    "concept_slugs": ["conductors-capacitors"]
+  },
+  {
+    "pattern_group": "conductors-capacitors",
+    "title": "A solid conducting sphere of radius $R$ is given a charge $+Q$. It is surrounded by a concentric conducting spherical shell of inner radius $2R$ and outer radius $3R$. If the outer shell is given a charge $+2Q$, the charge on the outer surface of the outer shell is:",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "C",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$2Q$",
+      "B": "$Q$",
+      "C": "$3Q$",
+      "D": "0"
+    },
+    "notes": "Use Gauss's Law inside the bulk of the outer shell: the net charge enclosed by a surface inside the conductor must be zero. This induces $-Q$ on the inner surface of the outer shell.",
+    "solution_text": "1) The inner sphere carries charge $+Q$. 2) Consider a spherical Gaussian surface inside the conducting material of the outer shell (radius $r$ between $2R$ and $3R$). Since the electric field inside a conductor is zero, the flux through this surface is zero, and thus the net enclosed charge must be zero: $Q_{\\text{encl}} = Q_{\\text{inner}} + Q_{\\text{inner\\_shell}} = 0 \\implies Q + Q_{\\text{inner\\_shell}} = 0 \\implies Q_{\\text{inner\\_shell}} = -Q$. 3) Since the outer shell is given a total charge of $+2Q$, and by conservation of charge: $Q_{\\text{inner\\_shell}} + Q_{\\text{outer\\_shell}} = +2Q \\implies -Q + Q_{\\text{outer\\_shell}} = 2Q \\implies Q_{\\text{outer\\_shell}} = 3Q$. Option C is correct.",
+    "common_mistake": "Thinking the charge on the outer surface is simply the charge given to it ($2Q$), neglecting the induction from the inner sphere.",
+    "concept_slugs": ["conductors-capacitors"]
+  },
+  {
+    "pattern_group": "gausss-law",
+    "title": "An infinite plane sheet of charge has a uniform surface charge density $\\sigma = 8.85 \\times 10^{-6}\\,\\text{C/m}^2$. The work done in moving a point charge $q = 2\\,\\mu\\text{C}$ through a distance of $5\\,\\text{cm}$ perpendicular to the sheet is ________ $\\text{J}$. (Take $\\epsilon_0 = 8.85 \\times 10^{-12}\\,\\text{C}^2/\\text{N}\\cdot\\text{m}^2$).",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Advanced 2022",
+    "correct_answer": "0.05",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "solution_text": "The electric field due to an infinite plane sheet of charge is uniform and is given by $E = \\frac{\\sigma}{2\\epsilon_0}$. Substituting the values: $E = \\frac{8.85 \\times 10^{-6}}{2 \\times 8.85 \\times 10^{-12}} = 0.5 \\times 10^6 = 5 \\times 10^5\\,\\text{N/C}$. The force on the charge $q$ is $F = qE = (2 \\times 10^{-6}) \\times (5 \\times 10^5) = 1\\,\\text{N}$. The work done in moving the charge by distance $d = 5\\,\\text{cm} = 0.05\\,\\text{m}$ against or along the field (magnitude) is $W = F \\cdot d = 1 \\times 0.05 = 0.05\\,\\text{J}$.",
+    "common_mistake": "Using the electric field of a conductor $E = \\sigma / \\epsilon_0$ instead of the thin sheet formula $E = \\sigma / 2\\epsilon_0$.",
+    "concept_slugs": ["gausss-law"]
+  },
+  {
+    "pattern_group": "conductors-capacitors",
+    "title": "A parallel plate capacitor of capacitance $C_0$ is charged to a potential difference $V_0$. The charging battery is then disconnected, and a dielectric slab of dielectric constant $K = 5$ is introduced to fill the entire gap between the plates. The ratio of final electrostatic energy to initial electrostatic energy is:",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "C",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "5",
+      "B": "25",
+      "C": "1/5",
+      "D": "1/25"
+    },
+    "notes": "Since the battery is disconnected, the charge $Q$ remains constant. Initial energy is $U_i = Q^2 / (2C_0)$. Final energy is $U_f = Q^2 / (2C_f) = Q^2 / (2K C_0)$.",
+    "solution_text": "When the battery is disconnected, the charge $Q$ on the capacitor remains constant. The initial capacitance is $C_0$, and initial energy is $U_i = \\frac{Q^2}{2C_0}$. When the dielectric slab of constant $K=5$ is introduced, the capacitance increases to $C_f = KC_0 = 5C_0$. The final energy is $U_f = \\frac{Q^2}{2C_f} = \\frac{Q^2}{2(5C_0)} = \\frac{1}{5} U_i$. Thus, the ratio of final to initial energy is $U_f / U_i = 1/5$. Option C is correct.",
+    "common_mistake": "Using $U = \\frac{1}{2} C V^2$ and assuming potential $V$ remains constant (which only holds if the battery remains connected, in which case energy would increase to $5U_i$).",
+    "concept_slugs": ["conductors-capacitors"]
+  },
+  {
+    "pattern_group": "gausss-law",
+    "title": "A charge $q$ is enclosed by a spherical Gaussian surface of radius $R$. If the radius of the sphere is doubled, the electric flux passing through the surface will:",
+    "difficulty": "easy",
+    "type": "concept",
+    "correct_answer": "C",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "be doubled",
+      "B": "be halved",
+      "C": "remain unchanged",
+      "D": "become four times"
+    },
+    "notes": "Gauss's Law states $\\Phi = q_{\\text{encl}}/\\epsilon_0$. The flux is independent of the size and shape of the surface.",
+    "solution_text": "By Gauss's Law, the total electric flux through any closed surface is given by $\\Phi = \\frac{q_{\\text{encl}}}{\\epsilon_0}$. This total flux depends only on the charge enclosed inside the surface and is independent of the shape, size, or radius of the enclosing surface. Therefore, doubling the radius of the spherical Gaussian surface will not change the amount of enclosed charge ($q$), and the flux will remain unchanged. Option C is correct.",
+    "common_mistake": "Thinking flux is proportional to area (yielding 4 times) or inversely proportional to radius.",
+    "concept_slugs": ["gausss-law"]
+  },
+  {
+    "pattern_group": "electric-dipoles",
+    "title": "An electric dipole consists of two opposite charges of magnitude $2\\,\\mu\\text{C}$ separated by a distance of $3\\,\\text{mm}$. The dipole is placed in a uniform electric field of $2 \\times 10^5\\,\\text{N/C}$. The work done in rotating the dipole from its stable equilibrium position to its unstable equilibrium position is ________ $\\times 10^{-3}\\,\\text{J}$.",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2023",
+    "correct_answer": "2.4",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "solution_text": "The dipole moment is $p = q \\cdot d = (2 \\times 10^{-6}\\,\\text{C}) \\times (3 \\times 10^{-3}\\,\\text{m}) = 6 \\times 10^{-9}\\,\\text{C}\\cdot\\text{m}$. 1) Stable equilibrium: $\\theta_1 = 0^\\circ \\implies U_1 = -p E \\cos 0^\\circ = -p E$. 2) Unstable equilibrium: $\\theta_2 = 180^\\circ \\implies U_2 = -p E \\cos 180^\\circ = +p E$. The work done in rotating the dipole is equal to the change in potential energy: $W = U_2 - U_1 = 2 p E$. Substituting the values: $W = 2 \\times (6 \\times 10^{-9}) \\times (2 \\times 10^5) = 24 \\times 10^{-4}\\,\\text{J} = 2.4 \\times 10^{-3}\\,\\text{J}$. Thus, the coefficient is 2.4.",
+    "common_mistake": "Using $W = pE$ (for $90^\\circ$ rotation) instead of $2pE$ (for $180^\\circ$ rotation).",
+    "concept_slugs": ["electric-dipoles"]
+  },
+  {
+    "pattern_group": "electric-field-potential",
+    "title": "Which of the following statements is NOT a true property of electric field lines?",
+    "difficulty": "easy",
+    "type": "concept",
+    "correct_answer": "C",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "They start from positive charges and end at negative charges",
+      "B": "Two field lines can never cross each other",
+      "C": "They form closed loops in electrostatic fields",
+      "D": "The tangent to a field line at any point gives the direction of electric field at that point"
+    },
+    "notes": "Electrostatic fields are conservative, so field lines start at positive charges (or infinity) and end at negative charges (or infinity). They do not form closed loops.",
+    "solution_text": "Electric field lines in electrostatic fields cannot form closed loops because the electrostatic force is conservative, which means the line integral of the electric field around a closed loop is zero: $\\oint \\vec{E} \\cdot d\\vec{r} = 0$. If they formed a closed loop, the work done in moving a charge around the loop would be non-zero, violating conservation of energy. (Note that time-varying magnetic fields can induce non-conservative electric fields that do form closed loops, but this is not the case in electrostatics). Option C is correct.",
+    "common_mistake": "Confusing electric field lines with magnetic field lines (magnetic field lines DO form closed loops because there are no magnetic monopoles).",
+    "concept_slugs": ["electric-field-potential"]
+  },
+  {
+    "pattern_group": "conductors-capacitors",
+    "title": "Five identical capacitors, each of capacitance $C = 10\\,\\mu\\text{F}$, are connected in a bridge network between terminals A and B. The equivalent capacitance of the network is ________ $\\mu\\text{F}$.",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Advanced 2023",
+    "correct_answer": "10",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "solution_text": "The bridge network forms a balanced Wheatstone bridge of capacitors. If the five capacitors are $C_1, C_2, C_3, C_4$ in the arms and $C_5$ in the diagonal: since all capacitors are identical, the ratio $\\frac{C_1}{C_2} = \\frac{C_3}{C_4} = 1$. The bridge is balanced, so the potential difference across the diagonal capacitor $C_5$ is zero. No charge is stored in $C_5$, and it can be removed from the circuit. The remaining circuit has: 1) Two capacitors in series on top: $C_{\\text{top}} = \\frac{C}{2}$. 2) Two capacitors in series on bottom: $C_{\\text{bottom}} = \\frac{C}{2}$. These two branches are in parallel, so the equivalent capacitance is $C_{\\text{eq}} = C_{\\text{top}} + C_{\\text{bottom}} = \\frac{C}{2} + \\frac{C}{2} = C = 10\\,\\mu\\text{F}$.",
+    "common_mistake": "Adding all five capacitors in parallel to get $50\\,\\mu\\text{F}$, or failing to recognize the balanced bridge and performing complex delta-wye transformations.",
+    "concept_slugs": ["conductors-capacitors"]
+  },
+  {
+    "pattern_group": "potential-energy",
+    "title": "The electrostatic self-energy of a thin uniform spherical shell of radius $R$ carrying a total charge $Q$ is given by $U = \\frac{Q^2}{x \\pi \\epsilon_0 R}$. The value of $x$ is ________.",
+    "difficulty": "medium",
+    "type": "concept",
+    "correct_answer": "8",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "solution_text": "The electrostatic self-energy of a spherical shell of radius $R$ and charge $Q$ is the work done in assembling the charge from infinity. It is equal to the integral of energy density $u = \\frac{1}{2}\\epsilon_0 E^2$ over all space. 1) Inside the shell ($r < R$): $E = 0 \\implies u_1 = 0$. 2) Outside the shell ($r > R$): $E = \\frac{Q}{4\\pi\\epsilon_0 r^2} \\implies u_2 = \\frac{1}{2}\\epsilon_0 \\left(\\frac{Q}{4\\pi\\epsilon_0 r^2}\\right)^2 = \\frac{Q^2}{32\\pi^2\\epsilon_0 r^4}$. Integrating over all outside volume: $U = \\int_R^\\infty u_2 \\cdot (4\\pi r^2 dr) = \\int_R^\\infty \\frac{Q^2}{32\\pi^2\\epsilon_0 r^4} 4\\pi r^2 dr = \\frac{Q^2}{8\\pi\\epsilon_0} \\int_R^\\infty \\frac{1}{r^2} dr = \\frac{Q^2}{8\\pi\\epsilon_0} \\left[-\\frac{1}{r}\\right]_R^\\infty = \\frac{Q^2}{8\\pi\\epsilon_0 R}$. Comparing this with the formula $U = \\frac{Q^2}{x \\pi \\epsilon_0 R}$, we get $x = 8$.",
+    "common_mistake": "Using the self-energy formula of a solid conducting or non-conducting sphere (which has a factor of $3/20$ or $3/5$), yielding $x=20$ or $x=5$.",
+    "concept_slugs": ["potential-energy"]
+  }
+]

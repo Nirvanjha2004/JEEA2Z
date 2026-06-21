@@ -1,0 +1,264 @@
+[
+  {
+    "pattern_group": "reflection-mirrors",
+    "title": "A plane mirror is rotated by an angle of $15^\\circ$ about an axis lying in its plane. The rotated beam of light reflected from it will turn through an angle of ________ degrees.",
+    "difficulty": "easy",
+    "type": "pyq",
+    "source": "JEE Main 2019",
+    "correct_answer": "30",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "solution_text": "When a plane mirror is rotated by an angle $\\theta$, the reflected ray rotates by an angle of $2\\theta$ in the same direction. Given the mirror rotation is $\\theta = 15^\\circ$, the reflected beam of light turns through an angle of $2 \\times 15^\\circ = 30^\\circ$.",
+    "common_mistake": "Mistaking the rotation of the reflected ray as $\\theta$ (same as the mirror) or $90^\\circ - \\theta$ instead of $2\\theta$.",
+    "concept_slugs": [
+      "reflection-mirrors"
+    ]
+  },
+  {
+    "pattern_group": "reflection-mirrors",
+    "title": "An object is moving along the principal axis towards a concave mirror of focal length $f = 20\\,\\text{cm}$. When the object is at a distance of $30\\,\\text{cm}$ from the mirror, its speed is $9\\,\\text{m/s}$. The speed of the image at this instant is:",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2021",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$36\\,\\text{m/s}$",
+      "B": "$18\\,\\text{m/s}$",
+      "C": "$9\\,\\text{m/s}$",
+      "D": "$4.5\\,\\text{m/s}$"
+    },
+    "solution_text": "From the mirror formula: $\\frac{1}{v} + \\frac{1}{u} = \\frac{1}{f}$. Differentiating with respect to time: $-\\frac{1}{v^2}\\frac{dv}{dt} - \\frac{1}{u^2}\\frac{du}{dt} = 0 \\implies v_i = -\\left(\\frac{v}{u}\\right)^2 v_o$, where $v_i = \\frac{dv}{dt}$ is the image velocity and $v_o = \\frac{du}{dt}$ is the object velocity. Given $f = -20\\,\\text{cm}$ (concave) and $u = -30\\,\\text{cm}$: $\\frac{1}{v} + \\frac{1}{-30} = \\frac{1}{-20} \\implies \\frac{1}{v} = -\\frac{1}{20} + \\frac{1}{30} = -\\frac{1}{60} \\implies v = -60\\,\\text{cm}$. The magnification factor squared is $\\left(\\frac{v}{u}\\right)^2 = \\left(\\frac{-60}{-30}\\right)^2 = 4$. Thus, the speed of the image is $v_i = 4 \\times v_o = 4 \\times 9\\,\\text{m/s} = 36\\,\\text{m/s}$. Option A is correct.",
+    "common_mistake": "Forgetting that image speed is scaled by the square of magnification, using linear magnification $m = -v/u$ directly (giving $18\\,\\text{m/s}$), or ignoring sign conventions.",
+    "concept_slugs": [
+      "reflection-mirrors"
+    ]
+  },
+  {
+    "pattern_group": "refraction-medium",
+    "title": "A vessel of depth $20\\,\\text{cm}$ is half filled with a liquid of refractive index $\\mu_1 = 1.5$ and the other half with a liquid of refractive index $\\mu_2 = 1.2$. The apparent depth of the vessel when viewed from above is ________ $\\text{cm}$.",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "15",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "solution_text": "Each liquid occupies a real depth of $t_1 = t_2 = 10\\,\\text{cm}$. The apparent depth $d'$ is the sum of the individual apparent depths of the two layers: $d' = \\frac{t_1}{\\mu_1} + \\frac{t_2}{\\mu_2} = \\frac{10}{1.5} + \\frac{10}{1.2} = \\frac{10}{3/2} + \\frac{10}{6/5} = \\frac{20}{3} + \\frac{25}{3} = \\frac{45}{3} = 15\\,\\text{cm}$.",
+    "common_mistake": "Averaging the refractive indices first ($\\mu_{\\text{avg}} = 1.35$) and then dividing total depth $20\\,\\text{cm}$ by $1.35$ which gives an incorrect value.",
+    "concept_slugs": [
+      "refraction-medium"
+    ]
+  },
+  {
+    "pattern_group": "refraction-medium",
+    "title": "A point source of light is placed at the bottom of a water tank of refractive index $\\mu = 4/3$ and depth $h = \\sqrt{7}\\,\\text{m}$. The area of the surface of water through which light can emerge is ________ $\\pi\\,\\text{m}^2$.",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2023",
+    "correct_answer": "9",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "solution_text": "Light from the source emerges only within a cone of critical angle $\\theta_c$. The radius of the circular region on the surface is $r = h \\tan\\theta_c$. Given $\\sin\\theta_c = \\frac{1}{\\mu} = \\frac{3}{4}$, we have $\\tan\\theta_c = \\frac{\\sin\\theta_c}{\\sqrt{1 - \\sin^2\\theta_c}} = \\frac{3/4}{\\sqrt{7}/4} = \\frac{3}{\\sqrt{7}}$. Therefore, the radius is $r = h \\tan\\theta_c = \\sqrt{7} \\times \\frac{3}{\\sqrt{7}} = 3\\,\\text{m}$. The area of this circular region is $A = \\pi r^2 = \\pi (3)^2 = 9\\pi\\,\\text{m}^2$. The coefficient of $\\pi$ is 9.",
+    "common_mistake": "Using $\\sin\\theta_c$ instead of $\\tan\\theta_c$ in calculating the radius, or forgetting to square the radius when calculating the area.",
+    "concept_slugs": [
+      "refraction-medium"
+    ]
+  },
+  {
+    "pattern_group": "prisms-dispersion",
+    "title": "For a glass prism of refracting angle $A = 60^\\circ$, the refractive index is $\\mu = \\sqrt{2}$. The angle of minimum deviation for this prism is:",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2020",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$30^\\circ$",
+      "B": "$45^\\circ$",
+      "C": "$60^\\circ$",
+      "D": "$15^\\circ$"
+    },
+    "solution_text": "The refractive index of a prism is given by the prism formula: $\\mu = \\frac{\\sin\\left(\\frac{A + D_m}{2}\\right)}{\\sin\\left(\\frac{A}{2}\\right)}$. Here $A = 60^\\circ$ and $\\mu = \\sqrt{2}$. Substituting: $\\sqrt{2} = \\frac{\\sin\\left(\\frac{60^\\circ + D_m}{2}\\right)}{\\sin(30^\\circ)} \\implies \\sqrt{2} \\times \\frac{1}{2} = \\sin\\left(\\frac{60^\\circ + D_m}{2}\\right) \\implies \\sin\\left(\\frac{60^\\circ + D_m}{2}\\right) = \\frac{1}{\\sqrt{2}}$. Hence, $\\frac{60^\\circ + D_m}{2} = 45^\\circ \\implies 60^\\circ + D_m = 90^\\circ \\implies D_m = 30^\\circ$. Option A is correct.",
+    "common_mistake": "Approximating using thin prism formula $\\delta = A(\\mu - 1)$ which gives $\\delta = 60^\\circ(\\sqrt{2} - 1) \\approx 24.8^\\circ$ (this formula is only valid for small prism angles, $A < 10^\\circ$).",
+    "concept_slugs": [
+      "prisms-dispersion"
+    ]
+  },
+  {
+    "pattern_group": "prisms-dispersion",
+    "title": "A thin prism of angle $4^\\circ$ and refractive index $1.54$ is combined with another thin prism of refractive index $1.72$ to produce dispersion without deviation. The refracting angle of the second prism is ________ degrees.",
+    "difficulty": "medium",
+    "type": "concept",
+    "correct_answer": "3",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "solution_text": "For a thin prism, the deviation is $\\delta = A(\\mu - 1)$. For dispersion without deviation, the net deviation of the combination is zero: $\\delta_1 - \\delta_2 = 0 \\implies A_1(\\mu_1 - 1) = A_2(\\mu_2 - 1)$. Given $A_1 = 4^\\circ$, $\\mu_1 = 1.54$, and $\\mu_2 = 1.72$: $4 \\times (1.54 - 1) = A_2 \\times (1.72 - 1) \\implies 4 \\times 0.54 = A_2 \\times 0.72 \\implies 2.16 = 0.72 A_2 \\implies A_2 = 3^\\circ$.",
+    "common_mistake": "Adding the deviations instead of subtracting them, or using indices instead of refractivities $(\\mu - 1)$ in the ratio.",
+    "concept_slugs": [
+      "prisms-dispersion"
+    ]
+  },
+  {
+    "pattern_group": "lenses-instruments",
+    "title": "An equiconvex lens of focal length $f = 20\\,\\text{cm}$ and refractive index $1.5$ is silvered on one of its curved surfaces. The focal length of the resulting silvered system is:",
+    "difficulty": "hard",
+    "type": "pyq",
+    "source": "JEE Advanced 2019",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$-5\\,\\text{cm}$",
+      "B": "$-10\\,\\text{cm}$",
+      "C": "$-20\\,\\text{cm}$",
+      "D": "$-40\\,\\text{cm}$"
+    },
+    "solution_text": "By Lens Maker's formula for an equiconvex lens: $\\frac{1}{f_L} = (\\mu - 1)\\left(\\frac{2}{R}\\right)$. Given $f_L = 20\\,\\text{cm}$ and $\\mu = 1.5$: $\\frac{1}{20} = (1.5 - 1)\\frac{2}{R} = \\frac{1}{R} \\implies R = 20\\,\\text{cm}$. When one surface is silvered, it acts as a concave mirror of radius $R = 20\\,\\text{cm}$ with focal length $f_M = -R/2 = -10\\,\\text{cm}$. The power of the silvered system is $P = 2P_L + P_M$. Since $P_L = \\frac{1}{f_L}$ and $P_M = -\\frac{1}{f_M}$: $P = \\frac{2}{f_L} - \\frac{1}{f_M} = \\frac{2}{20} - \\frac{1}{-10} = \\frac{1}{10} + \\frac{1}{10} = \\frac{2}{10} = \\frac{1}{5}\\,\\text{cm}^{-1}$. The effective focal length of the system is $F = -\\frac{1}{P} = -5\\,\\text{cm}$ (the system behaves as a concave mirror of focal length $5\\,\\text{cm}$). Option A is correct.",
+    "common_mistake": "Using $P = P_L + P_M$ neglecting the fact that light passes through the lens twice, or getting the signs wrong for the mirror power.",
+    "concept_slugs": [
+      "lenses-instruments"
+    ]
+  },
+  {
+    "pattern_group": "lenses-instruments",
+    "title": "A simple astronomical telescope has an objective of focal length $140\\,\\text{cm}$ and an eyepiece of focal length $5\\,\\text{cm}$. When focused for normal adjustment (image at infinity), the magnifying power of the telescope is:",
+    "difficulty": "easy",
+    "type": "pyq",
+    "source": "JEE Main 2022",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "28",
+      "B": "35",
+      "C": "70",
+      "D": "145"
+    },
+    "solution_text": "For normal adjustment (focused at infinity), the magnifying power $m$ of an astronomical telescope is given by: $m = \\frac{f_o}{f_e}$, where $f_o$ is the focal length of the objective lens and $f_e$ is the focal length of the eyepiece. Given $f_o = 140\\,\\text{cm}$ and $f_e = 5\\,\\text{cm}$: $m = \\frac{140}{5} = 28$. Option A is correct.",
+    "common_mistake": "Using the formula for near-point adjustment $m = \\frac{f_o}{f_e}\\left(1 + \\frac{f_e}{D}\\right)$ instead of normal adjustment, or multiplying the focal lengths.",
+    "concept_slugs": [
+      "lenses-instruments"
+    ]
+  },
+  {
+    "pattern_group": "wave-optics-ydse",
+    "title": "In a Young's double slit experiment, the slit separation is $0.2\\,\\text{mm}$ and the screen is at a distance of $1\\,\\text{m}$. If the wavelength of light used is $500\\,\\text{nm}$, the fringe width is ________ $\\text{mm}$.",
+    "difficulty": "easy",
+    "type": "pyq",
+    "source": "JEE Main 2021",
+    "correct_answer": "2.5",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "solution_text": "The fringe width $\\beta$ in Young's double slit experiment is given by: $\\beta = \\frac{\\lambda D}{d}$. Given: $\\lambda = 500\\,\\text{nm} = 5 \\times 10^{-7}\\,\\text{m}$, $D = 1\\,\\text{m}$, and $d = 0.2\\,\\text{mm} = 2 \\times 10^{-4}\\,\\text{m}$. Substituting: $\\beta = \\frac{5 \\times 10^{-7} \\times 1}{2 \\times 10^{-4}} = 2.5 \\times 10^{-3}\\,\\text{m} = 2.5\\,\\text{mm}$.",
+    "common_mistake": "Incorrect unit conversion of slit separation $d$ (using 0.2 directly) or wavelength $\\lambda$ (using 500 directly).",
+    "concept_slugs": [
+      "wave-optics-ydse"
+    ]
+  },
+  {
+    "pattern_group": "wave-optics-ydse",
+    "title": "In a Young's double slit experiment, the ratio of maximum to minimum intensity in the interference pattern is $9:1$. The ratio of the amplitudes of the two interfering waves ($A_1 : A_2$) is:",
+    "difficulty": "medium",
+    "type": "concept",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "3:1",
+      "B": "2:1",
+      "C": "4:1",
+      "D": "9:1"
+    },
+    "solution_text": "The maximum and minimum intensities are given by $I_{\\max} \\propto (A_1 + A_2)^2$ and $I_{\\min} \\propto (A_1 - A_2)^2$. Given $\\frac{I_{\\max}}{I_{\\min}} = \\frac{9}{1} \\implies \\frac{A_1 + A_2}{A_1 - A_2} = \\frac{3}{1} \\implies A_1 + A_2 = 3A_1 - 3A_2 \\implies 4A_2 = 2A_1 \\implies \\frac{A_1}{A_2} = 2$. Thus, the ratio of amplitudes is $2:1$. Option B is correct.",
+    "common_mistake": "Confusing amplitude ratio with intensity ratio (thinking amplitude ratio is $9:1$ or $\\sqrt{9}:1 = 3:1$ without accounting for the subtraction term in the denominator).",
+    "concept_slugs": [
+      "wave-optics-ydse"
+    ]
+  },
+  {
+    "pattern_group": "wave-optics-ydse",
+    "title": "In a Young's double slit experiment, when a thin transparent glass sheet of refractive index $1.5$ and thickness $t = 6\\,\\mu\\text{m}$ is placed in the path of one of the interfering beams, the central fringe shifts by a distance equal to $5$ fringe widths. The wavelength of the light used is ________ $\\text{nm}$.",
+    "difficulty": "hard",
+    "type": "pyq",
+    "source": "JEE Main 2022",
+    "correct_answer": "600",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "solution_text": "The path difference introduced by a glass slab of thickness $t$ and refractive index $\\mu$ is $\\Delta x = (\\mu - 1)t$. This shifts the entire fringe pattern. The shift distance is: $S = \\frac{D}{d}(\\mu - 1)t$. We are given that this shift is equal to $5$ fringe widths: $S = 5\\beta = 5\\frac{\\lambda D}{d}$. Setting them equal: $\\frac{D}{d}(\\mu - 1)t = 5\\frac{\\lambda D}{d} \\implies (\\mu - 1)t = 5\\lambda \\implies \\lambda = \\frac{(\\mu - 1)t}{5}$. Substituting $\\mu = 1.5$ and $t = 6\\,\\mu\\text{m} = 6 \\times 10^{-6}\\,\\text{m}$: $\\lambda = \\frac{(1.5 - 1) \\times 6 \\times 10^{-6}}{5} = \\frac{0.5 \\times 6 \\times 10^{-6}}{5} = 0.6 \\times 10^{-6}\\,\\text{m} = 600\\,\\text{nm}$.",
+    "common_mistake": "Using $\\mu t$ instead of $(\\mu - 1)t$ for the path difference, which yields $\\lambda = 1800\\,\\text{nm}$.",
+    "concept_slugs": [
+      "wave-optics-ydse"
+    ]
+  },
+  {
+    "pattern_group": "diffraction-polarization",
+    "title": "A parallel beam of monochromatic light of wavelength $600\\,\\text{nm}$ is incident normally on a single slit of width $0.2\\,\\text{mm}$. The angular width of the central diffraction maximum is:",
+    "difficulty": "medium",
+    "type": "concept",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$3 \\times 10^{-3}\\,\\text{rad}$",
+      "B": "$6 \\times 10^{-3}\\,\\text{rad}$",
+      "C": "$1.5 \\times 10^{-3}\\,\\text{rad}$",
+      "D": "$1.2 \\times 10^{-2}\\,\\text{rad}$"
+    },
+    "solution_text": "In single-slit diffraction, the angular position of the first minima on either side of the central maximum is given by: $a \\sin\\theta \\approx a\\theta = \\lambda \\implies \\theta = \\frac{\\lambda}{a}$. The central maximum lies between the first minima on both sides, so its total angular width is: $2\\theta = \\frac{2\\lambda}{a}$. Given $\\lambda = 600\\,\\text{nm} = 6 \\times 10^{-7}\\,\\text{m}$ and $a = 0.2\\,\\text{mm} = 2 \\times 10^{-4}\\,\\text{m}$: $2\\theta = \\frac{2 \\times 6 \\times 10^{-7}}{2 \\times 10^{-4}} = 6 \\times 10^{-3}\\,\\text{rad}$. Option B is correct.",
+    "common_mistake": "Calculating the angular half-width $\\theta = \\lambda/a = 3 \\times 10^{-3}\\,\\text{rad}$ instead of the full angular width $2\\theta$.",
+    "concept_slugs": [
+      "diffraction-polarization"
+    ]
+  },
+  {
+    "pattern_group": "diffraction-polarization",
+    "title": "Unpolarized light of intensity $I_0$ is incident on a polarizer $P_1$. The light passing through $P_1$ is then incident on a second polarizer $P_2$ whose transmission axis is inclined at an angle of $60^\\circ$ to that of $P_1$. The intensity of the light emerging from $P_2$ is $k I_0$. The value of $k$ is ________.",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "0.125",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "solution_text": "When unpolarized light of intensity $I_0$ passes through a polarizer, its intensity becomes half: $I_1 = \\frac{I_0}{2}$ and it becomes linearly polarized. When this polarized light passes through the second polarizer $P_2$ whose axis is at $\\theta = 60^\\circ$ relative to $P_1$, Malus's Law applies: $I_2 = I_1 \\cos^2\\theta = \\frac{I_0}{2} \\cos^2(60^\\circ) = \\frac{I_0}{2} \\left(\\frac{1}{2}\\right)^2 = \\frac{I_0}{8} = 0.125 I_0$. Thus, $k = 0.125$.",
+    "common_mistake": "Using $I_2 = I_0 \\cos^2 60^\\circ$ without taking the $1/2$ reduction factor for the first unpolarized step, yielding $0.25$.",
+    "concept_slugs": [
+      "diffraction-polarization"
+    ]
+  },
+  {
+    "pattern_group": "diffraction-polarization",
+    "title": "When light is incident on a glass plate of refractive index $\\mu = 1.732$ at the polarizing angle (Brewster's angle), the angle of refraction is:",
+    "difficulty": "easy",
+    "type": "pyq",
+    "source": "JEE Main 2021",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$30^\\circ$",
+      "B": "$60^\\circ$",
+      "C": "$45^\\circ$",
+      "D": "$90^\\circ$"
+    },
+    "solution_text": "According to Brewster's Law, at the polarizing angle $i_p$, the refractive index is $\\mu = \\tan i_p$. Given $\\mu = 1.732 \\approx \\sqrt{3}$: $\\tan i_p = \\sqrt{3} \\implies i_p = 60^\\circ$. At the polarizing angle, the reflected and refracted rays are perpendicular, which means $i_p + r = 90^\\circ$. Therefore, the angle of refraction is $r = 90^\\circ - 60^\\circ = 30^\\circ$. Option A is correct.",
+    "common_mistake": "Confusing the polarizing angle ($60^\\circ$) with the angle of refraction, selecting option B.",
+    "concept_slugs": [
+      "diffraction-polarization"
+    ]
+  },
+  {
+    "pattern_group": "lenses-instruments",
+    "title": "A convex lens of glass refractive index $1.5$ has a focal length of $20\\,\\text{cm}$ in air. When it is completely immersed in water of refractive index $4/3$, its focal length becomes ________ $\\text{cm}$.",
+    "difficulty": "hard",
+    "type": "pyq",
+    "source": "JEE Main 2023",
+    "correct_answer": "80",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "solution_text": "Lens Maker's formula in air: $\\frac{1}{f_a} = (\\mu_g - 1)\\left(\\frac{1}{R_1} - \\frac{1}{R_2}\\right)$. Given $f_a = 20\\,\\text{cm}$ and $\\mu_g = 1.5$: $\\frac{1}{20} = (1.5 - 1)K = 0.5 K \\implies K = \\frac{1}{10}$, where $K = \\left(\\frac{1}{R_1} - \\frac{1}{R_2}\\right)$. Immersed in water of refractive index $\\mu_w = 4/3$, the focal length $f_w$ is given by: $\\frac{1}{f_w} = \\left(\\frac{\\mu_g}{\\mu_w} - 1\\right) K = \\left(\\frac{1.5}{4/3} - 1\\right) K = \\left(\\frac{9}{8} - 1\\right) K = \\frac{1}{8} K$. Substituting $K = \\frac{1}{10}$: $\\frac{1}{f_w} = \\frac{1}{8} \\times \\frac{1}{10} = \\frac{1}{80} \\implies f_w = 80\\,\\text{cm}$.",
+    "common_mistake": "Using $\\mu_w - 1$ instead of $\\frac{\\mu_g}{\\mu_w} - 1$ for the refractive factor in the medium, or calculating $f_w = 40\\,\\text{cm}$ by neglecting the relative index.",
+    "concept_slugs": [
+      "lenses-instruments"
+    ]
+  }
+]

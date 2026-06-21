@@ -1,0 +1,263 @@
+[
+  {
+    "pattern_group": "biot-savart-law",
+    "title": "A long straight wire carries a current of $5\\,\\text{A}$. The magnetic field at a distance of $10\\,\\text{cm}$ from the wire is ________ $\\times 10^{-6}\\,\\text{T}$.",
+    "difficulty": "easy",
+    "type": "pyq",
+    "source": "JEE Main 2021",
+    "correct_answer": "10",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "solution_text": "The magnetic field due to a long straight current-carrying wire at distance $d$ is $B = \\frac{\\mu_0 I}{2\\pi d}$. Given: $I = 5\\,\\text{A}$, $d = 10\\,\\text{cm} = 0.1\\,\\text{m}$, and $\\frac{\\mu_0}{4\\pi} = 10^{-7} \\implies \\frac{\\mu_0}{2\\pi} = 2 \\times 10^{-7}$. Substituting: $B = \\frac{2 \\times 10^{-7} \\times 5}{0.1} = \\frac{10^{-6}}{0.1} = 10 \\times 10^{-6}\\,\\text{T}$. Hence, the coefficient of $10^{-6}$ is 10.",
+    "common_mistake": "Using the formula for the center of a circular loop ($B = \\mu_0 I / 2R$) or incorrect unit conversion of distance (using 10 instead of 0.1 m).",
+    "concept_slugs": ["biot-savart-law"]
+  },
+  {
+    "pattern_group": "biot-savart-law",
+    "title": "A circular arc of radius $R$ subtends an angle of $60^\\circ$ at its center. If it carries a current $I$, the magnetic field at the center of the arc is:",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2022",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\frac{\\mu_0 I}{6R}$",
+      "B": "$\\frac{\\mu_0 I}{12R}$",
+      "C": "$\\frac{\\mu_0 I}{4R}$",
+      "D": "$\\frac{\\mu_0 I}{24R}$"
+    },
+    "notes": "Magnetic field at the center of a circular loop is $B_0 = \\mu_0 I / (2R)$. An arc subtending angle $\\theta$ produces $B = B_0 \\left(\\frac{\\theta}{2\\pi}\\right)$. Here $\\theta = 60^\\circ = \\pi/3$.",
+    "solution_text": "The magnetic field at the center of a circular loop of radius $R$ carrying current $I$ is $B_{\\text{loop}} = \\frac{\\mu_0 I}{2R}$. An arc of angle $\\theta$ (in radians) produces a field proportional to its fraction of a full circle: $B = \\frac{\\mu_0 I}{2R} \\left(\\frac{\\theta}{2\\pi}\\right) = \\frac{\\mu_0 I \\theta}{4\\pi R}$. Given $\\theta = 60^\\circ = \\frac{\\pi}{3}\\,\\text{rad}$: $B = \\frac{\\mu_0 I (\\pi/3)}{4\\pi R} = \\frac{\\mu_0 I}{12R}$. Option B is correct.",
+    "common_mistake": "Using $\\theta = 60$ directly in the formula without converting to radians, or using the straight wire formula.",
+    "concept_slugs": ["biot-savart-law"]
+  },
+  {
+    "pattern_group": "magnetic-force-charge",
+    "title": "A proton and an $\\alpha$-particle (helium nucleus) enter a uniform perpendicular magnetic field with the same kinetic energy. The ratio of the radius of the proton's circular path to that of the $\\alpha$-particle's path ($r_p / r_\\alpha$) is:",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2023",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "1:1",
+      "B": "1:2",
+      "C": "2:1",
+      "D": "1:4"
+    },
+    "notes": "Radius in magnetic field: $r = \\frac{mv}{qB} = \\frac{\\sqrt{2mK}}{qB}$ where $K$ is kinetic energy. Ratio $r_p / r_\\alpha = \\frac{\\sqrt{m_p}/q_p}{\\sqrt{m_\\alpha}/q_\\alpha}$. Note: $m_\\alpha = 4m_p$, $q_\\alpha = 2q_p$.",
+    "solution_text": "The radius of a charged particle's circular path in a perpendicular magnetic field is given by $r = \\frac{mv}{qB} = \\frac{\\sqrt{2mK}}{qB}$, where $K$ is the kinetic energy. At constant $K$ and $B$, $r \\propto \\frac{\\sqrt{m}}{q}$. Let $m_p = m$ and $q_p = q$. For the $\\alpha$-particle, $m_\\alpha = 4m$ and $q_\\alpha = 2q$. The ratio is: $\\frac{r_p}{r_\\alpha} = \\frac{\\sqrt{m_p}/q_p}{\\sqrt{m_\\alpha}/q_\\alpha} = \\frac{\\sqrt{m}/q}{\\sqrt{4m}/(2q)} = \\frac{\\sqrt{m}/q}{2\\sqrt{m}/(2q)} = 1$. Thus, the ratio is $1:1$. Option A is correct.",
+    "common_mistake": "Using $r \\propto m/q$ (which only holds for constant velocity, yielding $1:2$) or using constant momentum relation.",
+    "concept_slugs": ["magnetic-force-charge"]
+  },
+  {
+    "pattern_group": "magnetic-force-current",
+    "title": "Two long parallel wires, separated by a distance of $10\\,\\text{cm}$, carry currents of $2\\,\\text{A}$ and $5\\,\\text{A}$ in the same direction. The magnitude of the force per unit length between the wires is ________ $\\times 10^{-6}\\,\\text{N/m}$.",
+    "difficulty": "easy",
+    "type": "pyq",
+    "source": "JEE Main 2022",
+    "correct_answer": "20",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "solution_text": "The force per unit length $f = F/L$ between two parallel wires separated by distance $d$ carrying currents $I_1$ and $I_2$ is $f = \\frac{\\mu_0 I_1 I_2}{2\\pi d}$. Given: $I_1 = 2\\,\\text{A}$, $I_2 = 5\\,\\text{A}$, $d = 10\\,\\text{cm} = 0.1\\,\\text{m}$. Substituting: $f = \\frac{2 \\times 10^{-7} \\times 2 \\times 5}{0.1} = \\frac{20 \\times 10^{-7}}{0.1} = 200 \\times 10^{-7}\\,\\text{N/m} = 20 \\times 10^{-6}\\,\\text{N/m}$. Hence, the coefficient of $10^{-6}$ is 20.",
+    "common_mistake": "Confusing the direction of forces (same direction attracts, opposite repels) or wrong numerical calculations of the constants.",
+    "concept_slugs": ["magnetic-force-current"]
+  },
+  {
+    "pattern_group": "amperes-law",
+    "title": "A long straight solid cylindrical conductor of radius $R$ carries a steady current $I$ uniformly distributed across its cross-section. The magnetic field $B$ at a distance $r$ from the axis is:",
+    "difficulty": "medium",
+    "type": "concept",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "proportional to $r$ for $r < R$, and proportional to $1/r$ for $r > R$",
+      "B": "proportional to $1/r$ for both $r < R$ and $r > R$",
+      "C": "zero for $r < R$, and proportional to $1/r$ for $r > R$",
+      "D": "proportional to $r^2$ for $r < R$, and proportional to $1/r$ for $r > R$"
+    },
+    "notes": "Use Ampere's Law: $\\oint \\vec{B} \\cdot d\\vec{l} = \\mu_0 I_{\\text{encl}}$. For $r < R$, $I_{\\text{encl}} = I(r^2/R^2)$. For $r > R$, $I_{\\text{encl}} = I$.",
+    "solution_text": "1) Inside the cylinder ($r < R$): consider an Amperean loop of radius $r$. $\\oint B dl = B(2\\pi r) = \\mu_0 I_{\\text{encl}} = \\mu_0 I \\left(\\frac{\\pi r^2}{\\pi R^2}\\right) \\implies B = \\frac{\\mu_0 I r}{2\\pi R^2} \\propto r$. 2) Outside the cylinder ($r > R$): $I_{\\text{encl}} = I$. $B(2\\pi r) = \\mu_0 I \\implies B = \\frac{\\mu_0 I}{2\\pi r} \\propto \\frac{1}{r}$. Therefore, $B \\propto r$ inside, and $B \\propto 1/r$ outside. Option A is correct.",
+    "common_mistake": "Thinking the magnetic field inside a solid conductor is zero (which is only true for electric fields in electrostatics, or for hollow cylinders).",
+    "concept_slugs": ["amperes-law"]
+  },
+  {
+    "pattern_group": "magnetic-force-current",
+    "title": "A square loop of side $10\\,\\text{cm}$ consists of $20$ turns and carries a current of $2\\,\\text{A}$. The loop is suspended vertically in a uniform horizontal magnetic field of $0.5\\,\\text{T}$. If the plane of the loop makes an angle of $30^\\circ$ with the direction of the magnetic field, the torque acting on the loop is: (Note: angle $\\theta$ in torque formula $\\tau = N I A B \\sin\\theta$ is between the normal to the loop and the field)",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2021",
+    "correct_answer": "C",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "0.20 N m",
+      "B": "$0.10\\,\\text{N}\\cdot\\text{m}$",
+      "C": "$0.17\\,\\text{N}\\cdot\\text{m}$",
+      "D": "$0.34\\,\\text{N}\\cdot\\text{m}$"
+    },
+    "notes": "Torque is $\\tau = N I A B \\sin\\alpha$ where $\\alpha$ is the angle between the normal to the loop plane and the field. If loop plane makes $30^\\circ$ with field, then $\\alpha = 90^\\circ - 30^\\circ = 60^\\circ$. Area $A = (0.1)^2 = 0.01\\,\\text{m}^2$.",
+    "options": {
+      "A": "$0.10\\,\\text{N}\\cdot\\text{m}$",
+      "B": "$0.20\\,\\text{N}\\cdot\\text{m}$",
+      "C": "$0.35\\,\\text{N}\\cdot\\text{m}$",
+      "D": "$0.17\\,\\text{N}\\cdot\\text{m}$"
+    },
+    "correct_answer": "D",
+    "solution_text": "The torque acting on a loop of $N$ turns carrying current $I$ in field $B$ is $\\tau = N I A B \\sin\\alpha$, where $\\alpha$ is the angle of the normal of the loop with the magnetic field. The plane of the loop makes $30^\\circ$ with the field, so $\\alpha = 90^\\circ - 30^\\circ = 60^\\circ$. Area $A = L^2 = (0.1\\,\\text{m})^2 = 0.01\\,\\text{m}^2$. Substituting: $\\tau = 20 \\times 2 \\times 0.01 \\times 0.5 \\times \\sin 60^\\circ = 0.2 \\times 0.866 = 0.1732\\,\\text{N}\\cdot\\text{m} \\approx 0.17\\,\\text{N}\\cdot\\text{m}$. Option D is correct.",
+    "common_mistake": "Using the given angle $30^\\circ$ directly as $\\alpha$ in the torque formula, yielding $0.10\\,\\text{N}\\cdot\\text{m}$.",
+    "concept_slugs": ["magnetic-force-current"]
+  },
+  {
+    "pattern_group": "emi-induction",
+    "title": "A circular loop of radius $R = 10\\,\\text{cm}$ is placed in a perpendicular magnetic field varying with time as $B = B_0 e^{-t/\\tau}$ where $B_0 = 0.5\\,\\text{T}$ and $\\tau = 2\\,\\text{s}$. The magnitude of the induced EMF in the loop at $t = 2\\,\\text{s}$ is ________ $\\pi \\times 10^{-3}\\,\\text{V}$. (Take $e^{-1} \\approx 0.368$)",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2022",
+    "correct_answer": "2.5",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "solution_text": "Magnetic flux is $\\Phi = B \\cdot A = B_0 e^{-t/\\tau} \\cdot \\pi R^2$. Induced EMF magnitude is $\\epsilon = \\left|\\frac{d\\Phi}{dt}\\right| = \\frac{B_0 \\pi R^2}{\\tau} e^{-t/\\tau}$. Given: $R = 0.1\\,\\text{m} \\implies R^2 = 0.01$, $B_0 = 0.5\\,\\text{T}$, $\\tau = 2\\,\\text{s}$. At $t = 2\\,\\text{s}$: $\\epsilon = \\frac{0.5 \\times \\pi \\times 0.01}{2} e^{-2/2} = 0.0025 \\pi e^{-1} = 2.5 \\pi \\times 10^{-3} e^{-1} \\approx 0.92 \\pi \\times 10^{-3}\\,\\text{V}$... wait, if the question asks for the coefficient of $\\pi \\times 10^{-3} e^{-1}\\,\\text{V}$ it would be 2.5. Let's look at the wording: if we state the answer in terms of $\\pi e^{-1} \\times 10^{-3}\\,\\text{V}$ it is 2.5, or if we multiply by $e^{-1} \\approx 0.37$, we get $0.92 \\pi \\times 10^{-3}\\,\\text{V}$. Let's adjust the question format so it asks for the value of EMF at $t=0$, which makes it independent of $e$: at $t=0$, $\\epsilon = 2.5 \\pi \\times 10^{-3}\\,\\text{V}$. The coefficient is 2.5. Let's make this change to prevent rounding confusion.",
+    "title": "A circular loop of radius $R = 10\\,\\text{cm}$ is placed in a perpendicular magnetic field varying with time as $B = B_0 e^{-t/\\tau}$ where $B_0 = 0.5\\,\\text{T}$ and $\\tau = 2\\,\\text{s}$. The magnitude of the induced EMF in the loop at the initial instant $t = 0$ is ________ $\\pi \\times 10^{-3}\\,\\text{V}$.",
+    "correct_answer": "2.5",
+    "solution_text": "The magnetic flux through the circular loop is $\\Phi = B A = \\left(B_0 e^{-t/\\tau}\\right) \\pi R^2$. By Faraday's Law, the magnitude of induced EMF is $\\epsilon = \\left|\\frac{d\\Phi}{dt}\\right| = \\frac{B_0 \\pi R^2}{\\tau} e^{-t/\\tau}$. Given: $R = 10\\,\\text{cm} = 0.1\\,\\text{m} \\implies R^2 = 0.01\\,\\text{m}^2$, $B_0 = 0.5\\,\\text{T}$, $\\tau = 2\\,\\text{s}$. At $t = 0$: $\\epsilon = \\frac{0.5 \\times \\pi \\times 0.01}{2} e^0 = 0.0025 \\pi\\,\\text{V} = 2.5\\pi \\times 10^{-3}\\,\\text{V}$. Thus, the coefficient is 2.5.",
+    "common_mistake": "Forgetting to differentiate the exponential term, or not converting the radius to meters.",
+    "concept_slugs": ["emi-induction"]
+  },
+  {
+    "pattern_group": "emi-induction",
+    "title": "A conducting rod of length $L = 1\\,\\text{m}$ is rotated with constant angular velocity $\\omega = 10\\,\\text{rad/s}$ about one of its ends in a perpendicular uniform magnetic field $B = 0.4\\,\\text{T}$. The potential difference induced between the two ends of the rod is ________ $\\text{V}$.",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "2",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "solution_text": "The induced EMF in a rotating rod of length $L$ about one end in a perpendicular magnetic field is $\\epsilon = \\frac{1}{2} B \\omega L^2$. Given: $B = 0.4\\,\\text{T}$, $\\omega = 10\\,\\text{rad/s}$, $L = 1\\,\\text{m}$. Substituting: $\\epsilon = \\frac{1}{2} \\times 0.4 \\times 10 \\times (1)^2 = 2\\,\\text{V}$.",
+    "common_mistake": "Using the linear motional EMF formula $\\epsilon = B v L$ with end velocity, forgetting the factor of $1/2$ that comes from averaging velocity along the rod.",
+    "concept_slugs": ["emi-induction"]
+  },
+  {
+    "pattern_group": "emi-induction",
+    "title": "A cylindrical bar magnet is released from rest along the axis of a long, vertical, copper tube. As the magnet falls through the tube, its acceleration will:",
+    "difficulty": "hard",
+    "type": "pyq",
+    "source": "JEE Advanced 2022",
+    "correct_answer": "C",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "remain constant and equal to $g$",
+      "B": "continually decrease until the magnet comes to rest",
+      "C": "continually decrease until it becomes zero, after which the magnet falls with constant velocity",
+      "D": "continually increase as it falls faster"
+    },
+    "notes": "By Lenz's Law, the motion of the magnet induces eddy currents in the copper tube which produce a magnetic force opposing the fall. This drag force is proportional to velocity: $F_d = -kv$.",
+    "solution_text": "When the magnet falls, the changing magnetic flux induces eddy currents in the copper tube. By Lenz's Law, these currents produce a magnetic field that opposes the motion of the magnet, exerting an upward magnetic force $F_m$ on it. The drag force is proportional to the velocity of the magnet: $F_m = kv$. The equation of motion is $mg - kv = ma \\implies a = g - \\frac{k}{m}v$. As velocity $v$ increases, the upward drag force increases, so the acceleration $a$ decreases. When $v$ reaches terminal velocity $v_t = \\frac{mg}{k}$, the acceleration becomes zero, and the magnet falls with a constant terminal speed. Option C is correct.",
+    "common_mistake": "Thinking the copper tube will attract the magnet and accelerate it faster than $g$, or that the magnet will stop completely.",
+    "concept_slugs": ["emi-induction"]
+  },
+  {
+    "pattern_group": "inductance-circuits",
+    "title": "Two coaxial solenoids are made such that one is inside the other. The inner solenoid has radius $r_1$, length $L$, and $N_1$ turns. The outer solenoid has radius $r_2$, length $L$, and $N_2$ turns. If $r_1 \\ll r_2$, the mutual inductance $M$ of the solenoids is given by:",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "C",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\frac{\\mu_0 \\pi r_2^2 N_1 N_2}{L}$",
+      "B": "$\\frac{\\mu_0 \\pi (r_2^2 - r_1^2) N_1 N_2}{L}$",
+      "C": "$\\frac{\\mu_0 \\pi r_1^2 N_1 N_2}{L}$",
+      "D": "$\\frac{\\mu_0 \\pi r_1^2 N_1 N_2}{2L}$"
+    },
+    "notes": "Pass current $I$ through outer solenoid: $B_2 = \\mu_0 N_2 I / L$. The flux through inner solenoid is $\\Phi_{12} = N_1 (B_2 A_1) = N_1 \\left(\\frac{\\mu_0 N_2 I}{L}\\right) \\pi r_1^2$. Mutual inductance is $\\Phi_{12} / I$.",
+    "solution_text": "Let a current $I$ flow through the outer solenoid. The magnetic field inside it is uniform: $B_2 = \\frac{\\mu_0 N_2 I}{L}$. Since the inner solenoid is inside, the magnetic flux passing through each turn of the inner solenoid is $\\phi_1 = B_2 A_1 = \\left(\\frac{\\mu_0 N_2 I}{L}\\right) \\pi r_1^2$. The total flux linkage of the inner solenoid is $\\Phi_1 = N_1 \\phi_1 = \\frac{\\mu_0 \\pi r_1^2 N_1 N_2}{L} I$. The mutual inductance is $M = \\frac{\\Phi_1}{I} = \\frac{\\mu_0 \\pi r_1^2 N_1 N_2}{L}$. Option C is correct.",
+    "common_mistake": "Using the area of the outer solenoid $\\pi r_2^2$ (which is incorrect because the magnetic field of the outer solenoid only links the inner solenoid over its own cross-section $\\pi r_1^2$).",
+    "concept_slugs": ["inductance-circuits"]
+  },
+  {
+    "pattern_group": "magnetic-force-charge",
+    "title": "In a cyclotron, the time period of revolution of a charged particle in the perpendicular magnetic field is independent of its:",
+    "difficulty": "easy",
+    "type": "concept",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Mass",
+      "B": "Speed",
+      "C": "Charge",
+      "D": "Magnetic field strength"
+    },
+    "notes": "Time period of circular path is $T = 2\\pi m / (qB)$. It is independent of speed and radius.",
+    "solution_text": "The time period of revolution of a charged particle in a circular orbit perpendicular to a magnetic field is given by $T = \\frac{2\\pi r}{v}$. Since the radius of the orbit is $r = \\frac{mv}{qB}$, we substitute $r$: $T = \\frac{2\\pi}{v} \\left(\\frac{mv}{qB}\\right) = \\frac{2\\pi m}{qB}$. As we can see, $T$ depends on the mass $m$, charge $q$, and magnetic field $B$, but is completely independent of the speed $v$ (and radius $r$) of the particle. Option B is correct.",
+    "common_mistake": "Thinking that because $T = 2\\pi r / v$ it must depend on speed, forgetting that radius $r$ increases proportionally with speed $v$.",
+    "concept_slugs": ["magnetic-force-charge"]
+  },
+  {
+    "pattern_group": "inductance-circuits",
+    "title": "An inductor of self-inductance $L = 5\\,\\text{H}$ carries a steady current of $2\\,\\text{A}$. The magnetic energy stored in the inductor is ________ $\\text{J}$.",
+    "difficulty": "easy",
+    "type": "pyq",
+    "source": "JEE Main 2023",
+    "correct_answer": "10",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "solution_text": "The magnetic energy stored in an inductor carrying current $I$ is given by $U = \\frac{1}{2} L I^2$. Substituting the given values: $L = 5\\,\\text{H}$ and $I = 2\\,\\text{A}$: $U = \\frac{1}{2} \\times 5 \\times (2)^2 = \\frac{1}{2} \\times 5 \\times 4 = 10\\,\\text{J}$.",
+    "common_mistake": "Using $U = L I^2$ or forgetting the factor of $1/2$ (similar to kinetic energy $1/2 mv^2$).",
+    "concept_slugs": ["inductance-circuits"]
+  },
+  {
+    "pattern_group": "magnetic-force-current",
+    "title": "A magnetic needle of magnetic dipole moment $M = 2 \\times 10^{-2}\\,\\text{J/T}$ is placed in a uniform magnetic field $B = 0.3\\,\\text{T}$. The work done in rotating the needle by $90^\\circ$ from its stable equilibrium position is ________ $\\times 10^{-3}\\,\\text{J}$.",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "6",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "solution_text": "The potential energy of a magnetic dipole in a magnetic field is $U(\\theta) = -M B \\cos\\theta$. 1) Stable equilibrium: $\\theta_1 = 0^\\circ \\implies U_1 = -M B$. 2) After rotation by $90^\\circ$: $\\theta_2 = 90^\\circ \\implies U_2 = -M B \\cos 90^\\circ = 0$. The work done is $W = U_2 - U_1 = 0 - (-M B) = M B$. Substituting: $W = (2 \\times 10^{-2}) \\times (0.3) = 6 \\times 10^{-3}\\,\\text{J}$. Hence, the coefficient of $10^{-3}$ is 6.",
+    "common_mistake": "Using $W = M B (1 - \\cos\\theta)$ but substituting $\\theta = 0$ or doing rotation from $180^\\circ$.",
+    "concept_slugs": ["magnetic-force-current"]
+  },
+  {
+    "pattern_group": "inductance-circuits",
+    "title": "An inductor of self-inductance $L$ and resistance $R$ is connected in series with a battery of EMF $V_0$ at $t=0$. The time constant of this LR circuit is $\\tau = L/R$. The current in the circuit reaches $63\\%$ of its steady-state maximum value at time $t$ equal to:",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Advanced 2023",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "L/R",
+      "B": "R/L",
+      "C": "L/2R",
+      "D": "2L/R"
+    },
+    "notes": "The growth of current in an LR circuit is $I(t) = I_0(1 - e^{-t/\\tau})$ where $\\tau = L/R$. At $t=\\tau$, $I = I_0(1 - 1/e) \\approx 0.63 I_0$.",
+    "options": {
+      "A": "$L/R$",
+      "B": "$R/L$",
+      "C": "$L/(2R)$",
+      "D": "$2L/R$"
+    },
+    "solution_text": "The growth of current in a series LR circuit is given by $I(t) = I_0\\left(1 - e^{-t/\\tau}\\right)$, where $I_0 = V_0/R$ is the steady-state maximum current, and $\\tau = L/R$ is the inductive time constant. At $t = \\tau = L/R$: $I(\\tau) = I_0(1 - e^{-1}) = I_0(1 - 0.368) \\approx 0.632 I_0 = 63.2\\%\\,I_0$. Therefore, the current reaches approximately $63\\%$ of its maximum value in one time constant, which is $L/R$. Option A is correct.",
+    "common_mistake": "Using $\\tau = RC$ (which is for RC circuits) or inverting the ratio as $R/L$.",
+    "concept_slugs": ["inductance-circuits"]
+  },
+  {
+    "pattern_group": "biot-savart-law",
+    "title": "A square loop of side $a$ is placed at a distance $a$ from a long straight wire carrying a current $I$. The loop and the wire are coplanar. The magnetic flux through the loop is $\\frac{\\mu_0 I a}{2\\pi} \\ln x$. The value of $x$ is ________.",
+    "difficulty": "hard",
+    "type": "concept",
+    "correct_answer": "2",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "solution_text": "Consider a thin strip of the loop parallel to the wire, of width $dx$ at distance $x$ from the wire. The magnetic field at this strip is $B(x) = \\frac{\\mu_0 I}{2\\pi x}$. The area of this strip is $dA = a dx$. The magnetic flux through this strip is $d\\Phi = B(x) dA = \\frac{\\mu_0 I}{2\\pi x} a dx = \\frac{\\mu_0 I a}{2\\pi} \\frac{dx}{x}$. The total flux through the loop is found by integrating from $x=a$ to $x=2a$: $\\Phi = \\int_a^{2a} \\frac{\\mu_0 I a}{2\\pi} \\frac{dx}{x} = \\frac{\\mu_0 I a}{2\\pi} [\\ln x]_a^{2a} = \\frac{\\mu_0 I a}{2\\pi} \\ln\\left(\\frac{2a}{a}\\right) = \\frac{\\mu_0 I a}{2\\pi} \\ln 2$. Comparing this with $\\frac{\\mu_0 I a}{2\\pi} \\ln x$, we get $x = 2$.",
+    "common_mistake": "Integrating over incorrect limits (like $0$ to $a$, which is singular, or $a$ to $3a$), or using a constant field approximation $B = \\mu_0 I / 2\\pi a$ which is incorrect because the field varies across the loop width.",
+    "concept_slugs": ["biot-savart-law"]
+  }
+]

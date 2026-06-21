@@ -1,0 +1,260 @@
+[
+  {
+    "pattern_group": "gravitational-force",
+    "title": "Four identical particles, each of mass $m$, are placed at the corners of a square of side $a$. The magnitude of the net gravitational force on any one of the particles due to the other three is:",
+    "difficulty": "easy",
+    "type": "pyq",
+    "source": "JEE Main 2021",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\frac{Gm^2}{a^2}\\left(2 + \\frac{1}{2}\\right)$",
+      "B": "$\\frac{Gm^2}{a^2}\\left(\\sqrt{2} + \\frac{1}{2}\\right)$",
+      "C": "$\\frac{Gm^2}{a^2}\\left(\\sqrt{2} + 1\\right)$",
+      "D": "$\\frac{Gm^2}{a^2}\\left(2\\sqrt{2} + \\frac{1}{2}\\right)$"
+    },
+    "notes": "Identify the forces acting on a single corner particle. There are two forces of magnitude $Gm^2/a^2$ at $90^\\circ$ and one diagonal force of magnitude $Gm^2/(2a^2)$.",
+    "solution_text": "Let the particle be at corner A. Forces from adjacent corner particles B and D are: $F_{AB} = F_{AD} = \\frac{Gm^2}{a^2}$. These forces are perpendicular to each other, so their resultant is $F_{res} = \\sqrt{F_{AB}^2 + F_{AD}^2} = \\sqrt{2}\\frac{Gm^2}{a^2}$ directed along the diagonal. The force from the diagonally opposite particle C (at distance $\\sqrt{2}a$) is $F_{AC} = \\frac{Gm^2}{(\\sqrt{2}a)^2} = \\frac{Gm^2}{2a^2}$ along the same diagonal direction. The net force is $F_{net} = F_{res} + F_{AC} = \\sqrt{2}\\frac{Gm^2}{a^2} + \\frac{Gm^2}{2a^2} = \\frac{Gm^2}{a^2}\\left(\\sqrt{2} + \\frac{1}{2}\\right)$. Option B is correct.",
+    "common_mistake": "Adding the magnitudes of adjacent forces directly without vector addition, or using the wrong distance for the diagonal particle (using $a$ instead of $\\sqrt{2}a$).",
+    "concept_slugs": ["gravitational-force"]
+  },
+  {
+    "pattern_group": "acceleration-variation",
+    "title": "At what height $h$ above the Earth's surface does the acceleration due to gravity become $1/9$ of its value at the Earth's surface? (Take radius of Earth as $R$)",
+    "difficulty": "easy",
+    "type": "pyq",
+    "source": "JEE Main 2022",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$R$",
+      "B": "$2R$",
+      "C": "$3R$",
+      "D": "$4R$"
+    },
+    "notes": "Use the general formula $g' = g\\left(\\frac{R}{R+h}\\right)^2$. Do not use the approximation $g' = g(1 - 2h/R)$ since $h$ is comparable to $R$.",
+    "solution_text": "The acceleration due to gravity at height $h$ is given by $g' = g\\left(\\frac{R}{R+h}\\right)^2$. Given $g' = g/9 \\implies \\frac{g}{9} = g\\left(\\frac{R}{R+h}\\right)^2 \\implies \\frac{1}{3} = \\frac{R}{R+h} \\implies R+h = 3R \\implies h = 2R$. Option B is correct.",
+    "common_mistake": "Using the linear approximation formula $g' = g(1 - 2h/R)$ which yields $h = 4R$, which is incorrect because the approximation only holds for $h \\ll R$.",
+    "concept_slugs": ["acceleration-variation"]
+  },
+  {
+    "pattern_group": "acceleration-variation",
+    "title": "The depth $d$ below the Earth's surface where the acceleration due to gravity becomes $1/4$ of its value at the surface is: (Take radius of Earth as $R$)",
+    "difficulty": "easy",
+    "type": "pyq",
+    "source": "JEE Main 2023",
+    "correct_answer": "C",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$R/4$",
+      "B": "$R/2$",
+      "C": "$3R/4$",
+      "D": "$R/3$"
+    },
+    "notes": "Use the depth variation formula $g_d = g\\left(1 - \\frac{d}{R}\\right)$, which is exact for all depths.",
+    "solution_text": "The acceleration due to gravity at depth $d$ is given by $g_d = g\\left(1 - \\frac{d}{R}\\right)$. Given $g_d = g/4 \\implies \\frac{g}{4} = g\\left(1 - \\frac{d}{R}\\right) \\implies 1 - \\frac{d}{R} = \\frac{1}{4} \\implies \\frac{d}{R} = \\frac{3}{4} \\implies d = \\frac{3R}{4}$. Option C is correct.",
+    "common_mistake": "Confusing the depth formula with the height formula, or subtracting $R/4$ from $R$ incorrectly.",
+    "concept_slugs": ["acceleration-variation"]
+  },
+  {
+    "pattern_group": "escape-velocity",
+    "title": "A planet has mass 8 times that of the Earth and its radius is 2 times that of the Earth. The ratio of the escape velocity on the planet to that on the Earth is ________.",
+    "difficulty": "easy",
+    "type": "pyq",
+    "source": "JEE Main 2022",
+    "correct_answer": "2",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "solution_text": "The escape velocity on a planet of mass $M$ and radius $R$ is given by $v_e = \\sqrt{\\frac{2GM}{R}}$. Let $v_p$ be the escape velocity on the planet and $v_e$ on the Earth. $v_p = \\sqrt{\\frac{2G(8M_e)}{2R_e}} = \\sqrt{4 \\times \\frac{2GM_e}{R_e}} = 2 v_e$. Thus, the ratio $v_p / v_e = 2$.",
+    "common_mistake": "Forgetting the square root in the escape velocity formula, leading to a ratio of 4.",
+    "concept_slugs": ["escape-velocity"]
+  },
+  {
+    "pattern_group": "gravitational-potential",
+    "title": "A body of mass $m$ is projected vertically upwards from the surface of Earth with a speed equal to half the escape velocity. The maximum height reached by the body above the surface of the Earth is: (Take radius of Earth as $R$)",
+    "difficulty": "medium",
+    "type": "concept",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$R/3$",
+      "B": "$R/2$",
+      "C": "$R/4$",
+      "D": "$2R/3$"
+    },
+    "notes": "Use conservation of mechanical energy: $E_i = E_f$. Initial energy contains kinetic and potential energy.",
+    "solution_text": "Initial speed $v = \\frac{1}{2}v_e = \\frac{1}{2}\\sqrt{\\frac{2GM}{R}}$. Initial total energy $E_i = K_i + U_i = \\frac{1}{2}mv^2 - \\frac{GMm}{R} = \\frac{1}{2}m\\left(\\frac{2GM}{4R}\\right) - \\frac{GMm}{R} = \\frac{GMm}{4R} - \\frac{GMm}{R} = -\\frac{3GMm}{4R}$. At maximum height $h$, speed is 0. Final total energy $E_f = -\\frac{GMm}{R+h}$. By conservation of energy: $E_i = E_f \\implies -\\frac{3GMm}{4R} = -\\frac{GMm}{R+h} \\implies \\frac{3}{4R} = \\frac{1}{R+h} \\implies 3R + 3h = 4R \\implies 3h = R \\implies h = R/3$. Option A is correct.",
+    "common_mistake": "Using kinematic formula $v^2 = 2gh$ which assumes constant gravity, yielding $h = R/4$, which is incorrect.",
+    "concept_slugs": ["gravitational-potential"]
+  },
+  {
+    "pattern_group": "keplers-laws",
+    "title": "Two satellites $S_1$ and $S_2$ are revolving around a planet in circular orbits of radii $R$ and $4R$ respectively. If the time period of $S_1$ is $8\\,\\text{hours}$, then the time period of $S_2$ will be ________ $\\text{hours}$.",
+    "difficulty": "easy",
+    "type": "pyq",
+    "source": "JEE Main 2021",
+    "correct_answer": "64",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "solution_text": "According to Kepler's third law, the square of the orbital period is proportional to the cube of the orbital radius: $T^2 \\propto r^3 \\implies T_2 / T_1 = (r_2 / r_1)^{3/2}$. Given $r_2 = 4R$ and $r_1 = R$, we have $T_2 / T_1 = (4)^{3/2} = (\\sqrt{4})^3 = 2^3 = 8$. Since $T_1 = 8\\,\\text{hours}$, $T_2 = 8 \\times T_1 = 8 \\times 8 = 64\\,\\text{hours}$.",
+    "common_mistake": "Assuming linear proportionality $T \\propto r$ (yielding 32 hours) or quadratic $T^2 \\propto r^2$ instead of Kepler's $T^2 \\propto r^3$.",
+    "concept_slugs": ["keplers-laws"]
+  },
+  {
+    "pattern_group": "satellite-motion",
+    "title": "A satellite of mass $m$ is orbiting the Earth in a circular orbit of radius $2R_e$. The additional energy required to transfer it to a circular orbit of radius $3R_e$ is: (Take mass of Earth as $M$)",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\frac{GMm}{6R_e}$",
+      "B": "$\\frac{GMm}{12R_e}$",
+      "C": "$\\frac{GMm}{4R_e}$",
+      "D": "$\\frac{GMm}{3R_e}$"
+    },
+    "notes": "Total energy of a satellite in orbit of radius $r$ is $E = -\\frac{GMm}{2r}$. Compute $E_2 - E_1$.",
+    "solution_text": "The total energy in orbit of radius $r$ is $E = -\\frac{GMm}{2r}$. Initial total energy $E_1 = -\\frac{GMm}{2(2R_e)} = -\\frac{GMm}{4R_e}$. Final total energy $E_2 = -\\frac{GMm}{2(3R_e)} = -\\frac{GMm}{6R_e}$. Additional energy required $\\Delta E = E_2 - E_1 = -\\frac{GMm}{6R_e} - \\left(-\\frac{GMm}{4R_e}\\right) = GMm\\left(\\frac{1}{4R_e} - \\frac{1}{6R_e}\\right) = \\frac{GMm}{12R_e}$. Option B is correct.",
+    "common_mistake": "Using potential energy only (neglecting change in kinetic energy), which yields $\\frac{GMm}{6R_e}$.",
+    "concept_slugs": ["satellite-motion", "escape-velocity"]
+  },
+  {
+    "pattern_group": "keplers-laws",
+    "title": "A double star system consists of two stars of masses $m$ and $2m$ separated by a distance $d$. They rotate about their common center of mass under their mutual gravitational attraction. The time period of rotation of the system is:",
+    "difficulty": "hard",
+    "type": "pyq",
+    "source": "JEE Advanced 2022",
+    "correct_answer": "C",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$2\\pi \\sqrt{\\frac{d^3}{Gm}}$",
+      "B": "$2\\pi \\sqrt{\\frac{d^3}{2Gm}}$",
+      "C": "$2\\pi \\sqrt{\\frac{d^3}{3Gm}}$",
+      "D": "$2\\pi \\sqrt{\\frac{2d^3}{3Gm}}$"
+    },
+    "notes": "Find the center of mass of the system. The distance of mass $m$ from the center of mass is $r_1 = \\frac{2m}{m+2m}d = \\frac{2}{3}d$. The gravitational force provides the centripetal force.",
+    "solution_text": "The center of mass lies on the line joining the stars. The distance of star of mass $m$ from the CM is $r_1 = \\frac{2m}{m+2m}d = \\frac{2}{3}d$. The gravitational force on star $m$ due to star $2m$ is $F_g = \\frac{G m (2m)}{d^2} = \\frac{2Gm^2}{d^2}$. This force provides the necessary centripetal force for star $m$ revolving in a circular orbit of radius $r_1$: $F_g = m\\omega^2 r_1 \\implies \\frac{2Gm^2}{d^2} = m \\omega^2 \\left(\\frac{2}{3}d\\right) \\implies \\omega^2 = \\frac{3Gm}{d^3} \\implies \\omega = \\sqrt{\\frac{3Gm}{d^3}}$. The time period of rotation is $T = \\frac{2\\pi}{\\omega} = 2\\pi \\sqrt{\\frac{d^3}{3Gm}}$. Option C is correct.",
+    "common_mistake": "Using orbital radius $d$ instead of the distance to the center of mass $r_1$ in the centripetal force equation.",
+    "concept_slugs": ["keplers-laws", "gravitational-force"]
+  },
+  {
+    "pattern_group": "gravitational-potential",
+    "title": "A particle is released from rest at a distance of $3R$ from the center of a uniform solid sphere of mass $M$ and radius $R$. The speed with which it strikes the surface of the sphere is:",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\sqrt{\\frac{4GM}{3R}}$",
+      "B": "$\\sqrt{\\frac{2GM}{3R}}$",
+      "C": "$\\sqrt{\\frac{GM}{3R}}$",
+      "D": "$\\sqrt{\\frac{5GM}{3R}}$"
+    },
+    "notes": "Conserve mechanical energy: $U_i + K_i = U_f + K_f$. Speed at release is 0.",
+    "solution_text": "At $r=3R$, the potential energy is $U_i = -\\frac{GMm}{3R}$, and kinetic energy $K_i = 0$. At the surface $r=R$, the potential energy is $U_f = -\\frac{GMm}{R}$, and kinetic energy is $K_f = \\frac{1}{2}mv^2$. By conservation of energy: $-\\frac{GMm}{3R} = -\\frac{GMm}{R} + \\frac{1}{2}mv^2 \\implies \\frac{1}{2}mv^2 = GMm\\left(\\frac{1}{R} - \\frac{1}{3R}\\right) = \\frac{2GMm}{3R} \\implies v^2 = \\frac{4GM}{3R} \\implies v = \\sqrt{\\frac{4GM}{3R}}$. Option A is correct.",
+    "common_mistake": "Using kinematic equations with constant $g$, or using the potential formula inside a solid sphere rather than outside (since it strikes the surface, the particle is outside the sphere throughout the motion).",
+    "concept_slugs": ["gravitational-potential"]
+  },
+  {
+    "pattern_group": "keplers-laws",
+    "title": "According to Kepler's second law, the areal velocity of a planet revolving around the Sun is constant and is given by $\\frac{dA}{dt} = \\frac{L}{2m}$ where $L$ is the angular momentum and $m$ is the mass. This law is a direct consequence of the conservation of:",
+    "difficulty": "easy",
+    "type": "concept",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Linear Momentum",
+      "B": "Angular Momentum",
+      "C": "Energy",
+      "D": "Mass"
+    },
+    "notes": "Since the gravitational force is central, the torque about the Sun is zero, meaning angular momentum is conserved.",
+    "solution_text": "The gravitational force on the planet is directed towards the Sun (central force). The torque of this force about the Sun is $\\vec{\\tau} = \\vec{r} \\times \\vec{F} = 0$ since $\\vec{r}$ and $\\vec{F}$ are collinear. Since torque is zero, the angular momentum $\\vec{L}$ remains constant. The areal velocity is $\\frac{dA}{dt} = \\frac{L}{2m}$, which is constant because $L$ is conserved. Option B is correct.",
+    "common_mistake": "Thinking it is due to conservation of energy (which explains Kepler's third law/orbital speeds but not constant areal velocity specifically).",
+    "concept_slugs": ["keplers-laws"]
+  },
+  {
+    "pattern_group": "keplers-laws",
+    "title": "If the distance between the Earth and the Sun is halved, then the number of days in a year would be ________. (Assume a year originally has 365 days, and round the answer to the nearest integer).",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2023",
+    "correct_answer": "129",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "solution_text": "Using Kepler's third law: $T^2 \\propto r^3 \\implies T' / T = (r' / r)^{3/2}$. Given $r' = r/2$, we have $T' = T (1/2)^{3/2} = \\frac{T}{2\\sqrt{2}} = \\frac{365}{2.828} \\approx 129.04\\,\\text{days}$. To the nearest integer, the answer is 129.",
+    "common_mistake": "Dividing 365 by 2 (yielding 183) or dividing by 4 (yielding 91).",
+    "concept_slugs": ["keplers-laws"]
+  },
+  {
+    "pattern_group": "acceleration-variation",
+    "title": "If the Earth stops rotating about its axis, the value of acceleration due to gravity at the equator will increase by $\\Delta g = \\omega^2 R$. If the radius of Earth is $R = 6400\\,\\text{km}$ and its angular velocity is $\\omega = 7.27 \\times 10^{-5}\\,\\text{rad/s}$, the value of $\\Delta g$ is ________ $\\times 10^{-2}\\,\\text{m/s}^2$ (round to the nearest integer).",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "3",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "solution_text": "The change in acceleration due to gravity is $\\Delta g = \\omega^2 R$. Given $\\omega = 7.27 \\times 10^{-5}\\,\\text{rad/s}$ and $R = 6.4 \\times 10^6\\,\\text{m}$. $\\Delta g = (7.27 \\times 10^{-5})^2 \\times 6.4 \\times 10^6 = 5.285 \\times 10^{-9} \\times 6.4 \\times 10^6 \\approx 0.0338\\,\\text{m/s}^2 = 3.38 \\times 10^{-2}\\,\\text{m/s}^2$. To the nearest integer, the coefficient is 3.",
+    "common_mistake": "Forgetting to square $\\omega$, or using the radius in km instead of converting to meters.",
+    "concept_slugs": ["acceleration-variation"]
+  },
+  {
+    "pattern_group": "satellite-motion",
+    "title": "A satellite is in an elliptical orbit around the Earth. The ratio of its maximum distance (apogee) to minimum distance (perigee) from the center of Earth is $r_{\\text{max}} / r_{\\text{min}} = 3$. The ratio of its maximum orbital speed to minimum orbital speed is:",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Advanced 2023",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\sqrt{3}$",
+      "B": "3",
+      "C": "9",
+      "D": "$1/3$"
+    },
+    "notes": "By conservation of angular momentum about the center of Earth, $m v_{\\text{max}} r_{\\text{min}} = m v_{\\text{min}} r_{\\text{max}}$.",
+    "solution_text": "Since the gravitational force is central, angular momentum of the satellite is conserved at all points of its orbit. At perigee (minimum distance $r_{\\text{min}}$), the speed is maximum $v_{\\text{max}}$. At apogee (maximum distance $r_{\\text{max}}$), the speed is minimum $v_{\\text{min}}$. By conservation of angular momentum: $m v_{\\text{max}} r_{\\text{min}} = m v_{\\text{min}} r_{\\text{max}} \\implies \\frac{v_{\\text{max}}}{v_{\\text{min}}} = \\frac{r_{\\text{max}}}{r_{\\text{min}}}$. Given the distance ratio is 3, the speed ratio is also 3. Option B is correct.",
+    "common_mistake": "Using the circular orbit speed formula $v = \\sqrt{GM/r}$ (which would incorrectly yield $\\sqrt{3}$), forgetting that the orbit is elliptical and velocity is not perpendicular to radius at all points, though it is perpendicular at apogee and perigee.",
+    "concept_slugs": ["satellite-motion", "angular-momentum"]
+  },
+  {
+    "pattern_group": "gravitational-potential",
+    "title": "The gravitational potential at the center of a thin uniform hemispherical shell of mass $M$ and radius $R$ is:",
+    "difficulty": "medium",
+    "type": "concept",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$-\\frac{GM}{R}$",
+      "B": "$-\\frac{GM}{2R}$",
+      "C": "$-\\frac{2GM}{R}$",
+      "D": "0"
+    },
+    "notes": "Potential is a scalar. Every point on the hemispherical shell is at the same distance $R$ from the center.",
+    "solution_text": "Gravitational potential is a scalar quantity. Since every mass element $dm$ of the hemispherical shell is at the same distance $R$ from the center, the potential at the center is $V = \\int -\\frac{G dm}{R} = -\\frac{G}{R} \\int dm = -\\frac{GM}{R}$. Option A is correct.",
+    "common_mistake": "Thinking the potential is halved because it is a hemisphere (yielding $-\\frac{GM}{2R}$), or thinking it is zero by symmetry (which only holds for vector field fields, not scalar potentials).",
+    "concept_slugs": ["gravitational-potential"]
+  },
+  {
+    "pattern_group": "escape-velocity",
+    "title": "A black hole is an object whose gravitational pull is so strong that even light cannot escape. The minimum radius to which the Earth (mass $M = 6 \\times 10^{24}\\,\\text{kg}$) must be compressed to become a black hole (i.e. its escape velocity equals the speed of light $c = 3 \\times 10^8\\,\\text{m/s}$) is ________ $\\text{mm}$ (round to the nearest integer, $G = 6.67 \\times 10^{-11}\\,\\text{N}\\cdot\\text{m}^2/\\text{kg}^2$).",
+    "difficulty": "hard",
+    "type": "practice",
+    "correct_answer": "9",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "solution_text": "The escape velocity is $v_e = \\sqrt{\\frac{2GM}{R}}$. Setting $v_e = c \\implies c = \\sqrt{\\frac{2GM}{R}} \\implies R = \\frac{2GM}{c^2}$. Substituting the values: $R = \\frac{2 \\times 6.67 \\times 10^{-11} \\times 6 \\times 10^{24}}{(3 \\times 10^8)^2} = \\frac{8.004 \\times 10^{14}}{9 \\times 10^{16}} = 8.89 \\times 10^{-3}\\,\\text{m} = 8.89\\,\\text{mm}$. To the nearest integer, this is 9.",
+    "common_mistake": "Forgetting the factor of 2 in the escape velocity formula, or incorrect division of exponents.",
+    "concept_slugs": ["escape-velocity"]
+  }
+]

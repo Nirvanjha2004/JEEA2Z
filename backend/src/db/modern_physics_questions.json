@@ -1,0 +1,274 @@
+[
+  {
+    "pattern_group": "dual-nature-radiation",
+    "title": "Light of wavelength $300\\,\\text{nm}$ is incident on a metal surface of work function $\\phi_0 = 2.0\\,\\text{eV}$. The stopping potential required to cut off the photoelectric current is: (Take $h c = 1240\\,\\text{eV}\\cdot\\text{nm}$)",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2021",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$2.13\\,\\text{V}$",
+      "B": "$1.13\\,\\text{V}$",
+      "C": "$4.13\\,\\text{V}$",
+      "D": "$2.00\\,\\text{V}$"
+    },
+    "solution_text": "According to Einstein's photoelectric equation: $e V_s = E - \\phi_0$, where $E = \\frac{hc}{\\lambda}$ is the energy of the incident photon and $\\phi_0$ is the work function. Given $hc = 1240\\,\\text{eV}\\cdot\\text{nm}$ and $\\lambda = 300\\,\\text{nm}$: $E = \\frac{1240}{300} \\approx 4.133\\,\\text{eV}$. The stopping potential is: $e V_s = 4.133\\,\\text{eV} - 2.0\\,\\text{eV} = 2.133\\,\\text{eV} \\implies V_s \\approx 2.13\\,\\text{V}$. Option A is correct.",
+    "common_mistake": "Adding the work function to the photon energy instead of subtracting it (giving $6.13\\,\\text{V}$), or forgetting to convert the photon energy units properly.",
+    "concept_slugs": [
+      "dual-nature-radiation"
+    ]
+  },
+  {
+    "pattern_group": "dual-nature-radiation",
+    "title": "An electron is accelerated from rest through a potential difference of $100\\,\\text{V}$. Its de Broglie wavelength is approximately ________ $\\times 10^{-10}\\,\\text{m}$. (Take $h = 6.63 \\times 10^{-34}\\,\\text{J}\\cdot\\text{s}$, $m_e = 9.1 \\times 10^{-31}\\,\\text{kg}$, $e = 1.6 \\times 10^{-19}\\,\\text{C}$)",
+    "difficulty": "easy",
+    "type": "pyq",
+    "source": "JEE Main 2019",
+    "correct_answer": "1.23",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "solution_text": "The de Broglie wavelength of an electron accelerated through a potential difference $V$ is given by: $\\lambda = \\frac{h}{\\sqrt{2 m_e e V}}$. Putting in numerical values: $\\lambda \\approx \\frac{12.27}{\\sqrt{V}}\\,\\text{Å}$. Given $V = 100\\,\\text{V}$: $\\lambda = \\frac{12.27}{\\sqrt{100}} = \\frac{12.27}{10} = 1.227\\,\\text{Å} \\approx 1.23 \\times 10^{-10}\\,\\text{m}$.",
+    "common_mistake": "Forgetting to take the square root of the potential difference $V$ (dividing by 100 instead of 10) or wrong unit conversion.",
+    "concept_slugs": [
+      "dual-nature-radiation"
+    ]
+  },
+  {
+    "pattern_group": "dual-nature-radiation",
+    "title": "A proton and an $\\alpha$-particle are accelerated from rest through the same potential difference $V$. The ratio of their de Broglie wavelengths ($\\lambda_p / \\lambda_\\alpha$) is:",
+    "difficulty": "medium",
+    "type": "concept",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$2\\sqrt{2}$",
+      "B": "$2$",
+      "C": "$\\sqrt{2}$",
+      "D": "$1$"
+    },
+    "solution_text": "The de Broglie wavelength is given by $\\lambda = \\frac{h}{\\sqrt{2 m q V}}$. For the same potential difference $V$, $\\lambda \\propto \\frac{1}{\\sqrt{m q}}$. The ratio is: $\\frac{\\lambda_p}{\\lambda_\\alpha} = \\sqrt{\\frac{m_\\alpha q_\\alpha}{m_p q_p}}$. Since $m_\\alpha = 4m_p$ and $q_\\alpha = 2q_p$: $\\frac{\\lambda_p}{\\lambda_\\alpha} = \\sqrt{\\frac{4m_p \\times 2q_p}{m_p q_p}} = \\sqrt{8} = 2\\sqrt{2}$. Option A is correct.",
+    "common_mistake": "Using $\\lambda \\propto 1/m$ (which holds only for constant velocity), giving a ratio of $4:1$.",
+    "concept_slugs": [
+      "dual-nature-radiation"
+    ]
+  },
+  {
+    "pattern_group": "atomic-structure-bohr",
+    "title": "In a hydrogen atom, an electron transitions from orbit $n = 3$ to $n = 2$. The wavelength of the emitted photon is ________ $\\text{nm}$. (Take Rydberg constant $R = 1.097 \\times 10^7\\,\\text{m}^{-1}$)",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2022",
+    "correct_answer": "656",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "solution_text": "The wavelength $\\lambda$ of the emitted photon is given by the Rydberg formula: $\\frac{1}{\\lambda} = R \\left(\\frac{1}{n_f^2} - \\frac{1}{n_i^2}\\right)$. Here $n_i = 3$ and $n_f = 2$. Substituting: $\\frac{1}{\\lambda} = R \\left(\\frac{1}{2^2} - \\frac{1}{3^2}\\right) = R \\left(\\frac{1}{4} - \\frac{1}{9}\\right) = \\frac{5}{36} R$. Thus, $\\lambda = \\frac{36}{5 R} = \\frac{36}{5 \\times 1.097 \\times 10^7\\,\\text{m}^{-1}} \\approx 6.563 \\times 10^{-7}\\,\\text{m} = 656.3\\,\\text{nm} \\approx 656\\,\\text{nm}$.",
+    "common_mistake": "Inverting the Rydberg formula subtraction (e.g. $1/9 - 1/4$ leading to negative values) or wrong arithmetic in the division.",
+    "concept_slugs": [
+      "atomic-structure-bohr"
+    ]
+  },
+  {
+    "pattern_group": "atomic-structure-bohr",
+    "title": "According to Bohr's theory, the ratio of the time period of revolution of an electron in the first excited state ($n = 2$) to that in the ground state ($n = 1$) for a hydrogen atom is:",
+    "difficulty": "easy",
+    "type": "concept",
+    "correct_answer": "C",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "2:1",
+      "B": "4:1",
+      "C": "8:1",
+      "D": "16:1"
+    },
+    "solution_text": "The time period of revolution of an electron in a Bohr orbit is $T = \\frac{2\\pi r}{v}$. In the Bohr model, the radius scales as $r \\propto n^2$ and velocity scales as $v \\propto \\frac{1}{n}$. Thus, $T \\propto \\frac{n^2}{1/n} \\propto n^3$. The ratio of the time period in $n=2$ to $n=1$ is: $\\frac{T_2}{T_1} = \\left(\\frac{2}{1}\\right)^3 = 8$. Option C is correct.",
+    "common_mistake": "Thinking $T \\propto n^2$ (from radius alone) giving a ratio of $4:1$, or using $T \\propto n$ (from frequency relation inversed incorrectly).",
+    "concept_slugs": [
+      "atomic-structure-bohr"
+    ]
+  },
+  {
+    "pattern_group": "atomic-structure-bohr",
+    "title": "The ground state energy of hydrogen atom is $-13.6\\,\\text{eV}$. The energy of the electron in the second excited state of a singly ionized helium atom ($\\text{He}^+$) is ________ $\\text{eV}$. (State the answer with negative sign to two decimal places)",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2023",
+    "correct_answer": "-6.04",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "solution_text": "The energy of an electron in H-like species in the $n$-th orbit is given by $E_n = -13.6 \\frac{Z^2}{n^2}\\,\\text{eV}$. For helium ion $\\text{He}^+$, $Z = 2$. The 'second excited state' corresponds to the principal quantum number $n = 3$ (since $n=1$ is ground state, $n=2$ is first excited, $n=3$ is second excited). Substituting: $E_3 = -13.6 \\times \\frac{2^2}{3^2} = -13.6 \\times \\frac{4}{9} = -\\frac{54.4}{9} \\approx -6.04\\,\\text{eV}$.",
+    "common_mistake": "Confusing second excited state with $n=2$ (which is the first excited state) or forgetting to square the atomic number $Z=2$.",
+    "concept_slugs": [
+      "atomic-structure-bohr"
+    ]
+  },
+  {
+    "pattern_group": "nuclear-physics-decay",
+    "title": "A radioactive sample has a half-life of $10\\,\\text{days}$. The time required for the activity of the sample to decay to $12.5\\%$ of its initial value is ________ days.",
+    "difficulty": "easy",
+    "type": "pyq",
+    "source": "JEE Main 2021",
+    "correct_answer": "30",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "solution_text": "By radioactive decay law, the fraction of activity remaining after $n$ half-lives is $A/A_0 = (1/2)^n$. We are given $A/A_0 = 12.5\\% = 0.125 = \\frac{1}{8}$. Since $\\frac{1}{8} = \\left(\\frac{1}{2}\\right)^3$, the number of half-lives that have elapsed is $n = 3$. The total elapsed time is: $t = n \\times T_{1/2} = 3 \\times 10\\,\\text{days} = 30\\,\\text{days}$.",
+    "common_mistake": "Solving for the number of half-lives by dividing 100 by 12.5 directly or getting confused by logarithmic math.",
+    "concept_slugs": [
+      "nuclear-physics-decay"
+    ]
+  },
+  {
+    "pattern_group": "nuclear-physics-decay",
+    "title": "At time $t = 0$, a radioactive sample contains $N_0$ active nuclei. If its decay constant is $\\lambda$, the fraction of nuclei that will decay in time $t$ is:",
+    "difficulty": "medium",
+    "type": "concept",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$e^{-\\lambda t}$",
+      "B": "$1 - e^{-\\lambda t}$",
+      "C": "$\\frac{1}{2} e^{-\\lambda t}$",
+      "D": "$1 - \\frac{1}{2} e^{-\\lambda t}$"
+    },
+    "solution_text": "The number of active nuclei remaining at time $t$ is given by $N(t) = N_0 e^{-\\lambda t}$. The number of nuclei that have decayed in this time is $N_d(t) = N_0 - N(t) = N_0(1 - e^{-\\lambda t})$. The fraction of nuclei that decay is: $\\frac{N_d(t)}{N_0} = 1 - e^{-\\lambda t}$. Option B is correct.",
+    "common_mistake": "Selecting option A, which represents the fraction of active nuclei *remaining*, rather than the fraction *decayed*.",
+    "concept_slugs": [
+      "nuclear-physics-decay"
+    ]
+  },
+  {
+    "pattern_group": "nuclear-physics-decay",
+    "title": "The mass of a neutron is $1.00866\\,\\text{u}$ and that of a proton is $1.00728\\,\\text{u}$. If the mass of a helium nucleus ($^4_2\\text{He}$) is $4.00150\\,\\text{u}$, the binding energy of the helium nucleus is approximately: (Take $1\\,\\text{u} = 931.5\\,\\text{MeV}$)",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2022",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$28.3\\,\\text{MeV}$",
+      "B": "$20.3\\,\\text{MeV}$",
+      "C": "$14.1\\,\\text{MeV}$",
+      "D": "$32.4\\,\\text{MeV}$"
+    },
+    "solution_text": "Helium nucleus $^4_2\\text{He}$ contains 2 protons and 2 neutrons. Expected constituent mass: $m_c = 2 m_p + 2 m_n = 2(1.00728\\,\\text{u}) + 2(1.00866\\,\\text{u}) = 2.01456 + 2.01732 = 4.03188\\,\\text{u}$. The mass defect is: $\\Delta m = m_c - m_{\\text{nucleus}} = 4.03188\\,\\text{u} - 4.00150\\,\\text{u} = 0.03038\\,\\text{u}$. The binding energy is: $E_b = \\Delta m \\times 931.5\\,\\text{MeV} = 0.03038 \\times 931.5\\,\\text{MeV} \\approx 28.3\\,\\text{MeV}$. Option A is correct.",
+    "common_mistake": "Using only 1 proton and 1 neutron for constituents, or wrong math in calculating mass defect.",
+    "concept_slugs": [
+      "nuclear-physics-decay"
+    ]
+  },
+  {
+    "pattern_group": "semiconductors-junctions",
+    "title": "In a Zener diode regulated power supply, a Zener diode with breakdown voltage $V_Z = 6\\,\\text{V}$ is connected in series with a resistor $R_S = 100\\,\\Omega$ across an unregulated input of $10\\,\\text{V}$. The current passing through the Zener diode when no load resistor is connected is ________ $\\text{mA}$.",
+    "difficulty": "hard",
+    "type": "pyq",
+    "source": "JEE Main 2022",
+    "correct_answer": "40",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "solution_text": "The breakdown voltage of the Zener diode is $V_Z = 6\\,\\text{V}$. Since the unregulated input voltage is $V_{\\text{in}} = 10\\,\\text{V}$ (which is greater than $V_Z$), the Zener diode is in breakdown, maintaining a constant voltage of $6\\,\\text{V}$ across itself. The voltage drop across the series resistor $R_S$ is: $V_{R} = V_{\\text{in}} - V_Z = 10\\,\\text{V} - 6\\,\\text{V} = 4\\,\\text{V}$. The current in the series branch is: $I_S = \\frac{V_R}{R_S} = \\frac{4\\,\\text{V}}{100\\,\\Omega} = 0.04\\,\\text{A} = 40\\,\\text{mA}$. With no load resistor connected, all of the branch current flows directly through the Zener diode, so $I_Z = I_S = 40\\,\\text{mA}$.",
+    "common_mistake": "Using the Zener voltage directly to find current ($6\\,\\text{V}/100\\,\\Omega = 60\\,\\text{mA}$) or neglecting the series resistance.",
+    "concept_slugs": [
+      "semiconductors-junctions"
+    ]
+  },
+  {
+    "pattern_group": "semiconductors-junctions",
+    "title": "In a p-n junction diode, the width of the depletion layer:",
+    "difficulty": "easy",
+    "type": "concept",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "increases under forward bias and decreases under reverse bias",
+      "B": "decreases under forward bias and increases under reverse bias",
+      "C": "remains constant under both forward and reverse bias",
+      "D": "is always zero when no external bias is applied"
+    },
+    "solution_text": "1) Forward bias opposes the built-in potential barrier, pushing majority carriers (electrons and holes) towards the junction, which decreases the width of the depletion layer. 2) Reverse bias aids the built-in potential barrier, pulling majority carriers away from the junction, which increases the width of the depletion layer. Thus, Option B is correct.",
+    "common_mistake": "Confusing forward bias with reverse bias behavior, selecting Option A.",
+    "concept_slugs": [
+      "semiconductors-junctions"
+    ]
+  },
+  {
+    "pattern_group": "semiconductors-junctions",
+    "title": "For a common-emitter transistor amplifier, the current gain $\\beta = 100$. If the collector current changes by $2\\,\\text{mA}$, the corresponding change in base current is:",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$20\\,\\mu\\text{A}$",
+      "B": "$200\\,\\mu\\text{A}$",
+      "C": "$2\\,\\mu\\text{A}$",
+      "D": "$100\\,\\mu\\text{A}$"
+    },
+    "solution_text": "The alternating current gain $\\beta$ of a common-emitter configuration is given by the ratio of change in collector current $\\Delta I_c$ to the change in base current $\\Delta I_b$: $\\beta = \\frac{\\Delta I_c}{\\Delta I_b}$. Given $\\beta = 100$ and $\\Delta I_c = 2\\,\\text{mA}$: $\\Delta I_b = \\frac{\\Delta I_c}{\\beta} = \\frac{2\\,\\text{mA}}{100} = 0.02\\,\\text{mA} = 20\\,\\mu\\text{A}$. Option A is correct.",
+    "common_mistake": "Multiplying collector current change by $\\beta$ instead of dividing (giving $200\\,\\text{mA}$), or wrong conversion of milliamperes to microamperes.",
+    "concept_slugs": [
+      "semiconductors-junctions"
+    ]
+  },
+  {
+    "pattern_group": "logic-gates",
+    "title": "Which of the following logic gates is a universal logic gate (i.e. can implement any Boolean function without using other gates)?",
+    "difficulty": "easy",
+    "type": "concept",
+    "correct_answer": "C",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "AND",
+      "B": "OR",
+      "C": "NAND",
+      "D": "XOR"
+    },
+    "solution_text": "NAND and NOR gates are known as universal logic gates because any logic gate (AND, OR, NOT, etc.) or Boolean expression can be constructed entirely using only NAND gates or only NOR gates. Option C is correct.",
+    "common_mistake": "Thinking basic gates (AND, OR) are universal, or choosing XOR (which is an exclusive-OR gate, not universal).",
+    "concept_slugs": [
+      "logic-gates"
+    ]
+  },
+  {
+    "pattern_group": "logic-gates",
+    "title": "Two NAND gates are connected in series such that the output of the first NAND gate is connected as both inputs to the second NAND gate. The resulting logic combination behaves as a/an:",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2021",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "AND gate",
+      "B": "OR gate",
+      "C": "NAND gate",
+      "D": "NOR gate"
+    },
+    "solution_text": "Let the inputs to the first NAND gate be $A$ and $B$. The output of this gate is $Y_1 = \\overline{A \\cdot B}$. This output $Y_1$ is connected to both inputs of the second NAND gate. A NAND gate with tied inputs behaves as a NOT gate (inverter): $Y = \\overline{Y_1 \\cdot Y_1} = \\overline{Y_1}$. Therefore, $Y = \\overline{\\overline{A \\cdot B}} = A \\cdot B$. This matches the truth table and behavior of an AND gate. Option A is correct.",
+    "common_mistake": "Thinking that two NAND gates in series cancel out to form OR, or not realizing that the second gate acts as a NOT gate.",
+    "concept_slugs": [
+      "logic-gates"
+    ]
+  },
+  {
+    "pattern_group": "logic-gates",
+    "title": "In the Boolean expression $Y = A \\cdot \\overline{B} + \\overline{A} \\cdot B + A \\cdot B$, if both $A$ and $B$ are set to logic high (1), the output $Y$ is ________.",
+    "difficulty": "hard",
+    "type": "practice",
+    "correct_answer": "1",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "solution_text": "Let's evaluate the Boolean expression with $A = 1$ and $B = 1$: $Y = A \\cdot \\overline{B} + \\overline{A} \\cdot B + A \\cdot B$. Since $A = 1 \\implies \\overline{A} = 0$, and $B = 1 \\implies \\overline{B} = 0$. Substituting: $Y = 1 \\cdot 0 + 0 \\cdot 1 + 1 \\cdot 1 = 0 + 0 + 1 = 1$. The output state is 1.",
+    "common_mistake": "Incorrect inversion rules (thinking $\\overline{1} = 1$) or calculating the exclusive-OR part of the expression but neglecting the $+ A \\cdot B$ term.",
+    "concept_slugs": [
+      "logic-gates"
+    ]
+  }
+]
