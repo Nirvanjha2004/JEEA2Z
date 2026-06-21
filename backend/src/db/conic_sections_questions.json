@@ -1,0 +1,919 @@
+[
+  {
+    "pattern_group": "conic-parabola-equations",
+    "title": "The coordinates of the focus and the equation of the directrix of the parabola $y^2 = 8x$ are:",
+    "difficulty": "easy",
+    "type": "concept",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Focus $(2, 0)$, Directrix $x = -2$",
+      "B": "Focus $(0, 2)$, Directrix $y = -2$",
+      "C": "Focus $(-2, 0)$, Directrix $x = 2$",
+      "D": "Focus $(2, 0)$, Directrix $x = 2$"
+    },
+    "notes": "Compare the equation with y^2 = 4ax to find a. The focus is (a, 0) and directrix is x = -a.",
+    "solution_text": "Let's compare the given equation with the standard form:\\n1) $y^2 = 4ax \\\\implies 4a = 8 \\\\implies a = 2$.\\n2) The focus of the parabola is $(a, 0) = (2, 0)$.\\n3) The equation of the directrix is $x = -a \\\\implies x = -2$.\\nOption A is correct.",
+    "common_mistake": "Confusing the axis and using vertical parabola formulas (Option B) or sign errors (Option C or D).",
+    "concept_slugs": [
+      "conic-parabola-equations"
+    ]
+  },
+  {
+    "pattern_group": "conic-parabola-equations",
+    "title": "The length of the latus rectum of the parabola $y^2 = 12x$ is:",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "3",
+      "B": "12",
+      "C": "6",
+      "D": "24"
+    },
+    "notes": "In the standard parabola y^2 = 4ax, the length of the latus rectum is 4a.",
+    "solution_text": "Let's identify the latus rectum length from the equation:\\n1) The equation is $y^2 = 12x$.\\n2) Comparing with standard form $y^2 = 4ax$, we see that the length of the latus rectum is $4a = 12$.\\nOption B is correct.",
+    "common_mistake": "Dividing by 4 to get a = 3 and stating 3 as the length (Option A), or doubling it (Option D).",
+    "concept_slugs": [
+      "conic-parabola-equations"
+    ]
+  },
+  {
+    "pattern_group": "conic-parabola-equations",
+    "title": "Let $P(x_1, y_1)$ be a point on the parabola $y^2 = 4ax$. The focal distance of the point $P$ is equal to:",
+    "difficulty": "medium",
+    "type": "concept",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$x_1 + a$",
+      "B": "$x_1 - a$",
+      "C": "$y_1 + a$",
+      "D": "\\\\sqrt{x_1^2 + y_1^2}$"
+    },
+    "notes": "Focal distance is the distance of P from the focus S(a, 0). By definition of parabola, it equals the distance of P from the directrix x + a = 0.",
+    "solution_text": "Let's use the definition of a parabola (SP = PM):\\n1) The distance of $P(x_1, y_1)$ from the directrix $x + a = 0$ is $PM = |x_1 + a|$.\\n2) Since $P$ lies on the right-handed parabola $y^2 = 4ax$, $x_1 \\\\ge 0$, and since $a > 0$, the absolute value can be written as $x_1 + a$.\\n3) Thus, the focal distance $SP = x_1 + a$.\\nOption A is correct.",
+    "common_mistake": "Using the distance from origin formula (Option D) or sign mistakes (Option B).",
+    "concept_slugs": [
+      "conic-parabola-equations"
+    ]
+  },
+  {
+    "pattern_group": "conic-parabola-equations",
+    "title": "The parametric coordinates of any point on the parabola $y^2 = 16x$ can be represented in terms of parameter $t$ as:",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$(2t^2, 4t)$",
+      "B": "$(4t^2, 8t)$",
+      "C": "$(16t^2, 32t)$",
+      "D": "$(4t, 8t^2)$"
+    },
+    "notes": "Parametric form is (at^2, 2at) where a is found from 4a = 16.",
+    "solution_text": "Let's find $a$ and write the parametric coordinates:\\n1) $y^2 = 16x \\\\implies 4a = 16 \\\\implies a = 4$.\\n2) Standard parametric form of the parabola is $(at^2, 2at)$.\\n3) Substituting $a = 4$ yields $(4t^2, 8t)$.\\nOption B is correct.",
+    "common_mistake": "Confusing the order of coordinates (Option D) or using wrong scaling (Option A).",
+    "concept_slugs": [
+      "conic-parabola-equations"
+    ]
+  },
+  {
+    "pattern_group": "conic-parabola-equations",
+    "title": "The coordinates of the vertex of the shifted parabola $y^2 - 4y - 8x - 12 = 0$ are:",
+    "difficulty": "hard",
+    "type": "pyq",
+    "source": "JEE Main 2021",
+    "correct_answer": "C",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$(2, -2)$",
+      "B": "$(2, 2)$",
+      "C": "$(-2, 2)$",
+      "D": "$(-2, -2)$"
+    },
+    "notes": "Complete the square in terms of y to transform the equation into the standard form (y - k)^2 = 4a(x - h).",
+    "solution_text": "Let's complete the square for the y-terms:\\n1) $y^2 - 4y = 8x + 12$.\\n2) Add 4 to both sides: $y^2 - 4y + 4 = 8x + 16$.\\n3) Factor both sides: $(y - 2)^2 = 8(x + 2)$.\\n4) Comparing with $(y - k)^2 = 4a(x - h)$, we get $h = -2$ and $k = 2$.\\n5) The vertex is $(h, k) = (-2, 2)$.\\nOption C is correct.",
+    "common_mistake": "Sign errors when identifying h and k from the factored form (Option B).",
+    "concept_slugs": [
+      "conic-parabola-equations"
+    ]
+  },
+  {
+    "pattern_group": "conic-parabola-equations",
+    "title": "The length of the latus rectum of the parabola $3x^2 = 12y$ is ________.",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "4",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "First divide by 3 to bring the equation into the form x^2 = 4ay.",
+    "solution_text": "Let's normalize the equation:\\n1) Divide by 3: $x^2 = 4y$.\\n2) Comparing with vertical parabola form $x^2 = 4ay$, the latus rectum is the coefficient of $y$, which is $4a = 4$.\\nThe length of the latus rectum is 4.",
+    "common_mistake": "Stating 12 by not dividing by 3 first.",
+    "concept_slugs": [
+      "conic-parabola-equations"
+    ]
+  },
+  {
+    "pattern_group": "conic-parabola-equations",
+    "title": "The focal distance of the point $(3, 6)$ lying on the parabola $y^2 = 12x$ is ________.",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2022",
+    "correct_answer": "6",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Find a from the equation, and compute focal distance = x1 + a.",
+    "solution_text": "Let's find the parameters:\\n1) $y^2 = 12x \\\\implies 4a = 12 \\\\implies a = 3$.\\n2) The given point is $P(x_1, y_1) = (3, 6)$, so $x_1 = 3$.\\n3) The focal distance is $x_1 + a = 3 + 3 = 6$.\\nThe focal distance is 6.",
+    "common_mistake": "Using the distance from origin which calculates $\\\\sqrt{3^2+6^2} = 3\\\\sqrt{5}$.",
+    "concept_slugs": [
+      "conic-parabola-equations"
+    ]
+  },
+  {
+    "pattern_group": "conic-parabola-equations",
+    "title": "If a focal chord of the parabola $y^2 = 16x$ has one end at the point $(1, 4)$, then the total length of this focal chord is ________.",
+    "difficulty": "hard",
+    "type": "practice",
+    "correct_answer": "25",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Find the parameter t1 of the given end, use the relation t1 * t2 = -1 to find the other end's parameter t2, and apply the focal chord length formula a * (t1 - t2)^2.",
+    "solution_text": "Let's perform the calculations:\\n1) $y^2 = 16x \\\\implies a = 4$.\\n2) Let the end point $(1, 4)$ be $(a t_1^2, 2a t_1) = (4 t_1^2, 8 t_1)$.\\n   $8 t_1 = 4 \\\\implies t_1 = \\\\frac{1}{2}$.\\n3) Since it is a focal chord, the parameter of the other end satisfies $t_1 t_2 = -1 \\\\implies t_2 = -2$.\\n4) The length of the focal chord is given by $L = a(t_1 - t_2)^2$.\\n5) Substitute $a = 4$, $t_1 = 1/2$, and $t_2 = -2$:\\n   $L = 4\\\\left(\\\\frac{1}{2} - (-2)\\\\right)^2 = 4\\\\left(\\\\frac{5}{2}\\\\right)^2 = 4 \\\\times \\\\frac{25}{4} = 25$.\\nThe length of the focal chord is 25.",
+    "common_mistake": "Mistakes in calculating t2 or wrong application of the length formula.",
+    "concept_slugs": [
+      "conic-parabola-equations"
+    ]
+  },
+  {
+    "pattern_group": "conic-parabola-tangents-normals",
+    "title": "The condition for the line $y = mx + c$ to be a tangent to the parabola $y^2 = 4ax$ is given by:",
+    "difficulty": "easy",
+    "type": "concept",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$c = \\\\frac{a}{m}$",
+      "B": "$c = am$",
+      "C": "$c = -am^2$",
+      "D": "$c^2 = a^2(1+m^2)$"
+    },
+    "notes": "Recall the condition of tangency for parabola in slope form.",
+    "solution_text": "By standard coordinate geometry theory:\\n1) The line $y = mx + c$ is a tangent to the parabola $y^2 = 4ax$ if and only if the constant term is $c = \\\\frac{a}{m}$ (for $m \\\\neq 0$).\\nOption A is correct.",
+    "common_mistake": "Confusing it with the condition for a circle (Option D) or a vertical parabola (Option C).",
+    "concept_slugs": [
+      "conic-parabola-tangents-normals"
+    ]
+  },
+  {
+    "pattern_group": "conic-parabola-tangents-normals",
+    "title": "The equation of the tangent to the parabola $y^2 = 8x$ at the point $(2, 4)$ is:",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$x - y + 2 = 0$",
+      "B": "$x + y - 6 = 0$",
+      "C": "$2x - y = 0$",
+      "D": "$x - y - 2 = 0$"
+    },
+    "notes": "Use the point form of the tangent: y*y1 = 2a(x + x1).",
+    "solution_text": "Let's find the tangent equation:\\n1) $y^2 = 8x \\\\implies 2a = 4$ since $4a = 8$.\\n2) Tangent at $(x_1, y_1) = (2, 4)$ is $y y_1 = 2a(x + x_1)$.\\n3) Substitute values:\\n   $y(4) = 4(x + 2) \\\\implies 4y = 4x + 8$.\\n4) Divide by 4 and rearrange:\\n   $x - y + 2 = 0$.\\nOption A is correct.",
+    "common_mistake": "Sign errors during rearrangement (Option D).",
+    "concept_slugs": [
+      "conic-parabola-tangents-normals"
+    ]
+  },
+  {
+    "pattern_group": "conic-parabola-tangents-normals",
+    "title": "The equation of the normal to the parabola $y^2 = 4x$ at the point $P(1, 2)$ is:",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2021",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$x + y - 3 = 0$",
+      "B": "$x - y + 1 = 0$",
+      "C": "$x + y - 2 = 0$",
+      "D": "$2x + y - 4 = 0$"
+    },
+    "notes": "Find the slope of the tangent at (1, 2) first, take the negative reciprocal to get the normal slope, and write the line equation.",
+    "solution_text": "Let's find the normal line:\\n1) Parabola is $y^2 = 4x \\\\implies a = 1$.\\n2) Tangent at $(1, 2)$ is $y(2) = 2(x + 1) \\\\implies y = x + 1$.\\n3) The slope of this tangent is $m_t = 1$.\\n4) The slope of the normal is $m_n = -\\\\frac{1}{m_t} = -1$.\\n5) Point-slope equation for normal through $(1, 2)$ is:\\n   $y - 2 = -1(x - 1) \\\\implies y - 2 = -x + 1 \\\\implies x + y - 3 = 0$.\\nOption A is correct.",
+    "common_mistake": "Using the tangent slope by mistake (Option B).",
+    "concept_slugs": [
+      "conic-parabola-tangents-normals"
+    ]
+  },
+  {
+    "pattern_group": "conic-parabola-tangents-normals",
+    "title": "The equations of the tangents to the parabola $y^2 = 12x$ which are parallel to the line $3x - y + 5 = 0$ are:",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$3x - y + 3 = 0$",
+      "B": "$3x - y + 1 = 0$",
+      "C": "$3x - y + 9 = 0$",
+      "D": "$x - 3y + 1 = 0$"
+    },
+    "notes": "Find slope of the given line, use condition c = a/m, and write the slope form tangent equation.",
+    "solution_text": "Let's find the parallel tangent:\\n1) Slope of $3x - y + 5 = 0$ is $m = 3$.\\n2) For parabola $y^2 = 12x$, we have $4a = 12 \\\\implies a = 3$.\\n3) The condition of tangency is $c = \\\\frac{a}{m} = \\\\frac{3}{3} = 1$.\\n4) The equation of the tangent is $y = mx + c \\\\implies y = 3x + 1 \\\\implies 3x - y + 1 = 0$.\\nOption B is correct.",
+    "common_mistake": "Using a wrong value for a, leading to Option A.",
+    "concept_slugs": [
+      "conic-parabola-tangents-normals"
+    ]
+  },
+  {
+    "pattern_group": "conic-parabola-tangents-normals",
+    "title": "If the normal to the parabola $y^2 = 4ax$ at the point $t_1$ meets the parabola again at the point $t_2$, then the parameter $t_2$ satisfies the relation:",
+    "difficulty": "hard",
+    "type": "pyq",
+    "source": "JEE Advanced 2020",
+    "correct_answer": "C",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$t_2 = t_1 + \\\\frac{2}{t_1}$",
+      "B": "$t_2 = -t_1 + \\\\frac{2}{t_1}$",
+      "C": "$t_2 = -t_1 - \\\\frac{2}{t_1}$",
+      "D": "$t_2 = t_1 - \\\\frac{2}{t_1}$"
+    },
+    "notes": "Equate the slope of the chord joining t1 and t2 with the slope of the normal at t1.",
+    "solution_text": "Let's write the relation using slopes:\\n1) The slope of the normal at $t_1$ on $y^2 = 4ax$ is $m = -t_1$.\\n2) The slope of the chord joining $t_1$ and $t_2$ is $m_{chord} = \\\\frac{2}{t_1 + t_2}$.\\n3) Since the normal chord is along this line, we equate the slopes:\\n   $-t_1 = \\\\frac{2}{t_1 + t_2} \\\\implies t_1 + t_2 = -\\\\frac{2}{t_1} \\\\implies t_2 = -t_1 - \\\\frac{2}{t_1}$.\\nOption C is correct.",
+    "common_mistake": "Sign errors during algebraic transposition (Option A or B).",
+    "concept_slugs": [
+      "conic-parabola-tangents-normals"
+    ]
+  },
+  {
+    "pattern_group": "conic-parabola-tangents-normals",
+    "title": "If the straight line $y = 2x + c$ is a tangent to the parabola $y^2 = 16x$, then the value of the constant $c$ is ________.",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "2",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Determine a and m from the given equations, and apply c = a/m.",
+    "solution_text": "Let's solve for $c$:\\n1) $y^2 = 16x \\\\implies 4a = 16 \\\\implies a = 4$.\\n2) The line is $y = 2x + c \\\\implies m = 2$.\\n3) Apply the tangency condition: $c = \\\\frac{a}{m} = \\\\frac{4}{2} = 2$.\\nThe value of $c$ is 2.",
+    "common_mistake": "Multiplying instead of dividing, giving $c = am = 8$.",
+    "concept_slugs": [
+      "conic-parabola-tangents-normals"
+    ]
+  },
+  {
+    "pattern_group": "conic-parabola-tangents-normals",
+    "title": "The normal to the parabola $y^2 = 8x$ at the point $P(2, 4)$ meets the curve again at the point $Q(h, k)$. The value of the coordinate $h$ is ________.",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2022",
+    "correct_answer": "18",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Find the parameter t1 of P, apply the normal intersection relation to find t2, and calculate the x-coordinate of Q.",
+    "solution_text": "Let's calculate the coordinates of Q:\\n1) $y^2 = 8x \\\\implies a = 2$.\\n2) Point $P(2, 4) = (a t_1^2, 2a t_1) = (2 t_1^2, 4 t_1) \\\\implies t_1 = 1$.\\n3) The normal meets the parabola again at parameter $t_2$:\\n   $t_2 = -t_1 - \\\\frac{2}{t_1} = -1 - 2 = -3$.\\n4) The x-coordinate of $Q$ is:\\n   $h = a t_2^2 = 2(-3)^2 = 2(9) = 18$.\\nThe value of $h$ is 18.",
+    "common_mistake": "Calculating t2 incorrectly or forgetting to multiply by a when finding the coordinate.",
+    "concept_slugs": [
+      "conic-parabola-tangents-normals"
+    ]
+  },
+  {
+    "pattern_group": "conic-parabola-tangents-normals",
+    "title": "The total number of real normals that can be drawn from the point $(1, 0)$ to the parabola $y^2 = 4x$ is ________.",
+    "difficulty": "hard",
+    "type": "practice",
+    "correct_answer": "1",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Examine the number of real roots of the cubic equation in normal slope m passing through the point.",
+    "solution_text": "Let's analyze the normals from $(h, k) = (1, 0)$:\\n1) The equation of the normal to $y^2 = 4x$ (where $a=1$) in slope form is $y = mx - 2am - am^3 \\\\implies y = mx - 2m - m^3$.\\n2) Since it passes through $(1, 0)$:\\n   $0 = m(1) - 2m - m^3 \\\\implies m^3 + m = 0$.\\n3) Factor the equation: $m(m^2 + 1) = 0$.\\n4) The only real root is $m = 0$ (the other two are complex conjugate roots $\\\\pm i$).\\n5) Therefore, only 1 real normal can be drawn.\\nThe answer is 1.",
+    "common_mistake": "Assuming 3 normals can always be drawn from any point without checking the real roots criteria.",
+    "concept_slugs": [
+      "conic-parabola-tangents-normals"
+    ]
+  },
+  {
+    "pattern_group": "conic-ellipse-equations",
+    "title": "The eccentricity of the ellipse $\\\\frac{x^2}{25} + \\\\frac{y^2}{16} = 1$ is:",
+    "difficulty": "easy",
+    "type": "concept",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\\\frac{3}{5}$",
+      "B": "$\\\\frac{4}{5}$",
+      "C": "$\\\\frac{9}{25}$",
+      "D": "$\\\\frac{3}{4}$"
+    },
+    "notes": "Use the eccentricity relation for an ellipse: e = sqrt(1 - b^2/a^2) where a > b.",
+    "solution_text": "Let's identify parameters:\\n1) $a^2 = 25$ and $b^2 = 16$.\\n2) Since $a^2 > b^2$, the eccentricity is:\\n   $e = \\\\sqrt{1 - \\\\frac{b^2}{a^2}} = \\\\sqrt{1 - \\\\frac{16}{25}} = \\\\sqrt{\\\\frac{9}{25}} = \\\\frac{3}{5}$.\\nOption A is correct.",
+    "common_mistake": "Neglecting to take the square root (Option C) or using b^2/a^2 incorrectly.",
+    "concept_slugs": [
+      "conic-ellipse-equations"
+    ]
+  },
+  {
+    "pattern_group": "conic-ellipse-equations",
+    "title": "The equation of the ellipse with foci $(\\\\pm 4, 0)$ and vertices $(\\\\pm 5, 0)$ is:",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\\\frac{x^2}{25} + \\\\frac{y^2}{16} = 1$",
+      "B": "$\\\\frac{x^2}{25} + \\\\frac{y^2}{9} = 1$",
+      "C": "$\\\\frac{x^2}{16} + \\\\frac{y^2}{9} = 1$",
+      "D": "$\\\\frac{x^2}{25} - \\\\frac{y^2}{9} = 1$"
+    },
+    "notes": "Vertices give a = 5, and foci give ae = 4. Use these to find b^2.",
+    "solution_text": "Let's solve for $a$ and $b$:\\n1) Vertex at $(\\\\pm a, 0) = (\\\\pm 5, 0) \\\\implies a = 5$.\\n2) Focus at $(\\\\pm ae, 0) = (\\\\pm 4, 0) \\\\implies ae = 4 \\\\implies e = 4/5$.\\n3) The relation is $b^2 = a^2(1 - e^2)$:\\n   $b^2 = 25\\\\left(1 - \\\\frac{16}{25}\\\\right) = 25 \\\\times \\\\frac{9}{25} = 9$.\\n4) The equation of the ellipse is $\\\\frac{x^2}{25} + \\\\frac{y^2}{9} = 1$.\\nOption B is correct.",
+    "common_mistake": "Confusing it with a hyperbola (Option D) or putting focal coordinates directly as denominator (Option A).",
+    "concept_slugs": [
+      "conic-ellipse-equations"
+    ]
+  },
+  {
+    "pattern_group": "conic-ellipse-equations",
+    "title": "The coordinates of the foci of the ellipse $9x^2 + 25y^2 = 225$ are:",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2021",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$(\\\\pm 4, 0)$",
+      "B": "$(0, \\\\pm 4)$",
+      "C": "$(\\\\pm 3, 0)$",
+      "D": "$(\\\\pm 5, 0)$"
+    },
+    "notes": "First divide by 225 to write the equation in standard form, then find a, b, and e.",
+    "solution_text": "Let's write in standard form:\\n1) Divide by 225: $\\\\frac{x^2}{25} + \\\\frac{y^2}{9} = 1$.\\n2) We have $a^2 = 25 \\\\implies a = 5$ and $b^2 = 9 \\\\implies b = 3$.\\n3) Calculate eccentricity:\\n   $e = \\\\sqrt{1 - \\\\frac{9}{25}} = \\\\frac{4}{5}$.\\n4) Foci coordinates are $(\\\\pm ae, 0) = \\\\left(\\\\pm 5\\\\left(\\\\frac{4}{5}\\\\right), 0\\\\right) = (\\\\pm 4, 0)$.\\nOption A is correct.",
+    "common_mistake": "Placing foci on the y-axis (Option B) by assuming vertical ellipse.",
+    "concept_slugs": [
+      "conic-ellipse-equations"
+    ]
+  },
+  {
+    "pattern_group": "conic-ellipse-equations",
+    "title": "The equation of the auxiliary circle of the ellipse $\\\\frac{x^2}{16} + \\\\frac{y^2}{9} = 1$ is:",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$x^2 + y^2 = 9$",
+      "B": "$x^2 + y^2 = 16$",
+      "C": "$x^2 + y^2 = 25$",
+      "D": "$x^2 + y^2 = 7$"
+    },
+    "notes": "The auxiliary circle of x^2/a^2 + y^2/b^2 = 1 is the circle described on the major axis as diameter, i.e., x^2 + y^2 = a^2.",
+    "solution_text": "Let's identify the major axis semi-length:\\n1) Here $a^2 = 16$ and $b^2 = 9$. Since $a > b$, $a^2 = 16$ is the major axis parameter.\\n2) The auxiliary circle has the equation $x^2 + y^2 = a^2$.\\n3) Substituting $a^2 = 16$ yields $x^2 + y^2 = 16$.\\nOption B is correct.",
+    "common_mistake": "Using the minor axis parameter (Option A) or adding parameters (Option C).",
+    "concept_slugs": [
+      "conic-ellipse-equations"
+    ]
+  },
+  {
+    "pattern_group": "conic-ellipse-equations",
+    "title": "If the length of the latus rectum of an ellipse is equal to half of its minor axis, then its eccentricity $e$ is:",
+    "difficulty": "hard",
+    "type": "pyq",
+    "source": "JEE Advanced 2021",
+    "correct_answer": "C",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\\\frac{1}{2}$",
+      "B": "$\\\\frac{\\\\sqrt{3}}{4}$",
+      "C": "$\\\\frac{\\\\sqrt{3}}{2}$",
+      "D": "$\\\\frac{1}{\\\\sqrt{2}}$"
+    },
+    "notes": "Set up the equation 2b^2/a = b and express b^2/a^2 in terms of e.",
+    "solution_text": "Let's write down the given relation:\\n1) Latus rectum $= \\\\frac{2b^2}{a}$.\\n2) Minor axis $= 2b$, so half of it is $b$.\\n3) The relation is:\\n   $\\\\frac{2b^2}{a} = b \\\\implies 2b = a \\\\implies 4b^2 = a^2$.\\n4) Substitute $b^2 = a^2(1 - e^2)$:\\n   $4a^2(1 - e^2) = a^2 \\\\implies 4(1 - e^2) = 1$.\\n5) Solve for $e$:\\n   $1 - e^2 = \\\\frac{1}{4} \\\\implies e^2 = \\\\frac{3}{4} \\\\implies e = \\\\frac{\\\\sqrt{3}}{2}$.\\nOption C is correct.",
+    "common_mistake": "Forgetting the factor of 2 in latus rectum, or arithmetic errors in squaring.",
+    "concept_slugs": [
+      "conic-ellipse-equations"
+    ]
+  },
+  {
+    "pattern_group": "conic-ellipse-equations",
+    "title": "The length of the latus rectum of the ellipse $\\\\frac{x^2}{36} + \\\\frac{y^2}{18} = 1$ is ________.",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "6",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Identify a^2 and b^2 from the equation and use the latus rectum formula 2b^2/a.",
+    "solution_text": "Let's find the latus rectum length:\\n1) $a^2 = 36 \\\\implies a = 6$.\\n2) $b^2 = 18$.\\n3) Latus rectum length is $L = \\\\frac{2b^2}{a}$.\\n4) Substitute values:\\n   $L = \\\\frac{2(18)}{6} = \\\\frac{36}{6} = 6$.\\nThe length is 6.",
+    "common_mistake": "Neglecting to divide by a, or writing b^2/a.",
+    "concept_slugs": [
+      "conic-ellipse-equations"
+    ]
+  },
+  {
+    "pattern_group": "conic-ellipse-equations",
+    "title": "The sum of the focal distances of any point on the ellipse $\\\\frac{x^2}{25} + \\\\frac{y^2}{16} = 1$ is ________.",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2022",
+    "correct_answer": "10",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "By the focal property of an ellipse, the sum of the focal distances SP + S'P of any point P is always constant and equal to the major axis length 2a.",
+    "solution_text": "Let's use the focal definition of an ellipse:\\n1) Here $a^2 = 25 \\\\implies a = 5$.\\n2) The sum of focal distances of any point $P$ is $SP + S'P = 2a$.\\n3) Substitute $a = 5$:\\n   $SP + S'P = 2(5) = 10$.\\nThe sum is 10.",
+    "common_mistake": "Calculating foci and distance separately, which is extremely time-consuming.",
+    "concept_slugs": [
+      "conic-ellipse-equations"
+    ]
+  },
+  {
+    "pattern_group": "conic-ellipse-equations",
+    "title": "If the eccentricity of the ellipse $\\\\frac{x^2}{a^2} + \\\\frac{y^2}{b^2} = 1$ is $\\\\frac{1}{2}$ and the length of its latus rectum is $6$, then the value of $a^2$ is ________.",
+    "difficulty": "hard",
+    "type": "practice",
+    "correct_answer": "16",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Set up two equations for the latus rectum and eccentricity, and solve for a^2.",
+    "solution_text": "Let's write down the equations:\\n1) Eccentricity is $e^2 = 1 - \\\\frac{b^2}{a^2} = \\\\frac{1}{4} \\\\implies \\\\frac{b^2}{a^2} = \\\\frac{3}{4} \\\\implies b^2 = \\\\frac{3a^2}{4}$.\\n2) Latus rectum length is $\\\\frac{2b^2}{a} = 6$.\\n3) Substitute $b^2 = \\\\frac{3a^2}{4}$:\\n   $\\\\frac{2}{a} \\\\left(\\\\frac{3a^2}{4}\\\\right) = 6 \\\\implies \\\\frac{3a}{2} = 6 \\\\implies 3a = 12 \\\\implies a = 4$.\\n4) Therefore, $a^2 = 16$.\\nThe value of $a^2$ is 16.",
+    "common_mistake": "Wrong substitution of b^2 or arithmetic errors in solving for a.",
+    "concept_slugs": [
+      "conic-ellipse-equations"
+    ]
+  },
+  {
+    "pattern_group": "conic-ellipse-tangents-normals",
+    "title": "The condition for the straight line $y = mx + c$ to be a tangent to the ellipse $\\\\frac{x^2}{a^2} + \\\\frac{y^2}{b^2} = 1$ is:",
+    "difficulty": "easy",
+    "type": "concept",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$c^2 = a^2 m^2 + b^2$",
+      "B": "$c^2 = a^2 m^2 - b^2$",
+      "C": "$c^2 = a^2 + b^2 m^2$",
+      "D": "$c = a m + b$"
+    },
+    "notes": "Recall the condition of tangency for ellipse in slope form.",
+    "solution_text": "By standard coordinate geometry theory:\\n1) The line $y = mx + c$ is a tangent to the ellipse $\\\\frac{x^2}{a^2} + \\\\frac{y^2}{b^2} = 1$ if and only if $c^2 = a^2 m^2 + b^2$.\\nOption A is correct.",
+    "common_mistake": "Confusing it with the condition for a hyperbola (Option B).",
+    "concept_slugs": [
+      "conic-ellipse-tangents-normals"
+    ]
+  },
+  {
+    "pattern_group": "conic-ellipse-tangents-normals",
+    "title": "The equation of the tangent to the ellipse $\\\\frac{x^2}{25} + \\\\frac{y^2}{16} = 1$ at the point $(0, 4)$ is:",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$y = 4$",
+      "B": "$x = 4$",
+      "C": "$y = 16$",
+      "D": "$3x + 4y = 25$"
+    },
+    "notes": "Use the point form of the tangent: x*x1/a^2 + y*y1/b^2 = 1.",
+    "solution_text": "Let's find the tangent equation:\\n1) Point form is $\\\\frac{x x_1}{a^2} + \\\\frac{y y_1}{b^2} = 1$.\\n2) Substitute $(x_1, y_1) = (0, 4)$ and $a^2=25, b^2=16$:\\n   $\\\\frac{x(0)}{25} + \\\\frac{y(4)}{16} = 1 \\\\implies 0 + \\\\frac{y}{4} = 1 \\\\implies y = 4$.\\nOption A is correct.",
+    "common_mistake": "Inverting axis coordinates (Option B) or writing y = 16 (Option C).",
+    "concept_slugs": [
+      "conic-ellipse-tangents-normals"
+    ]
+  },
+  {
+    "pattern_group": "conic-ellipse-tangents-normals",
+    "title": "The equations of the tangents to the ellipse $\\\\frac{x^2}{9} + \\\\frac{y^2}{4} = 1$ which are parallel to the line $2x - y + 3 = 0$ are:",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2021",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$y = 2x \\\\pm 2\\\\sqrt{10}$",
+      "B": "$y = 2x \\\\pm \\\\sqrt{10}$",
+      "C": "$y = 2x \\\\pm 40$",
+      "D": "$x + 2y \\\\pm 2\\\\sqrt{10} = 0$"
+    },
+    "notes": "Find the slope of the given line, use condition c^2 = a^2*m^2 + b^2 to solve for c, and write the slope form equation.",
+    "solution_text": "Let's find the parallel tangents:\\n1) Slope of $2x - y + 3 = 0$ is $m = 2$.\\n2) Here $a^2 = 9$ and $b^2 = 4$.\\n3) The condition of tangency is $c^2 = a^2 m^2 + b^2$.\\n4) Substitute values:\\n   $c^2 = 9(2^2) + 4 = 9(4) + 4 = 36 + 4 = 40 \\\\implies c = \\\\pm \\\\sqrt{40} = \\\\pm 2\\\\sqrt{10}$.\\n5) The equations of tangents are $y = 2x \\\\pm 2\\\\sqrt{10}$.\\nOption A is correct.",
+    "common_mistake": "Neglecting to multiply by a^2 or using a perpendicular slope (Option D).",
+    "concept_slugs": [
+      "conic-ellipse-tangents-normals"
+    ]
+  },
+  {
+    "pattern_group": "conic-ellipse-tangents-normals",
+    "title": "The equation of the normal to the ellipse $\\\\frac{x^2}{16} + \\\\frac{y^2}{9} = 1$ at the point $(4\\\\cos\\\\theta, 3\\\\sin\\\\theta)$ is:",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$3x\\\\sec\\\\theta - 4y\\\\csc\\\\theta = 7$",
+      "B": "$4x\\\\sec\\\\theta - 3y\\\\csc\\\\theta = 7$",
+      "C": "$4x\\\\cos\\\\theta - 3y\\\\sin\\\\theta = 7$",
+      "D": "$4x\\\\sec\\\\theta + 3y\\\\csc\\\\theta = 25$"
+    },
+    "notes": "Recall the parametric normal equation for an ellipse: ax sec(theta) - by csc(theta) = a^2 - b^2.",
+    "solution_text": "Let's write down the parametric normal equation:\\n1) The general form of normal at $(a\\\\cos\\\\theta, b\\\\sin\\\\theta)$ is $ax\\\\sec\\\\theta - by\\\\csc\\\\theta = a^2 - b^2$.\\n2) Here $a = 4$ and $b = 3$:\\n   $4x\\\\sec\\\\theta - 3y\\\\csc\\\\theta = 16 - 9 = 7$.\\nOption B is correct.",
+    "common_mistake": "Confusing the coefficients (Option A) or using wrong trigonometric signs (Option D).",
+    "concept_slugs": [
+      "conic-ellipse-tangents-normals"
+    ]
+  },
+  {
+    "pattern_group": "conic-ellipse-tangents-normals",
+    "title": "Tangents are drawn from the point $P(3, 4)$ to the ellipse $\\\\frac{x^2}{9} + \\\\frac{y^2}{4} = 1$. The equation of their chord of contact is:",
+    "difficulty": "hard",
+    "type": "pyq",
+    "source": "JEE Advanced 2020",
+    "correct_answer": "C",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$3x + 4y - 1 = 0$",
+      "B": "$x + 3y - 9 = 0$",
+      "C": "$x + 3y - 3 = 0$",
+      "D": "$3x + y - 3 = 0$"
+    },
+    "notes": "Use the chord of contact formula T = 0 for the ellipse.",
+    "solution_text": "Let's write the chord of contact equation:\\n1) Point is $(x_1, y_1) = (3, 4)$ and ellipse is $\\\\frac{x^2}{9} + \\\\frac{y^2}{4} = 1$.\\n2) The equation is $\\\\frac{x x_1}{a^2} + \\\\frac{y y_1}{b^2} = 1$.\\n3) Substitute the coordinates:\\n   $\\\\frac{x(3)}{9} + \\\\frac{y(4)}{4} = 1 \\\\implies \\\\frac{x}{3} + y = 1$.\\n4) Multiply by 3 to simplify:\\n   $x + 3y = 3 \\\\implies x + 3y - 3 = 0$.\\nOption C is correct.",
+    "common_mistake": "Writing $3x+4y=1$ by omitting the denominators $a^2$ and $b^2$ (Option A).",
+    "concept_slugs": [
+      "conic-ellipse-tangents-normals"
+    ]
+  },
+  {
+    "pattern_group": "conic-ellipse-tangents-normals",
+    "title": "If the straight line $y = x + c$ is a tangent to the ellipse $\\\\frac{x^2}{16} + \\\\frac{y^2}{9} = 1$ and $c > 0$, then the value of $c$ is ________.",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "5",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Identify a^2, b^2, and m, and apply the tangency condition c^2 = a^2*m^2 + b^2.",
+    "solution_text": "Let's solve for $c$:\\n1) Here $a^2 = 16, b^2 = 9$.\\n2) The line is $y = x + c \\\\implies m = 1$.\\n3) Condition is $c^2 = a^2 m^2 + b^2 = 16(1)^2 + 9 = 25$.\\n4) Since $c > 0$, we have $c = 5$.\\nThe value of $c$ is 5.",
+    "common_mistake": "Neglecting to take the square root of 25.",
+    "concept_slugs": [
+      "conic-ellipse-tangents-normals"
+    ]
+  },
+  {
+    "pattern_group": "conic-ellipse-tangents-normals",
+    "title": "If the line $y = mx + \\\\sqrt{20}$ touches the ellipse $\\\\frac{x^2}{16} + \\\\frac{y^2}{4} = 1$, then the value of $m^2$ is ________.",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2022",
+    "correct_answer": "1",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Substitute standard values into the tangency condition and solve for m^2.",
+    "solution_text": "Let's use the tangency equation:\\n1) $c = \\\\sqrt{20} \\\\implies c^2 = 20$.\\n2) $a^2 = 16$ and $b^2 = 4$.\\n3) Condition: $c^2 = a^2 m^2 + b^2 \\\\implies 20 = 16 m^2 + 4$.\\n4) Solve for $m^2$:\\n   $16 m^2 = 16 \\\\implies m^2 = 1$.\\nThe value of $m^2$ is 1.",
+    "common_mistake": "Arithmetic errors or evaluating $m = \\\\pm 1$ but reporting it instead of $m^2$.",
+    "concept_slugs": [
+      "conic-ellipse-tangents-normals"
+    ]
+  },
+  {
+    "pattern_group": "conic-ellipse-tangents-normals",
+    "title": "The product of the perpendiculars drawn from the two foci of the ellipse $\\\\frac{x^2}{25} + \\\\frac{y^2}{16} = 1$ to any tangent to the ellipse is ________.",
+    "difficulty": "hard",
+    "type": "practice",
+    "correct_answer": "16",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "By a standard geometric theorem of ellipses, the product of perpendiculars from the two foci to any tangent line is equal to b^2.",
+    "solution_text": "Let's use the focus-to-tangent product theorem:\\n1) For the ellipse $\\\\frac{x^2}{a^2} + \\\\frac{y^2}{b^2} = 1$, the product of the perpendiculars from foci $S$ and $S'$ to any tangent is $p_1 p_2 = b^2$.\\n2) Here $b^2 = 16$.\\n3) Thus, the product is exactly 16.\\nThe answer is 16.",
+    "common_mistake": "Calculating equations of tangents and distances in general variables, which is extremely tedious.",
+    "concept_slugs": [
+      "conic-ellipse-tangents-normals"
+    ]
+  },
+  {
+    "pattern_group": "conic-hyperbola-equations",
+    "title": "The eccentricity of the hyperbola $\\\\frac{x^2}{16} - \\\\frac{y^2}{9} = 1$ is:",
+    "difficulty": "easy",
+    "type": "concept",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\\\frac{5}{4}$",
+      "B": "$\\\\frac{5}{3}$",
+      "C": "$\\\\frac{25}{16}$",
+      "D": "$\\\\frac{\\\\sqrt{7}}{4}$"
+    },
+    "notes": "Use the eccentricity relation for a hyperbola: e = sqrt(1 + b^2/a^2).",
+    "solution_text": "Let's identify parameters:\\n1) $a^2 = 16$ and $b^2 = 9$.\\n2) The eccentricity is:\\n   $e = \\\\sqrt{1 + \\\\frac{b^2}{a^2}} = \\\\sqrt{1 + \\\\frac{9}{16}} = \\\\sqrt{\\\\frac{25}{16}} = \\\\frac{5}{4}$.\\nOption A is correct.",
+    "common_mistake": "Using the ellipse formula (subtraction instead of addition), yielding Option D.",
+    "concept_slugs": [
+      "conic-hyperbola-equations"
+    ]
+  },
+  {
+    "pattern_group": "conic-hyperbola-equations",
+    "title": "The equations of the asymptotes of the hyperbola $\\\\frac{x^2}{a^2} - \\\\frac{y^2}{b^2} = 1$ are given by:",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$y = \\\\pm \\\\frac{a}{b} x$",
+      "B": "$y = \\\\pm \\\\frac{b}{a} x$",
+      "C": "$y = \\\\pm \\\\frac{b^2}{a^2} x$",
+      "D": "$y = \\\\pm \\\\sqrt{a^2 + b^2} x$"
+    },
+    "notes": "Recall that the asymptotes equation corresponds to setting the constant term of standard hyperbola form to zero.",
+    "solution_text": "Let's find the asymptotes:\\n1) The asymptotes of $\\\\frac{x^2}{a^2} - \\\\frac{y^2}{b^2} = 1$ are given by $\\\\frac{x^2}{a^2} - \\\\frac{y^2}{b^2} = 0$.\\n2) Factor this expression: \\\\left(\\\\frac{x}{a} - \\\\frac{y}{b}\\\\right)\\\\left(\\\\frac{x}{a} + \\\\frac{y}{b}\\\\right) = 0$.\\n3) This yields the two lines: $y = \\\\pm \\\\frac{b}{a} x$.\\nOption B is correct.",
+    "common_mistake": "Inverting the slope coefficients (Option A).",
+    "concept_slugs": [
+      "conic-hyperbola-equations"
+    ]
+  },
+  {
+    "pattern_group": "conic-hyperbola-equations",
+    "title": "The coordinates of the foci of the hyperbola $9x^2 - 16y^2 = 144$ are:",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2021",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$(\\\\pm 5, 0)$",
+      "B": "$(0, \\\\pm 5)$",
+      "C": "$(\\\\pm 3, 0)$",
+      "D": "$(\\\\pm 4, 0)$"
+    },
+    "notes": "Divide by 144 to standardise the equation, find a, b, and e, and locate foci at (+/- ae, 0).",
+    "solution_text": "Let's standardise the equation:\\n1) Divide by 144: $\\\\frac{x^2}{16} - \\\\frac{y^2}{9} = 1$.\\n2) $a^2 = 16 \\\\implies a = 4$; $b^2 = 9 \\\\implies b = 3$.\\n3) Calculate eccentricity: $e = \\\\sqrt{1 + 9/16} = 5/4$.\\n4) Foci coordinates are $(\\\\pm ae, 0) = \\\\left(\\\\pm 4\\\\left(\\\\frac{5}{4}\\\\right), 0\\\\right) = (\\\\pm 5, 0)$.\\nOption A is correct.",
+    "common_mistake": "Placing the foci along the y-axis (Option B).",
+    "concept_slugs": [
+      "conic-hyperbola-equations"
+    ]
+  },
+  {
+    "pattern_group": "conic-hyperbola-equations",
+    "title": "The eccentricity of a rectangular hyperbola is always equal to:",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$2$",
+      "B": "$\\\\sqrt{2}$",
+      "C": "$\\\\frac{\\\\sqrt{3}}{2}$",
+      "D": "$\\\\sqrt{3}$"
+    },
+    "notes": "A hyperbola is rectangular if a = b.",
+    "solution_text": "Let's apply the condition $a = b$ to the eccentricity formula:\\n1) For a rectangular hyperbola, $b^2 = a^2$.\\n2) Eccentricity is $e = \\\\sqrt{1 + \\\\frac{b^2}{a^2}} = \\\\sqrt{1 + 1} = \\\\sqrt{2}$.\\nOption B is correct.",
+    "common_mistake": "Stating 2 (Option A) by neglecting to take the square root of 2.",
+    "concept_slugs": [
+      "conic-hyperbola-equations"
+    ]
+  },
+  {
+    "pattern_group": "conic-hyperbola-equations",
+    "title": "If the eccentricity of a hyperbola is $e$ and the eccentricity of its conjugate hyperbola is $e'$, then the relation between them is:",
+    "difficulty": "hard",
+    "type": "pyq",
+    "source": "JEE Advanced 2021",
+    "correct_answer": "C",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$e^2 + e'^2 = 1$",
+      "B": "$e^2 + e'^2 = e^2 e'^2$",
+      "C": "$\\\\frac{1}{e^2} + \\\\frac{1}{e'^2} = 1$",
+      "D": "$e e' = \\\\sqrt{2}$"
+    },
+    "notes": "Write the expressions for e^2 and e'^2 in terms of a and b and sum their reciprocals.",
+    "solution_text": "Let's express the eccentricities in terms of $a$ and $b$:\\n1) For the hyperbola: $e^2 = 1 + \\\\frac{b^2}{a^2} = \\\\frac{a^2 + b^2}{a^2} \\\\implies \\\\frac{1}{e^2} = \\\\frac{a^2}{a^2 + b^2}$.\\n2) For the conjugate hyperbola: $e'^2 = 1 + \\\\frac{a^2}{b^2} = \\\\frac{b^2 + a^2}{b^2} \\\\implies \\\\frac{1}{e'^2} = \\\\frac{b^2}{a^2 + b^2}$.\\n3) Add the two reciprocals:\\n   $\\\\frac{1}{e^2} + \\\\frac{1}{e'^2} = \\\\frac{a^2 + b^2}{a^2 + b^2} = 1$.\\nOption C is correct. (Note: Option B is algebraically equivalent since $e^2+e'^2 = e^2e'^2 \\\\implies 1/e'^2 + 1/e^2 = 1$).",
+    "common_mistake": "Assuming standard circular functions relation (Option A).",
+    "concept_slugs": [
+      "conic-hyperbola-equations"
+    ]
+  },
+  {
+    "pattern_group": "conic-hyperbola-equations",
+    "title": "The length of the latus rectum of the hyperbola $\\\\frac{x^2}{16} - \\\\frac{y^2}{8} = 1$ is ________.",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "4",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Identify a^2 and b^2 from the equation and apply the formula 2b^2/a.",
+    "solution_text": "Let's find the parameters:\\n1) $a^2 = 16 \\\\implies a = 4$.\\n2) $b^2 = 8$.\\n3) Latus rectum length is $\\\\frac{2b^2}{a} = \\\\frac{2(8)}{4} = \\\\frac{16}{4} = 4$.\\nThe length of the latus rectum is 4.",
+    "common_mistake": "Using a wrong denominator, or neglecting the factor of 2.",
+    "concept_slugs": [
+      "conic-hyperbola-equations"
+    ]
+  },
+  {
+    "pattern_group": "conic-hyperbola-equations",
+    "title": "If the eccentricity of the hyperbola $\\\\frac{x^2}{a^2} - \\\\frac{y^2}{b^2} = 1$ is $\\\\sqrt{3}$, and the eccentricity of its conjugate hyperbola is $e'$, then the value of the expression $\\\\frac{6}{e'^2}$ is ________.",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2022",
+    "correct_answer": "4",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Use the conjugate eccentricity identity: 1/e^2 + 1/e'^2 = 1.",
+    "solution_text": "Let's use the reciprocal identity:\\n1) Given $e = \\\\sqrt{3} \\\\implies e^2 = 3$.\\n2) Identity: $\\\\frac{1}{e^2} + \\\\frac{1}{e'^2} = 1$.\\n3) Substitute: $\\\\frac{1}{3} + \\\\frac{1}{e'^2} = 1 \\\\implies \\\\frac{1}{e'^2} = 1 - \\\\frac{1}{3} = \\\\frac{2}{3}$.\\n4) We need the value of $\\\\frac{6}{e'^2}$:\\n   $\\\\frac{6}{e'^2} = 6 \\\\times \\\\frac{2}{3} = 4$.\\nThe value is 4.",
+    "common_mistake": "Mistakes in simple fraction subtraction, leading to $e'^2$ instead of $1/e'^2$.",
+    "concept_slugs": [
+      "conic-hyperbola-equations"
+    ]
+  },
+  {
+    "pattern_group": "conic-hyperbola-equations",
+    "title": "The distance between the directrices of the hyperbola $\\\\frac{x^2}{16} - \\\\frac{y^2}{9} = 1$ is $d$. The value of $25d$ is ________.",
+    "difficulty": "hard",
+    "type": "practice",
+    "correct_answer": "160",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Find the eccentricity e first, and then calculate directrix distance = 2a/e.",
+    "solution_text": "Let's perform the calculations:\\n1) Here $a^2 = 16 \\\\implies a = 4$ and $b^2 = 9 \\\\implies b = 3$.\\n2) Eccentricity: $e = \\\\sqrt{1 + 9/16} = 5/4$.\\n3) The distance between the directrices is $d = \\\\frac{2a}{e}$.\\n4) Substitute values:\\n   $d = \\\\frac{2(4)}{5/4} = \\\\frac{8}{5/4} = \\\\frac{32}{5} = 6.4$.\\n5) We need $25d$:\\n   $25d = 25 \\\\times 6.4 = 160$.\\nThe answer is 160.",
+    "common_mistake": "Neglecting to divide by e or using directrices distance of ellipse by mistake.",
+    "concept_slugs": [
+      "conic-hyperbola-equations"
+    ]
+  },
+  {
+    "pattern_group": "conic-hyperbola-tangents-normals",
+    "title": "The condition for the straight line $y = mx + c$ to be a tangent to the hyperbola $\\\\frac{x^2}{a^2} - \\\\frac{y^2}{b^2} = 1$ is:",
+    "difficulty": "easy",
+    "type": "concept",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$c^2 = a^2 m^2 - b^2$",
+      "B": "$c^2 = a^2 m^2 + b^2$",
+      "C": "$c^2 = b^2 - a^2 m^2$",
+      "D": "$c = am - b$"
+    },
+    "notes": "Recall the condition of tangency for hyperbola in slope form.",
+    "solution_text": "By standard coordinate geometry theory:\\n1) The line $y = mx + c$ is a tangent to the hyperbola if and only if $c^2 = a^2 m^2 - b^2$.\\nOption A is correct.",
+    "common_mistake": "Confusing it with the condition for an ellipse (Option B).",
+    "concept_slugs": [
+      "conic-hyperbola-tangents-normals"
+    ]
+  },
+  {
+    "pattern_group": "conic-hyperbola-tangents-normals",
+    "title": "The equation of the tangent to the hyperbola $\\\\frac{x^2}{9} - \\\\frac{y^2}{4} = 1$ at the parametric point $(3\\\\sec\\\\theta, 2\\\\tan\\\\theta)$ is:",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$x\\\\sec\\\\theta + y\\\\tan\\\\theta - 3 = 0$",
+      "B": "$\\\\frac{x\\\\sec\\\\theta}{3} - \\\\frac{y\\\\tan\\\\theta}{2} - 1 = 0$",
+      "C": "$\\\\frac{x\\\\sec\\\\theta}{9} - \\\\frac{y\\\\tan\\\\theta}{4} - 1 = 0$",
+      "D": "$3x\\\\sec\\\\theta - 2y\\\\tan\\\\theta - 1 = 0$"
+    },
+    "notes": "Apply the point form equation of tangent: x*x1/a^2 - y*y1/b^2 = 1.",
+    "solution_text": "Let's write down the tangent equation:\\n1) Point form is $\\\\frac{x x_1}{a^2} - \\\\frac{y y_1}{b^2} = 1$.\\n2) Substitute $(x_1, y_1) = (3\\\\sec\\\\theta, 2\\\\tan\\\\theta)$ and $a^2=9, b^2=4$:\\n   $\\\\frac{x(3\\\\sec\\\\theta)}{9} - \\\\frac{y(2\\\\tan\\\\theta)}{4} = 1 \\\\implies \\\\frac{x\\\\sec\\\\theta}{3} - \\\\frac{y\\\\tan\\\\theta}{2} = 1$.\\nOption B is correct.",
+    "common_mistake": "Omitting the division by a and b (Option D) or dividing by a^2 and b^2 directly (Option C).",
+    "concept_slugs": [
+      "conic-hyperbola-tangents-normals"
+    ]
+  },
+  {
+    "pattern_group": "conic-hyperbola-tangents-normals",
+    "title": "The equations of the tangents to the hyperbola $\\\\frac{x^2}{9} - \\\\frac{y^2}{4} = 1$ which are perpendicular to the line $x - y + 5 = 0$ are:",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2021",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$x + y \\\\pm \\\\sqrt{5} = 0$",
+      "B": "$x + y \\\\pm 5 = 0$",
+      "C": "$x - y \\\\pm \\\\sqrt{5} = 0$",
+      "D": "$x + y \\\\pm \\\\sqrt{13} = 0$"
+    },
+    "notes": "Find the perpendicular slope first, apply tangency condition c^2 = a^2*m^2 - b^2, and write equations.",
+    "solution_text": "Let's find the perpendicular tangents:\\n1) Slope of $x - y + 5 = 0$ is $m_{line} = 1$.\\n2) Perpendicular slope is $m = -1$.\\n3) Here $a^2 = 9$ and $b^2 = 4$.\\n4) Apply tangency condition: $c^2 = a^2 m^2 - b^2$.\\n   $c^2 = 9(-1)^2 - 4 = 9 - 4 = 5 \\\\implies c = \\\\pm \\\\sqrt{5}$.\\n5) Tangents equations: $y = -x \\\\pm \\\\sqrt{5} \\\\implies x + y \\\\pm \\\\sqrt{5} = 0$.\\nOption A is correct.",
+    "common_mistake": "Using the same slope as the line (Option C) or using the ellipse condition (Option D).",
+    "concept_slugs": [
+      "conic-hyperbola-tangents-normals"
+    ]
+  },
+  {
+    "pattern_group": "conic-hyperbola-tangents-normals",
+    "title": "The equation of the normal to the hyperbola $\\\\frac{x^2}{16} - \\\\frac{y^2}{9} = 1$ at the point $P(x_1, y_1)$ is represented as:",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "B",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\\\frac{16x}{x_1} - \\\\frac{9y}{y_1} = 25$",
+      "B": "$\\\\frac{16x}{x_1} + \\\\frac{9y}{y_1} = 25$",
+      "C": "$\\\\frac{9x}{x_1} + \\\\frac{16y}{y_1} = 25$",
+      "D": "$x_1 x + y_1 y = 25$"
+    },
+    "notes": "Recall the point form normal equation of a hyperbola: a^2*x/x1 + b^2*y/y1 = a^2 + b^2.",
+    "solution_text": "By standard coordinate geometry theory:\\n1) The normal at $(x_1, y_1)$ on $\\\\frac{x^2}{a^2} - \\\\frac{y^2}{b^2} = 1$ is $\\\\frac{a^2 x}{x_1} + \\\\frac{b^2 y}{y_1} = a^2 + b^2$.\\n2) Substituting $a^2 = 16$ and $b^2 = 9$ yields:\\n   $\\\\frac{16x}{x_1} + \\\\frac{9y}{y_1} = 16 + 9 = 25$.\\nOption B is correct.",
+    "common_mistake": "Using negative sign (Option A) or wrong coefficients (Option C).",
+    "concept_slugs": [
+      "conic-hyperbola-tangents-normals"
+    ]
+  },
+  {
+    "pattern_group": "conic-hyperbola-tangents-normals",
+    "title": "If the straight line $lx + my + n = 0$ is a normal to the hyperbola $\\\\frac{x^2}{a^2} - \\\\frac{y^2}{b^2} = 1$, then the relation between coefficients is:",
+    "difficulty": "hard",
+    "type": "pyq",
+    "source": "JEE Advanced 2020",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\\\frac{a^2}{l^2} - \\\\frac{b^2}{m^2} = \\\\frac{(a^2+b^2)^2}{n^2}$",
+      "B": "$\\\\frac{a^2}{l^2} + \\\\frac{b^2}{m^2} = \\\\frac{(a^2+b^2)^2}{n^2}$",
+      "C": "$\\\\frac{a^2}{l^2} - \\\\frac{b^2}{m^2} = 1$",
+      "D": "$a^2 l^2 - b^2 m^2 = n^2$"
+    },
+    "notes": "Compare the line equation with the parametric normal form ax/sec(theta) + by/tan(theta) = a^2 + b^2.",
+    "solution_text": "Let's compare the normal equations:\\n1) Parametric normal: $\\\\frac{a^2 x}{x_1} + \\\\frac{b^2 y}{y_1} = a^2 + b^2$ or in parametric form $ax\\\\cos\\\\theta + by\\\\cot\\\\theta = a^2 + b^2$? No, the parametric normal is $\\\\frac{ax}{\\\\sec\\\\theta} + \\\\frac{by}{\\\\tan\\\\theta} = a^2 + b^2$.\\n2) Compare with $lx + my = -n$:\\n   $\\\\frac{a}{\\\\sec\\\\theta \\\\cdot l}} = \\\\frac{b}{\\\\tan\\\\theta \\\\cdot m}} = \\\\frac{a^2 + b^2}{-n}$.\\n3) Isolate trigonometric terms: \\\\sec\\\\theta = \\\\frac{-na}{l(a^2+b^2)}$ and \\\\tan\\\\theta = \\\\frac{-nb}{m(a^2+b^2)}$.\\n4) Apply identity $\\\\sec^2\\\\theta - \\\\tan^2\\\\theta = 1$:\\n   \\\\frac{n^2 a^2}{l^2(a^2+b^2)^2} - \\\\frac{n^2 b^2}{m^2(a^2+b^2)^2} = 1 \\\\implies \\\\frac{a^2}{l^2} - \\\\frac{b^2}{m^2} = \\\\frac{(a^2+b^2)^2}{n^2}$.\\nOption A is correct.",
+    "common_mistake": "Using addition instead of subtraction (Option B).",
+    "concept_slugs": [
+      "conic-hyperbola-tangents-normals"
+    ]
+  },
+  {
+    "pattern_group": "conic-hyperbola-tangents-normals",
+    "title": "If the straight line $y = 2x + c$ is a tangent to the hyperbola $\\\\frac{x^2}{9} - \\\\frac{y^2}{20} = 1$ and $c > 0$, then the value of the constant $c$ is ________.",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "4",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Identify a^2, b^2, and m, and apply the condition c^2 = a^2*m^2 - b^2.",
+    "solution_text": "Let's solve for $c$:\\n1) Here $a^2 = 9$ and $b^2 = 20$.\\n2) The slope of the line is $m = 2$.\\n3) Tangency condition: $c^2 = a^2 m^2 - b^2 = 9(2^2) - 20 = 36 - 20 = 16$.\\n4) Since $c > 0$, we have $c = 4$.\\nThe value of $c$ is 4.",
+    "common_mistake": "Adding instead of subtracting b^2, yielding $c^2 = 56$.",
+    "concept_slugs": [
+      "conic-hyperbola-tangents-normals"
+    ]
+  },
+  {
+    "pattern_group": "conic-hyperbola-tangents-normals",
+    "title": "If the line $y = mx + \\\\sqrt{5}$ touches the hyperbola $\\\\frac{x^2}{9} - \\\\frac{y^2}{4} = 1$, then the value of the expression $3m^2$ is ________.",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2023",
+    "correct_answer": "3",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Substitute values into the condition of tangency and solve for m^2.",
+    "solution_text": "Let's apply the condition of tangency:\\n1) Here $c = \\\\sqrt{5} \\\\implies c^2 = 5$.\\n2) $a^2 = 9$ and $b^2 = 4$.\\n3) Condition: $c^2 = a^2 m^2 - b^2 \\\\implies 5 = 9 m^2 - 4$.\\n4) Solve for $m^2$:\\n   $9 m^2 = 9 \\\\implies m^2 = 1$.\\n5) Calculate the target expression $3m^2$:\\n   $3m^2 = 3(1) = 3$.\\nThe answer is 3.",
+    "common_mistake": "Neglecting to multiply by 3 or wrong sign configuration.",
+    "concept_slugs": [
+      "conic-hyperbola-tangents-normals"
+    ]
+  },
+  {
+    "pattern_group": "conic-hyperbola-tangents-normals",
+    "title": "The product of the perpendiculars drawn from any point on the hyperbola $\\\\frac{x^2}{16} - \\\\frac{y^2}{9} = 1$ to its two asymptotes is $p$. The value of $25p$ is ________.",
+    "difficulty": "hard",
+    "type": "practice",
+    "correct_answer": "144",
+    "is_numerical": true,
+    "question_format": "numerical",
+    "notes": "Recall the standard formula for the product of perpendiculars from any point on a hyperbola to its asymptotes: a^2*b^2 / (a^2 + b^2).",
+    "solution_text": "Let's use the asymptotes product formula:\\n1) For the hyperbola $\\\\frac{x^2}{a^2} - \\\\frac{y^2}{b^2} = 1$, the product of perpendiculars from any point $P(x,y)$ on it to the asymptotes is constant and given by $p = \\\\frac{a^2 b^2}{a^2 + b^2}$.\\n2) Here $a^2 = 16$ and $b^2 = 9$.\\n3) Substitute values:\\n   $p = \\\\frac{16 \\\\times 9}{16 + 9} = \\\\frac{144}{25}$.\\n4) We need $25p$:\\n   $25p = 25 \\\\times \\\\frac{144}{25} = 144$.\\nThe answer is 144.",
+    "common_mistake": "Evaluating distance from one asymptote only, or algebra errors in simplifying the denominator.",
+    "concept_slugs": [
+      "conic-hyperbola-tangents-normals"
+    ]
+  }
+]
