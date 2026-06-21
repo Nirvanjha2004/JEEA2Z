@@ -1,0 +1,980 @@
+[
+  {
+    "pattern_group": "amines-preparation",
+    "title": "Gabriel phthalimide synthesis is used exclusively for the preparation of:",
+    "difficulty": "easy",
+    "type": "pyq",
+    "source": "JEE Main 2021",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Primary aliphatic amines",
+      "B": "Primary aromatic amines",
+      "C": "Secondary aliphatic amines",
+      "D": "Tertiary amines"
+    },
+    "notes": "Gabriel phthalimide synthesis involves nucleophilic substitution ($\\text{S}_N2$) of alkyl halides by the phthalimide anion.",
+    "solution_text": "Gabriel phthalimide synthesis is used to prepare primary aliphatic amines. The phthalimide anion is a strong nucleophile and undergoes an $\\text{S}_N2$ reaction with primary alkyl halides to form N-alkylphthalimide, which is then hydrolyzed (or treated with hydrazine) to yield the primary aliphatic amine. It cannot be used to prepare primary aromatic amines (like aniline) because aryl halides do not undergo nucleophilic substitution ($\\text{S}_N2$) with the phthalimide anion due to partial double-bond character of the carbon-halogen bond. Option A is correct.",
+    "common_mistake": "Selecting primary aromatic amines (Option B), forgetting that aryl halides are inert to nucleophilic displacement under Gabriel synthesis conditions.",
+    "concept_slugs": [
+      "amines-preparation"
+    ]
+  },
+  {
+    "pattern_group": "amines-preparation",
+    "title": "In the Hofmann bromamide degradation reaction, the rate-determining step is the intramolecular migration of the alkyl/aryl group. This group moves to which atom in the intermediate species?",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2022",
+    "correct_answer": "C",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Carbon",
+      "B": "Oxygen",
+      "C": "Nitrogen",
+      "D": "Bromine"
+    },
+    "notes": "Trace the rearrangement mechanism of N-bromamide in the presence of base.",
+    "solution_text": "Hofmann bromamide degradation mechanism:\n1) Amide $\\text{R-CONH}_2$ reacts with $\\text{Br}_2$ and $\\text{KOH}$ to form N-bromamide, $\\text{R-CONHBr}$, which is deprotonated by base to form an anion: $\\text{R-CON(Br)}^-$.\n2) The rate-determining step is the migration of the alkyl/aryl group ($\\text{R}$) with its bonding electron pair from the carbonyl carbon to the adjacent electron-deficient nitrogen atom, with simultaneous loss of the bromide ion ($$\\text{Br}^-$).\n3) This forms an alkyl/aryl isocyanate intermediate: $\\text{R-N}=\\text{C}=\\text{O}$.\nTherefore, the group migrates to Nitrogen. Option C is correct.",
+    "common_mistake": "Selecting Carbon (Option A) or assuming that the rearrangement yields an amine directly without the intermediate isocyanate rearrangement.",
+    "concept_slugs": [
+      "amines-preparation"
+    ]
+  },
+  {
+    "pattern_group": "amines-preparation",
+    "title": "Reduction of acetonitrile ($\\text{CH}_3\\text{CN}$) with $\\text{LiAlH}_4$ yields:",
+    "difficulty": "easy",
+    "type": "concept",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Ethylamine",
+      "B": "Methylamine",
+      "C": "Dimethylamine",
+      "D": "Acetamide"
+    },
+    "notes": "Acetonitrile is a 2-carbon nitrile. Reduction converts the nitrile group ($-\\text{C}\\equiv\\text{N}$) to an amine group ($-\\text{CH}_2\\text{NH}_2$).",
+    "solution_text": "Acetonitrile, $\\text{CH}_3\\text{C}\\equiv\\text{N}$, has 2 carbon atoms. Treating it with a strong reducing agent like lithium aluminium hydride ($\\text{LiAlH}_4$) reduces the triple bond completely: $\\text{CH}_3\\text{CH}_2\\text{NH}_2$ (ethylamine). The carbon count is conserved in the carbon chain. Option A is correct.",
+    "common_mistake": "Selecting methylamine (Option B) by assuming the nitrile carbon is lost, or choosing acetamide (Option D) which is an intermediate amide, not the fully reduced amine.",
+    "concept_slugs": [
+      "amines-preparation"
+    ]
+  },
+  {
+    "pattern_group": "amines-preparation",
+    "title": "Ammonolysis of alkyl halides using excess ammonia yields primary amine as the major product. However, if the alkyl halide is in excess, the reaction yields predominantly which of the following?",
+    "difficulty": "medium",
+    "type": "concept",
+    "correct_answer": "D",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Primary amine",
+      "B": "Secondary amine",
+      "C": "Tertiary amine",
+      "D": "Quaternary ammonium salt"
+    },
+    "notes": "Ammonolysis is a nucleophilic substitution reaction. The newly formed amines are themselves nucleophiles and can react further.",
+    "solution_text": "Ammonolysis of alkyl halides ($\\text{R-X}$) by ammonia ($\\text{NH}_3$) proceeds in stages:\n$\\text{NH}_3 \\xrightarrow{\\text{RX}} \\text{R-NH}_2 \\xrightarrow{\\text{RX}} \\text{R}_2\\text{NH} \\xrightarrow{\\text{RX}} \\text{R}_3\\text{N} \\xrightarrow{\\text{RX}} \\text{R}_4\\text{N}^+ \\text{X}^-$\nIf ammonia is in excess, it dominates the competition, yielding primary amine as the major product. If the alkyl halide is in excess, the alkylation goes all the way to completion, yielding the quaternary ammonium salt ($\\text{R}_4\\text{N}^+\\text{X}^-$) as the major product. Option D is correct.",
+    "common_mistake": "Selecting primary amine (Option A) due to carbon-nitrogen bonding templates, forgetting that alkyl halide in excess keeps alkylating the nitrogen.",
+    "concept_slugs": [
+      "amines-preparation"
+    ]
+  },
+  {
+    "pattern_group": "amines-preparation",
+    "title": "Which of the following reagent systems is most commonly used in the industry/laboratory for the reduction of nitrobenzene to aniline due to the eco-friendly nature of its by-products?",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Scrap iron ($\\text{Fe}$) and dilute hydrochloric acid ($\\text{HCl}$)",
+      "B": "Lithium aluminium hydride ($\\text{LiAlH}_4$) in dry ether",
+      "C": "Sodium metal in liquid ammonia (Birch reduction)",
+      "D": "Sodium borohydride ($\\text{NaBH}_4$) in ethanol"
+    },
+    "notes": "Industrial processes optimize for cost and waste management. Think about the recovery/hydrolysis of metal salts.",
+    "solution_text": "Reduction of nitrobenzene to aniline can be achieved by several metal-acid combinations, but industrially, scrap iron ($\\text{Fe}$) and dilute $\\text{HCl}$ is preferred. This is because the $\\text{FeCl}_2$ formed as a byproduct is hydrolyzed by water during the reaction to release hydrochloric acid. Thus, only a very small amount of initiator $\\text{HCl}$ is required, minimizing acid waste and making the process cheap and environmentally friendly. Option A is correct.",
+    "common_mistake": "Selecting $\\text{LiAlH}_4$ (Option B), which is expensive and dangerous for large-scale industrial runs, and reduces nitrobenzene to azobenzene instead of aniline.",
+    "concept_slugs": [
+      "amines-preparation"
+    ]
+  },
+  {
+    "pattern_group": "amines-preparation",
+    "title": "Reaction of benzoic acid with hydrazoic acid ($\\text{HN}_3$) in the presence of concentrated $\\text{H}_2\\text{SO}_4$ yields aniline. This reaction is known as the:",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Schmidt reaction",
+      "B": "Curtius rearrangement",
+      "C": "Lossen rearrangement",
+      "D": "Hofmann rearrangement"
+    },
+    "notes": "Identify the reaction that converts carboxylic acids directly to primary amines using hydrazoic acid.",
+    "solution_text": "The Schmidt reaction is the reaction of carboxylic acids (like benzoic acid) with hydrazoic acid ($\\text{HN}_3$) in the presence of concentrated sulfuric acid. It proceeds via acyl azide formation, migration of the phenyl group to nitrogen with loss of $\\text{N}_2$, and hydrolysis of the resulting isocyanate to yield aniline. Option A is correct.",
+    "common_mistake": "Confusing it with the Curtius rearrangement (Option B), which starts with pre-formed acyl azides, not carboxylic acids and hydrazoic acid directly.",
+    "concept_slugs": [
+      "amines-preparation"
+    ]
+  },
+  {
+    "pattern_group": "amines-preparation",
+    "title": "Thermal decomposition of acyl azides ($\\text{R-CON}_3$) to form isocyanates which hydrolyze to primary amines is called the:",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Curtius rearrangement",
+      "B": "Lossen rearrangement",
+      "C": "Schmidt reaction",
+      "D": "Gabriel synthesis"
+    },
+    "notes": "Identify the rearrangement that specifically involves the thermal cleavage of acyl azides.",
+    "solution_text": "The Curtius rearrangement is the thermal or photochemical decomposition of acyl azides ($\\text{R-CON}_3$) into isocyanates ($\\text{R-N}=\\text{C}=\\text{O}$), with loss of nitrogen gas ($\\text{N}_2$). Hydrolysis of the resulting isocyanate yields a primary amine. Option A is correct.",
+    "common_mistake": "Calling it the Lossen rearrangement (Option B), which involves hydroxamic acid derivatives, not azides.",
+    "concept_slugs": [
+      "amines-preparation"
+    ]
+  },
+  {
+    "pattern_group": "amines-preparation",
+    "title": "In the Hofmann bromamide degradation of propanamide ($\\text{CH}_3\\text{CH}_2\\text{CONH}_2$), the amine product formed contains how many carbon atoms?",
+    "difficulty": "easy",
+    "type": "advanced",
+    "correct_answer": "2",
+    "is_numerical": true,
+    "notes": "The carbon of the carbonyl group of the amide is eliminated as carbonate.",
+    "solution_text": "Hofmann bromamide degradation converts a primary amide ($\\text{R-CONH}_2$) into a primary amine containing one less carbon atom ($\\text{R-NH}_2$). The carbonyl carbon of the amide group is lost as carbonate ion ($$\\text{CO}_3^{2-}$).\nFor propanamide ($\\text{CH}_3\\text{CH}_2\\text{CONH}_2$, 3 carbons), the product is ethylamine ($\\text{CH}_3\\text{CH}_2\\text{NH}_2$), which contains exactly 2 carbon atoms.",
+    "common_mistake": "Writing 3, assuming that the carbon count is conserved in the carbon skeleton of the amine product.",
+    "concept_slugs": [
+      "amines-preparation"
+    ]
+  },
+  {
+    "pattern_group": "amines-basicity",
+    "title": "The correct decreasing order of basic strength of methyl-substituted amines and ammonia in aqueous solution is:",
+    "difficulty": "easy",
+    "type": "pyq",
+    "source": "JEE Main 2021",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$(\\text{CH}_3)_2\\text{NH} > \\text{CH}_3\\text{NH}_2 > (\\text{CH}_3)_3\\text{N} > \\text{NH}_3$",
+      "B": "$(\\text{CH}_3)_2\\text{NH} > (\\text{CH}_3)_3\\text{N} > \\text{CH}_3\\text{NH}_2 > \\text{NH}_3$",
+      "C": "$(\\text{CH}_3)_3\\text{N} > (\\text{CH}_3)_2\\text{NH} > \\text{CH}_3\\text{NH}_2 > \\text{NH}_3$",
+      "D": "$(\\text{CH}_3)_2\\text{NH} > \\text{CH}_3\\text{NH}_2 > \\text{NH}_3 > (\\text{CH}_3)_3\\text{N}$"
+    },
+    "notes": "For methyl-substituted amines in water, the combined effects of induction, steric hindrance, and solvation yield the order 2° > 1° > 3° > Ammonia.",
+    "solution_text": "In aqueous solution, three factors influence basicity:\n1) Inductive effect ($+I$): electron density on nitrogen increases with alkyl groups: $3^\\circ > 2^\\circ > 1^\\circ$.\n2) Solvation effect: smaller ammonium ions form more hydrogen bonds with water, stabilizing the conjugate acid: $1^\\circ > 2^\\circ > 3^\\circ$.\n3) Steric hindrance: bulky alkyl groups block proton attack: $1^\\circ > 2^\\circ > 3^\\circ$.\nFor methyl groups, the balance of these effects results in: Secondary > Primary > Tertiary > Ammonia: $(\\text{CH}_3)_2\\text{NH} > \\text{CH}_3\\text{NH}_2 > (\\text{CH}_3)_3\\text{N} > \\text{NH}_3$. Option A is correct.",
+    "common_mistake": "Applying the gas-phase basicity order ($3^circ > 2^circ > 1^circ$), which ignores solvation and steric hindrance.",
+    "concept_slugs": [
+      "amines-basicity"
+    ]
+  },
+  {
+    "pattern_group": "amines-basicity",
+    "title": "The correct decreasing order of basic strength of ethyl-substituted amines and ammonia in aqueous solution is:",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2022",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$(\\text{C}_2\\text{H}_5)_2\\text{NH} > (\\text{C}_2\\text{H}_5)_3\\text{N} > \\text{C}_2\\text{H}_5\\text{NH}_2 > \\text{NH}_3$",
+      "B": "$(\\text{C}_2\\text{H}_5)_2\\text{NH} > \\text{C}_2\\text{H}_5\\text{NH}_2 > (\\text{C}_2\\text{H}_5)_3\\text{N} > \\text{NH}_3$",
+      "C": "$(\\text{C}_2\\text{H}_5)_3\\text{N} > (\\text{C}_2\\text{H}_5)_2\\text{NH} > \\text{C}_2\\text{H}_5\\text{NH}_2 > \\text{NH}_3$",
+      "D": "$(\\text{C}_2\\text{H}_5)_2\\text{NH} > \\text{C}_2\\text{H}_5\\text{NH}_2 > \\text{NH}_3 > (\\text{C}_2\\text{H}_5)_3\\text{N}$"
+    },
+    "notes": "For ethyl-substituted amines in water, the combined effects of induction, steric hindrance, and solvation yield the order 2° > 3° > 1° > Ammonia.",
+    "solution_text": "For ethyl-substituted amines in water, the bulkier ethyl group increases the $+I$ effect relative to methyl. This shifts the balance so that the tertiary amine is more basic than the primary amine, though the secondary amine remains the most basic overall. The order is: Secondary > Tertiary > Primary > Ammonia: $(\\text{C}_2\\text{H}_5)_2\\text{NH} > (\\text{C}_2\\text{H}_5)_3\\text{N} > \\text{C}_2\\text{H}_5\\text{NH}_2 > \\text{NH}_3$. Option A is correct.",
+    "common_mistake": "Confusing the ethyl order (213) with the methyl order (213 is methyl? No, methyl is 213, ethyl is 231).",
+    "concept_slugs": [
+      "amines-basicity"
+    ]
+  },
+  {
+    "pattern_group": "amines-basicity",
+    "title": "Aniline is significantly less basic than cyclohexylamine because:",
+    "difficulty": "easy",
+    "type": "concept",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "The nitrogen lone pair in aniline is delocalized into the benzene ring by resonance",
+      "B": "Cyclohexylamine has angle strain that increases its basicity",
+      "C": "Aniline forms a more stable conjugate acid than cyclohexylamine",
+      "D": "Cyclohexylamine is planar, allowing easier proton access"
+    },
+    "notes": "Compare the localization of the nitrogen lone pair in cyclohexylamine ($sp^3$ carbon ring) and aniline (aromatic ring).",
+    "solution_text": "In aniline ($\\text{C}_6\\text{H}_5\\text{NH}_2$), the lone pair of electrons on the nitrogen atom is conjugated with the aromatic pi-system of the benzene ring. Delocalization (5 resonance contributors) makes the lone pair less available for donation to a proton. In cyclohexylamine ($\\text{C}_6\\text{H}_{11}\\text{NH}_2$), the nitrogen is attached to a saturated $sp^3$ cyclohexane ring; the lone pair is localized on the nitrogen, making it highly available for protonation. Thus, cyclohexylamine is much more basic. Option A is correct.",
+    "common_mistake": "Thinking aniline is more basic because it is aromatic (Option C), whereas aromatic resonance deactivates the amine lone pair.",
+    "concept_slugs": [
+      "amines-basicity"
+    ]
+  },
+  {
+    "pattern_group": "amines-basicity",
+    "title": "Which of the following para-substituted anilines is the most basic?",
+    "difficulty": "medium",
+    "type": "concept",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "p-Methoxyaniline (p-anisidine)",
+      "B": "p-Nitroaniline",
+      "C": "p-Chloroaniline",
+      "D": "Aniline"
+    },
+    "notes": "Electron-donating substituents at the para position increase basicity by increasing electron density on nitrogen, whereas electron-withdrawing groups decrease it.",
+    "solution_text": "Substituent effects on aniline basicity:\n- p-Methoxyaniline (A): The $-\\text{OCH}_3$ group is electron-donating via resonance ($+M$), which increases electron density on the nitrogen lone pair, making it the most basic.\n- p-Nitroaniline (B): $-\\text{NO}_2$ is a strong electron-withdrawing group via resonance ($-M$), which severely reduces basicity.\n- p-Chloroaniline (C): $-\\text{Cl}$ is electron-withdrawing via inductive effect ($-I$), reducing basicity relative to aniline.\nThus, p-methoxyaniline is the most basic. Option A is correct.",
+    "common_mistake": "Selecting p-chloroaniline (Option C) because chlorine has lone pairs, forgetting that its strong $-I$ effect dominates and deactivates the aniline nitrogen.",
+    "concept_slugs": [
+      "amines-basicity"
+    ]
+  },
+  {
+    "pattern_group": "amines-basicity",
+    "title": "In the gas phase, the basicity of methyl-substituted amines follows which of the following orders?",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Tertiary > Secondary > Primary > Ammonia",
+      "B": "Secondary > Primary > Tertiary > Ammonia",
+      "C": "Secondary > Tertiary > Primary > Ammonia",
+      "D": "Ammonia > Primary > Secondary > Tertiary"
+    },
+    "notes": "In the gas phase, solvent interactions (hydration and steric hindrance of solvation shells) are absent.",
+    "solution_text": "In the gas phase, there are no water molecules to form hydrogen bonds or solvation shells. Therefore, the basic strength of amines is determined solely by the electron-donating inductive effect ($+I$) of the alkyl groups, which stabilizes the positive charge on the conjugate ammonium cation. Since tertiary amines have three $+I$ methyl groups, secondary have two, and primary have one, the basicity order is: $3^circ > 2^circ > 1^circ > \\text{NH}_3$. Option A is correct.",
+    "common_mistake": "Using the aqueous phase order (Secondary > Primary > Tertiary), which is dictated by solvation and does not apply in the gas phase.",
+    "concept_slugs": [
+      "amines-basicity"
+    ]
+  },
+  {
+    "pattern_group": "amines-basicity",
+    "title": "Guanidine, $(\\text{H}_2\\text{N})_2\\text{C}=\\text{NH}$, is exceptionally basic because its conjugate acid is stabilized by how many equivalent resonance structures?",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "3",
+    "is_numerical": true,
+    "notes": "Protonation occurs at the imine nitrogen, creating a highly symmetrical cation.",
+    "solution_text": "Guanidine is one of the strongest neutral organic bases. Upon protonation at the imine nitrogen ($=\\text{NH}$), the positive charge is delocalized equally over all three nitrogen atoms. The conjugate acid (guanidinium cation) is stabilized by exactly 3 equivalent resonance structures. Because this cation is highly stable and symmetrical, guanidine has a very high basic strength.",
+    "common_mistake": "Writing 2, by counting only the two primary amino nitrogens and neglecting the protonated imine nitrogen resonance.",
+    "concept_slugs": [
+      "amines-basicity"
+    ]
+  },
+  {
+    "pattern_group": "amines-basicity",
+    "title": "Due to the ortho-effect, o-methylaniline (o-toluidine) is less basic than aniline. This reduction in basic strength is primarily due to:",
+    "difficulty": "hard",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Steric hindrance of the ortho methyl group which inhibits protonation and disrupts conjugate acid solvation",
+      "B": "$-I$ effect of the methyl group at the ortho position",
+      "C": "Hyperconjugation of the methyl group",
+      "D": "Planarity of the o-methylphenyl group"
+    },
+    "notes": "The ortho effect in benzoic acids increases acidity, but in anilines it decreases basicity.",
+    "solution_text": "Ortho-substituted anilines are generally weaker bases than aniline itself, regardless of whether the ortho substituent is electron-donating or electron-withdrawing. This is called the 'ortho-effect'. The bulky ortho group (like methyl in o-toluidine) causes steric hindrance that blocks proton attack on the nitrogen and, more importantly, interferes with the hydrogen bonding solvation of the conjugate ammonium cation, destabilizing it. Option A is correct.",
+    "common_mistake": "Thinking that since methyl is electron-donating ($+I$), o-toluidine must be more basic than aniline, ignoring the dominant steric ortho-effect.",
+    "concept_slugs": [
+      "amines-basicity"
+    ]
+  },
+  {
+    "pattern_group": "amines-basicity",
+    "title": "Arrange the following nitrogen-containing heterocyclic compounds in decreasing order of basic strength:\n1) $\\text{Piperidine}$\n2) $\\text{Pyridine}$\n3) $\\text{Pyrrole}$",
+    "difficulty": "hard",
+    "type": "advanced",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "1 > 2 > 3",
+      "B": "3 > 2 > 1",
+      "C": "1 > 3 > 2",
+      "D": "2 > 1 > 3"
+    },
+    "notes": "Evaluate whether the nitrogen lone pair is part of the aromatic ring system or is localized in $sp^3/sp^2$ orbitals.",
+    "solution_text": "Let's analyze the lone pair of each heterocycle:\n- Piperidine (1): Saturated cyclic amine. The nitrogen is $sp^3$ hybridized, and the lone pair is localized and highly available (Most basic).\n- Pyridine (2): Aromatic heterocycle. The nitrogen is $sp^2$ hybridized, and the lone pair is in the plane of the ring, not participating in the aromatic pi system (moderately basic due to higher electronegativity of $sp^2$ carbon/nitrogen).\n- Pyrrole (3): Aromatic heterocycle where the nitrogen lone pair is part of the aromatic $6\\pi$ electron cloud. Protonation destroys the aromaticity of the ring, making pyrrole extremely non-basic (Least basic).\nThus, the basicity order is: 1 > 2 > 3. Option A is correct.",
+    "common_mistake": "Selecting pyridine as more basic than piperidine, forgetting that $sp^2$ hybridization increases electronegativity and holds the lone pair more tightly than $sp^3$.",
+    "concept_slugs": [
+      "amines-basicity"
+    ]
+  },
+  {
+    "pattern_group": "amines-reactions",
+    "title": "Hinsberg's reagent (benzenesulfonyl chloride) reacts with primary amines to form a product that is:",
+    "difficulty": "easy",
+    "type": "pyq",
+    "source": "JEE Main 2021",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Soluble in aqueous alkali (NaOH)",
+      "B": "Insoluble in aqueous alkali (NaOH)",
+      "C": "A gaseous compound",
+      "D": "An acidic gas"
+    },
+    "notes": "Primary amines form N-alkylbenzenesulfonamides. Examine if there are any acidic hydrogens remaining on the nitrogen.",
+    "solution_text": "Hinsberg's reagent reacts with primary amines to form N-alkylbenzenesulfonamide, $\\text{C}_6\\text{H}_5-\\text{SO}_2-\\text{NH-R}$. The nitrogen atom of this sulfonamide is attached to a strongly electron-withdrawing sulfonyl group ($-\\text{SO}_2-$), making the remaining hydrogen on nitrogen highly acidic. Consequently, this sulfonamide reacts with aqueous $\\text{NaOH}$ to form a water-soluble sodium salt. Option A is correct.",
+    "common_mistake": "Selecting insoluble in alkali (Option B), which is the behavior of secondary amine sulfonamides (which have no acidic hydrogen left on nitrogen).",
+    "concept_slugs": [
+      "amines-reactions"
+    ]
+  },
+  {
+    "pattern_group": "amines-reactions",
+    "title": "Secondary amines ($2^\\circ$) react with nitrous acid ($\\text{HNO}_2$) to yield a yellow oily compound. This oily compound is chemically a:",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2022",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "N-Nitrosoamine",
+      "B": "Diazonium salt",
+      "C": "Primary amine salt",
+      "D": "Nitro compound"
+    },
+    "notes": "Evaluate the reaction pathway of secondary amines with nitrous acid (which is generated in situ from $\\text{NaNO}_2 + \\text{HCl}$).",
+    "solution_text": "Secondary amines ($\\text{R}_2\\text{NH}$) react with nitrous acid ($\\text{HNO}_2$) via nucleophilic attack of the amine on the nitrosonium ion ($$\\text{NO}^+$). Because there is only one hydrogen on nitrogen, the reaction stops after deprotonation to yield an N-nitrosoamine: $\\text{R}_2\\text{N-N}=\\text{O}$. These N-nitrosoamines are insoluble yellow liquids (oily compounds). Option A is correct.",
+    "common_mistake": "Selecting diazonium salt (Option B), which can only be formed from primary amines via proton transfer and loss of water.",
+    "concept_slugs": [
+      "amines-reactions"
+    ]
+  },
+  {
+    "pattern_group": "amines-reactions",
+    "title": "The carbylamine reaction (isocyanide test) is given by which of the following classes of amines?",
+    "difficulty": "easy",
+    "type": "concept",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Primary aliphatic and aromatic amines",
+      "B": "Secondary amines",
+      "C": "Tertiary amines",
+      "D": "All classes of amines"
+    },
+    "notes": "The carbylamine reaction involves the reaction of amines with chloroform and base to form foul-smelling isocyanides.",
+    "solution_text": "The carbylamine reaction is a diagnostic test for primary ($1^circ$) amines. Both primary aliphatic and primary aromatic amines react with chloroform ($\\text{CHCl}_3$) and alcoholic $\\text{KOH}$ to yield highly offensive-smelling carbylamines (isocyanides, $\\text{R-NC}$). Secondary and tertiary amines do not have the two hydrogens on nitrogen required for the elimination steps of the reaction, and thus do not give this test. Option A is correct.",
+    "common_mistake": "Selecting all classes of amines (Option D) or assuming only aliphatic primary amines give it.",
+    "concept_slugs": [
+      "amines-reactions"
+    ]
+  },
+  {
+    "pattern_group": "amines-reactions",
+    "title": "Hinsberg's reagent does not react with tertiary amines. Upon treating a tertiary amine with benzenesulfonyl chloride followed by the addition of aqueous alkali, what is observed?",
+    "difficulty": "medium",
+    "type": "concept",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "No reaction occurs initially, and the amine remains insoluble in alkali",
+      "B": "A soluble salt is formed",
+      "C": "An explosive gas is released",
+      "D": "The mixture turns bright blue"
+    },
+    "notes": "Tertiary amines ($\text{R}_3\text{N}$) have no hydrogens on nitrogen to form a stable sulfonamide.",
+    "solution_text": "Tertiary amines have no hydrogen on the nitrogen atom. When treated with benzenesulfonyl chloride, they do not form a stable sulfonamide product. Although an unstable quaternary sulfonylammonium salt might form in equilibrium, adding aqueous alkali ($\\text{NaOH}$) immediately hydrolyzes it back to the starting tertiary amine. Thus, no reaction is observed, and the tertiary amine remains as an insoluble organic layer. Option A is correct.",
+    "common_mistake": "Selecting Option B, confusing the lack of reaction with the behavior of primary amines which form soluble salts.",
+    "concept_slugs": [
+      "amines-reactions"
+    ]
+  },
+  {
+    "pattern_group": "amines-reactions",
+    "title": "The reagents used in the carbylamine test to identify primary amines are:",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Chloroform ($\\text{CHCl}_3$) and alcoholic $\\text{KOH}$",
+      "B": "Dichloromethane and aqueous $\\text{NaOH}$",
+      "C": "Carbon tetrachloride and $\\text{KOH}$",
+      "D": "Formic acid and $\\text{HCl}$"
+    },
+    "notes": "The reaction proceeds via the generation of a highly reactive carbene intermediate.",
+    "solution_text": "The carbylamine reaction uses chloroform ($\\text{CHCl}_3$) and alcoholic potassium hydroxide ($\\text{KOH}$). The base deprotonates chloroform to form trichloromethyl anion, which loses a chloride ion to generate dichlorocarbene ($:\\text{CCl}_2$), a highly electrophilic intermediate. The primary amine then attacks this carbene, leading to the formation of the isocyanide. Option A is correct.",
+    "common_mistake": "Choosing carbon tetrachloride (Option C), which cannot form the required divalent carbene intermediate.",
+    "concept_slugs": [
+      "amines-reactions"
+    ]
+  },
+  {
+    "pattern_group": "amines-reactions",
+    "title": "Primary aliphatic amines react with cold nitrous acid ($\\text{HNO}_2$) to form highly unstable diazonium salts, which decompose to yield nitrogen gas quantitatively and a mixture of organic products. The major organic product class formed is:",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Alcohols",
+      "B": "Alkyl halides",
+      "C": "Alkenes",
+      "D": "Nitroalkanes"
+    },
+    "notes": "Aliphatic diazonium salts lose nitrogen instantly to form carbocations, which are then trapped by water.",
+    "solution_text": "Primary aliphatic amines ($\\text{R-NH}_2$) react with nitrous acid to form aliphatic diazonium salts ($[\\text{R-N}_2]^+ \\text{Cl}^-$). Because the aliphatic diazonium ion is highly unstable, it decomposes instantly to release nitrogen gas ($\\text{N}_2$) and form a carbocation intermediate ($$\\text{R}^+$). The carbocation is rapidly attacked by water (the solvent) to yield an alcohol ($\\text{R-OH}$) as the major product, along with minor alkenes or alkyl halides. Option A is correct.",
+    "common_mistake": "Selecting diazonium salt as the stable final product, forgetting that only aromatic diazonium salts are stable at low temperatures.",
+    "concept_slugs": [
+      "amines-reactions"
+    ]
+  },
+  {
+    "pattern_group": "amines-reactions",
+    "title": "The reaction of secondary amines with nitrous acid to form N-nitrosoamines which turn green when warmed with phenol and concentrated sulfuric acid is known as:",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Liebermann's nitroso reaction",
+      "B": "Hinsberg test",
+      "C": "Carbylamine test",
+      "D": "Mustard oil reaction"
+    },
+    "notes": "Identify the color-based diagnostic test for secondary amines.",
+    "solution_text": "Liebermann's nitroso reaction is a characteristic test for secondary amines. The secondary amine reacts with nitrous acid to form a yellow N-nitrosoamine. Heating this nitrosoamine with phenol and concentrated sulfuric acid produces a greenish solution, which turns deep blue on dilution with water, and red-violet upon adding sodium hydroxide. Option A is correct.",
+    "common_mistake": "Selecting Hinsberg test (Option B) which is based on solubility of sulfonamides, not color changes with phenol/acid.",
+    "concept_slugs": [
+      "amines-reactions"
+    ]
+  },
+  {
+    "pattern_group": "amines-reactions",
+    "title": "Primary amines on heating with carbon disulfide ($\\text{CS}_2$) and mercuric chloride ($\\text{HgCl}_2$) yield alkyl isothiocyanates having a characteristic smell of mustard oil (Hofmann mustard oil reaction). The number of sulfur atoms present in one molecule of alkyl isothiocyanate ($\\text{R-N}=\\text{C}=\\text{S}$) is ________.",
+    "difficulty": "hard",
+    "type": "advanced",
+    "correct_answer": "1",
+    "is_numerical": true,
+    "notes": "Identify the structural formula of isothiocyanates and count the sulfur atoms.",
+    "solution_text": "In the Hofmann mustard oil reaction, the primary amine reacts with $\\text{CS}_2$ to form a dithiocarbamic acid intermediate, which is decomposed by $\\text{HgCl}_2$ to yield an alkyl isothiocyanate ($\\text{R-N}=\\text{C}=\\text{S}$) and mercuric sulfide ($\\text{HgS}$). The formula of alkyl isothiocyanate is $\\text{R-N}=\\text{C}=\\text{S}$, which contains exactly 1 sulfur atom.",
+    "common_mistake": "Writing 2, by confusing isothiocyanate with the starting carbon disulfide reactant ($\\text{CS}_2$) which has 2 sulfur atoms.",
+    "concept_slugs": [
+      "amines-reactions"
+    ]
+  },
+  {
+    "pattern_group": "diazonium-preparation-coupling",
+    "title": "The diazotization of aniline to benzene diazonium chloride is carried out at a very low temperature ($0-5^\\circ\\text{C}$) because:",
+    "difficulty": "easy",
+    "type": "pyq",
+    "source": "JEE Main 2021",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Benzene diazonium chloride is unstable at higher temperatures and decomposes to phenol and nitrogen gas",
+      "B": "Aniline does not dissolve in acid at high temperatures",
+      "C": "Nitrous acid decomposes to nitric oxide at low temperatures",
+      "D": "Low temperature prevents poly-substitution on the benzene ring"
+    },
+    "notes": "Diazonium salts contain a very good leaving group ($\\text{N}_2$). Thermal energy readily drives its elimination.",
+    "solution_text": "Benzene diazonium chloride is stable only at very low temperatures ($0-5^circ\\text{C}$ / $273-278\\,\text{K}$). If the temperature is allowed to rise, the diazonium group ($-\\text{N}_2^+$) is lost as nitrogen gas, and the resulting phenyl cation reacts with water (solvent) to form phenol. Thus, the reaction is kept ice-cold. Option A is correct.",
+    "common_mistake": "Selecting Option D, assuming it is to prevent multiple additions, whereas temperature control is strictly for stability of the diazonium compound itself.",
+    "concept_slugs": [
+      "diazonium-preparation-coupling"
+    ]
+  },
+  {
+    "pattern_group": "diazonium-preparation-coupling",
+    "title": "Benzene diazonium chloride undergoes coupling with phenol in a weakly basic medium (pH $approx 9-10$) to form an azo dye. If the medium is made strongly acidic, the coupling rate:",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2022",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Decreases, because phenol is not converted to the highly active phenoxide ion",
+      "B": "Increases, because the diazonium ion is more stable in acid",
+      "C": "Remains unchanged",
+      "D": "Stops, because the diazonium ion is destroyed by acid"
+    },
+    "notes": "Evaluate the electrophilicity of diazonium and the activation level of phenol at different pH levels.",
+    "solution_text": "Benzene diazonium ion is a weak electrophile. To undergo electrophilic coupling, it requires a highly activated benzene ring. Phenol is converted to the phenoxide ion ($\\text{C}_6\\text{H}_5\\text{O}^-$) in a weakly basic medium (pH $approx 9-10$). The phenoxide ion is strongly activating due to the $+M$ effect of the negative oxygen. Under strongly acidic conditions, phenol is protonated back to neutral phenol (or the diazonium is stable but the ring is insufficiently activated), which slows down the coupling rate drastically. Option A is correct. (Note: if basicity is too high, pH > 10, the diazonium ion itself reacts with hydroxide to form non-electrophilic diazotate, so a weak base is optimum).",
+    "common_mistake": "Thinking acidity increases coupling (Option B) by making the diazonium more positive, forgetting that ring activation of the coupling partner is the dominating factor.",
+    "concept_slugs": [
+      "diazonium-preparation-coupling"
+    ]
+  },
+  {
+    "pattern_group": "diazonium-preparation-coupling",
+    "title": "The coupling reaction of benzene diazonium chloride with aniline in weakly acidic medium (pH $approx 5-7$) yields an azo dye of color:",
+    "difficulty": "easy",
+    "type": "concept",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Yellow",
+      "B": "Orange",
+      "C": "Blue",
+      "D": "Green"
+    },
+    "notes": "Identify the azo dye formed by coupling with aniline (p-aminoazobenzene).",
+    "solution_text": "Coupling of benzene diazonium chloride with aniline is performed in a weakly acidic medium (pH $approx 5-7$). Under these conditions, the amine remains unprotonated and highly activating. Electrophilic substitution occurs at the para position of aniline to yield p-aminoazobenzene, which is a yellow-colored dye. Option A is correct. (Coupling with phenol yields p-hydroxyazobenzene, which is an orange-colored dye).",
+    "common_mistake": "Selecting orange (Option B), which is the color of the dye formed when coupling with phenol, not aniline.",
+    "concept_slugs": [
+      "diazonium-preparation-coupling"
+    ]
+  },
+  {
+    "pattern_group": "diazonium-preparation-coupling",
+    "title": "Aromatic diazonium salts are much more stable than aliphatic diazonium salts (which decompose even at $0^\\circ\\text{C}$). This enhanced stability of aromatic diazonium salts is due to:",
+    "difficulty": "medium",
+    "type": "concept",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Resonance delocalization of the positive charge into the benzene ring",
+      "B": "Steric protection of the diazonium group by the ring",
+      "C": "High electronegativity of $sp^2$ hybridized carbons in the ring",
+      "D": "Strong intermolecular hydrogen bonding with the counter-ion"
+    },
+    "notes": "Evaluate the orbital overlap between the diazonium pi bonds and the aromatic ring.",
+    "solution_text": "In aromatic diazonium salts, the positive charge on the diazonium group is delocalized over the ortho and para positions of the benzene ring through resonance ($-\\text{N}^+\\equiv\\text{N} \\leftrightarrow =\\text{N}=\\text{N}^+$). This resonance stabilization lowers the potential energy of the C-N bond, preventing its spontaneous cleavage at low temperatures. In aliphatic systems, no such resonance stabilization is possible, so they instantly lose nitrogen to form highly unstable carbocations. Option A is correct.",
+    "common_mistake": "Attributing the stability to steric hindrance (Option B), whereas a linear $-\\text{N}_2^+$ group experiences minimal steric protection.",
+    "concept_slugs": [
+      "diazonium-preparation-coupling"
+    ]
+  },
+  {
+    "pattern_group": "diazonium-preparation-coupling",
+    "title": "Benzene diazonium chloride reacts with alkaline $\\beta$-naphthol (2-naphthol) to form an orange-red dye. The electrophilic attack of the diazonium ion occurs at which position of $\\beta$-naphthol?",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Position 1",
+      "B": "Position 3",
+      "C": "Position 4",
+      "D": "Position 6"
+    },
+    "notes": "Consider ring activation in naphthalene. Attack at C1 preserves aromaticity in the adjacent ring during the transition state.",
+    "solution_text": "In $\\beta$-naphthol (2-naphthol), the hydroxyl group is at C2. The most active position for electrophilic aromatic substitution is C1 (ortho to the hydroxyl group). Electrophilic attack at C1 is preferred because it allows the adjacent benzene ring of naphthalene to remain fully aromatic (preserving its benzenoid stabilization energy) in the transition state. Thus, coupling occurs exclusively at C1 to form the orange-red azo dye. Option A is correct.",
+    "common_mistake": "Selecting C3 (Option B) or C4 (Option C), which do not offer the same low-energy transition states.",
+    "concept_slugs": [
+      "diazonium-preparation-coupling"
+    ]
+  },
+  {
+    "pattern_group": "diazonium-preparation-coupling",
+    "title": "During the diazonium coupling reaction, the benzene diazonium cation ($[\\text{C}_6\\text{H}_5-\\text{N}\\equiv\\text{N}]^+$) acts as:",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "A weak electrophile",
+      "B": "A strong electrophile",
+      "C": "A strong nucleophile",
+      "D": "A free radical initiator"
+    },
+    "notes": "Evaluate the charge distribution and resonance stabilization of the diazonium cation.",
+    "solution_text": "The benzene diazonium cation ($[\\text{C}_6\\text{H}_5-\\text{N}\\equiv\\text{N}]^+$) carries a positive charge, but it is heavily stabilized by resonance over the nitrogen-nitrogen bond and the aromatic ring. Because the positive charge is delocalized, the cation is a very weak electrophile. It is not electrophilic enough to attack benzene or toluene, but it reacts rapidly with highly activated ring systems like phenols and amines. Option A is correct.",
+    "common_mistake": "Selecting strong electrophile (Option B) due to the presence of a positive formal charge, neglecting the resonance stabilization.",
+    "concept_slugs": [
+      "diazonium-preparation-coupling"
+    ]
+  },
+  {
+    "pattern_group": "diazonium-preparation-coupling",
+    "title": "Coupling of diazotized sulfanilic acid with N,N-dimethylaniline in weakly acidic/basic medium yields which of the following indicators?",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Methyl orange",
+      "B": "Methyl red",
+      "C": "Phenolphthalein",
+      "D": "Bromothymol blue"
+    },
+    "notes": "This coupling yields a highly conjugate sulfonate-azo compound that changes color with pH.",
+    "solution_text": "The indicator methyl orange is synthesized by:\n1) Diazotizing sulfanilic acid ($\\text{H}_2\\text{N}-\\text{C}_6\\text{H}_4-\\text{SO}_3\\text{H}$) to form a diazonium salt.\n2) Coupling this diazonium salt with N,N-dimethylaniline ($\\text{C}_6\\text{H}_5\\text{N(CH}_3)_2$) at the para position.\nThis yields the sodium salt of methyl orange, an azo dye. Option A is correct.",
+    "common_mistake": "Selecting phenolphthalein (Option C) which is a phthalic anhydride condensation product, not an azo dye.",
+    "concept_slugs": [
+      "diazonium-preparation-coupling"
+    ]
+  },
+  {
+    "pattern_group": "diazonium-preparation-coupling",
+    "title": "The number of nitrogen atoms present in one molecule of p-hydroxyazobenzene (orange dye) is ________.",
+    "difficulty": "easy",
+    "type": "advanced",
+    "correct_answer": "2",
+    "is_numerical": true,
+    "notes": "Recall the structure of the azo linkage group ($-\\text{N}=\\text{N}-$).",
+    "solution_text": "p-hydroxyazobenzene has the structure: $\\text{C}_6\\text{H}_5-\\text{N}=\\text{N}-\\text{C}_6\\text{H}_4-\\text{OH}$. The two benzene rings are connected by a central azo linkage ($-\\text{N}=\\text{N}-$). There are exactly 2 nitrogen atoms in this structure.",
+    "common_mistake": "Writing 1, by confusing the azo linkage with an imine or amine linkage.",
+    "concept_slugs": [
+      "diazonium-preparation-coupling"
+    ]
+  },
+  {
+    "pattern_group": "diazonium-substitutions",
+    "title": "In the Sandmeyer reaction, the conversion of benzene diazonium chloride to chlorobenzene is achieved using:",
+    "difficulty": "easy",
+    "type": "pyq",
+    "source": "JEE Main 2021",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\text{Cu}_2\\text{Cl}_2$ in $\\text{HCl}$",
+      "B": "$\\text{Cu}$ powder in $\\text{HCl}$",
+      "C": "$\\text{FeCl}_3$ in $\\text{HCl}$",
+      "D": "$\\text{Cl}_2$ under UV light"
+    },
+    "notes": "Sandmeyer reactions utilize transition metal salts to catalyze nucleophilic displacement of nitrogen.",
+    "solution_text": "The Sandmeyer reaction converts benzene diazonium chloride to chlorobenzene by treating the diazonium salt with copper(I) chloride ($\\text{Cu}_2\\text{Cl}_2$) in hydrochloric acid ($\\text{HCl}$). The copper(I) ion acts as a single-electron reducing agent to generate a phenyl radical intermediate, which then abstracts chlorine to form chlorobenzene. Option A is correct.",
+    "common_mistake": "Selecting copper powder (Option B), which is the Gattermann reaction modification of the Sandmeyer process.",
+    "concept_slugs": [
+      "diazonium-substitutions"
+    ]
+  },
+  {
+    "pattern_group": "diazonium-substitutions",
+    "title": "The Balz-Schiemann reaction converts benzene diazonium chloride to fluorobenzene. The reagents and intermediate salt are:",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2022",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "$\\text{HBF}_4$ to form benzene diazonium tetrafluoroborate intermediate, followed by dry heating",
+      "B": "$\\text{HF}$ and $\\text{KF}$ followed by copper catalyst heating",
+      "C": "$\\text{F}_2$ gas in carbon tetrachloride",
+      "D": "$\\text{SbF}_5$ in anhydrous liquid $\\text{HF}$"
+    },
+    "notes": "Fluorination of diazonium salts requires a stable, dry intermediate that can undergo thermal decomposition.",
+    "solution_text": "The Balz-Schiemann reaction is the standard method for preparing fluorobenzenes:\n1) Benzene diazonium chloride is treated with fluoroboric acid ($\\text{HBF}_4$) to precipitate the stable, water-insoluble salt: benzene diazonium tetrafluoroborate ($[\\text{C}_6\\text{H}_5\\text{N}_2]^+ \\text{BF}_4^-$).\n2) The isolated dry salt is heated thermally, decomposing into fluorobenzene ($\\text{C}_6\\text{H}_5\\text{F}$), boron trifluoride ($\\text{BF}_3$), and nitrogen gas ($\\text{N}_2$).\nOption A is correct.",
+    "common_mistake": "Choosing Option B or C, since direct displacement of diazonium by $\\text{F}^-$ in solution is highly unfavorable due to strong solvation of the fluoride ion.",
+    "concept_slugs": [
+      "diazonium-substitutions"
+    ]
+  },
+  {
+    "pattern_group": "diazonium-substitutions",
+    "title": "Benzene diazonium chloride can be reduced to benzene using which of the following reducing agents?",
+    "difficulty": "easy",
+    "type": "concept",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Hypophosphorous acid ($\\text{H}_3\\text{PO}_2$) or hot ethanol",
+      "B": "Lithium aluminium hydride ($\\text{LiAlH}_4$)",
+      "C": "Sodium borohydride ($\\text{NaBH}_4$)",
+      "D": "Zinc in concentrated hydrochloric acid"
+    },
+    "notes": "Look for a mild reducing agent that can transfer hydride to the phenyl ring while oxidizing itself.",
+    "solution_text": "Reduction of benzene diazonium chloride to benzene (deamination) is accomplished by treating it with mild reducing agents:\n- Hypophosphorous acid ($\\text{H}_3\\text{PO}_2$), which is oxidized to phosphorous acid ($\\text{H}_3\\text{PO}_3$): $\\text{C}_6\\text{H}_5\\text{N}_2\\text{Cl} + \\text{H}_3\\text{PO}_2 + \\text{H}_2\\text{O} \\rightarrow \\text{C}_6\\text{H}_6 + \\text{N}_2 + \\text{H}_3\\text{PO}_3 + \\text{HCl}$.\n- Hot ethanol ($\\text{CH}_3\\text{CH}_2\\text{OH}$), which is oxidized to acetaldehyde ($\\text{CH}_3\\text{CHO}$).\nOption A is correct.",
+    "common_mistake": "Selecting $\\text{LiAlH}_4$ (Option B) which would reduce it to hydrazine ($\\text{Ph-NH-NH}_2$) or phenylamine, not benzene.",
+    "concept_slugs": [
+      "diazonium-substitutions"
+    ]
+  },
+  {
+    "pattern_group": "diazonium-substitutions",
+    "title": "Iodobenzene is prepared from benzene diazonium chloride by heating it with which reagent (without requiring copper catalysts)?",
+    "difficulty": "medium",
+    "type": "concept",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Potassium iodide ($\\text{KI}$) solution",
+      "B": "Iodine ($\\text{I}_2$) in the presence of nitric acid",
+      "C": "Copper(I) iodide ($\\text{Cu}_2\\text{I}_2$) in $\\text{HI}$",
+      "D": "Silver iodide ($\\text{AgI}$) suspension"
+    },
+    "notes": "Iodide ion is a very strong nucleophile and undergoes nucleophilic displacement on diazonium salts easily.",
+    "solution_text": "Unlike chlorination and bromination, the introduction of iodine into the benzene ring from a diazonium salt does not require a transition metal catalyst (like copper salts). This is because the iodide ion ($\\text{I}^-$) is a highly polarizable, excellent nucleophile and easily displaces nitrogen. Heating the aqueous benzene diazonium chloride solution with potassium iodide ($\\text{KI}$) yields iodobenzene quantitatively. Option A is correct.",
+    "common_mistake": "Selecting copper(I) iodide (Option C) by assuming it must follow the Sandmeyer catalyst pattern.",
+    "concept_slugs": [
+      "diazonium-substitutions"
+    ]
+  },
+  {
+    "pattern_group": "diazonium-substitutions",
+    "title": "The reaction that differs from the Sandmeyer reaction only by using copper powder and halogen acid instead of copper(I) halide is known as the:",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Gattermann reaction",
+      "B": "Gattermann-Koch reaction",
+      "C": "Ullmann reaction",
+      "D": "Wurtz-Fittig reaction"
+    },
+    "notes": "Identify the copper-powder based modification of the diazonium substitution reaction.",
+    "solution_text": "The Gattermann reaction is a modification of the Sandmeyer reaction. Instead of copper(I) halides (like $\\text{Cu}_2\\text{Cl}_2$), it uses freshly prepared copper powder and hydrochloric or hydrobromic acid. The yield is generally lower than the Sandmeyer reaction. Option A is correct.",
+    "common_mistake": "Confusing it with Gattermann-Koch (Option B), which is used to synthesize benzaldehyde from benzene.",
+    "concept_slugs": [
+      "diazonium-substitutions"
+    ]
+  },
+  {
+    "pattern_group": "diazonium-substitutions",
+    "title": "Benzene diazonium chloride is converted to phenol by:",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Warming the aqueous solution or adding dilute sulfuric acid",
+      "B": "Treatment with aqueous sodium hydroxide at room temperature",
+      "C": "Reduction with zinc dust in acid",
+      "D": "Reaction with ethanol under basic conditions"
+    },
+    "notes": "Identify the reaction conditions that promote nucleophilic substitution of nitrogen by water.",
+    "solution_text": "Benzene diazonium chloride undergoes hydrolysis when its aqueous solution is warmed to room temperature or higher, particularly in the presence of dilute acid: $[\\text{C}_6\\text{H}_5\\text{N}_2]^+ \\text{Cl}^- + \\text{H}_2\\text{O} \\rightarrow \\text{C}_6\\text{H}_5\\text{OH} + \\text{N}_2 + \\text{HCl}$. Option A is correct.",
+    "common_mistake": "Choosing sodium hydroxide (Option B), which at high concentration reacts with diazonium to form diazotate salts, not phenol.",
+    "concept_slugs": [
+      "diazonium-substitutions"
+    ]
+  },
+  {
+    "pattern_group": "diazonium-substitutions",
+    "title": "The reaction of benzene diazonium chloride with benzene in the presence of sodium hydroxide to yield biphenyl is called the:",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Gomberg-Bachmann reaction",
+      "B": "Sandmeyer reaction",
+      "C": "Ullmann coupling",
+      "D": "Fittig reaction"
+    },
+    "notes": "Identify the coupling of diazonium salts with neutral aromatic rings in basic conditions.",
+    "solution_text": "The Gomberg-Bachmann reaction is the coupling of a diazonium salt with an aromatic ring (like benzene) under basic conditions (using aqueous $\\text{NaOH}$) to form a biphenyl derivative. The reaction proceeds via a free-radical mechanism. Option A is correct.",
+    "common_mistake": "Selecting Ullmann coupling (Option C), which requires heating aryl halides with copper metal, not diazonium salts.",
+    "concept_slugs": [
+      "diazonium-substitutions"
+    ]
+  },
+  {
+    "pattern_group": "diazonium-substitutions",
+    "title": "The Balz-Schiemann reaction of benzene diazonium chloride with fluoroboric acid yields fluorobenzene. The number of fluorine atoms in one molecule of fluorobenzene is ________.",
+    "difficulty": "easy",
+    "type": "advanced",
+    "correct_answer": "1",
+    "is_numerical": true,
+    "notes": "Recall the molecular structure of fluorobenzene.",
+    "solution_text": "Fluorobenzene has the molecular formula $\\text{C}_6\\text{H}_5\\text{F}$. It is a monosubstituted benzene ring containing exactly 1 fluorine atom.",
+    "common_mistake": "Writing 4, confusing the number of fluorine atoms in the product with those in the tetrafluoroborate intermediate ($\\text{BF}_4^-$).",
+    "concept_slugs": [
+      "diazonium-substitutions"
+    ]
+  },
+  {
+    "pattern_group": "aromatic-amines-substitution",
+    "title": "Treatment of aniline with excess bromine water yields a white precipitate of:",
+    "difficulty": "easy",
+    "type": "pyq",
+    "source": "JEE Main 2021",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "2,4,6-Tribromoaniline",
+      "B": "o-Bromoaniline",
+      "C": "p-Bromoaniline",
+      "D": "2,4-Dibromoaniline"
+    },
+    "notes": "The amino group ($-\\text{NH}_2$) is an extremely strong activating group due to resonance donation (+M).",
+    "solution_text": "The amino group ($-\\text{NH}_2$) is highly activating towards electrophilic aromatic substitution due to strong resonance electron donation ($+M$). The activation is so strong that aniline reacts instantly with bromine water at room temperature without any Lewis acid catalyst. Bromination occurs at all available ortho and para positions, yielding a white precipitate of 2,4,6-tribromoaniline. Option A is correct.",
+    "common_mistake": "Selecting p-bromoaniline (Option C), which is only obtained if the amine group is first protected/acetylated to moderate its activation.",
+    "concept_slugs": [
+      "aromatic-amines-substitution"
+    ]
+  },
+  {
+    "pattern_group": "aromatic-amines-substitution",
+    "title": "Sulfanilic acid, prepared by heating aniline with concentrated $\\text{H}_2\\text{SO}_4$, is insoluble in water and organic solvents but soluble in bases. This is because it exists as a:",
+    "difficulty": "medium",
+    "type": "pyq",
+    "source": "JEE Main 2022",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Zwitterion ($^+\\text{NH}_3-\\text{C}_6\\text{H}_4-\\text{SO}_3^-$)",
+      "B": "Covalent neutral molecule",
+      "C": "Dimer",
+      "D": "Highly stable carbocation"
+    },
+    "notes": "Evaluate the acid-base interaction between the acidic sulfonic acid group and the basic amino group in the same molecule.",
+    "solution_text": "Sulfanilic acid contains both an acidic sulfonic acid group ($-\\text{SO}_3\\text{H}$) and a basic amino group ($-\\text{NH}_2$). An internal acid-base proton transfer occurs, converting the acidic sulfonic group to sulfonate ($-\\text{SO}_3^-$) and the basic amine to ammonium ($-\\text{NH}_3^+$). This creates a dipolar species known as a zwitterion: $^+\\text{NH}_3-\\text{C}_6\\text{H}_4-\\text{SO}_3^-$. The ionic nature makes it insoluble in non-polar organic solvents and water, but it dissolves in bases because base deprotonates the $-\\text{NH}_3^+$ group to regenerate the soluble anion. Option A is correct.",
+    "common_mistake": "Assuming it exists as a neutral covalent molecule (Option B), which does not account for its high melting point and insolubility.",
+    "concept_slugs": [
+      "aromatic-amines-substitution"
+    ]
+  },
+  {
+    "pattern_group": "aromatic-amines-substitution",
+    "title": "In the preparation of p-bromoaniline from aniline, the amino group is first acetylated using acetic anhydride. This acetylation is done to:",
+    "difficulty": "easy",
+    "type": "concept",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Decrease the strong activating effect of the $-\\text{NH}_2$ group to prevent poly-bromination",
+      "B": "Make the amino group meta-directing",
+      "C": "Increase the solubility of aniline in organic solvents",
+      "D": "Prevent protonation of aniline"
+    },
+    "notes": "Acetylation converts the amine to an amide, which delocalizes the nitrogen lone pair.",
+    "solution_text": "Direct bromination of aniline yields 2,4,6-tribromoaniline. To prepare mono-brominated aniline (p-bromoaniline), the amino group is protected by acetylation with acetic anhydride to form acetanilide. The carbonyl group of the acetyl group draws nitrogen's lone pair via resonance, reducing its availability for ring activation. This moderates activation, allowing mono-substitution at the para position. Hydrolysis of the amide later regenerates the amine. Option A is correct.",
+    "common_mistake": "Thinking acetylation makes the group meta-directing (Option B), whereas amide remains ortho/para-directing.",
+    "concept_slugs": [
+      "aromatic-amines-substitution"
+    ]
+  },
+  {
+    "pattern_group": "aromatic-amines-substitution",
+    "title": "Acetanilide is less reactive towards electrophilic substitution than aniline because the nitrogen lone pair in acetanilide is:",
+    "difficulty": "medium",
+    "type": "concept",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Delocalized into the carbonyl group of the acetyl substituent via resonance",
+      "B": "Protonated by the acetyl group",
+      "C": "Removed by steric hindrance",
+      "D": "Locked in a ring"
+    },
+    "notes": "Evaluate the resonance contributors of acetanilide involving the carbonyl carbon.",
+    "solution_text": "In acetanilide ($\\text{C}_6\\text{H}_5\\text{NHCOCH}_3$), the lone pair of electrons on nitrogen is conjugated with both the benzene ring and the carbonyl carbon. The resonance interaction with the highly electronegative oxygen of the carbonyl group ($-\\text{N}-\\text{C}=\\text{O} \\leftrightarrow -\\text{N}^+=\\text{C}-\\text{O}^-$) is stronger, which significantly decreases the lone pair's electron density donation into the benzene ring compared to aniline. Thus, the ring is less activated. Option A is correct.",
+    "common_mistake": "Assuming the nitrogen is protonated by the acetyl group (Option B), whereas acetyl is an acyl group, not an acid.",
+    "concept_slugs": [
+      "aromatic-amines-substitution"
+    ]
+  },
+  {
+    "pattern_group": "aromatic-amines-substitution",
+    "title": "Direct nitration of aniline with nitric acid/sulfuric acid mixture yields a mixture of products containing $51\\%$ para, $2\\%$ ortho, and $47\\%$ of which isomer?",
+    "difficulty": "easy",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Meta-nitroaniline",
+      "B": "Aniline oxide",
+      "C": "o,p-dinitroaniline",
+      "D": "Nitrobenzene"
+    },
+    "notes": "Aniline is basic and is protonated to the anilinium ion in the presence of strong nitrating acids.",
+    "solution_text": "Aniline reacts with concentrated sulfuric acid in the nitrating mixture to form the anilinium ion ($-\\text{NH}_3^+$). The positive charge makes this group strongly deactivating and meta-directing. Because a substantial fraction of aniline exists as the anilinium ion in solution, nitration yields a unusually high amount ($47\\%$) of meta-nitroaniline. Option A is correct.",
+    "common_mistake": "Selecting o,p-dinitroaniline (Option C), assuming that direct nitration only yields ortho/para products due to $-\\text{NH}_2$ directive effects.",
+    "concept_slugs": [
+      "aromatic-amines-substitution"
+    ]
+  },
+  {
+    "pattern_group": "aromatic-amines-substitution",
+    "title": "Aniline reacts with concentrated sulfuric acid to form anilinium hydrogen sulfate, which on heating at $453-473\\,\\text{K}$ (baking process) yields:",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Sulfanilic acid",
+      "B": "o-aminobenzenesulfonic acid",
+      "C": "m-aminobenzenesulfonic acid",
+      "D": "Benzene sulfonic acid"
+    },
+    "notes": "Heating anilinium hydrogen sulfate initiates an intramolecular rearrangement to yield the thermodynamically stable para product.",
+    "solution_text": "Reaction of aniline with $\\text{H}_2\\text{SO}_4$ forms anilinium hydrogen sulfate salt. Heating this solid salt at $453-473\\,\text{K}$ (the 'baking process') causes loss of water and rearrangement of the sulfonate group first to the nitrogen (phenylsulfamic acid) and then to the para position of the ring, yielding the highly stable zwitterionic sulfanilic acid (p-aminobenzenesulfonic acid) as the major product. Option A is correct.",
+    "common_mistake": "Selecting o-aminobenzenesulfonic acid (Option B), which is the kinetic product but rearranges to the more stable para isomer under the high-temperature baking conditions.",
+    "concept_slugs": [
+      "aromatic-amines-substitution"
+    ]
+  },
+  {
+    "pattern_group": "aromatic-amines-substitution",
+    "title": "The selective reduction of m-dinitrobenzene to m-nitroaniline is carried out using which of the following reagents?",
+    "difficulty": "medium",
+    "type": "practice",
+    "correct_answer": "A",
+    "is_numerical": false,
+    "question_format": "mcq",
+    "options": {
+      "A": "Ammonium sulfide ($\\text{NH}_4)_2\\text{S}$ or sodium hydrosulfide ($\\text{NaHS}$)",
+      "B": "Iron scrap and hydrochloric acid ($\\text{Fe/HCl}$)",
+      "C": "Lithium aluminium hydride ($\\text{LiAlH}_4$)",
+      "D": "Sodium borohydride ($\\text{NaBH}_4$)"
+    },
+    "notes": "Identify the selective reducing agent used to reduce one nitro group on a benzene ring without affecting the other.",
+    "solution_text": "The selective reduction of one nitro group in a poly-nitro compound (like m-dinitrobenzene) is known as the Zinin reduction. It is accomplished using mild, alkaline sulfur reducing agents such as ammonium sulfide ($\\text{NH}_4)_2\\text{S}$ or sodium hydrosulfide ($\\text{NaHS}$). This selectively reduces one nitro group to an amino group, yielding m-nitroaniline. Option A is correct. (Fe/HCl is too strong and would reduce both nitro groups to amino groups).",
+    "common_mistake": "Selecting $\\text{Fe/HCl}$ (Option B), which is a non-selective strong reducing agent and reduces both groups to form m-phenylenediamine.",
+    "concept_slugs": [
+      "aromatic-amines-substitution"
+    ]
+  },
+  {
+    "pattern_group": "aromatic-amines-substitution",
+    "title": "To prepare mono-brominated aniline, aniline is first acetylated, then treated with bromine in acetic acid, and finally hydrolyzed. The number of bromine atoms present in the major product, p-bromoaniline, is ________.",
+    "difficulty": "easy",
+    "type": "advanced",
+    "correct_answer": "1",
+    "is_numerical": true,
+    "notes": "Recall the structure of p-bromoaniline.",
+    "solution_text": "The mono-bromination of protected aniline (acetanilide) followed by amide hydrolysis yields p-bromoaniline (4-bromoaniline). This molecule is a mono-brominated derivative of aniline, containing exactly 1 bromine atom.",
+    "common_mistake": "Writing 3, confusing the protected mono-bromination product with the direct bromination product (2,4,6-tribromoaniline).",
+    "concept_slugs": [
+      "aromatic-amines-substitution"
+    ]
+  }
+]
