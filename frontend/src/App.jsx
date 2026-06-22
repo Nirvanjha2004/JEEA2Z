@@ -24,6 +24,7 @@ import MockTestResultPage from './pages/MockTestResultPage';
 import SpacedRevisionPage from './pages/SpacedRevisionPage';
 import LeaderboardPage from './pages/LeaderboardPage';
 import PublicProfilePage from './pages/PublicProfilePage';
+import FeedbackPage from './pages/FeedbackPage';
 
 // V2 Admin Pages
 import AdminLayout from './pages/AdminLayout';
@@ -170,6 +171,14 @@ function AppContent() {
               element={
                 <ProtectedRoute>
                   <PublicProfilePage />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/feedback"
+              element={
+                <ProtectedRoute>
+                  <FeedbackPage />
                 </ProtectedRoute>
               }
             />

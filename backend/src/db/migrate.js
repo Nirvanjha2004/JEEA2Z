@@ -108,6 +108,16 @@ ALTER TABLE users ADD COLUMN IF NOT EXISTS is_public BOOLEAN DEFAULT TRUE;
 
 -- correct answer column on questions
 ALTER TABLE questions ADD COLUMN IF NOT EXISTS correct_answer TEXT;
+
+-- user feedback table
+CREATE TABLE IF NOT EXISTS feedback (
+  id          SERIAL PRIMARY KEY,
+  user_id     UUID REFERENCES users(id) ON DELETE SET NULL,
+  category    TEXT NOT NULL,
+  message     TEXT NOT NULL,
+  rating      INT CHECK(rating >= 1 AND rating <= 5),
+  created_at  TIMESTAMP DEFAULT NOW()
+);
 `;
 
 async function runMigration() {

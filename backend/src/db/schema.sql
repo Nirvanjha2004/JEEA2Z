@@ -282,6 +282,16 @@ ALTER TABLE questions
 
 CREATE INDEX IF NOT EXISTS idx_questions_format ON questions(question_format);
 
+-- user feedback table
+CREATE TABLE IF NOT EXISTS feedback (
+  id          SERIAL PRIMARY KEY,
+  user_id     UUID REFERENCES users(id) ON DELETE SET NULL,
+  category    TEXT NOT NULL,
+  message     TEXT NOT NULL,
+  rating      INT CHECK(rating >= 1 AND rating <= 5),
+  created_at  TIMESTAMP DEFAULT NOW()
+);
+
 
 
 

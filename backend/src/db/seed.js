@@ -587,11 +587,17 @@ const seedData = {
   },
 };
 
+const args = process.argv.slice(2);
+const skipBase = args.includes('--skip-base');
+const startFrom = args.find(arg => arg.startsWith('--start-from='))?.split('=')[1];
+const onlyChapter = args.find(arg => arg.startsWith('--only='))?.split('=')[1];
+
 async function seed() {
   const client = await pool.connect();
 
   try {
-    await client.query('BEGIN');
+    if (!skipBase) {
+      await client.query('BEGIN');
 
     // Drop tables in reverse dependency order
     console.log('Dropping existing tables...');
@@ -617,7 +623,6 @@ async function seed() {
     await client.query('DROP TABLE IF EXISTS questions CASCADE');
     await client.query('DROP TABLE IF EXISTS chapters CASCADE');
     await client.query('DROP TABLE IF EXISTS subjects CASCADE');
-    await client.query('DROP TABLE IF EXISTS users CASCADE');
 
 
     // Create tables
@@ -628,7 +633,7 @@ async function seed() {
     }
 
     await client.query(`
-      CREATE TABLE users (
+      CREATE TABLE IF NOT EXISTS users (
         id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
         name TEXT NOT NULL,
         email TEXT UNIQUE NOT NULL,
@@ -729,13 +734,14 @@ async function seed() {
       }
     }
 
-    await client.query('COMMIT');
+      await client.query('COMMIT');
 
-    console.log('\n--- Seed Summary ---');
-    console.log(`Subjects: ${seedData.subjects.length}`);
-    console.log(`Chapters: ${totalChapters}`);
-    console.log(`Questions: ${totalQuestions}`);
-    console.log('Base seeding completed successfully!');
+      console.log('\n--- Seed Summary ---');
+      console.log(`Subjects: ${seedData.subjects.length}`);
+      console.log(`Chapters: ${totalChapters}`);
+      console.log(`Questions: ${totalQuestions}`);
+      console.log('Base seeding completed successfully!');
+    }
 
     // 1. Run database migrations to construct V2/V3 tables
     console.log('\nRunning database migrations...');
@@ -748,12 +754,26 @@ async function seed() {
 
     // 2. Run all individual chapter seeders dynamically
     console.log('\nRunning individual chapter seeders...');
-    const files = fs.readdirSync('src/db');
-    for (const file of files) {
-      if (file.startsWith('seed-') && file.endsWith('.js')) {
-        console.log(`Executing: ${file}`);
-        execSync(`node src/db/${file}`, { stdio: 'inherit' });
+    let files = fs.readdirSync('src/db')
+      .filter(file => file.startsWith('seed-') && file.endsWith('.js'))
+      .sort();
+
+    if (startFrom) {
+      const startIndex = files.findIndex(file => file.includes(startFrom));
+      if (startIndex !== -1) {
+        files = files.slice(startIndex);
+        console.log(`Starting seeding from chapter matching "${startFrom}"`);
+      } else {
+        console.log(`Could not find seeder file matching "${startFrom}", running all seeders.`);
       }
+    } else if (onlyChapter) {
+      files = files.filter(file => file.includes(onlyChapter));
+      console.log(`Only running seeder files matching "${onlyChapter}"`);
+    }
+
+    for (const file of files) {
+      console.log(`Executing: ${file}`);
+      execSync(`node src/db/${file}`, { stdio: 'inherit' });
     }
 
     // 3. Run formulas sheet seeder

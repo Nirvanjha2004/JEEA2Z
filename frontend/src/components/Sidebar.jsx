@@ -242,6 +242,10 @@ const Sidebar = () => {
             <span className="text-[15px]">🏆</span>
             Leaderboard
           </Link>
+          <Link to="/feedback" className={navItemClass('/feedback')}>
+            <span className="text-[15px]">💬</span>
+            Feedback
+          </Link>
           {user?.is_admin && (
             <Link to="/admin" className={navItemClass('/admin')}>
               <span className="text-[15px]">⚙️</span>
