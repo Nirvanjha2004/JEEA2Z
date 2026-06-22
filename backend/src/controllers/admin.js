@@ -348,3 +348,55 @@ export const toggleAdmin = async (req, res, next) => {
     next(error);
   }
 };
+
+export const getAdminFeedback = async (req, res, next) => {
+  try {
+    const page = parseInt(req.query.page, 10) || 1;
+    const limit = parseInt(req.query.limit, 10) || 20;
+    const offset = (page - 1) * limit;
+    const { category, rating } = req.query;
+
+    const conditions = [];
+    const params = [];
+
+    if (category) {
+      params.push(category);
+      conditions.push(`f.category = $${params.length}`);
+    }
+    if (rating) {
+      params.push(parseInt(rating, 10));
+      conditions.push(`f.rating = $${params.length}`);
+    }
+
+    const whereClause = conditions.length > 0 ? `WHERE ${conditions.join(' AND ')}` : '';
+
+    const countRes = await query(
+      `SELECT COUNT(*)::int as count FROM feedback f ${whereClause}`,
+      params
+    );
+    const total = countRes.rows[0].count;
+
+    const feedbackRes = await query(
+      `SELECT f.*, u.name as user_name, u.email as user_email
+       FROM feedback f
+       LEFT JOIN users u ON f.user_id = u.id
+       ${whereClause}
+       ORDER BY f.created_at DESC
+       LIMIT ${limit} OFFSET ${offset}`,
+      params
+    );
+
+    return res.json({
+      success: true,
+      data: {
+        total,
+        page,
+        limit,
+        feedback: feedbackRes.rows,
+      },
+    });
+  } catch (error) {
+    next(error);
+  }
+};
+

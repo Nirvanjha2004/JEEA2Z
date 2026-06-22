@@ -28,6 +28,7 @@ export default function AdminLayout() {
     { label: 'Chapters', path: '/admin/chapters' },
     { label: 'CSV Import', path: '/admin/import' },
     { label: 'Users', path: '/admin/users' },
+    { label: 'Feedback', path: '/admin/feedback' },
   ];
 
   const getBreadcrumb = () => {

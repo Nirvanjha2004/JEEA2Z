@@ -90,60 +90,72 @@ export default function AdminUsersPage() {
           No users registered.
         </div>
       ) : (
-        <div className="bg-bg-surface border border-border-default rounded-lg overflow-hidden shadow-xs">
-          <div className="overflow-x-auto">
-            <table className="w-full text-left border-collapse table-auto text-xs">
-              <thead>
-                <tr className="bg-bg-subtle/30 border-b border-border-default text-[10px] font-semibold text-text-muted uppercase tracking-wider">
-                  <th className="px-5 py-3">Name</th>
-                  <th className="px-5 py-3">Email</th>
-                  <th className="px-5 py-3 text-center w-28">Date Joined</th>
-                  <th className="px-5 py-3 text-center w-28">Solved Count</th>
-                  <th className="px-5 py-3 text-center w-28">Admin Status</th>
-                  <th className="px-5 py-3 text-right w-32">Actions</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-border-default/40 text-text-secondary">
-                {users.map((u) => (
-                  <tr key={u.id} className="hover:bg-bg-subtle/30 transition-colors">
-                    <td className="px-5 py-3.5 font-semibold text-text-primary flex items-center gap-2.5">
-                      <div className="w-6 h-6 rounded-full bg-accent/10 border border-accent/25 flex items-center justify-center text-[10px] font-extrabold text-accent">
-                        {u.name.charAt(0).toUpperCase()}
-                      </div>
-                      <span>{u.name}</span>
-                    </td>
-                    <td className="px-5 py-3.5 font-mono text-text-muted">{u.email}</td>
-                    <td className="px-5 py-3.5 text-center font-mono text-text-muted">{formatDate(u.createdAt)}</td>
-                    <td className="px-5 py-3.5 text-center font-mono text-text-primary font-semibold">{u.totalSolved}</td>
-                    <td className="px-5 py-3.5 text-center">
+        <div className="space-y-4">
+          <div className="grid grid-cols-1 gap-3">
+            {users.map((u) => (
+              <div
+                key={u.id}
+                className="bg-bg-surface border border-border-default hover:border-border-focus hover:bg-bg-subtle/20 p-4 rounded-xl flex flex-col md:flex-row md:items-center justify-between gap-4 transition-all duration-150 shadow-xs"
+              >
+                {/* Left: Avatar, Name, Email */}
+                <div className="flex items-center gap-3 min-w-0 flex-1">
+                  <div className="w-9 h-9 rounded-full bg-accent/10 border border-accent/25 flex items-center justify-center text-xs font-extrabold text-accent shrink-0">
+                    {u.name.charAt(0).toUpperCase()}
+                  </div>
+                  <div className="min-w-0">
+                    <h3 className="text-xs font-semibold text-text-primary flex items-center gap-2">
+                      {u.name}
                       <span
-                        className={`inline-flex px-2 py-0.5 text-[9.5px] font-bold rounded-full border ${
+                        className={`inline-flex px-2 py-0.5 text-[9px] font-bold rounded-full border ${
                           u.isAdmin
                             ? 'bg-accent/10 border-accent/25 text-accent'
                             : 'bg-bg-elevated border-border-default text-text-muted'
                         }`}
                       >
-                        {u.isAdmin ? 'Admin' : 'User'}
+                        {u.isAdmin ? 'Admin' : 'Student'}
                       </span>
-                    </td>
-                    <td className="px-5 py-3.5 text-right">
-                      {u.id !== currentUser.id && (
-                        <button
-                          onClick={() => handleToggleAdmin(u.id)}
-                          className="text-accent hover:text-accent-hover hover:underline transition font-semibold cursor-pointer text-xs"
-                        >
-                          {u.isAdmin ? 'Revoke Admin' : 'Make Admin'}
-                        </button>
-                      )}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+                    </h3>
+                    <p className="text-[10px] text-text-muted font-mono truncate">{u.email}</p>
+                  </div>
+                </div>
+
+                {/* Middle: Joined Date and Solved Count */}
+                <div className="flex items-center gap-4 shrink-0 flex-wrap text-left md:text-right">
+                  <div className="shrink-0">
+                    <span className="block text-[10px] uppercase font-bold text-text-muted tracking-wider">Joined Date</span>
+                    <span className="text-[11px] font-mono text-text-secondary">{formatDate(u.createdAt)}</span>
+                  </div>
+                  <div className="shrink-0">
+                    <span className="block text-[10px] uppercase font-bold text-text-muted tracking-wider">Solved Count</span>
+                    <span className="inline-flex items-center bg-bg-app border border-border-default/60 px-2 py-0.5 rounded-md font-mono text-[11.5px] font-bold text-text-primary">
+                      🏆 {u.totalSolved} solved
+                    </span>
+                  </div>
+                </div>
+
+                {/* Right Actions */}
+                <div className="flex items-center justify-end shrink-0 border-t md:border-t-0 pt-3 md:pt-0 border-border-default/30">
+                  {u.id !== currentUser.id && (
+                    <Button
+                      variant="secondary"
+                      size="compact"
+                      onClick={() => handleToggleAdmin(u.id)}
+                      className={`h-8 text-xs px-3 font-semibold border-border-default/60 ${
+                        u.isAdmin
+                          ? 'hover:bg-danger-bg hover:text-danger hover:border-danger/25'
+                          : 'hover:border-accent hover:text-accent'
+                      }`}
+                    >
+                      {u.isAdmin ? 'Revoke Admin' : 'Make Admin'}
+                    </Button>
+                  )}
+                </div>
+              </div>
+            ))}
           </div>
 
           {/* Pagination Footer */}
-          <div className="p-4 border-t border-border-default/60 bg-bg-subtle/20 flex items-center justify-between text-xs text-text-muted">
+          <div className="p-4 border border-border-default bg-bg-surface rounded-xl flex items-center justify-between text-xs text-text-muted shadow-xs">
             <span>
               Showing Page {page} of {totalPages}
             </span>

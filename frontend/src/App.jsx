@@ -34,6 +34,7 @@ import AdminChaptersPage from './pages/AdminChaptersPage';
 import AdminUsersPage from './pages/AdminUsersPage';
 import AdminCSVImportPage from './pages/AdminCSVImportPage';
 import AdminFormulasPage from './pages/AdminFormulasPage';
+import AdminFeedbackPage from './pages/AdminFeedbackPage';
 
 function ProtectedRoute({ children }) {
   const { user, loading } = useAuthStore();
@@ -200,6 +201,7 @@ function AppContent() {
               <Route path="formulas/:chapterId" element={<AdminFormulasPage />} />
               <Route path="users" element={<AdminUsersPage />} />
               <Route path="import" element={<AdminCSVImportPage />} />
+              <Route path="feedback" element={<AdminFeedbackPage />} />
             </Route>
 
             {/* Fallback redirect */}

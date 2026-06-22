@@ -12,6 +12,7 @@ import {
   deleteChapter,
   getAdminUsers,
   toggleAdmin,
+  getAdminFeedback,
 } from '../controllers/admin.js';
 import { authMiddleware, adminMiddleware } from '../middleware/auth.js';
 import multer from 'multer';
@@ -38,5 +39,8 @@ router.delete('/chapters/:id', deleteChapter);
 // Users
 router.get('/users', getAdminUsers);
 router.patch('/users/:id/admin', toggleAdmin);
+
+// Feedback
+router.get('/feedback', getAdminFeedback);
 
 export default router;

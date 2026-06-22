@@ -232,58 +232,66 @@ export default function AdminQuestionsPage() {
           No questions match search filters.
         </div>
       ) : (
-        <div className="bg-bg-surface border border-border-default rounded-lg overflow-hidden shadow-xs">
-          <div className="overflow-x-auto">
-            <table className="w-full text-left border-collapse table-auto text-xs">
-              <thead>
-                <tr className="bg-bg-subtle/30 border-b border-border-default text-[10px] font-semibold text-text-muted uppercase tracking-wider">
-                  <th className="px-4 py-3 w-16 text-center">ID</th>
-                  <th className="px-4 py-3">Title</th>
-                  <th className="px-4 py-3">Subject / Chapter</th>
-                  <th className="px-4 py-3 text-center w-28">Difficulty</th>
-                  <th className="px-4 py-3 text-center w-28">Type</th>
-                  <th className="px-4 py-3">Source</th>
-                  <th className="px-4 py-3 text-right w-28">Actions</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-border-default/40 text-text-secondary">
-                {questions.map((q) => (
-                  <tr key={q.id} className="hover:bg-bg-subtle/30 transition-colors">
-                    <td className="px-4 py-3.5 text-center font-mono text-text-muted">{q.id}</td>
-                    <td className="px-4 py-3.5 font-medium text-text-primary max-w-sm truncate">{q.title}</td>
-                    <td className="px-4 py-3.5">
-                      <span className="block text-text-primary font-semibold">{q.subject_name}</span>
-                      <span className="text-[10px] text-text-muted">{q.chapter_name}</span>
-                    </td>
-                    <td className="px-4 py-3.5 text-center">
-                      <DifficultyBadge difficulty={q.difficulty} />
-                    </td>
-                    <td className="px-4 py-3.5 text-center">
-                      <TypeBadge type={q.type} />
-                    </td>
-                    <td className="px-4 py-3.5 font-mono text-text-muted">{q.source || '-'}</td>
-                    <td className="px-4 py-3.5 text-right space-x-3.5">
-                      <Link
-                        to={`/admin/questions/${q.id}`}
-                        className="text-accent hover:text-accent-hover hover:underline transition font-semibold"
-                      >
-                        Edit
-                      </Link>
-                      <button
-                        onClick={() => handleDelete(q.id)}
-                        className="text-text-muted hover:text-text-primary hover:underline transition font-semibold cursor-pointer"
-                      >
-                        Delete
-                      </button>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+        <div className="space-y-4">
+          <div className="grid grid-cols-1 gap-3">
+            {questions.map((q) => (
+              <div
+                key={q.id}
+                className="bg-bg-surface border border-border-default hover:border-border-focus hover:bg-bg-subtle/20 p-4 rounded-xl flex flex-col md:flex-row md:items-center justify-between gap-4 transition-all duration-150 shadow-xs"
+              >
+                {/* Left Info: ID, Title, Source */}
+                <div className="flex items-start gap-3 min-w-0 flex-1">
+                  <span className="bg-bg-app border border-border-default/80 text-text-muted px-2.5 py-1 rounded-md text-[10.5px] font-mono font-bold shrink-0">
+                    #{q.id}
+                  </span>
+                  <div className="min-w-0 space-y-1">
+                    <h3 className="text-[13px] font-semibold text-text-primary truncate" title={q.title}>
+                      {q.title}
+                    </h3>
+                    <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-[10.5px] text-text-muted">
+                      <span>Source:</span>
+                      <span className="font-mono text-text-secondary font-medium">{q.source || 'N/A'}</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Middle Info: Subject/Chapter and Badges */}
+                <div className="flex flex-wrap items-center gap-3 shrink-0">
+                  <div className="text-left md:text-right shrink-0">
+                    <span className="block text-[11.5px] font-bold text-text-primary">{q.subject_name}</span>
+                    <span className="text-[10px] text-text-muted">{q.chapter_name}</span>
+                  </div>
+                  <div className="flex gap-1.5 shrink-0">
+                    <DifficultyBadge difficulty={q.difficulty} />
+                    <TypeBadge type={q.type} />
+                  </div>
+                </div>
+
+                {/* Right Actions */}
+                <div className="flex items-center justify-end gap-2.5 shrink-0 border-t md:border-t-0 pt-3 md:pt-0 border-border-default/30">
+                  <Button
+                    variant="secondary"
+                    size="compact"
+                    onClick={() => navigate(`/admin/questions/${q.id}`)}
+                    className="h-8 text-xs px-3 font-semibold border-border-default/60 hover:border-accent hover:text-accent"
+                  >
+                    Edit
+                  </Button>
+                  <Button
+                    variant="ghost"
+                    size="compact"
+                    onClick={() => handleDelete(q.id)}
+                    className="h-8 text-xs px-3 font-semibold hover:bg-danger-bg hover:text-danger border border-transparent hover:border-danger/25"
+                  >
+                    Delete
+                  </Button>
+                </div>
+              </div>
+            ))}
           </div>
 
           {/* Pagination Footer */}
-          <div className="p-4 border-t border-border-default/60 bg-bg-subtle/20 flex items-center justify-between text-xs text-text-muted">
+          <div className="p-4 border border-border-default bg-bg-surface rounded-xl flex items-center justify-between text-xs text-text-muted shadow-xs">
             <span>
               Showing Page {page} of {totalPages}
             </span>
